@@ -1,6 +1,6 @@
 ---
-title: Release Notes for the Adobe Experience Cloud Identity Service Extension
-description: The latest release notes for the Adobe Experience Cloud Identity Service tag extension in Adobe Experience Platform.
+title: Release Notes for the Adobe Experience Cloud ID Service Extension
+description: The latest release notes for the Adobe Experience Cloud ID Service tag extension in Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 TQID: https://experienceleague.adobe.com/EgQQOzGQ6-G5So513F-YTlTLFLj56DmCeOscpe429EY
 product_v2:
@@ -37,9 +37,9 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
     internal-label: Privacy
 ---
-# Adobe Experience Cloud Identity Service extension release notes
+# Adobe Experience Cloud ID Service extension release notes
 
-This document covers the release notes for the Adobe Experience Cloud Identity Service tag extension. For release notes on Experience Cloud Identity Service itself, please refer to the [Identity Service documentation](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html).
+This document covers the release notes for the Adobe Experience Cloud ID Service tag extension. For release notes on the Visitor ID Service itself, please refer to the [Visitor ID Service documentation](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html).
 
 ## Oct 17, 2022
 
@@ -108,7 +108,7 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 
 ### Experience Cloud ID Extension 4.6.0
 
-* Made `loadSSL` flag on by default. All calls to Identity Service will be on `https` by default. Customers can set it to false if they want to call Identity Services on http from their non-ssl pages.
+* Made `loadSSL` flag on by default. All calls to the Visitor ID Service will be on `https` by default. Customers can set it to false if they want to call the Visitor ID Service on http from their non-ssl pages.
 * Updated the function used to detect Internet-Explorer (IE) version, to fix an issue reported by ESLint.
 * Bug fix for a performance issue on Internet-Explorer (IE) 11 when ECID is given optIn pre-approval and updated later.
 
@@ -116,7 +116,7 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 
 ### Experience Cloud ID Extension 4.5.2
 
-* Updated visitor.js to 4.5.2
+* Updated `VisitorAPI.js` to 4.5.2
 * Visitor 4.5.1 includes a bug fix for IAB plugin for Optin
 * Updated `setCustomerIDs` method to reject any empty IDs sent.
 
@@ -124,7 +124,7 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 
 ### Experience Cloud ID Extension 4.4.2
 
-* Updated visitor.js to 4.4.2
+* Updated `VisitorAPI.js` to 4.4.2
 * Improvements for `getVisitorValues` method to fetch values faster
 
 
@@ -132,7 +132,7 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 
 ### Experience Cloud ID Extension 4.4.1
 
-* Updated visitor.js to 4.4.1
+* Updated `VisitorAPI.js` to 4.4.1
 * Fixed a bug for get Opt-In preApprovals Input
 * Renamed VIDEO_ANALYTICS to MEDIA_ANALYTICS in preOptInApprovals
 
@@ -142,7 +142,7 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 
 ### Experience Cloud ID Extension 4.4.0
 
-* Updated visitor.js to 4.4.0
+* Updated `VisitorAPI.js` to 4.4.0
 * Added SHA256 hashing support for setCustomerIDs
 
   ![](../../../images/ecid-setCustomerIDs-hash.png)
@@ -151,7 +151,7 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 
 ### Experience Cloud ID Extension 4.3.1
 
-* Updated visitor.js to 4.3
+* Updated `VisitorAPI.js` to 4.3
 * Added data element type for ECID as part of the tag extension
 
   ![](../../../images/ecid-data-element.png)
@@ -160,19 +160,19 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 
 ### Experience Cloud ID Extension 4.2.0
 
-* Updated visitor.js to 4.2 which included support for Audience Manager IAB TCF Plug-in
+* Updated `VisitorAPI.js` to 4.2 which included support for Audience Manager IAB TCF Plug-in
 
 ## February 25, 2019
 
 ### Experience Cloud ID Extension 4.1.0
 
-* Updated visitor.js to 4.1 which updated publishDestinations per new API change. With this update the referrer information of the page can be exposed during ID - sync if desired.
+* Updated `VisitorAPI.js` to 4.1 which updated publishDestinations per new API change. With this update the referrer information of the page can be exposed during ID - sync if desired.
 
 ## February 15, 2019
 
 ### Experience Cloud ID Extension 4.0.0
 
-* Updated visitor.js to 4.0
+* Updated `VisitorAPI.js` to 4.0
 * Added a configuration options for the new built-in Opt-In Object. Opti-In settings can be used to suppress cookie and beacon calls of Adobe Solutions to better support regulations such as GDPR
 
   ![](../../../images/ext-mcid-opt-in.png)
@@ -181,5 +181,5 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 
 ### Experience Cloud ID Extension 3.1.0
 
-* Updated visitor.js to 3.1
+* Updated `VisitorAPI.js` to 3.1
 * Adds two configuration properties: `resetBeforeVersion` and `serverState`

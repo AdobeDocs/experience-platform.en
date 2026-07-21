@@ -210,7 +210,7 @@ See the [Audiences mapped to destination status widget documentation](../guides/
 
 Questions answered by this insight:
 
-- Which audience segment has the largest size?
+- Which audience has the largest size?
 - What are the five largest audiences?
 - How does the audience size distribution change over time for the top audience?
 

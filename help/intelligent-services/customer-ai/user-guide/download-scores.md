@@ -41,7 +41,7 @@ Additionally, in order to access scores for Customer AI, you need to have a serv
 Currently, there are two ways to download Customer AI scores:
 
 1. If you want to download the scores at the individual level and/or do not have Real-Time Customer Profile enabled, start by navigating to [finding your dataset ID](#dataset-id).
-2. If you have Profile enabled and want to download segments that you have configured using Customer AI, please navigate to [download a segment configured with Customer AI](#segment).
+2. If you have Profile enabled and want to download audiences that you have configured using Customer AI, please navigate to [download an audience configured with Customer AI](#audience).
 
 ## Find your dataset ID {#dataset-id}
 
@@ -294,7 +294,7 @@ The response downloads the file you requested in in your current directory. In t
 
 ![Example of a terminal response showing a successful API call.](../images/download-scores/response.png)
 
-## Download a segment configured with Customer AI {#segment}
+## Download an audience configured with Customer AI {#audience}
 
 An alternative way to download your score data is by exporting your audience to a dataset. After a segmentation job has successfully completed (the value of the `status` attribute is "SUCCEEDED"), you can export your audience to a dataset where it can be accessed and acted upon. To learn more about segmentation, visit the [segmentation overview](../../../segmentation/home.md).
 
@@ -302,7 +302,7 @@ An alternative way to download your score data is by exporting your audience to 
 >
 >In order to utilize this method of exporting, Real-Time Customer Profile needs to be enabled for the dataset.
 
-The [export a segment](../../../segmentation/tutorials/evaluate-a-segment.md) section in the segment evaluation guide covers the required steps to export an audience dataset. The guide outlines and provides examples of the following:
+The [export an audience](../../../segmentation/tutorials/evaluate-a-segment.md) section in the audience evaluation guide covers the required steps to export an audience dataset. The guide outlines and provides examples of the following:
 
 - **Create a target dataset:** Create the dataset to hold audience members.
 - **Generate audience profiles in the dataset:** Populate the dataset with XDM Individual Profiles based on the results of a segment job.

@@ -28,7 +28,7 @@ The MTLS Service API documentation provides an example API call to demonstrate h
 
 ## Required headers
 
-The API documentation also requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to Experience Platform endpoints. Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
+The API documentation also requires you to have completed the [authentication tutorial](/help/landing/api-authentication.md) in order to successfully make calls to Experience Platform endpoints. Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -37,3 +37,5 @@ The API documentation also requires you to have completed the [authentication tu
 ## Next steps
 
 To being making calls using the MTLS Service API, select the endpoint guides either using the left navigation or within the [developer guide overview](./overview.md)
+
+

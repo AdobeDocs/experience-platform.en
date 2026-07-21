@@ -65,7 +65,7 @@ To effectively retarget high-intent users, create audiences based on their past 
 
 Once you've create your audience, activate it across platforms to engage users.
 
-1. **Review audiences**: Ensure the audience segments reflect the right behaviors.
+1. **Review audiences**: Ensure the audiences reflect the right behaviors.
 
 2. **Create activation rules**: Set conditions for when and how users are engaged based on actions.
 

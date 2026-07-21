@@ -87,7 +87,7 @@ Select a card to open the accelerator. Use this section for quick access to comm
 
 The following dashboard-linked accelerators are available:
   
-- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: Analyze intersections between audience segments to identify overlap patterns and refine segmentation. 
+- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: Analyze intersections between audiences to identify overlap patterns and refine segmentation. 
 - **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: Compare key metrics between two audiences, including size, composition, and changes over time. 
 - **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: Track how audience metrics change over time, including audience size and identity counts. 
 - **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: Examine how identity types overlap within audiences to support identity stitching and segmentation accuracy.

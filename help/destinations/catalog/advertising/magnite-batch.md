@@ -177,7 +177,7 @@ When you are finished providing details for your destination connection, select 
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
 ### Map attributes and identities {#map}
 
@@ -207,11 +207,11 @@ On the "Configure a filename and export schedule for each audience" screen, you 
 
 Once your audiences have been uploaded, you may validate your audiences have been created and uploaded correctly.
 
-* The Magnite: Batch destination delivers S3 files to Magnite Streaming at a daily cadence. After delivery and ingestion, audiences/segments are expected to appear in Magnite Streaming, and can be applied to a deal. You can confirm this by looking-up the segment ID or segment name that was shared during the activation steps in the [!DNL Adobe Experience Platform].
+* The Magnite: Batch destination delivers S3 files to Magnite Streaming at a daily cadence. After delivery and ingestion, audiences are expected to appear in Magnite Streaming, and can be applied to a deal. You can confirm this by looking-up the audience ID or audience name that was shared during the activation steps in the [!DNL Adobe Experience Platform].
 
 >[!NOTE]
 >
->Audiences activated/delivered to the Magnite: Batch destination will *replace* the same audiences that were activated/delivered via the Magnite Real-Time destination. If you are looking-up a segment using the segment name, you may not find the segment in real-time, until the batch has been ingested and processed by the Magnite Streaming platform.
+>Audiences activated/delivered to the Magnite: Batch destination will *replace* the same audiences that were activated/delivered via the Magnite Real-Time destination. If you are looking-up an audience using the audience name, you may not find the audience in real-time, until the batch has been ingested and processed by the Magnite Streaming platform.
 
 ## Data usage and governance {#data-usage-governance}
 

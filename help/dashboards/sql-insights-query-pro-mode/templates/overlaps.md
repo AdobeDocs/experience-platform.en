@@ -35,7 +35,7 @@ topic_v2:
 ---
 # Advanced Audience Overlaps
 
-Gain valuable insights to optimize your audience segmentation and targeting strategies by analyzing how different audience segments intersect with the [!UICONTROL Advanced Audience Overlaps] dashboard. Examine the tabulated metrics to identify overlaps, refine segmentation, and reduce redundant messaging. Ultimately, you can use these insights to create more targeted campaigns and efficient marketing efforts. On this dashboard, you can review audience intersections, apply filters, and perform detailed overlap analysis to make data-driven decisions and improve engagement outcomes.
+Gain valuable insights to optimize your audience segmentation and targeting strategies by analyzing how different audiences intersect with the [!UICONTROL Advanced Audience Overlaps] dashboard. Examine the tabulated metrics to identify overlaps, refine segmentation, and reduce redundant messaging. Ultimately, you can use these insights to create more targeted campaigns and efficient marketing efforts. On this dashboard, you can review audience intersections, apply filters, and perform detailed overlap analysis to make data-driven decisions and improve engagement outcomes.
 
 ## Filter Audiences {#filter-audiences}
 

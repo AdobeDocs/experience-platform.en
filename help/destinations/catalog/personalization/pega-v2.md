@@ -70,6 +70,10 @@ Before you can use this destination to export data out of [!DNL Adobe Experience
 
 {style="table-layout:auto"}
 
+>[!IMPORTANT]
+>
+>When you map an identity to `CustomerID`, the source identity must come from a [custom namespace](/help/identity-service/features/namespaces.md#create-namespaces). This destination does not support standard namespaces for this mapping.
+
 ## Supported audiences {#supported-audiences}
 
 This section describes which types of audiences you can export to this destination.

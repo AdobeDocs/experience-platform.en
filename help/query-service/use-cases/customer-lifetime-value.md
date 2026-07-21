@@ -127,7 +127,7 @@ The next step is to build a segment definition and generate audiences from your 
 * Enable all segment definitions for scheduled segmentation.
 * Enable specified segment definitions for streaming segmentation.
 
-Alternatively, there is also a [segment builder video tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) available for more information.
+Alternatively, there is also a [Segment Builder video tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) available for more information.
 
 ## Activate your audience for an email campaign {#activate-audience-for-campaign}
 

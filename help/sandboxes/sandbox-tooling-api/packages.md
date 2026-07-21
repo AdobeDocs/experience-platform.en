@@ -2005,7 +2005,7 @@ Compare a specified or latest version of a package snapshot with either the curr
 ***API format***
 
 ```http
-PATCH /packages/{packageId}/version/compare
+POST /packages/{packageId}/version/compare
 ```
 
 | Property | Description | Type | Required |
@@ -2215,7 +2215,7 @@ Upgrade the package to a new version using the latest snapshot from the source s
 ***API format***
 
 ```http
-PATCH /packages/{packageId}/version/save
+GET /packages/{packageId}/version/save
 ```
 
 | Property | Description | Type | Required |
@@ -2225,7 +2225,7 @@ PATCH /packages/{packageId}/version/save
 **Request**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/save/ \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -2277,7 +2277,7 @@ Retrieve the versioning history of the package, including the timestamp and modi
 ***API format***
 
 ```http
-PATCH /packages/{packageId}/history
+GET /packages/{packageId}/history
 ```
 
 | Property | Description | Type | Required |
@@ -2287,7 +2287,7 @@ PATCH /packages/{packageId}/history
 **Request**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/history/ \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -2353,7 +2353,7 @@ PATCH /packages/{packageId}/import
 **Request**
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import/ \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -2419,7 +2419,7 @@ Disable update and override for packages that don't support them, by making a GE
 ***API format***
 
 ```http
-PATCH /packages/{packageId}?{QUERY_PARAMS}
+GET /packages/{packageId}?{QUERY_PARAMS}
 ```
 
 | Property | Description | Type | Required |
@@ -2430,7 +2430,7 @@ PATCH /packages/{packageId}?{QUERY_PARAMS}
 **Request**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}?getCapabilities=true'/ \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \

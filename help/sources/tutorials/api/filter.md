@@ -26,7 +26,7 @@ role_v2:
 >* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Read this guide for steps on how to filter row-level data for a source using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this guide for steps on how to filter row-level data for a source using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Get started
 
@@ -1277,3 +1277,4 @@ See the sample payload below for an example of complex nested conditions.
 ```
 
 +++
+

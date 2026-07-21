@@ -43,9 +43,9 @@ topic_v2:
 
 The [!DNL Amazon Ads] integration with [!DNL Adobe Experience Platform] provides turn-key integration to [!DNL Amazon Ads] products, including the [!DNL Amazon DSP] (ADSP) and [!DNL Amazon Marketing Cloud] (AMC).
 
-Using the [!DNL Amazon Ads] destination in [!DNL Adobe Experience Platform], you can define advertiser audiences for targeting and activation on the [!DNL Amazon DSP]. You can also upload your data to [!DNL Amazon Marketing Cloud] to understand performance by audience, advertiser-provided dimensions, membership in Amazon segments, or other signals available in AMC. After uploading advertiser audiences to AMC, users can use [!DNL Amazon Marketing Cloud] to modify, enhance, or append to audience members using Amazon signals from within [!DNL Amazon Marketing Cloud].
+Using the [!DNL Amazon Ads] destination in [!DNL Adobe Experience Platform], you can define advertiser audiences for targeting and activation on the [!DNL Amazon DSP]. You can also upload your data to [!DNL Amazon Marketing Cloud] to understand performance by audience, advertiser-provided dimensions, membership in Amazon audiences, or other signals available in AMC. After uploading advertiser audiences to AMC, users can use [!DNL Amazon Marketing Cloud] to modify, enhance, or append to audience members using Amazon signals from within [!DNL Amazon Marketing Cloud].
 
-AMC brings together unique signals from across Amazon owned and operated properties, spanning media including display, video, streaming TV, audio, and sponsored ads. You can send curated segments from [!DNL Adobe Experience Platform] to AMC to enhance learning such as audiences' in-market groups, lifestyle cohorts, and brand engagement patterns. Use augmented segments to optimize media activations in [!DNL Amazon DSP].
+AMC brings together unique signals from across Amazon owned and operated properties, spanning media including display, video, streaming TV, audio, and sponsored ads. You can send curated audiences from [!DNL Adobe Experience Platform] to AMC to enhance learning such as audiences' in-market groups, lifestyle cohorts, and brand engagement patterns. Use augmented audiences to optimize media activations in [!DNL Amazon DSP].
 
 >[!IMPORTANT]
 >
@@ -61,7 +61,7 @@ This integration with [!DNL Amazon DSP] allows [!DNL Amazon Ads] advertisers to 
 
 ### Analytics and measurement {#analytics-and-measurement}
 
-This integration with [!DNL Amazon Marketing Cloud] (AMC) allows [!DNL Amazon Ads] advertisers to pass CDP segments from [!DNL Adobe Experience Platform] to AMC. You can then join the CDP inputs with [!DNL Amazon Ads] signals and conduct custom analytics on topics such as media impact, audience segments, and customer journeys in a privacy-compliant format. For example, you can upload a list of existing customers to understand the aggregate advertising campaign performance, or aggregated statistics of on-Amazon conversion events, such as viewing a product detail page, adding a product to a shopping cart, or purchasing a product.
+This integration with [!DNL Amazon Marketing Cloud] (AMC) allows [!DNL Amazon Ads] advertisers to pass CDP audiences from [!DNL Adobe Experience Platform] to AMC. You can then join the CDP inputs with [!DNL Amazon Ads] signals and conduct custom analytics on topics such as media impact, audiences, and customer journeys in a privacy-compliant format. For example, you can upload a list of existing customers to understand the aggregate advertising campaign performance, or aggregated statistics of on-Amazon conversion events, such as viewing a product detail page, adding a product to a shopping cart, or purchasing a product.
 
 ### Advertising optimization {#advertising-optimization}
 

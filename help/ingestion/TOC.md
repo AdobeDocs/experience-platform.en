@@ -42,6 +42,6 @@ nudge: true
   - [Streaming ingestion validation](quality/streaming-validation.md)
 - [Guardrails for data ingestion](guardrails.md)
 - [Source connectors](source-connectors.md)
-- [Batch Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
-- [Streaming Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
+- [Batch Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion)
+- [Streaming Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion)
 - [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

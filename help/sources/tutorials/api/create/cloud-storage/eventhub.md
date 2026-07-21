@@ -17,7 +17,7 @@ role_v2:
 >
 >The [!DNL Azure Event Hubs] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-Read this tutorial to learn how to connect [!DNL Azure Event Hubs] (hereinafter referred to as "[!DNL Event Hubs]") to Experience Platform, using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this tutorial to learn how to connect [!DNL Azure Event Hubs] (hereinafter referred to as "[!DNL Event Hubs]") to Experience Platform, using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -393,3 +393,5 @@ curl -X POST \
 ## Next steps
 
 By following this tutorial, you have created an [!DNL Event Hubs] source connection using the [!DNL Flow Service] API. You can use this source connection ID in the next tutorial to [create a streaming dataflow using the [!DNL Flow Service] API](../../collect/streaming.md).
+
+

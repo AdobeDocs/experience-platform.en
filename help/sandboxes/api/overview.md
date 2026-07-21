@@ -28,7 +28,7 @@ topic_v2:
 
 The [!DNL Sandbox] API provides several endpoints that allow you to programmatically manage all sandboxes available to you within your organization. These endpoints are outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 
-To see all available endpoints and CRUD operations, visit the [[!DNL Sandbox] API reference](https://www.adobe.io/experience-platform-apis/references/sandbox).
+To see all available endpoints and CRUD operations, visit the [[!DNL Sandbox] API reference](https://developer.adobe.com/experience-platform-apis/references/sandbox).
 
 ## Available sandboxes
 
@@ -45,3 +45,5 @@ Currently, the supported sandbox types on Experience Platform are production and
 ## Next steps
 
 To begin making calls using the [!DNL Sandbox] API, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.
+
+

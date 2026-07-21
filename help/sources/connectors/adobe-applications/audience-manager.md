@@ -83,7 +83,7 @@ For information on how fields are mapped from Audience Manager to XDM, read the 
 
 A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows) and is made available by a data connection. Audience Manager data consists of real-time data, inbound data, and Profile data. To locate your Audience Manager datasets, use the search function in the UI with the provided naming conventions for each type of data.
 
-Audience Manager datasets are disabled for Profile by default and users have the ability to enable or disable datasets based on their use cases. It is not recommended to disable datasets that will be used for segment membership in Profile.
+Audience Manager datasets are disabled for Profile by default and users have the ability to enable or disable datasets based on their use cases. It is not recommended to disable datasets that will be used for audience membership in Profile.
 
 >[!NOTE]
 >

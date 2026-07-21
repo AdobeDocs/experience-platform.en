@@ -46,7 +46,7 @@ topic_v2:
 Each tag property in Adobe Experience Platform needs the following extensions installed and configured in the Extension screen:
 
 * Adobe Analytics
-* Experience Cloud Visitor ID Service
+* [!UICONTROL Experience Cloud ID Service]
 * Core extensions installed
 
 Use the "In-Page embed code (Advanced)" code snippet in the HTML of each Web page where a video player is to render. The "In-Page Embed code (Advanced)" HTML snippet can be found in the [Brightcove documentation](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). The following link provides more information on [how to generate embedded code for both preview and published video players](https://studio.support.brightcove.com/players/generating-player-embed-code.html).

@@ -23,7 +23,7 @@ topic_v2:
 ---
 # [!DNL Query Service] audit log integration
 
-The Adobe Experience Platform [!DNL Query Service] audit log integration provides records of query-related user actions. Audit logs are an essential tool for troubleshooting and adhering to corporate data stewardship policies and regulatory requirements. The capability allows you to return an action log for many event types and filter and export the records. The logs can be accessed either through the Experience Platform UI or the [Audit Query API](https://www.adobe.io/experience-platform-apis/references/audit-query/) and downloaded in either CSV or JSON file formats.
+The Adobe Experience Platform [!DNL Query Service] audit log integration provides records of query-related user actions. Audit logs are an essential tool for troubleshooting and adhering to corporate data stewardship policies and regulatory requirements. The capability allows you to return an action log for many event types and filter and export the records. The logs can be accessed either through the Experience Platform UI or the [Audit Query API](https://developer.adobe.com/experience-platform-apis/references/audit-query) and downloaded in either CSV or JSON file formats.
 
 To learn more about the audit logs user interface, refer to the [audit logs overview document](../../landing/governance-privacy-security/audit-logs/overview.md). To learn more about making calls to Experience Platform APIs, refer to the [audit logs API guide](../../landing/api-guide.md).
 
@@ -106,3 +106,5 @@ Available filters vary depending on the category selected in the dropdown. The f
 By reading this document, you have a better understanding of the [!DNL Query Service] audit log capability and how it can be used to filter your [!DNL Query Service] user actions.
 
 If you are using the [!DNL Query Service] audit log capability for troubleshooting purposes, you are recommended to read the [troubleshooting guide](../troubleshooting-guide.md).
+
+

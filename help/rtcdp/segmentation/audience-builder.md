@@ -157,3 +157,17 @@ You **cannot** change the evaluation method for account audiences, as all accoun
 Audience Builder provides a rich workflow that lets you create audiences from your XDM Business Account data.
 
 To learn more about Segmentation Service for customer profile data, please read the [Segmentation Service overview](../../segmentation/home.md){target="_blank"}.
+
+## Appendix {#appendix}
+
+The following appendix lists additional information about Audience Builder.
+
+### Audience dependency not supported error {#error}
+
+If you see the `100128-400: Audience dependency not currently supported. One or more of the audience filters you've added is not currently supported. Please contact Adobe team for details.` error appear when saving your audience, follow the subsequent instructions:
+
+When this error occurs, you'll have two audiences: Audience 1 (A1), which contains Audience 2 (A2).
+
+You'll first need to revert the changes you made in A2. Once you've reverted the changes made in A2, open A1 and remove the audience dependency on A2.
+
+Once the audience dependency has been removed, re-open A2 and add the initial changes back to that audience. Now that those changes have been re-added, you can add the dependency on A2 back to A1.

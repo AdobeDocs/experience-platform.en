@@ -90,7 +90,7 @@ In the [Experience Platform user interface](https://platform.adobe.com), users c
 
 ## Sandboxes in Experience Platform APIs
 
-When making calls to Experience Platform APIs, a sandbox name must be supplied under the header `x-sandbox-name`. For example, when making a call to the [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) to view all datasets within the Production sandbox, the sandbox's name ("prod") is provided as a header in the API request:
+When making calls to Experience Platform APIs, a sandbox name must be supplied under the header `x-sandbox-name`. For example, when making a call to the [[!DNL Catalog Service API]](https://developer.adobe.com/experience-platform-apis/references/catalog) to view all datasets within the Production sandbox, the sandbox's name ("prod") is provided as a header in the API request:
 
 ```shell
 curl -X GET \
@@ -112,3 +112,5 @@ The Sandbox API allows you to manage sandboxes by using RESTful API operations. 
 By reading this document, you have been introduced to the essential concepts about sandboxes in Experience Platform. For detailed steps on how to manage sandboxes, see the [user guide](ui/overview.md) for the UI or the [developer guide](./api/getting-started.md) for the API.
 
 While sandboxes serve as a valuable tool for isolating Experience Platform environments for your development team, you can also manage more granular access control by using the Adobe Admin Console. See the [access control overview](../access-control/home.md) for more information.
+
+

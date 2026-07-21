@@ -187,7 +187,7 @@ For more information about the supported currency codes, see [currencyCode](http
 
 ### Tracking Server
 
-Used for first-party cookie implementations to dictate where the first-party cookie is stored. If you use the Experience Cloud ID Service, Adobe advises against populating this field.
+Used for first-party cookie implementations to dictate where the first-party cookie is stored. If you use the '[!UICONTROL Experience Cloud ID Service]' tag extension, Adobe advises against populating this field.
 
 Tracking Server can be set in Analytics custom code using the variable `s.trackingServer`.
 
@@ -195,7 +195,7 @@ See [trackingServer](https://experienceleague.adobe.com/docs/analytics/implement
 
 ### SSL Tracking Server
 
-Used for SSL first-party cookie implementations to dictate where the first-party cookie is stored. If you use the Experience Cloud ID Service, Adobe advises against populating this field. If not defined, SSL data uses Tracking Server.
+Used for SSL first-party cookie implementations to dictate where the first-party cookie is stored. If you use the '[!UICONTROL Experience Cloud ID Service]' tag extension, Adobe advises against populating this field. If not defined, SSL data uses Tracking Server.
 
 SSL Tracking Server can be set in Analytics custom code using the variable `s.trackingServerSecure`.
 

@@ -36,7 +36,7 @@ topic_v2:
 
 ## Overview {#overview}
 
-This extension implements the [!DNL Experience Cloud] ID Service, which identifies visitors across all [!DNL Experience Cloud] solutions.
+This extension implements the Visitor ID Service, which identifies visitors across all [!DNL Experience Cloud] solutions.
 
 [!DNL Experience Cloud] ID Service is a personalization extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see the [Experience Cloud ID Service extension page](../../../tags/extensions/client/id-service/overview.md) in the tags documentation.
 

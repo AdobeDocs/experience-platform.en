@@ -39,7 +39,7 @@ Specifically, two datasets are required for capturing TCF 2.0 consent data:
 
 >[!IMPORTANT]
 >
->Experience Platform only enforces the TCF strings collected in the Individual Profile dataset. While an ExperienceEvent dataset is still required to create a datastream as part of this workflow, you only need to ingest data into the profile dataset. The ExperienceEvent dataset can still be used if you wish to track consent change events over time, but these values are not used in when enforcing on segment activation.
+>Experience Platform only enforces the TCF strings collected in the Individual Profile dataset. While an ExperienceEvent dataset is still required to create a datastream as part of this workflow, you only need to ingest data into the profile dataset. The ExperienceEvent dataset can still be used if you wish to track consent change events over time, but these values are not used in when enforcing on audience activation.
 
 This document provides steps for setting up these two datasets. For an overview of the full workflow to configure your Experience Platform data operations for TCF 2.0, refer to the [IAB TCF 2.0 compliance overview](./overview.md).
 

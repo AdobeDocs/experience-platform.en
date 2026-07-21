@@ -297,9 +297,9 @@ Use Customer Journey Analytics to perform cross-market and cross-brand analysis 
 
 The global sandbox also enables global marketing teams to define and manage audiences on a broader scale. Using sandbox tooling, these global audiences (definitions only, not data) can be exported from the global sandbox to individual brand or regional sandboxes, allowing local marketing teams to evaluate and activate them in their respective markets.
 
-Additionally, you can utilize Experience Platform Segment Match, a feature in Platform that enables cross-sandbox segment sharing (qualified audience) between different organizational units or business entities.
+Additionally, you can utilize Experience Platform Segment Match, a feature in Platform that enables cross-sandbox audience sharing (qualified audience) between different organizational units or business entities.
 
-This segment-sharing service allows two or more users to exchange segment data in a secure, governed, and privacy-friendly manner.
+This audience-sharing service allows two or more users to exchange audience data in a secure, governed, and privacy-friendly manner.
 
 For additional details on the Segment Match feature, see the [Segment Match documentation](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
 

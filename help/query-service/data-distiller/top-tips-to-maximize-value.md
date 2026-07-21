@@ -69,7 +69,7 @@ The tenant ID is `pfreportingonprod`.
 
 ## Overview of the RFM model {#rfm-overview}
 
-RFM, short for Recency (R), Frequency (F), and Monetary (M), is a data-driven approach to customer segmentation and analysis. This methodology evaluates three key aspects of customer behavior: how recently a customer made a purchase, how often they engage, and how much they spend. By quantifying these factors, businesses can gain actionable insights into customer segments and develop targeted marketing strategies that better meet individual customer needs.
+RFM, short for Recency (R), Frequency (F), and Monetary (M), is a data-driven approach to customer segmentation and analysis. This methodology evaluates three key aspects of customer behavior: how recently a customer made a purchase, how often they engage, and how much they spend. By quantifying these factors, businesses can gain actionable insights into customer audiences and develop targeted marketing strategies that better meet individual customer needs.
 
 ## Understand customer behavior with the RFM model {#understand-customer-behavior}
 
@@ -85,7 +85,7 @@ By combining these factors, businesses assign numerical scores (typically on a s
 
 Every marketing modeling technique involves trade-offs, offering both benefits and limitations. RFM modeling is a valuable tool for understanding customer behavior and refining marketing strategies. Its advantages include segmenting customers to personalize messaging, optimize revenue, and improve response rates, retention, satisfaction, and Customer Lifetime Value (CLTV).
 
-However, RFM modeling has limitations. It assumes uniformity within segments based on recency, frequency, and monetary value, which may oversimplify customer behavior. The model also assigns equal weight to these factors, potentially misrepresenting customer value. Additionally, it does not account for context, such as product-specific traits or customer preferences, which can lead to misinterpretations of purchasing behavior.
+However, RFM modeling has limitations. It assumes uniformity within audiences based on recency, frequency, and monetary value, which may oversimplify customer behavior. The model also assigns equal weight to these factors, potentially misrepresenting customer value. Additionally, it does not account for context, such as product-specific traits or customer preferences, which can lead to misinterpretations of purchasing behavior.
 
 ## Build a dynamic RFM score-based SQL audience {#build-a-dynamic-rfm-audience}
 
@@ -656,7 +656,7 @@ WHERE FALSE;
 
 #### Insert profiles into an existing audience {#insert-an-audience}
 
-To add profiles to an existing audience, use the INSERT INTO command. This allows you to add individual profiles or entire audience segments to an existing audience dataset.
+To add profiles to an existing audience, use the INSERT INTO command. This allows you to add individual profiles or entire audiences to an existing audience dataset.
 
 ```sql
 -- Insert profiles into the audience dataset

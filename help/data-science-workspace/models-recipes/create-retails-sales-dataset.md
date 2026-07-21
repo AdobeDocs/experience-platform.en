@@ -33,7 +33,7 @@ This tutorial provides you with the prerequisites and assets required for all ot
 Before starting this tutorial, you must have the following prerequisites:
 
 -   Access to [!DNL Adobe Experience Platform]. If you do not have access to an organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
--   Authorization to make [!DNL Experience Platform] API calls. Complete the [Authenticate and access Adobe Experience Platform APIs](https://www.adobe.com/go/platform-api-authentication-en) tutorial to obtain the following values in order to successful complete this tutorial:
+-   Authorization to make [!DNL Experience Platform] API calls. Complete the [Authenticate and access Adobe Experience Platform APIs](/help/landing/api-authentication.md) tutorial to obtain the following values in order to successful complete this tutorial:
     -   Authorization: `{ACCESS_TOKEN}`
     -   x-api-key: `{API_KEY}`
     -   x-gw-ims-org-id: `{ORG_ID}`
@@ -128,3 +128,5 @@ To continue working with the ingested data:
     - Use Jupyter Notebooks in Data Science Workspace to access, explore, visualize, and understand your data.
 - [Package source files into a Recipe](./package-source-files-recipe.md)
     - Follow this tutorial to learn how to bring your own Model into [!DNL Data Science Workspace] by packaging source files in an importable Recipe file.
+
+

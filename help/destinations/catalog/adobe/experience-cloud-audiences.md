@@ -90,7 +90,7 @@ The legacy audience-sharing integration did not allow for a granular control of 
 
 Audiences that you send to the Experience Cloud Audiences destination do not appear automatically in [!DNL Adobe Analytics].
 
-Before you can send audiences to [!DNL Adobe Analytics], you must [implement the Experience Cloud Identity Service for Analytics and Audience Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=en).
+Before you can send audiences to [!DNL Adobe Analytics], you must [implement the Visitor ID Service for Analytics and Audience Manager](https://experienceleague.adobe.com/en/docs/id-service/using/implementation/setup-aam-analytics).
 
 >[!IMPORTANT]
 >

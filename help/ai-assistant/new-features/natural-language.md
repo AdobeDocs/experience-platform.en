@@ -153,4 +153,4 @@ AI Assistant currently cannot answer questions based on behavioral data such as 
 
 ### Real-Time Data Updates
 
-The estimates provided by AI Assistant are based on recent, but not real-time, data snapshots. Data refreshes every 24-48 hours, so insights reflect this delay. This limitation means that users cannot receive instantaneous updates if a segment or dataset changes significantly within a short time frame.
+The estimates provided by AI Assistant are based on recent, but not real-time, data snapshots. Data refreshes every 24-48 hours, so insights reflect this delay. This limitation means that users cannot receive instantaneous updates if an audience or dataset changes significantly within a short time frame.

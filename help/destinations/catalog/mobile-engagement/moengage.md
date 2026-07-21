@@ -27,7 +27,7 @@ topic_v2:
 
 ## Overview {#overview}
 
-Use the [!DNL Moengage] destination to connect and map your Adobe data (user attributes, segments and events) to MoEngage in real-time. Customers can then act on this data, delivering personalized, targeted experiences.
+Use the [!DNL Moengage] destination to connect and map your Adobe data (user attributes, audiences and events) to MoEngage in real-time. Customers can then act on this data, delivering personalized, targeted experiences.
 
 With Adobe, the integration is very simple and intuitive. Take any Adobe user profile, and map it to a MoEngage user attribute.
 
@@ -37,7 +37,7 @@ With Adobe, the integration is very simple and intuitive. Take any Adobe user pr
 
 ## Use cases {#use-cases}
 
-A marketer wants to target a user segment (built in [!DNL Adobe Experience Platform]) via [!DNL Moengage] campaigns. Also, they want to personalize campaign content based on attributes from [!DNL Adobe Experience Platform] profiles. With this integration, users and attributes are updated in MoEngage as soon as segments and profiles are updated in [!DNL Adobe Experience Platform].
+A marketer wants to target a user audience (built in [!DNL Adobe Experience Platform]) via [!DNL Moengage] campaigns. Also, they want to personalize campaign content based on attributes from [!DNL Adobe Experience Platform] profiles. With this integration, users and attributes are updated in MoEngage as soon as audiences and profiles are updated in [!DNL Adobe Experience Platform].
 
 ## Prerequisites {#prerequisites}
 
@@ -88,8 +88,8 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 |---------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment (audience) with the identifiers (user_id, anonymous_id) along with custom attributes defined by you exported to [!DNL Moengage]. |
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of an audience with the identifiers (user_id, anonymous_id) along with custom attributes defined by you exported to [!DNL Moengage]. |
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -133,7 +133,7 @@ When you are finished providing details for your destination connection, select 
 >
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ### Map attributes and identities {#map}
 

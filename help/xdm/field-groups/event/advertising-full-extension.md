@@ -86,7 +86,7 @@ The advertisement object describes details about the digital advert, such as its
 | `keywordID` | String | The identifier for the keyword entered by the user in a search query that triggered this event. |
 | `keyword` | String | The listing keyword that the customer bid on. |
 | `isDynamicSearchAd` | Boolean | Indicates whether the event comes from a dynamic search advertisement. |
-| `audienceID` | String | The identifier for the audience segment targeted by the ad. |
+| `audienceID` | String | The identifier for the audience targeted by the ad. |
 | `adGroupID` | String | The identifier for the ad group associated with the ad that triggered this event. |
 | `campaignID` | String | The identifier for the campaign associated with the ad that triggered this event. |
 | `networkType` | String | The network type where the event occurred. Possible values include: <ul><li>`search`: The advertisement was displayed on the Search Network.</li><li>`content`: The advertisement was displayed on the Content Network.</li></ul> |

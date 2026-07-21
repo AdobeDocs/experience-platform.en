@@ -1160,7 +1160,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->You can list available "xdm:namespace" values, or create new ones, using the [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). The value for "xdm:property" can be either "xdm:code" or "xdm:id", depending on the "xdm:namespace" used.
+>You can list available "xdm:namespace" values, or create new ones, using the [[!DNL Identity Service API]](https://developer.adobe.com/experience-platform-apis/references/identity-service). The value for "xdm:property" can be either "xdm:code" or "xdm:id", depending on the "xdm:namespace" used.
 
 **Response**
 
@@ -3221,3 +3221,4 @@ The following shows the completed Loyalty Members schema in JSON format:
 ```
 
 +++
+
