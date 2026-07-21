@@ -25,8 +25,8 @@ New features and updates to existing features in Adobe Experience Platform:
 
 - [Destinations](#destinations)
 - [Real-Time Customer Profile](#real-time-customer-profile)
-- [Segmentation Service](#segmentation-service)
 - [Sandboxes](#sandboxes)
+- [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
 ## Destinations {#destinations}
@@ -74,6 +74,20 @@ Use Real-Time Customer Profile to create a holistic view of each individual know
 
 For more information, read the [Real-Time Customer Profile overview](../profile/home.md).
 
+## Sandboxes {#sandboxes}
+
+Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater to the development, testing, and deployment of these applications while ensuring operational compliance.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Sandbox Tooling agentic skill | The Sandbox Tooling agentic skill in CX Coworker gives you a conversational way to replicate sandbox object metadata across environments. Describe what you want in natural language, and the agent can help you: <ul><li>Discover objects in a source sandbox</li><li>Package selected objects with their dependencies</li><li>Validate changes before import</li><li>Migrate configurations to a target sandbox</li><li>Monitor migration progress</li></ul>The agent surfaces execution plans and dependency analysis so you can review proposed work before it runs. Use it to speed up sandbox development while keeping migrations safer and easier to reason about. For setup, usage, interpreting plans, and best practices, read the Sandbox Tooling agentic skill documentation. <br>**Note:** In this release, only Schema and Audience objects are supported. |
+
+{style="table-layout:auto"}
+
+For more information, read the [sandboxes overview](../sandboxes/home.md).
+
 ## Segmentation Service {#segmentation-service}
 
 Use Segmentation Service to create audiences from your customer data and manage their full lifecycle in Experience Platform.
@@ -88,20 +102,6 @@ Use Segmentation Service to create audiences from your customer data and manage 
 {style="table-layout:auto"}
 
 For more information, read the [Segmentation Service overview](../segmentation/home.md).
-
-## Sandboxes {#sandboxes}
-
-Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater to the development, testing, and deployment of these applications while ensuring operational compliance.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Sandbox Tooling agentic skill | The Sandbox Tooling agentic skill in CX Coworker gives you a conversational way to replicate sandbox object metadata across environments. Describe what you want in natural language, and the agent can help you: <ul><li>Discover objects in a source sandbox</li><li>Package selected objects with their dependencies</li><li>Validate changes before import</li><li>Migrate configurations to a target sandbox</li><li>Monitor migration progress</li></ul>The agent surfaces execution plans and dependency analysis so you can review proposed work before it runs. Use it to speed up sandbox development while keeping migrations safer and easier to reason about. For setup, usage, interpreting plans, and best practices, read the Sandbox Tooling agentic skill documentation. <br>**Note:** In this release, only Schema and Audience objects are supported. |
-
-{style="table-layout:auto"}
-
-For more information, read the [sandboxes overview](../sandboxes/home.md).
 
 ## Sources {#sources}
 
