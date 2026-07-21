@@ -82,7 +82,6 @@ Use Segmentation Service to create audiences from your customer data and manage 
 | Feature | Description |
 | --- | --- |
 | External audience file support for JSON and Parquet | Upload external audiences as JSON or Parquet files, in addition to existing supported formats. The `dataFilterStartTime` field is now optional when you create an external audience from an uploaded file. |
-| [Audience Builder enhancements](../segmentation/ui/segment-builder.md) | Updated audience-building experience with enhanced usage patterns for creating and managing audience definitions. |
 | Discontinuation of [!DNL Segment Match] | [!DNL Segment Match] will be discontinued and unavailable for use after November 27, 2026. [!DNL Real-Time CDP] Prime and Ultimate customers should transition data collaboration use cases from [!DNL Segment Match] to [!DNL Real-Time CDP Collaboration]. For more information, read the [[!DNL Segment Match] documentation](../segmentation/ui/segment-match/overview.md). |
 
 {style="table-layout:auto"}
