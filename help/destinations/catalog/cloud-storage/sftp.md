@@ -26,11 +26,7 @@ role_v2:
 ---
 # SFTP connection
 
-Connect to your SFTP server to export data files from [!DNL Adobe CX Enterprise] applications.
-
->[!NOTE]
->
->If you arrived from [!DNL Real-Time CDP Collaboration], this destination supports activating your Collaboration audiences. See [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
+Connect to your SFTP server to export data files from [!DNL Adobe CX Enterprise] applications. If you arrived from [!DNL Real-Time CDP Collaboration], see [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
 
 ## Supported [!DNL Adobe CX Enterprise] applications {#supported-applications}
 

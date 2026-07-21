@@ -43,11 +43,7 @@ topic_v2:
 ---
 # Snowflake Streaming connection {#snowflake-destination}
 
-Use the [!DNL Snowflake] Streaming destination to share audience data from [!DNL Adobe CX Enterprise] applications with your [!DNL Snowflake] account.
-
->[!NOTE]
->
->If you arrived from [!DNL Real-Time CDP Collaboration], this destination supports activating your Collaboration audiences. See [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
+Use the [!DNL Snowflake] Streaming destination to share audience data from [!DNL Adobe CX Enterprise] applications with your [!DNL Snowflake] account. If you arrived from [!DNL Real-Time CDP Collaboration], see [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
 
 ## Supported [!DNL Adobe CX Enterprise] applications {#supported-applications}
 
