@@ -26,7 +26,7 @@ role_v2:
 ---
 # [!DNL Amazon S3] connection {#s3-connection}
 
-Connect to your [!DNL Amazon S3] storage to export data files from [!DNL Adobe CX Enterprise] applications into your own buckets. If you arrived from [!DNL Real-Time CDP Collaboration], see [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
+Connect to your [!DNL Amazon S3] storage to export data files from [!DNL Adobe CX Enterprise] applications into your own buckets. If you arrived to this page from [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), see [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
 
 ## Supported [!DNL Adobe CX Enterprise] applications {#supported-applications}
 

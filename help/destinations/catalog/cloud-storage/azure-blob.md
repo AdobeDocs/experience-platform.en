@@ -29,7 +29,7 @@ topic_v2:
 ---
 # [!DNL Azure Blob] connection
 
-Connect to your [!DNL Azure Blob] storage to export data files from [!DNL Adobe CX Enterprise] applications. If you arrived from [!DNL Real-Time CDP Collaboration], see [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
+Connect to your [!DNL Azure Blob] storage to export data files from [!DNL Adobe CX Enterprise] applications. If you arrived to this page from [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), see [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
 
 ## Supported [!DNL Adobe CX Enterprise] applications {#supported-applications}
 
