@@ -31,10 +31,10 @@ A technology company launched a new product and wants to drive awareness among c
 
 [!DNL Microsoft Ads Customer Match] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-| Target Identity | Source field format | Considerations |
+| Target Identity | Source field to map | Considerations |
 |---|---|---|
-| `email` | Plain text (unhashed) email addresses | Map unhashed email addresses as the **source** field. Experience Platform sanitizes and hashes the email addresses before exporting them to [!DNL Microsoft Ads]. |
-| `email_lc_sha256` | Already-hashed (SHA-256) email addresses | Map email addresses that you have already sanitized and hashed with SHA-256 as the **source** field, following the [!DNL Microsoft Ads] [sanitization and hashing requirements](https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_conc_uet_enhancedconversions#format-and-hash-the-data). Experience Platform sends these values to [!DNL Microsoft Ads] without further sanitization or hashing. You are responsible for correct sanitization and hashing before mapping. |
+| `email` | A field containing plain text email addresses | Experience Platform sanitizes and hashes the email addresses before exporting them to [!DNL Microsoft Ads]. |
+| `email_lc_sha256` | A field containing email addresses that you have already hashed with SHA-256 | Follow the [!DNL Microsoft Ads] [sanitization and hashing requirements](https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_conc_uet_enhancedconversions#format-and-hash-the-data) before mapping. Experience Platform sends these values to [!DNL Microsoft Ads] without further sanitization or hashing. You are responsible for correct sanitization and hashing before mapping. |
 
 {style="table-layout:auto"}
 
