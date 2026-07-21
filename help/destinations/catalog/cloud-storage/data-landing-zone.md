@@ -36,7 +36,9 @@ topic_v2:
 ---
 # Data Landing Zone destination
 
-Export data files from [!DNL Adobe CX Enterprise] applications to your [!DNL Data Landing Zone] cloud storage location. If you arrived to this page from [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), see [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
+Export data files from [!DNL Adobe CX Enterprise] applications to your [!DNL Data Landing Zone] cloud storage location.
+
+If you arrived to this page from [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), see [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
 
 ## Supported [!DNL Adobe CX Enterprise] applications {#supported-applications}
 
