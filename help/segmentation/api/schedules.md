@@ -453,7 +453,7 @@ POST /config/schedules/add-audiences
 +++ A sample request to add audiences to the schedule.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/core/ups/config/schedules/
+curl -X POST https://platform.adobe.io/data/core/ups/config/schedules/add-audiences/
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -504,6 +504,177 @@ A successful response returns HTTP status 200 with detailed information of the o
 | `segmentCount` | An object that contains the number of segment definitions that were previously part of the schedule (`previous`), the number of segment definitions that are now part of the schedule (`current`), and the difference between those two values (`diff`). |
 
 +++
+
+## Remove audiences from schedule {#remove-audiences}
+
+You can remove audiences from a specific schedule by making a POST request to the `/config/schedules/remove-audiences` endpoint.
+
+**API format**
+
+```http
+POST /config/schedules/remove-audiences
+```
+
+**Request**
+
++++ A sample request to remove audiences from the schedule.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/config/schedules/remove-audiences/
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '
+ {
+    "id": "4e538382-dbd8-449e-988a-4ac639ebe72b",
+    "segments": [
+        "sampleSegmentDefinitionId"
+    ]
+ }
+ '
+```
+
++++
+
+| Property | Description |
+| -------- | ----------- |
+| `id` | The ID of the schedule you want to remove the audiences from. |
+| `segments` | An array of segment definition IDs you want to remove from the designated schedule. |
+
+**Response**
+
+A successful response returns HTTP status 200 with detailed information of the operation.
+
++++ A sample response when removing audiences from the schedule.
+
+```json
+{
+    "removed": [
+        "sampleSegmentDefinitionId"
+    ],
+    "notFound": [],
+    "segmentCount": {
+        "previous": 2,
+        "current": 1,
+        "diff": -1
+    }
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `removed` | An array containing the IDs of the segment definitions that were removed from the schedule. |
+| `notFound` | An array containing the IDs of segment definitions that could not be found within the schedule. |
+| `segmentCount` | An object that contains the number of segment definitions that were previously part of the schedule (`previous`), the number of segment definitions that are now part of the schedule (`current`), and the difference between those two values (`diff`). |
+
++++
+
+## Get audience map {#get-audience-map}
+
+You can get the audience map of your audiences by making a POST request to the `/config/schedules/audience-map` endpoint. The audience map represents a mapping between the segment definition IDs and the schedules those IDs belong to.
+
+**API format**
+
+```http
+POST /config/schedules/audience-map
+```
+
+**Request**
+
++++ A sample request to get the audience map for the corresponding segment definition IDs.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/config/schedules/audience-map/
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '
+ {
+    "segments": [
+        "sampleSegmentDefinitionId",
+        "sampleSegmentDefinition2",
+        "sampleSegmentDefinition3"
+    ]
+ }
+ '
+```
+
++++
+
+| Property | Description |
+| -------- | ----------- |
+| `segments` | An array of segment definition IDs that you want to retrieve the schedule information for. |
+
+**Response**
+
+A successful response returns HTTP status 200 with detailed information about the audience and schedule mapping.
+
++++ A sample response when getting the audience map.
+
+```json
+{
+    "audienceMap": {
+        "sampleSegmentDefinitionId": [
+            "4e538382-dbd8-449e-988a-4ac639ebe72b"
+        ],
+        "sampleSegmentDefinition2": [],
+        "sampleSegmentDefinition3": []
+    },
+    "schedules": {
+        "4e538382-dbd8-449e-988a-4ac639ebe72b": {
+            "name": "Sample schedule",
+            "schedule": "0 0 18 * * ?",
+            "frequency": "daily"
+        }
+    }
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `audienceMap` | A mapping of segment definition IDs with the schedules they belong to. |
+| `schedules` | An object that contains information about the schedules that are listed within the audience map. |
+
++++
+
+## Trigger schedule job {#trigger}
+
+You can manually trigger a schedule to activate by making a POST request to the `/config/schedules/trigger` endpoint.
+
+**API format**
+
+```http
+POST /config/schedules/trigger
+```
+
+**Request**
+
++++ A sample request to trigger a schedule for activation.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/config/schedules/trigger/
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '
+ {
+    "id": "4e538382-dbd8-449e-988a-4ac639ebe72b"
+ }
+ '
+```
+
++++
+
+| Property | Description |
+| -------- | ----------- |
+| `id` | The ID of the schedule you want to activate. You **must** activate schedules one at a time. |
+
+**Response**
+
+A successful response returns HTTP status 200 with no content.
 
 ## Next steps
 
