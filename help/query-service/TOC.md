@@ -143,5 +143,5 @@ nudge: true
     - [Prepared statements](sql/prepared-statements.md)
 - [Frequently asked questions](troubleshooting-guide.md)
 - [IP address allowlist](ip-address-allowlist.md)
-- [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
+- [API reference](https://developer.adobe.com/experience-platform-apis/references/query-service)
 - [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

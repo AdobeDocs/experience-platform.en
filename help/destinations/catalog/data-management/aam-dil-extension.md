@@ -46,7 +46,7 @@ topic_v2:
 
 ## Overview {#overview}
 
-This is the Adobe Audience Manager Data Integration Library extension (client-side implementation). Note: This extension is not meant to be used for server-side forwarding (SSF) of [!DNL Adobe Analytics] data. For SSF, use the [!DNL Adobe Analytics] extension. Important: Starting with version 8.0, DIL has a hard dependency on the [!DNL Experience Cloud] ID Service, version 3.3 or higher. Please implement both [!DNL Experience Cloud] ID Service and DIL for full [!DNL Audience Manager] data integration capabilities.
+This is the Adobe Audience Manager Data Integration Library extension (client-side implementation). Note: This extension is not meant to be used for server-side forwarding (SSF) of [!DNL Adobe Analytics] data. For SSF, use the [!DNL Adobe Analytics] extension. Important: Starting with version 8.0, DIL has a hard dependency on the Adobe Visitor ID Service, version 3.3 or higher. Please implement both the Visitor ID Service and DIL for full [!DNL Audience Manager] data integration capabilities.
 
 [!DNL Audience Manager] DIL is a Data Management Platform (DMP) extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see the [Audience Manager extension page](../../../tags/extensions/client/audience-manager/overview.md) in the tags documentation.
 

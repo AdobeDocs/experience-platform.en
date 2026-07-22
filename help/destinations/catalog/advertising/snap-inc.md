@@ -49,9 +49,9 @@ To use this destination, you must have a Snapchat Ads account. Refer to this doc
 
 ## Limitations {#limitations}
 
-* Snap Inc does not support multiple identities for a given audience segment. Please map only one identity when activating a segment.
-* Snap Inc does not support renaming segments. To rename a segment, you must deactivate, rename it, and then activate it.
-* It is not possible to define a retention period for an audience segment's members. All members have lifetime retention and will be in the audienceuntil they are removed.
+* Snap Inc does not support multiple identities for a given audience. Please map only one identity when activating an audience.
+* Snap Inc does not support renaming audiences. To rename an audience, you must deactivate, rename it, and then activate it.
+* It is not possible to define a retention period for an audience's members. All members have lifetime retention and will be in the audience until they are removed.
 
 ## Supported identities {#supported-identities}
 
@@ -172,7 +172,7 @@ After activating audiences to the *Snap Inc* destination, you will be able to se
 
 ![Audiences](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Note that when an Adobe audience is first activated to Snap Inc, you will initially see it as an empty audience. This is because [!DNL Adobe Experience Platform] does not export member data to Snap Inc until it evaluates the audience. For more information about how audiences are evaluated in Experience Platform, see the [Segmentation Service overview](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
+Note that when an Adobe audience is first activated to Snap Inc, you will initially see it as an empty audience. This is because [!DNL Adobe Experience Platform] does not export member data to Snap Inc until it evaluates the audience. For more information about how audiences are evaluated in Experience Platform, see the [Segmentation Service overview](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-audiences).
 
 ## Data usage and governance {#data-usage-governance}
 

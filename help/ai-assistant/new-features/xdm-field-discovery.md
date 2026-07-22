@@ -43,3 +43,4 @@ Read the following table for supported query and prompt patterns for XDM field d
 | Prompt to get enhanced descriptions along with field names | {FIELD_DISCOVERY_QUERY}. Also include enhanced descriptions. | <ul><li>Show me the XDM fields used to represent consent data. Also include the enhanced description for the field.</li><li>Show me the XDM fields related to interaction details. Also include the enhanced description for the field.</li></ul> |
 
 {style="table-layout:auto"}
+

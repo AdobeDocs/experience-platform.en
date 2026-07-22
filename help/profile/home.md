@@ -126,7 +126,7 @@ Computed attributes are functions used to aggregate event-level data into profil
 
 ## Profiles and audiences
 
-Adobe Experience Platform [!DNL Segmentation Service] produces the audiences needed to power experiences for your individual customers. When an audience is created, the ID of that audience is added to the list of audience memberships for all qualifying profiles. Segment rules are built and applied to [!DNL Real-Time Customer Profile] data using RESTful APIs and the Segment Builder user interface. To learn more about segmentation, please begin by reading the [Segmentation Service overview](../segmentation/home.md). 
+Adobe Experience Platform [!DNL Segmentation Service] produces the audiences needed to power experiences for your individual customers. When an audience is created, the ID of that audience is added to the list of audience memberships for all qualifying profiles. Audience rules are built and applied to [!DNL Real-Time Customer Profile] data using RESTful APIs and the Segment Builder user interface. To learn more about segmentation, please begin by reading the [Segmentation Service overview](../segmentation/home.md). 
   
 ### Streaming ingestion and streaming segmentation
 

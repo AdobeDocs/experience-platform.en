@@ -50,7 +50,7 @@ The following options are available:
 
 ## [!UICONTROL Migrate ECID from VisitorAPI]
 
-A checkbox that allows the Web SDK to read the `AMCV` and `s_ecid` cookies and set the `AMCV` cookie used by `Visitor.js`. This feature is important when migrating from libraries that use `VisitorAPI.js` to the Web SDK, as some pages might still be using `Visitor.js`. This option allows the SDK to continue to use the same ECID so that users are not identified as two separate users. The JavaScript library equivalent to this checkbox is [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md).
+A checkbox that allows the Web SDK to read the `AMCV` and `s_ecid` cookies and set the `AMCV` cookie used by the Visitor ID Service. This feature is important when migrating from libraries that use `VisitorAPI.js` to the Web SDK, as some pages might still be using `VisitorAPI.js`. This option allows the SDK to continue to use the same ECID so that users are not identified as two separate users. The JavaScript library equivalent to this checkbox is [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md).
 
 ## [!UICONTROL Use third-party cookies]
 

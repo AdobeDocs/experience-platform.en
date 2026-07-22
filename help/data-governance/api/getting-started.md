@@ -42,7 +42,7 @@ The [!DNL Policy Service] API documentation provides example API calls to demons
 
 ## Required headers
 
-The API documentation also requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to [!DNL Experience Platform] endpoints. Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
+The API documentation also requires you to have completed the [authentication tutorial](/help/landing/api-authentication.md) in order to successfully make calls to [!DNL Experience Platform] endpoints. Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -69,3 +69,5 @@ Within the [!DNL Policy Service] API, all policies and marketing actions are ref
 ## Next steps
 
 To begin making calls using the Policy Service API, select one of the available endpoint guides.
+
+

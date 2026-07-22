@@ -40,7 +40,7 @@ topic_v2:
 ## Version 1.7.1 - June 24, 2026
 
 * Fixed an issue where overriding the datastream ID could fail to take effect.
-* Fixed an issue where Analytics debugging could corrupt context data in Analytics requests.
+* Fixed an issue where Analytics debugging could corrupt context data in Analytics requests. 
 
 ## Version 1.7.0 - May 27, 2026
 
@@ -172,3 +172,4 @@ topic_v2:
 ## Version 1.0.0 May 5, 2021
 
 * First main release of the Experience Platform Debugger. Intended to replace the Experience Cloud Debugger.
+
