@@ -477,7 +477,27 @@ A successful response returns HTTP status 200. The details about the ingestion r
 
 >[!TAB File]
 
-+++ A sample response when starting the audience ingestion.
+```json
+{
+    "audienceName": "Sample external audience",
+    "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
+    "runId": "fb342311-725d-4b48-ab7d-c6105fbc2b8b",
+    "differentialIngestion": true,
+    "createdAt": 4565657575,
+    "createdBy:" "{USER_ID}"
+}
+```
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `audienceName` | String | The name of the audience you're starting an ingestion run for. |
+| `audienceId` | String | The ID of the audience. |
+| `runId` | String | The ID of the ingestion run you started. |
+| `differentialIngestion` | Boolean | A field that determines if the ingestion is a partial ingestion based off of the difference since the last ingestion or a full audience ingestion. |
+| `createdAt` | Long epoch timestamp | The timestamp, in seconds, when the request to create the external audience was submitted. |
+| `createdBy` | String | The ID of the user who created the external audience. |
+
+>[!TAB Folder]
 
 ```json
 {
@@ -503,11 +523,7 @@ A successful response returns HTTP status 200. The details about the ingestion r
 | `createdAt` | Long epoch timestamp | The timestamp, in seconds, when the request to create the external audience was submitted. |
 | `createdBy` | String | The ID of the user who created the external audience. |
 
->[!TAB Folder]
-
 >[!ENDTABS]
-
-+++
 
 ## Retrieve specific audience ingestion status {#retrieve-ingestion-status}
 
@@ -541,15 +557,54 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 **Response**
 
-A successful response returns HTTP status 200 with details of the external audience ingestion.
+A successful response returns HTTP status 200. The details of the external audience ingestion differ based on the external audience's source type.
 
-+++ A sample response when retrieving the external audience's ingestion.
+>[!BEGINTABS]
+
+>[!TAB File]
 
 ```json
 {
     "audienceName": "Sample external audience",
     "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
     "runId": "fb342311-725d-4b48-ab7d-c6105fbc2b8b",
+    "status": "SUCCESS",
+    "differentialIngestion": true,
+    "createdAt": 1749324248,
+    "createdBy": "{USER_ID}",
+    "details": [
+        {
+            "stage": "DATASET_INGEST",
+            "status": "SUCCESS",
+            "flowRunId": "{FLOW_RUN_ID}"
+        },
+        {
+            "stage": "PROFILE_STORE_INGEST",
+            "status": "SUCCESS",
+            "flowRunId": "{FLOW_RUN_ID}"
+        }
+    ]
+}
+```
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `audienceName` | String | The name of the audience. |
+| `audienceId` | String | The ID of the audience. |
+| `runId` | String | The ID of the ingestion run. |
+| `status` | String | The status of the ingestion run. Possible statuses include `SUCCESS` and `FAILED`. |
+| `differentialIngestion` | Boolean | A field that determines if the ingestion is a partial ingestion based off of the difference since the last ingestion or a full audience ingestion. |
+| `createdAt` | Long epoch timestamp | The timestamp, in seconds, when the request to create the external audience was submitted. |
+| `createdBy` | String | The ID of the user who created the external audience. |
+| `details` | Array of objects | An object containing the details of the ingestion run. <ul><li>`stage`: The stage of the ingestion run. This can either be `DATASET_INGEST` or `PROFILE_STORE_INGEST`, which represent the data lake ingestion and the profile ingestion.</li><li>`status`: The status of the ingestion on the stage. Possible statuses include `SUCCESS` and `FAILED`.</li><li>`flowRunId`: The ID of the stage's ingestion flow run.</li></ul> |
+
+>[!TAB Folder]
+
+```json
+{
+    "audienceName": "Sample external audience",
+    "audienceId": "c067efdb-eefa-42d8-81b8-7dc79bfcbbbd",
+    "runId": "1b745f76-fd26-4d3e-8b2b-aed1fe88b959",
     "status": "SUCCESS",
     "differentialIngestion": true,
     "dataFilterStartTime": 764245635,
@@ -584,7 +639,7 @@ A successful response returns HTTP status 200 with details of the external audie
 | `createdBy` | String | The ID of the user who created the external audience. |
 | `details` | Array of objects | An object containing the details of the ingestion run. <ul><li>`stage`: The stage of the ingestion run. This can either be `DATASET_INGEST` or `PROFILE_STORE_INGEST`, which represent the data lake ingestion and the profile ingestion.</li><li>`status`: The status of the ingestion on the stage. Possible statuses include `SUCCESS` and `FAILED`.</li><li>`flowRunId`: The ID of the stage's ingestion flow run.</li></ul> |
 
-+++
+>[!ENDTABS]
 
 ## List audience ingestion runs {#list-ingestion-runs}
 
@@ -634,9 +689,42 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of ingestion runs for the specified external audience.
+A successful response returns HTTP status 200. Details of the ingestion runs depends on the source type of the specified external audience.
 
-+++ A sample response when you retrieve a list of the audience ingestion runs.
+>[!BEGINTABS]
+
+>[!TAB File]
+
+```json
+{
+    "runs": [
+        {
+            "audienceName": "Sample external audience",
+            "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
+            "runId": "fb342311-725d-4b48-ab7d-c6105fbc2b8b",
+            "status": "SUCCESS",
+            "differentialIngestion": true,
+            "createdAt": 1785678909,
+            "createdBy": "{USER_NAME}"
+        },
+        {
+            "audienceName": "Sample external audience 2",
+            "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
+            "runId": "406e38e4-fbd5-43e1-8d0c-01ccb3f9ad10",
+            "status": "SUCCESS",
+            "differentialIngestion": true,
+            "createdAt": 1749324248,
+            "createdBy": "{USER_ID}"
+        }
+    ]
+}
+```
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `runs` | Object | An object that contains the list of ingestion runs that belongs to the audience. More information about this object can be found in the [retrieve ingestion status section](#retrieve-ingestion-status). |
+
+>[!TAB Folder]
 
 ```json
 {
@@ -683,7 +771,7 @@ A successful response returns HTTP status 200 with a list of ingestion runs for 
 | -------- | ---- | ----------- |
 | `runs` | Object | An object that contains the list of ingestion runs that belongs to the audience. More information about this object can be found in the [retrieve ingestion status section](#retrieve-ingestion-status). |
 
-+++
+>[!ENDTABS]
 
 ## Extend data expiration for an external audience {#extend-data-expiration}
 
