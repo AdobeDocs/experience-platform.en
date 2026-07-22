@@ -47,8 +47,8 @@ Read the steps below to gain a better understanding of the process of creating a
 
 * First, Real-Time Customer Profile references an identity graph and retrieves all identities.
 * Next, Profile retrieves profile fragments with primary identities in the identity graph. 
-* Once successful, Profile than merges all existing events and attributes.
-  * If there are conflicting attribute information, attributes will be chosen based on the merge method. For more information, read the [merge policies overview](../profile/merge-policies/overview.md).
+* Once successful, Profile then merges all existing events and attributes.
+  * If there is conflicting attribute information, attributes will be chosen based on the merge method. For more information, read the [merge policies overview](../profile/merge-policies/overview.md).
 
 ![A flow chart detailing how Identity Service and Profile Merging works.](./images/merge-profile-process.png)
 
