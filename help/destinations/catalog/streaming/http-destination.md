@@ -211,24 +211,14 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
 ### Fill in destination details {#destination-details}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_connect_http_headers"
->title="Headers"
->abstract="Enter any custom headers that you want to be included in the destination calls, following this format: `header1:value1,header2:value2,...headerN:valueN`"
-
->[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
 >title="HTTP Endpoint"
 >abstract="The URL of the HTTP endpoint where you want to send the profile data to. This is your data receiving endpoint and supports mTLS if configured."
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_connect_http_includesegmentnames"
->title="Include Segment Names"
->abstract="Toggle if you want the data export to include the names of the audiences you are exporting. View the documentation for a data export example with this option selected."
-
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_http_includesegmenttimestamps"
->title="Include Segment Timestamps"
->abstract="Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. View the documentation for a data export example with this option selected."
+>id="platform_destinations_connect_http_headers"
+>title="Headers"
+>abstract="Enter any custom headers that you want to be included in the destination calls, following this format: `header1:value1,header2:value2,...headerN:valueN`"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
@@ -236,8 +226,18 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
 >abstract="Optionally, you can add query parameters to the HTTP endpoint URL. Format the query parameters you use like this: `parameter1=value&parameter2=value`."
 
 >[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_includesegmenttimestamps"
+>title="Include segment timestamps"
+>abstract="Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. View the documentation for a data export example with this option selected."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_includesegmentnames"
+>title="Include segment names"
+>abstract="Toggle if you want the data export to include the names of the audiences you are exporting. View the documentation for a data export example with this option selected."
+
+>[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includemappedaudiencesonly"
->title="Include Mapped Audiences Only"
+>title="Include mapped audiences only"
 >abstract="Toggle this option on to export only the audiences mapped in this dataflow. Toggle it off to also export audiences that share the same merge policy as the mapped audiences, even if they are not mapped in this dataflow. View the documentation for more information."
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
@@ -246,12 +246,12 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: Enter a name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: Enter a description that will help you identify this destination in the future.
-* **[!UICONTROL Headers]**: Enter any custom headers that you want to be included in the destination calls, following this format: `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL HTTP Endpoint]**: The URL of the HTTP endpoint where you want to send the profile data to. This is your data receiving endpoint. If you are using mTLS, this endpoint must have TLS disabled and only mTLS enabled.
+* **[!UICONTROL Headers]**: Enter any custom headers that you want to be included in the destination calls, following this format: `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL Query parameters]**: Optionally, you can add query parameters to the HTTP endpoint URL. Format the query parameters you use like this: `parameter1=value&parameter2=value`.
-* **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the audiences you are exporting. **Note**: Audience names are only included for audiences that are mapped to the destination. Unmapped audiences that appear in the export will not include the `name` field. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
-* **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
-* **[!UICONTROL Include Mapped Audiences Only]**: Toggle this option on to export only the audiences mapped in this dataflow. Toggle it off to also export audiences that share the same [merge policy](/help/profile/merge-policies/overview.md) as the mapped audiences, even if they are not mapped in this dataflow. This option is turned on by default for new destination connections. Dataflows created before this option was introduced do not display this option and continue to export all audiences that share the same merge policy.
+* **[!UICONTROL Include segment timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Include segment names]**: Toggle if you want the data export to include the names of the audiences you are exporting. **Note**: Audience names are only included for audiences that are mapped to the destination. Unmapped audiences that appear in the export will not include the `name` field. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Include mapped audiences only]**: Toggle this option on to export only the audiences mapped in this dataflow. Toggle it off to also export audiences that share the same [merge policy](/help/profile/merge-policies/overview.md) as the mapped audiences, even if they are not mapped in this dataflow. This option is turned on by default for new destination connections. Dataflows created before this option was introduced do not display this option and continue to export all audiences that share the same merge policy.
 
 ### Enable alerts {#enable-alerts}
 
@@ -292,7 +292,7 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 |What determines a destination export | What is included in the destination export |
 |---------|----------|
-|<ul><li>Mapped attributes and audiences serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>Since identities cannot currently be mapped to HTTP API destinations, changes in any identity on a given profile also determine destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>The `segmentMembership` object includes the audience mapped in the activation dataflow, for which the status of the profile has changed following a qualification or audience exit event. When the **[!UICONTROL Include Mapped Audiences Only]** option is turned on, the export includes only the audiences mapped in the activation dataflow. When this option is turned off, other unmapped audiences for which the profile qualified can also be part of the destination export, if these audiences belong to the same [merge policy](/help/profile/merge-policies/overview.md) as the audience mapped in the activation dataflow. Dataflows created before this option was introduced do not have it turned on and continue to export all audiences that share the same merge policy. <br> **Important**: When the **[!UICONTROL Include Segment Names]** option is enabled, segment names are only included for audiences that are mapped to the destination. Unmapped audiences that appear in the export will not include the `name` field, even if the option is enabled. </li><li>All identities in the `identityMap` object are included as well (Experience Platform currently does not support identity mapping in the HTTP API destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
+|<ul><li>Mapped attributes and audiences serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>Since identities cannot currently be mapped to HTTP API destinations, changes in any identity on a given profile also determine destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>The `segmentMembership` object includes the audience mapped in the activation dataflow, for which the status of the profile has changed following a qualification or audience exit event. When the **[!UICONTROL Include mapped audiences only]** option is turned on, the export includes only the audiences mapped in the activation dataflow. When this option is turned off, other unmapped audiences for which the profile qualified can also be part of the destination export, if these audiences belong to the same [merge policy](/help/profile/merge-policies/overview.md) as the audience mapped in the activation dataflow. Dataflows created before this option was introduced do not have it turned on and continue to export all audiences that share the same merge policy. <br> **Important**: When the **[!UICONTROL Include segment names]** option is enabled, segment names are only included for audiences that are mapped to the destination. Unmapped audiences that appear in the export will not include the `name` field, even if the option is enabled. </li><li>All identities in the `identityMap` object are included as well (Experience Platform currently does not support identity mapping in the HTTP API destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -300,7 +300,7 @@ For example, consider this dataflow to an HTTP destination where three audiences
 
 ![An example of an HTTP API destination dataflow.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-A profile export to the destination is triggered when a profile qualifies for or exits one of the *three mapped audiences*. When the **[!UICONTROL Include Mapped Audiences Only]** option is turned on, the `segmentMembership` object (see [Exported Data](#exported-data) below) includes only the three mapped audiences. When this option is turned off, the `segmentMembership` object can also include unmapped audiences, if that profile is a member of them and they share the same merge policy as the audience that triggered the export. For example, if a profile qualifies for the **Customer with DeLorean Cars** audience but is also a member of the **Watched "Back to the Future"** movie and **Science fiction fans** audiences, those two audiences also appear in the `segmentMembership` object when **[!UICONTROL Include Mapped Audiences Only]** is turned off, provided they share the same merge policy with the **Customer with DeLorean Cars** audience.
+A profile export to the destination is triggered when a profile qualifies for or exits one of the *three mapped audiences*. When the **[!UICONTROL Include mapped audiences only]** option is turned on, the `segmentMembership` object (see [Exported Data](#exported-data) below) includes only the three mapped audiences. When this option is turned off, the `segmentMembership` object can also include unmapped audiences, if that profile is a member of them and they share the same merge policy as the audience that triggered the export. For example, if a profile qualifies for the **Customer with DeLorean Cars** audience but is also a member of the **Watched "Back to the Future"** movie and **Science fiction fans** audiences, those two audiences also appear in the `segmentMembership` object when **[!UICONTROL Include mapped audiences only]** is turned off, provided they share the same merge policy with the **Customer with DeLorean Cars** audience.
 
 From a profile attributes point of view, any changes to the four attributes mapped above will determine a destination export and any of the four mapped attributes present on the profile will be present in the data export.
 
@@ -366,7 +366,7 @@ Your exported Experience Platform data lands in your HTTP destination in JSON fo
 
 ```
 
-Below are further examples of exported data, depending on the UI settings you select in the connect destination flow for the **[!UICONTROL Include Segment Names]** and **[!UICONTROL Include Segment Timestamps]** options:
+Below are further examples of exported data, depending on the UI settings you select in the connect destination flow for the **[!UICONTROL Include segment names]** and **[!UICONTROL Include segment timestamps]** options:
 
 +++ The data export sample below includes audience names in the `segmentMembership` section
 
@@ -392,7 +392,7 @@ Below are further examples of exported data, depending on the UI settings you se
 
 >[!NOTE]
 >
->In this example, the first audience (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) is mapped to the destination and includes the `name` field. The second audience (`354e086f-2e11-49a2-9e39-e5d9a76be683`) is not mapped to the destination and does not include the `name` field, even though the **[!UICONTROL Include Segment Names]** option is enabled.
+>In this example, the first audience (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) is mapped to the destination and includes the `name` field. The second audience (`354e086f-2e11-49a2-9e39-e5d9a76be683`) is not mapped to the destination and does not include the `name` field, even though the **[!UICONTROL Include segment names]** option is enabled.
 
 +++
 
