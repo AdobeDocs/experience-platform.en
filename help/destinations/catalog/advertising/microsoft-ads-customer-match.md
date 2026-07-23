@@ -168,7 +168,7 @@ There are two target fields:
 * `email`: for source fields that contain plain text (unhashed) email addresses. Experience Platform sanitizes and hashes these values automatically before exporting them to [!DNL Microsoft Ads].
 * `email_lc_sha256`: for source fields that contain email addresses you have already sanitized and hashed with SHA-256. Experience Platform sends these values without further transformation.
 
-The mapping does not use a transformation step. Experience Platform hashes plain text email addresses automatically when it maps them to the `email` target field.
+The mapping does not use a transformation step. Experience Platform sanitizes them, then hashes them before sending the data to [!DNL Microsoft Ads Customer Match].
 
 **Choose the correct target field**
 
