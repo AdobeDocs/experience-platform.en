@@ -225,9 +225,14 @@ To verify if data has been exported successfully to the [!DNL Microsoft Ads Cust
 
 ## Match rates {#match-rates}
 
-Match rate refers to the percentage of profiles in a [!DNL Real-Time CDP] audience that [!DNL Microsoft Ads] successfully matches to existing users in its network when the audience is created in [!DNL Microsoft Advertising]. Several factors affect match rates for the [!DNL Microsoft Ads Customer Match] destination.
+Match rate refers to the percentage of profiles in a [!DNL Real-Time CDP] audience that [!DNL Microsoft Ads] successfully matches to existing users in its network when the audience is created in [!DNL Microsoft Advertising].
 
-* [!DNL Microsoft Ads] only matches email addresses that already exist in its user graph. Emails that [!DNL Microsoft Ads] does not recognize do not create new user records and are not targetable. This is a common cause of lower-than-expected match rates.
+Several factors contribute to the match rates observed for a submitted audience. Match rates can be affected by data quality considerations such as invalid, outdated (stale), or incorrectly formatted email addresses.
+
+[!DNL Microsoft Advertising] matches users that are known and targetable within its advertising network. As a result, only users that can be identified and are eligible for advertising use can contribute to the final match rate.
+
+Consider the following Experience Platform behavior when you review your match rates:
+
 * Experience Platform filters out profiles that do not have an email address before export. Only profiles with at least one email address are included in the export payload.
 * Experience Platform sends all email addresses associated with a profile. You cannot configure which emails are sent.
 * For the `email_lc_sha256` namespace, match rates depend on correct sanitization and hashing. Follow the [!DNL Microsoft Ads] [sanitization and hashing requirements](https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_conc_uet_enhancedconversions#format-and-hash-the-data) (lowercase, trim, then SHA-256) before mapping. Experience Platform does not re-sanitize already-hashed values.
