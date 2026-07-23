@@ -273,7 +273,7 @@ A successful response returns HTTP status 200 with details of the external audie
         "sourceSpec": {
             "format": "parquet",
             "params": {
-                "path": "activation/sample-source/example.csv",
+                "path": "activation/sample-source/example.parquet",
                 "type": "file",
                 "sourceType": "Cloud Storage",
                 "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
