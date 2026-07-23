@@ -231,7 +231,7 @@ Several factors contribute to the match rates observed for a submitted audience.
 
 [!DNL Microsoft Advertising] matches users that are known and targetable within its advertising network. As a result, only users that can be identified and are eligible for advertising use can contribute to the final match rate.
 
-The following Experience Platform behavior also affects your match rates:
+The following Experience Platform considerations also affect your match rates:
 
 * Experience Platform filters out profiles that do not have an email address before export. Only profiles with at least one email address are included in the export payload.
 * Experience Platform sends all email addresses associated with a profile. You cannot configure which emails are sent.
