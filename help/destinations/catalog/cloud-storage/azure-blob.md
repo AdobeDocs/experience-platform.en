@@ -100,7 +100,7 @@ Supported audiences by audience data type:
 
 ### [!DNL Real-Time CDP Collaboration] {#supported-audiences-collaboration}
 
-In [!DNL Real-Time CDP Collaboration], you can activate audiences that contain [match keys](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections#match-keys). These audiences are built within a Collaboration project rather than through the Experience Platform [!DNL Segmentation Service]. For more information, see the [Real-Time CDP Collaboration destinations overview](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/overview).
+In [!DNL Real-Time CDP Collaboration], you can [source audiences](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/setup/source-audiences/onboard-audiences) from [!DNL Adobe Experience Platform] or other cloud sources. Audiences in [!DNL Real-Time CDP Collaboration] are made up of [match keys](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections#match-keys). You can use these audiences within a Collaboration for data collaboration or paid media activities.
 
 ## Export type and frequency {#export-type-frequency}
 
