@@ -69,8 +69,7 @@ Although [!DNL Real-Time Customer Profile] processes ingested data and uses Adob
 
 The Profile store uses a Microsoft Azure Cosmos DB infrastructure and the Experience Platform Data Lake uses Microsoft Azure Data Lake storage.
 
-<!-- Cross-link: Direct readers to architecture guidance that explains when long-term behavioral data should remain outside Profile and be promoted as activation-ready intelligence. -->
-For guidance on separating long-term analytical history from activation-ready Profile data, see [Long-term personalization with Data Distiller Accelerators](../query-service/data-distiller/long-term-personalization.md).
+For guidance on separating long-term analytical history from activation-ready Profile data, see [Choose the right long-term personalization approach](../hygiene/choose-a-personalization-approach.md).
 
 ### Profile guardrails
 

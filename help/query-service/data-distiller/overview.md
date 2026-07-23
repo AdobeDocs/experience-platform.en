@@ -7,8 +7,7 @@ exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
 
 Data Distiller is a package offering that includes a subset of the functionalities from Adobe Experience Platform. With Data Distiller you can perform post-ingestion data preparation (such as cleaning, shaping, and manipulation) for real-time customer profile or analytical use cases by executing batch queries in Query Service. Your use of Data Distiller is dependent on your entitlement for Experience Platform-based applications.
 
-<!-- Cross-link: Direct readers from Data Distiller fundamentals to architecture guidance for deriving activation-ready personalization signals from historical data. -->
-For architecture guidance on using historical data in the data lake to support personalization while optimizing Profile usage, see [Long-term personalization with Data Distiller Accelerators](./long-term-personalization.md).
+For guidance on choosing an approach to long-term personalization, including where Data Distiller fits alongside Customer Journey Analytics and Federated Audience Composition, see [Choose the right long-term personalization approach](../../hygiene/choose-a-personalization-approach.md).
 
 <!-- 
 Commented out references to licence usage dashboard. It is temporarily hidden:

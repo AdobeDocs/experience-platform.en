@@ -159,8 +159,7 @@ There are two central scenarios to consider when ensuring that your data usage r
 
 Data can be ingested into one or multiple systems in Experience Platform, namely the [!DNL data lake] and/or the Profile store. This means that different data can exist in both systems for a variety of different use cases. For example, you may want to hold historical data in the [!DNL data lake], but not in the Profile store. You can select which data to send to the Profile store by enabling a dataset for Profile ingestion.
 
-<!-- Cross-link: Direct readers to architecture guidance that applies the data lake versus Profile Store distinction to long-term personalization use cases. -->
-For architecture guidance on keeping long-term behavioral history in analytical systems while promoting only activation-ready intelligence into Profile, see [Long-term personalization with Data Distiller Accelerators](../../query-service/data-distiller/long-term-personalization.md).
+For architecture guidance on keeping long-term behavioral history in analytical systems while promoting only activation-ready intelligence into Profile, see [Choose the right long-term personalization approach](../../hygiene/choose-a-personalization-approach.md).
 
 >[!NOTE]
 >

@@ -18,8 +18,6 @@ nudge: true
 - Data Distiller {#data-distiller}
     - [Overview](data-distiller/overview.md)
     - [License usage](data-distiller/license-usage.md)
-    - Accelerators {#accelerators}
-        - [Long-term personalization](data-distiller/long-term-personalization.md)
     - Derived datasets {#derived-datasets}
         - [Overview](data-distiller/derived-datasets/overview.md)
         - [Create derived datasets with SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
