@@ -40,7 +40,7 @@ You must have both **[!UICONTROL View Sources]** and **[!UICONTROL Manage Source
 
 ### [!DNL Google Ads] access requirements
 
-You must have valid [!DNL Google Ads] API credentials and access to the [!DNL Google Ads] account that you want to read from. If the target advertiser account is managed through a [!DNL Google Ads] manager account (MCC), then the connection must also include the correct login customer ID so that requests can be routed through the proper manager hierarchy.
+You must have valid [!DNL Google Ads] API credentials and access to the [!DNL Google Ads] account that you want to read from. If the target advertiser account is managed through a **[!DNL Google Ads] manager account (MCC)**, then the connection must also include the correct login customer ID so that requests can be routed through the proper manager hierarchy.
 
 In practice:
 
@@ -102,7 +102,7 @@ You can connect [!DNL Google Ads] to Experience Platform using either APIs or th
 
 ### Using APIs
 
-Use the Flow Service API when you need programmatic setup, repeatable configuration, or incremental ingestion support. At a high level, the API workflow includes:
+[Use the [!DNL Flow Service] API](../../tutorials/api/create/advertising/ads.md) when you need programmatic setup, repeatable configuration, or incremental ingestion support. At a high level, the API workflow includes:
 
 1. Creating a base connection,
 2. Exploring the source configuration,
@@ -111,7 +111,7 @@ Use the Flow Service API when you need programmatic setup, repeatable configurat
 
 ### Using the UI
 
-Use the Experience Platform Sources workspace for guided setup when you want to connect [!DNL Google Ads] through the UI. The UI flow supports credential entry, attribute selection, preview, and dataflow creation. At present, the UI path remains beta and supports one-time ingestion only.
+[Use the Experience Platform Sources workspace](../../tutorials/ui/create/advertising/ads.md) for guided setup when you want to connect [!DNL Google Ads] through the UI. The UI flow supports credential entry, attribute selection, preview, and dataflow creation. At present, the UI path remains beta and supports one-time ingestion only.
 
 ## Known limitations and notes
 
@@ -125,6 +125,10 @@ Use the Experience Platform Sources workspace for guided setup when you want to 
 
 After you have gathered your credentials and confirmed your account access pattern, continue with one of the following setup paths:
 
-- API path: Create a [!DNL Google Ads] base connection and then create a dataflow for your advertising source.
-- UI path: Create a [!DNL Google Ads] source connection in the Sources workspace and proceed through attribute selection and dataflow creation.
+- API path: 
+  - [Create a [!DNL Google Ads] base connection](../../tutorials/api/create/advertising/ads.md)
+  - [Create a dataflow for your advertising source](../../tutorials/api/collect/advertising.md)
+- UI path: 
+  - [Create a [!DNL Google Ads] source connection in the Sources workspace](../../tutorials/ui/create/advertising/ads.md)
+  - [Create a dataflow for your advertising source](../../tutorials/ui/dataflow/analytics.md)
 
