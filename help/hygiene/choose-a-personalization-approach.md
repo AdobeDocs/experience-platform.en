@@ -75,6 +75,8 @@ A data engineer writes a SQL query — for example, calculating each customer's 
 * **Strengths:** mathematically exact outputs; fully automated on a schedule; raw data stays in the data lake.
 * **Limitations:** requires SQL and a data engineer; the transformation must be defined in advance, so it is not suited to exploratory analysis.
 
+To implement this approach, including an end-to-end worked example, see [Long-term personalization with Data Distiller](../query-service/data-distiller/long-term-personalization.md).
+
 ### Customer Journey Analytics {#customer-journey-analytics}
 
 [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview) connects customer identities and behavior across channels, devices, and time to deliver holistic, customer-level insight. For long-term personalization, it provides a visual, no-code environment for exploring historical journeys and a direct path — Audience Publishing — to promote the resulting audiences to the Profile store. Historical data analyzed in Customer Journey Analytics does not need to be enabled for the Profile store, so months or years of event history can reside there without counting toward your Total Data Volume entitlement.
@@ -143,6 +145,7 @@ Choosing the right approach keeps new historical data out of the Profile store. 
 
 Long-term personalization does not require storing years of raw event data in the Profile store. It requires deriving the right signal from that history and making only that signal available for real-time activation. Confirm you have a long-term need, choose the approach that fits your architecture and team, and follow the linked product documentation to implement it.
 
+* [Long-term personalization with Data Distiller](../query-service/data-distiller/long-term-personalization.md)
 * [Data Distiller overview](../query-service/data-distiller/overview.md)
 * [Customer Journey Analytics overview](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview)
 * [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
