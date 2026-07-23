@@ -147,3 +147,4 @@ Identity Service plays a vital role within Experience Platform. Some of these ke
 * [Segment Match](../segmentation/ui/segment-match/overview.md): Segment Match matches two profiles across two different sandboxes that have the same identity namespace and identity value.
 * [Privacy Service](../privacy-service/home.md): If the deletion request includes `identity`, then the specified namespace and identity value combination can be deleted from Identity Service using the privacy request processing feature in Privacy Service.
 
+
