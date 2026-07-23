@@ -183,11 +183,9 @@ Use the table below to select the target field based on your source data. Both i
 
 ![UI image showing the mapping step with IdentityMap Email mapped to Identity email.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
 
-**What not to do**
-
 >[!WARNING]
 >
->Do not map a plain text (unhashed) source field to the `email_lc_sha256` target field. Experience Platform does not hash your data when you map to `email_lc_sha256`, so [!DNL Microsoft Ads] receives values that are not hashed and rejects the payload. As a result, none of your profiles match. The mapping UI does not prevent this combination, so you must select the correct target field yourself. Map plain text email addresses to `email` instead.
+>Do not map a plain text (unhashed) source field to the `email_lc_sha256` target field. Experience Platform does not hash your data when you map to `email_lc_sha256`, so [!DNL Microsoft Ads] receives values that are not hashed and rejects the payload. As a result, the exported profiles will not match. The mapping UI does not prevent this combination, so you must select the correct target field yourself. Always map plain text email addresses to the `email` target field.
 
 >[!IMPORTANT]
 >
