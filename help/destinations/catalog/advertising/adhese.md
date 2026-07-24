@@ -86,7 +86,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-<!-- TODO: add screenshot of the S3 authentication screen -->
+![authentication details](../../assets/catalog/advertising/adhese/authentication_details.png)
 
 * **[!UICONTROL Access key ID]**: The Amazon S3 access key ID provided to you by Adhese during onboarding.
 * **[!UICONTROL Secret access key]**: The Amazon S3 secret access key provided to you by Adhese during onboarding.
@@ -95,12 +95,12 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-<!-- TODO: add screenshot of the destination details screen -->
+![destination details](../../assets/catalog/advertising/adhese/destination_details.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Adhese Region]**: The region provided by Adhese during onboarding.
-* **[!UICONTROL Customer ID]**: Your customer ID, provided by Adhese (for example `customers/acme-corp/`).
+* **[!UICONTROL Region]**: The region provided by Adhese during onboarding.
+* **[!UICONTROL Customer ID]**: Your customer ID, provided by Adhese (for example `acme-corp`). This is the name of your Adhese account (https://<customer_id>.adhese.org or https://<customer_id>.classic.adhese.eu)
 
 ### Enable alerts {#enable-alerts}
 
@@ -123,7 +123,7 @@ The Adhese destination exports identities only — no profile attributes are exp
 
 In the **[!UICONTROL Mapping]** step of the activation workflow, select the identity namespace that you use to identify users on your website or app as the source field. The mapped identity values become the contents of the exported file. Mapping an identity is mandatory; selecting profile attributes is not supported for this destination.
 
-<!-- TODO: add screenshot of the mapping step -->
+![mapping details](../../assets/catalog/advertising/adhese/mapping_details.png)
 
 ### Schedule audience export {#schedule}
 
