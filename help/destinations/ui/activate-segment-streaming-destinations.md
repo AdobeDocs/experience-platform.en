@@ -72,13 +72,17 @@ To select the audiences that you want to activate to the destination, use the ch
 
 Use the search box to find an audience by name, or select the filter icon to narrow down the results by evaluation type (edge, streaming, or batch), namespace origin, or tags.
 
+>[!TIP]
+>
+>You can filter by the same tags you use on the audience browse screen. Any tags you added to an audience there carry over to this screen.
+
+![Expanded filters panel showing the origin and tags filters, alongside the search box and checkboxes for selecting one or multiple audiences to activate.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
+
 You can select from multiple types of audiences, depending on their origin:
 
 * **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
 * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Experience Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience).
 * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
-
-![Search box, filter icon, and several audiences highlighted in the Select audiences step.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
 ## Map attributes and identities {#mapping}
 

@@ -90,6 +90,12 @@ To select the audiences that you want to activate to the destination, use the ch
 
 Use the search box to find an audience by name, or select the filter icon to narrow down the results by evaluation type (edge, streaming, or batch), namespace origin, or tags.
 
+>[!TIP]
+>
+>You can filter by the same tags you use on the audience browse screen. Any tags you added to an audience there carry over to this screen.
+
+![Expanded filters panel showing the origin and tags filters, alongside the search box and checkboxes for selecting one or multiple audiences to activate.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
+
 You can select from multiple types of audiences, depending on their origin:
 
 * **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
@@ -99,8 +105,6 @@ You can select from multiple types of audiences, depending on their origin:
 >[!IMPORTANT]
 >
 >When activating custom upload audiences to batch file-based destinations, there is a limit of 10 such audiences that you can activate in a dataflow.
-
-![Search box, filter icon, and checkboxes shown when selecting one or multiple audiences to activate.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
