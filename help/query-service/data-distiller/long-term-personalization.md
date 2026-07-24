@@ -26,7 +26,7 @@ The Data Distiller workflow for long-term personalization follows a derive-and-p
 1. **Write the transformation query.** A data engineer authors a SQL query that defines the signal, for example total activity over the past 12 months mapped to a loyalty tier. See the [Query Editor user guide](../ui/user-guide.md) and [parameterized queries](../ui/parameterized-queries.md).
 1. **Generate a derived dataset.** Run the query to produce a compact output: one row per customer containing only the computed signal. See [derived datasets](./derived-datasets/overview.md).
 1. **Schedule the refresh.** Save the query and set it to run on a cadence (daily, weekly, or as your use case requires) so the signal always reflects the latest window. See [query schedules](../ui/query-schedules.md).
-1. **Publish to the Profile store and activate.** Publish the derived signal to Real-Time Customer Profile, where it becomes available in [Segment Builder](../../segmentation/home.md) to build audiences. From there, you activate those audiences through [Real-Time Customer Data Platform destinations](../../destinations/home.md) or an Adobe Journey Optimizer journey.
+1. **Publish to the Profile store and activate.** Publish the derived signal to Real-Time Customer Profile, where it becomes available in [Segment Builder](../../segmentation/home.md) to build audiences. From there, you activate those audiences through [Real-Time Customer Data Platform destinations](../../destinations/home.md) or [Adobe Journey Optimizer journeys](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/create-journey/create-journey-landing-page).
 
 ## Two ways to deliver the signal {#output-patterns}
 
