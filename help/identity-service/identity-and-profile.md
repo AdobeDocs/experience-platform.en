@@ -66,3 +66,4 @@ Once you mark fields as identities, they can then be defined as either primary o
 
 Identity Service will establish links between identities as long as there are at least two fields marked as identity. Identity Service does not store information on whether an identity is primary or secondary. 
 
+
