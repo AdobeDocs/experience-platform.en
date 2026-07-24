@@ -72,8 +72,8 @@ This baseline is the starting point, not a fourth approach. Its limit is the rea
 A data engineer writes a SQL query — for example, calculating each customer's activity over the past 12 months and assigning a loyalty tier — and produces a [derived dataset](../query-service/data-distiller/derived-datasets/overview.md) of one row per customer. The query is [scheduled](../query-service/ui/query-schedules.md) to refresh automatically and is published to the Profile store for segmentation and activation. Data Distiller can also [build and publish audiences directly from SQL](../query-service/data-distiller-audiences/overview.md) without first creating a derived attribute.
 
 * **Best for:** loyalty and churn scoring, lifetime value, [decile and percentile rankings](../query-service/data-distiller/derived-datasets/decile-based-derived-attributes.md), RFM models, and automated recurring refresh.
-* **Strengths:** mathematically exact outputs; fully automated on a schedule; raw data stays in the data lake.
-* **Limitations:** requires SQL and a data engineer; the transformation must be defined in advance, so it is not suited to exploratory analysis.
+* **Strengths:** produces mathematically exact outputs, refreshes automatically on a schedule, and keeps raw data in the data lake.
+* **Limitations:** requires SQL and a data engineer. The transformation must be defined in advance, so it is not suited to exploratory analysis.
 
 To implement this approach, including an end-to-end worked example, see [Long-term personalization with Data Distiller](../query-service/data-distiller/long-term-personalization.md).
 
@@ -84,20 +84,20 @@ To implement this approach, including an end-to-end worked example, see [Long-te
 Analysts explore journeys visually across any time horizon, combine behavioral criteria into an audience, and publish it to the Profile store, where it becomes available in Real-Time Customer Data Platform and Adobe Journey Optimizer. Audiences can be published once for a campaign or refreshed automatically.
 
 * **Best for:** audiences discovered through exploration, multi-channel journey analysis, re-engagement campaigns, and one-time audiences tied to a specific event.
-* **Strengths:** self-service for analysts and marketers with no SQL; exploration-first, so audience definitions can emerge from the data; publishes to activation within minutes.
-* **Limitations:** outputs are audience memberships, not computed attributes written back to every profile; filter-based precision is approximate rather than exact.
+* **Strengths:** self-service for analysts and marketers, with no SQL required. Exploration-first, so audience definitions can emerge from the data. Publishes to activation within minutes.
+* **Limitations:** outputs are audience memberships, not computed attributes written back to every profile. Filter-based precision is approximate rather than exact.
 
 ### Federated Audience Composition {#federated-audience-composition}
 
 [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home) builds and qualifies audiences directly from data in an external enterprise data warehouse, without moving the underlying data into Experience Platform. Audience definitions are applied against warehouse data using a no-code composition canvas, and only the resulting audience membership is sent to Experience Platform for activation.
 
-* **Best for:** organizations whose historical data is the system of record in a warehouse such as Snowflake, Databricks, Google BigQuery, or Amazon Redshift, and who want to activate it without a full ingestion project.
-* **Strengths:** the underlying data never leaves the warehouse, satisfying governance and sovereignty requirements; no large-scale ingestion required.
-* **Limitations:** dependent on warehouse connectivity and composition; activation is limited to audience membership.
+* **Best for:** organizations whose historical data is the system of record in a warehouse such as [!DNL Snowflake], [!DNL Databricks], [!DNL Google BigQuery], or [!DNL Amazon Redshift], and who want to activate it without a full ingestion project.
+* **Strengths:** the underlying data never leaves the warehouse, which satisfies governance and sovereignty requirements. No large-scale ingestion is required.
+* **Limitations:** dependent on warehouse connectivity and composition. Activation is limited to audience membership.
 
 ## Compare the approaches {#comparison}
 
-The following table compares the three approaches. Real-Time CDP / Adobe Journey Optimizer on their own remain the baseline for use cases that need only recent data, as described in [Before you choose](#qualifier).
+The following table compares the three approaches. Real-Time Customer Data Platform and Adobe Journey Optimizer on their own remain the baseline for use cases that need only recent data, as described in [Before you choose](#qualifier).
 
 | Dimension | Data Distiller | Customer Journey Analytics | Federated Audience Composition |
 | --- | --- | --- | --- |
@@ -128,11 +128,11 @@ Your choice is also shaped by where your data lives and what you have licensed:
 | You need exact mathematical deciles or percentile rankings | Data Distiller |
 | You want an audience based on a multi-step customer journey | Customer Journey Analytics |
 | Your historical data must stay in an external warehouse | Federated Audience Composition |
-| You need the audience to refresh automatically on a schedule | Data Distiller |
+| You need a derived attribute recomputed automatically on a schedule | Data Distiller |
 
 >[!TIP]
 >
->When you have both Data Distiller and Customer Journey Analytics, use each for what it does best and combine them. Data Distiller can compute a churn risk score weekly and write it to every profile; analysts in Customer Journey Analytics can then filter on that score alongside journey behavior they discover visually — producing a precision-scored, journey-aware audience that neither tool could create as effectively on its own.
+>When you have both Data Distiller and Customer Journey Analytics, use each for what it does best and combine them. Data Distiller can compute a churn risk score weekly and write it to every profile. Analysts in Customer Journey Analytics can then filter on that score alongside journey behavior they discover visually, producing a precision-scored, journey-aware audience that neither tool could create as effectively on its own.
 
 ## Keep the Profile store lean {#keep-lean}
 
