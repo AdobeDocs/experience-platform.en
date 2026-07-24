@@ -31,6 +31,8 @@ A technology company launched a new product and wants to drive awareness among c
 
 [!DNL Microsoft Ads Customer Match] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
+For recommended source-to-target mapping pairs based on your schema structure, see the [Mapping](#mapping) section.
+
 | Target Identity | Source field to map | Considerations |
 |---|---|---|
 | `email` | A field containing plain text email addresses | Experience Platform sanitizes and hashes the email addresses before exporting them to [!DNL Microsoft Ads]. |
@@ -168,7 +170,7 @@ There are two target fields:
 * `email`: for source fields that contain plain text (unhashed) email addresses. Experience Platform sanitizes and hashes these values automatically before exporting them to [!DNL Microsoft Ads].
 * `email_lc_sha256`: for source fields that contain email addresses you have already sanitized and hashed with SHA-256. Experience Platform sends these values without further transformation.
 
-The mapping does not use a transformation step. Experience Platform sanitizes them, then hashes them before sending the data to [!DNL Microsoft Ads Customer Match].
+The mapping does not use a transformation step. When you map a plain text source field to `email`, Experience Platform sanitizes and hashes the email addresses automatically before sending them to [!DNL Microsoft Ads Customer Match].
 
 **Choose the correct target field**
 
@@ -189,7 +191,12 @@ Use the table below to select the target field based on your source data. Both i
 
 The following examples show supported mappings, where the source field format matches the target field.
 
-Map identity namespaces to their matching target field. Map `IdentityMap: Email` to `email`, and map `IdentityMap: Email_LC_SHA256` to `email_lc_sha256`.
+Map each identity namespace to its matching target field:
+
+* Map the `IdentityMap: Email` namespace, which contains plain text email addresses, to the `email` target field.
+* Map the `IdentityMap: Email_LC_SHA256` namespace, which contains already-hashed email addresses, to the `email_lc_sha256` target field.
+
+The following image shows both identity namespace mappings:
 
 ![Mapping step showing IdentityMap Email mapped to the email target field, and IdentityMap Email LC SHA256 mapped to the email lc sha256 target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-identity.png)
 
@@ -205,19 +212,19 @@ Map a pre-hashed email attribute to the `email_lc_sha256` target field. Experien
 
 >[!WARNING]
 >
->Do not map a plain text (unhashed) source field to the `email_lc_sha256` target field. Experience Platform does not hash your data when you map to `email_lc_sha256`, so [!DNL Microsoft Ads] receives values that are not hashed and rejects the payload. As a result, the exported profiles will not match. The mapping UI does not prevent this combination, so you must select the correct target field yourself. Always map plain text email addresses to the `email` target field.
+>Do not map a plain text (unhashed) source field to the `email_lc_sha256` target field. Experience Platform does not hash your data when you map to `email_lc_sha256`, so [!DNL Microsoft Ads] rejects the payload and the export fails. The mapping UI does not prevent this combination, so you must select the correct target field yourself. Always map plain text email addresses to the `email` target field.
 
 >[!BEGINSHADEBOX "Incorrect mapping example"]
 
 The following example shows an unsupported mapping. Both source fields, `personalEmail.address` and `IdentityMap: Email`, contain plain text email addresses, but they are mapped to the `email_lc_sha256` target field. [!DNL Microsoft Ads] rejects these values because they are not hashed.
 
-![Mapping step showing the XDM attribute personalEmail.address and IdentityMap Email both incorrectly mapped to the email lc sha256 target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/incorrect-mapping.png)
+![Mapping step marked Not supported, showing the XDM attribute personalEmail.address and IdentityMap Email both incorrectly mapped to the email lc sha256 target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/incorrect-mapping.png)
 
 >[!ENDSHADEBOX]
 
 ### Audience naming {#audience-naming}
 
-Experience Platform appends a UTC timestamp to the audience name when it exports the audience through the [!DNL Microsoft Ads Customer Match] destination. The timestamp differentiates audiences created through this destination from audiences created through the legacy [!DNL Microsoft Bing] connector, and it prevents duplicate or colliding audience names in your [!DNL Microsoft Ads] account.
+Experience Platform appends a UTC timestamp to the audience name when it exports the audience through the [!DNL Microsoft Ads Customer Match] destination. The timestamp differentiates audiences created through this destination from audiences created through the legacy [Microsoft Bing connector](bing.md), and it prevents duplicate or colliding audience names in your [!DNL Microsoft Ads] account.
 
 ## Exported data {#exported-data}
 
@@ -227,7 +234,7 @@ To verify if data has been exported successfully to the [!DNL Microsoft Ads Cust
 
 Match rate refers to the percentage of profiles in a [!DNL Real-Time CDP] audience that [!DNL Microsoft Ads] successfully matches to existing users in its network when the audience is created in [!DNL Microsoft Advertising].
 
-Several factors contribute to the match rates observed for a submitted audience. Match rates can be affected by data quality considerations such as invalid, outdated (stale), or incorrectly formatted email addresses.
+Several factors within Experience Platform and [!DNL Microsoft Ads] contribute to the match rates observed for a submitted audience. Match rates can be affected by data quality considerations such as invalid, outdated (stale), or incorrectly formatted email addresses.
 
 [!DNL Microsoft Advertising] matches users that are known and targetable within its advertising network. As a result, only users that can be identified and are eligible for advertising use can contribute to the final match rate.
 
