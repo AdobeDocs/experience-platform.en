@@ -191,14 +191,13 @@ Use the table below to select the target field based on your source data. Both i
 
 The following examples show supported mappings, where the source field format matches the target field.
 
-Map each identity namespace to its matching target field:
+Map the `IdentityMap: Email` namespace, which contains plain text email addresses, to the `email` target field.
 
-* Map the `IdentityMap: Email` namespace, which contains plain text email addresses, to the `email` target field.
-* Map the `IdentityMap: Email_LC_SHA256` namespace, which contains already-hashed email addresses, to the `email_lc_sha256` target field.
+![Mapping step showing the IdentityMap Email namespace mapped to the email target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-identity-email.png)
 
-The following image shows both identity namespace mappings:
+Map the `IdentityMap: Email_LC_SHA256` namespace, which contains already-hashed email addresses, to the `email_lc_sha256` target field.
 
-![Mapping step showing IdentityMap Email mapped to the email target field, and IdentityMap Email LC SHA256 mapped to the email lc sha256 target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-identity.png)
+![Mapping step showing the IdentityMap Email LC SHA256 namespace mapped to the email lc sha256 target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-identity-hashed.png)
 
 Map a plain text email attribute, such as `personalEmail.address`, to the `email` target field. Experience Platform hashes the values before export.
 
