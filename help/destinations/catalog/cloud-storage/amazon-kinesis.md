@@ -168,7 +168,7 @@ Input the fields below and select **[!UICONTROL Connect to destination]**:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includemappedaudiencesonly"
 >title="Include mapped audiences only"
->abstract="Toggle this option to have the segmentMembership object in the export include only the audiences mapped in this dataflow. Keep the toggle off to include audiences that share the same merge policy as the mapped audiences, even if they are not mapped in this dataflow. [View an example](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/cloud-storage/amazon-kinesis#exported-data)."
+>abstract="Toggle this option to have the segmentMembership object in the export include only the audiences mapped in this dataflow. Keep the toggle off to include audiences that share the same merge policy as the mapped audiences, even if they are not mapped in this dataflow. <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/amazon-kinesis.html#exported-data">View an example</a>."
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
