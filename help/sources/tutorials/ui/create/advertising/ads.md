@@ -90,9 +90,9 @@ Once you have inputted your credentials, select **[!UICONTROL Connect to source]
 
 ## Select data {#select-data}
 
-With [!DNL Google Ads], you must provide the list of attributes for ingestion during the data selection phase of the workflow. In order to retrieve these attributes, you must use the [[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v19/overview_query_builder).
+With [!DNL Google Ads], you must provide the list of attributes for ingestion during the data selection phase of the workflow. To retrieve those attributes, you must use the [[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v19/overview_query_builder).
 
-In the [!DNL Google Ads Query Builder], navigate to the resource type that you want to use and then use the attributes selector to select your attributes, segments, and metrics.
+In the [!DNL Google Ads Query Builder], navigate to the **resource type** that you want to use and then use the attributes selector to select your **attributes**, **segments**, and **metrics**.
 
 ![The attributes selector in the Google Ads Query Builder.](../../../../images/tutorials/create/ads/attributes.png)
 
