@@ -1,6 +1,6 @@
 ---
 title: Long-term personalization with Data Distiller
-description: Use Data Distiller to support long-term personalization in Adobe Experience Platform. Keep raw event history in the data lake, compute precise signals with scheduled SQL, and publish only the derived attribute or audience to Real-Time Customer Profile for activation.
+description: Use Data Distiller to implement long-term personalization in Adobe Experience Platform. Compute signals from historical data, publish only the derived attribute or audience to Real-Time Customer Profile, and activate them in Real-Time CDP and Adobe Journey Optimizer.
 solution: Experience Platform
 keywords: Experience Platform;Data Distiller;long-term personalization;derived datasets;deciles;SQL audiences;profile store;data lake;signals;scores;tiers
 ---
