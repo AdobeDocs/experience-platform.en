@@ -24,7 +24,7 @@ The Data Distiller workflow for long-term personalization follows a derive-and-p
 
 ![Derive-and-promote data flow diagram showing data lake, Data Distiller, Profile store, and activation](../images/data-distiller/data-distiller-derive-promote-workflow.png)
 
-**Prerequisite:** Your historical event data must already be ingested into Experience Platform and available in the data lake before Data Distiller can query it. Data Distiller queries data in the data lake. It does not ingest data itself.
+**Prerequisite:** Your historical event data must already be [ingested into Experience Platform](../../ingestion/home.md) and available in the data lake before Data Distiller can query it. Data Distiller queries data in the data lake. It does not ingest data itself.
 
 The steps below illustrate the derived-attribute pattern. The direct SQL audience pattern uses the same compute-and-refresh approach but publishes audience membership instead of a reusable profile attribute, as described in [Two ways to deliver the signal](#output-patterns).
 
@@ -32,7 +32,7 @@ The steps below illustrate the derived-attribute pattern. The direct SQL audienc
 1. **Write the transformation query.** A data engineer authors a SQL query that defines the signal, for example total activity over the past 12 months mapped to a loyalty tier. See the [Query Editor user guide](../ui/user-guide.md) and [parameterized queries](../ui/parameterized-queries.md).
 1. **Generate a derived dataset.** Run the query to create a derived dataset with one row per customer, containing only the computed signal. See [derived datasets](./derived-datasets/overview.md).
 1. **Schedule the refresh.** Save the query and set it to run on a cadence (daily, weekly, or as your use case requires) so the signal always reflects the latest window. See [query schedules](../ui/query-schedules.md).
-1. **Publish to the Profile store.** The derived dataset stays in the data lake until you publish it. Publishing promotes the computed output into Real-Time Customer Profile, where it becomes available in [Segment Builder](../../segmentation/home.md) to build audiences. From there, you activate those audiences through [Real-Time Customer Data Platform destinations](../../destinations/home.md) or [Adobe Journey Optimizer journeys](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/create-journey/create-journey-landing-page).
+1. **Publish to the Profile store.** The derived dataset stays in the data lake until you publish it. Publishing promotes the computed output into Real-Time Customer Profile, where it becomes available in [Segment Builder](../../segmentation/ui/segment-builder.md) to build audiences. From there, you activate those audiences through [Real-Time Customer Data Platform destinations](../../destinations/home.md) or [Adobe Journey Optimizer journeys](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/create-journey/create-journey-landing-page).
 
 ## Two ways to deliver the signal {#output-patterns}
 
