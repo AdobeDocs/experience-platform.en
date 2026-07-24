@@ -24,7 +24,12 @@ The Data Distiller workflow for long-term personalization follows a derive-and-p
 
 ## Confirm Data Distiller fits {#when-to-use}
 
-This guide assumes Data Distiller is your chosen approach. It is the right fit when your use case needs mathematically precise outputs (exact deciles, percentiles, or ranked scores), a derived attribute such as `loyalty_tier` or `churn_risk_score` written to every profile, or a signal that recomputes automatically on a schedule.
+This guide assumes Data Distiller is your chosen approach. It is the right fit when your long-term personalization use case calls for:
+
+* **Mathematically precise outputs.** Exact deciles, percentiles, and ranked scores from full historical datasets, such as the top 10% of customers by a calculated metric.
+* **Derived attributes on every profile.** A computed value such as `loyalty_tier` or `churn_risk_score` written back to each customer profile and reusable across every downstream audience and journey.
+* **Automated, scheduled refresh.** A signal that recomputes on a fixed cadence with no manual intervention after setup.
+* **Repeatable, well-defined transformations.** Use cases where you can define the calculation in advance in SQL.
 
 Data Distiller is used by data engineers and SQL analysts. Once a signal is published, marketers and campaign managers can use it in Segment Builder and Adobe Journey Optimizer without any technical knowledge.
 
