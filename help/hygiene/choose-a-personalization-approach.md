@@ -10,9 +10,9 @@ Long-term personalization means tailoring a real-time experience based on custom
 
 This guide is for solution and platform architects and technical decision-makers who are designing a personalization data architecture. Data engineers, business analysts, marketers, and platform administrators who work with historical data for audience creation will also find the comparison and decision guidance useful. It assumes you are familiar with core Experience Platform concepts, including [profiles](../profile/home.md), audiences, the data lake, and the Profile store. It is a companion to [Choose the right Data Lifecycle Management capability](./choose-a-capability.md), which covers how to keep the Profile store lean once your architecture is in place.
 
-## The customer problem {#customer-problem}
+## Why long-term history doesn't belong in the Profile store {#customer-problem}
 
-Many organizations accumulate large volumes of historical event data in the Profile store on the assumption that more stored data produces better personalization. In practice, this drives up Profile store size and Total Data Volume entitlement without improving the experiences customers receive.
+Many organizations accumulate large volumes of historical event data in the Profile store on the assumption that more stored data produces better personalization. In practice, this drives up Profile store size and Total Data Volume entitlement without improving the experiences your customers receive.
 
 Long-term personalization use cases are common in industries with long purchase cycles or slowly evolving customer relationships:
 
@@ -35,7 +35,7 @@ Use the following questions to determine whether your organization is placing an
 * **Is your industry characterized by long purchase cycles?** Mortgages, insurance, B2B contracts, seasonal retail, and travel rewards all involve relationships that evolve over months or years.
 * **Do you have Data Distiller or Customer Journey Analytics licensed but not used for audience creation?** These tools are designed for the analytical work you may currently be asking the Profile store to do.
 
-## How Experience Platform separates analysis from activation {#workflows}
+## Where your data should live: analytical and engagement workflows {#workflows}
 
 Experience Platform stores data in two repositories that serve different workflows. Matching each dataset to the workflow it supports is the foundation of an efficient long-term personalization architecture.
 
@@ -44,15 +44,15 @@ Experience Platform stores data in two repositories that serve different workflo
 | Analytical | Long-term retention with slower access, held in the data lake | Historical analysis, reporting, signal generation, data science |
 | Engagement | Real-time or near-real-time access, held in the Profile store | Segmentation, activation, personalization |
 
-The guiding principle is to **personalize on the signal, not the raw history**. You do not need to store years of raw behavioral events in the Profile store to know that a customer qualifies as a loyalty tier member, a high-value buyer, or an at-risk churner. You compute those labels from the historical data in the analytical workflow and store only the label — the signal — in the Profile store. The raw history stays in the data lake, where it does not count toward your Profile entitlement.
+The guiding principle is to **personalize on the signal, not the raw history**. You do not need to store years of raw behavioral events in the Profile store to know that a customer qualifies as a loyalty tier member, a high-value buyer, or an at-risk churner. You compute those labels from the historical data in the analytical workflow and store only the label (the signal) in the Profile store. The raw history stays in the data lake, where it does not count toward your Profile entitlement.
 
 ## Recommended architecture {#architecture}
 
 The recommended architecture separates long-term storage from real-time activation:
 
 1. **Customer event data accumulates in the data lake.** Web, app, purchase, loyalty, and offline records are retained at full historical depth without contributing to your Profile entitlement.
-1. **The analytical workflow derives a signal.** Queries or analyses transform months or years of history into a compact output — a loyalty tier, a churn risk score, a lifetime value ranking, or a qualified audience.
-1. **The signal is promoted to the Profile store.** Only the output — not the underlying event history — enters the engagement workflow.
+1. **The analytical workflow derives a signal.** Queries or analyses transform months or years of history into a compact output: a loyalty tier, a churn risk score, a lifetime value ranking, or a qualified audience.
+1. **The signal is promoted to the Profile store.** Only the output, not the underlying event history, enters the engagement workflow.
 1. **Real-Time Customer Data Platform and Adobe Journey Optimizer activate on the signal.** The activation layer operates on lean, current data and responds in milliseconds.
 
 The approaches in this guide are different ways to perform step 2 and step 3. Which one fits depends on where your historical data lives, which tools you have licensed, and how your team works.
@@ -77,9 +77,9 @@ If you already know your goal, use this table to find a likely starting point, t
 
 ### Data Distiller {#data-distiller}
 
-[Data Distiller](../query-service/data-distiller/overview.md) is an Experience Platform add-on that lets data engineers query, transform, and enrich data at scale using SQL. For long-term personalization, it reads historical event data from the data lake, applies transformation logic, and writes only the resulting signal to the Profile store.
+To query, transform, and enrich data at scale using SQL, use [Data Distiller](../query-service/data-distiller/overview.md), an Experience Platform add-on. For long-term personalization, it reads historical event data from the data lake, applies transformation logic, and writes only the resulting signal to the Profile store.
 
-Using SQL, a data engineer defines the transformation logic and produces a [derived dataset](../query-service/data-distiller/derived-datasets/overview.md) — a compact output such as a loyalty tier or churn score. The query is [scheduled](../query-service/ui/query-schedules.md) to refresh automatically and publishes only that signal to the Profile store. Data Distiller can also [build and publish audiences directly from SQL](../query-service/data-distiller-audiences/overview.md) without first creating a derived attribute.
+Using SQL, a data engineer defines the transformation logic and produces a [derived dataset](../query-service/data-distiller/derived-datasets/overview.md), a compact output such as a loyalty tier or churn score. The query is [scheduled](../query-service/ui/query-schedules.md) to refresh automatically and publishes only that signal to the Profile store. Data Distiller can also [build and publish audiences directly from SQL](../query-service/data-distiller-audiences/overview.md) without first creating a derived attribute.
 
 * **Best for:** loyalty and churn scoring, lifetime value, [decile and percentile rankings](../query-service/data-distiller/derived-datasets/decile-based-derived-attributes.md), RFM models, and automated recurring refresh.
 * **Strengths:** produces mathematically exact outputs, refreshes automatically on a schedule, and keeps raw data in the data lake.
@@ -89,7 +89,7 @@ To implement this approach, including an end-to-end worked example, see [Long-te
 
 ### Customer Journey Analytics {#customer-journey-analytics}
 
-[Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview) is an analytics application for analyzing customer behavior across channels and over time. For long-term personalization, it provides a visual, no-code environment for exploring historical journeys and a direct path — Audience Publishing — to promote the resulting audiences to the Profile store. Historical data analyzed in Customer Journey Analytics does not need to be enabled for the Profile store, so months or years of event history can reside there without counting toward your Total Data Volume entitlement.
+To analyze customer behavior across channels and over time, use [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview). For long-term personalization, it provides a visual, no-code environment for exploring historical journeys and a direct path (Audience Publishing) to promote the resulting audiences to the Profile store. Historical data analyzed in Customer Journey Analytics does not need to be enabled for the Profile store, so months or years of event history can reside there without counting toward your Total Data Volume entitlement.
 
 Analysts explore journeys visually across any time horizon, combine behavioral criteria into an audience, and publish it to the Profile store, where it becomes available in Real-Time Customer Data Platform and Adobe Journey Optimizer. Audiences can be published once for a campaign or refreshed automatically.
 
@@ -99,7 +99,7 @@ Analysts explore journeys visually across any time horizon, combine behavioral c
 
 ### Federated Audience Composition {#federated-audience-composition}
 
-[Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home) builds and qualifies audiences directly from data in an external enterprise data warehouse, without moving the underlying data into Experience Platform. Audience definitions are applied against warehouse data using a no-code composition canvas, and only the resulting audience membership is sent to Experience Platform for activation.
+To build and qualify audiences directly from data in an external enterprise data warehouse, without moving the underlying data into Experience Platform, use [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home). Audience definitions are applied against warehouse data using a no-code composition canvas, and only the resulting audience membership is sent to Experience Platform for activation.
 
 * **Best for:** organizations whose historical data is the system of record in a warehouse such as [!DNL Snowflake], [!DNL Databricks], [!DNL Google BigQuery], or [!DNL Amazon Redshift], and who want to activate it without a full ingestion project.
 * **Strengths:** the underlying data never leaves the warehouse, which satisfies governance and sovereignty requirements. No large-scale ingestion is required.
@@ -123,7 +123,7 @@ The following table compares the three approaches. Real-Time Customer Data Platf
 
 Two questions most clearly determine the right approach.
 
-**Do you need mathematically precise outputs?** If your use case requires exact rankings — the top 10% of customers by a calculated metric, a churn risk score of 0.82, a lifetime value in the eighth decile — Data Distiller is the appropriate tool. If you cannot define the calculation precisely in advance, start with Customer Journey Analytics.
+**Do you need mathematically precise outputs?** If your use case requires exact rankings (for example, the top 10% of customers by a calculated metric, a churn risk score of 0.82, or a lifetime value in the eighth decile), Data Distiller is the appropriate tool. If you cannot define the calculation precisely in advance, start with Customer Journey Analytics.
 
 **Are you starting from exploration?** If you do not yet know what the audience looks like and want to see what patterns emerge, Customer Journey Analytics is the right starting point. Once a pattern is validated, a data engineer can build a scheduled, precision-scored version in Data Distiller if that rigor is needed.
 
@@ -148,7 +148,7 @@ Your choice is also shaped by where your data lives and what you have licensed:
 
 Choosing the right approach keeps new historical data out of the Profile store. Actively managing what is already there is a complementary, ongoing practice for every deployment. Rather than repeat that guidance here, use the dedicated resources:
 
-* To choose a data management capability — record delete, dataset expiration, Experience Event TTL, or Pseudonymous Profile TTL — see [Choose the right Data Lifecycle Management capability](./choose-a-capability.md).
+* To choose a data management capability (record delete, dataset expiration, Experience Event TTL, or Pseudonymous Profile TTL), see [Choose the right Data Lifecycle Management capability](./choose-a-capability.md).
 * For license entitlement monitoring, ingestion filters, and dataset hygiene, see [Data management license entitlement best practices](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 ## Next steps {#next-steps}
