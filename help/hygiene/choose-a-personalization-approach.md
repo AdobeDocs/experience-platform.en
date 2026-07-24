@@ -75,7 +75,7 @@ If you already know your goal, use this table to find a likely starting point, t
 | Want to explore behavior and publish audiences without writing code | Customer Journey Analytics |
 | Must keep historical data in an external warehouse | Federated Audience Composition |
 
-## The three approaches {#approaches}
+## Choose an analytical approach {#approaches}
 
 Each approach below describes what it does, when to use it, and its strengths and limitations. Jump to the approach the Quick chooser pointed you to, or read all three to compare them.
 
