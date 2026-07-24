@@ -6,7 +6,7 @@ keywords: Experience Platform;Data Distiller;long-term personalization;derived d
 ---
 # Long-term personalization with Data Distiller
 
-Long-term personalization tailors a real-time experience using customer behavior that stretches back months or years. With Data Distiller, you can support these use cases precisely while keeping your Profile store and Total Data Volume lean: you use SQL to compute a compact signal (a score, a tier, a ranking, or an audience) from the full history in the data lake, then publish only that signal to Real-Time Customer Profile for activation. This guide shows how to implement that pattern.
+Long-term personalization tailors a real-time experience using customer behavior that stretches back months or years. With Data Distiller, you can support these use cases precisely while keeping your Profile store and [Total Data Volume](../../landing/license-usage-and-guardrails/total-data-volume.md) lean: you use SQL to compute a compact signal (a score, a tier, a ranking, or an audience) from the full history in the data lake, then publish only that signal to Real-Time Customer Profile for activation. This guide shows how to implement that pattern.
 
 This guide is for data engineers, solution architects, and technical implementers building the solution. It assumes familiarity with Experience Platform fundamentals and SQL.
 

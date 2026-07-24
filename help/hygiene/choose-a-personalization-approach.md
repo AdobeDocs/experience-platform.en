@@ -12,7 +12,7 @@ This guide is for solution and platform architects and technical decision-makers
 
 ## Why long-term history doesn't belong in the Profile store {#customer-problem}
 
-Many organizations accumulate large volumes of historical event data in the Profile store on the assumption that more stored data produces better personalization. In practice, this drives up Profile store size and Total Data Volume entitlement without improving the experiences your customers receive.
+Many organizations accumulate large volumes of historical event data in the Profile store on the assumption that more stored data produces better personalization. In practice, this drives up Profile store size and [Total Data Volume](../landing/license-usage-and-guardrails/total-data-volume.md) entitlement without improving the experiences your customers receive.
 
 Long-term personalization use cases are common in industries with long purchase cycles or slowly evolving customer relationships:
 
