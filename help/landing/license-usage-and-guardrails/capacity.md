@@ -72,6 +72,36 @@ For more information about guardrails in Experience Platform, please read the [R
 >title="Edge audiences"
 >abstract="The maximum number of edge audiences per sandbox."
 
+>[!CONTEXTUALHELP]
+>id="platform_capacity_creditperiod"
+>title="Credit period"
+>abstract="Temporary fill in text."
+
+>[!CONTEXTUALHELP]
+>id="platform_capacity_ondemandrun"
+>title="On-demand run"
+>abstract="Temporary fill in text."
+
+>[!CONTEXTUALHELP]
+>id="platform_capacity_scheduledruns"
+>title="Scheduled runs"
+>abstract="Temporary fill in text."
+
+>[!CONTEXTUALHELP]
+>id="platform_capacity_systemjob"
+>title="System job"
+>abstract="Temporary fill in text."
+
+>[!CONTEXTUALHELP]
+>id="platform_capacity_batchaudience"
+>title="Batch audience"
+>abstract="Temporary fill in text."
+
+>[!CONTEXTUALHELP]
+>id="platform_capacity_audiencelimit"
+>title="Audience limit"
+>abstract="Temporary fill in text."
+
 Currently, Capacity supports the following services:
 
 - Streaming segmentation
