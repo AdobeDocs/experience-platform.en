@@ -35,6 +35,8 @@ Use the following questions to determine whether your organization is placing an
 * **Is your industry characterized by long purchase cycles?** Mortgages, insurance, B2B contracts, seasonal retail, and travel rewards all involve relationships that evolve over months or years.
 * **Do you have Data Distiller or Customer Journey Analytics licensed but not used for audience creation?** These tools are designed for the analytical work you may currently be asking the Profile store to do.
 
+If these questions point to a long-term personalization pattern, the next step is understanding where each type of data belongs in Experience Platform.
+
 ## Where your data should live: analytical and engagement workflows {#workflows}
 
 Experience Platform stores data in two repositories that serve different workflows. Matching each dataset to the workflow it supports is the foundation of an efficient long-term personalization architecture.
@@ -55,13 +57,13 @@ The recommended architecture separates long-term storage from real-time activati
 1. **The signal is promoted to the Profile store.** Only the output, not the underlying event history, enters the engagement workflow.
 1. **Real-Time Customer Data Platform and Adobe Journey Optimizer activate on the signal.** The activation layer operates on lean, current data and responds in milliseconds.
 
-The approaches in this guide are different ways to perform step 2 and step 3. Which one fits depends on where your historical data lives, which tools you have licensed, and how your team works.
+The approaches in this guide are different ways to perform step 2 and step 3. Before choosing among them, confirm that your use case actually requires an analytical workflow beyond Real-Time Customer Data Platform and Adobe Journey Optimizer.
 
 ## Before you choose: confirm you have a long-term need {#qualifier}
 
 Not every organization needs an analytical approach. If all of your segmentation and personalization logic operates within a 30–90 day behavioral window, and current profile attributes plus recent events in the Profile store contain everything your decisions require, then **Real-Time Customer Data Platform and Adobe Journey Optimizer alone are sufficient**. No additional tooling is required, and activation runs directly from the Profile store.
 
-This baseline is the starting point, not a fourth approach. Its limit is the reason the rest of this guide exists: when segmentation logic extends beyond 30–90 days, or personalization depends on insight derived from months or years of history, storing that history in the Profile store raises Total Data Volume without improving outcomes. If your diagnostic in the previous section pointed to a long-term need, choose one of the three approaches that follow.
+This baseline is the starting point, not a fourth approach. That limit is where the remaining approaches provide additional value: when segmentation logic extends beyond 30–90 days, or personalization depends on insight derived from months or years of history, storing that history in the Profile store raises Total Data Volume without improving outcomes. If your diagnostic in the previous section pointed to a long-term need, choose one of the three approaches that follow.
 
 ## Quick chooser {#quick-chooser}
 
@@ -74,6 +76,8 @@ If you already know your goal, use this table to find a likely starting point, t
 | Must keep historical data in an external warehouse | Federated Audience Composition |
 
 ## The three approaches {#approaches}
+
+Each approach below describes what it does, when to use it, and its strengths and limitations. Jump to the approach the Quick chooser pointed you to, or read all three to compare them.
 
 ### Data Distiller {#data-distiller}
 
@@ -89,7 +93,9 @@ To implement this approach, including an end-to-end worked example, see [Long-te
 
 ### Customer Journey Analytics {#customer-journey-analytics}
 
-To analyze customer behavior across channels and over time, use [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview). For long-term personalization, it provides a visual, no-code environment for exploring historical journeys and a direct path (Audience Publishing) to promote the resulting audiences to the Profile store. Historical data analyzed in Customer Journey Analytics does not need to be enabled for the Profile store, so months or years of event history can reside there without counting toward your Total Data Volume entitlement.
+To analyze customer behavior across channels and over time, use [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview). For long-term personalization, it provides a visual, no-code environment for exploring historical journeys and a direct path (Audience Publishing) to promote the resulting audiences to the Profile store.
+
+Historical data analyzed in Customer Journey Analytics does not need to be enabled for the Profile store, so months or years of event history can reside there without counting toward your Total Data Volume entitlement.
 
 Analysts explore journeys visually across any time horizon, combine behavioral criteria into an audience, and publish it to the Profile store, where it becomes available in Real-Time Customer Data Platform and Adobe Journey Optimizer. Audiences can be published once for a campaign or refreshed automatically.
 
