@@ -191,17 +191,25 @@ Use the table below to select the target field based on your source data. Both i
 
 The following examples show supported mappings, where the source field format matches the target field.
 
+**Plain text identity namespace to `email`**
+
 Map the `IdentityMap: Email` namespace, which contains plain text email addresses, to the `email` target field.
 
 ![Mapping step showing the IdentityMap Email namespace mapped to the email target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-identity-email.png)
+
+**Hashed identity namespace to `email_lc_sha256`**
 
 Map the `IdentityMap: Email_LC_SHA256` namespace, which contains already-hashed email addresses, to the `email_lc_sha256` target field.
 
 ![Mapping step showing the IdentityMap Email LC SHA256 namespace mapped to the email lc sha256 target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-identity-hashed.png)
 
+**Plain text XDM attribute to `email`**
+
 Map a plain text email attribute, such as `personalEmail.address`, to the `email` target field. Experience Platform hashes the values before export.
 
 ![Mapping step showing the XDM attribute personalEmail.address mapped to the email target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-attribute.png)
+
+**Hashed XDM attribute to `email_lc_sha256`**
 
 Map a pre-hashed email attribute to the `email_lc_sha256` target field. Experience Platform sends the values without further transformation.
 
@@ -214,6 +222,8 @@ Map a pre-hashed email attribute to the `email_lc_sha256` target field. Experien
 >Do not map a plain text (unhashed) source field to the `email_lc_sha256` target field. Experience Platform does not hash your data when you map to `email_lc_sha256`, so [!DNL Microsoft Ads] rejects the payload and the export fails. The mapping UI does not prevent this combination, so you must select the correct target field yourself. Always map plain text email addresses to the `email` target field.
 
 >[!BEGINSHADEBOX "Incorrect mapping example"]
+
+**Plain text source to `email_lc_sha256` (not supported)**
 
 The following example shows an unsupported mapping. Both source fields, `personalEmail.address` and `IdentityMap: Email`, contain plain text email addresses, but they are mapped to the `email_lc_sha256` target field. [!DNL Microsoft Ads] rejects these values because they are not hashed.
 
