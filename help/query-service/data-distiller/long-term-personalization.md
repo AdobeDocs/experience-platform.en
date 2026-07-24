@@ -22,7 +22,7 @@ This guide is for data engineers, solution architects, and technical implementer
 
 The Data Distiller workflow for long-term personalization follows a derive-and-promote pattern: historical events stay in the data lake, and only the computed output is promoted to the Profile store. Each step below links to the detailed product documentation.
 
-![Derive-and-promote data flow diagram showing data lake, Data Distiller, Profile store, and activation](PLACEHOLDER.png)
+![Derive-and-promote data flow diagram showing data lake, Data Distiller, Profile store, and activation](../images/data-distiller/data-distiller-derive-promote-workflow.png)
 
 **Prerequisite:** Your historical event data must already be ingested into Experience Platform and available in the data lake before Data Distiller can query it. Data Distiller queries data in the data lake. It does not ingest data itself.
 
