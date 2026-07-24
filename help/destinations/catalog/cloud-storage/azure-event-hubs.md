@@ -134,12 +134,12 @@ If you select the **[!UICONTROL Standard authentication]** type to connect to yo
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
->title="Include segment timestamps"
+>title="Include audience timestamps"
 >abstract="Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. View the documentation for a data export example with this option selected."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"
->title="Include segment names"
+>title="Include audience names"
 >abstract="Toggle if you want the data export to include the names of the audiences you are exporting. View the documentation for a data export example with this option selected."
 
 >[!CONTEXTUALHELP]
@@ -154,8 +154,8 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Name]**: Fill in a name for the connection to [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Provide a description of the connection. Examples: "Premium tier customers", "Customers interested in kitesurfing".
 * **[!UICONTROL Event hub name]**: Provide a name for the stream to your [!DNL Azure Event Hubs] destination.
-* **[!UICONTROL Include segment timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
-* **[!UICONTROL Include segment names]**: Toggle if you want the data export to include the names of the audiences you are exporting. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Include audience timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Include audience names]**: Toggle if you want the data export to include the names of the audiences you are exporting. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
 * **[!UICONTROL Include mapped audiences only]**: Toggle this option to have the `segmentMembership` object in the export include only the audiences mapped in this dataflow. Keep the toggle off to include audiences that share the same [merge policy](/help/profile/merge-policies/overview.md) as the mapped audiences, even if they are not mapped in this dataflow. This option is turned on by default for new destination connections. Dataflows created before this option was introduced do not display this option and continue to export all audiences that share the same merge policy. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
 
 ### Enable alerts {#enable-alerts}
@@ -269,7 +269,7 @@ Your exported [!DNL Experience Platform] data lands in your [!DNL Azure Event Hu
 
 ```
 
-Below are further examples of exported data, depending on the UI settings you select in the connect destination flow for the **[!UICONTROL Include segment names]** and **[!UICONTROL Include segment timestamps]** options:
+Below are further examples of exported data, depending on the UI settings you select in the connect destination flow for the **[!UICONTROL Include audience names]** and **[!UICONTROL Include audience timestamps]** options:
 
 +++ The data export sample below includes audience names in the `segmentMembership` section
 
