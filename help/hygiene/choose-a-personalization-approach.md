@@ -6,11 +6,9 @@ keywords: Experience Platform;long-term personalization;profile store;data lake;
 ---
 # Choose the right long-term personalization approach
 
-Long-term personalization means tailoring a real-time experience based on customer behavior that stretches back six months, a year, or longer. You can support these use cases without storing years of raw event history in the Profile store: keep the detailed history in the analytical layer, derive a compact signal from it, and promote only that signal for activation. Use this guide to decide which approach fits your architecture, and follow the linked product documentation when you are ready to implement.
+Long-term personalization means tailoring a real-time experience based on customer behavior that stretches back six months, a year, or longer. You can support these use cases without storing years of raw event history in the Profile store: keep the detailed history in the analytical layer, derive a compact signal from it, and promote only that signal for activation. This decision guide compares the available approaches and helps you choose the one that fits your architecture. It explains when, why, and which approach to use. For configuration steps and SQL syntax, follow the linked product documentation.
 
-This guide is for solution and platform architects and technical decision-makers who are designing a personalization data architecture. Data engineers, business analysts, marketers, and platform administrators who work with historical data for audience creation will also find the comparison and decision guidance useful. It assumes you are familiar with core Experience Platform concepts, including [profiles](../profile/home.md), audiences, the data lake, and the Profile store.
-
-This is a decision and architecture guide, not a tutorial. It explains why long-term personalization is an architecture decision, compares the available approaches, and helps you choose. For configuration steps, SQL syntax, and workspace walkthroughs, follow the links in each section. It is a companion to [Choose the right Data Lifecycle Management capability](./choose-a-capability.md), which covers how to keep the Profile store lean once your architecture is in place.
+This guide is for solution and platform architects and technical decision-makers who are designing a personalization data architecture. Data engineers, business analysts, marketers, and platform administrators who work with historical data for audience creation will also find the comparison and decision guidance useful. It assumes you are familiar with core Experience Platform concepts, including [profiles](../profile/home.md), audiences, the data lake, and the Profile store. It is a companion to [Choose the right Data Lifecycle Management capability](./choose-a-capability.md), which covers how to keep the Profile store lean once your architecture is in place.
 
 ## The customer problem {#customer-problem}
 
@@ -23,7 +21,9 @@ Long-term personalization use cases are common in industries with long purchase 
 * An airline frequent flyer whose loyalty tier reflects 12 months of cumulative activity.
 * A telecommunications customer who churned eight months ago and has since returned, identifiable as at-risk from historical behavior.
 
-In each case the relevant data is historical, but the personalization moment must happen in real time. The problem arises when organizations store all of that event-level history directly in the Profile store to support those moments. The Profile store is optimized for speed, not volume, and every record it holds counts toward your Total Data Volume entitlement. Raw events from 12, 18, or 24 or more months ago are valuable for analysis but rarely need to live in the Profile store to support activation.
+In each case the relevant data is historical, but the personalization moment must happen in real time. The problem arises when organizations store all of that event-level history directly in the Profile store to support those moments.
+
+The Profile store is optimized for speed, not volume, and every record it holds counts toward your Total Data Volume entitlement. Raw events from 12, 18, or 24 or more months ago are valuable for analysis but rarely need to live in the Profile store to support activation.
 
 ## How to identify a long-term personalization use case {#identify}
 
@@ -63,13 +63,23 @@ Not every organization needs an analytical approach. If all of your segmentation
 
 This baseline is the starting point, not a fourth approach. Its limit is the reason the rest of this guide exists: when segmentation logic extends beyond 30–90 days, or personalization depends on insight derived from months or years of history, storing that history in the Profile store raises Total Data Volume without improving outcomes. If your diagnostic in the previous section pointed to a long-term need, choose one of the three approaches that follow.
 
+## Quick chooser {#quick-chooser}
+
+If you already know your goal, use this table to find a likely starting point, then read the approach sections and the [decision guide](#decision-guide) to confirm.
+
+| If you… | Start with… |
+| --- | --- |
+| Need precise, computed scores or rankings written to every profile | Data Distiller |
+| Want to explore behavior and publish audiences without writing code | Customer Journey Analytics |
+| Must keep historical data in an external warehouse | Federated Audience Composition |
+
 ## The three approaches {#approaches}
 
 ### Data Distiller {#data-distiller}
 
 [Data Distiller](../query-service/data-distiller/overview.md) is an Experience Platform add-on that lets data engineers query, transform, and enrich data at scale using SQL. For long-term personalization, it reads historical event data from the data lake, applies transformation logic, and writes only the resulting signal to the Profile store.
 
-A data engineer writes a SQL query — for example, calculating each customer's activity over the past 12 months and assigning a loyalty tier — and produces a [derived dataset](../query-service/data-distiller/derived-datasets/overview.md) of one row per customer. The query is [scheduled](../query-service/ui/query-schedules.md) to refresh automatically and is published to the Profile store for segmentation and activation. Data Distiller can also [build and publish audiences directly from SQL](../query-service/data-distiller-audiences/overview.md) without first creating a derived attribute.
+Using SQL, a data engineer defines the transformation logic and produces a [derived dataset](../query-service/data-distiller/derived-datasets/overview.md) — a compact output such as a loyalty tier or churn score. The query is [scheduled](../query-service/ui/query-schedules.md) to refresh automatically and publishes only that signal to the Profile store. Data Distiller can also [build and publish audiences directly from SQL](../query-service/data-distiller-audiences/overview.md) without first creating a derived attribute.
 
 * **Best for:** loyalty and churn scoring, lifetime value, [decile and percentile rankings](../query-service/data-distiller/derived-datasets/decile-based-derived-attributes.md), RFM models, and automated recurring refresh.
 * **Strengths:** produces mathematically exact outputs, refreshes automatically on a schedule, and keeps raw data in the data lake.
@@ -79,7 +89,7 @@ To implement this approach, including an end-to-end worked example, see [Long-te
 
 ### Customer Journey Analytics {#customer-journey-analytics}
 
-[Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview) connects customer identities and behavior across channels, devices, and time to deliver holistic, customer-level insight. For long-term personalization, it provides a visual, no-code environment for exploring historical journeys and a direct path — Audience Publishing — to promote the resulting audiences to the Profile store. Historical data analyzed in Customer Journey Analytics does not need to be enabled for the Profile store, so months or years of event history can reside there without counting toward your Total Data Volume entitlement.
+[Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview) is an analytics application for analyzing customer behavior across channels and over time. For long-term personalization, it provides a visual, no-code environment for exploring historical journeys and a direct path — Audience Publishing — to promote the resulting audiences to the Profile store. Historical data analyzed in Customer Journey Analytics does not need to be enabled for the Profile store, so months or years of event history can reside there without counting toward your Total Data Volume entitlement.
 
 Analysts explore journeys visually across any time horizon, combine behavioral criteria into an audience, and publish it to the Profile store, where it becomes available in Real-Time Customer Data Platform and Adobe Journey Optimizer. Audiences can be published once for a campaign or refreshed automatically.
 
