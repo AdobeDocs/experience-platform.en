@@ -8,11 +8,15 @@ keywords: Experience Platform;Data Distiller;long-term personalization;derived d
 
 Long-term personalization tailors a real-time experience using customer behavior that stretches back months or years. With Data Distiller, you can support these use cases precisely while keeping your Profile store and [Total Data Volume](../../landing/license-usage-and-guardrails/total-data-volume.md) lean: you use SQL to compute a compact signal from the full history in the data lake, then publish only that signal to Real-Time Customer Profile for activation. A signal is the output of the SQL transformation, such as a score, tier, rank, or audience membership. This guide shows how to implement that pattern.
 
+>[!AVAILABILITY]
+>
+>Data Distiller is an Adobe Experience Platform add-on. Confirm that your organization has the Data Distiller entitlement before you implement this workflow.
+
 This guide is for data engineers, solution architects, and technical implementers building the solution. It assumes familiarity with Experience Platform fundamentals and SQL.
 
 >[!NOTE]
 >
->Data Distiller is one of several ways to support long-term personalization. If you are still deciding which approach fits your architecture (including Customer Journey Analytics and Federated Audience Composition), start with [Choose the right long-term personalization approach](../../hygiene/choose-a-personalization-approach.md). This guide focuses on implementing the use case with Data Distiller.
+>Data Distiller is one of several ways to support long-term personalization, and this guide covers the Data Distiller implementation. If you are still deciding among approaches (including Customer Journey Analytics and Federated Audience Composition), start with [Choose the right long-term personalization approach](../../hygiene/choose-a-personalization-approach.md).
 
 ## How it works {#how-it-works}
 
@@ -52,7 +56,7 @@ Data Distiller is used by data engineers and SQL analysts. Once a signal is publ
 
 Consider an airline that stores two years of flight transaction events in Experience Platform and wants to offer seat upgrades to its top 10% of frequent flyers, without driving up Total Data Volume by keeping all those events in the Profile store.
 
-With Data Distiller, a data engineer queries the last 12 months of flight transactions from the data lake, ranks loyalty members into deciles by total miles flown, and writes a single derived attribute per customer: their decile rank and tier label. The query is scheduled to refresh weekly, and only the derived attribute is published to the Profile store. Marketers then build a "Decile 10" audience and activate an upgrade offer in Adobe Journey Optimizer.
+With Data Distiller, a data engineer queries the last 12 months of flight transactions from the data lake, ranks loyalty members into deciles by total miles flown, and writes a single derived attribute per customer: their decile rank and tier label. They schedule the query to refresh weekly and publish only the derived attribute to the Profile store. Marketers then build a "Decile 10" audience and activate an upgrade offer in Adobe Journey Optimizer.
 
 For the complete step-by-step SQL walkthrough of this scenario, see [Create decile-based derived datasets](../use-cases/deciles-use-case.md).
 
@@ -70,6 +74,8 @@ Use Data Distiller to compute example outputs such as these from long histories:
 Deriving signals with Data Distiller keeps new historical data out of the Profile store. To manage data that is already there (through TTL settings, dataset expiration, and record delete), see [Choose the right Data Lifecycle Management capability](../../hygiene/choose-a-capability.md) and [Data management license entitlement best practices](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 ## Next steps {#next-steps}
+
+Use these resources to implement and extend the solution:
 
 * [Data Distiller overview](./overview.md)
 * [Create decile-based derived datasets](../use-cases/deciles-use-case.md)
