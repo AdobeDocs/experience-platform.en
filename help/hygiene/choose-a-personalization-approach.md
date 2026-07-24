@@ -79,9 +79,9 @@ If you already know your goal, use this table to find a likely starting point, t
 
 To query, transform, and enrich data at scale using SQL, use [Data Distiller](../query-service/data-distiller/overview.md), an Experience Platform add-on. For long-term personalization, it reads historical event data from the data lake, applies transformation logic, and writes only the resulting signal to the Profile store.
 
-Using SQL, a data engineer defines the transformation logic and produces a [derived dataset](../query-service/data-distiller/derived-datasets/overview.md), a compact output such as a loyalty tier or churn score. The query is [scheduled](../query-service/ui/query-schedules.md) to refresh automatically and publishes only that signal to the Profile store. Data Distiller can also [build and publish audiences directly from SQL](../query-service/data-distiller-audiences/overview.md) without first creating a derived attribute.
+Using SQL, a data engineer defines the transformation logic and produces a derived dataset, a compact output such as a loyalty tier or churn score. The query is scheduled to refresh automatically and publishes only that signal to the Profile store. Data Distiller can also [build and publish audiences directly from SQL](../query-service/data-distiller-audiences/overview.md) without first creating a derived attribute.
 
-* **Best for:** loyalty and churn scoring, lifetime value, [decile and percentile rankings](../query-service/data-distiller/derived-datasets/decile-based-derived-attributes.md), RFM models, and automated recurring refresh.
+* **Best for:** loyalty and churn scoring, lifetime value, decile and percentile rankings, RFM models, and automated recurring refresh.
 * **Strengths:** produces mathematically exact outputs, refreshes automatically on a schedule, and keeps raw data in the data lake.
 * **Limitations:** requires SQL and a data engineer. The transformation must be defined in advance, so it is not suited to exploratory analysis.
 
