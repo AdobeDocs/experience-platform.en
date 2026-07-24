@@ -6,7 +6,7 @@ keywords: Experience Platform;Data Distiller;long-term personalization;derived d
 ---
 # Long-term personalization with Data Distiller
 
-Long-term personalization tailors a real-time experience using customer behavior that stretches back months or years. With Data Distiller, you can support these use cases precisely while keeping your Profile store and [Total Data Volume](../../landing/license-usage-and-guardrails/total-data-volume.md) lean: you use SQL to compute a compact signal from the full history in the data lake, then publish only that signal to Real-Time Customer Profile for activation. A signal is the compact output of the SQL transformation, such as a score, tier, rank, or audience membership. This guide shows how to implement that pattern.
+Long-term personalization tailors a real-time experience using customer behavior that stretches back months or years. With Data Distiller, you can support these use cases precisely while keeping your Profile store and [Total Data Volume](../../landing/license-usage-and-guardrails/total-data-volume.md) lean: you use SQL to compute a compact signal from the full history in the data lake, then publish only that signal to Real-Time Customer Profile for activation. A signal is the output of the SQL transformation, such as a score, tier, rank, or audience membership. This guide shows how to implement that pattern.
 
 This guide is for data engineers, solution architects, and technical implementers building the solution. It assumes familiarity with Experience Platform fundamentals and SQL.
 
@@ -26,7 +26,7 @@ The steps below illustrate the derived-attribute pattern. The direct SQL audienc
 
 1. **Access historical data in the data lake.** All of your event history (web, app, purchase, and loyalty data) is available for query at full depth, without counting toward your Profile entitlement.
 1. **Write the transformation query.** A data engineer authors a SQL query that defines the signal, for example total activity over the past 12 months mapped to a loyalty tier. See the [Query Editor user guide](../ui/user-guide.md) and [parameterized queries](../ui/parameterized-queries.md).
-1. **Generate a derived dataset.** Run the query to produce a compact output: one row per customer containing only the computed signal. See [derived datasets](./derived-datasets/overview.md).
+1. **Generate a derived dataset.** Run the query to create a derived dataset with one row per customer, containing only the computed signal. See [derived datasets](./derived-datasets/overview.md).
 1. **Schedule the refresh.** Save the query and set it to run on a cadence (daily, weekly, or as your use case requires) so the signal always reflects the latest window. See [query schedules](../ui/query-schedules.md).
 1. **Publish to the Profile store.** The derived dataset stays in the data lake until you publish it. Publishing promotes the computed output into Real-Time Customer Profile, where it becomes available in [Segment Builder](../../segmentation/home.md) to build audiences. From there, you activate those audiences through [Real-Time Customer Data Platform destinations](../../destinations/home.md) or [Adobe Journey Optimizer journeys](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/create-journey/create-journey-landing-page).
 
