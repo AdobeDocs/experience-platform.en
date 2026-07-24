@@ -6,7 +6,9 @@ keywords: Experience Platform;Data Distiller;long-term personalization;derived d
 ---
 # Long-term personalization with Data Distiller
 
-Long-term personalization tailors a real-time experience using customer behavior that stretches back months or years. Data Distiller is the precision engine for these use cases: it uses SQL to compute a compact signal (a score, a tier, a ranking, or an audience) from the full history in the data lake, then publishes only that signal to Real-Time Customer Profile for activation. This guide shows how to implement that pattern.
+Long-term personalization tailors a real-time experience using customer behavior that stretches back months or years. With Data Distiller, you can support these use cases precisely while keeping your Profile store and Total Data Volume lean: you use SQL to compute a compact signal (a score, a tier, a ranking, or an audience) from the full history in the data lake, then publish only that signal to Real-Time Customer Profile for activation. This guide shows how to implement that pattern.
+
+This guide is for data engineers, solution architects, and technical implementers building the solution. It assumes familiarity with Experience Platform fundamentals and SQL.
 
 >[!NOTE]
 >
@@ -18,9 +20,9 @@ The Data Distiller workflow for long-term personalization follows a derive-and-p
 
 1. **Access historical data in the data lake.** All of your event history (web, app, purchase, and loyalty data) is available for query at full depth, without counting toward your Profile entitlement.
 1. **Write the transformation query.** A data engineer authors a SQL query that defines the signal, for example total activity over the past 12 months mapped to a loyalty tier. See the [Query Editor user guide](../ui/user-guide.md) and [parameterized queries](../ui/parameterized-queries.md).
-1. **Generate a derived dataset.** The query produces a compact output: one row per customer containing only the computed signal. See [derived datasets](./derived-datasets/overview.md).
+1. **Generate a derived dataset.** Run the query to produce a compact output: one row per customer containing only the computed signal. See [derived datasets](./derived-datasets/overview.md).
 1. **Schedule the refresh.** Save the query and set it to run on a cadence (daily, weekly, or as your use case requires) so the signal always reflects the latest window. See [query schedules](../ui/query-schedules.md).
-1. **Publish to the Profile store and activate.** The derived signal is published to Real-Time Customer Profile, where it is available in [Segment Builder](../../segmentation/home.md) to build audiences. From there, activate those audiences through [Real-Time Customer Data Platform destinations](../../destinations/home.md) or an Adobe Journey Optimizer journey, with no raw event history in the Profile store.
+1. **Publish to the Profile store and activate.** Publish the derived signal to Real-Time Customer Profile, where it becomes available in [Segment Builder](../../segmentation/home.md) to build audiences. From there, you activate those audiences through [Real-Time Customer Data Platform destinations](../../destinations/home.md) or an Adobe Journey Optimizer journey, with no raw event history in the Profile store.
 
 ## Confirm Data Distiller fits {#when-to-use}
 
@@ -43,14 +45,14 @@ For the complete step-by-step SQL walkthrough of this scenario, see [Create deci
 
 ## Two ways to deliver the signal {#output-patterns}
 
-Data Distiller can put its output into the Profile store in two ways. Choose based on whether you need to enrich every profile or target a specific audience.
+You can deliver the signal to the Profile store in two ways. Choose based on whether you need to enrich every profile or target a specific audience.
 
 * **Derived attribute.** Compute a value such as a score or tier and write it to every customer profile, where it is reusable across many audiences and journeys. Use this for ongoing profile enrichment. See [derived datasets](./derived-datasets/overview.md).
 * **Direct SQL audience.** Build and publish an audience membership directly from SQL without first creating a derived attribute. Use this for a targeted campaign audience when you do not need to enrich every profile. See [build audiences using SQL](../data-distiller-audiences/overview.md).
 
 ## Common signals to compute {#common-signals}
 
-Data Distiller is well suited to computing the following signals from long histories:
+Use Data Distiller to compute the following signals from long histories:
 
 * Loyalty and tier scoring, and ranking-based audiences (top 10% of buyers, highest-spending cohorts)
 * [Customer lifetime value](../use-cases/customer-lifetime-value.md) and recency-frequency-monetary (RFM) models
