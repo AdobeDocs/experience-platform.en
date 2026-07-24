@@ -1,27 +1,27 @@
 ---
 title: Adhese connection
-description: Send audience segments to Adhese for targeted ad delivery on publisher-owned inventory. Files are exported to Adhese's secure S3 bucket.
+description: Send audiences to Adhese for targeted ad delivery on your own publisher or retailer advertising inventory. Files export to Adhese's secure Amazon S3 bucket.
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 ---
 # Adhese connection {#adhese}
 
 ## Overview {#overview}
 
-[Adhese](https://adhese.com) is an independent European advertising platform for publishers, retailers and (commerce) media owners. With the Adhese destination, you can send audience segments from [!DNL Adobe Experience Platform] to Adhese and use them for targeted ad delivery on Adhese-served inventory.
+[Adhese](https://adhese.com) is an independent European advertising platform for publishers, retailers, and commerce media owners. With the Adhese destination, you can send audiences from [!DNL Adobe Experience Platform] to Adhese and use them for targeted ad delivery on Adhese-served inventory.
 
 Audience exports are delivered as files to Adhese's secure cloud storage. For further reading, see the [Adhese documentation](https://documentation.adhese.org/books/inventory-management/page/adobe-destination-connection).
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by the *Adhese* team. For any inquiries or update requests, contact them directly at [Support Adhese](https://adhese.atlassian.net/servicedesk/customer/portals).
+>This destination connector and documentation page are created and maintained by the [!DNL Adhese] team. For any inquiries or update requests, contact them directly at [Support Adhese](https://adhese.atlassian.net/servicedesk/customer/portals).
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the *Adhese* destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Adhese] destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
-### Use Audience Segmentation for Advertising Campaigns {#use-case-1}
+### Use audience segmentation for advertising campaigns {#use-case-1}
 
-A publisher or retailer builds first-party audiences in [!DNL Adobe Experience Platform] — for example, frequent readers of a content category, regular buyers of selected product categories, loyalty program members, ... — and sends these audiences to their Adhese instance to enable advertisers to [target](https://documentation.adhese.org/books/inventory-management/page/targeting) them with relevant campaigns on the retailer's or publisher's own [inventory](https://documentation.adhese.org/books/inventory-management/page/the-inventorys-structure).
+A publisher or retailer builds first-party audiences in [!DNL Adobe Experience Platform], such as frequent readers of a content category, regular buyers of selected product categories, or loyalty program members. They send these audiences to their Adhese instance so advertisers can [target](https://documentation.adhese.org/books/inventory-management/page/targeting) them with relevant campaigns on the retailer's or publisher's own [inventory](https://documentation.adhese.org/books/inventory-management/page/the-inventorys-structure).
 
 ## Prerequisites {#prerequisites}
 
@@ -31,11 +31,11 @@ Before you can send audiences to Adhese, you must be onboarded as an Adhese cust
 * The **Adhese customer name** to export to
 * Your active Adhese **region**
 
-No data is shared with other Adhese customers: your credentials grant write access exclusively to your own folder.
+No data is shared with other Adhese customers. Your credentials grant write access exclusively to your own folder.
 
 ## Supported identities {#supported-identities}
 
-*Adhese* supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
+[!DNL Adhese] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 Use the identity that you also use to identify users on your website or app, so Adhese can match the exported audience members at ad-delivery time.
 
@@ -45,7 +45,7 @@ Use the identity that you also use to identify users on your website or app, so 
 |IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
 |ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". Read the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
-|extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace, for example your own first-party user ID that is also available to Adhese at ad-delivery time.|
+|extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace, for example, your own first-party user ID that is also available to Adhese at ad-delivery time.|
 
 ## Supported audiences {#supported-audiences}
 
@@ -71,7 +71,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (such as ECID, hashed email, or a custom user ID) used in the *Adhese* destination.|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (such as ECID, hashed email, or a custom user ID) used in the [!DNL Adhese] destination.|
 | Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 ## Connect to the destination {#connect}
@@ -86,7 +86,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![authentication details](../../assets/catalog/advertising/adhese/authentication_details.png)
+![Screenshot of the authentication fields for connecting to the Adhese destination, including the access key ID and secret access key.](../../assets/catalog/advertising/adhese/authentication_details.png)
 
 * **[!UICONTROL Access key ID]**: The Amazon S3 access key ID provided to you by Adhese during onboarding.
 * **[!UICONTROL Secret access key]**: The Amazon S3 secret access key provided to you by Adhese during onboarding.
@@ -95,12 +95,12 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![destination details](../../assets/catalog/advertising/adhese/destination_details.png)
+![Screenshot of the destination details fields, including name, description, region, and customer ID.](../../assets/catalog/advertising/adhese/destination_details.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 * **[!UICONTROL Region]**: The region provided by Adhese during onboarding.
-* **[!UICONTROL Customer ID]**: Your customer ID, provided by Adhese (for example `acme-corp`). This is the name of your Adhese account (https://<customer_id>.adhese.org or https://<customer_id>.classic.adhese.eu)
+* **[!UICONTROL Customer ID]**: Your customer ID, provided by Adhese (for example `acme-corp`). This is the name of your Adhese account, used in your account URL, for example `https://acme-corp.adhese.org` or `https://acme-corp.classic.adhese.eu`.
 
 ### Enable alerts {#enable-alerts}
 
@@ -119,19 +119,19 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 ### Map attributes and identities {#map}
 
-The Adhese destination exports identities only — no profile attributes are exported.
+The Adhese destination exports identities only. No profile attributes are exported.
 
-In the **[!UICONTROL Mapping]** step of the activation workflow, select the identity namespace that you use to identify users on your website or app as the source field. The mapped identity values become the contents of the exported file. Mapping an identity is mandatory; selecting profile attributes is not supported for this destination.
+In the **[!UICONTROL Mapping]** step of the activation workflow, select the identity namespace that you use to identify users on your website or app as the source field. The mapped identity values become the contents of the exported file. Mapping an identity is mandatory. Selecting profile attributes is not supported for this destination.
 
-![mapping details](../../assets/catalog/advertising/adhese/mapping_details.png)
+![Screenshot of the mapping step showing an identity namespace mapped as the source field for the Adhese destination.](../../assets/catalog/advertising/adhese/mapping_details.png)
 
 ### Schedule audience export {#schedule}
 
 In the **[!UICONTROL Scheduling]** step, configure the export schedule for each audience. By default, audiences are exported once per day as a full export. You can also select 6-hour, 8-hour, or 12-hour increments, and incremental exports after an initial full export.
 
-### Filename configuration
+### Filename configuration {#filename-configuration}
 
-In the filename configuration, the audience ID (segment) is appended to the filename by default. You cannot change the filename to make sure the destination runs stable.
+In the filename configuration, the audience ID is appended to the filename by default. You cannot change the filename, to make sure the destination runs stable.
 
 ## Exported data / Validate data export {#exported-data}
 
