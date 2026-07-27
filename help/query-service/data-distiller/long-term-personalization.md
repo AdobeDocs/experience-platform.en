@@ -52,7 +52,7 @@ This guide assumes Data Distiller is your chosen approach. It is the right fit w
 
 Data Distiller is used by data engineers and SQL analysts. Once a signal is published, marketers and campaign managers can use it in Segment Builder and Adobe Journey Optimizer without any technical knowledge.
 
-## Worked example: airline loyalty decile scoring {#example}
+## Example use case: airline loyalty decile scoring {#example}
 
 Consider an airline that stores two years of flight transaction events in Experience Platform and wants to offer seat upgrades to its top 10% of frequent flyers, without driving up Total Data Volume by keeping all those events in the Profile store.
 
