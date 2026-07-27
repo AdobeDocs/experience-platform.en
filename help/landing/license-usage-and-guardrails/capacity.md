@@ -98,6 +98,11 @@ For more information about guardrails in Experience Platform, please read the [R
 >abstract="Temporary fill in text."
 
 >[!CONTEXTUALHELP]
+>id="platform_capacity_edgesegmentationthroughput"
+>title="Edge segmentation throughput"
+>abstract="Temporary fill in text."
+
+>[!CONTEXTUALHELP]
 >id="platform_capacity_audiencelimit"
 >title="Audience limit"
 >abstract="Temporary fill in text."
