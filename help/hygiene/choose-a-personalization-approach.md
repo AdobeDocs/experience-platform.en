@@ -127,24 +127,15 @@ The following table compares the three approaches. Real-Time Customer Data Platf
 
 ## Decide which approach to use {#decision-guide}
 
-Two questions most clearly determine the right approach.
+The Quick chooser gives a starting point. Use the following questions to resolve nuanced or combined cases.
 
-**Do you need mathematically precise outputs?** If your use case requires exact rankings (for example, the top 10% of customers by a calculated metric, a churn risk score of 0.82, or a lifetime value in the eighth decile), Data Distiller is the appropriate tool. If you cannot define the calculation precisely in advance, start with Customer Journey Analytics.
+**Do you need mathematically precise outputs?** If your use case requires exact rankings (for example, the top 10% of customers by a calculated metric or a lifetime value in the eighth decile), choose Data Distiller. If you cannot define the calculation precisely in advance, start with Customer Journey Analytics.
 
-**Are you starting from exploration?** If you do not yet know what the audience looks like and want to see what patterns emerge, Customer Journey Analytics is the right starting point. Once a pattern is validated, a data engineer can build a scheduled, precision-scored version in Data Distiller if that rigor is needed.
+**Are you starting from exploration?** If you do not yet know what the audience looks like and want to discover patterns visually, start with Customer Journey Analytics. Once a pattern is validated, a data engineer can build a scheduled, precision-scored version in Data Distiller if that rigor is needed.
 
-Your choice is also shaped by where your data lives and what you have licensed:
+**Do you need a reusable profile attribute or a one-time audience?** Data Distiller writes a derived attribute, such as a score or tier, to every profile and can recompute it automatically on a schedule. Use it when the signal must be reusable across many audiences and journeys. Customer Journey Analytics instead publishes an audience membership, which suits a campaign audience or a multi-step journey definition built without engineering involvement.
 
-| If your situation is… | Start with… |
-| --- | --- |
-| You know exactly what score or ranking you need to compute | Data Distiller |
-| You want to explore the data and see what patterns emerge | Customer Journey Analytics |
-| You need a derived attribute on every customer profile | Data Distiller |
-| You need a campaign audience without involving engineering | Customer Journey Analytics |
-| You need exact mathematical deciles or percentile rankings | Data Distiller |
-| You want an audience based on a multi-step customer journey | Customer Journey Analytics |
-| Your historical data must stay in an external warehouse | Federated Audience Composition |
-| You need a derived attribute recomputed automatically on a schedule | Data Distiller |
+**What do your data location and licensing allow?** If historical data must remain in an external warehouse, use Federated Audience Composition. Otherwise, let the tools you have licensed and the availability of engineering support guide the choice.
 
 >[!TIP]
 >
