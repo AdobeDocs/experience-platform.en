@@ -35,7 +35,7 @@ For recommended source-to-target mapping pairs based on your schema structure, s
 
 | Target Identity | Source field to map | Considerations |
 |---|---|---|
-| `email` | A field containing plain text email addresses | Experience Platform sanitizes and hashes the email addresses before exporting them to [!DNL Microsoft Ads]. |
+| `email` | A field containing plain text email addresses | Experience Platform sanitizes and hashes the email addresses based on the Microsoft formatting and hashing requirements outlined in their [public documentation](https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_conc_uet_enhancedconversions#format-and-hash-the-data) before exporting them to [!DNL Microsoft Ads]. |
 | `email_lc_sha256` | A field containing email addresses that you have already hashed with SHA-256 | Follow the [!DNL Microsoft Ads] [sanitization and hashing requirements](https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_conc_uet_enhancedconversions#format-and-hash-the-data) before mapping. Experience Platform sends these values to [!DNL Microsoft Ads] without further sanitization or hashing. You are responsible for correct sanitization and hashing before mapping. |
 
 {style="table-layout:auto"}
