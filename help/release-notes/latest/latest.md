@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes June 2026
-description: The June 2026 release notes for Adobe Experience Platform.
+title: Adobe Experience Platform Release Notes July 2026
+description: The July 2026 release notes for Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 TQID: https://experienceleague.adobe.com/RvjQSbQ2NNwBYQJD4G6jsXWdAAg3vzbXKYvRlMwbBW0
 product_v2:
