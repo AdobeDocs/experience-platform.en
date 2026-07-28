@@ -50,7 +50,7 @@ This tutorial requires a working understanding of the following Experience Platf
 * [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): The segmentation engine within [!DNL Experience Platform] used to create audience segments from your customer profiles based on customer behaviors and attributes.
+* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): The segmentation engine within [!DNL Experience Platform] used to create audiences from your customer profiles based on customer behaviors and attributes.
 
 ### Use case overview
 
@@ -67,7 +67,7 @@ You will:
 
 * [Label the roles for your users](#label-roles): Use the example of a healthcare provider (ACME Business Group) whose marketing group works with external agencies.
 * [Label your resources (schema fields and audiences)](#label-resources): Assign the **[!UICONTROL PHI/ Regulated Health Data]** label to schema resources and audiences.
-* [Activate the policy that will link them together](#policy): Enable the default policy to prevent access to schema fields and audiences by connecting the labels on your resources to the labels in your role. Users with matching labels will then be given access to the schema field and segment across all sandboxes.
+* [Activate the policy that will link them together](#policy): Enable the default policy to prevent access to schema fields and audiences by connecting the labels on your resources to the labels in your role. Users with matching labels will then be given access to the schema field and audience across all sandboxes.
 
 ## Permissions
 
@@ -150,7 +150,7 @@ Select **[!UICONTROL Blood Glucose >100]** (by the audience name, not the checkb
 
 ![Image showing the Blood Glucose >100 being selected from the Audiences tab](../images/abac-end-to-end-user-guide/abac-select-audience.png)
 
-The segment **[!UICONTROL Details]** screen appears. Select **[!UICONTROL Manage Access]**.
+The audience **[!UICONTROL Details]** screen appears. Select **[!UICONTROL Manage Access]**.
 
 ![Image showing the selection of Manages access](../images/abac-end-to-end-user-guide/abac-audience-fields-manage-access.png)
 
@@ -162,7 +162,7 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 
 >[!NOTE]
 >
-> Assign labels created in the [!UICONTROL Permissions] workspace (such as the segment labels above) to various objects in Adobe Journey Optimizer using [Object Level Access Control](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access)." 
+> Assign labels created in the [!UICONTROL Permissions] workspace (such as the audience labels above) to various objects in Adobe Journey Optimizer using [Object Level Access Control](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access)." 
 
 ## Activate the access control policy {#policy}
 
@@ -265,7 +265,7 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 ## Next steps
 
-You have completed the application of labels to a role, schema fields, and audiences. The external agency assigned to these roles are restricted from viewing these labels and their values in the schema, dataset, and profile view. These fields are also restricted from being used in the segment definition when using the Segment Builder.
+You have completed the application of labels to a role, schema fields, and audiences. The external agency assigned to these roles are restricted from viewing these labels and their values in the schema, dataset, and profile view. These fields are also restricted from being used in the segment definition when using Segment Builder.
 
 For more information on attribute-based access control, see the [attribute-based access control overview](./overview.md).
 

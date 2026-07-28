@@ -195,72 +195,6 @@ Next, use the dropdown selector to open the credentials window, generate an acce
 > * [Implementation guide for new and old applications with OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
 > * [Advantages of using the OAuth Server-to-Server credentials method](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
-+++ View deprecated information 
-
-The next step is to generate a JSON Web Token (JWT) based on your account credentials. This value is used to generate your `{ACCESS_TOKEN}` credential for use in Experience Platform API calls, which must be regenerated every 24 hours.
-
->[!IMPORTANT]
->
->For the purposes of this tutorial, the steps below outline how to generate a JWT within Developer Console. However, this generation method should only be used for testing and evaluation purposes.
->
->For regular use, the JWT must be generated automatically. For more information on how to programmatically generate JWTs, see the [service account authentication guide](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) on Adobe Developer.
-
-Select **[!UICONTROL Service Account (JWT)]** in the left navigation, then select **[!UICONTROL Generate JWT]**.
-
-![](././images/api-authentication/generate-jwt.png)
-
-In the textbox provided under **[!UICONTROL Generate custom JWT]**, paste the contents of the private key that you previously generated when adding the Experience Platform API to your service account. Then, select **[!UICONTROL Generate Token]**.
-
-![](././images/api-authentication/paste-key.png)
-
-The page updates to show the generated JWT, along with a sample cURL command that allows you to generate an access token. For the purposes of this tutorial, select **[!UICONTROL Copy]** next to **[!UICONTROL Generated JWT]** to copy the token to your clipboard.
-
-![](././images/api-authentication/copy-jwt.png)
-
-**Generate an access token**
-
-Once you have generated a JWT, you can use it in an API call to generate your `{ACCESS_TOKEN}`. Unlike the values for `{API_KEY}` and `{ORG_ID}`, a new token must be generated every 24 hours to continue using Experience Platform APIs.
-
-**Request**
-
-The following request generates a new `{ACCESS_TOKEN}` based on the credentials provided in the payload. This endpoint only accepts form data as its payload, and therefore it must be given a `Content-Type` header of `multipart/form-data`.
-
-```shell
-curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
-  -H 'Content-Type: multipart/form-data' \
-  -F 'client_id={API_KEY}' \
-  -F 'client_secret={SECRET}' \
-  -F 'jwt_token={JWT}'
-```
-
-| Property | Description |
-| --- | --- |
-| `{API_KEY}` | The `{API_KEY}` ([!UICONTROL Client ID]) that you retrieved in a [previous step](#api-ims-secret). |
-| `{SECRET}` | The client secret that you retrieved in a [previous step](#api-ims-secret). |
-| `{JWT}` | The JWT that you generated in a [previous step](#jwt). |
-
->[!NOTE]
->
->You can use the same API key, client secret, and JWT to generate a new access token for each session. This allows you to automate access token generation in your applications.
-
-**Response**
-
-```json
-{
-  "token_type": "bearer",
-  "access_token": "{ACCESS_TOKEN}",
-  "expires_in": 86399992
-}
-```
-
-| Property | Description |
-| --- | --- |
-| `token_type` | The type of token being returned. For access tokens, this value is always `bearer`. |
-| `access_token` | The generated `{ACCESS_TOKEN}`. This value, prefixed with the word `Bearer`, is required as the `Authentication` header for all Experience Platform API calls. |
-| `expires_in` | The number of milliseconds remaining until the access token expires. Once this value reaches 0, a new access token must be generated to continue using Experience Platform APIs. |
-
-+++
-
 ## Test access credentials {#test-credentials}
 
 Once you have gathered all three required credentials - access token, API key, and Organization ID - , you can try to make the following API call. This call lists all standard [!DNL Experience Data Model] (XDM) classes available to your organization. Import and execute the call in [Postman](#use-postman).
@@ -395,3 +329,5 @@ Refer to the additional resources linked below for further help getting started 
 By reading this document, you have gathered and successfully tested your access credentials for Experience Platform APIs. You can now follow along with the example API calls provided throughout the [documentation](../landing/documentation/overview.md).
 
 In addition to the authentication values you have gathered in this tutorial, many Experience Platform APIs also require a valid `{SANDBOX_NAME}` to be provided as a header. See the [sandboxes overview](../sandboxes/home.md) for more information.
+
+

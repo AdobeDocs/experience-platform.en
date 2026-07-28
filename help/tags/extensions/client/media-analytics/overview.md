@@ -2,7 +2,7 @@
 title: Adobe Media Analytics for Audio and Video Extension Overview
 description: Learn about the Adobe Media Analytics for Audio and Video tag extension in Adobe Experience Platform.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-TQID: https://experienceleague.adobe.com/---WEKSFg9Xfi-wK7GHjdHcsM9AyGlv9Q7N6URjrlN0
+TQID: https://experienceleague.adobe.com/%2D%2D%2DWEKSFg9Xfi-wK7GHjdHcsM9AyGlv9Q7N6URjrlN0
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising

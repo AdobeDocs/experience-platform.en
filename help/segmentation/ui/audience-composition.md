@@ -44,7 +44,7 @@ If you are an Adobe Journey Optimizer customer, please read the [get started wit
 
 >[!NOTE]
 >
->This guide explains how to create audiences using Audience Composition. To learn how to create audiences through segment definitions using the Segment Builder please read the [Segment Builder UI guide](./segment-builder.md).
+>This guide explains how to create audiences using Audience Composition. To learn how to create audiences through segment definitions using Segment Builder please read the [Segment Builder UI guide](./segment-builder.md).
 
 Audience Composition provides a workspace to build and edit audiences, using blocks that are used to represent different actions.
 

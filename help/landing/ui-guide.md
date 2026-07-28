@@ -65,7 +65,7 @@ After logging into Adobe Experience Platform, you are on the [!UICONTROL Home] p
 
 ### Metrics
 
-The metrics dashboard provides cards that give you information about datasets, profiles, segments, and destinations within your organization.
+The metrics dashboard provides cards that give you information about datasets, profiles, audiences, and destinations within your organization.
 
 ![](images/user-guide/homepage-dashboard.png)
 
@@ -73,13 +73,13 @@ The **[!UICONTROL Datasets]** section shows the number of datasets within your o
 
 The **[!UICONTROL Profiles]** section shows the total number of people with profiles within your organization, excluding profile fragments. This total number of people represents the total addressable audience, and is updated once every 24 hours. You can find more information about profiles in the [Real-Time Customer Profile overview](../profile/home.md).
 
-The **[!UICONTROL Segments]** section shows the total number of segments created within your organization. This number is updated when a new segment is created. You can find more information about segments in the [Segmentation Service overview](../segmentation/home.md).
+The **[!UICONTROL Audiences]** section shows the total number of audiences created within your organization. This number is updated when a new audience is created. You can find more information about audiences in the [Segmentation Service overview](../segmentation/home.md).
 
 The **[!UICONTROL Destinations]** section shows the total number of destinations created for the organization. This number is updated when a new destination is created. You can find more information about destinations in the [destinations overview](../destinations/home.md).
 
 ### Recent data
 
-The recent data dashboard provides information about recently created datasets, sources, segments, and destinations.
+The recent data dashboard provides information about recently created datasets, sources, audiences, and destinations.
 
 ![](images/user-guide/homepage-recent.png)
 
@@ -87,7 +87,7 @@ The **[!UICONTROL Recent datasets]** section lists the five most recently create
 
 The **[!UICONTROL Recent sources]** section lists the five most recently created source connectors within your organization. This list is updated every time a new source connector is created. You can select a source connection from the list to view You can find more information about the specified connector or select **[!UICONTROL View all]** to see a list of all created source connections. You can find more information about sources in the [sources overview](../sources/home.md).
 
-The **[!UICONTROL Recent segments]** section lists the five most recently created segment definitions within your organization. This list is updated every time a new segment definition is created. You can select a segment definition from the list to view You can find more information about the specified segment definition or select **[!UICONTROL View all]** to see a list of all created segment definitions. You can find more information about segments in the [Segmentation Service overview](../segmentation/home.md).
+The **[!UICONTROL Recent audiences]** section lists the five most recently created audiences within your organization. This list is updated every time a new audience is created. You can select an audience from the list to view You can find more information about the specified audience or select **[!UICONTROL View all]** to see a list of all created audiences. You can find more information about audiences in the [Segmentation Service overview](../segmentation/home.md).
 
 The **[!UICONTROL Recent destinations]** section lists the five most recently created destinations within your organization. This list is updated every time a new destination is created. You can select a destination from the list to view You can find more information about the specified destination or select **[!UICONTROL View all]** to see a list of all created destinations. You can find more information about destinations in the [destinations overview](../destinations/home.md).
 
@@ -169,7 +169,7 @@ The **[!UICONTROL Destinations]** section lets you create, update, and delete de
 
 The **[!UICONTROL Profiles]** section lets you browse customer profiles, view profile metrics, create and manage merge policies, and view union schemas. To learn more about using the [!UICONTROL Profiles] section, please read the [[!DNL Profile] user guide](../profile/ui/user-guide.md). You can find more information about Real-Time Customer Profile in the [Real-Time Customer Profile overview](../profile/home.md).
 
-The **[!UICONTROL Audiences]** section lets you create and manage segment definitions. To learn more about using the [!UICONTROL Audiences] section, please read the [segmentation user guide](../segmentation/ui/overview.md). You can find more information about Segmentation Service in the [Segmentation Service overview](../segmentation/home.md).
+The **[!UICONTROL Audiences]** section lets you create and manage audiences. To learn more about using the [!UICONTROL Audiences] section, please read the [segmentation user guide](../segmentation/ui/overview.md). You can find more information about Segmentation Service in the [Segmentation Service overview](../segmentation/home.md).
 
 The **[!UICONTROL Identities]** section lets you create and manage identity namespaces. For more information about the [!UICONTROL Identities] section, including information about identity namespaces and how to use identities in the Experience Platform UI, please refer to the [identity namespace overview](../identity-service/features/namespaces.md).
 

@@ -52,7 +52,7 @@ Use the [!UICONTROL Adobe Experience Platform Tags] section to view tag requests
 
 ## [!UICONTROL Experience Cloud ID] {#section-a96c32f8e63a4991abb296f6e8ea01cf}
 
-Use the [!UICONTROL Experience Cloud ID] tab to view [Experience Cloud ID Service](https://experienceleague.adobe.com/docs/id-service/using/home.html) requests.
+Use the [!UICONTROL Experience Cloud ID] tab to view [Visitor ID Service](https://experienceleague.adobe.com/docs/id-service/using/home.html) requests.
 
 ## [!UICONTROL Dynamic Tag Management]
 

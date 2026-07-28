@@ -47,8 +47,8 @@ Read the steps below to gain a better understanding of the process of creating a
 
 * First, Real-Time Customer Profile references an identity graph and retrieves all identities.
 * Next, Profile retrieves profile fragments with primary identities in the identity graph. 
-* Once successful, Profile than merges all existing events and attributes.
-  * If there are conflicting attribute information, attributes will be chosen based on the merge method. For more information, read the [merge policies overview](../profile/merge-policies/overview.md).
+* Once successful, Profile then merges all existing events and attributes.
+  * If there is conflicting attribute information, attributes will be chosen based on the merge method. For more information, read the [merge policies overview](../profile/merge-policies/overview.md).
 
 ![A flow chart detailing how Identity Service and Profile Merging works.](./images/merge-profile-process.png)
 
@@ -65,4 +65,5 @@ Once you mark fields as identities, they can then be defined as either primary o
 * If there are two or more identities, then one will be designated as primary, and the remaining will be designated as secondary.
 
 Identity Service will establish links between identities as long as there are at least two fields marked as identity. Identity Service does not store information on whether an identity is primary or secondary. 
+
 

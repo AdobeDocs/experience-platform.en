@@ -108,7 +108,7 @@ A consolidated edge system lets you manage advertising, marketing, and personali
 
 The Web SDK is an open-source library built from scratch to integrate functionalities of existing libraries. It addresses issues with tag firing order, version inconsistencies, and dependency management, offering a way to implement many Experience Cloud products. The Web SDK replaces data collection for the following services:
 
-* Adobe Experience Platform Visitor ID service (`Visitor.js`)
+* Adobe Visitor ID Service (`VisitorAPI.js`)
 * Adobe Analytics (`AppMeasurement.js`)
 * Adobe Target (`AT.js`)
 * Adobe Audience Manager (`DIL.js`)

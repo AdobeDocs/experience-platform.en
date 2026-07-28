@@ -51,7 +51,7 @@ The guides for Customer AI require a working understanding of the various Experi
 >
 >If you do not need to download raw scores, you can skip this step and proceed to the [configuration guide](./user-guide/configure.md).
 
-Downloading Customer AI scores is done through a combination of API calls. In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+Downloading Customer AI scores is done through a combination of API calls. In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -72,3 +72,5 @@ This guide provides example API calls to demonstrate how to format your requests
 ## Next steps
 
 Once you have completed the steps outlined in the document above, visit the [Input and Output](./data-requirements.md) documentation. This document give a brief overview of what types of data are used and produced in Customer AI.
+
+

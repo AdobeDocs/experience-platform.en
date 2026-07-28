@@ -18,9 +18,9 @@ With the Zeta Marketing Platform connector available in [!DNL Adobe Experience P
 
 ## Use cases {#use-cases}
 
-### Build audience segments {#use-case-build-audiences}
+### Build audiences {#use-case-build-audiences}
 
-A marketer wants to build unique audience profiles, identify their most valuable segments, and use them across any digital channels that the Zeta Marketing Platform supports. They want to create a true 360 view of a consumer profile, build and activate meaningful audiences. More details on which channels the Zeta Marketing Platform supports can be found [here](https://zetaglobal.com/platform/integrations/).
+A marketer wants to build unique audience profiles, identify their most valuable audiences, and use them across any digital channels that the Zeta Marketing Platform supports. They want to create a true 360 view of a consumer profile, build and activate meaningful audiences. More details on which channels the Zeta Marketing Platform supports can be found [here](https://zetaglobal.com/platform/integrations/).
 
 ### Target users with advertisements {#use-case-target-users}
 
@@ -72,7 +72,7 @@ See the table below for information about the destination export type and freque
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 

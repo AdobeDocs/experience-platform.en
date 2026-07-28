@@ -49,7 +49,7 @@ The [!DNL Segmentation Service] API documentation provides example API calls to 
 
 ## Required headers
 
-The API documentation also requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to [!DNL Experience Platform] endpoints. Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
+The API documentation also requires you to have completed the [authentication tutorial](/help/landing/api-authentication.md) in order to successfully make calls to [!DNL Experience Platform] endpoints. Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -66,3 +66,5 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 ## Next steps
 
 To being making calls using the [!DNL Segmentation Service] API, select one of the available endpoint guides either using the left navigation or within the [developer guide overview](./overview.md)
+
+

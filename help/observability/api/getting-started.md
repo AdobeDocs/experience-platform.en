@@ -27,7 +27,7 @@ The [!DNL Observability Insights] API documentation provides example API calls t
 
 ## Required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -40,3 +40,5 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 ## Next steps
 
 To begin making calls using the [!DNL Observability Insights] API, proceed to the [metrics endpoint guide](./metrics.md).
+
+

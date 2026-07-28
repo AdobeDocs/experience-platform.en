@@ -28,7 +28,7 @@ topic_v2:
 ---
 # Create a dataflow for cloud storage sources using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a cloud storage source and bringing them to Experience Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for retrieving data from a cloud storage source and bringing them to Experience Platform using [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!NOTE]
 >
@@ -214,7 +214,7 @@ curl -X POST \
 
 In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../xdm/api/schemas.md).
 
@@ -719,3 +719,5 @@ The following section lists the different cloud storage source connectors and th
 | [!DNL HDFS] | `54e221aa-d342-4707-bcff-7a4bceef0001` |
 | [!DNL Oracle Object Storage] | `c85f9425-fb21-426c-ad0b-405e9bd8a46c` |
 | [!DNL SFTP] | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
+
+

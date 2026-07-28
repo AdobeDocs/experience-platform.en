@@ -81,10 +81,10 @@ This section provides a high-level overview of the selected request, including [
 
 ### Profile
 
-This section provides information about the profile data used when processing the request, including the identity map, segment membership, and consent settings.  
-The [!UICONTROL Profile] section is very helpful when troubleshooting issues like delivery not working as expected due to missing or delayed segment membership or opt-out consent settings.
+This section provides information about the profile data used when processing the request, including the identity map, audience membership, and consent settings.  
+The [!UICONTROL Profile] section is very helpful when troubleshooting issues like delivery not working as expected due to missing or delayed audience membership or opt-out consent settings.
 
-![Profile section includes the identity map, segment membership, and consent settings](./images/edge-delivery/profile.png)
+![Profile section includes the identity map, audience membership, and consent settings](./images/edge-delivery/profile.png)
 
 ### Qualified activities
 

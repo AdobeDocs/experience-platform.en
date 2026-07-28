@@ -97,7 +97,7 @@ Refer to the table below for information about the destination export type and f
 
 The [!DNL Microsoft Bing] destination requires the following setup to function correctly:
 
-1. **Enable ID sync functionality**: If this is your first time setting up [!DNL Microsoft Bing] activation and you have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), contact Adobe Consulting or Customer Care to enable ID syncs.
+1. **Enable ID sync functionality**: If this is your first time setting up [!DNL Microsoft Bing] activation and you have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in the Adobe Visitor ID Service in the past (with Adobe Audience Manager or other applications), contact Adobe Consulting or Customer Care to enable ID syncs.
    * If you previously set up [!DNL Microsoft Bing] integrations in Audience Manager, your existing ID syncs automatically carry over to Experience Platform.
 
 2. **Ensure ECID on profiles**: All profiles must have an ECID present to be successfully exported. ECID is **mandatory** for this destination.

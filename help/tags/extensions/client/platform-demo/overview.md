@@ -44,7 +44,7 @@ The features of this extension are being ported over to new extension. Here is a
 | Experience Platform Demo Extension | Experience Platform Web SDK |
 | ------------------ | ----------- |
 | Support for Custom Customer IDs | Support for Custom Cusotmer IDs|
-| Client-Side Mapping UI for XDM | Build in ECID (No need for visitor.js)|
+| Client-Side Mapping UI for XDM | Build in ECID (No need for `VisitorAPI.js`)|
 | Ability to create a streaming connection | Opt-in Support |
 | | XDM Support as a data element |
 | | First Party Domain Support |

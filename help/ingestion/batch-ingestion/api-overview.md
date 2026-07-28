@@ -20,13 +20,13 @@ topic_v2:
 ---
 # Batch ingestion developer guide
 
-This document provides a comprehensive guide to using [batch ingestion API endpoints](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) in Adobe Experience Platform. For an overview of batch ingestion APIs, including prerequisites and best practices, please begin by reading the [batch ingestion API overview](overview.md).
+This document provides a comprehensive guide to using [batch ingestion API endpoints](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion) in Adobe Experience Platform. For an overview of batch ingestion APIs, including prerequisites and best practices, please begin by reading the [batch ingestion API overview](overview.md).
 
 The appendix to this document provides information for [formatting data to be used for ingestion](#data-transformation-for-batch-ingestion), including sample CSV and JSON data files.
 
 ## Getting started
 
-The API endpoints used in this guide is part of the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Batch ingestion is provided through a RESTful API where you can perform basic CRUD operations against the supported object types.
+The API endpoints used in this guide is part of the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion). Batch ingestion is provided through a RESTful API where you can perform basic CRUD operations against the supported object types.
 
 Before continuing, please review the [batch ingestion API overview](overview.md) and the [getting started guide](getting-started.md). 
 
@@ -949,3 +949,4 @@ The following is an example of a JSONL (single-line JSON) payload formatted for 
 ```
 
 +++
+

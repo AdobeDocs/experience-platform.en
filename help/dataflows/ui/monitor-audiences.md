@@ -198,7 +198,7 @@ The following metrics are available for segmentation jobs:
 | Metric | Description |
 | ------ | ----------- |
 | **[!UICONTROL Segmentation job]** | Indicates the name of the segmentation job. |
-| **[!UICONTROL Type]** | Indicates the type of segmentation job - export or evaluation. Note that in both cases, the segmentation job evaluates or exports **all** audiences belonging to an organization. To learn more about export jobs, please read the guide on the [export jobs endpoint](../../segmentation/api/export-jobs.md). To learn more about evaluation jobs, please read the tutorial on [evaluating a segment definition](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). |
+| **[!UICONTROL Type]** | Indicates the type of segmentation job - export or evaluation. Note that in both cases, the segmentation job evaluates or exports **all** audiences belonging to an organization. To learn more about export jobs, please read the guide on the [export jobs endpoint](../../segmentation/api/export-jobs.md). To learn more about evaluation jobs, please read the tutorial on [evaluating an audience](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-an-audience). |
 | **[!UICONTROL Job start]** | The date and time when the segmentation job started. |
 | **[!UICONTROL Job end]** | The date and time when the segmentation job completed. |
 | **[!UICONTROL Status]** | The status of the completed job. Possible statuses for the segmentation job include success or failed. |

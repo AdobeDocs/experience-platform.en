@@ -22,7 +22,7 @@ topic_v2:
 ---
 # Enforce data usage policies using the [!DNL Policy Service] API
 
-Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. You can then set up your own internal protocols to handle policy violations based on the API response.
+Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the [[!DNL Policy Service API]](https://developer.adobe.com/experience-platform-apis/references/policy-service) to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. You can then set up your own internal protocols to handle policy violations based on the API response.
 
 >[!NOTE]
 >
@@ -389,3 +389,5 @@ A successful response returns the URL for the marketing action, the usage labels
 By reading this document, you have successfully checked for policy violations when performing a marketing action on a dataset or a set of data usage labels. Using the data returned in API responses, you can set up protocols within your experience application to appropriately enforce policy violations when they occur.
 
 For information on how Experience Platform automatically provides policy enforcement for activated segments, see the guide on [automatic enforcement](./auto-enforcement.md).
+
+

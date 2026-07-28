@@ -3,7 +3,7 @@ keywords: google customer match;Google customer match;Google Customer Match
 title: Google Customer Match connection
 description: Google Customer Match uses your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, and Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-TQID: https://experienceleague.adobe.com/JVth-Vipe0-564Luty---iN93GwwvmCI60kGqGGQSTY
+TQID: https://experienceleague.adobe.com/JVth-Vipe0-564Luty%2D%2D%2DiN93GwwvmCI60kGqGGQSTY
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform

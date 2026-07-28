@@ -8,7 +8,7 @@ exl-id: 69c4e250-aa9b-4db1-b44b-6056bdddb637
 
 >[!AVAILABILITY]
 >
->This feature is currently in a **limited beta** and will only be available until July 15, 2026. Contact your Adobe account team to request access to the beta.
+>This feature is currently in a **limited beta** and will only be available until 01 August, 2026. Contact your Adobe account team to request access to the beta.
 
 With the [!DNL Delta Sharing] source connector, you can securely connect to your [!DNL Databricks Delta Sharing] source and create virtual datasets in Adobe Experience Platform. This allows you to query and use external tables through Experience Platform services, while representing the shared data through relational schemas, without physically ingesting the data into Platform. By using [!DNL Delta Sharing], you can reduce duplicate data storage, lower storage costs, and simplify data management. 
 

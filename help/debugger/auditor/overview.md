@@ -63,7 +63,7 @@ The auditor feature is able to grade the following Adobe technologies:
 * Adobe Advertising DSP 
 * Adobe Advertising Search 
 * Adobe Analytics 
-* Adobe Experience Cloud Identity Service
+* Adobe Visitor ID Service
 * Adobe Target
 * Tags (formerly Adobe Experience Platform Launch)
 

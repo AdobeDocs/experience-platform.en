@@ -118,7 +118,7 @@ In this example, the audience finds all the people who work in the sales departm
 > 
 >For instructions on how to create audiences to evaluate your data see the [Segment Builder UI guide](../segmentation/ui/segment-builder.md). For more specific B2B segmentation use cases, refer to the [segmentation overview for Real-Time CDP B2B Edition](./segmentation/b2b.md).
 
-The Segment Builder allows you to create a marketable audience from Real-Time Customer Profile data and view estimates of your prospective audience based on the combination of attributes, events, and existing audiences you defined.
+Segment Builder allows you to create a marketable audience from Real-Time Customer Profile data and view estimates of your prospective audience based on the combination of attributes, events, and existing audiences you defined.
 
 ## Activate your evaluated data to a destination
 

@@ -39,7 +39,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-This guide requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to Experience Platform APIs. Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+This guide requires you to have completed the [authentication tutorial](/help/landing/api-authentication.md) in order to successfully make calls to Experience Platform APIs. Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -56,3 +56,5 @@ All requests that contain a payload (POST, PUT, and PATCH) require an additional
 ## Next steps
 
 To begin making calls using the [!DNL Audit Query] API, please refer to the [events endpoint guide](./events.md) and the [export endpoint guide](./export.md).
+
+

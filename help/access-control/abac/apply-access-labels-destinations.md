@@ -53,7 +53,7 @@ Read the guides on [connecting to a destination](/help/destinations/ui/connect-d
 
 ## Already available: Apply access labels to other Experience Platform resources {#apply-labels-other-resources}
 
-While this release enables you to grant users object-level access to specific destination dataflows, the functionality to grant access control on an object level is already generally available for other Experience Platform resources, such as [audiences](/help/access-control/abac/end-to-end-guide.md#apply-labels-to-segments).
+While this release enables you to grant users object-level access to specific destination dataflows, the functionality to grant access control on an object level is already generally available for other Experience Platform resources, such as [audiences](/help/access-control/abac/end-to-end-guide.md#apply-labels-to-audiences).
 
 ## Use case example {#use-case-example}
 

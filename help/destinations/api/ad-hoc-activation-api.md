@@ -88,7 +88,7 @@ Before you can make calls to the [!DNL Adobe Experience Platform] APIs, make sur
 
 ## Step 2: Gather credentials {#credentials}
 
-To make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+To make calls to Experience Platform APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
@@ -285,3 +285,4 @@ When using the ad-hoc activation API, you can come across error messages that ar
 
 * [Connect to batch destinations and activate data using the Flow Service API](/help/destinations/api/connect-activate-batch-destinations.md)
 * [Export files on-demand to batch destinations using the Experience Platform UI](/help/destinations/ui/export-file-now.md)
+

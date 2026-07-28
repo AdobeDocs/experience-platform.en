@@ -26,7 +26,7 @@ Data usage labels allow you to categorize data according to usage policies that 
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Policy Service API]](https://developer.adobe.com/experience-platform-apis/references/policy-service). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Retrieve a list of labels {#list}
 
@@ -237,3 +237,5 @@ A successful response returns the details of custom label, with HTTP code 200 (O
 ## Next steps
 
 This guide covered the use of the `/labels` endpoint in the Policy Service API. For steps on how to apply labels to datasets and fields, refer to the [dataset labels API guide](../labels/dataset-api.md).
+
+

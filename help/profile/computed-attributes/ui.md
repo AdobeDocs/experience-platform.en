@@ -171,7 +171,7 @@ After creating a computed attribute, you can use **published** computed attribut
 >
 >Computed attributes **cannot** be used in audience **compositions**.
 
-![The Segment Builder is displayed, showing a computed attribute as part of the segment definition composition.](./images/ui/use-ca.png)
+![Segment Builder is displayed, showing a computed attribute as part of the segment definition composition.](./images/ui/use-ca.png)
 
 ## Next steps
 

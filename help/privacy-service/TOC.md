@@ -33,5 +33,5 @@ nudge: true
   * [Terminology](./regulations/terminology.md)
 * [Best practices](./best-practices.md)
 * [Troubleshooting guide](./troubleshooting-guide.md)
-* [API reference](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
+* [API reference](https://developer.adobe.com/experience-platform-apis/references/privacy-service)
 * [Release notes](./release-notes.md)

@@ -283,5 +283,5 @@ nudge: true
   * [Manage data usage labels for a schema](tutorials/labels.md)
   * [Create an ad hoc schema](tutorials/ad-hoc.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
-* [API reference](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
+* [API reference](https://developer.adobe.com/experience-platform-apis/references/schema-registry)
 * [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

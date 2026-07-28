@@ -59,11 +59,11 @@ To create a prospect audience, on the Audience Portal, select **[!UICONTROL Crea
 
 ![The [!UICONTROL Create audience] button is highlighted on the prospect audience browse page.](../images/types/prospect/select-create-audience.png)
 
-The Segment Builder appears. The prospect profile attributes appear on the left navigation bar. 
+Segment Builder appears, with the prospect profile attributes appearing on the left navigation bar. 
 
-![The Segment Builder is displayed. Note that the only available attributes are for the Prospect Profile class.](../images/types/prospect/segment-builder.png)
+![Segment Builder is displayed. Note that the only available attributes are for the Prospect Profile class.](../images/types/prospect/segment-builder.png)
 
-For more information on using the Segment Builder, please read the [Segment Builder UI guide](../ui/segment-builder.md).
+For more information on using Segment Builder, please read the [Segment Builder UI guide](../ui/segment-builder.md).
 
 ## Suggested use cases {#use-cases}
 

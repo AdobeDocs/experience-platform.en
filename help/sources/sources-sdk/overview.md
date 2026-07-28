@@ -14,7 +14,7 @@ role_v2:
 ---
 # Self-Serve Sources (Batch SDK) overview
 
-Adobe Experience Platform Self-Serve Sources (Batch SDK) is a framework that allows you to integrate a REST API-based source to the Experience Platform sources catalog using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Self-Serve Sources (Batch SDK) provides with a set of configuration APIs to build your own source and bring your batch data to Experience Platform.
+Adobe Experience Platform Self-Serve Sources (Batch SDK) is a framework that allows you to integrate a REST API-based source to the Experience Platform sources catalog using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service). Self-Serve Sources (Batch SDK) provides with a set of configuration APIs to build your own source and bring your batch data to Experience Platform.
 
 With Self-Serve Sources (Batch SDK), you can:
 
@@ -61,3 +61,5 @@ The step-by-step process to configure your source in Experience Platform is outl
   * You can use this [sources UI documentation template](./documentation/ui-template.md) to structure your UI documentation.
   * See the guide on [using the GitHub web interface](./documentation/github.md) for steps on how to create documentation using GitHub.
   * See the guide on [using a text editor](./documentation/text-editor.md) for steps on how to create documentation using your local machine.
+
+

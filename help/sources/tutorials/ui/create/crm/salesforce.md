@@ -33,6 +33,13 @@ This tutorial requires a working understanding of the following components of Ex
 
 If you already have an authenticated [!DNL Salesforce] account, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow for CRM data](../../dataflow/crm.md).
 
+### Configure your [!DNL Salesforce] connected app
+
+Before connecting [!DNL Salesforce] to Adobe Experience Platform, ensure that the [!DNL Salesforce] connected app you use for authentication includes the OAuth scope **Manage user data via APIs** (`api`). This scope is required for Experience Platform to access data from [!DNL Salesforce]. If this scope is missing, authentication may fail. 
+
+* For more information on authentication, read  the [[!DNL Salesforce] authentication guide](../../../../connectors/crm/salesforce.md#prerequisites).
+* For more information on available OAuth scopes, read the [[!DNL Salesforce] OAuth scope documentation](https://help.salesforce.com/s/articleView?id=xcloud.remoteaccess_oauth_tokens_scopes.htm&type=5).
+
 ### Gather required credentials {#gather-required-credentials}
 
 The [!DNL Salesforce] source supports authentication via OAuth2 Client Credential.
@@ -79,8 +86,11 @@ For OAuth 2 Client Credential, select **[!UICONTROL OAuth2 Client Credential]** 
 * API version
 * Include delete objects
 
-When finished, select **[!UICONTROL Connect to source]**.
+>[!IMPORTANT]
+>
+>Ensure that the [!DNL Salesforce] connected app used for this connection includes the OAuth scope **Manage user data via APIs** (`api`). If this scope is missing, authentication can fail when Experience Platform attempts to read data from [!DNL Salesforce].
 
+When finished, select **[!UICONTROL Connect to source]**.
 
 ![The interface in which you can create a new Salesforce account by providing the appropriate authentication credentials.](../../../../images/tutorials/create/salesforce/new.png)
 

@@ -68,7 +68,7 @@ The next screen allows you to configure which sources and solutions you want the
 * Adobe Analytics (AA)
 * Adobe Audience Manager (AAM)
 * Adobe Target
-* Adobe Experience Cloud Identity Service (Visitor, or ECID)
+* Adobe Visitor ID Service (ECID)
 * Adobe Advertising
 
 Select one or more solutions, then select **[!UICONTROL Update]**.

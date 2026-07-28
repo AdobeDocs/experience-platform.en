@@ -22,7 +22,7 @@ Sandboxes in Adobe Experience Platform provide isolated development environments
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The API endpoint used in this guide is part of the [[!DNL Sandbox] API](https://developer.adobe.com/experience-platform-apis/references/sandbox). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Retrieve a list of sandboxes {#list}
 
@@ -528,3 +528,5 @@ A successful response returns the sandbox's updated details, showing that its `s
     "region": "VA7"
 }
 ```
+
+

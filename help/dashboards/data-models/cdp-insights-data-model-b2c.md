@@ -202,7 +202,7 @@ The `adwh_fact_profile_by_segment_trendlines` table is an Adobe-managed system d
 | --- | --- |
 | `count_of_profiles` | The total number of profiles in the audience at the time of the daily record. |
 | `count_of_calculated_realized_profiles` | The number of profiles that had a qualification event yesterday. The number of profiles that had a qualification event yesterday. |
-| `count_of_calculated_existing_profiles` | The number of profiles whose last qualification event occurred before yesterday. These profiles have continued to exist in the segment since their most recent qualification event. |
+| `count_of_calculated_existing_profiles` | The number of profiles whose last qualification event occurred before yesterday. These profiles have continued to exist in the audience since their most recent qualification event. |
 | `count_of_calculated_exited_profiles` | The number of profiles that exited the audience yesterday. |
 
 >[!NOTE]

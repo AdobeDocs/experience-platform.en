@@ -19,7 +19,7 @@ topic_v2:
 ---
 # Getting started with Content Tagging
 
-[!DNL Content tagging] utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en).
+[!DNL Content tagging] utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the [authentication tutorial](/help/landing/api-authentication.md).
 
 However, when you get to the **Add API** step, the API is located under Creative Cloud instead of Adobe Experience Platform, as shown in the following screenshot: 
 
@@ -51,7 +51,7 @@ You are redirected and asked to select an environment file from your computer. S
 
 ![](./images/click-open.png)
 
-You are redirected back to the *Manage environments* tab with a new environment name populated. Select the environment name to view and edit the variables available in Postman. You still need to manually populate the `JWT_TOKEN` and `ACCESS_TOKEN`. These values should have been obtained while completing the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en).
+You are redirected back to the *Manage environments* tab with a new environment name populated. Select the environment name to view and edit the variables available in Postman. You still need to manually populate the `JWT_TOKEN` and `ACCESS_TOKEN`. These values should have been obtained while completing the [authentication tutorial](/help/landing/api-authentication.md).
 
 ![](./images/re-direct-updated.png)
 
@@ -76,3 +76,5 @@ Once you have all your credentials, you are ready to set up a custom worker for 
 To learn more about the Extensibility Framework, start by reading the [introduction to extensibility](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) document. This document outlines the prerequisites and provisioning requirements.
 
 To learn more about setting up an environment for [!DNL Content tagging], start by reading the guide for [setting up a developer environment](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html). This document provides setup instructions that allow you to develop for the Asset Compute Service.
+
+

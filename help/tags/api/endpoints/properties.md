@@ -59,7 +59,7 @@ For more general information about properties and their role in tag management, 
 
 ## Getting started
 
-The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
+The endpoint used in this guide is part of the [Reactor API](https://developer.adobe.com/experience-platform-apis/references/reactor). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
 
 ## Retrieve a list of properties {#list}
 
@@ -1485,3 +1485,5 @@ A successful response returns the details of the specified property's company.
   }
 }
 ```
+
+

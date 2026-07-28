@@ -38,7 +38,7 @@ nudge: true
   - [List available namespaces](api/list-namespaces.md)
   - [Create a custom namespace](api/create-custom-namespace.md)
   - [List the native ID for an identity](api/list-native-id.md)
-  - [API reference](https://www.adobe.io/experience-platform-apis/references/identity-service)
+  - [API reference](https://developer.adobe.com/experience-platform-apis/references/identity-service)
 - {hide-from-toc} [Define identity fields in the UI](label-identities.md)
 - [Privacy request processing](privacy.md)
 - [Troubleshooting guide](troubleshooting-guide.md)

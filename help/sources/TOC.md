@@ -410,5 +410,5 @@ role: Developer
 - [Flow run notifications](notifications.md)
 - [IP address allowlist](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)
-- [API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [API reference](https://developer.adobe.com/experience-platform-apis/references/flow-service)
 - [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

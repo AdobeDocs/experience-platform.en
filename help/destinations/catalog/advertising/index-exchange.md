@@ -1,6 +1,6 @@
 ---
 title: Index Exchange
-description: Connect to Index Exchange (Index) and activate your data so your audience segments can be targeted by deals created in the Index UI.
+description: Connect to Index Exchange (Index) and activate your data so your audiences can be targeted by deals created in the Index UI.
 last-substantial-update: 2026-01-27T00:00:00.000Z
 exl-id: 6d2a8553-5e8c-4eeb-ac25-5e4c2bdc5758
 TQID: https://experienceleague.adobe.com/PcCWbPpK-WfhbfGIkB7s93rJR-nvPcyJ71OogVOKMFw
@@ -32,9 +32,9 @@ topic_v2:
 
 [!DNL Index] is a global advertising supply-side platform that helps media owners maximize the value of their content across every screen. With over 20 years of industry leadership, [!DNL Index] connects the world's largest brands with premium experience makers to deliver high-quality consumer experiences.
 
-Use this destination connector to export audience segments from [!DNL Adobe Experience Platform] directly to [!DNL Index Exchange]'s programmatic advertising platform.
+Use this destination connector to export audiences from [!DNL Adobe Experience Platform] directly to [!DNL Index Exchange]'s programmatic advertising platform.
 
-Once exported, these audience segments target deals by media owners, marketplace partners, or shared with publishers and curators by marketplace vendors.
+Once exported, these audiences target deals by media owners, marketplace partners, or shared with publishers and curators by marketplace vendors.
 
 >[!IMPORTANT]
 >
@@ -54,7 +54,7 @@ Media owners, marketplace partners, or marketplace vendors who want to send audi
 
 ## Prerequisites {#prerequisites}
 
-Audience segments must be registered with [!DNL Index] using an additional process when using this destination before they will appear in your account. Reach out to your [!DNL Index Exchange] account representative for assistance with this process.
+Audiences must be registered with [!DNL Index] using an additional process when using this destination before they will appear in your account. Reach out to your [!DNL Index Exchange] account representative for assistance with this process.
 
 ## Supported identities {#supported-identities}
 
@@ -106,7 +106,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 | --------- | ---------- | --------- |
-| Export type | **[!UICONTROL Segment export]** | Exports all members of a segment (audience) with the identifiers (IDFA, GAID, or others) used in the [!DNL Index Exchange] destination. |
+| Export type | **[!UICONTROL Segment export]** | Exports all members of an audience with the identifiers (IDFA, GAID, or others) used in the [!DNL Index Exchange] destination. |
 | Export frequency | **[!UICONTROL Batch]** | Exports files to downstream platforms at intervals of 3, 6, 8, 12, or 24 hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -156,7 +156,7 @@ When you are finished providing details for your destination connection, select 
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
 ### Map attributes and identities {#map}
 
@@ -170,13 +170,13 @@ Selecting target fields:
 
 ![Map attributes and identities](../../assets/catalog/advertising/index-exchange/identity-mapping.png)
 
-### Register segments with [!DNL Index] {#register-segments}
+### Register audiences with [!DNL Index] {#register-segments}
 
-Before or after activating data to the destination, contact your [!DNL Index] Representative to register the segments you plan to activate. Your representative will provide instructions on how to register additional segment details, including names, IDs, descriptions, and pricing, if applicable.
+Before or after activating data to the destination, contact your [!DNL Index] Representative to register the audiences you plan to activate. Your representative will provide instructions on how to register additional audience details, including names, IDs, descriptions, and pricing, if applicable.
 
 ## Exported data / Validate data export {#exported-data}
 
-Once registration is complete, the segments will be available for targeting in your [!DNL Index] account. To confirm that data is being received correctly, contact your [!DNL Index] Representative, who can provide details on the volume of segment data received.
+Once registration is complete, the audiences will be available for targeting in your [!DNL Index] account. To confirm that data is being received correctly, contact your [!DNL Index] Representative, who can provide details on the volume of audience data received.
 
 ## Data usage and governance {#data-usage-governance}
 

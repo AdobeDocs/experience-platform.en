@@ -250,7 +250,7 @@ A successful response returns HTTP status 200 and contains the `errors` array. T
 }
 ```
 
-The [Query Service API reference documentation](https://www.adobe.io/experience-platform-apis/references/query-service/) provides more information on all available endpoints.
+The [Query Service API reference documentation](https://developer.adobe.com/experience-platform-apis/references/query-service) provides more information on all available endpoints.
 +++
 
 ### What does "Error validating schema" mean?
@@ -904,3 +904,5 @@ The following table provides HTTP error codes and their possible causes.
 | 400              | Bad request           | Malformed or illegal query |
 | 401              | Authentication failed | Invalid auth token         |
 | 500              | Internal server error | Internal system failure    |
+
+

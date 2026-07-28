@@ -34,7 +34,7 @@ While schema relationships can be inferred through the use of the union schema a
 >
 >The Schema Registry API refers to reference schemas as "destination schemas". These are not to be confused with destination schemas in [Data Prep mapping sets](../../data-prep/mapping-set.md) or schemas for [destination connections](../../destinations/home.md).
 
-This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 
+This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the [[!DNL Schema Registry API]](https://developer.adobe.com/experience-platform-apis/references/schema-registry). 
 
 ## Getting started
 
@@ -482,3 +482,4 @@ A successful response returns the details of the newly created relationship desc
 ## Next steps
 
 By following this tutorial, you have successfully created a one-to-one relationship between two schemas. For more information on working with descriptors using the [!DNL Schema Registry] API, see the [Schema Registry developer guide](../api/descriptors.md). For steps on how to define schema relationships in the UI, see the tutorial on [defining schema relationships using the Schema Editor](relationship-ui.md).
+

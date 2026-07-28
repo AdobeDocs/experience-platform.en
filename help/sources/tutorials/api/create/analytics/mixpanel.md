@@ -404,7 +404,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../../xdm/api/schemas.md).
 
@@ -476,7 +476,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 ## Create a mapping {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) with data mappings defined within the request payload.
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep) with data mappings defined within the request payload.
 
 **API format**
 
@@ -691,3 +691,4 @@ Delete your dataflow by performing a DELETE request to the [!DNL Flow Service] A
 ### Delete your account
 
 Delete your account by performing a DELETE request to the [!DNL Flow Service] API while providing the base connection ID of the account you want to delete. For complete API examples, read the guide on [deleting your source account using the API](../../delete.md).
+

@@ -19,7 +19,7 @@ This document provides supplemental information related to working with the [!DN
 
 ## Using query parameters {#query}
 
-The [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) supports the use of query parameters to page and filter results when listing sandboxes.
+The [[!DNL Sandbox] API](https://developer.adobe.com/experience-platform-apis/references/sandbox) supports the use of query parameters to page and filter results when listing sandboxes.
 
 >[!NOTE]
 >
@@ -29,3 +29,5 @@ The [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/reference
 | --- | --- |
 | `limit` | The maximum number of records to be returned in the response. |
 | `offset` | The number of entities from the first record to start (offset) the response list from. |
+
+

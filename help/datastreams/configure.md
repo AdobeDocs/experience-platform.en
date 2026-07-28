@@ -157,8 +157,8 @@ Enable this service to send data to [!DNL Adobe Audience Manager]. The other set
 
 | Setting | Description |
 | --- | --- |
-| [!UICONTROL Cookie Destinations Enabled] | Enables the SDK to share segment information via [cookie destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) from [!DNL Audience Manager]. |
-| [!UICONTROL URL Destinations Enabled] | Enables the SDK to share segment information via [URL destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) from [!DNL Audience Manager]. |
+| [!UICONTROL Cookie Destinations Enabled] | Enables the SDK to share audience information via [cookie destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) from [!DNL Audience Manager]. |
+| [!UICONTROL URL Destinations Enabled] | Enables the SDK to share audience information via [URL destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) from [!DNL Audience Manager]. |
 
 ### Adobe Experience Platform settings {#aep}
 

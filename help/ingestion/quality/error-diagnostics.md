@@ -38,7 +38,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -396,3 +396,5 @@ A sample response of retrieving the error file can be seen below:
     "_filename": "parsing_errors_0.json"
 }
 ```
+
+

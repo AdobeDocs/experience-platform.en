@@ -285,7 +285,7 @@ debug: true
             * [Configure an SFTP destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
             * [Configure a file-based destination to export prospect audiences](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
     * Destination authoring API reference {#authoring-api}
-        * [Destination SDK (Destination Authoring) API reference](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+        * [Destination SDK (Destination Authoring) API reference](https://developer.adobe.com/experience-platform-apis/references/destination-authoring)
         * Destination server operations {#server-operations}
             * [Create a destination server configuration](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
             * [Retrieve a destination server configuration](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)

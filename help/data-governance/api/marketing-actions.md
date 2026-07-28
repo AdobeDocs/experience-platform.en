@@ -24,7 +24,7 @@ You can manage marketing actions for your organization by using the `/marketingA
 
 ## Getting started
 
-The API endpoints used in this guide are part of the [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoints used in this guide are part of the [[!DNL Policy Service] API](https://developer.adobe.com/experience-platform-apis/references/policy-service). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Retrieve a list of marketing actions {#list}
 
@@ -254,3 +254,5 @@ curl -X DELETE \
 A successful response returns HTTP Status 200 (OK) with a blank response body. 
 
 You can confirm the deletion by attempting to [look up the marketing action](#look-up). You should receive an HTTP 404 (Not Found) error if the marketing action has been removed from the system.
+
+

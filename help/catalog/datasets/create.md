@@ -42,7 +42,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -484,3 +484,5 @@ For more information about updating schemas, see the [Schema Registry API Develo
 Once you have updated the schema, you can re-follow the steps in this tutorial to ingest new data that conforms to the revised schema.
 
 It is important to remember that schema evolution is purely additive, meaning you cannot introduce a breaking change to a schema once it has been saved to the registry and used for data ingestion. To learn more about best practices for composing schema for use with Adobe Experience Platform, see the guide on the [basics of schema composition](../../xdm/schema/composition.md).
+
+

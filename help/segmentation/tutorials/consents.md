@@ -85,7 +85,7 @@ When building a segment definition in the UI, under **[!UICONTROL Attributes]**,
 
 ![](../images/tutorials/opt-outs/consents.png)
 
-Start by selecting the **[!UICONTROL Data Collection]** category, then drag **[!UICONTROL Choice Value]** into the segment builder. When adding the attribute to the segment definition, you can specify the [consent values](../../xdm/field-groups/profile/consents.md#choice-values) that must be included or excluded.
+Start by selecting the **[!UICONTROL Data Collection]** category, then drag **[!UICONTROL Choice Value]** into Segment Builder. When adding the attribute to the segment definition, you can specify the [consent values](../../xdm/field-groups/profile/consents.md#choice-values) that must be included or excluded.
 
 ![](../images/tutorials/opt-outs/consent-values.png)
 

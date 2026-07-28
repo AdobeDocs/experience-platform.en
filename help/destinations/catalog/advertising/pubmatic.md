@@ -58,7 +58,7 @@ Publishers or data providers want to send audiences from [!DNL Adobe Experience 
 
 ## Prerequisites {#prerequisites}
 
-Talk to your [!DNL PubMatic] Account Manager to make sure your account is configured correctly and supports onboarding of audience segments. They will also make sure you have all the relevant details to use this destination and to provide you with support during the setup.
+Talk to your [!DNL PubMatic] Account Manager to make sure your account is configured correctly and supports onboarding of audiences. They will also make sure you have all the relevant details to use this destination and to provide you with support during the setup.
 
 ## Supported identities {#supported-identities}
 
@@ -103,8 +103,8 @@ Refer to the table below for information about the destination export type and f
 
 | Item             | Type                            | Notes                                                                                                                                                                                                                                                                                                                        |
 | ---------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Export type      | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the PubMatic Connect destination.                                                                                                                                                                         |
-| Export frequency | **[!UICONTROL Streaming]**      | Streaming destinations are "always on" API-based connections. When a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
+| Export type      | **[!UICONTROL Segment export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the PubMatic Connect destination.                                                                                                                                                                         |
+| Export frequency | **[!UICONTROL Streaming]**      | Streaming destinations are "always on" API-based connections. When a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 

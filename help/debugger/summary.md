@@ -34,7 +34,7 @@ To run Adobe Experience Platform Debugger, open the page you want to examine in 
 
 ![](images/summary.jpg)
 
-This screen shows information about each Adobe Experience Cloud solution. The information shown varies by solution, but typically includes information including the solution library and version (for example, "AppMeasurement v2.9") and account identifiers (such as the Analytics report suite ID, the Target client code, the Audience Manager partner ID, and so on)
+This screen shows information about each Adobe CX Enterprise solution. The information shown varies by solution, but typically includes information including the solution library and version (for example, "AppMeasurement v2.9") and account identifiers (such as the Analytics report suite ID, the Target client code, the Audience Manager partner ID, and so on)
 
 ## Information shown in Experience Platform Debugger  
 
@@ -144,12 +144,12 @@ Experience Platform Debugger shows the following information for each solution:
  </tbody> 
 </table>
 
-**Adobe Experience Cloud ID Service**
+**Adobe Visitor ID Service**
 
 <table id="table_274CFCEFA8F34D16BB546B4669EC0209"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <p>Experience Cloud Org ID </p> </td> 
+   <td colname="col1"> <p>CX Enterprise Org ID </p> </td> 
    <td colname="col2"> <p>Your <a href="https://experiencecloud.adobe.com/resources/help/en_US/mcvid/" format="https" scope="external"> Organization ID</a> </p> </td> 
   </tr> 
   <tr> 

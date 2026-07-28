@@ -16,7 +16,7 @@ topic_v2:
 ---
 # Explore data tables using the [!DNL Flow Service] API
 
-This tutorial provides steps on how to explore and preview the structure and contents of your data tables using the [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API.
+This tutorial provides steps on how to explore and preview the structure and contents of your data tables using the [[!DNL Flow Service]](https://developer.adobe.com/experience-platform-apis/references/flow-service) API.
 
 >[!NOTE]
 >
@@ -202,3 +202,5 @@ By following this tutorial, you have gathered information on the structure and c
 * [Marketing automation sources](../collect/marketing-automation.md)
 * [Payments sources](../collect/payments.md)
 * [Protocols sources](../collect/protocols.md)
+
+

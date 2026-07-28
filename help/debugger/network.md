@@ -34,7 +34,7 @@ This screen is useful for comparing key value pairs across hits. You can confirm
 
 >[!NOTE]
 >
->At this time, not all parameters passed in the solution calls (for example, Analytics context variables, Target custom parameters, or Experience Cloud ID Service Customer IDs) are visible in the Network screen.
+>At this time, not all parameters passed in the solution calls (for example, Analytics context variables, Target custom parameters, or Visitor ID Service Customer IDs) are visible in the Network screen.
 
 To change the information by solution, select the solution you want to view from the list in the left nav. The following example is filtered to show only Analytics:
 

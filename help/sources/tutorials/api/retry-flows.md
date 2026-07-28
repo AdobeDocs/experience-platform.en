@@ -16,7 +16,7 @@ role_v2:
 >
 >Support for retrying failed dataflow runs is available to batch sources. You can only retry dataflow runs that have failed.
 
-This tutorial covers steps on how to retry failed dataflow runs using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers steps on how to retry failed dataflow runs using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -72,3 +72,5 @@ A successful response returns a newly created flow run ID and its corresponding 
     "etag": "\"1100c53e-0000-0200-0000-627138980000\""
 }
 ```
+
+

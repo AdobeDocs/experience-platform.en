@@ -28,7 +28,7 @@ Data types are used as reference-type fields in classes or schema field groups i
 
 ## Getting started
 
-The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Retrieve a list of data types {#list}
 
@@ -668,3 +668,5 @@ curl -X DELETE \
 A successful response returns HTTP status 204 (No Content) and a blank body.
 
 You can confirm the deletion by attempting a [lookup (GET) request](#lookup) to the data type. You will need to include an `Accept` header in the request, but should receive an HTTP status 404 (Not Found) because the data type has been removed from the Schema Registry.
+
+

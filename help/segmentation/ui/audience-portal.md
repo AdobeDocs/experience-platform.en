@@ -81,7 +81,7 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 
 | Action | Origins | Description |
 | ------ | ------- | ----------- |
-| [!UICONTROL Edit] | Segmentation Service | Opens the Segment Builder to edit your audience. Please note that if your audience was created through the API, you will **not** be able to edit it using Segment Builder. For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md). |
+| [!UICONTROL Edit] | Segmentation Service | Opens Segment Builder to edit your audience. Please note that if your audience was created through the API, you will **not** be able to edit it using Segment Builder. For more information on using Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md). |
 | [!UICONTROL Open composition] | Audience composition | Opens the Audience composition to see your audience. For more information on Audience composition, please read the [audience composition UI guide](./audience-composition.md). |
 | [!UICONTROL Activate to destination] | Segmentation Service | Activates the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md). |
 | [!UICONTROL Share with partners] | Audience composition, Custom upload, Segmentation Service | Shares your audience with other Experience Platform users. For more information on this feature, please read the [Segment Match overview](./segment-match/overview.md). |
@@ -304,7 +304,7 @@ This button will **not** be selectable in the following situations:
 
 ![The audience details page is shown, with the [!UICONTROL Edit audience] button highlighted.](../images/ui/audience-portal/audience-details-edit-audience.png)
 
-Selecting **[!UICONTROL Edit audience]** lets you edit your audience in the Segment Builder. For more detailed information about using the [!DNL Segment Builder] workspace, please read the [[!DNL Segment Builder] user guide](./segment-builder.md).
+Selecting **[!UICONTROL Edit audience]** lets you edit your audience in Segment Builder. For more detailed information about using the [!DNL Segment Builder] workspace, please read the [[!DNL Segment Builder] user guide](./segment-builder.md).
 
 >[!ENDTABS]
 
@@ -419,7 +419,7 @@ Selecting **[!UICONTROL Compose audiences]** takes you to Audience Composition. 
 
 ### Segment Builder {#segment-builder}
 
-Selecting **[!UICONTROL Build rule]** takes you to the Segment Builder. This workspace provides intuitive controls for building and editing segment definitions, such as drag-and-drop tiles used to represent data properties. To learn more about creating segment definitions, please read the [Segment Builder guide](./segment-builder.md)
+Selecting **[!UICONTROL Build rule]** takes you to Segment Builder. This workspace provides intuitive controls for building and editing segment definitions, such as drag-and-drop tiles used to represent data properties. To learn more about creating segment definitions, please read the [Segment Builder guide](./segment-builder.md)
 
 ![The Segment Builder workspace is displayed.](../images/ui/audience-portal/segment-builder.png)
 
