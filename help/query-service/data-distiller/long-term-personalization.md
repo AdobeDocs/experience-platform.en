@@ -1,12 +1,12 @@
 ---
 title: Long-term personalization with Data Distiller
-description: Use Data Distiller to implement long-term personalization in Adobe Experience Platform. Compute signals from historical data, publish only the derived attribute or audience to Real-Time Customer Profile, and activate them in Real-Time CDP and Adobe Journey Optimizer.
+description: Use Data Distiller to support long-term personalization in Adobe Experience Platform while keeping the Profile store and Total Data Volume lean. Compute signals from historical data, publish only the derived attribute or audience to Real-Time Customer Profile, and activate them in Real-Time CDP and Adobe Journey Optimizer.
 solution: Experience Platform
 keywords: Experience Platform;Data Distiller;long-term personalization;derived datasets;deciles;SQL audiences;profile store;data lake;signals;scores;tiers
 ---
 # Long-term personalization with Data Distiller
 
-Long-term personalization tailors a real-time experience using customer behavior that stretches back months or years. With Data Distiller, you can support these use cases precisely while keeping your Profile store and [Total Data Volume](../../landing/license-usage-and-guardrails/total-data-volume.md) lean: you use SQL to compute a compact signal from the full history in the data lake, then publish only that signal to Real-Time Customer Profile for activation. A signal is the output of the SQL transformation, such as a score, tier, rank, or audience membership. This guide shows how to implement that pattern.
+Long-term personalization tailors a real-time experience using customer behavior that stretches back months or years. With Data Distiller, you can support these use cases effectively while keeping your Profile store and [Total Data Volume](../../landing/license-usage-and-guardrails/total-data-volume.md) lean: you use SQL to compute a compact signal from the full history in the data lake, then publish only that signal to Real-Time Customer Profile for activation. A signal is the output of the SQL transformation, such as a score, tier, rank, or audience membership. This guide shows how to implement that pattern.
 
 >[!AVAILABILITY]
 >
@@ -16,7 +16,7 @@ This guide is for data engineers, solution architects, and technical implementer
 
 >[!NOTE]
 >
->Data Distiller is one of several ways to support long-term personalization, and this guide covers the Data Distiller implementation. If you are still deciding among approaches (including Customer Journey Analytics and Federated Audience Composition), start with [Choose the right long-term personalization approach](../../hygiene/choose-a-personalization-approach.md).
+>Data Distiller is one of several ways to support long-term personalization, and this guide covers the Data Distiller workflow. If you are still deciding among approaches (including Customer Journey Analytics and Federated Audience Composition), start with [Choose the right long-term personalization approach](../../hygiene/choose-a-personalization-approach.md).
 
 ## How it works {#how-it-works}
 

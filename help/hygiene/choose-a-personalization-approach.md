@@ -57,11 +57,11 @@ The recommended architecture separates long-term storage from real-time activati
 1. **The signal is promoted to the Profile store.** Only the output, not the underlying event history, enters the engagement workflow.
 1. **Real-Time Customer Data Platform and Adobe Journey Optimizer activate on the signal.** The activation layer operates on lean, current data and responds in milliseconds.
 
-The approaches in this guide are different ways to perform step 2 and step 3. Before choosing among them, confirm that your use case actually requires an analytical workflow beyond Real-Time Customer Data Platform and Adobe Journey Optimizer.
+The approaches in this guide are different ways to perform step 2 and step 3. Before choosing among them, confirm that your use case actually requires an analytical workflow beyond Real-Time CDP and Adobe Journey Optimizer.
 
 ## Before you choose: confirm you have a long-term need {#qualifier}
 
-Not every organization needs an analytical approach. If all of your segmentation and personalization logic operates within a 30–90 day behavioral window, and current profile attributes plus recent events in the Profile store contain everything your decisions require, then **Real-Time Customer Data Platform and Adobe Journey Optimizer alone are sufficient**. No additional tooling is required, and activation runs directly from the Profile store.
+Not every organization needs an analytical approach. If all of your segmentation and personalization logic operates within a 30–90 day behavioral window, and current profile attributes plus recent events in the Profile store contain everything your decisions require, then **Real-Time CDP and Adobe Journey Optimizer alone are sufficient**. No additional tooling is required, and activation runs directly from the Profile store.
 
 This baseline is the starting point, not a fourth approach. That limit is where the remaining approaches provide additional value: when segmentation logic extends beyond 30–90 days, or personalization depends on insight derived from months or years of history, storing that history in the Profile store raises Total Data Volume without improving outcomes. If your diagnostic in the previous section pointed to a long-term need, choose one of the three approaches that follow.
 
@@ -97,7 +97,7 @@ To analyze customer behavior across channels and over time, use [Customer Journe
 
 Historical data analyzed in Customer Journey Analytics does not need to be enabled for the Profile store, so months or years of event history can reside there without counting toward your Total Data Volume entitlement.
 
-Analysts explore journeys visually across any time horizon, combine behavioral criteria into an audience, and publish it to the Profile store, where it becomes available in Real-Time Customer Data Platform and Adobe Journey Optimizer. Audiences can be published once for a campaign or refreshed automatically.
+Analysts explore journeys visually across any time horizon, combine behavioral criteria into an audience, and publish it to the Profile store, where it becomes available in Real-Time CDP and Adobe Journey Optimizer. Audiences can be published once for a campaign or refreshed automatically.
 
 * **Best for:** audiences discovered through exploration, multi-channel journey analysis, re-engagement campaigns, and one-time audiences tied to a specific event.
 * **Strengths:** self-service for analysts and marketers, with no SQL required. Exploration-first, so audience definitions can emerge from the data. Publishes to activation within minutes.
@@ -113,7 +113,7 @@ To build and qualify audiences directly from data in an external enterprise data
 
 ## Compare the approaches {#comparison}
 
-The following table compares the three approaches. Real-Time Customer Data Platform and Adobe Journey Optimizer on their own remain the baseline for use cases that need only recent data, as described in [Before you choose](#qualifier).
+The following table compares the three approaches. Real-Time CDP and Adobe Journey Optimizer on their own remain the baseline for use cases that need only recent data, as described in [Before you choose](#qualifier).
 
 | Dimension | Data Distiller | Customer Journey Analytics | Federated Audience Composition |
 | --- | --- | --- | --- |
