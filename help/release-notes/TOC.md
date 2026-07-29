@@ -11,6 +11,7 @@ nudge: true
 * [Current Experience Platform Release Notes](latest/latest.md)
 * [Experience Platform Pre-Release Notes](./pre-release-notes.md)
 * 2026 {#2026}
+  * [July 2026](2026/july-2026.md)
   * [June 2026](2026/june-2026.md)
   * [May 2026](2026/may-2026.md)
   * [April 2026](2026/april-2026.md)
