@@ -94,7 +94,7 @@ New features and updates to existing features in Adobe Experience Platform:
 | [[!DNL LiveRamp] - Onboarding](../../destinations/catalog/advertising/liveramp-onboarding.md) updates | We have made several updates to the [!DNL LiveRamp] onboarding connector: <ul><li>Added a new **ONCE** export frequency.</li><li>Reduced or eliminated file splits for audiences with high population sizes, which helps prevent cases on the [!DNL LiveRamp] side where large audiences imported from Adobe could be overwritten because of numerous file splits.</li></ul> |
 | [[!DNL Demandbase People]](../../destinations/catalog/advertising/demandbase-people.md) new mapping fields | Map three new optional target fields, `title`, `jobLevel`, and `jobFunction`, to the [!DNL Demandbase People] destination in addition to the existing mandatory and recommended mappings. Adobe recommends mapping these fields when available for richer person data and better downstream audience targeting. |
 | [[!DNL The Trade Desk] - CRM](../../destinations/catalog/advertising/tradedesk-emails.md) file-split threshold increase | The file-split threshold for exported files increased from 10 million to 100 million rows, so audiences are less likely to be split across multiple files when exported. |
-| [!DNL Adhese] | Use the [!DNL Adhese] destination to send audiences for targeted ad delivery on publisher-owned inventory. Audience exports are delivered as files to [!DNL Adhese]'s secure cloud storage. |
+| [[!DNL Adhese]](/help/destinations/catalog/advertising/adhese.md) | Use the [!DNL Adhese] destination to send audiences for targeted ad delivery on publisher-owned inventory. Audience exports are delivered as files to [!DNL Adhese]'s secure cloud storage. |
 
 {style="table-layout:auto"}
 
