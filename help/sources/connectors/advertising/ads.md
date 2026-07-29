@@ -1,6 +1,7 @@
 ---
 title: Google Ads Source Overview
 description: Learn how to connect Google Ads to Adobe Experience Platform using APIs or the user interface.
+badge: beta
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
 TQID: https://experienceleague.adobe.com/2M9Hz2MbXnZzPNQKvi5m2T28Ntr3lqZwiZCiKspsgJk
 product_v2:
