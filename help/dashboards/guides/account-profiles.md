@@ -194,7 +194,7 @@ To see a dialog that contains the specific revenue total for an opportunity, use
 
 This widget uses a bar chart to illustrate the number of opportunities that are either open or closed at all stages of the marketing/sales funnel. The widget uses colors to differentiate the stage of the opportunities. A color-coded key indicates the available stages for opportunities. 
 
-![The New opportunities by status & stage widget.](../images/account-profiles/new-opportunities-by-status-&-stage.png)
+![The New opportunities by status & stage widget.](../images/account-profiles/new-opportunities-by-status-and-stage.png)
 
 ### New opportunities won {#opportunities-won}
 
