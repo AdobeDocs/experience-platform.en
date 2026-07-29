@@ -8,7 +8,9 @@ keywords: Experience Platform;long-term personalization;profile store;data lake;
 
 Long-term personalization means tailoring a real-time experience based on customer behavior that stretches back six months, a year, or longer. You can support these use cases without storing years of raw event history in the Profile store: keep the detailed history in the analytical layer, derive a compact signal from it, and promote only that signal for activation. This decision guide compares the available approaches and helps you choose the one that fits your architecture. It explains when, why, and which approach to use. For configuration steps and SQL syntax, follow the linked product documentation.
 
-This guide is for solution architects, platform architects, and technical decision-makers evaluating long-term personalization approaches in Experience Platform. It assumes familiarity with [profiles](../profile/home.md), audiences, the data lake, and the Profile store. For guidance on managing Profile store volume after you choose an architecture, see [Choose the right Data Lifecycle Management capability](./choose-a-capability.md).
+This guide is for solution architects, platform architects, and technical decision-makers evaluating long-term personalization approaches in Experience Platform. It assumes familiarity with [profiles](../profile/home.md), audiences, the data lake, and the Profile store. 
+
+<!-- For guidance on managing Profile store volume after you choose an architecture, see [Choose the right Data Lifecycle Management capability](./choose-a-capability.md). -->
 
 ## Why long-term history doesn't belong in the Profile store {#customer-problem}
 
@@ -143,9 +145,9 @@ The Quick chooser gives a starting point. Use the following questions to resolve
 
 ## Keep the Profile store lean {#keep-lean}
 
-Choosing the right approach keeps new historical data out of the Profile store. Actively managing what is already there is a complementary, ongoing practice for every deployment. Rather than repeat that guidance here, use the dedicated resources:
+Choosing the right approach keeps new historical data out of the Profile store. Actively managing what is already there is a complementary, ongoing practice for every deployment. Rather than repeat that guidance here, use the dedicated resource:
 
-* To choose a data management capability (record delete, dataset expiration, Experience Event TTL, or Pseudonymous Profile TTL), see [Choose the right Data Lifecycle Management capability](./choose-a-capability.md).
+<!-- * To choose a data management capability (record delete, dataset expiration, Experience Event TTL, or Pseudonymous Profile TTL), see [Choose the right Data Lifecycle Management capability](./choose-a-capability.md). -->
 * For license entitlement monitoring, ingestion filters, and dataset hygiene, see [Data management license entitlement best practices](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 ## Next steps {#next-steps}
@@ -156,5 +158,5 @@ Long-term personalization does not require storing years of raw event data in th
 * [Data Distiller overview](../query-service/data-distiller/overview.md)
 * [Customer Journey Analytics overview](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview)
 * [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
-* [Choose the right Data Lifecycle Management capability](./choose-a-capability.md)
+<!-- * [Choose the right Data Lifecycle Management capability](./choose-a-capability.md) -->
 * [Real-Time Customer Profile overview](../profile/home.md)
