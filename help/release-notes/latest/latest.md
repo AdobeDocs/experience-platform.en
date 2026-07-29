@@ -130,6 +130,7 @@ Use Real-Time Customer Profile to create a holistic view of each individual know
 | Feature | Description |
 | --- | --- |
 | Faster profile exports and activation | Profile attribute data is now consolidated when data is written, instead of repeatedly at read time. As a result, profile exports complete significantly faster, making downstream activations to destinations and [!DNL Adobe Journey Optimizer] available sooner. This is a fully managed, back-end update. There is no change to how you configure or use Real-Time Customer Profile, nor is there any change to functionality or merge behavior. However, ingestion of profile attributes may take slightly longer, since more processing now happens at write time. This update is being rolled out through the end of July 2026. Review your scheduled ingestion and segmentation jobs to confirm that the timing buffer between them remains appropriate, and consider moving up downstream activation schedules that were previously limited by processing time. |
+| Pseudonymous profile data expiration update | Datasets that are created through the Customer Journey Analytics (CJA) Audience Service publishing flow are now correctly identified as containing system-generated data. Previously, these datasets could affect pseudonymous profile lifecycle management, resulting in inflated profile counts in Real-Time CDP. Newly created datasets are now automatically flagged as holding system generated data, and existing datasets created through this publishing flow have been updated accordingly. |
 
 {style="table-layout:auto"}
 
