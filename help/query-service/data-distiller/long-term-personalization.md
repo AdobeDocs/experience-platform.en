@@ -71,7 +71,11 @@ Use Data Distiller to compute example outputs such as these from long histories:
 
 ## Keep the Profile store lean {#keep-lean}
 
-Deriving signals with Data Distiller keeps new historical data out of the Profile store. To manage data that is already there (through TTL settings, dataset expiration, and record delete), see [Choose the right Data Lifecycle Management capability](../../hygiene/choose-a-capability.md) and [Data management license entitlement best practices](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
+<!-- 
+Deriving signals with Data Distiller keeps new historical data out of the Profile store. To manage data that is already there (through TTL settings, dataset expiration, and record delete), see [Choose the right Data Lifecycle Management capability](../../hygiene/choose-a-capability.md) and [Data management license entitlement best practices](../../landing/license-usage-and-guardrails/data-management-best-practices.md). 
+-->
+
+Deriving signals with Data Distiller keeps new historical data out of the Profile store. To manage data that is already there through license entitlement monitoring, ingestion filters, and dataset hygiene, see [Data management license entitlement best practices](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 ## Next steps {#next-steps}
 
