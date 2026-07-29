@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes July 2026
 description: The July 2026 release notes for Adobe Experience Platform.
+last-substantial-update: 2026-06-29
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 TQID: https://experienceleague.adobe.com/RvjQSbQ2NNwBYQJD4G6jsXWdAAg3vzbXKYvRlMwbBW0
 product_v2:
@@ -68,6 +69,7 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Real-Time Customer Profile](#real-time-customer-profile)
 - [Sandboxes](#sandboxes)
 - [Segmentation Service](#segmentation-service)
+- [Sources](#sources)
 
 ## Destinations {#destinations}
 
@@ -164,3 +166,19 @@ Use Segmentation Service to create audiences from your customer data and manage 
 {style="table-layout:auto"}
 
 For more information, read the [Segmentation Service overview](../../segmentation/home.md).
+
+## Sources {#sources}
+
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+**New or updated sources**
+
+| Source | Description |
+| --- | --- |
+| [!DNL Google Ads] | Use the [!DNL Google Ads] source to configure the complete ingestion workflow using APIs or the UI. Connect your [!DNL Google Ads] account and bring paid media data directly into Experience Platform for activation and analysis. Read the [[!DNL Google Ads] overview](/help/sources/connectors/advertising/ads.md) for more information. |
+| [!DNL Meta Ads] | Use the [!DNL Meta Ads] source to configure the complete [!DNL Meta Ads] ingestion workflow in the Sources UI. Connect your [!DNL Meta Ads] account and bring paid media data directly into Experience Platform for activation and analysis. Read the [[!DNL Meta Ads] overview](/help/sources/connectors/advertising/meta-ads.md) for more information. |
+
+{style="table-layout:auto"}
+
+For more information, read the [sources overview](../../sources/home.md).
+
