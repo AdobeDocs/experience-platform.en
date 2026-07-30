@@ -31,9 +31,12 @@ A technology company launched a new product and wants to drive awareness among c
 
 [!DNL Microsoft Ads Customer Match] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-| Target Identity | Description | Considerations |
+For recommended source-to-target mapping pairs based on your schema structure, see the [Mapping](#mapping) section.
+
+| Target Identity | Source field to map | Considerations |
 |---|---|---|
-| `email` | Plain text email addresses | Only plain text (unhashed) email addresses are supported as **source** fields in the mapping step. Pre-hashed source fields are not supported. Experience Platform always hashes email addresses before exporting them to [!DNL Microsoft Ads]. |
+| `email` | A field containing plain text email addresses | Experience Platform sanitizes and hashes the email addresses based on the Microsoft formatting and hashing requirements outlined in their [public documentation](https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_conc_uet_enhancedconversions#format-and-hash-the-data) before exporting them to [!DNL Microsoft Ads]. |
+| `email_lc_sha256` | A field containing email addresses that you have already hashed with SHA-256 | Follow the [!DNL Microsoft Ads] [sanitization and hashing requirements](https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_conc_uet_enhancedconversions#format-and-hash-the-data) before mapping. Experience Platform sends these values to [!DNL Microsoft Ads] without further sanitization or hashing. You are responsible for correct sanitization and hashing before mapping. |
 
 {style="table-layout:auto"}
 
@@ -160,20 +163,96 @@ See [Activate audience data to streaming audience export destinations](../../ui/
 
 ### Mapping {#mapping}
 
-In the **[!UICONTROL Mapping]** step, you must map the email identity from your source profiles to the target identity in [!DNL Microsoft Ads Customer Match].
+In the **[!UICONTROL Mapping]** step, you map a source field that contains your email addresses to a target field in [!DNL Microsoft Ads Customer Match]. The target field you choose must match the format of your source data.
 
-* **Source field**: Select `IdentityMap: Email` as the source field to map email identities from your profiles. Alternatively, you can select an XDM attribute such as `personalEmail.address` as the source field.
-* **Target field**: Select `Identity: email` as the target field.
+There are two target fields:
+
+* `email`: for source fields that contain plain text (unhashed) email addresses. Experience Platform sanitizes and hashes these values automatically before exporting them to [!DNL Microsoft Ads].
+* `email_lc_sha256`: for source fields that contain email addresses you have already sanitized and hashed with SHA-256. Experience Platform sends these values without further transformation.
+
+The mapping does not use a transformation step. When you map a plain text source field to `email`, Experience Platform sanitizes and hashes the email addresses automatically before sending them to [!DNL Microsoft Ads Customer Match].
+
+**Choose the correct target field**
+
+Use the table below to select the target field based on your source data. Both identity namespaces and XDM attributes are supported as source fields.
+
+| Your source data | Example source field | Target field to map to |
+|---|---|---|
+| Plain text (unhashed) email addresses | `IdentityMap: Email` or an XDM attribute such as `personalEmail.address` | `email` |
+| Email addresses already hashed with SHA-256 | `IdentityMap: Email_LC_SHA256` or an XDM attribute that stores hashed emails | `email_lc_sha256` |
+
+{style="table-layout:auto"}
 
 >[!IMPORTANT]
 >
->You must map plain text (unhashed) email addresses as **source** fields. Pre-hashed source identities such as `Emails (SHA256, lowercased)` are not supported. Experience Platform always hashes email addresses before exporting them to [!DNL Microsoft Ads].
+>For the `email_lc_sha256` target field, follow the [!DNL Microsoft Ads] [sanitization and hashing requirements](https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_conc_uet_enhancedconversions#format-and-hash-the-data) (lowercase, trim, then SHA-256) before mapping. Experience Platform does not re-sanitize already-hashed values, so you are responsible for correct sanitization and hashing. Mapping a non-email field, such as a city name, is still hashed but does not produce valid matches.
 
-![UI image showing the mapping step with IdentityMap Email mapped to Identity email.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
+>[!BEGINSHADEBOX "Correct mapping examples"]
+
+The following examples show supported mappings, where the source field format matches the target field.
+
+**Plain text identity namespace to `email`**
+
+Map the `IdentityMap: Email` namespace, which contains plain text email addresses, to the `email` target field.
+
+![Mapping step showing the IdentityMap Email namespace mapped to the email target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-identity-email.png)
+
+**Hashed identity namespace to `email_lc_sha256`**
+
+Map the `IdentityMap: Email_LC_SHA256` namespace, which contains already-hashed email addresses, to the `email_lc_sha256` target field.
+
+![Mapping step showing the IdentityMap Email LC SHA256 namespace mapped to the email lc sha256 target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-identity-hashed.png)
+
+**Plain text XDM attribute to `email`**
+
+Map a plain text email attribute, such as `personalEmail.address`, to the `email` target field. Experience Platform hashes the values before export.
+
+![Mapping step showing the XDM attribute personalEmail.address mapped to the email target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-attribute.png)
+
+**Hashed XDM attribute to `email_lc_sha256`**
+
+Map a pre-hashed email attribute to the `email_lc_sha256` target field. Experience Platform sends the values without further transformation.
+
+![Mapping step showing the XDM attribute personalEmail.address.lc_sha256 mapped to the email lc sha256 target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-attribute-hashed.png)
+
+>[!ENDSHADEBOX]
+
+>[!WARNING]
+>
+>Do not map a plain text (unhashed) source field to the `email_lc_sha256` target field. Experience Platform does not hash your data when you map to `email_lc_sha256`, so [!DNL Microsoft Ads] rejects the payload and the export fails. The mapping UI does not prevent this combination, so you must select the correct target field yourself. Always map plain text email addresses to the `email` target field.
+
+>[!BEGINSHADEBOX "Incorrect mapping example"]
+
+**Plain text source to `email_lc_sha256` (not supported)**
+
+The following example shows an unsupported mapping. Both source fields, `personalEmail.address` and `IdentityMap: Email`, contain plain text email addresses, but they are mapped to the `email_lc_sha256` target field. [!DNL Microsoft Ads] rejects these values because they are not hashed.
+
+![Mapping step marked Not supported, showing the XDM attribute personalEmail.address and IdentityMap Email both incorrectly mapped to the email lc sha256 target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/incorrect-mapping.png)
+
+>[!ENDSHADEBOX]
+
+### Audience naming {#audience-naming}
+
+Experience Platform appends a UTC timestamp to the audience name when it exports the audience through the [!DNL Microsoft Ads Customer Match] destination. The timestamp differentiates audiences created through this destination from audiences created through the legacy [Microsoft Bing connector](bing.md), and it prevents duplicate or colliding audience names in your [!DNL Microsoft Ads] account.
 
 ## Exported data {#exported-data}
 
 To verify if data has been exported successfully to the [!DNL Microsoft Ads Customer Match] destination, check your [!DNL Microsoft Advertising] account. If activation was successful, audiences are populated in your account as customer match lists.
+
+## Match rates {#match-rates}
+
+Match rate refers to the percentage of profiles in a [!DNL Real-Time CDP] audience that [!DNL Microsoft Ads] successfully matches to existing users in its network when the audience is created in [!DNL Microsoft Advertising].
+
+Several factors within Experience Platform and [!DNL Microsoft Ads] contribute to the match rates observed for a submitted audience. Match rates can be affected by data quality considerations such as invalid, outdated (stale), or incorrectly formatted email addresses.
+
+[!DNL Microsoft Advertising] matches users that are known and targetable within its advertising network. As a result, only users that can be identified and are eligible for advertising use can contribute to the final match rate.
+
+The following Experience Platform considerations also affect your match rates:
+
+* Experience Platform filters out profiles that do not have an email address before export. Only profiles with at least one email address are included in the export payload.
+* Experience Platform sends all email addresses associated with a profile. You cannot configure which emails are sent.
+* For the `email_lc_sha256` namespace, match rates depend on correct sanitization and hashing. Follow the [!DNL Microsoft Ads] [sanitization and hashing requirements](https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_conc_uet_enhancedconversions#format-and-hash-the-data) (lowercase, trim, then SHA-256) before mapping. Experience Platform does not re-sanitize already-hashed values.
+* Map only valid email fields as the source for either identity. Mapping a non-email field, such as a city name, is still sanitized and hashed but does not produce valid matches.
 
 ## Additional resources {#additional-resources}
 

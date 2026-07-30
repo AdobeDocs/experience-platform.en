@@ -69,6 +69,7 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Real-Time Customer Profile](#real-time-customer-profile)
 - [Sandboxes](#sandboxes)
 - [Segmentation Service](#segmentation-service)
+- [Sources](#sources)
 
 ## Destinations {#destinations}
 
@@ -131,6 +132,7 @@ Use Real-Time Customer Profile to create a holistic view of each individual know
 | Feature | Description |
 | --- | --- |
 | Faster profile exports and activation | Profile attribute data is now consolidated when data is written, instead of repeatedly at read time. As a result, profile exports complete significantly faster, making downstream activations to destinations and [!DNL Adobe Journey Optimizer] available sooner. This is a fully managed, back-end update. There is no change to how you configure or use Real-Time Customer Profile, nor is there any change to functionality or merge behavior. However, ingestion of profile attributes may take slightly longer, since more processing now happens at write time. This update is being rolled out through the end of July 2026. Review your scheduled ingestion and segmentation jobs to confirm that the timing buffer between them remains appropriate, and consider moving up downstream activation schedules that were previously limited by processing time. |
+| Pseudonymous profile data expiration update | The **CJA Audiences Profile Dataset** that is created through the Customer Journey Analytics (CJA) Audience Service publishing flow is now correctly identified as containing system-generated data. Previously, these datasets could affect pseudonymous profile lifecycle management, resulting in inflated profile counts in Real-Time CDP. Newly created datasets are now automatically flagged as holding system generated data, and existing datasets created through this publishing flow have been updated accordingly. |
 
 {style="table-layout:auto"}
 
@@ -164,3 +166,19 @@ Use Segmentation Service to create audiences from your customer data and manage 
 {style="table-layout:auto"}
 
 For more information, read the [Segmentation Service overview](../../segmentation/home.md).
+
+## Sources {#sources}
+
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+**New or updated sources**
+
+| Source | Description |
+| --- | --- |
+| [!DNL Google Ads] | Use the [!DNL Google Ads] source to configure the complete ingestion workflow using APIs or the UI. Connect your [!DNL Google Ads] account and bring paid media data directly into Experience Platform for activation and analysis. Read the [[!DNL Google Ads] overview](/help/sources/connectors/advertising/ads.md) for more information. |
+| [!DNL Meta Ads] | Use the [!DNL Meta Ads] source to configure the complete [!DNL Meta Ads] ingestion workflow in the Sources UI. Connect your [!DNL Meta Ads] account and bring paid media data directly into Experience Platform for activation and analysis. Read the [[!DNL Meta Ads] overview](/help/sources/connectors/advertising/meta-ads.md) for more information. |
+
+{style="table-layout:auto"}
+
+For more information, read the [sources overview](../../sources/home.md).
+
