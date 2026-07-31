@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes July 2026
 description: The July 2026 release notes for Adobe Experience Platform.
-last-update: 2026-07-29
+last-update: 2026-07-31
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 TQID: https://experienceleague.adobe.com/RvjQSbQ2NNwBYQJD4G6jsXWdAAg3vzbXKYvRlMwbBW0
 product_v2:
@@ -175,7 +175,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| [!DNL Google Ads] | Use the [!DNL Google Ads] source to configure the complete ingestion workflow using APIs or the UI. Connect your [!DNL Google Ads] account and bring paid media data directly into Experience Platform for activation and analysis. Read the [[!DNL Google Ads] overview](/help/sources/connectors/advertising/ads.md) for more information. |
 | [!DNL Meta Ads] | Use the [!DNL Meta Ads] source to configure the complete [!DNL Meta Ads] ingestion workflow in the Sources UI. Connect your [!DNL Meta Ads] account and bring paid media data directly into Experience Platform for activation and analysis. Read the [[!DNL Meta Ads] overview](/help/sources/connectors/advertising/meta-ads.md) for more information. |
 
 {style="table-layout:auto"}
