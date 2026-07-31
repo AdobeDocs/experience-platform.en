@@ -159,6 +159,8 @@ There are two central scenarios to consider when ensuring that your data usage r
 
 Data can be ingested into one or multiple systems in Experience Platform, namely the [!DNL data lake] and/or the Profile store. This means that different data can exist in both systems for a variety of different use cases. For example, you may want to hold historical data in the [!DNL data lake], but not in the Profile store. You can select which data to send to the Profile store by enabling a dataset for Profile ingestion.
 
+For guidance on separating long-term analytical history from activation-ready profile data, see [Choose the right long-term personalization approach](../../hygiene/choose-a-personalization-approach.md).
+
 >[!NOTE]
 >
 >Your access to the [!DNL data lake] can depend on the product SKU that you purchased. For more information on product SKUs, please speak with your Adobe representative.
