@@ -32,6 +32,10 @@ If you arrived to this page from [Real-Time CDP Collaboration](https://experienc
 
 ## Supported [!DNL Adobe CX Enterprise] applications {#supported-applications}
 
+<!--
+The activation guidance on this page applies to audience activation from [[!DNL Real-Time CDP]](../../../rtcdp/home.md). For activation from [[!DNL Real-Time CDP Collaboration]](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), see the [section further down on this page](#activate-audiences-from-real-time-cdp-collaboration). This destination is also used for dataset export workflows in other supported applications. For dataset export availability, see the [dataset export documentation](#export-datasets).
+-->
+
 This destination is available in the following [!DNL Adobe CX Enterprise] applications:
 
 * [[!DNL Real-Time CDP]](../../../rtcdp/home.md)
@@ -71,8 +75,6 @@ The following audiences are supported when you activate from [!DNL Real-Time CDP
 
 {style="table-layout:auto"}
 
-
-
 Supported audiences by audience data type:
 
 | Audience data type | Supported | Description | Use cases |
@@ -83,7 +85,6 @@ Supported audiences by audience data type:
 | [Dataset exports](/help/catalog/datasets/overview.md) | Yes | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
-
 
 ### [!DNL Real-Time CDP Collaboration] {#supported-audiences-collaboration}
 
