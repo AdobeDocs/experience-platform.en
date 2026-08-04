@@ -136,7 +136,55 @@ More information about streaming segmentation can be found in the [streaming seg
 
 Edge segmentation is the ability to evaluate audiences in Experience Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
 
-More information about edge segmentation can be found in the [edge segmentation UI guide](../methods/edge-segmentation.md)
+More information about edge segmentation can be found in the [edge segmentation UI guide](../methods/edge-segmentation.md).
+
+## Evaluation {#evaluation}
+
+The **[!UICONTROL Evaluation]** tab displays a list of schedules available for segmentation in your organization. This page displays both the system-created schedule and user-created schedules for your organization.
+
+![](/help/segmentation/images/ui/overview/evaluation.png)
+
+- **System-created schedule**: The daily schedule for batch segmentation that is created by the Experience Platform system. Every sandbox has only **one** system created schedule.
+- **User-created schedule**: A schedule for batch segmentation that you created. The user-crated lets you evaluate your specified audiences on a daily, weekly, or monthly cadence.
+
+On the **[!UICONTROL Evaluation]** screen, you can see a list of schedules that are available to use in your organization, including details such as the schedule's title, state, type, scheduled run time, next run, and assigned audiences.
+
+![The batch schedules, including both system and custom schedules, are displayed.](/help/segmentation/images/ui/overview/schedules.png)
+
+Next to each schedule is an ellipsis icon. Selecting this displays a list of available quick actions for the schedules.
+
+![The quick actions available for schedules are displayed.](/help/segmentation/images/ui/overview/schedule-quick-actions.png)
+
+| Action | Description |
+| ------ | ----------- |
+| [!UICONTROL Run schedule] | A popover appears to confirm if you want to run the schedule. If you select **[!UICONTROL Start]**, the schedule immediately starts to run. |
+| [!UICONTROL Schedule audiences] | Opens a popover that lets you add audiences to the schedule. You can **only** use this quick action for custom schedules. For more information, read the [schedule audiences section](#schedule-audiences). |
+| [!UICONTROL Edit] | The **[!UICONTROL Edit schedule]** popover appears, letting you edit the schedule. |
+| [!UICONTROL Disable] | Disables the schedule. Disabling a schedule will pause all future runs. However, the settings will be saved and can be reactivated anytime. |
+| [!UICONTROL Delete] | Deletes the schedule. Deleting a schedule permanently removes the schedule from your organization. You can **only** use this quick action for custom schedules. |
+
+You create your own user-created schedule by selecting **[!UICONTROL Create schedule]**. This opens the **[!UICONTROL Create schedule]** popover.
+
+![The Create schedule button is highlighted.](/help/segmentation/images/ui/overview/create-schedule.png)
+
+Within the **[!UICONTROL Create schedule]** popover, you can add details for your schedule.
+
+![The Create schedule popover is displayed.](/help/segmentation/images/ui/overview/create-schedule-dialog.png)
+
+| Field | Description |
+| ----- | ----------- |
+| Schedule name | The name for your schedule. |
+| Cadence | How often the schedule will run. This can be **Daily**, **Weekly**, **Monthly**, or **Advanced**. |
+| Repeat every day(s) | This field **only** shows up if your cadence is set to daily. This determines after how many days you want your schedule to repeat. |
+| Time | This field determines what time the schedule will run. |
+
+### Schedule audiences {#schedule-audiences}
+
+If you select **[!UICONTROL Schedule audiences]**, the **[!UICONTROL Schedule audiences]** popover appears. 
+
+![The Schedule audiences popover is displayed.](/help/segmentation/images/ui/overview/schedule-audiences.png)
+
+On this page, you can select which audiences you want to be activated by the schedule.
 
 ## Policy violations
 
