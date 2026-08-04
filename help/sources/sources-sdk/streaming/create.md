@@ -21,6 +21,14 @@ A connection specification represents the structure of a source. It contains inf
 
 The following document provides steps on how to create a connection specification using the [!DNL Flow Service] API and integrate a new source through Self-Serve Sources (Streaming SDK).
 
+>[!IMPORTANT]
+>
+>When creating a connection specification for **Self-Serve Sources (Streaming SDK)**, you must use `generic-streaming` as the connection specification name.
+>
+>Other `name` values are **unsupported**, even if the source appears to work during initial setup or while sending XDM-compatible streaming data. Using an unsupported value can result in unintended UI behavior, including the mapping step being skipped, and may lead to blocking issues later.
+>
+>To ensure supported behavior, always use `generic-streaming` for the connection specification name and do not rely on alternate values.
+
 ## Getting started
 
 Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.

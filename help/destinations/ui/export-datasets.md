@@ -127,7 +127,7 @@ This document contains all the information necessary to export datasets. If you 
 Note the following prerequisites to export datasets:
 
 * To export datasets to cloud storage destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
-* Profile datasets need to be enabled for use in Real-Time Customer Profile. [Read more](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) about how to enable this option. 
+* If you want to activate audiences or profile attributes instead of exporting raw dataset records, you need your dataset to be enabled for use in Real-Time Customer Profile. [Read more](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) about how to enable this option. Read [When to activate audiences or export datasets](#when-to-activate-audiences-or-activate-datasets) to understand the difference between the two workflows.
 
 ### Required permissions {#permissions}
 
@@ -219,7 +219,7 @@ The **[!UICONTROL Export incremental files]** option is selected by default. Thi
 1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
     * **[!UICONTROL Daily]**: Schedule incremental file exports once a day, every day, at the time you specify.
-    * **[!UICONTROL Hourly]**: Schedule incremental file exports every 3, 6, 8, or 12 hours.
+    * **[!UICONTROL Hourly]**: Schedule incremental file exports every 1, 3, 6, 8, or 12 hours.
 
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 

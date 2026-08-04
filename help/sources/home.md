@@ -111,7 +111,8 @@ You can use the following sources to ingest advertising data to Experience Platf
 
 | Source | Ingestion type | Cloud |
 | --- | --- | --- |
-| [Google Ads](connectors/advertising/ads.md) | Batch | Azure |
+| [[!DNL Google Ads]](connectors/advertising/ads.md) | Batch | Azure |
+| [[!DNL Meta Ads]](connectors/advertising/meta-ads.md) | Batch | Azure |
 
 {style="table-layout:auto"}
 

@@ -67,6 +67,10 @@ topic_v2:
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Adobe Experience Platform Web SDK release notes](/help/collection/js/release-notes.md).
 
+## Version 2.37.1 - July 30, 2026
+
+- Contains [version 2.35.0](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
+
 ## Version 2.37.0 - June 10, 2026
 
 - Contains [version 2.34.1](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.

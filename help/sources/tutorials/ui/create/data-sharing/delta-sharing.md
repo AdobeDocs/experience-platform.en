@@ -13,7 +13,7 @@ exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
 
 >[!AVAILABILITY]
 >
->This feature is currently in a **limited beta** and will only be available until July 15, 2026. Contact your Adobe account team to request access to the beta.
+>This feature is currently in a **limited beta** and will only be available until 01 August, 2026. Contact your Adobe account team to request access to the beta.
 
 Read this guide to learn how to use the [!DNL Databricks Delta Sharing] source connector in the Adobe Experience Platform user interface.
 

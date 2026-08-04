@@ -54,6 +54,11 @@ The monitoring graph shows the records per second received by the selected edges
 
 ## Datastream view
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_edgerequestthroughput"
+>title="Edge request throughput"
+>abstract="Temporary fill in text."
+
 >[!NOTE]
 >
 >The datastream view is **only** available if you're filtering for Edge segmentation throughput.

@@ -73,6 +73,7 @@ debug: true
         * [Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
         * [Acxiom Real ID&trade; Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
         * [Advertising destinations overview](./catalog/advertising/overview.md)
+        * [Adhese connection](./catalog/advertising/adhese.md)
         * [Adobe Advertising DSP connection](./catalog/advertising/adobe-advertising-dsp-connection.md)
         * [Legacy Adobe Advertising DSP connection](./catalog/advertising/adobe-advertising-cloud-dsp-connection-legacy.md)
         * [Adobe Advertising extension](./catalog/advertising/adobe-advertising-cloud.md)

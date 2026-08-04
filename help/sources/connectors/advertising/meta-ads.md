@@ -1,8 +1,6 @@
 ---
 title: Meta Ads Source Overview
 description: Learn how to connect Meta Ads to Adobe Experience Platform using APIs or the user interface.
-badge: Beta
-hide: true
 ---
 # [!DNL Meta Ads]
 

@@ -10,6 +10,18 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.35.0 - July 30, 2026
+
+**New features**
+
+- Web SDK now compares the ECID in a push notification payload with the ECID stored in the browser before displaying the notification. Notifications without an ECID continue to be displayed.
+
+**Fixes and improvements**
+
+- Fixed an issue where Personalization offers containing remote scripts did not preserve attributes such as `class`, `type`, and `data-*` when the scripts were added to the document head.
+- Improved push subscription reliability. The [`sendPushSubscription`](commands/sendpushsubscription.md) command now skips sending when no ECID is available and caches subscription details only after the ECID is saved successfully. If a send or storage operation fails, the command retries the operation the next time it runs.
+- Fixed an error that could occur when sending push subscription details.
+
 ## Version 2.34.1 - June 10, 2026
 
 - Fixed an issue where `event.destinations` were missing for customers using commerce personalization without Adobe Journey Optimizer.
