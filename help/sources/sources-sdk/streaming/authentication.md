@@ -176,7 +176,11 @@ Publishing note: Confirm whether the signature must be encoded as lowercase hexa
 
 Add the calculated signature to the request using the following header:
 
-x-hmac-sha256: <signature> For example:
+```json
+{ 
+     "x-hmac-sha256": "5f2c8b7e0d9c3a4e6b1f2d3c4a5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3" 
+} 
+```
 
 POST <streaming-ingestion-endpoint> Content-Type: application/json x-hmac-sha256: <calculated-signature>
 
