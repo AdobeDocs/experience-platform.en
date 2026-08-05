@@ -1,19 +1,10 @@
 ---
 title: Configure Authentication For A Streaming SDK Connector
-description:
+description: Learn how to configure authentication for a Streaming SDK source connector.
 ---
 # Configure authentication for a Streaming SDK connector
 
-Authentication is required for all connectors built with the Streaming SDK.
-
-Before you submit or release a connector, configure **one supported authentication mechanism**:
-
-- OAuth 2.0
-- HMAC-based authentication
-
-Unauthenticated Streaming SDK connectors are not supported for GA.
-
-## Choose an authentication mechanism
+Authentication is required for all connectors built with the Streaming SDK. Before you submit or release a connector, configure **one supported authentication mechanism**:
 
 | Mechanism | Use when |
 | --- | --- |
@@ -22,7 +13,7 @@ Unauthenticated Streaming SDK connectors are not supported for GA.
 
 Configure the mechanism that matches your connector's integration model. Do not leave authentication without configuring your authentication type.
 
-### Before you begin
+## Before you begin
 
 Make sure that you have:
 
