@@ -93,7 +93,6 @@ You can select from multiple types of audiences, depending on their origin:
 >When activating audiences to streaming destinations, you must also map *at least one target identity namespace*, in addition to target profile attributes. Otherwise, the audiences will not be activated to the destination platform.
 > ![Image of mapping step showing a mandatory identity namespace mapping.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
 
-
 Some audience streaming destinations require you to select source attributes or identity namespaces to map as target identities in the destination.
 
 1. In the **[!UICONTROL Mapping]** page, select **[!UICONTROL Add new mapping]**.
@@ -196,10 +195,3 @@ If you are satisfied with your selection and no policy violations have been dete
 
 Check the [destination monitoring documentation](../../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
 
-<!-- 
-For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Audience membership in the audience would be added and removed as users are qualified or disqualified for the activated audiences.
-
->[!TIP]
->
->The integration between [!DNL Adobe Experience Platform] and [!DNL Facebook] supports historical audience backfills. All historical audience qualifications are sent to [!DNL Facebook] when you activate the audiences to the destination.
--->

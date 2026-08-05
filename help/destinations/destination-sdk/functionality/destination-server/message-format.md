@@ -43,12 +43,6 @@ Experience Platform can adjust the message format of exported profiles to match 
 
 Experience Platform uses XDM schemas to describe the structure of data in a consistent and reusable way.
 
-<!--
-
-Users who want to activate data to your destination need to map the fields in their Experience Platform datasets to a schema that translates to your destination's expected format. Adobe will create a custom field group for your company to add to the target schema. The fields in the field group depend on the profile attribute fields that you can receive.
-
--->
-
 **Source XDM schema (1)**: This item refers to the schema that customers use in Experience Platform. In Experience Platform, in the [mapping step](../../../ui/activate-segment-streaming-destinations.md#mapping) of the activate destination workflow, customers map fields from their XDM schema to your destination's target schema (2).
 
 **Target XDM schema (2)**: Based on the JSON standard schema (3) of your destination's expected format and the attributes that your destination can interpret, you can define profile attributes and identities in your target XDM schema. You can do this in the destinations configuration, in the [schemaConfig](../../functionality/destination-configuration/schema-configuration.md) and [identityNamespaces](../../functionality/destination-configuration/identity-namespace-configuration.md) objects.
@@ -183,7 +177,6 @@ To transform the profile attributes exported to your destination, see the JSON a
 >
 >For a list of all available profile attributes in [!DNL Adobe Experience Platform], see the [XDM field dictionary](../../../../xdm/schema/field-dictionary.md).
 
-
 **Input**
 
 Profile 1:
@@ -241,7 +234,6 @@ Profile 2:
 ```
 
 **Result**
-
 
 ```json
 {
@@ -318,7 +310,6 @@ This example assumes that your destination configuration defines aliases, in `de
 >[!IMPORTANT]
 >
 >For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the [template](../../functionality/destination-server/templating-specs.md) in the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
-
 
 ```python
 {

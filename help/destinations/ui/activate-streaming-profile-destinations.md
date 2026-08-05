@@ -122,12 +122,6 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 This means that profiles which have not consented to being targeted *are included* in the exports to these three destinations.
 
-<!--
-
-If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**, select **[!UICONTROL View applicable consent policies]** to see which consent policies are applied and how many profiles are included in the activation as a result of them. Read about [consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
-
--->
-
 ### Data usage policy checks {#data-usage-policy-checks}
 
 In the **[!UICONTROL Review]** step, Experience Platform also checks for any data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the audience activation workflow until you have resolved the violation. For information on how to resolve policy violations, read about [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in the data governance documentation section.
