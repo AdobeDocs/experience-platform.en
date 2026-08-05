@@ -143,7 +143,6 @@ The audience export job ID is in the `id` property, as shown below.
 
 ![audience export job ID](../assets/api/ad-hoc-activation/segment-export-job-id.png)
 
-
 ## Step 5: Run the ad-hoc activation job {#activation-job}
 
 [!DNL Adobe Experience Platform] runs scheduled segmentation jobs once every 24 hours. The ad-hoc activation API runs based on the latest segmentation results.
@@ -202,14 +201,6 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 {style="table-layout:auto"}
 
 ### Request with export IDs {#request-export-ids}
-
-<!--
-
->[!IMPORTANT]
->
->**Deprecated request type**. This example type describes the request type for the API version 1. In the v2 of the ad-hoc activation API, you do not need to include the latest audience export job ID.
-
--->
 
 ```shell
 

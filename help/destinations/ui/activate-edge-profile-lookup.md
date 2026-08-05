@@ -85,15 +85,7 @@ Follow the steps in the [datastream configuration](../../datastreams/configure.m
 * **[!UICONTROL Personalization Destinations]**: Enabled
 * **[!UICONTROL Edge Segmentation]**: If you require edge segmentation, enable this option. If you are only interested in looking up profile attributes on the edge, but do not want to perform any segmentation based on the edge profiles, then leave this option disabled.
 
-
-<!-- 
->[!IMPORTANT]
->
->Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. 
--->
-
 ![Experience Platform UI image showing the datastream configuration screen.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
-
 
 ## Step 2: Configure your audiences for edge evaluation {#audience-edge-evaluation}
 
@@ -196,7 +188,6 @@ In the **[!UICONTROL Review]** step, Experience Platform also checks for any dat
 In the **[!UICONTROL Review]** step you can use the available filters on the page to display only the audiences whose schedule or mapping has been updated as part of this workflow. You can also toggle which table columns you want to see. 
 
 ![Screen recording showing the available audience filters in the review step.](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
-
 
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection.
 

@@ -127,7 +127,7 @@ This document contains all the information necessary to export datasets. If you 
 Note the following prerequisites to export datasets:
 
 * To export datasets to cloud storage destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
-* Profile datasets need to be enabled for use in Real-Time Customer Profile. [Read more](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) about how to enable this option. 
+* If you want to activate audiences or profile attributes instead of exporting raw dataset records, you need your dataset to be enabled for use in Real-Time Customer Profile. [Read more](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) about how to enable this option. Read [When to activate audiences or export datasets](#when-to-activate-audiences-or-activate-datasets) to understand the difference between the two workflows.
 
 ### Required permissions {#permissions}
 
