@@ -58,7 +58,7 @@ If you use HMAC, make sure that you have:
 
 ### 1. Create or select an Adobe credential
 
-Create or select the Adobe Developer Console credential required by your connector.
+First, you must create or select Adobe Developer Console credential required by your connector.
 
 Configure:
 
@@ -113,7 +113,7 @@ The connector must:
 Include the access token as a bearer token on requests sent by the connector:
 
 ```https
-Authorization: Bearer <access-token>
+Authorization: Bearer {ACCESS_TOKEN}
 ```
 
 Use HTTPS for all requests.
@@ -182,7 +182,7 @@ Add the calculated signature to the request using the following header:
 } 
 ```
 
-POST <streaming-ingestion-endpoint> Content-Type: application/json x-hmac-sha256: <calculated-signature>
+POST <streaming-ingestion-endpoint> Content-Type: application/json x-hmac-sha256: {CALCULATED_SIGNATURE}
 
 <serialized-message> The header value must represent the HMAC-SHA256 calculation for the exact request body sent to Adobe.
 
@@ -196,7 +196,14 @@ The Streaming Ingestion API verifies the signature before processing the event. 
 
 When rotating a secret:
 
-1. 2. 3. 4. 5. 6.
+The following is a generic sequence, subject to confirmation of the actual Streaming SDK behavior:
+
+Create a new secret in the credential-management system.
+Keep the existing secret active while the new secret is being deployed, if overlapping secrets are supported.
+Update the connector configuration with the new secret.
+Deploy or save the configuration.
+Send a test request and verify that authentication succeeds.
+Monitor for authentication failures, then revoke the old secret after all connector instances use the new one.
 
 <!-- Publishing note: Confirm whether the Streaming SDK HMAC implementation supports simultaneous current and previous secrets during rotation. -->
 
