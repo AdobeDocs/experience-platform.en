@@ -65,6 +65,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
       * [Events](./governance-privacy-security/audit-logs/api/events.md)
       * [Export](./governance-privacy-security/audit-logs/api/export.md)
   * [Data encryption](./governance-privacy-security/encryption.md)
+  * [Updating your mTLS trust chain](./governance-privacy-security/mtls-trust-chain-migration.md)
   * Customer Managed Keys {#customer-managed-keys}
     * [Customer Managed Keys](./governance-privacy-security/customer-managed-keys/overview.md)
     * Azure {#azure}
