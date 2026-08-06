@@ -72,18 +72,38 @@ Both hierarchies are issued by [!DNL DigiCert], but they are separate root progr
 
 Add both of the following certificates to your trust store. Depending on your platform, you may only need the root certificate if your system performs automatic intermediate certificate chasing — adding both is the safest option.
 
-| Certificate | Type | Common name |
-| --- | --- | --- |
-| [!DNL DigiCert Assured ID Root G2] | Root | `DigiCert Assured ID Root G2` |
-| [!DNL DigiCert Assured ID Client CA G2] | Intermediate | `DigiCert Assured ID Client CA G2` |
+| Certificate | Type | Common name | Download |
+| --- | --- | --- | --- |
+| [!DNL DigiCert Assured ID Root G2] | Root | `DigiCert Assured ID Root G2` | [DigiCertAssuredIDRootG2.crt](http://cacerts.digicert.com/DigiCertAssuredIDRootG2.crt) |
+| [!DNL DigiCert Assured ID Client CA G2] | Intermediate | `DigiCert Assured ID Client CA G2` | [DigiCertAssuredIDClientCAG2.crt](http://cacerts.digicert.com/DigiCertAssuredIDClientCAG2.crt) |
 
 {style="table-layout:auto"}
 
+[!DNL DigiCert] distributes both files in DER format. Most of the platforms covered later in this guide expect PEM format, so download and convert both files before continuing:
+
+```shell
+curl -O http://cacerts.digicert.com/DigiCertAssuredIDRootG2.crt
+curl -O http://cacerts.digicert.com/DigiCertAssuredIDClientCAG2.crt
+
+openssl x509 -inform DER -in DigiCertAssuredIDRootG2.crt -out DigiCertAssuredIDRootG2.pem
+openssl x509 -inform DER -in DigiCertAssuredIDClientCAG2.crt -out DigiCertAssuredIDClientCAG2.pem
+```
+
 >[!NOTE]
 >
->Download links and certificate fingerprints will be confirmed and added here before publication.
+>Windows accepts the original `.crt` (DER) files directly — see [Windows](#windows) below. Every other platform in this guide uses the converted `.pem` files.
 
-<!-- TODO: confirm final download link hosting approach (direct DigiCert links vs. Adobe-mirrored) before publication. -->
+Before you continue, confirm that the downloaded files are correct. Each certificate's subject should match its expected common name, and the intermediate certificate should validate against the root:
+
+```shell
+openssl x509 -in DigiCertAssuredIDRootG2.pem -noout -subject -issuer
+openssl x509 -in DigiCertAssuredIDClientCAG2.pem -noout -subject -issuer
+openssl verify -CAfile DigiCertAssuredIDRootG2.pem DigiCertAssuredIDClientCAG2.pem
+```
+
+A successful chain verification returns `DigiCertAssuredIDClientCAG2.pem: OK`.
+
+<!-- TODO: confirm whether Adobe should mirror these certificate files rather than linking directly to cacerts.digicert.com, and confirm certificate fingerprints/thumbprints for inclusion here, before publication. -->
 
 ## When to complete this update {#when-to-update}
 
@@ -99,69 +119,256 @@ Once Adobe presents a certificate issued from the new hierarchy on a connection 
 
 ## Update your trust store {#update-trust-store}
 
-The steps to add a new CA certificate to your trust store depend on the platform or software that terminates the mTLS connection at your endpoint. The following sections cover common platforms and configurations.
+The steps to add a new CA certificate to your trust store depend on the platform or software that terminates the mTLS connection at your endpoint. Each section below assumes you've already downloaded and converted the certificates as described in [Download the new CA certificates](#download-certificates). The following sections cover common platforms and configurations.
 
 ### Linux and OpenSSL {#linux-openssl}
 
-Covers adding the new certificates to the system-wide CA bundle used by OpenSSL and most TLS libraries on common Linux distributions.
+This updates the system-wide CA bundle used by OpenSSL and most TLS libraries on Debian- and Ubuntu-based distributions. Copy the PEM files into the system CA directory, then rebuild the trust bundle:
 
-<!-- TODO: add implementation steps. -->
+```shell
+sudo cp DigiCertAssuredIDRootG2.pem /usr/local/share/ca-certificates/DigiCertAssuredIDRootG2.crt
+sudo cp DigiCertAssuredIDClientCAG2.pem /usr/local/share/ca-certificates/DigiCertAssuredIDClientCAG2.crt
+sudo update-ca-certificates
+```
+
+>[!NOTE]
+>
+>On RHEL, CentOS, or Fedora, copy the PEM files to `/etc/pki/ca-trust/source/anchors/` and run `sudo update-ca-trust` instead.
 
 ### Custom CA bundle files {#custom-ca-bundle}
 
-Covers appending the new certificates to a custom CA bundle file referenced directly by your application or service (for example, via `--cacert`, `SSL_CERT_FILE`, or `CURL_CA_BUNDLE`).
+If your service references a custom CA bundle file (for example, through `--cacert`, `SSL_CERT_FILE`, or `CURL_CA_BUNDLE`), append the new certificates directly to that file:
 
-<!-- TODO: add implementation steps. -->
+```shell
+cat DigiCertAssuredIDRootG2.pem >> /path/to/your/ca-bundle.crt
+cat DigiCertAssuredIDClientCAG2.pem >> /path/to/your/ca-bundle.crt
+```
+
+Make sure each certificate block is separated by a newline, with no extra whitespace between the end of one `-----END CERTIFICATE-----` block and the start of the next `-----BEGIN CERTIFICATE-----` block.
 
 ### Java (keytool) {#java-keytool}
 
-Covers importing the new certificates into a Java trust store using `keytool`, for applications that use their own trust store rather than the operating system's.
+Java applications use their own trust store, typically a file named `cacerts`, rather than the operating system trust store, so you need to import the certificates there directly:
 
-<!-- TODO: add implementation steps. -->
+```shell
+keytool -importcert -trustcacerts \
+  -alias digicert-assured-id-root-g2 \
+  -file DigiCertAssuredIDRootG2.pem \
+  -keystore "$JAVA_CACERTS" \
+  -storepass changeit \
+  -noprompt
+
+keytool -importcert -trustcacerts \
+  -alias digicert-assured-id-client-ca-g2 \
+  -file DigiCertAssuredIDClientCAG2.pem \
+  -keystore "$JAVA_CACERTS" \
+  -storepass changeit \
+  -noprompt
+```
+
+Confirm both certificates were added:
+
+```shell
+keytool -list -keystore "$JAVA_CACERTS" -storepass changeit -alias digicert-assured-id-root-g2
+keytool -list -keystore "$JAVA_CACERTS" -storepass changeit -alias digicert-assured-id-client-ca-g2
+```
+
+>[!NOTE]
+>
+>If your application uses a custom trust store (specified with `-Djavax.net.ssl.trustStore=/path/to/truststore.jks`), import the certificates into that file instead of the JVM's default `cacerts` file.
 
 ### nginx {#nginx}
 
-Covers adding the new certificates to the CA bundle referenced by the `ssl_client_certificate` directive in an nginx server block.
+[!DNL nginx] uses the `ssl_client_certificate` directive to specify which CAs it trusts for client certificate validation. Append the new certificates to the bundle file referenced by that directive:
 
-<!-- TODO: add implementation steps. -->
+```shell
+cat DigiCertAssuredIDRootG2.pem >> /etc/nginx/ssl/trusted-client-cas.pem
+cat DigiCertAssuredIDClientCAG2.pem >> /etc/nginx/ssl/trusted-client-cas.pem
+```
+
+Test the configuration and reload [!DNL nginx] to apply the change:
+
+```shell
+nginx -t && nginx -s reload
+```
 
 ### Apache httpd {#apache-httpd}
 
-Covers adding the new certificates to the CA bundle referenced by the `SSLCACertificateFile` directive in an Apache virtual host configuration.
+[!DNL Apache httpd] uses the `SSLCACertificateFile` directive to specify trusted client CAs. Append the new certificates to the bundle file referenced by that directive:
 
-<!-- TODO: add implementation steps. -->
+```shell
+cat DigiCertAssuredIDRootG2.pem >> /etc/httpd/ssl/trusted-client-cas.pem
+cat DigiCertAssuredIDClientCAG2.pem >> /etc/httpd/ssl/trusted-client-cas.pem
+```
+
+Test the configuration and restart [!DNL Apache httpd] to apply the change:
+
+```shell
+apachectl configtest && apachectl graceful
+```
 
 ### Windows {#windows}
 
-Covers adding the new certificates to the Windows certificate store using `certutil` or the Certificates MMC snap-in.
+Use `certutil` from an elevated command prompt to add the certificates to the appropriate stores:
 
-<!-- TODO: add implementation steps. -->
+```shell
+certutil -addstore Root DigiCertAssuredIDRootG2.crt
+certutil -addstore CA DigiCertAssuredIDClientCAG2.crt
+```
+
+Alternatively, use the Certificates MMC snap-in. Run `mmc.exe`, then select **[!UICONTROL File]** > **[!UICONTROL Add/Remove Snap-in]** > **[!UICONTROL Certificates]** > **[!UICONTROL Computer account]** > **[!UICONTROL Local computer]**. Import `DigiCertAssuredIDRootG2.crt` into **[!UICONTROL Trusted Root Certification Authorities]**, then import `DigiCertAssuredIDClientCAG2.crt` into **[!UICONTROL Intermediate Certification Authorities]**.
+
+>[!NOTE]
+>
+>For the `certutil` commands, use the original `.crt` files as downloaded, not the converted `.pem` versions. Either format works when using the MMC snap-in.
 
 ### AWS {#aws}
 
-Covers updating the trust store used for mutual TLS on Amazon API Gateway custom domains and on Application/Network Load Balancer listeners, including guidance for infrastructure-as-code (CloudFormation and Terraform) configurations.
+[!DNL AWS] uses different mTLS trust store mechanisms depending on which service terminates the connection.
 
-<!-- TODO: add implementation steps. -->
+For [!DNL Amazon API Gateway] REST APIs using mutual TLS, upload a combined PEM bundle to [!DNL Amazon S3], then update your custom domain to reference it:
+
+```shell
+cat DigiCertAssuredIDRootG2.pem DigiCertAssuredIDClientCAG2.pem > truststore.pem
+aws s3 cp truststore.pem s3://your-bucket/truststore.pem
+
+aws apigateway update-domain-name \
+  --domain-name api.example.com \
+  --patch-operations op=replace,path=/mutualTlsAuthentication/truststoreUri,value=s3://your-bucket/truststore.pem
+```
+
+>[!IMPORTANT]
+>
+>[!DNL API Gateway] caches the trust store. After updating the S3 object, bump `truststoreVersion` (or change the URI) so [!DNL API Gateway] picks up the change:
+>
+>```shell
+>aws apigateway update-domain-name \
+>  --domain-name api.example.com \
+>  --patch-operations op=replace,path=/mutualTlsAuthentication/truststoreVersion,value=$(date +%s)
+>```
+
+For an [!DNL Application Load Balancer] or [!DNL Network Load Balancer] using mutual TLS, create or update a trust store resource through the ELBv2 API, then associate it with your listener:
+
+```shell
+aws elbv2 create-trust-store \
+  --name digicert-assured-id-trust-store \
+  --ca-certificates-bundle-s3-bucket your-bucket \
+  --ca-certificates-bundle-s3-key truststore.pem
+
+aws elbv2 modify-listener \
+  --listener-arn arn:aws:elasticloadbalancing:us-east-1:123456789012:listener/app/my-alb/abc123/def456 \
+  --mutual-authentication Mode=verify,TrustStoreArn=arn:aws:elasticloadbalancing:us-east-1:123456789012:truststore/your-trust-store/abc123
+```
+
+If you manage infrastructure as code, update `AWS::ApiGateway::DomainName` (`MutualTlsAuthentication.TruststoreUri`) or `AWS::ElasticLoadBalancingV2::TrustStore` in [!DNL CloudFormation], or `aws_api_gateway_domain_name` (`mutual_tls_authentication.truststore_uri`) or `aws_lb_trust_store` in [!DNL Terraform].
 
 ### Azure {#azure}
 
-Covers updating trusted client certificates on Azure Application Gateway SSL profiles and Azure API Management, including guidance for Terraform configurations.
+For [!DNL Azure Application Gateway], upload the root and intermediate as trusted client certificates, then attach them to the SSL profile that has client authentication enabled:
 
-<!-- TODO: add implementation steps. -->
+```shell
+az network application-gateway root-cert create \
+  --gateway-name myAppGateway \
+  --resource-group myResourceGroup \
+  --name DigiCertAssuredIDRootG2 \
+  --cert-file DigiCertAssuredIDRootG2.pem
+
+az network application-gateway root-cert create \
+  --gateway-name myAppGateway \
+  --resource-group myResourceGroup \
+  --name DigiCertAssuredIDClientCAG2 \
+  --cert-file DigiCertAssuredIDClientCAG2.pem
+
+az network application-gateway ssl-profile update \
+  --gateway-name myAppGateway \
+  --resource-group myResourceGroup \
+  --name myMtlsSslProfile \
+  --client-auth-configuration verify-client-cert-issuer-dn=true \
+  --trusted-client-certificates DigiCertAssuredIDRootG2 DigiCertAssuredIDClientCAG2
+```
+
+For [!DNL Azure API Management], upload both certificates and reference them as trusted issuers for client certificate validation:
+
+```shell
+az apim certificate create \
+  --resource-group myResourceGroup \
+  --service-name myApiManagement \
+  --certificate-id digicert-assured-id-root-g2 \
+  --certificate-file DigiCertAssuredIDRootG2.pem
+
+az apim certificate create \
+  --resource-group myResourceGroup \
+  --service-name myApiManagement \
+  --certificate-id digicert-assured-id-client-ca-g2 \
+  --certificate-file DigiCertAssuredIDClientCAG2.pem
+```
+
+You can also add these certificates from the **[!UICONTROL Client certificates]** page under **[!UICONTROL Security]** in the [!DNL Azure API Management] portal.
+
+If you manage infrastructure as code, update `azurerm_application_gateway` (`ssl_profile.trusted_client_certificate_names`) or `azurerm_api_management_certificate` in [!DNL Terraform].
 
 ### Google Cloud {#google-cloud}
 
-Covers updating a Certificate Manager `TrustConfig` and associated `ServerTlsPolicy` used by Google Cloud Load Balancing for mutual TLS.
+[!DNL Google Cloud Load Balancing] uses a Certificate Manager `TrustConfig` to define the CAs trusted for mTLS. Create a trust configuration file that includes the new trust anchor and intermediate:
 
-<!-- TODO: add implementation steps. -->
+```yaml
+trustStores:
+  - trustAnchors:
+      - pemCertificate: |
+          <paste contents of DigiCertAssuredIDRootG2.pem here>
+    intermediateCas:
+      - pemCertificate: |
+          <paste contents of DigiCertAssuredIDClientCAG2.pem here>
+```
+
+Create the `TrustConfig` resource, then reference it from a `ServerTlsPolicy` attached to your target HTTPS proxy:
+
+```shell
+gcloud certificate-manager trust-configs create digicert-assured-id-trust-config \
+  --source=trust-config.yaml \
+  --location=global
+
+gcloud network-security server-tls-policies create my-mtls-policy \
+  --source=server-tls-policy.yaml \
+  --location=global
+
+gcloud compute target-https-proxies update my-https-proxy \
+  --server-tls-policy=my-mtls-policy \
+  --region=global
+```
+
+>[!NOTE]
+>
+>If you already have a `TrustConfig` with other trusted CAs, update it to include the new trust anchor and intermediate rather than creating a new one, using `gcloud certificate-manager trust-configs update` with a revised YAML file.
+
+If you manage infrastructure as code, update `google_certificate_manager_trust_config` (`trust_stores.trust_anchors` and `trust_stores.intermediate_cas`) in [!DNL Terraform].
 
 ## Verify your trust store update {#verify}
 
-After updating your trust store, confirm that it correctly validates a certificate issued from the new hierarchy.
+After updating your trust store, confirm that it trusts a certificate issued from the new hierarchy. Build a combined bundle from both new certificates, then verify a clientAuth-only certificate against it:
 
-<!-- TODO: add verification commands. -->
+```shell
+cat DigiCertAssuredIDRootG2.pem DigiCertAssuredIDClientCAG2.pem > digicert-assured-id-chain.pem
+openssl verify -CAfile digicert-assured-id-chain.pem -purpose sslclient client-cert.pem
+```
 
-At minimum, verification should confirm that the intermediate certificate validates against the new root, and that a sample client-authentication certificate validates successfully against the combined chain.
+Replace `client-cert.pem` with a clientAuth-only certificate to test against, if you have one available. A successful result confirms the certificate validates against the new chain.
+
+If you don't yet have a clientAuth-only certificate to test against, you can still confirm the chain itself is valid:
+
+```shell
+openssl verify -CAfile DigiCertAssuredIDRootG2.pem DigiCertAssuredIDClientCAG2.pem
+```
+
+A successful result returns `DigiCertAssuredIDClientCAG2.pem: OK`, confirming the intermediate certificate is properly signed by the new root.
+
+To confirm that a certificate is issued for client authentication only, inspect its extended key usage:
+
+```shell
+openssl x509 -in client-cert.pem -noout -ext extendedKeyUsage
+```
+
+A certificate issued from the new hierarchy shows only `TLS Web Client Authentication`.
 
 ## Troubleshooting {#troubleshooting}
 
@@ -172,6 +379,7 @@ Use the following symptoms to identify whether a connection failure is related t
 | TLS handshake failures on a previously working mTLS connection, with no other configuration changes made | Your trust store doesn't yet include the new root and intermediate CA certificates. |
 | Certificate validation errors referencing an unknown or untrusted issuer | Your trust store is missing the intermediate certificate, the root certificate, or both. |
 | Failures affecting only some mTLS-authenticated connections and not others | Individual connections transition to the new hierarchy at different times; endpoints without the updated trust store will fail only for connections already using the new hierarchy. |
+| Certificate import fails, or the imported certificate looks corrupted | You're using the wrong file format for your platform. Most platforms in this guide require the converted `.pem` files; Windows requires the original `.crt` (DER) files. See [Download the new CA certificates](#download-certificates). |
 
 {style="table-layout:auto"}
 
