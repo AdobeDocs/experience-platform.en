@@ -152,7 +152,7 @@ You can create a new scheduled query by making a POST request to the `/schedules
 
 >[!IMPORTANT]
 >
->Beginning with the August 2026 release, you cannot create a new query schedule that runs more than once per hour through the Query Service API. Existing sub-hourly schedules continue to run as configured and are not changed by this release.
+>Starting August 18, 2026, you cannot create a new query schedule that runs more than once per hour through the Query Service API. Existing sub-hourly schedules continue to run as configured and are not changed by this release.
 
 Use the lowest schedule frequency that supports your workflow. Sub-hourly schedules may not add value when underlying data does not refresh as often, and can increase unnecessary query executions and resource usage. For the equivalent UI workflow, see the [Query schedules guide](../ui/query-schedules.md#scheduled-query-frequency).
 
