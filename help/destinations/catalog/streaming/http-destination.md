@@ -111,6 +111,10 @@ mTLS support for HTTP API destinations applies **only to the data receiving endp
 
 To use mTLS with HTTP API destinations, the **[!UICONTROL HTTP Endpoint]** (data receiving endpoint) you configure in the [destination details](#destination-details) page must have TLS protocols disabled and only mTLS enabled. If the TLS 1.2 protocol is still enabled on the endpoint, no certificate is sent for the client authentication. This means that to use mTLS with your HTTP API destination, your data receiving server endpoint must be an mTLS-only enabled connection endpoint.
 
+>[!IMPORTANT]
+>
+>Adobe is updating the certificate authority (CA) hierarchy used to issue the mTLS client certificate presented to your endpoint. Add Adobe's new root and intermediate CA certificates to your receiving endpoint's trust store. If the new hierarchy is not trusted when Adobe transitions the connection, the mTLS handshake fails and Experience Platform cannot deliver data to the destination. See  [Updating your mTLS trust chain](../../../landing/governance-privacy-security/mtls-trust-chain-migration.md) for migration instructions.
+
 ### Retrieve and inspect certificate details {#certificate}
 
 If you want to inspect certificate details such as the Common Name (CN) and Subject Alternative Names (SAN) for additional third-party validation, use the API to retrieve the certificate and extract those fields from the response.
@@ -425,3 +429,5 @@ When requests to your HTTP API destination fail, Experience Platform stores them
 ## Troubleshooting {#troubleshooting}
 
 To ensure reliable data delivery and avoid timeout issues, make sure that your HTTP endpoint responds within 2 seconds to Experience Platform requests, as specified in the [prerequisites](#prerequisites) section. Responses that take longer will result in timeout errors.
+
+If you use mTLS and previously working deliveries begin failing without configuration changes on your side, confirm that your endpoint trusts Adobe's new mTLS certificate authority hierarchy. See [Troubleshooting the mTLS trust chain migration](../../../landing/governance-privacy-security/mtls-trust-chain-migration.md#troubleshooting) for symptoms and resolution steps.
