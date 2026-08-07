@@ -133,6 +133,10 @@ Adobe automates the lifecycle of public mTLS certificates to ensure continuity a
 
 You must update your integrations to support automated retrieval via the API. Do not rely on manual certificate downloads or static copies, as these may result in expired or revoked certificates.
 
+>[!IMPORTANT]
+>
+>This automation covers only the public certificate returned by this API. It does not update the certificate authority (CA) hierarchy your systems use to trust that certificate. Adobe is updating this CA hierarchy separately. If your endpoint validates Adobe's mTLS client certificate, add the new root and intermediate CA certificates to your trust store as a one-time update. See [Updating your mTLS trust chain](../../landing/governance-privacy-security/mtls-trust-chain-migration.md) for details.
+
 ## Next steps
 
 After retrieving your public certificates using the API, update your integrations to regularly call this endpoint before certificates expire. To test this call interactively, visit the [MTLS API reference page](https://developer.adobe.com/experience-platform-apis/references/mtls-service/). For broader guidance on certificate-based integrations, see the [Data encryption in Adobe Experience Platform overview](../../landing/governance-privacy-security/encryption.md) or the [Data Governance overview](../home.md).
