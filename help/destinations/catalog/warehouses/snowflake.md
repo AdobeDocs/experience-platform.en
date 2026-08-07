@@ -43,19 +43,6 @@ topic_v2:
 ---
 # Snowflake Streaming connection {#snowflake-destination}
 
-<!--
-Use the [!DNL Snowflake] Streaming destination to share audience data from [!DNL Adobe CX Enterprise] applications with your [!DNL Snowflake] account.
-
-If you arrived to this page from [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), see [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
-
-## Supported [!DNL Adobe CX Enterprise] applications {#supported-applications}
-
-This destination is available in the following [!DNL Adobe CX Enterprise] applications:
-
-* [[!DNL Real-Time CDP]](../../../rtcdp/home.md)
-* [[!DNL Real-Time CDP Collaboration]](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)
--->
-
 >[!AVAILABILITY]
 >
 >This destination connector is in limited availability and only available to [!DNL Real-Time CDP] Ultimate customers provisioned in the [VA7 region](/help/landing/multi-cloud.md#azure-regions).
@@ -126,12 +113,6 @@ Read the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/collabor
 
 ## Supported audiences {#supported-audiences}
 
-<!--
-This section describes which types of audiences you can export to this destination. The supported audiences differ depending on the [!DNL Adobe CX Enterprise] application from which you activate them to this destination.
-
-### [!DNL Real-Time CDP] {#supported-audiences-rtcdp}
--->
-
 The two tables below indicate which audiences this connector supports when you activate from [!DNL Real-Time CDP], by _audience origin_ and _profile types included in the audience_:
 
 | Audience origin | Supported | Description |
@@ -151,12 +132,6 @@ Supported audiences by audience data type:
 | [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
-
-<!--
-### [!DNL Real-Time CDP Collaboration] {#supported-audiences-collaboration}
-
-In [!DNL Real-Time CDP Collaboration], you can [source audiences](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/setup/source-audiences/onboard-audiences) from [!DNL Adobe Experience Platform] or other cloud sources. Audiences in [!DNL Real-Time CDP Collaboration] are made up of [match keys](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections#match-keys). You can use these audiences within a Collaboration for data collaboration or paid media activities.
--->
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -228,12 +203,6 @@ When you are finished providing details for your destination connection, select 
 
 ## Activate audiences to this destination {#activate}
 
-<!--
-You can activate audiences to this destination from [!DNL Real-Time CDP] or from a [!DNL Real-Time CDP Collaboration] project.
-
-### Activate audiences from [!DNL Real-Time CDP] {#activate-rtcdp}
--->
-
 >[!IMPORTANT]
 >
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
@@ -248,12 +217,6 @@ The Snowflake destination supports the mapping of profile attributes to custom a
 ![Experience Platform user interface image showing the mapping screen for the Snowflake destination.](../../assets/catalog/warehouses/snowflake/mapping.png)
 
 The target attributes are automatically created in Snowflake using the attribute name that you provide in the **[!UICONTROL Attribute name]** field.
-
-<!--
-### Activate audiences from [!DNL Real-Time CDP Collaboration] {#activate-collaboration}
-
-For instructions on activating audiences to this destination from a [!DNL Real-Time CDP Collaboration] project, see the [Real-Time CDP Collaboration destinations overview](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/overview).
--->
 
 ## Exported data / Validate data export {#exported-data}
 

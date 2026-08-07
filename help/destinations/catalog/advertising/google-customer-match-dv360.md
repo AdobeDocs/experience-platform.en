@@ -112,8 +112,6 @@ This section describes which types of audiences you can export to this destinati
 
 {style="table-layout:auto"}
 
-
-
 Supported audiences by audience data type:
 
 | Audience data type | Supported | Description | Use cases |
@@ -124,7 +122,6 @@ Supported audiences by audience data type:
 | [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
-
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -207,27 +204,6 @@ To learn about ingesting email addresses in Experience Platform, see the [batch 
 
 If you select to hash the email addresses yourself, make sure to comply with Google's requirements, outlined in the links above.
 
-<!-- 
-### Using custom namespaces {#custom-namespaces}
-
-Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information. 
--->
-
-<!-- 
-Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
-
-Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
-![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) 
--->
-
-<!-- 
-## Configure destination - video walkthrough {#video}
-
-The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
-
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) 
--->
-
 ## Connect to the destination {#connect}
 
 >[!CONTEXTUALHELP]
@@ -266,14 +242,6 @@ When you are finished providing details for your destination connection, select 
 >* To export *identities* to destinations, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](../../assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
-
-<!-- 
-In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] audiences to [!DNL Google Customer Match].
-
-![Google Customer Match App ID field highlighted in the Segment schedule step of the activation workflow.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
-
-For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative. 
--->
 
 ### Mapping example: activating audience data in [!DNL Google Customer Match + Display & Video 360] {#example-gcm}
 

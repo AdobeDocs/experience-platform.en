@@ -26,16 +26,6 @@ This functionality is supported by the beta cloud storage cards listed below:
 * [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) 
 * [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-<!--
-
-Commenting out the three net new cloud storage destinations
-
-* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
-* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
-* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
-
--->
-
 Note that currently in the Experience Platform UI, you can see two side-by-side destination cards of the three destinations. Shown below are the [!DNL Amazon S3] legacy and new destinations. In all cases, the cards marked with **Beta** are the new destination cards.
 
 ![Image of the two Amazon S3 destination cards in a side-by-side view.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)

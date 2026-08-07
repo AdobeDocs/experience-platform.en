@@ -151,63 +151,6 @@ added: {% for s in addedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %
 added: <111111><333333>; removed: <222222>
 ```
 
-<!--
-
-### Added and removed audiences filters {#added-and-removed-segmnts-filters}
-
-#### Use case {#use-case}
-
-These filters are similar to `addedSegments` and `removedSegments`, described above. The only difference is that they are implemented as filters as opposed to functions.
-
-#### Example {#example}
-
-##### Input {#input}
-
-```json
-{
-  "identityMap": {
-    "myIdNamespace": [
-      {
-        "id": "external_id1"
-      },
-      {
-        "id": "external_id2"
-      }
-    ]
-  },
-  "segmentMembership": {
-    "ups": {
-      "111111": {
-        "lastQualificationTime": "2019-11-20T13:15:49Z",
-        "status": "realized"
-      },
-      "222222": {
-        "lastQualificationTime": "2019-11-20T13:15:49Z",
-        "status": "exited"
-      },
-      "333333": {
-        "lastQualificationTime": "2019-11-20T13:15:49Z",
-        "status": "realized"
-      }
-    }
-  }
-}
-```
-
-##### Format {#format}
-
-```java
-added: {% for s in input.profile.segmentMembership.ups | added %}<{{s.key}}>{% endfor %};|removed: {% for s in input.profile.segmentMembership.ups | removed %}<{{s.key}}>{% endfor %};
-```
-
-##### Output {#output}
-
-```json
-added: <111111><333333>;|removed: <222222>;
-```
-
--->
-
 ## Next steps {#next-steps}
 
 You now know which [!DNL Pebble] functions are supported in Destination SDK, as well as how to use them to adjust the format of the exported data to fit your needs. Next, you should review the following pages:
