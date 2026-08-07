@@ -32,10 +32,6 @@ If you arrived to this page from [Real-Time CDP Collaboration](https://experienc
 
 ## Supported [!DNL Adobe CX Enterprise] applications {#supported-applications}
 
-<!--
-The activation guidance on this page applies to audience activation from [[!DNL Real-Time CDP]](../../../rtcdp/home.md). For activation from [[!DNL Real-Time CDP Collaboration]](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), see the [section further down on this page](#activate-audiences-from-real-time-cdp-collaboration). This destination is also used for dataset export workflows in other supported applications. For dataset export availability, see the [dataset export documentation](#export-datasets).
--->
-
 This destination is available in the following [!DNL Adobe CX Enterprise] applications:
 
 * [[!DNL Real-Time CDP]](../../../rtcdp/home.md)
@@ -96,7 +92,7 @@ See the table below for information about the destination export type and freque
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the mapping step of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#mapping).|
 | Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
@@ -244,8 +240,6 @@ If you prefer not to allow the entire Adobe account, you can restrict access to 
 
 For more information, see the [AWS documentation on creating roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
-
-
 ### Fill in destination details {#destination-details}
 
 >[!CONTEXTUALHELP]
@@ -328,16 +322,6 @@ When configuring the IAM role as a customer, make sure that the permission polic
 }  
 
 ```
-
-<!--
-
-Commenting out this note, as write permissions are assigned through the s3:PutObject permission.
-
->[!IMPORTANT]
->
->Experience Platform needs `write` permissions on the bucket object where the export files will be delivered.
-
--->
 
 ## Activate audiences to this destination {#activate}
 

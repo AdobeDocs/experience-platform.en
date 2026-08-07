@@ -146,5 +146,6 @@ Identity Service plays a vital role within Experience Platform. Some of these ke
 * [Destinations](../destinations/home.md): Destinations can send profile information to other systems based on an identity namespace, such as hashed email.
 * [Segment Match](../segmentation/ui/segment-match/overview.md): Segment Match matches two profiles across two different sandboxes that have the same identity namespace and identity value.
 * [Privacy Service](../privacy-service/home.md): If the deletion request includes `identity`, then the specified namespace and identity value combination can be deleted from Identity Service using the privacy request processing feature in Privacy Service.
+* [Graph-based stitching](https://experienceleague.adobe.com/en/docs/analytics-platform/using/stitching/gbs): Customer Journey Analytics graph-based stitching uses the identity graph of the Identity Service to obtain the person ID from the specified namespace.
 
 

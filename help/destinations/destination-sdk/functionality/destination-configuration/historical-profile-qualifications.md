@@ -39,17 +39,6 @@ Refer to the table below for details on which types of integrations support the 
 | Real-time (streaming) integrations | Yes  |
 | File-based (batch) integrations | Yes |
 
-
-
-<!-- 
-|Parameter | Type | Description|
-|---------|----------|------|
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Experience Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Experience Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
-
-{style="table-layout:auto"} 
--->
-
-
 ## Next steps {#next-steps}
 
 After reading this article, you should know that Experience Platform automatically exports a historical population of all profiles that have ever qualified for an activated audience when the audience is first exported to the destination. This option is not configurable in Destination SDK or in the Experience Platform UI.

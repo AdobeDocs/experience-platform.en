@@ -989,7 +989,7 @@ A successful response returns the ID (`id`) of the newly created dataflow and an
 
 Having created all the connections and the dataflow, you now can activate your profile data to the destination platform. In this step, you select which audiences and which profile attributes to export to the destination.
 
-You can also determine the file naming format of the exported files and which attributes should be used as [deduplication keys](../ui/activate-batch-profile-destinations.md#mandatory-attributes) or [mandatory attributes](../ui/activate-batch-profile-destinations.md#mandatory-attributes). In this step, you can also determine the schedule to send data to the destination.
+You can also determine the file naming format of the exported files and which attributes should be used as [deduplication keys](../ui/batch-destinations-mapping-reference.md#deduplication-keys) or [mandatory attributes](../ui/batch-destinations-mapping-reference.md#mandatory-attributes). In this step, you can also determine the schedule to send data to the destination.
 
 To activate audiences to your new destination, you must perform a JSON PATCH operation, similar to the example below. You can activate mutiple audiences and profile attributes in one call. To learn more about JSON PATCH, see the [RFC specification](https://tools.ietf.org/html/rfc6902). 
 

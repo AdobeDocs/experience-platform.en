@@ -38,7 +38,10 @@ debug: true
         * [(Beta) When to activate](./ui/when-to-activate.md)
         * [Activate audiences to streaming audience export destinations](./ui/activate-segment-streaming-destinations.md)
         * [Activate audiences to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
-        * [Activate audiences to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
+        * Batch profile export destinations{#activate-batch-profile}
+            * [Activate audiences to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
+            * [Batch destinations mapping reference](./ui/batch-destinations-mapping-reference.md)
+            * [Select profile attributes (legacy)](./ui/select-profile-attributes-legacy.md)
         * [Activate audiences to edge personalization destinations](./ui/activate-edge-personalization-destinations.md)
         * [Look up profile attributes on the edge in real-time](./ui/activate-edge-profile-lookup.md)
         * [Activate audiences to curated destinations based on LiveRamp identifiers](./ui/activate-curated-destinations.md)

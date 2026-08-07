@@ -66,8 +66,6 @@ This section describes which types of audiences you can export to this destinati
 
 {style="table-layout:auto"}
 
-
-
 Supported audiences by audience data type:
 
 | Audience data type | Supported | Description | Use cases |
@@ -79,14 +77,13 @@ Supported audiences by audience data type:
 
 {style="table-layout:auto"}
 
-
 ## Export type and frequency {#export-type-frequency}
 
 See the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-streaming-profile-destinations.md#select-attributes).|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
@@ -181,14 +178,6 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Include audience timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
 * **[!UICONTROL Include audience names]**: Toggle if you want the data export to include the names of the audiences you are exporting. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
 * **[!UICONTROL Include mapped audiences only]**: Toggle this option to have the `segmentMembership` object in the export include only the audiences mapped in this dataflow. Keep the toggle off to include audiences that share the same [merge policy](/help/profile/merge-policies/overview.md) as the mapped audiences, even if they are not mapped in this dataflow. This option is turned on by default for new destination connections. Dataflows created before this option was introduced do not display this option and continue to export all audiences that share the same merge policy. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
-
-<!--
-
->[!IMPORTANT]
->
->Experience Platform needs `write` permissions on the bucket object where the export files will be delivered.
-
--->
 
 ### Enable alerts {#enable-alerts}
 

@@ -281,4 +281,9 @@ The image requirements are:
 
 ## Download sample email {#download-sample-email}
 
-[Download](../assets/guides/sample-email-submit-destination.rtf) a sample email with all the information that you need to provide to Adobe.
+[Download](../assets/guides/sample-email-submit-destination.zip) a sample email with all the information that you need to provide to Adobe.
+
+Use the following subject line format for your submission email, depending on whether you are submitting a new destination or an update to an existing destination:
+
+* New destination: `Request to publish new <destination-name> destination`
+* Updated destination: `Request to publish updated <destination-name> destination`

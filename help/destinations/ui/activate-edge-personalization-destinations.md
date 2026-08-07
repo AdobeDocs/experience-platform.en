@@ -259,12 +259,3 @@ In this step you can use the available filters on the page to display only the a
 
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
-<!--
-
-Commenting out this part since destination monitoring is not available currently for the Adobe Target and Custom Personalization destinations.
-
-## Verify audience activation {#verify}
-
-Check the [destination monitoring documentation](../../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
-
--->

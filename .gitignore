@@ -6,3 +6,4 @@ setup-agent.md
 mcp-server.log
 .claude/
 usage-agents.log
+.playwright-mcp/

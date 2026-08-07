@@ -204,7 +204,7 @@ You can access the schedule editor from the [!UICONTROL Scheduled Queries] works
 
 >[!IMPORTANT]
 >
->The **[!UICONTROL Edit schedule]** option is only displayed for eligible schedules. Schedules that have ended, been deleted, or are still registering cannot be edited.
+>The **[!UICONTROL Edit schedule]** option is only available for active or upcoming schedules. Schedules that have ended are read-only and cannot be changed. Schedules that have been deleted or are still registering also cannot be edited.
 
 ### Access the edit workflow {#access-edit-workflow}
 
