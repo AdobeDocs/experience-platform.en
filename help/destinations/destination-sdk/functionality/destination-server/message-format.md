@@ -43,12 +43,6 @@ Experience Platform can adjust the message format of exported profiles to match 
 
 Experience Platform uses XDM schemas to describe the structure of data in a consistent and reusable way.
 
-<!--
-
-Users who want to activate data to your destination need to map the fields in their Experience Platform datasets to a schema that translates to your destination's expected format. Adobe will create a custom field group for your company to add to the target schema. The fields in the field group depend on the profile attribute fields that you can receive.
-
--->
-
 **Source XDM schema (1)**: This item refers to the schema that customers use in Experience Platform. In Experience Platform, in the [mapping step](../../../ui/activate-segment-streaming-destinations.md#mapping) of the activate destination workflow, customers map fields from their XDM schema to your destination's target schema (2).
 
 **Target XDM schema (2)**: Based on the JSON standard schema (3) of your destination's expected format and the attributes that your destination can interpret, you can define profile attributes and identities in your target XDM schema. You can do this in the destinations configuration, in the [schemaConfig](../../functionality/destination-configuration/schema-configuration.md) and [identityNamespaces](../../functionality/destination-configuration/identity-namespace-configuration.md) objects.
@@ -183,7 +177,6 @@ To transform the profile attributes exported to your destination, see the JSON a
 >
 >For a list of all available profile attributes in [!DNL Adobe Experience Platform], see the [XDM field dictionary](../../../../xdm/schema/field-dictionary.md).
 
-
 **Input**
 
 Profile 1:
@@ -242,7 +235,6 @@ Profile 2:
 
 **Result**
 
-
 ```json
 {
     "profiles": [
@@ -263,6 +255,12 @@ Profile 2:
 The [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM attribute informs which audiences a profile is a member of.
 For the three different values in the `status` field, read the documentation on [Audience Membership Details schema field group](../../../../xdm/field-groups/profile/segmentation.md).
 
+A profile can carry audience membership under more than one identity namespace. For example, a profile can have audiences from the `ups` (Unified Profile Store) namespace, and also from a custom namespace such as `CustomerAudienceUpload`. Instead of reading a single hardcoded namespace, loop over every namespace present in `segmentMembership` so that your template picks up audiences regardless of which namespace they come from.
+
+>[!IMPORTANT]
+>
+>Configure your destination to accept audiences from namespaces other than `ups`. In the [schema configuration](../../functionality/destination-configuration/schema-configuration.md#attributes-schema), set `"segmentNamespaceDenyList": []` in `schemaConfig`. Otherwise, only audiences from the [Segmentation Service](../../../../segmentation/home.md) are exported to your destination.
+
 **Input**
 
 Profile 1:
@@ -275,13 +273,15 @@ Profile 1:
         "lastQualificationTime": "2019-11-20T13:15:49Z",
         "status": "realized"
       },
-      "788d8874-8007-4253-92b7-ee6b6c20c6f3": {
-        "lastQualificationTime": "2019-11-20T13:15:49Z",
-        "status": "realized"
-      },
       "8f812592-3f06-416b-bd50-e7831848a31a": {
         "lastQualificationTime": "2019-11-20T13:15:49Z",
         "status": "exited"
+      }
+    },
+    "CustomerAudienceUpload": {
+      "788d8874-8007-4253-92b7-ee6b6c20c6f3": {
+        "lastQualificationTime": "2021-08-20T17:23:04Z",
+        "status": "realized"
       }
     }
   }
@@ -297,19 +297,13 @@ Profile 2:
       "32396e4b-16f6-4033-9702-fc69b5e24e7c": {
         "lastQualificationTime": "2021-08-20T17:23:04Z",
         "status": "realized"
-      },
-      "af854278-894a-4192-a96b-320fbf2623fd": {
-        "lastQualificationTime": "2021-08-20T16:44:37Z",
-        "status": "realized"
-      },
-      "66505bf9-bc08-4bac-afbc-8b6706650ea4": {
-        "lastQualificationTime": "2019-08-20T17:23:04Z",
-        "status": "realized"
       }
     }
   }
 }
 ```
+
+This example assumes that your destination configuration defines aliases, in `destination.namespaceSegmentAliases`, for the audience IDs `36a51c13-9dd6-4d2c-8aa3-07d785ea5075`, `8f812592-3f06-416b-bd50-e7831848a31a`, and `32396e4b-16f6-4033-9702-fc69b5e24e7c`, but not for `788d8874-8007-4253-92b7-ee6b6c20c6f3`. The template below skips audiences without a configured alias.
 
 **Template**
 
@@ -317,30 +311,42 @@ Profile 2:
 >
 >For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the [template](../../functionality/destination-server/templating-specs.md) in the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-
 ```python
 {
     "profiles": [
         {% for profile in input.profiles %}
         {
-            "AdobeExperiencePlatformSegments": {
-                "add": [
-                {% for segment in profile.segmentMembership.ups | added %}
-                "{{ segment.key }}"{% if not loop.last %},{% endif %}
+            "segments": [
+                {% set first = true %}
+                {% for namespace in profile.segmentMembership %}
+                {% for segment in profile.segmentMembership[namespace.key] %}
+                {% if destination.namespaceSegmentAliases[namespace.key][segment.key] is defined %}
+                {% if not first %},{% endif %}
+                {
+                    "id": "{{ segment.key }}",
+                    "status": "{{ segment.value.status }}",
+                    "qualificationTime": "{{ segment.value.lastQualificationTime }}"
+                }
+                {% set first = false %}
+                {% endif %}
                 {% endfor %}
-                ],
-                "remove": [
-                {# Alternative syntax for filtering audiences by status: #}
-                {% for segment in removedSegments(profile.segmentMembership.ups) %}
-                "{{ segment.key }}"{% if not loop.last %},{% endif %}
                 {% endfor %}
-                ]
-            }
+            ]
         }{% if not loop.last %},{% endif %}
         {% endfor %}
     ]
 }
 ```
+
+The outer `for` loop iterates over `profile.segmentMembership` directly. Because `segmentMembership` is a map keyed by identity namespace, each entry exposes the namespace name through `namespace.key`. The inner `for` loop then reads the audiences for that namespace using bracket notation, `profile.segmentMembership[namespace.key]`.
+
+Each audience is only added to the output if the destination has a configured alias for it, checked through `destination.namespaceSegmentAliases[namespace.key][segment.key] is defined`. The output carries the audience's live `status` and `qualificationTime` instead of splitting audiences into separate add and remove arrays.
+
+The `first` variable tracks whether a comma is needed before each item. Because some audiences are skipped by the `is defined` check, printing the comma before every item except the first avoids trailing commas without needing to precompute how many audiences will pass the filter.
+
+>[!TIP]
+>
+>If you don't need to filter by destination alias and only need the add and remove split from the previous example, use the `addedSegments()` and `removedSegments()` [supported functions](supported-functions.md#addedsegments-removedsegments-functions) with the full `segmentMembership` map, for example `addedSegments(profile.segmentMembership)`. These functions already return audiences across all namespaces, so you don't need to hardcode a namespace.
 
 **Result**
 
@@ -348,26 +354,27 @@ Profile 2:
 {
     "profiles": [
         {
-            "AdobeExperiencePlatformSegments": {
-                "add": [
-                    "36a51c13-9dd6-4d2c-8aa3-07d785ea5075",
-                    "788d8874-8007-4253-92b7-ee6b6c20c6f3"
-                ],
-                "remove": [
-                    "8f812592-3f06-416b-bd50-e7831848a31a"
-                ]
-            }
+            "segments": [
+                {
+                    "id": "36a51c13-9dd6-4d2c-8aa3-07d785ea5075",
+                    "status": "realized",
+                    "qualificationTime": "2019-11-20T13:15:49Z"
+                },
+                {
+                    "id": "8f812592-3f06-416b-bd50-e7831848a31a",
+                    "status": "exited",
+                    "qualificationTime": "2019-11-20T13:15:49Z"
+                }
+            ]
         },
         {
-            "AdobeExperiencePlatformSegments": {
-                "add": [
-                    "32396e4b-16f6-4033-9702-fc69b5e24e7c",
-                    "af854278-894a-4192-a96b-320fbf2623fd",
-                    "66505bf9-bc08-4bac-afbc-8b6706650ea4"
-                ],
-                "remove": [
-                ]
-            }
+            "segments": [
+                {
+                    "id": "32396e4b-16f6-4033-9702-fc69b5e24e7c",
+                    "status": "realized",
+                    "qualificationTime": "2021-08-20T17:23:04Z"
+                }
+            ]
         }
     ]
 }

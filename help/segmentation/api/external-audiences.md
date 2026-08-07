@@ -892,6 +892,5 @@ Once you've added the audience to a destination, you can trigger an audience ing
 >[!IMPORTANT]
 >
 >Currently, data is activated twice - the first time due to the express activation job, which occurs soon after batch ingestion and the second time after the audience evaluation job.
-
-
-
+>
+>Additionally, express activation will **only** activate enrichment attributes, and will **not** activate profile attributes.
