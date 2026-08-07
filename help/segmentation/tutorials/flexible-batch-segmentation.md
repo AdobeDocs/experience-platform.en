@@ -303,3 +303,31 @@ When you remove audiences from a schedule, you need to provide the schedule ID a
 +++
 
 >[!ENDTABS]
+
+## Manually run a schedule
+
+Instead of waiting for the schedule to run, you can manually trigger an existing schedule to run using either the Experience Platform UI or API.
+
+>[!BEGINTABS]
+
+>[!TAB UI]
+
+To manually run a schedule in the Experience Platform UI, select the ICON next to the schedule you want to evaluate in the **Evaluation** page, followed by **Run schedule**.
+
+IMAGE
+
+A confirmation popup appears. Select **Start** to immediately begin the schedule run.
+
+IMAGE
+
+>[!TAB API]
+
+To manually run a schedule in the Experience Platform API, you'll need to make a POST request to the `/schedules/trigger` endpoint.
+
+**API format**
+
+```http
+POST /schedules/trigger
+```
+
+>[!ENDTABS]
