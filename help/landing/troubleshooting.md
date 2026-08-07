@@ -226,6 +226,13 @@ This error message displays in either of the two cases below:
 - When an incorrect or malformed organization ID header (`x-gw-ims-org-id`) is passed in an API request. Ensure that the correct ID of your organization is included before trying again.
 - When your account (as represented by the provided authentication credentials) is not associated with a product profile for Experience Platform. Follow the steps on [generating access credentials](./api-authentication.md#authentication-for-each-session) in the Experience Platform API authentication tutorial to add Experience Platform to your account and update your authentication credentials accordingly.
 
+## mTLS connection errors {#mtls-connection-errors}
+
+If a mutual TLS (mTLS) connection to your endpoint previously worked and now fails without configuration changes on your side, your trust store may not include Adobe's new certificate authority (CA) hierarchy. This can affect HTTP API destinations, Adobe Journey Optimizer custom actions, and Event Forwarding integrations. Adobe is migrating the client certificates used for outbound mTLS connections to the new hierarchy. Endpoints that do not trust the new root and intermediate CA certificates will reject connections that use certificates issued from it.
+
+This trust store update is separate from the automated certificate retrieval available through the [mTLS Service API](../data-governance/mtls-api/overview.md). The API manages Adobe's client certificate, not the CA hierarchy your systems use to trust it. See [Troubleshooting the mTLS trust chain migration](./governance-privacy-security/mtls-trust-chain-migration.md#troubleshooting) for symptoms and resolution steps.
+
+
 ## Service troubleshooting directory {#service-troubleshooting-directory}
 
 The following is a list of troubleshooting guides and API reference documentation for [!DNL Experience Platform] APIs. Each troubleshooting guide provides answers to frequently asked questions and solutions to problems that are specific to individual [!DNL Experience Platform] services. The API reference documents provide a comprehensive guide to all available endpoints for each service, and show sample request bodies, responses, and error codes that you may receive.
@@ -237,6 +244,7 @@ The following is a list of troubleshooting guides and API reference documentatio
 | Adobe Experience Platform Data Ingestion | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion) | [Streaming ingestion troubleshooting guide](../ingestion/streaming-ingestion/troubleshooting.md)|
 | Adobe Experience Platform Data Science Workspace | [[!DNL Adobe AI Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) | [[!DNL Data Science Workspace] troubleshooting guide](../data-science-workspace/troubleshooting-guide.md) |
 | Adobe Experience Platform Data Governance | [[!DNL Policy Service API]](https://developer.adobe.com/experience-platform-apis/references/policy-service)||
+| Adobe Experience Platform mTLS Service | [[!DNL MTLS Service API]](https://developer.adobe.com/experience-platform-apis/references/mtls-service/) | [mTLS trust chain migration guide](./governance-privacy-security/mtls-trust-chain-migration.md#troubleshooting)|
 | Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://developer.adobe.com/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] troubleshooting guide](../identity-service/troubleshooting-guide.md)|
 | Adobe Experience Platform Query Service | [[!DNL Query Service API]](https://developer.adobe.com/experience-platform-apis/references/query-service) | [[!DNL Query Service] troubleshooting guide](../query-service/troubleshooting-guide.md)|
 | Adobe Experience Platform Segmentation | [[!DNL Segmentation API]](https://developer.adobe.com/experience-platform-apis/references/segmentation) ||
