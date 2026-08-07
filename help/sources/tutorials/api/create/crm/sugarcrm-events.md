@@ -2,6 +2,13 @@
 title: Create a source connection and dataflow for SugarCRM Events using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to SugarCRM Events using the Flow Service API.
 exl-id: 12d08010-569c-4111-ba95-697c6ce6f637
+TQID: https://experienceleague.adobe.com/7QZsel0kVZp3asAVnm9ZpTaRqXUShnqQmlaLxJGaOKM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # (Beta) Create a source connection and dataflow for [!DNL SugarCRM Events] using the Flow Service API
 
@@ -9,7 +16,7 @@ exl-id: 12d08010-569c-4111-ba95-697c6ce6f637
 >
 >The [!DNL SugarCRM Events] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-The following tutorial walks you through the steps to create a [!DNL SugarCRM Events] source connection and create a dataflow to bring [[!DNL SugarCRM]](https://www.sugarcrm.com/) Events data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a [!DNL SugarCRM Events] source connection and create a dataflow to bring [[!DNL SugarCRM]](https://www.sugarcrm.com/) Events data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -423,7 +430,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 ### Create a mapping {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) with data mappings defined within the request payload.
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep) with data mappings defined within the request payload.
 
 **API format**
 
@@ -657,3 +664,5 @@ Delete your dataflow by performing a DELETE request to the [!DNL Flow Service] A
 ### Delete your account
 
 Delete your account by performing a DELETE request to the [!DNL Flow Service] API while providing the base connection ID of the account you want to delete. For complete API examples, read the guide on [deleting your source account using the API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+
+

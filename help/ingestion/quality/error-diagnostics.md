@@ -4,6 +4,20 @@ solution: Experience Platform
 title: Retrieving Data Ingestion Error Diagnostics
 description: This document provides information on monitoring batch ingestion, managing partial batch ingestion errors, as well as a reference for partial batch ingestion types.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
+TQID: https://experienceleague.adobe.com/ADy-GBCnvhuhZRfhBGuG6OOYwqVrmSx7Hwv6FtDghyc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Retrieving data ingestion error diagnostics
 
@@ -24,7 +38,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -382,3 +396,5 @@ A sample response of retrieving the error file can be seen below:
     "_filename": "parsing_errors_0.json"
 }
 ```
+
+

@@ -2,9 +2,18 @@
 title: IP Address Allowlisting For Streaming Ingestion API
 description: Learn how to secure access to the Streaming Ingestion API by allowing only specified IP addresses through allowlisting. This guide explains how to set up, enable, and manage IP-address-based restrictions for API security.
 hide: true
-hidefromtoc: true
 badge: beta
 exl-id: 6df6745b-c166-4eb8-ae0b-5575a57dace1
+TQID: https://experienceleague.adobe.com/C-oA-ak1H5hXM-8fIlAtksymLvlG5gw4dj7fAy8YQzA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # IP address allowlisting for Streaming Ingestion API
 
@@ -26,7 +35,7 @@ The IP allowlisting feature works as follows:
 
 ## Key considerations
 
-* The IP address allowlisting feature applies only to the [Streaming Ingestion API](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) (`dcs.adobedc.net`) and does **not** apply to `server.adobedc.net` or `edge.adobedc.net`.
+* The IP address allowlisting feature applies only to the [Streaming Ingestion API](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion) (`dcs.adobedc.net`) and does **not** apply to `server.adobedc.net` or `edge.adobedc.net`.
 * New sandboxes are open by default until allowlisting is enabled.
 * Removing a sandbox from the allowlist will reopen it to the internet.
 * You must maintain the complete list of sandbox-to-IP-address mappings on your side and always submit the full list in the IP address allowlisting form. Incremental updates are not supported.
@@ -66,3 +75,5 @@ No. They are open until you provide IP address mappings via the allowlisting for
 ### Can I send only updated IP addresses when my allowlist changes?
 
 No. You must always send the complete list of sandbox and IP address mappings. Partial (incremental) updates are not accepted.
+
+

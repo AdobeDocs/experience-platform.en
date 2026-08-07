@@ -2,6 +2,13 @@
 title: Sitetool Details Schema Field Group
 description: Learn about the Sitetool Details schema field group.
 exl-id: 472c0a3f-efda-49af-9490-f2de90b348c0
+TQID: https://experienceleague.adobe.com/eqrrxNcRy42Irfxj23Ua-jL2Pflf-bMBD3z-40brqXo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Sitetool Details] schema field group
 

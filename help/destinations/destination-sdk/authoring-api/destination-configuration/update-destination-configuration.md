@@ -2,6 +2,23 @@
 description: This page exemplifies the API call used to update an existing destination configuration through Adobe Experience Platform Destination SDK.
 title: Update a destination configuration
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
+TQID: https://experienceleague.adobe.com/rKGQ-tHk2-Ettsjj3DkOSvz57A9ZYUjbyEV2v9kgOBA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Update a destination configuration
 
@@ -32,7 +49,7 @@ For a detailed description of the capabilities of a destination configuration, r
 
 ## Getting started with destination configuration API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Update a destination configuration {#update}
 
@@ -53,6 +70,8 @@ PUT /authoring/destinations/{INSTANCE_ID}
 | Parameter | Description |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | The ID of the destination configuration that you want to update. To obtain an existing destination configuration and its corresponding `{INSTANCE_ID}`, see [Retrieve a destination configuration](retrieve-destination-configuration.md).|
+
+{style="table-layout:auto"}
 
 +++Request
 
@@ -201,9 +220,9 @@ A successful response returns HTTP status 200 with the details of your updated d
 
 ## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
-## Next steps
+## Next steps {#next-steps}
 
 After reading this document, you now know how to update a destination configuration through the Destination SDK `/authoring/destinations` API endpoint.
 

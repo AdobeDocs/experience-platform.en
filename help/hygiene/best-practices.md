@@ -2,6 +2,20 @@
 title: Best Practices for Advanced Data Lifecycle Management
 description: Learn how to efficiently manage data hygiene requests in Adobe Experience Platform using the Advanced Data Lifecycle Management UI and Data Hygiene API. This guide covers best practices such as maximizing identities per request, specifying individual datasets, and being mindful of API throttling to prevent slowdowns. The document includes guidelines for setting up automatic dataset cleanup, how to monitor work order statuses, and detailed response retrieval methods. Follow these practices to streamline your request processing and optimize response times.
 exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
+TQID: https://experienceleague.adobe.com/PYUTmQwCYwZyI8-ipe8RBTMr1yoipCN5I1EDsetJYsA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
 ---
 # Best practices for Advanced Data Lifecycle Management
 
@@ -13,7 +27,7 @@ This guide requires a working understanding of the Data Lifecycle workspace and 
 
 ## Work order creation guidelines {#work-order-creation-guidelines}
 
-You can use the `/workorder` endpoint in the Data Hygiene API to programmatically manage record delete requests in Experience Platform. With this endpoint, you can create a delete request, check on its status, or update an existing request. See the [Work order endpoint document](./api/workorder.md) to learn how to perform these actions using the API.
+You can use the `/workorder` endpoint in the Data Hygiene API to programmatically manage record delete requests in Experience Platform. With this endpoint, you can create a delete request, check on its status, or update an existing request. See the [Work order endpoint document](./api/workorder.md) to learn how to perform these actions using the API. Record delete requests are batched before processing begins and can take up to 30 days (standard SLA) or 15 days (Privacy and Security Shield or Healthcare Shield) to complete. For a full breakdown of what happens at each stage, see [Data Lifecycle processing timelines](./data-lifecycle-processing-timelines.md).
 
 >[!TIP]
 >

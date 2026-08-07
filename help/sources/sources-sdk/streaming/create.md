@@ -3,6 +3,13 @@ title: Create a new connection specification for Streaming SDK using the Flow Se
 description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Self-Serve Sources.
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
 badge: Beta
+TQID: https://experienceleague.adobe.com/0IHC3r9y4NeUP1IAQN8C997fNtoOlIHPD2Pfg52JBtE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a new connection specification using the [!DNL Flow Service] API
 
@@ -13,6 +20,14 @@ badge: Beta
 A connection specification represents the structure of a source. It contains information on a source's authentication requirements, defines how source data can be explored and inspected, and provides information on the attributes of a given source. The `/connectionSpecs` endpoint in the [!DNL Flow Service] API allows you to programmatically manage the connection specifications within your organization.
 
 The following document provides steps on how to create a connection specification using the [!DNL Flow Service] API and integrate a new source through Self-Serve Sources (Streaming SDK).
+
+>[!IMPORTANT]
+>
+>When creating a connection specification for **Self-Serve Sources (Streaming SDK)**, you must use `generic-streaming` as the connection specification name.
+>
+>Other `name` values are **unsupported**, even if the source appears to work during initial setup or while sending XDM-compatible streaming data. Using an unsupported value can result in unintended UI behavior, including the mapping step being skipped, and may lead to blocking issues later.
+>
+>To ensure supported behavior, always use `generic-streaming` for the connection specification name and do not rely on alternate values.
 
 ## Getting started
 
@@ -39,7 +54,7 @@ Once provided, you must structure your private Git repository like so:
 | {your_source}-category.txt | The category to which your source belongs, formatted as a text file. **Note**: If you believe that your source does not fit in any of the above categories, please contact your Adobe representative to discuss. | `medallia-category.txt` Inside the file, please specify the category of your source, like: `streaming`. |
 | {your_source}-description.txt | A brief description of your source. | [!DNL Medallia] is marketing automation source that you can use to bring [!DNL Medallia] data to Experience Platform. |
 | {your_source}-icon.svg | The image to be used to represent your source in the Experience Platform sources catalog. This icon must be an SVG file. ||
-| {your_source}-label.txt | The name of your source as it should appear in the Experience Platform sources catalog. | Medallia | 
+| {your_source}-label.txt | The name of your source as it should appear in the Experience Platform sources catalog. | Medallia |
 | {your_source}-connectionSpec.json | A JSON file that contains the connection specification of your source. This file is not initially required as you will be populating your connection specification as you complete this guide. | `medallia-connectionSpec.json` |
 
 {style="table-layout:auto"}

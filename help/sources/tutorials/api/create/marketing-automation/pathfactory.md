@@ -2,12 +2,19 @@
 title: Create a PathFactory Base Connection Using the Flow Service API
 description: Learn how to authenticate your PathFactory account against Experience Platform using the Flow Service API.
 exl-id: 2bdfe38b-d3f7-480f-87c6-0b98b9521be2
+TQID: https://experienceleague.adobe.com/0Kha2mfe47n3O-QJFxJgn8-TewqxPLwROyzw2qVxti0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a [!DNL PathFactory] base connection using the [!DNL Flow Service] API
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-Read this document to learn how to create a base connection for [!DNL PathFactory] using the [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Read this document to learn how to create a base connection for [!DNL PathFactory] using the [[!DNL Flow Service] API](<https://developer.adobe.com/experience-platform-apis/references/flow-service>).
 
 ## Get started
 
@@ -101,3 +108,5 @@ By following this tutorial, you have created a [!DNL PathFactory] base connectio
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
 * [Create a dataflow to bring marketing automation data to Experience Platform using the [!DNL Flow Service] API](../../collect/marketing-automation.md)
+
+

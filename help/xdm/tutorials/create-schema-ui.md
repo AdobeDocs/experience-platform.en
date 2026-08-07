@@ -5,6 +5,31 @@ title: Create a Schema Using the Schema Editor
 type: Tutorial
 description: This tutorial covers the steps for creating a schema using the Schema Editor within Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
+TQID: https://experienceleague.adobe.com/ZKEa-vyCMpCB4TkJeWEyZdNVt1m1RG2KQopF1tQQqzc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+    internal-label: Data modeling
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Create a schema using the [!DNL Schema Editor]
 
@@ -28,7 +53,7 @@ This tutorial requires a working understanding of the various aspects of Adobe E
 
 ## Open the [!UICONTROL Schemas] workspace {#browse}
 
-The [!UICONTROL Schemas] workspace in the [!DNL Experience Platform] UI provides a visualization of the [!DNL Schema Library], allowing you to view manage the schemas available for your organization. The workspace also includes the [!DNL Schema Editor], the canvas on which you can compose a schema throughout this tutorial.
+Use the [!UICONTROL Schemas] workspace in the Experience Platform UI to view and manage the schemas available to your organization. The workspace also includes the [!DNL Schema Editor], where you create and edit schemas throughout this tutorial.
 
 After logging into [!DNL Experience Platform], select **[!UICONTROL Schemas]** in the left navigation to open the **[!UICONTROL Schemas]** workspace. The **[!UICONTROL Browse]** tab displays a list of schemas (a representation of the [!DNL Schema Library]) for you to view and customize. The list includes the name, type, class, and behavior (record or time-series) on which the schema is based, as well as the date and time the schema was last modified. 
 
@@ -208,9 +233,9 @@ Each field requires the following information:
 * **[!UICONTROL Type]:** The data type of the field. This includes basic scalar types and any data types defined in the [!DNL Schema Registry]. Examples: [!UICONTROL String], [!UICONTROL Integer], [!UICONTROL Boolean], [!UICONTROL Person], [!UICONTROL Address], [!UICONTROL Phone number], etc.
 * **[!UICONTROL Description]:** An optional description of the field should be included with a maximum of 200 characters.
 
-The first field for the `loyaltyTier` object will be a string called `id`, representing the ID of the loyalty member's current tier. The tier ID will be unique for each loyalty member, since this company sets different loyalty tier point thresholds for each customer based on different factors. Set the new field's type to "[!UICONTROL String]", and the **[!UICONTROL Field properties]** section becomes populated with several options for applying constraints, including default value, format, and maximum length. See the documentation on [best practices for data validation fields](../schema/best-practices.md#data-validation-fields) to learn more.
+The first field for the `loyaltyTier` object will be a string called `id`, representing the ID of the loyalty member's current tier. The tier ID will be unique for each loyalty member, since this company sets different loyalty tier point thresholds for each customer based on different factors. Set the new field's type to "[!UICONTROL String]", and the **[!UICONTROL Field properties]** section becomes populated with additional options, including **[!UICONTROL Format]**, **[!UICONTROL Maximum length]**, and **[!UICONTROL Default value]**. Use **[!UICONTROL Format]** and length settings when ingestion validation is required. **[!UICONTROL Default value]** records informational schema metadata only and is not automatically applied during ingestion or Data Prep flows. See [type-specific field properties](../ui/fields/overview.md#type-specific-properties).
 
-![The Schema Editor with the field property values for the new ID field highlighted.](../images/tutorials/create-schema/string-constraints.png)   
+![The Schema Editor with ingestion validation and Default value field properties for the new ID field highlighted.](../images/tutorials/create-schema/string-constraints.png)   
 
 Since `id` will be a randomly generated freeform string, no further constraints are necessary. Select **[!UICONTROL Apply]** to apply your changes.
 
@@ -354,6 +379,10 @@ Select **[!UICONTROL Enable]** to confirm your choice. You can select the **[!UI
 
 ## More actions {#more}
 
+>[!NOTE]
+>
+>When working with XDM resources, actions are available from both the inventory table (row menu) and the resource detail view (**[!UICONTROL More]**). To access the full set of actions, including **Delete**, **Copy JSON structure**, and **Add to package**, you must select a custom (tenant-defined) resource. Standard (Adobe-provided) resources have limited actions. For a complete overview of actions, constraints, and permissions, see [Manage schemas, classes, field groups, and data types: actions and deletion](../ui/explore.md#xdm-resource-actions).
+
 Within the Schema Editor you can also conduct quick actions to copy the JSON structure of the schema or delete the schema. Select [!UICONTROL More] at the top of the view to display a drop down with quick actions. 
 
 ![The Schema Editor with the More button highlighted and the drop down options displayed.](../images/tutorials/create-schema/more-actions.png)
@@ -375,7 +404,7 @@ Within the Schema Editor you can also conduct quick actions to copy the JSON str
 >title="Cannot delete schema"
 >abstract="The schema cannot be deleted because it has associated datasets."
 
-A schema can be deleted within the UI from the Schema Editor using [!UICONTROL More] actions and also from the schema details in the [!UICONTROL Browse] tab. There are certain conditions that prevent a schema from being deleted. A schema cannot be deleted if:
+You can delete a schema from the [!UICONTROL Schema Editor] using [!UICONTROL More] actions or from the schema details view in the [!UICONTROL Browse] tab. You cannot delete a schema if:
 
 * The schema is enabled for Profile.
 * The schema is enabled for Profile and has associated datasets.

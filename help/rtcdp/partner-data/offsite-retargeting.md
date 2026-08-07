@@ -3,6 +3,27 @@ title: Offsite Retargeting of Unauthenticated Visitors
 description: Learn how to retarget unauthenticated users by using prospect IDs to create a computed attribute that can be used to create an audience of unauthenticated users.
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
+TQID: https://experienceleague.adobe.com/L9PoZg8xhIlLGyyuBQqkm1UsWUeZWZFkyHj1spsYujE
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+    internal-label: Use cases
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+    internal-label: Behavioral data
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Offsite retargeting of unauthenticated visitors
 
@@ -87,11 +108,11 @@ A dialog appears, asking you to choose between [!UICONTROL Compose audience] and
 
 The Segment Builder page appears. On this page, you can use the components to build your audience.
 
-![The Segment Builder is displayed.](../assets/offsite-retargeting/segment-builder.png)
+![Segment Builder is displayed.](../assets/offsite-retargeting/segment-builder.png)
 
 >[!NOTE]
 >
->For more detailed information about using the Segment Builder, please read the [Segment Builder UI guide](/help/segmentation/ui/segment-builder.md).
+>For more detailed information about using Segment Builder, please read the [Segment Builder UI guide](/help/segmentation/ui/segment-builder.md).
 
 To achieve the goal of finding these visitors, you'll first need to add a **[!UICONTROL Page View]** event to your audience. Select the **[!UICONTROL Events]** tab under **[!UICONTROL Fields]**, then drag and drop the **[!UICONTROL Page View]** event and add it to the events section canvas.
 

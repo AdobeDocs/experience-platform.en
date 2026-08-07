@@ -3,19 +3,18 @@ description: Learn how to view detailed information about datasets and individua
 solution: Experience Platform
 title: View Job Schedule Details
 type: Tutorial
-hide: yes
 exl-id: e568bfc3-f0e1-4305-94e7-070928459a87
 ---
 # View job schedule details
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] are currently available as a limited release and only for the following Real-Time CDP jobs:
+>[!UICONTROL Job schedules] are currently available only for the following Real-Time CDP jobs:
 >
 > * Batch data lake ingestion
 > * Batch profile ingestion
-> * Batch sgmentation
-> * Batch destination activation.
+> * Batch segmentation
+> * Batch destination activation
 
 When troubleshooting job failures or investigating performance issues, you need detailed information about specific datasets and their job runs. The [Job Schedules](job-schedules.md) interface allows you to drill down from the timeline view into individual datasets and jobs to understand execution history, timing, and status.
 
@@ -31,7 +30,7 @@ Use this detailed view to:
 
 Before viewing job details, you should:
 
-* Have access to [!UICONTROL Job Schedules] with the **[!UICONTROL View Job Schedules]** and **[!UICONTROL View Profile Management]** [access control permissions](/help/access-control/home.md#permissions).
+* Have access to **[!UICONTROL Job Schedules]** with the **[!UICONTROL View Job Schedules]** and **[!UICONTROL View Profile Management]** [access control permissions](/help/access-control/home.md#permissions).
 * Be familiar with the [Job Schedules interface](job-schedules.md#understanding-interface) and timeline view.
 * Understand the different [job types](job-schedules.md#job-schedules-details) (lake ingestion, profile ingestion, segmentation, activation).
 

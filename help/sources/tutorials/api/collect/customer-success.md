@@ -5,10 +5,23 @@ title: Create a Dataflow for Customer Success Sources Using the Flow Service API
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a customer success system and ingesting it into Experience Platform using source connectors and APIs.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
+TQID: https://experienceleague.adobe.com/c7nu-pPHdE9NysJ4AXOP8fWXwplJjpsq8uHVt2i79RY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a dataflow for customer success sources using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a customer success source and bringing them to Experience Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for retrieving data from a customer success source and bringing them to Experience Platform using [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!NOTE]
 >
@@ -132,7 +145,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../xdm/api/schemas.md).
 
@@ -632,3 +645,5 @@ The following section lists the different cloud storage source connectors and th
 | -------------- | --------------- |
 | [!DNL Salesforce Service Cloud] | `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
 | [!DNL ServiceNow] | `eb13cb25-47ab-407f-ba89-c0125281c563` |
+
+

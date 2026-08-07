@@ -3,6 +3,13 @@ title: Create an Azure Event Hubs Source Connection Using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to an Azure Event Hubs account using the Flow Service API.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
+TQID: https://experienceleague.adobe.com/6hv2rQBlyGPHwoqolRyWoZN5pn1tXhxAlJqPf3cHKDw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create an [!DNL Azure Event Hubs] source connection using the [!DNL Flow Service] API
 
@@ -10,7 +17,7 @@ exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
 >
 >The [!DNL Azure Event Hubs] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-Read this tutorial to learn how to connect [!DNL Azure Event Hubs] (hereinafter referred to as "[!DNL Event Hubs]") to Experience Platform, using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this tutorial to learn how to connect [!DNL Azure Event Hubs] (hereinafter referred to as "[!DNL Event Hubs]") to Experience Platform, using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -386,3 +393,5 @@ curl -X POST \
 ## Next steps
 
 By following this tutorial, you have created an [!DNL Event Hubs] source connection using the [!DNL Flow Service] API. You can use this source connection ID in the next tutorial to [create a streaming dataflow using the [!DNL Flow Service] API](../../collect/streaming.md).
+
+

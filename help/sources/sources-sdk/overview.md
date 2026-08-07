@@ -4,10 +4,17 @@ solution: Experience Platform
 title: Self-Serve Sources (Batch SDK) Overview
 description: Adobe Experience Platform Self-Serve Sources (Batch SDK) is a set of configuration APIs that allow you to integrate a REST API-based source using the Flow Service API to bring your data to Experience Platform.
 exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
+TQID: https://experienceleague.adobe.com/L6Ahnd17zMi-zHVz40BjiioI7m-OfT9cFkegtASDYlw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Self-Serve Sources (Batch SDK) overview
 
-Adobe Experience Platform Self-Serve Sources (Batch SDK) is a framework that allows you to integrate a REST API-based source to the Experience Platform sources catalog using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Self-Serve Sources (Batch SDK) provides with a set of configuration APIs to build your own source and bring your batch data to Experience Platform.
+Adobe Experience Platform Self-Serve Sources (Batch SDK) is a framework that allows you to integrate a REST API-based source to the Experience Platform sources catalog using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service). Self-Serve Sources (Batch SDK) provides with a set of configuration APIs to build your own source and bring your batch data to Experience Platform.
 
 With Self-Serve Sources (Batch SDK), you can:
 
@@ -54,3 +61,5 @@ The step-by-step process to configure your source in Experience Platform is outl
   * You can use this [sources UI documentation template](./documentation/ui-template.md) to structure your UI documentation.
   * See the guide on [using the GitHub web interface](./documentation/github.md) for steps on how to create documentation using GitHub.
   * See the guide on [using a text editor](./documentation/text-editor.md) for steps on how to create documentation using your local machine.
+
+

@@ -2,12 +2,19 @@
 title: Create a Google Cloud Storage Base Connection Using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to a Google Cloud Storage account using the Flow Service API.
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
+TQID: https://experienceleague.adobe.com/4CigxlZOzCUIaLcXv7jV1fp-qxCZmdrfxPY-I9tIzPE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a [!DNL Google Cloud Storage] base connection using the [!DNL Flow Service] API
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL Google Cloud Storage] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial walks you through the steps to create a base connection for [!DNL Google Cloud Storage] using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -104,3 +111,5 @@ A successful response returns details of the newly created connection, including
 ## Next steps
 
 By following this tutorial, you have created a [!DNL Google Cloud Storage] connection using APIs and a unique ID was obtained as part of the response body. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md).
+
+

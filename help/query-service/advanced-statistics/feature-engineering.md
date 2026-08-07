@@ -3,6 +3,18 @@ title: Feature Engineering SQL Extension
 description: Learn about the Data Distiller feature engineering SQL extension to preprocesses data for advanced statistical modeling. It covers the available feature extraction, transformation, and selection techniques.
 role: Developer
 exl-id: 622c8ef3-9651-46b3-ad22-021a93190149
+TQID: https://experienceleague.adobe.com/-8qOEEGQcjQHrFU1EWKgmYgYT9OC-m6Jsev7fkY97EU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Feature engineering SQL extension 
 
@@ -64,7 +76,8 @@ Use these transformers to convert and encode categorical data into formats suita
 
 Next, focus on selecting a subset of the most important features from the original set. This process helps reduce the dimensionality of your data, making it easier for your models to process and improving overall model performance.
 
-<!-- Commented out as it 
+<!-- 
+Commented out as it 
 ## Supported machine learning algorithms {#supported-ml-algorithms}
 
 Once you have preprocessed your data, use the feature engineering SQL extension to prepare your data for the following machine learning algorithms:
@@ -80,7 +93,8 @@ Use logical regression to predict categorical outcomes and linear regression to 
 
 Use a clustering algorithm to group data points into distinct clusters based on their similarities.
 
-- **[`K-Means`](./feature-transformation.md#kmeans)**: Use `K-Means` for unsupervised learning tasks to partition data into a specified number of clusters, with each data point assigned to the cluster with the nearest mean. -->
+- **[`K-Means`](./feature-transformation.md#kmeans)**: Use `K-Means` for unsupervised learning tasks to partition data into a specified number of clusters, with each data point assigned to the cluster with the nearest mean. 
+-->
 
 ## Implement the OPTIONS clause {#options-clause}
 

@@ -2,6 +2,18 @@
 title: Derived Datasets
 description: Derived datasets provide a convenient means to generate datasets of your choice that can be refreshed at any regular cadence and optionally published into your Real-Time Customer Profile data. This document provides an overview of how to use Query Service to create derived datasets for use with your Profile data.
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
+TQID: https://experienceleague.adobe.com/96Bjr5P6CXB7vb5qnqNJS-ZvCU96rstr8f2U7Whl2M8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Derived datasets
 

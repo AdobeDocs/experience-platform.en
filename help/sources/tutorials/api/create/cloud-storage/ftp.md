@@ -5,6 +5,13 @@ title: Create an FTP Base Connection Using the Flow Service API
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to an FTP (File Transfer Protocol) server using the Flow Service API.
 exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
+TQID: https://experienceleague.adobe.com/JcoLKFJAAjthmvYFAkvKiSGAJcSW-BmToV5BlRwv5Lk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create an FTP base connection using the [!DNL Flow Service] API
 
@@ -14,7 +21,7 @@ exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL FTP] (File Transfer Protocol) using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial walks you through the steps to create a base connection for [!DNL FTP] (File Transfer Protocol) using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -103,3 +110,5 @@ A successful response returns the unique identifier (`id`) of the newly created 
 ## Next steps
 
 By following this tutorial, you have created an FTP connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md).
+
+

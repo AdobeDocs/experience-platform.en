@@ -2,12 +2,24 @@
 title: Enable change data capture for source connections in the API
 description: Learn how to enable change data capture for source connections in the API
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
+TQID: https://experienceleague.adobe.com/9bn3tG2S9UUvOXuf8TY6LgQDDqexyxnCbbpaXdYKgVA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+    internal-label: Data modeling
 ---
 # Enable change data capture for source connections in the API
 
 >[!AVAILABILITY]
 >
->You can now use change data capture for the [!DNL Amazon S3] and [!DNL Data Landing Zone] sources when running Adobe Experience Platform on Amazon Web Services (AWS) while connected to a VA6 data center. Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
+>* Change data capture is supported for the following sources: [!DNL Amazon S3], [!DNL Data Landing Zone], [!DNL Marketo Engage], [!DNL Microsoft Dynamics], and [!DNL Salesforce].  
+>
+>* You can also enable change data capture for [!DNL Amazon S3] and [!DNL Data Landing Zone] sources when using Adobe Experience Platform on Amazon Web Services (AWS) in a VA6 data center. Note that Experience Platform on AWS is currently available to a limited audience. For more details about infrastructure support, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
 
 Use change data capture in Adobe Experience Platform sources to keep your source and destination systems synchronized in near real-time.
 
@@ -26,7 +38,7 @@ Both approaches require Data Mirror with relational schemas to preserve relation
 
 >[!AVAILABILITY]
 >
->Data Mirror and relational schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
+>Data Mirror and relational schemas are available by default to all customers licensed with Real-Time CDP B2P and B2B editions. 
 
 >[!NOTE]
 >
@@ -109,6 +121,58 @@ Enable change data capture for cloud storage sources by following these steps:
 
 All cloud storage sources use the same `_change_request_type` column format described in the [File-based sources](#file-based-sources) section above.
 
+### Example: enable change data capture when creating a cloud storage source connection
+
+When creating your cloud storage source connection, set `params.cdcEnabled` to `true` to enable change data capture. For file-based sources, change operations also rely on the `_change_request_type` control column described above.
+
+**API format**
+
+```http
+POST /sourceConnections
+```
+
+**Request**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Cloud Storage source connection with CDC enabled",
+    "description": "Source connection for ingesting change data from cloud storage",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "data": {
+      "format": "delimited"
+    },
+    "params": {
+      "path": "/acme/cdc/account.csv",
+      "type": "file",
+      "cdcEnabled": true
+    },
+    "connectionSpec": {
+      "id": "{CONNECTION_SPEC_ID}",
+      "version": "1.0"
+    }
+  }'
+```
+
+**Response**
+
+The response returns the unique identifier of the newly created source connection. You can use this ID in the next step of your workflow when creating a dataflow.
+
+```json
+{
+  "id": "26b53912-1005-49f0-b539-12100559f0e2",
+  "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
+}
+```
+
+For the complete cloud storage workflow, including schema, dataset, target connection, mapping, and dataflow creation, see [Create a Dataflow for Cloud Storage Sources Using the [!DNL Flow Service] API](../api/collect/cloud-storage.md#create-a-source-connection).
+
 ## Database sources {#database-sources}
 
 ### [!DNL Azure Databricks]
@@ -186,3 +250,83 @@ Read the following documentation for steps on how to enable change data capture 
 
 * [Create a [!DNL Snowflake] base connection](../api/create/databases/snowflake.md).
 * [Create a source connection for a database](../api/collect/database-nosql.md#create-a-source-connection).
+
+### Example: enable change data capture when creating a database source connection
+
+For supported database sources, set `params.cdcEnabled` to `true` when creating your source connection to enable change data capture. Before using this option, make sure that change tracking is enabled in your source system and that Data Mirror with relational schemas is configured in Experience Platform.
+
+This example applies to supported database sources that use native CDC exports, such as [!DNL Azure Databricks], [!DNL Google BigQuery], and [!DNL Snowflake].
+
+**API format**
+
+```http
+POST /sourceConnections
+```
+
+**Request**
+
+```shell
+
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Database source connection with CDC enabled",
+    "description": "Source connection for ingesting change data from a database source",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "data": {
+      "format": "tabular"
+    },
+    "params": {
+      "tableName": "{TABLE_NAME}",
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "xdm": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "xdm": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "lastModified",
+          "type": "string",
+          "meta:xdmType": "date-time",
+          "xdm": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      ],
+      "cdcEnabled": true
+    },
+    "connectionSpec": {
+      "id": "{CONNECTION_SPEC_ID}",
+      "version": "1.0"
+    }
+  }'
+
+```
+
+**Response**
+
+The response returns the unique identifier of the newly created source connection. You can use this ID in the next step of your workflow when creating a dataflow.
+
+```json
+{
+  "id": "b7581b59-c603-4df1-a689-d23d7ac440f3",
+  "etag": "\"ef05d265-0000-0200-0000-6019e0080000\""
+}
+```
+
+For the complete database ingestion workflow, including target connection, mapping, and dataflow creation, see [Create a dataflow for database sources using the [!DNL Flow Service] API](../api/collect/database-nosql.md#create-a-source-connection).

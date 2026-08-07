@@ -2,6 +2,38 @@
 title: Namespace priority
 description: Learn about namespace priority in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
+TQID: https://experienceleague.adobe.com/CvhGPO970NlCNiHtxszl80sQqJSJ6Ib48rT1CFwU-LU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Namespace priority {#namespace-priority}
 
@@ -112,24 +144,24 @@ Given the configurations outlined above, user actions and determination of prima
 
 {style="table-layout:auto"}
 
-## Segmentation Service: segment membership metadata storage
+## Segmentation Service: audience membership metadata storage
 
-![A diagram of segment membership storage.](../images/namespace-priority/segment-membership-storage.png "A diagram of segment membership storage."){zoomable="yes"}
+![A diagram of audience membership storage.](../images/namespace-priority/segment-membership-storage.png "A diagram of audience membership storage."){zoomable="yes"}
 
-For a given merged profile, segment memberships will be stored against the identity with the highest namespace priority.
+For a given merged profile, audience memberships will be stored against the identity with the highest namespace priority.
 
 For example, assume that there are two profiles:
 
 * Profile 1 represents John.
-  * John's profile qualifies for S1 (segment membership 1). For example, S1 could refer to a segment of customers that identify as male.
-  * John's profile also qualifies for S2 (segment membership 2). This could refer to a segment of customers whose loyalty status is gold.
+  * John's profile qualifies for S1 (audience membership 1). For example, S1 could refer to an audience of customers that identify as male.
+  * John's profile also qualifies for S2 (audience membership 2). This could refer to an audience of customers whose loyalty status is gold.
 * Profile 2 represents Jane.
-  * Jane's profile qualifies for S3 (segment membership 3). This could refer to a segment of customers that identify as female.
-  * Jane's profile also qualifies for S4 (segment membership 4). This could refer to a segment of customers whose loyalty status is platinum.
+  * Jane's profile qualifies for S3 (audience membership 3). This could refer to an audience of customers that identify as female.
+  * Jane's profile also qualifies for S4 (audience membership 4). This could refer to an audience of customers whose loyalty status is platinum.
 
-If John and Jane share a device, then the ECID (web browser) transfers from one person to another. However, this does not influence the segment membership information stored against John and Jane.
+If John and Jane share a device, then the ECID (web browser) transfers from one person to another. However, this does not influence the audience membership information stored against John and Jane.
 
-If the segment qualification criteria were solely based on anonymous events stored against the ECID, then Jane would qualify for that segment.
+If the audience qualification criteria were solely based on anonymous events stored against the ECID, then Jane would qualify for that audience.
 
 ## Implications on other Experience Platform services {#implications}
 
@@ -198,7 +230,7 @@ In the context of [!DNL Identity Graph Linking Rules], there are two main behavi
 
 #### Edge segmentation
 
-In a given event, ensure that all of your namespaces that represent a person entity are included in the `identityMap` because [identities sent as XDM fields](/help/xdm/ui/fields/identity.md) are ignored and are not used for segment membership metadata storage.
+In a given event, ensure that all of your namespaces that represent a person entity are included in the `identityMap` because [identities sent as XDM fields](/help/xdm/ui/fields/identity.md) are ignored and are not used for audience membership metadata storage.
 
 * **Event applicability**: This behavior applies only to events sent directly to the Edge Network (such as WebSDK and Mobile SDK). Events ingested from [Experience Platform hub](/help/landing/edge-and-hub-comparison.md), such as those ingested with the HTTP API source, other streaming sources, and batch sources, are not subject to this limitation.
 * **Edge segmentation specificity**: This behavior is specific to edge segmentation. Batch and streaming segmentation are separate services evaluated on the hub and do not follow the same process. Read the [edge segmentation guide](/help/segmentation/methods/edge-segmentation.md) for more information.
@@ -210,5 +242,5 @@ To ensure applications on the Edge Network have access to the Edge Profile witho
 
 * Applications on Edge Network such as Adobe Target, Offer Decisioning, and Custom Personalization Destinations will continue to depend on the primary identity in events to access profiles from Edge Profile.
 * Read the [Experience Platform Web SDK & Edge Network architecture diagram](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) for more information on Edge Network behavior.
-* Read the documentation on [Data element types](/help/tags/extensions/client/web-sdk/data-element-types.md) and [Identity data in Web SDK](/help/collection/use-cases/identity/id-overview.md) for more information on how to configure primary identity on Web SDK.
+* Read the documentation on [Data element types](/help/tags/extensions/client/web-sdk/data-element-types.md) and [Identity in Data Collection](/help/collection/identity/overview.md) for more information on how to configure primary identity on Web SDK.
 * Ensure the ECID is included in the experience event. If the ECID is missing, then it will be added to the event payload with `primary=true`, which may lead to unexpected results.

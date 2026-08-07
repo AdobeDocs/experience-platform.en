@@ -100,7 +100,7 @@ The following table provides some examples of the types of roles you might have 
 
 | Role | Description | Properties | Property Rights | Company Rights |
 | --- | --- | --- | --- | --- |
-| The Manager | Wants to see what is happening in the system, but should not be able to make any changes. | Auto-include | (None)  | (None) | 
+| The Manager | Wants to see what is happening in the system, but should not be able to make any changes. | Auto-include | (None)  | (None) |
 | The Marketer | Can install extensions and set up new tags for existing properties, but cannot publish to the staging or production environments. | Auto-include | <ul><li>Develop</li><li>Manage Extensions</li></ul> | <ul><li>Manage Properties</li></ul> |
 | The Mobile App Developer | Is responsible for implementing Adobe and 3rd-party solutions inside a native mobile app. | Auto-include | <ul><li>Develop</li><li>Manage Extensions</li></ul> | <li>Manage Properties</li><li>Manage App Configurations</li> |
 | The IT Team | Does not actually modify any tags, but they have full control over the staging and production environments and what is in them. | Auto-include | (None) | <ul><li>Approve</li><li>Publish</li><li>Manage Environments</li></ul> |

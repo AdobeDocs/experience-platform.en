@@ -2,6 +2,21 @@
 title: Manage Suggested Values in the API
 description: Learn how to add suggested values to a string field in the Schema Registry API.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
+TQID: https://experienceleague.adobe.com/ZFUjIljLTwbivMqKMrt75sd-zL0KRkG7lmSyS8LjNuw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
+    internal-label: Segmentation UI
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Manage suggested values in the API
 
@@ -26,7 +41,11 @@ It is also strongly recommended that you review the [evolution rules for enums a
 
 ## Composition 
 
-In the API, the constrained values for an **enum** field are represented by an `enum` array, while a `meta:enum` object provides friendly display names for those values:
+In the API, the constrained values for an **enum** field are represented by an `enum` array, while a `meta:enum` object provides friendly display names for those values.
+
+>[!NOTE]
+>
+>The optional JSON Schema `default` property documents an intended value in the schema definition. Experience Platform does not automatically apply `default` during ingestion or Data Prep flows. See [type-specific field properties in the UI](../ui/fields/overview.md#type-specific-properties).
 
 ```json
 "exampleStringField": {
@@ -63,9 +82,11 @@ Alternatively, you can define a string field that does not contain an `enum` arr
 
 Since the string does not have an `enum` array to define constraints, its `meta:enum` property can be extended to include new values.
 
-<!-- ## Manage suggested values for standard fields
+<!-- 
+## Manage suggested values for standard fields
 
-For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
+For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). 
+-->
 
 ## Add suggested values to a standard field {#add-suggested-standard}
 
@@ -144,7 +165,8 @@ After applying the descriptor, the Schema Registry responds with the following w
 >}
 >```
 
-<!-- ### Remove suggested values {#remove-suggested-standard}
+<!-- 
+### Remove suggested values {#remove-suggested-standard}
 
 If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
 
@@ -204,7 +226,8 @@ A successful response returns HTTP status 201 (Created) and the details of the n
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-``` -->
+``` 
+-->
 
 ## Manage suggested values for a custom field {#suggested-custom}
 

@@ -5,12 +5,19 @@ title: Create an Oracle Object Storage Base Connection Using the Flow Service AP
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Oracle Object Storage using the Flow Service API.
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
+TQID: https://experienceleague.adobe.com/FuplUVJhO1YPllaR3JDjfdf6PUBngTUs8fOiruJ9o-Q
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create an [!DNL Oracle Object Storage] base connection using the [!DNL Flow Service] API
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL Oracle Object Storage] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial walks you through the steps to create a base connection for [!DNL Oracle Object Storage] using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -107,3 +114,5 @@ A successful response returns the connection ID of the newly created connection.
 ## Next steps
 
 By following this tutorial, you have created an [!DNL Oracle Object Storage] connection using the [!DNL Flow Service] API, and have obtained its unique connection ID. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md).
+
+

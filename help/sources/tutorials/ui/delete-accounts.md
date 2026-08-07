@@ -5,6 +5,19 @@ solution: Experience Platform
 title: Delete Source Connection Accounts in the UI
 type: Tutorial
 exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
+TQID: https://experienceleague.adobe.com/1HxgbCfzsf7otxyMJVr-cxSuQ4hmqfsAXNh-aI-YNcI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Delete source connection accounts
 

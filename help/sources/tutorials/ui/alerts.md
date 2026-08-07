@@ -3,6 +3,16 @@ keywords: Experience Platform;home;popular topics; alerts
 description: You can subscribe to alerts when creating a dataflow, to receive alert messages regarding the status, success, or failure of your flow run.
 title: Subscribe to in-context alerts in the UI
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
+TQID: https://experienceleague.adobe.com/SX2Md-aGUY5mQx6ywSPvINLs8-syTbwPhQt6mjA699k
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Subscribe to alerts for sources dataflows in the UI
 
@@ -90,7 +100,7 @@ The [!UICONTROL Dataflow run overview] page appears. The upper half of the scree
 
 ![dataflow-overview](../../images/tutorials/alerts/dataflow-overview.png)
 
-The lower half of the page displays any [!UICONTROL Dataflow run errors] that ocurred during the dataflow run stage. From here, you can preview error diagnostics or use the [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) to download error diagnostics or the file manifest that corresponds to your dataflow.
+The lower half of the page displays any [!UICONTROL Dataflow run errors] that ocurred during the dataflow run stage. From here, you can preview error diagnostics or use the [[!DNL Data Access] API](https://developer.adobe.com/experience-platform-apis/references/data-access) to download error diagnostics or the file manifest that corresponds to your dataflow.
 
 ![dataflow-run-errors](../../images/tutorials/alerts/dataflow-run-error.png)
 
@@ -119,3 +129,4 @@ A pop-up window appears, providing you with a list of sources alerts. Select any
 ## Next steps
 
 This document provided a step-by-step guide on how to subscribe to in-context alerts for your sources dataflows. For more information, see the [alerts UI guide](../../../observability/alerts/ui.md).
+

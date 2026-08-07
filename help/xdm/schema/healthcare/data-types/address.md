@@ -2,9 +2,15 @@
 title: Address Data Type
 description: Learn about the Address Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: 21213bd5-00f4-43cc-80cf-2c0dcf878a23
+TQID: https://experienceleague.adobe.com/rlqSPpf27sfe7TyO7UsCmqjstZ0Mz47uR5qoG2wmf4g
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Address] data type
 

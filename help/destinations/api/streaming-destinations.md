@@ -5,18 +5,37 @@ title: Connect to streaming destinations and activate data using the Flow Servic
 description: This document covers the creation of streaming destinations by using the Adobe Experience Platform API
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
+TQID: https://experienceleague.adobe.com/ggi4Jebs6PEwz6T-mWe6sIa9h48krK85CdosyI8DBCg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Connect to streaming destinations and activate data using the Flow Service API
 
 >[!IMPORTANT]
-> 
+>
 >To connect to a destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). 
 >
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 >
 >Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create a connection to a streaming cloud storage destination ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) or [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)), create a dataflow to your new created destination, and activate data to your new created destination.
+This tutorial demonstrates how to use API calls to connect to your [!DNL Adobe Experience Platform] data, create a connection to a streaming cloud storage destination ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) or [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)), create a dataflow to your new created destination, and activate data to your new created destination.
 
 This tutorial uses the [!DNL Amazon Kinesis] destination in all examples, but the steps are identical for [!DNL Azure Event Hubs].
 
@@ -24,17 +43,17 @@ This tutorial uses the [!DNL Amazon Kinesis] destination in all examples, but th
 
 If you prefer to use the user interface in Experience Platform to connect to a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to streaming audience export destinations](../ui/activate-segment-streaming-destinations.md) tutorials.
 
-## Get started
+## Get started {#get-started}
 
-This guide requires a working understanding of the following components of Adobe Experience Platform:
+This guide requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
 *   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
 *   [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] is the system of record for data location and lineage within Experience Platform.
 *   [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to activate data to streaming destinations in Experience Platform.
+The following sections provide additional information that you will need to know to activate data to streaming destinations in Experience Platform.
 
-### Gather required credentials
+### Gather required credentials {#gather-credentials}
 
 To complete the steps in this tutorial, you should have the following credentials ready, depending on the type of destinations that you are connecting and activating audiences to.
 
@@ -47,7 +66,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values}
 
-In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+To make calls to Experience Platform APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
@@ -67,7 +86,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ### Swagger documentation {#swagger-docs}
 
-You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). We recommend that you use this tutorial and the Swagger documentation page in parallel.
+You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe I/O](https://developer.adobe.com/experience-platform-apis/references/flow-service). We recommend that you use this tutorial and the Swagger documentation page in parallel.
 
 ## Get the list of available streaming destinations {#get-the-list-of-available-streaming-destinations}
 
@@ -123,7 +142,7 @@ Next, you must connect to your Experience Platform data, so you can export profi
 2. Then, using the base connection ID, you will make another call in which you create a source connection, which establishes the connection to your Experience Platform data.
 
 
-### Authorize access to your data in Experience Platform
+### Authorize access to your data in Experience Platform {#authorize-access-experience-platform}
 
 **API format**
 
@@ -218,7 +237,7 @@ In this step, you are setting up a connection to your desired streaming destinat
 1. First, you must perform a call to authorize access to the streaming destination, by setting up a base connection. 
 2. Then, using the base connection ID, you will make another call in which you create a target connection, which specifies the location in your storage account where the exported data will be delivered, as well as the format of the data that will be exported.
 
-### Authorize access to the streaming destination
+### Authorize access to the streaming destination {#authorize-access-streaming-destination}
 
 **API format**
 
@@ -281,7 +300,7 @@ A successful response contains the base connection's unique identifier (`id`). S
 }
 ```
 
-### Specify storage location and data format
+### Specify storage location and data format {#specify-storage-location-data-format}
 
 **API format**
 
@@ -338,7 +357,7 @@ A successful response returns the unique identifier (`id`) for the newly created
 }
 ```
 
-## Create a data flow
+## Create a data flow {#create-data-flow}
 
 ![Destination steps overview step 4](../assets/api/streaming-destination/step4.png)
 
@@ -468,7 +487,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 |`{DATAFLOW_ID}`| In the URL, use the ID of the dataflow that you created in the previous step. |
 |`{ETAG}` | Get the `{ETAG}` from the response in the previous step, [Create a dataflow](#create-dataflow). The response format in the previous step has escaped quotes. You must use the unescaped values in the header of the request. See the example below: <br> <ul><li>Response example: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Value to use in your request: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> The etag value updates with every successful update of a dataflow. |
-| `{SEGMENT_ID}`| Provide the audience ID that you want to export to this destination. To retrieve audience IDs for the audiences that you want to activate, see [retrieve a audience definition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in the Experience Platform API reference. |
+| `{SEGMENT_ID}`| Provide the audience ID that you want to export to this destination. To retrieve audience IDs for the audiences that you want to activate, see [retrieve a audience definition](https://developer.adobe.com/experience-platform-apis/references/segmentation#operation/retrieveSegmentDefinitionById) in the Experience Platform API reference. |
 | `{PROFILE_ATTRIBUTE}`| For example, `"person.lastName"` |
 | `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To add an audience to a dataflow, use the `add` operation. |
 | `path` | Defines the part of the flow that is to be updated. When adding an audience to a dataflow, use the path specified in the example. |
@@ -476,11 +495,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `id` | Specify the ID of the audience you are adding to the destination dataflow.  |
 | `name` | *Optional*. Specify the name of the audience you are adding to the destination dataflow. Note that this field is not mandatory and you can successfully add an audience to the destination dataflow without providing its name. |
 
+{style="table-layout:auto"}
+
 **Response**
 
 Look for a 202 OK response. No response body is returned. To validate that the request was correct, see the next step, Validate the data flow. 
 
-## Validate the data flow
+## Validate the data flow {#validate-data-flow}
 
 ![Destination steps overview step 6](../assets/api/streaming-destination/step6.png)
 
@@ -624,11 +645,13 @@ To successfully connect to the destinations using the attached [!DNL Postman] co
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. See [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully connected Experience Platform to one of your preferred streaming destinations and set up a data flow to the respective destination. Outgoing data can now be used in the destination for customer analytics or any other data operations you may wish to perform. See the following pages for more details:
+You have successfully connected Experience Platform to one of your preferred streaming destinations and set up a data flow to the respective destination. Outgoing data can now be used in the destination for customer analytics or any other data operations you may wish to perform. See the following pages for more details:
 
 *   [Destinations overview](../home.md)
 *   [Destinations Catalog overview](../catalog/overview.md)
+
+

@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Mapping Fields for the Marketo Engage Source
 description: The tables below contains the mappings between the fields in the Marketo datasets and their corresponding XDM fields.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
+TQID: https://experienceleague.adobe.com/g2-hGKFTAQ0jvTRJnxZCHXgaD9fORd90BOvZ-2pvI6M
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL Marketo Engage] field mappings {#marketo-engage-field-mappings}
 
@@ -32,11 +42,11 @@ Read the documentation on [XDM Experience Event class](../../../../xdm/classes/e
 |  |  | `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | Primary identity. MUNCHKIN_ID will be replaced as part of explore API |
 | `activityTypeId` |  | `eventType` | `eventType` |  |
 | <ul><li>If the <code>activityTypeId</code> is 1, 2, 3, 9, 10, or 11 &rarr; mark <code>producedBy</code> as <strong>self</strong>.</li><li>If the <code>activityTypeId</code> is 6, 7, 8, 12, 21, 22, 24, 25, 27, 32, 34, 35, 36, 46, 101, 104, 110, 113, 114, or 115 &rarr; mark <code>producedBy</code> as <strong>system</strong>.</li><li>For all other values &rarr; mark <code>producedBy</code> as <strong>self</strong>.</li></ul> |  | `producedBy` | `producedBy` |  |
-| `activityDate` |  | `timestamp` | `timestamp` |  | 
-| `attributes.Webpage URL` |  | `web.webPageDetails.URL`| `web.webPageDetails.URL` |  |  
+| `activityDate` |  | `timestamp` | `timestamp` |  |
+| `attributes.Webpage URL` |  | `web.webPageDetails.URL`| `web.webPageDetails.URL` |  |
 | `attributes.User Agent` |  | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |  |
 | `attributes.Client IP Address` |  | `environment.ipV4` | `environment.ipV4` |  |
-| `attributes.Search Query` |  | `search.keywords` | `search.keywords` |  |  
+| `attributes.Search Query` |  | `search.keywords` | `search.keywords` |  |
 | `attributes.Search Engine` |  | `search.searchEngine` | `search.searchEngine` |  |
 | `primaryAttributeValue when activityTypeId = 1` | 1 | `web.webPageDetails.webPageID` | `web.webPageDetails.webPageID` |  |
 | `primaryAttributeValue when activityTypeId = 1` | 1 | `web.webPageDetails.name` | `web.webPageDetails.name` |  |
@@ -123,7 +133,7 @@ Read the documentation on [XDM Experience Event class](../../../../xdm/classes/e
 | primaryAttributeValueId when activityTypeId = 6 | 6 | `directMarketing.emailSent.mailingName` | `directMarketing.emailSent.mailingName` |  |
 | `attributes.Test Variant` | 6 | `directMarketing.emailSent.testVariantID` | `directMarketing.emailSent.testVariantID` |  |
 | Note - derived from secondary assets value |  | `directMarketing.emailSent.testVariantName` | `directMarketing.emailSent.testVariantName` |  |
-| `attributes.Campaign Run ID` | 6 | `directMarketing.emailSent.automationRunID` |  `directMarketing.emailSent.automationRunID` |  |  
+| `attributes.Campaign Run ID` | 6 | `directMarketing.emailSent.automationRunID` |  `directMarketing.emailSent.automationRunID` |  |
 |  |  | `directMarketing.automationRunID` |  `directMarketing.automationRunID` |  |
 
 {style="table-layout:auto"}

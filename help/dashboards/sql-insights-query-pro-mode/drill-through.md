@@ -2,6 +2,18 @@
 title: Query Pro Mode Drill Through
 description: Learn how to navigate from any chart to a new dashboard to explore your data using drill through.
 exl-id: d38550ba-1c56-4b6b-bf96-f21da232ba34
+TQID: https://experienceleague.adobe.com/fGS2i8Zv1Cjod23K71Ylx7A3D-UrgadQrf5xgACZoYM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Drill through {#drill-through}
 

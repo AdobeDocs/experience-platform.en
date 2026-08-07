@@ -4,6 +4,19 @@ description: An overview of the various available Adobe Real-Time Customer Data 
 feature: Get Started, Audiences, Segments, B2B
 badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
+TQID: https://experienceleague.adobe.com/sldRLmJy7Yt2SiPTT-w9keXkWYQsvan0hzwdngYOreY
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+    internal-label: Use cases
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Segmentation use cases for Real-Time Customer Data Platform B2B Edition
 
@@ -42,7 +55,7 @@ Once these requirements have been met you are able to combine these attributes f
 
 ## Getting started {#getting-started}
 
-Once the union schemas for the B2B classes have relationships established and have been used to ingest data, their attributes are made available in the left rail of the Segment Builder. 
+Once the union schemas for the B2B classes have relationships established and have been used to ingest data, their attributes are made available in the left rail of Segment Builder. 
 
 B2B classes and their attributes are appended with a `B2B` label within the Segmentation workspace to differentiate them from those available as standard within Real-Time Customer Data Platform. 
 
@@ -58,9 +71,9 @@ Select the appropriate schema from the available list and select the appropriate
 
 ![source-key example using the people relationship in the schema workspace](../assets/segmentation/b2b/source-key-schema-relationship-example.png)
 
-This relationship is reflected within the Segment Builder through the use of `Key` folders as shown in the image below.
+This relationship is reflected within Segment Builder through the use of `Key` folders as shown in the image below.
 
-![source-key example using the segment builder in the segmentation workspace](../assets/segmentation/b2b/source-key-segmentation-example.png)
+![source-key example using Segment Builder in the segmentation workspace](../assets/segmentation/b2b/source-key-segmentation-example.png)
 
 Please refer to the [schemas in Real-Time Customer Data Platform B2B Edition documentation](../schemas/b2b.md) for more information on the available B2B classes.
 
@@ -68,7 +81,7 @@ The use cases below provide information on which classes are used to establish r
 
 ## Examples of different segmentation use cases {#use-cases}
 
-The following use cases are available for segmentation with the B2B Edition. Each example provides a description of what the audience does and a description of the classes used to create them. The images provided highlight the file path in the [!UICONTROL Attributes] side rail which reflects the structure of the schema. The [!UICONTROL Segment properties] section on the right of the display contains a written breakdown of the audience's attributes. 
+The following use cases are available for segmentation with the B2B Edition. Each example provides a description of what the audience does and a description of the classes used to create them. The images provided highlight the file path in the [!UICONTROL Attributes] side rail which reflects the structure of the schema. The [!UICONTROL Audience properties] section on the right of the display contains a written breakdown of the audience's attributes. 
 
 ### Example 1: Find "decision-makers" for B2B opportunities {#find-decision-maker}
 
@@ -159,6 +172,7 @@ Find all the people who are targeted for campaigns where the actualCost exceeded
 Find all the people belonging to the Marketo Static list "Anniversary users" where isDeleted=false.
 
 ![UI displaying segmentation parent org](../assets/segmentation/b2b/example-13.png)
+
 <!-- 
 ### Example 14: Find "decision makers" by opportunity status using streaming or edge segmentation {#find-decision-makers-personalization}
 
@@ -174,7 +188,8 @@ To create this audience, you must use "segment of segments" by creating a base a
 
 After creating the first audience, you can combine that with another audience of  people who are a "Decision Maker" of any opportunity where both the "Closed Flag" is set to true and the "Lost Flag" is set to false.
 
-![UI displaying example 14 settings](../assets/segmentation/b2b/example-14.png) -->
+![UI displaying example 14 settings](../assets/segmentation/b2b/example-14.png) 
+-->
 
 ## Next steps {#next-steps}
 

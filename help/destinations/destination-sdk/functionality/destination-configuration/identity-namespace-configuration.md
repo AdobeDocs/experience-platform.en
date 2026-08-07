@@ -2,6 +2,23 @@
 description: Learn how to configure the supported target identities for destinations built with Destination SDK.
 title: Identity namespace configuration
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
+TQID: https://experienceleague.adobe.com/GvF3ln-NZyz8gK8u7k0o0MclR1KnHNWtzsHp7WAr-KY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Identity namespace configuration
 
@@ -23,7 +40,7 @@ When configuring identity namespaces for your destination, you can fine tune the
 
 * Allowing users to map XDM attributes to identity namespaces.
 * Allowing users to map [standard identity namespaces](../../../../identity-service/features/namespaces.md#standard) to your own identity namespaces.
-* Allowing users to map [custom identity namespaces](../../../../identity-service/features/namespaces.md#manage-namespaces) to your own identity namespaces.
+* Allowing users to map [custom identity namespaces](../../../../identity-service/features/namespaces.md#create-namespaces) to your own identity namespaces.
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
@@ -86,11 +103,11 @@ For instance, customers could map an [!DNL Experience Platform] [!DNL IDFA] name
 
 Read more about identities in the [identity namespace overview](../../../../identity-service/features/namespaces.md).
 
-## Mapping considerations
+## Mapping considerations {#mapping-considerations}
 
 If customers select a source identity namespace and do not select a target mapping, Experience Platform automatically populates the target mapping with an attribute with the same name.
 
-## Configure optional source field hashing
+## Configure optional source field hashing {#configure-optional-hashing}
 
 Experience Platform customers can choose to ingest data into Experience Platform in hashed format or in plain text. If your destination platform accepts both hashed and unhashed data, you can give customers the option to choose whether Experience Platform should hash the source field values when they get exported to your destination.
 
@@ -112,11 +129,11 @@ The configuration below enables the optional [Apply transformation](../../../ui/
    }
 ```
 
-Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation.
+Check this option when using unhashed source fields, to have [!DNL Adobe Experience Platform] automatically hash them on activation.
 
-When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have Adobe Experience Platform automatically hash the source attributes on activation.
+When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have [!DNL Adobe Experience Platform] automatically hash the source attributes on activation.
 
-## Configure mandatory source field hashing
+## Configure mandatory source field hashing {#configure-mandatory-hashing}
 
 If your destination only accepts hashed data, you can configure the exported attributes to be automatically hashed by Experience Platform. The configuration below automatically checks the **Apply transformation** option when the `Email` and `Phone` identities are mapped.
 

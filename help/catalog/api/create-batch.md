@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Create a Batch in the API
 description: You can create a batch by making a POST request to the /batches endpoint in the Catalog API.
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
+TQID: https://experienceleague.adobe.com/aTA7HpLfGwjI5bVLhTG-IgAWam475cYGc9s5l3Fm1-w
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Create a batch
 

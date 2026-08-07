@@ -4,12 +4,21 @@ title: Update destination accounts
 type: Tutorial
 description: This tutorial lists the steps to update destination accounts in the Adobe Experience Platform UI
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
+TQID: https://experienceleague.adobe.com/B-bSqB84ntetfYZlODDhcf8yDTKK5zeeYKV1HFzu98g
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Update destination accounts
 
 ## Overview {#overview}
 
-The **[!UICONTROL Accounts]** tab shows you details about the connections that you have established with various destinations. Refer to the [Accounts overview](../ui/destinations-workspace.md#accounts) for all the information you can get on each destination account.
+The **[!UICONTROL Accounts]** tab shows details about the connections that you have established with various destinations. See the [Accounts overview](../ui/destinations-workspace.md#accounts) for all the information available for each destination account.
 
 This tutorial covers the steps to update destination account details by using the Experience Platform UI.
 
@@ -23,7 +32,7 @@ For batch destinations, you can update the access or secret key, if any of those
 
 Follow the steps below to update connection details to existing destinations.
 
-1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Accounts]** from the top header to view your existing accounts.
+1. Go to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Accounts]** from the top header to view your existing accounts.
 
     ![Accounts tab](../assets/ui/update-accounts/accounts-tab.png)
 
@@ -55,8 +64,8 @@ Follow the steps below to update connection details to existing destinations.
 
 5. Select **[!UICONTROL Save]** to finish the account details update.
 
-## Next steps
+## Next steps {#next-steps}
 
-By following this tutorial, you have successfully used the **[!UICONTROL destinations]** workspace to update existing accounts.
+You have successfully updated existing accounts using the **[!UICONTROL destinations]** workspace.
 
-For more information about destinations, refer to the [destinations overview](../catalog/overview.md).
+For more information about destinations, see the [destinations overview](../catalog/overview.md).

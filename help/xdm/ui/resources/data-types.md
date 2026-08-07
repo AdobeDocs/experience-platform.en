@@ -5,6 +5,16 @@ title: Create and Edit Data Types Using the UI
 type: Tutorial
 description: Learn how to create and edit data types in the Experience Platform user interface.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
+TQID: https://experienceleague.adobe.com/7DqBrazFClTg5Sok3EKsuBf6SBZTuloXGFVw8qpZnCc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create and edit data types using the UI {#ui-create-and-edit}
 
@@ -40,6 +50,10 @@ From here, you have the following options:
 - [Create a new data type](#create)
 - [Filter data types](#filter)
 - [Select an existing data type to edit](#edit)
+
+>[!NOTE]
+>
+>XDM actions are available from the inventory table and the resource detail view (**[!UICONTROL More]**). Full actions apply only to custom (tenant-defined) resources; standard resources have limited options. See [Manage schemas, classes, field groups, and data types: actions and deletion](../explore.md#xdm-resource-actions).
 
 ### Create a new data type {#create}
 

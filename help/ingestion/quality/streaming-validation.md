@@ -5,6 +5,18 @@ title: Streaming Ingestion Validation
 type: Tutorial
 description: Streaming ingestion allows you to upload your data to Adobe Experience Platform using streaming endpoints in real time. Streaming ingestion APIs support two modes of validation - synchronous and asynchronous.
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
+TQID: https://experienceleague.adobe.com/ZoZWx4l4uuWPr-mgTcbnGafkn6p4K0XADyme-wmS3kk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Streaming ingestion validation
 
@@ -23,7 +35,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -200,7 +212,9 @@ This section contains information about what the various status codes mean for r
 | ----------- | ------------- |
 | 200 | Success. For synchronous validation, it means that it has passed the validation checks. For asynchronous validation, it means that it only has successfully received the message. Users can find out the eventual message status by observing the dataset. |
 | 400 | Error. There is something wrong with your request. An error message with further details is received from the Streaming Validation Services. |
-| 401 | Error. Your request is unauthorized - you'll need to request with a bearer token. For further information about how to request access, check out this [tutorial](https://www.adobe.com/go/platform-api-authentication-en) or this [blog post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
+| 401 | Error. Your request is unauthorized - you'll need to request with a bearer token. For further information about how to request access, check out this [tutorial](/help/landing/api-authentication.md) or this [blog post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
 | 500 | Error. There is an internal system error. |
 | 501 | Error. This means that synchronous validation is **not** supported for this location. |
 | 503 | Error. The service is currently unavailable. Clients should retry at least three times using an exponential back-off strategy. |
+
+

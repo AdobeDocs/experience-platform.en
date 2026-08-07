@@ -7,11 +7,11 @@ exl-id: bc932ba5-a810-4fa6-82cc-998af39fdd34
 
 The `subscribeRulesetItems` command allows you to subscribe to propositions that are the result of satisfied rulesets. You can do this by specifying which surfaces and schemas to filter by, and providing a callback function.
 
-Any time rulesets are evaluated, the callback function receives a `result` object with an array of propositions within it.
+Rulesets are evaluated each time a [`sendEvent`](sendevent/overview.md) command is sent. The callback function receives a `result` object with an array of propositions within it.
 
 >[!IMPORTANT]
 >
->The `subscribeRulesetItems` command is the only way to get propositions that come from rulesets, since they are not returned alongside [`sendEvent`](sendevent/overview.md) results.
+>The `subscribeRulesetItems` command is the only way to get propositions that come from rulesets, since they are not returned alongside [`sendEvent`](sendevent/overview.md) results. You must set up your subscription before calling `sendEvent` to ensure that propositions are captured.
 
 
 ```js
@@ -28,7 +28,7 @@ alloy("subscribeRulesetItems", {
 
 The above code subscribes to the `web://example.com/#welcome` surface for content cards and uses the `collectEvent` convenience method to emit `display` events for all propositions.
 
-## Comand options {#command-options}
+## Command options {#command-options}
 
 This command takes an `options` object with the following properties:
 
@@ -36,7 +36,11 @@ This command takes an `options` object with the following properties:
 | --- | --- | --- |
 | `surfaces` | String array | A list of surfaces. Propositions will only be received by the callback function if they match one of the surfaces provided here. |
 | `schemas`  | String array | A list of schemas. Propositions will only be received by the callback function if they match one of the schemas provided here. |
-| `callback` | Function | A callback function that will be invoked when propositions are the result of satisfied rulesets. The callback function receives two parameters when invoked: `result` and `collectEvent`. See [callback parameters](#callback-parameters) for details. |
+| `callback` | Function | A callback function that is invoked when propositions are the result of satisfied rulesets. The callback function receives two parameters when invoked: `result` and `collectEvent`. See [callback parameters](#callback-parameters) for details. |
+
+>[!TIP]
+>
+>You can subscribe to multiple surfaces and schemas in a single command by passing additional values to the `surfaces` and `schemas` arrays.
 
 ### Callback parameters {#callback-parameters}
 
@@ -49,12 +53,19 @@ The callback function receives the two parameters described in the table below w
 
 ### `collectEvent` function {#collectevent-function}
 
-The `collectEvent` function is a convenience function which you can use to send Edge Network events to track interactions, displays and other events. It accepts the two parameters described in the table below.
+The `collectEvent` function is a convenience function that you can use to send Edge Network events to track interactions, displays and other events. It accepts the two parameters described in the table below.
 
 | Parameter | Type | Description |
 | --- | --- | --- |
 | Event type   | String | A string indicating which proposition event type to emit. Supported event types are `display`, `interact`, or `dismiss`. |
 | `propositions` | Array | An array of propositions corresponding to the event. |
+
+
+The `collectEvent` function can be called independently outside of the callback. Calling this function is useful when tracking an interaction or dismissal at a later point, such as in response to a user action.
+
+```js
+collectEvent("interact", propositions);
+```
 
 ## Subscribe to content cards using the Web SDK tag extension
 

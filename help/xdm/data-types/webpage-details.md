@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Web Page Details Data Type
 description: Learn about the web page details Experience Data Model (XDM) data type.
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
+TQID: https://experienceleague.adobe.com/prPWidLpfgplYbTfVPbGqu9zyDy0M0C2QgZSaNhTfSw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Web page details] data type
 

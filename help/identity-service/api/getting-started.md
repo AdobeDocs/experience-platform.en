@@ -5,6 +5,21 @@ title: Identity Service API Guide
 description: The Identity Service API allows developers to manage the cross-device, cross-channel, and near real-time identification of your customers using identity graphs in Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
 role: Developer
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
+TQID: https://experienceleague.adobe.com/cEVFZDD-rXypfPwguCf-cFKhf9VnGaIXKlF1MhEsrb4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # [!DNL Identity Service] API guide
 
@@ -26,7 +41,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -73,7 +88,7 @@ When an identity is persisted, [!DNL Identity Service] generates and assigns an 
 
 To limit the payload in responses, APIs adapt their responses to the type of identity construct used. That is, if you pass XID your responses will have XIDs, if you pass composite identities, the response will follow the structure used in the request.
 
-The examples in this document do not cover the complete functionality of the [!DNL Identity Service] API. For the complete API, see the [Swagger API Reference](https://www.adobe.io/experience-platform-apis/references/identity-service).
+The examples in this document do not cover the complete functionality of the [!DNL Identity Service] API. For the complete API, see the [Swagger API Reference](https://developer.adobe.com/experience-platform-apis/references/identity-service).
 
 >[!NOTE]
 >
@@ -82,3 +97,5 @@ The examples in this document do not cover the complete functionality of the [!D
 ## Next steps
 
 Now that you have gathered the required credentials, you can now continue to read the rest of the developer guide. Each section provides important information regarding their endpoints and demonstrate example API calls for performing CRUD operations. Each call includes the general API format, a sample request showing required headers and properly formatted payloads, and a sample response for a successful call.
+
+

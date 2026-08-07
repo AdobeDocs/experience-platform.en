@@ -2,6 +2,30 @@
 title: Demandbase People connection
 description: Use this destination to activate your audiences and enrich them with Demandbase third-party data, for other downstream use-cases in marketing and sales.
 exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
+TQID: https://experienceleague.adobe.com/bEqF5Epstc048GMHI-mZlO0w7kRvwhlHqaJBm9ukwKE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # Demandbase People connection {#demandbase-people}
 
@@ -13,7 +37,7 @@ Activate profiles for your Demandbase campaigns for audience targeting, personal
 
 ## Use case {#use-case}
 
-Marketers can use Adobe Real-Time CDP to create a People List of first-party contacts and activate it in Demandbase for optimized and orchestrated engagement across its demand-side platform (DSP) and other channels such as LinkedIn.
+Marketers can use Adobe [!DNL Real-Time CDP] to create a People List of first-party contacts and activate it in Demandbase for optimized and orchestrated engagement across its demand-side platform (DSP) and other channels such as LinkedIn.
 
 This approach allows marketers to prioritize campaign spending on known individuals sourced from their own CRM or marketing automation system, ensuring that marketing efforts focus on high-value prospects.
 
@@ -33,10 +57,10 @@ The [!DNL Demandbase People] connection supports the activation of identities de
 
 This section describes which type of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -49,7 +73,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -75,7 +99,7 @@ To export audiences to Demandbase, you need the following:
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -102,7 +126,7 @@ Now you're ready to activate your audiences within Demandbase People.
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -125,6 +149,13 @@ For optimal matching accuracy, include the following optional mappings in your a
 |--------------|--------------|-------------|
 | `xdm: person.name.lastName` | `xdm: lastName` | The last name of the person |
 | `xdm: person.name.firstName` | `xdm: firstName` | The first name of the person |
+| `xdm: extendedWorkDetails.jobTitle` | `xdm: title` | The job title of the person |
+| Custom field | `xdm: jobLevel` | The job level of the person |
+| Custom field | `xdm: jobFunction` | The job function of the person |
+
+>[!NOTE]
+>
+>`jobTitle` is available in the standard B2B Person schema. `jobLevel` and `jobFunction` require a custom schema extension or field group on top of the Person schema, and are supported by the destination when present in your source schema.
 
 ### Mapping best practices {#mapping-best-practices}
 
@@ -132,7 +163,7 @@ When mapping fields to [!DNL Demandbase People], consider the following matching
 
 * **Primary matching**: Demandbase uses `externalPersonId` as the primary identifier for person matching.
 * **Fallback matching**: If `externalPersonId` is not available, Demandbase uses the `email` field for identification.
-* **Recommended fields**: While only `email` and `externalPersonId` are required, Adobe recommends mapping all available fields from the recommended mappings table above, to improve matching accuracy and campaign performance.
+* **Recommended fields**: While only `email` and `externalPersonId` are required, Adobe recommends mapping the job title, job function, and job level fields in addition to the recommended mappings above. These fields provide richer person information within Demandbase and support downstream audience segmentation and targeting.
 
 ![Demandbase People mappings](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
 

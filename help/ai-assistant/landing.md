@@ -3,6 +3,33 @@ title: AI Assistant (Legacy) in Adobe Experience Platform Product Documentation
 description: Get started with AI Assistant (Legacy) in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
+TQID: https://experienceleague.adobe.com/iT-GKLpsMKW8HhDPdSQePn37JF0hpzERNztB-vbcd1A
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+    internal-label: AI Assistant
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # AI Assistant (Legacy) in Adobe Experience Platform product documentation 
 
@@ -87,7 +114,8 @@ You can use Product Support Agent in AI Assistant (Legacy) to seamlessly trouble
 
 >[!ENDTABS]
 
-<!-- ## Security features of AI Assistant {#security}
+<!-- 
+## Security features of AI Assistant {#security}
 
 
 Watch the following video for more information on the security features of AI Assistant:
@@ -100,7 +128,8 @@ Watch the following video for more information on the security features of AI As
 
 For more information about AI Assistant, read the [security fact sheet for AI Assistant in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
 
->[!ENDSHADEBOX] -->
+>[!ENDSHADEBOX] 
+-->
 
 ## Understanding the basics
 

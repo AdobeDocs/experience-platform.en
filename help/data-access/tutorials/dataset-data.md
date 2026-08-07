@@ -5,6 +5,21 @@ title: View Dataset Data Using the Data Access API
 type: Tutorial
 description: Learn how to locate, access, and download data stored within a dataset using the Data Access API in Adobe Experience Platform. This document introduces some of the unique features of the Data Access API, such as paging and partial downloads.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
+TQID: https://experienceleague.adobe.com/-CmCq-BFklkKbfQn5SxNb43yCwwsV9n61bhdyTxi-Go
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # View dataset data using [!DNL Data Access] API
 
@@ -110,7 +125,7 @@ Filters are often required to find a particular batch to retrieve relevant data 
 GET /batches?createdAfter={START_TIMESTAMP}&dataSet={DATASET_ID}&sort={SORT_BY}
 ```
 
-| Property | Description | 
+| Property | Description |
 | -------- | ----------- |
 | `{START_TIMESTAMP}` | The start timestamp in milliseconds (for example, 1514836799000). |
 | `{DATASET_ID}` | The dataset identifier. |
@@ -342,7 +357,7 @@ Depending on whether the file ID points to an individual file or a directory, th
 ```
 
 | Property | Description |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `data._links.self.href` | The URL to download the associated file. |
 
 This response returns a directory containing two separate files, with IDs `{FILE_ID_2}` and `{FILE_ID_3}`. In this scenario, you must follow the URL of each file to access the file.
@@ -437,7 +452,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 ```
 
 | Property | Description |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `Range: bytes=0-99` | Specifies the range of bytes to download. If this is not specified, the API downloads the entire file. In this example, the first 100 bytes are downloaded. |
 
 **Response**
@@ -464,7 +479,7 @@ GET /batches/{BATCH_ID}/files?limit={LIMIT}
 GET /batches/{BATCH_ID}/files?start={OFFSET}&limit={LIMIT}
 ```
 
-| Property | Description | 
+| Property | Description |
 | -------- | ----------- |
 | `{BATCH_ID}` | Batch identifier of the batch that you are trying to access. |
 | `{OFFSET}` | The specified index to start the result array (for example, start=0) |

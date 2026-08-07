@@ -4,6 +4,7 @@ user-guide-title: Data Prep Guide
 user-guide-description: Prepare your data for ingestion into Adobe Experience Platform and learn how Data Prep can help you map, transform, and validate data today.
 feature: Data Prep
 role: Developer
+nudge: true
 ---
 
 # Data Prep {#data-prep}

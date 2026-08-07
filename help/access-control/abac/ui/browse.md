@@ -3,6 +3,16 @@ keywords: Experience Platform;home;popular topics;access control;attribute-based
 title: Attribute-based Access Control Browse
 description: This document provides information on using the Permissions interface in Adobe Experience Platform
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
+TQID: https://experienceleague.adobe.com/s5YfDGUiyf7oM2GV0XtrnPV0G4kYNT1JfOzRNEurN2Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Permissions guide
 

@@ -4,6 +4,18 @@ solution: Experience Platform
 title: Explore a Customer Success System Using the Flow Service API
 description: This tutorial uses the Flow Service API to explore Customer Success (CS) systems.
 exl-id: 453be69d-3d72-4987-81cd-67fa3be7ee59
+TQID: https://experienceleague.adobe.com/8rp9dvXGmxhvj39GnRiosIqmBlm6uHxNBO4fZDC443U
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Explore a customer success system using the [!DNL Flow Service] API
 
@@ -33,7 +45,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
@@ -171,3 +183,5 @@ A successful response returns the structure of the specified table. Details rega
 ## Next steps
 
 By following this tutorial, you have explored your CS system, found the path of the table you wish to ingest into [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your CS system and bring it into Experience Platform](../collect/customer-success.md).
+
+

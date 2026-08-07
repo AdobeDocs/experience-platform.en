@@ -3,6 +3,26 @@ keywords: Experience Platform;home;popular topics;Teradata Vantage
 title: Create a Teradata Vantage  Source Connection in the UI
 description: Learn how to create a Teradata Vantage source connection using the Adobe Experience Platform UI.
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
+TQID: https://experienceleague.adobe.com/lIbO3c63KHxBMXABqBDMQpuuX1KZ7JC6RXhFw0MXynk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+    internal-label: Administration
+subfeature_v2:
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+    internal-label: Sandboxes
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 # Create a [!DNL Teradata Vantage] source connection in the UI
 
@@ -21,7 +41,7 @@ In order to access your [!DNL Teradata Vantage] account on Experience Platform, 
 
 | Credential | Description |
 | ---------- | ----------- |
-| Connection string | A connection string is a string that provides information about a data source and how you can connect to it. The connection string pattern for [!DNL Teradata Vantage] is `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. | 
+| Connection string | A connection string is a string that provides information about a data source and how you can connect to it. The connection string pattern for [!DNL Teradata Vantage] is `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
 
 For more information about getting started, refer to this [[!DNL Teradata Vantage] document](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
 

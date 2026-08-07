@@ -2,10 +2,17 @@
 title: Create Drafts Of Your Flow Service Entities API
 description: Learn how to create drafts of your base connection, source connection, target connection, and dataflow using the Flow Service API
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
+TQID: https://experienceleague.adobe.com/A8ttLAKsXX1DjRRUcrtNyysaMHUZNHQcHp84oPr6-NU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create drafts of your [!DNL Flow Service] entities using the API
 
-You can use the `mode=draft` query parameter in the [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) to set your [!DNL Flow Service] entities such as your base connections, source connections, target connections, and dataflows to a draft state. 
+You can use the `mode=draft` query parameter in the [[!DNL Flow Service] API](<https://developer.adobe.com/experience-platform-apis/references/flow-service>) to set your [!DNL Flow Service] entities such as your base connections, source connections, target connections, and dataflows to a draft state. 
 
 Drafts can be updated later with new information and then published once they are ready, by using the `op=publish` query parameter. 
 
@@ -948,3 +955,4 @@ A successful response returns the ID and corresponding `etag` of your dataflow.
 ## Next steps
 
 By following this tutorial, you have learned how to create drafts of your [!DNL Flow Service] entities as well as publish these drafts. For more information on sources, please read the [sources overview](../../home.md).
+

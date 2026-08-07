@@ -5,6 +5,19 @@ title: Policy Evaluation API Endpoints
 description: Once marketing actions have been created and policies have been defined, you can use the Policy Service API to evaluate if any policies are violated by certain actions. The returned constraints take the form of a set of policies that would be violated by attempting the marketing action on the specified data containing data usage labels.
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
+TQID: https://experienceleague.adobe.com/ukXQJtJ3MKbRjBG2zSO0WGWVbMIHvAbtbCJHgmaPxOo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Policy evaluation endpoints
 
@@ -20,7 +33,7 @@ Evaluation requests can be made in one of three ways:
 
 ## Getting started
 
-The API endpoints used in this guide is part of the [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoints used in this guide is part of the [[!DNL Policy Service] API](https://developer.adobe.com/experience-platform-apis/references/policy-service). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Evaluate for policy violations using data usage labels {#labels}
 
@@ -682,4 +695,6 @@ A successful response returns an array of evaluation results; one for each polic
 
 ## Policy evaluation for [!DNL Real-Time Customer Profile]
 
-The [!DNL Policy Service] API can also be used to check for policy violations involving the use of [!DNL Real-Time Customer Profile] segments. See the tutorial on [enforcing data usage compliance for audience segments](../../segmentation/tutorials/governance.md) for more information.
+The [!DNL Policy Service] API can also be used to check for policy violations involving the use of [!DNL Real-Time Customer Profile] audiences. See the tutorial on [enforcing data usage compliance for audiences](../../segmentation/tutorials/governance.md) for more information.
+
+

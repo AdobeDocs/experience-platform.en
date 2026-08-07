@@ -2,8 +2,52 @@
 keywords: event forwarding extension;pinterest;pinterest event forwarding extension
 title: Pinterest event forwarding extension
 description: This Adobe Experience Platform event forwarding extension allows you to ingest events into Pinterest for your business requirements.
-last-substantial-update: 2023-04-27
+last-substantial-update: 2023-04-27T00:00:00.000Z
 exl-id: 44f38a9b-0a28-4b51-bead-ee460eb8405e
+TQID: https://experienceleague.adobe.com/oBoefrt3wDx3GSXT-nFdb6L5aoVBUvrX-dJATsjaaFw
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+    internal-label: Advertising
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+    internal-label: Acrobat Sign
+  - id: dfc56824-e8b9-499e-85d4-21aedb507314
+    internal-label: Campaign
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a075b2c1-7748-4328-b7f6-343aa314616a
+    internal-label: Campaigns
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+    internal-label: API
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+    internal-label: Event forwarding
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # [!DNL Pinterest] event forwarding extension
 
@@ -74,13 +118,13 @@ After selection, additional controls appear to further configure the event. You 
 
 The following event data will be required to create the new rule:
 
-| Field name | Description | Example | 
-| --- | --- | --- | 
-| [!UICONTROL Event Name] | The type of the user event. This can be any event type however, to leverage [!DNL Pinterest Analytics] it is recommended to use [[!DNL Pinterest] event codes](https://help.pinterest.com/en/business/article/add-event-codes) | &ast; checkout <br> &ast; add_to_cart <br> &ast; page_visit <br> &ast; signup <br> &ast; [User-defined event] | 
-| [!UICONTROL Action Source] | The source indicating where the conversion event occurred. | &ast; app_android <br> &ast; app_ios <br> &ast; web <br> &ast; offline | 
+| Field name | Description | Example |
+| --- | --- | --- |
+| [!UICONTROL Event Name] | The type of the user event. This can be any event type however, to leverage [!DNL Pinterest Analytics] it is recommended to use [[!DNL Pinterest] event codes](https://help.pinterest.com/en/business/article/add-event-codes) | &ast; checkout <br> &ast; add_to_cart <br> &ast; page_visit <br> &ast; signup <br> &ast; [User-defined event] |
+| [!UICONTROL Action Source] | The source indicating where the conversion event occurred. | &ast; app_android <br> &ast; app_ios <br> &ast; web <br> &ast; offline |
 | [!UICONTROL Event Time] | This refers to the event time. The default time format used is UNIX, in the format `<seconds>.<miliseconds>` depending on your local timezone. For more information, refer to the [[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/#operation/events/create). | 1433188255.500 indicates 1433188255 seconds and 500 milliseconds after epoch, or Monday, June 1, 2015, at 7:50:55 PM GMT. |
-| [!UICONTROL Event ID] | A unique id string that identifies this event and can be used for deduping between events ingested via both the conversion API and Pinterest tracking. Without this, the event's data is likely to be double counted and will report metric inflation. | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad | 
-| [!UICONTROL Event Properties] |  A JSON object containing custom properties of the event. Select from providing raw JSON or using a simplified set of key-value inputs. | { "event_source_url": "http://site.com" } | 
+| [!UICONTROL Event ID] | A unique id string that identifies this event and can be used for deduping between events ingested via both the conversion API and Pinterest tracking. Without this, the event's data is likely to be double counted and will report metric inflation. | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad |
+| [!UICONTROL Event Properties] |  A JSON object containing custom properties of the event. Select from providing raw JSON or using a simplified set of key-value inputs. | { "event_source_url": "http://site.com" } |
 
 ![The [!DNL Pinterest] [!UICONTROL Event Data] highlighted in the rule action.](../../../images/extensions/server/pinterest/event-data.png)
 
@@ -103,9 +147,9 @@ The following event properties can be configured:
 
 The following user data can be entered by are not required fields:
 
-| Field name | Description | Example | 
-| --- | --- | --- | 
-| [!UICONTROL Email] | User email address or a SHA256 hash of the user address email. | ebd543592...f2b7e1 | 
+| Field name | Description | Example |
+| --- | --- | --- |
+| [!UICONTROL Email] | User email address or a SHA256 hash of the user address email. | ebd543592...f2b7e1 |
 | [!UICONTROL Mobile Adverstising IDs] | Sha256 hashes of user's "Google Advertising IDs" (GAIDs) or "Apple's Identifier for Advertisers" (IDFAs) | ebd543592...f2b7e1 |
 | [!UICONTROL Client IP Address] | The user's IP address, which can be either in IPv4 or IPv6 format. Used for matching. | 192.168.0.1 |
 | [!UICONTROL Client User Agent] | The user agent string of the user's web browser. | Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion |

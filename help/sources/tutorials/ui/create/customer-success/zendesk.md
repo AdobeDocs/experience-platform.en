@@ -2,6 +2,19 @@
 title: Create a Zendesk Source Connection in the UI
 description: Learn how to create a Zendesk source connection using the Adobe Experience Platform UI.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
+TQID: https://experienceleague.adobe.com/yqAmXcJm92UgCJE45bfhDqcnzlggltjsY8FjIdCmWNE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a [!DNL Zendesk] source connection in the UI
 
@@ -105,7 +118,7 @@ The table below lists the supported mappings that must be set up for Zendesk.
 
 | Source | Type |
 |---|---|
-| `results.active` | Boolean | 
+| `results.active` | Boolean |
 | `results.alias` | String |
 | `results.created_at` | String |
 | `results.custom_role_id` | Integer |

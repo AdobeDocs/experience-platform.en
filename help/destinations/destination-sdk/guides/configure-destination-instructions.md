@@ -2,6 +2,25 @@
 description: This page lists and describes the steps to configure a streaming destination using Destination SDK.
 title: Use Destination SDK to configure a streaming destination
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
+TQID: https://experienceleague.adobe.com/Dy3LryNaOeT1RsoLeBT-X7eZokLrN2dkrMQCkJMXajw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
 ---
 # Use Destination SDK to configure a streaming destination
 
@@ -11,7 +30,7 @@ This page describes how to use the information in [Configuration options in Dest
 
 ## Prerequisites {#prerequisites}
 
-Before advancing to the steps illustrated below, please read the [Destination SDK getting started](../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs. This assumes that you have completed the partnership and permission prerequisites and are ready to start developing your destination.
+Before advancing to the steps illustrated below, read the [Destination SDK getting started](../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs. This assumes that you have completed the partnership and permission prerequisites and are ready to start developing your destination.
 
 ## Steps to use the configuration options in Destination SDK to set up your destination {#steps}
 
@@ -172,7 +191,7 @@ Once you have crafted a message transformation template that works for you, add 
 
 ## Step 4: Create audience metadata configuration {#create-audience-metadata-configuration}
 
-For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination. Refer to [Audience metadata management](../functionality/audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
+For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination. See [Audience metadata management](../functionality/audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
 
 If you use an audience metadata configuration, you must connect it to the destination configuration you created in step 2. Add the instance ID of your audience metadata configuration to your destination configuration as `audienceTemplateId`.
 
@@ -273,7 +292,7 @@ If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, you must crea
 
 ## Step 6: Test your destination {#test-destination}
 
-After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) to test the integration between Adobe Experience Platform and your destination.
+After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) to test the integration between [!DNL Adobe Experience Platform] and your destination.
 
 As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create audiences in Experience Platform:
 

@@ -4,6 +4,13 @@ title: Available Use Case Playbooks for Real-Time Customer Data Platform and Ado
 description: A list of all the playbooks in Real-Time Customer Data Platform and Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
+TQID: https://experienceleague.adobe.com/WcmUOD33pDFJqVjbSiejoz2bEfoEiwM5FwECqN3V4xI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 # Available Use Case Playbooks
 

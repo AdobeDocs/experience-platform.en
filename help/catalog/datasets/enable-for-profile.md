@@ -4,6 +4,28 @@ title: Enable a Dataset for Profile and Identity Service using APIs
 type: Tutorial
 description: This tutorial shows you how to enable a dataset for use with Real-Time Customer Profile and Identity Service using Adobe Experience Platform APIs.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
+TQID: https://experienceleague.adobe.com/DIVgFHnU3IqfwzblXJFctZOkzvjOHRnk-dbB6VDXrDY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: e87e2d37-4b79-43e9-ad8e-53009e3f83f2
+    internal-label: Identity Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Enable a dataset for [!DNL Profile] and [!DNL Identity Service] using APIs
 
@@ -33,7 +55,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -220,3 +242,5 @@ When uploading data to a new dataset for the first time, or as part of a process
 ## Confirm data ingest by Identity Service {#confirm-data-ingest-by-identity-service}
 
 Each data fragment ingested that contains more than one identity creates a link in your private identity graph. For more information on identity graphs and access identity data, please begin by reading the [Identity Service overview](../../identity-service/home.md).
+
+

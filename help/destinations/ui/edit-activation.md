@@ -4,10 +4,25 @@ title: Edit activation dataflows
 type: Tutorial
 description: Follow the steps in this article to edit an existing activation dataflow in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
+TQID: https://experienceleague.adobe.com/wE6eVboAogPDZd-rk7pWS3T9S8FDbYPNSwh-xFU6qj4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Edit activation dataflows {#edit-activation-flows}
 
-In Adobe Experience Platform, you can configure various components of existing activation dataflows to destinations, such as:
+In [!DNL Adobe Experience Platform], you can configure various components of existing activation dataflows to destinations, such as:
 
 * [Enable or disable](#enable-disable-dataflows) activation dataflows
 * [Add additional audiences](#add-audiences) to activation dataflows
@@ -22,7 +37,7 @@ In Adobe Experience Platform, you can configure various components of existing a
 
 Follow the steps below to browse your existing activation dataflows and identify the one you want to edit.
 
-1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destination dataflows.
+1. Go to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destination dataflows.
 
     ![Browse destinations](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -62,7 +77,7 @@ Select **[!UICONTROL Activate audiences]** in the right rail. This action takes 
 
 ![Experience Platform UI image showing the Activate audiences dataflow run option.](../assets/ui/edit-activation/activate-audiences.png)
 
-Select the **[!UICONTROL Scheduling]** step in the activation workflow to edit the activation schedule and export frequency for your dataflow. This step allows you to configure how often data is exported to the destination.
+Select the **[!UICONTROL Scheduling]** step in the activation workflow to edit the activation schedule and export frequency for your dataflow. Use this step to configure how often data is exported to the destination.
 
 In the **[!UICONTROL Scheduling]** step of the activation workflow, you can:
 
@@ -81,7 +96,7 @@ Select **[!UICONTROL Activate audiences]** in the right rail. This action takes 
 
 ![Experience Platform UI image showing the Activate audiences dataflow run option.](../assets/ui/edit-activation/activate-audiences.png)
 
-Select the **[!UICONTROL Mapping]** step in the activation workflow to edit the mapped attributes and identities for your activation dataflow. This allows you to adjust which profile attributes and identities should be exported to the destination.
+Select the **[!UICONTROL Mapping]** step in the activation workflow to edit the mapped attributes and identities for your activation dataflow. Use this step to adjust which profile attributes and identities are exported to the destination.
 
 In the **[!UICONTROL Mapping]** step of the activation workflow, you can:
 
@@ -136,6 +151,6 @@ To edit the activation dataflow name and description, use the **[!UICONTROL Dest
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully used the **[!UICONTROL destinations]** workspace to update existing destination dataflows.
+You have successfully updated your destination dataflows using the **[!UICONTROL destinations]** workspace.
 
-For more information about destinations, refer to the [destinations overview](../catalog/overview.md).
+For more information about destinations, see the [destinations overview](../catalog/overview.md).

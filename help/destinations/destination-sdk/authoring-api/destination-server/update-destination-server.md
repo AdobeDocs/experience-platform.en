@@ -2,6 +2,21 @@
 description: This page exemplifies the API call used to update an existing destination server configuration through Adobe Experience Platform Destination SDK.
 title: Update a destination server configuration
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
+TQID: https://experienceleague.adobe.com/r-OmoLDKGVSmzpYPRBwEq1bAXk2WCzfE5vmGPuduMrA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Update a destination server configuration
 
@@ -24,7 +39,7 @@ For a detailed description of the capabilities that you can configure through th
 
 ## Getting started with destination server API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Update a destination server configuration {#update}
 
@@ -77,7 +92,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
       "httpMethod":"PUT",
       "requestBody":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"{ \"attributes\": [ {% for ns in [\"external_id\", \"yourdestination_id\"] %} {% if input.profile.identityMap[ns] is not empty and first_namespace_encountered %} , {% endif %} {% set first_namespace_encountered = true %} {% for identity in input.profile.identityMap[ns]%} { \"{{ ns }}\": \"{{ identity.id }}\" {% if input.profile.segmentMembership.ups is not empty %} , \"AEPSegments\": { \"add\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"realized\" or segment.value.status == \"existing\" %} {% if added_segment_found %} , {% endif %} {% set added_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ], \"remove\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"exited\" %} {% if removed_segment_found %} , {% endif %} {% set removed_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ] } {% set removed_segment_found = false %} {% set added_segment_found = false %} {% endif %} {% if input.profile.attributes is not empty %} , {% endif %} {% for attribute in input.profile.attributes %} \"{{ attribute.key }}\": {% if attribute.value is empty %} null {% else %} \"{{ attribute.value.value }}\" {% endif %} {% if not loop.last%} , {% endif %} {% endfor %} } {% if not loop.last %} , {% endif %} {% endfor %} {% endfor %} ] }"
+         "value":"{ \"attributes\": [ {% for ns in [\"external_id\", \"yourdestination_id\"] %} {% if input.profile.identityMap[ns] is not empty and first_namespace_encountered %} , {% endif %} {% set first_namespace_encountered = true %} {% for identity in input.profile.identityMap[ns]%} { \"{{ ns }}\": \"{{ identity.id }}\" {% if hasSegments(input.profile.segmentMembership) %} , \"AEPSegments\": { \"add\": [ {% for namespace in input.profile.segmentMembership %} {% for segment in input.profile.segmentMembership[namespace.key] %} {% if (segment.value.status == \"realized\" or segment.value.status == \"existing\") and destination.namespaceSegmentAliases[namespace.key][segment.key] is defined %} {% if added_segment_found %} , {% endif %} {% set added_segment_found = true %} \"{{ destination.namespaceSegmentAliases[namespace.key][segment.key] }}\" {% endif %} {% endfor %} {% endfor %} ], \"remove\": [ {% for namespace in input.profile.segmentMembership %} {% for segment in input.profile.segmentMembership[namespace.key] %} {% if segment.value.status == \"exited\" and destination.namespaceSegmentAliases[namespace.key][segment.key] is defined %} {% if removed_segment_found %} , {% endif %} {% set removed_segment_found = true %} \"{{ destination.namespaceSegmentAliases[namespace.key][segment.key] }}\" {% endif %} {% endfor %} {% endfor %} ] } {% set removed_segment_found = false %} {% set added_segment_found = false %} {% endif %} {% if input.profile.attributes is not empty %} , {% endif %} {% for attribute in input.profile.attributes %} \"{{ attribute.key }}\": {% if attribute.value is empty %} null {% else %} \"{{ attribute.value.value }}\" {% endif %} {% if not loop.last%} , {% endif %} {% endfor %} } {% if not loop.last %} , {% endif %} {% endfor %} {% endfor %} ] }"
       },
       "contentType":"application/json"
    }
@@ -92,7 +107,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 |`urlBasedDestination.url.value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to. |
 |`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `PUT`, `DELETE`, `PATCH`. |
 |`httpTemplate.requestBody.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
-|`httpTemplate.requestBody.value` | String | *Required.* This string is the character-escaped version that transforms the data of Experience Platform customers to the format your service expects. <br> <ul><li> For information on how to write the template, read the [Using templating section](../../functionality/destination-server/message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, refer to the [Profile Attributes](../../functionality/destination-server/message-format.md#attributes) transformation. </li></ul> |
+|`httpTemplate.requestBody.value` | String | *Required.* This string is the character-escaped version that transforms the data of Experience Platform customers to the format your service expects. <br> <ul><li> For information on how to write the template, read the [Using templating section](../../functionality/destination-server/message-format.md#using-templating). </li><li> For more information about character escaping, see the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, see the [Profile Attributes](../../functionality/destination-server/message-format.md#attributes) transformation. </li></ul> |
 |`httpTemplate.contentType` | String | *Required.* The content type that your server accepts. This value is most likely `application/json`. |
 
 {style="table-layout:auto"}
@@ -750,7 +765,7 @@ A successful response returns HTTP status 200 with the details of your updated d
 
 ## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 

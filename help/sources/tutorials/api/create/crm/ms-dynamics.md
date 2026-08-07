@@ -2,6 +2,16 @@
 title: Create a Microsoft Dynamics Base Connection Using the Flow Service API
 description: Learn how to connect Experience Platform to a Microsoft Dynamics account using the Flow Service API.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
+TQID: https://experienceleague.adobe.com/Wt1pOhIgdrq2Tq05ysdVfeI1QP1RrmQsfJ2hiKlfVmU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
 ---
 # Connect [!DNL Microsoft Dynamics] to Experience Platform using the [!DNL Flow Service] API
 

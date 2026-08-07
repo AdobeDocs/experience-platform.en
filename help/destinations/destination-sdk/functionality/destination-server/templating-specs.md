@@ -2,6 +2,20 @@
 description: Learn how to format the HTTP requests sent to your endpoint. Use the /authoring/destination-servers endpoint to configure destination server templating specs in Adobe Experience Platform Destination SDK.
 title: Templating specs for destinations created with Destination SDK
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
+TQID: https://experienceleague.adobe.com/fjCp0CZZWqMe047fcjUH9-kGxBdKBdG-cD1zdvKVDOQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Template specs for destinations created with Destination SDK
 
@@ -55,7 +69,7 @@ See below an example of an HTTP request template, together with descriptions of 
       "httpMethod":"POST",
       "requestBody":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"{ \"attributes\": [ {% for ns in [\"external_id\", \"yourdestination_id\"] %} {% if input.profile.identityMap[ns] is not empty and first_namespace_encountered %} , {% endif %} {% set first_namespace_encountered = true %} {% for identity in input.profile.identityMap[ns]%} { \"{{ ns }}\": \"{{ identity.id }}\" {% if input.profile.segmentMembership.ups is not empty %} , \"AEPSegments\": { \"add\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"realized\" or segment.value.status == \"existing\" %} {% if added_segment_found %} , {% endif %} {% set added_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ], \"remove\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"exited\" %} {% if removed_segment_found %} , {% endif %} {% set removed_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ] } {% set removed_segment_found = false %} {% set added_segment_found = false %} {% endif %} {% if input.profile.attributes is not empty %} , {% endif %} {% for attribute in input.profile.attributes %} \"{{ attribute.key }}\": {% if attribute.value is empty %} null {% else %} \"{{ attribute.value.value }}\" {% endif %} {% if not loop.last%} , {% endif %} {% endfor %} } {% if not loop.last %} , {% endif %} {% endfor %} {% endfor %} ] }"
+         "value":"{ \"attributes\": [ {% for ns in [\"external_id\", \"yourdestination_id\"] %} {% if input.profile.identityMap[ns] is not empty and first_namespace_encountered %} , {% endif %} {% set first_namespace_encountered = true %} {% for identity in input.profile.identityMap[ns]%} { \"{{ ns }}\": \"{{ identity.id }}\" {% if hasSegments(input.profile.segmentMembership) %} , \"AEPSegments\": { \"add\": [ {% for namespace in input.profile.segmentMembership %} {% for segment in input.profile.segmentMembership[namespace.key] %} {% if (segment.value.status == \"realized\" or segment.value.status == \"existing\") and destination.namespaceSegmentAliases[namespace.key][segment.key] is defined %} {% if added_segment_found %} , {% endif %} {% set added_segment_found = true %} \"{{ destination.namespaceSegmentAliases[namespace.key][segment.key] }}\" {% endif %} {% endfor %} {% endfor %} ], \"remove\": [ {% for namespace in input.profile.segmentMembership %} {% for segment in input.profile.segmentMembership[namespace.key] %} {% if segment.value.status == \"exited\" and destination.namespaceSegmentAliases[namespace.key][segment.key] is defined %} {% if removed_segment_found %} , {% endif %} {% set removed_segment_found = true %} \"{{ destination.namespaceSegmentAliases[namespace.key][segment.key] }}\" {% endif %} {% endfor %} {% endfor %} ] } {% set removed_segment_found = false %} {% set added_segment_found = false %} {% endif %} {% if input.profile.attributes is not empty %} , {% endif %} {% for attribute in input.profile.attributes %} \"{{ attribute.key }}\": {% if attribute.value is empty %} null {% else %} \"{{ attribute.value.value }}\" {% endif %} {% if not loop.last%} , {% endif %} {% endfor %} } {% if not loop.last %} , {% endif %} {% endfor %} {% endfor %} ] }"
       },
       "contentType":"application/json"
    }
@@ -66,7 +80,7 @@ See below an example of an HTTP request template, together with descriptions of 
 |---|---|---|
 |`httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Supported methods: `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 |`templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
-|`value` | String | *Required.* This string is the character-escaped version of the template that formats the HTTP requests sent by Experience Platform into the format expected by your destination. <br> For information on how to write the template, read the section on [using templating](message-format.md#using-templating). <br> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). <br> For an example of a simple transformation, refer to the [profile attributes](message-format.md#attributes) transformation. |
+|`value` | String | *Required.* This string is the character-escaped version of the template that formats the HTTP requests sent by Experience Platform into the format expected by your destination. <br> For information on how to write the template, read the section on [using templating](message-format.md#using-templating). <br> For more information about character escaping, see the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). <br> For an example of a simple transformation, see the [profile attributes](message-format.md#attributes) transformation. |
 |`contentType` | String | *Required.* The content type that your server accepts. Depending on what type of output your transformation template produces, this can be any of the supported [HTTP application content types](https://www.iana.org/assignments/media-types/media-types.xhtml#application). In most cases, this value should be set to `application/json`. |
 
 {style="table-layout:auto"}

@@ -2,10 +2,29 @@
 description: Learn how to configure the UI attributes, such as the documentation link, the destination card category, and the destination connection type and frequency, for destinations built with Destination SDK.
 title: UI attributes
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
+TQID: https://experienceleague.adobe.com/GjQp1-0lydYc3aELrcwhz-5lzpV0tZjZgCmnRYe2cnk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # UI attributes
 
-UI attributes define the visual elements that Adobe should display for your destination card in the Adobe Experience Platform user interface, such as a logo, a link to the documentation page, a destination description and its category and type.
+UI attributes define the visual elements that Adobe should display for your destination card in the [!DNL Adobe Experience Platform] user interface, such as a logo, a link to the documentation page, a destination description and its category and type.
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the following destination configuration overview pages:
 
@@ -42,6 +61,8 @@ Refer to the table below for details on which types of integrations support the 
 | Real-time (streaming) integrations | Yes |
 | File-based (batch) integrations | Yes |
 
+{style="table-layout:auto"}
+
 ## Supported parameters {#supported-parameters}
 
 ```json
@@ -56,7 +77,7 @@ Refer to the table below for details on which types of integrations support the 
 
 ### `documentationLink` {#documentation-link}
 
-`documentationLink` is a string parameter that refers to the documentation page in the [Destinations Catalog](../../../catalog/overview.md) for your destination. Every productized destination in Adobe Experience Platform must have a corresponding documentation page. [Learn how to create a destination documentation page](../../docs-framework/documentation-instructions.md) for your destination. Note that this is not required for private/custom destinations.
+`documentationLink` is a string parameter that refers to the documentation page in the [Destinations Catalog](../../../catalog/overview.md) for your destination. Every productized destination in [!DNL Adobe Experience Platform] must have a corresponding documentation page. [Learn how to create a destination documentation page](../../docs-framework/documentation-instructions.md) for your destination. Note that this is not required for private/custom destinations.
 
 Use the following format: `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `http://www.adobe.com/go/destinations-moviestar-en`.
 
@@ -70,7 +91,7 @@ Users can see and visit your documentation link from the destinations catalog pa
 
 ### `category` {#category}
 
-`category` is a string parameter that refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](../../../destination-types.md). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`.
+`category` is a string parameter that refers to the category assigned to your destination in [!DNL Adobe Experience Platform]. For more information, read [Destination Categories](../../../destination-types.md). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`.
 
 Users can see the list of destination categories on the left side of the screen in the destination catalog, as shown in the image below.
 

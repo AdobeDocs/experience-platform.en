@@ -2,6 +2,23 @@
 title: Advanced Data Lifecycle Management Overview
 description: Advanced Data Lifecycle Management allows you to manage the lifecycle of your data by updating or purging outdated or inaccurate records.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
+TQID: https://experienceleague.adobe.com/iUo7h2mcsIwyECpzhl3NMAkqayBZuBSI1kvcYwOcupw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Advanced Data Lifecycle Management in Adobe Experience Platform
 
@@ -25,12 +42,15 @@ The [!UICONTROL Data Lifecycle] UI is built on top of the Data Hygiene API, whos
 
 ## Timelines and transparency {#timelines-and-transparency}
 
-[Record delete](./ui/record-delete.md) and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows. 
+[Record delete](./ui/record-delete.md) and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows.
 
 >[!TIP]
 >
->To monitor your current usage against quota limits, see the [Quota reference guide](./api/quota.md).  
->For entitlement rules, monthly caps, SLA timelines, and exception handling policies, see the [Record delete (UI)](./ui/record-delete.md#quotas) and [Workorder (API)](./api/workorder.md#quotas) documentation.
+>For additional reference information:
+>- To monitor your current usage against quota limits, see the [Quota reference guide](./api/quota.md).
+>- For entitlement rules, monthly caps, SLA timelines, and exception handling policies, see the [Record delete quota guide (UI)](./ui/record-delete.md#quotas) and [Work order quota guide (API)](./api/workorder.md#quotas).
+
+### Dataset expiration timelines {#dataset-expiration-timelines}
 
 The following takes place when a [dataset expiration request](./ui/dataset-expiration.md) is created:
 
@@ -45,6 +65,10 @@ The following takes place when a [dataset expiration request](./ui/dataset-expir
 
 {style="table-layout:auto"}
 
-## Next steps
+### Record delete timelines {#record-delete-transparency}
 
-This document provided an overview of Experience Platform's Data Lifecycle capabilities. To get started making data hygiene requests in the UI, refer to the [UI guide](./ui/overview.md). To learn how to create Data Lifecycle jobs programmatically, refer to the [Data Hygiene API guide](./api/overview.md)
+Record delete requests are processed based on entitlement tier, with different SLA commitments for standard and Shield customers. For a full breakdown of processing stages and timelines, see [Data Lifecycle processing timelines](./data-lifecycle-processing-timelines.md).
+
+## Next steps {#next-steps}
+
+This document provides an overview of Experience Platform's Data Lifecycle capabilities. To get started making data hygiene requests in the UI, see the [data lifecycle UI guide](./ui/overview.md). To create Data Lifecycle jobs programmatically, see the [Data Hygiene API guide](./api/overview.md).

@@ -3,6 +3,38 @@ solution: Experience Platform
 title: Segmentation Service UI Guide
 description: Learn how to create and manage audiences and segment definitions in the Adobe Experience Platform UI.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
+TQID: https://experienceleague.adobe.com/9UIs4eth4eqdsrG3sMhUSau9l59ZihFpv6M5meXQYF8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
+    internal-label: Segmentation UI
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+    internal-label: Data modeling
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Segmentation Service UI guide
 
@@ -72,10 +104,10 @@ A popover appears, listing all the fields that can be displayed within the table
 ![The attributes that can be displayed for the Composition section.](../images/ui/overview/compositions-customize-table.png)
 
 | Field | Description |
-| ----- | ----------- | 
+| ----- | ----------- |
 | [!UICONTROL Name] | The name of the audience. |
 | [!UICONTROL Status] | The status of the audience. Possible values for this field include `Draft`, `Inactive`, and `Published`.  |
-| [!UICONTROL Created] | The time and date the audience was created. | 
+| [!UICONTROL Created] | The time and date the audience was created. |
 | [!UICONTROL Created by] | The name of the person who created the audience. |
 | [!UICONTROL Updated] | The time and date the audience was last updated. |
 | [!UICONTROL Updated by] | The name of the person who last updated the audience. |

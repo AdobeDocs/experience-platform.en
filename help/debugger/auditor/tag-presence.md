@@ -2,6 +2,21 @@
 title: Tag Presence Test Reference
 description: Learn how the auditor feature tests for tag presence in Adobe Experience Platform Debugger.
 exl-id: 8f01f89e-2a3b-41bc-b971-f3c60d0ae3fa
+TQID: https://experienceleague.adobe.com/cXxLoQFNTcSSROkTutWNWo5pvebzQjWNRkIuqhMlXdg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 ---
 # Tag presence test reference
 
@@ -15,17 +30,15 @@ Tag presence tests evaluate whether certain tags exists on the page, and whether
 
 | Test | Weight | Criteria | Recommendation |
 | --- | --- | --- | --- |
-| Advertising Cloud - Code presence  | 5 | The Advertising Cloud tag is not available in the DOM. | Implement the Advertising Cloud tag using the [Advertising Cloud tag extension](../../destinations/catalog/advertising/adobe-advertising-cloud.md). |
-| Advertising Cloud - Segment Pixel Implemented  | 5 | Upgrade your Advertising Cloud segment pixels to the new Advertising Cloud image-only tags. Using the deprecated AMO segment tags can result in data loss. | Implement the Advertising Cloud segment pixel using the [Advertising Cloud tag extension](../../destinations/catalog/advertising/adobe-advertising-cloud.md). |
+| Adobe Advertising - Code presence  | 5 | The Adobe Advertising tag is not available in the DOM. | Implement the Adobe Advertising tag using the [Adobe Advertising tag extension](../../destinations/catalog/advertising/adobe-advertising-cloud.md). |
+| Adobe Advertising - Segment Pixel Implemented  | 5 | Upgrade your Adobe Advertising segment pixels to the new Adobe Advertising image-only tags. Using the deprecated AMO segment tags can result in data loss. | Implement the Adobe Advertising segment pixel using the [Adobe Advertising tag extension](../../destinations/catalog/advertising/adobe-advertising-cloud.md). |
 | Analytics - Loaded in DOM  | 5 | The Adobe Analytics tag was not detected. | Install the latest version of Analytics. <br><br>[Additional information](https://experienceleague.adobe.com/docs/analytics/implementation/home.html) |
 | Launch - Library loaded  | 5 | A `global _satellite` object was not found in the DOM, meaning that the tag library is either not installed or failing to execute. | Verify that the tag library is implemented on the page and is not blocked by subsequent script activities. |
 | Launch - Not have multiple embed scripts | 5 | Production sites should only load one embed code per page. | Verify that only the production library is loading on the page. |
 | Launch - `pageBottom` callback exists in `<body>` | 5 | The required `_satellite.pageBottom()` callback was not found within the `<body>` of the page. This test fails if the `pageBottom` call isn't found at all on the page, or if it is in the `<head>` tag (or some other unexpected location). It will only pass if `pageBottom` is found somewhere within the `<body>` tag. | Add the inline script immediately prior to the closing `</body>` tag to ensure proper tags functionality.<br><br>[Additional information](../../tags/ui/client-side/asynchronous-deployment.md) |
 | Launch - `pageBottom` callback should not exist when asynchronously deployed | 5 | The `_satellite.pageBottom()` callback was found on the page, which should not be the case when tags are asynchronously deployed. | Remove the `_satellite.pageBottom()` script to enable proper tags functionality. <br><br>[Additional information](../../tags/ui/client-side/asynchronous-deployment.md) |
-| Experience Cloud ID Service - Code presence | 5 | The Experience Cloud ID Service code was not found. Using Experience Cloud IDs (ECIDs) is highly recommended to ensure you get the most value out of your Experience Cloud solutions and is critical to ID management across Experience Cloud solutions. | Install the most recent version of ECID.<br><br>[Additional information](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) |
-| Experience Cloud ID Service - Cookie presence | 5 | The `AMCV_` cookie was not found. You must instantiate a visitor object from the `VisitorAPI.js` code. | If this is a tags implementation, verify that the AdobeOrg ID is properly entered into the ECID tool. <br><br>[Additional information](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html) |
-| Experience Cloud ID Service - MID value present | 5 | The MID value was not found in the `AMCV_` cookie. | Test again to check for any ECID API latency. If the condition persists, contact Adobe Customer Care. <br><br>[Additional information](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html)|
+| Visitor ID Service - Code presence | 5 | The Visitor ID Service code was not found. Using Experience Cloud IDs (ECIDs) is highly recommended to ensure you get the most value out of your Experience Cloud solutions and is critical to ID management across Experience Cloud solutions. | Install the most recent version of ECID.<br><br>[Additional information](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) |
+| Visitor ID Service - Cookie presence | 5 | The `AMCV_` cookie was not found. You must instantiate a visitor object from the `VisitorAPI.js` code. | If this is a tags implementation, verify that the AdobeOrg ID is properly entered into the ECID tool. <br><br>[Additional information](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html) |
+| Visitor ID Service - MID value present | 5 | The MID value was not found in the `AMCV_` cookie. | Test again to check for any ECID API latency. If the condition persists, contact Adobe Customer Care. <br><br>[Additional information](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html)|
 | Target - Code Presence | 5 | Adobe Target should be defined in the DOM. | Install the most recent version of Target (at.js). <br><br>[Additional information](https://experienceleague.adobe.com/docs/target/using/implement-target/implementing-target.html) |
 | Target - Library loaded in `<head>` | 4 | The Target library should be loaded in the `<head>` tag. | Check to be sure that the Target library is loaded in the `<head>` tag. <br><br>[Additional information](https://experienceleague.adobe.com/docs/target/using/implement-target/implementing-target.html) |
-
-{style="table-layout:auto"}

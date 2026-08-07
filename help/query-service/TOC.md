@@ -5,6 +5,7 @@ breadcrumb-title: Query Service Guide
 user-guide-description: Use standard SQL to query data within the data lake in Experience Platform.
 feature: Queries
 role: User,Developer
+nudge: true
 ---
 
 # Adobe Experience Platform Query Service {#query}
@@ -17,6 +18,7 @@ role: User,Developer
 - Data Distiller {#data-distiller}
     - [Overview](data-distiller/overview.md)
     - [License usage](data-distiller/license-usage.md)
+    - [Long-term personalization](data-distiller/long-term-personalization.md)
     - Derived datasets {#derived-datasets}
         - [Overview](data-distiller/derived-datasets/overview.md)
         - [Create derived datasets with SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -33,7 +35,7 @@ role: User,Developer
         - [Exploratory data analysis](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
         - [Engineer features for ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
         - [Export data to ML environments](data-distiller/ml-feature-pipelines/export-data.md)
-        - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+        - {hide-from-toc} [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
     - [Summit 2025 Session](data-distiller/top-tips-to-maximize-value.md)
 - Data Distiller statistics and machine learning {#advanced-statistics}
     - [Overview](advanced-statistics/overview.md)
@@ -99,6 +101,7 @@ role: User,Developer
     - [UI overview](ui/overview.md)
     - [Query Editor user guide](ui/user-guide.md)
     - [Query templates](ui/query-templates.md)
+    - [Data Distiller Accelerators](ui/accelerators.md)
     - [Parameterized queries](ui/parameterized-queries.md)
     - [Query schedules](ui/query-schedules.md)
     - [Query logs](ui/query-logs.md)
@@ -139,5 +142,5 @@ role: User,Developer
     - [Prepared statements](sql/prepared-statements.md)
 - [Frequently asked questions](troubleshooting-guide.md)
 - [IP address allowlist](ip-address-allowlist.md)
-- [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
+- [API reference](https://developer.adobe.com/experience-platform-apis/references/query-service)
 - [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

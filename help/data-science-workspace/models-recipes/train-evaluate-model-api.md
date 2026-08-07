@@ -5,6 +5,21 @@ title: Train and Evaluate a Model using the Sensei Machine Learning API
 type: Tutorial
 description: This tutorial will show you how to create, train, and evaluate a Model using Sensei Machine Learning API calls.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
+TQID: https://experienceleague.adobe.com/wRFVt9xogecMJh5GYNjZhreBN07-cr7pqClWwkjohFU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Train and evaluate a model using the [!DNL Sensei Machine Learning] API
 
@@ -20,7 +35,7 @@ This tutorial will show you how to create, train, and evaluate a Model using API
 
 Follow the [Import a packaged Recipe using the API](./import-packaged-recipe-api.md) for creating an Engine, which is required to train and evaluate a Model using the API.
 
-Follow the [Experience Platform API authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) to start making API calls.
+Follow the [Experience Platform API authentication tutorial](/help/landing/api-authentication.md) to start making API calls.
 
 From the tutorial you should now have the following values:
 
@@ -525,3 +540,5 @@ The following is the Response notifying that the Experiment is successfully dele
 ## Next steps
 
 This tutorial went over how to consume the APIs to create an Engine, an Experiment, scheduled Experiment Runs, and trained Models. In the [next exercise](./score-model-api.md), you will be making predictions by scoring a new dataset using the top performing trained model.
+
+

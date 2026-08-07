@@ -3,6 +3,16 @@ title: Test And Submit Your Source
 description: The following document provides steps on how to test and verify a new source using the Flow Service API and integrate a new source through Self-Serve Sources (Streaming SDK).
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
 badge: Beta
+TQID: https://experienceleague.adobe.com/HeRMiAbZSKiuZmt-oZkzEAbS6R03uikBbaJZMpP1yyY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Test and Submit your source
 
@@ -12,7 +22,7 @@ badge: Beta
 
 The final steps to integrating your new source to Adobe Experience Platform using Self-Serve Sources (Streaming SDK) are to test and submit your new source. Once you have completed your connection specification and updated the streaming flow specification, you can start testing your source's functionality through either the API or the UI. When successful, you can then submit your new source by contacting your Adobe representative.
 
-The following document provides steps on how to test and debug your source using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following document provides steps on how to test and debug your source using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -104,3 +114,5 @@ Finally, you must retrieve your dataflow's streaming endpoint. This endpoint wil
 ## Submit your source
 
 Once your source is able to complete the entire workflow you can proceed to contact your Adobe representative and submit your source for integration across other Experience Platform organizations.
+
+

@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Geo Interaction Details Data Type
 description: Learn about the Geo Interaction Details XDM data type.
 exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
+TQID: https://experienceleague.adobe.com/eZFOzS1giUeQzb-33mLYEVIwd-9qmDsDdvwiZ3AgGSQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Geo interaction details] data type
 

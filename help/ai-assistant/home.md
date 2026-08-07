@@ -2,6 +2,39 @@
 title: AI Assistant (Legacy) in Adobe Experience Platform Overview
 description: Learn about AI Assistant (Legacy), its nuances and use cases, and how you can use it to expedite your workflow with Adobe Experience Platform and Real-Time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
+TQID: https://experienceleague.adobe.com/-TALMu9apV404SYDSgl1lM6crpNZbFNIGN7gHvwkwaM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+    internal-label: AI Assistant
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # AI Assistant (Legacy) in Adobe Experience Platform
 
@@ -87,9 +120,12 @@ You can ask AI Assistant (Legacy) questions about your operational insights in t
 | Audiences | <ul><li>Audience count</li><li>Audience type (streaming or batch)</li><li>Creation/modification dates</li><li>Activation status</li><li>Profile count</li><li>Duplicate audiences</li><li>Audience definition search</li><li>Audience - audience relationship</li><li>Audience - attribute relationship</li><li>Audience - dataset relationship</li><li>Audience - destination relationship</li><li>Name search</li><li>Name and ID search | <ul><li>Audience overlaps</li><li>Audience activation</li><li>Audience - campaign relationships</li><li>Audit</li><li>Create/modification</li><li>Labels</li><li>Profile qualification trends</li></ul> |
 | Dataflows | <ul><li>Dataflow counts</li><li>Dataflow status</li><li>Dataflow - dataset relationship</li><li>Dataflow - source relationship</li></ul>| <ul><li>Creation/modification</li><li>Dataflow-batch relationships</li><li>Ingest profile count</li></ul> |
 | Datasets | <ul><li>Dataset count</li><li>Profile enable status</li><li>Creation/modification date</li><li>Dataset - schema relationship</li><li>Dataset - audience relationship</li><li>Dataset - attribute relationship</li><li>Dataset - dataflow relationship</li><li>Dataset size</li><li>Number of rows</li><li>Name search </li><li>Name and ID search</li></ul> | <ul><li>Audit</li><li>Created by</li><li>Dataset - batch relationship</li><li>Dataset creation/modification</li><li>Number of profiles</li><li>Value search</li></ul> |
+| Data Models (Federated Audience Composition) | <ul><li>Data model counts</li><li>Name search</li><li>Data model and schema relationship</li><li>Link properties</li><li>Status</li><li>Creation and modification dates</li><li>Link-data model relationship</li></ul> | |
 | Destinations | <ul><li>Configured destination counts</li><li>Destination - audience relationship</li><li>Destination attribute relationship</li></ul> | <ul><li>Account set up</li><li>Account credential information</li><li>Unique profiles activated</li></ul> |
+| Federated Databases (Federated Audience Composition) | <ul><li>Database count</li><li>Database name</li><li>Database type</li><li>Created/modified dates</li><li>Status</li></ul> | |
 | Journeys | <ul><li>Counts</li><li>Name search</li><li>Name and ID search</li><li>Journey status</li><li>Triggered status (audience vs. events)</li><li>Creation/modification dates</li><li>Recurring frequency</li></ul> | <ul><li>Attributes - journey relationships</li><li>Audit</li><li>Creation/modification</li><li>Created by</li><li>Events</li><li>Journey - dataset</li><li>Journey - schema</li><li>Offers</li><li>Profile qualification trends</li><li>Step events</li></ul> |
 | Schemas | <ul><li>Schema counts</li><li>Creation/modification date</li><li>Schema - attribute relationship</li><li>Schema - dataset relationship</li><li>Schema - audience relationship</li><li>Profile enable status</li><li>Name search</li><li>Name and ID search</li></ul> | <ul><li>Audit</li><li>Creation/modification</li><li>Created by</li><li>Field groups</li><li>Identities</li><li>Identity namespaces</li><li>Labels</li><li>Number of profiles</li></ul> |
+| Schemas (Federated Audience Composition) | <ul><li>Schema counts</li><li>Schema name/label search</li><li>Creation and modification dates</li><li>Schema-database relationship</li><li>Audience type schemas</li></ul> | <ul><li>Schema-composition relationship</li><li>Schema properties</li></ul> |
 | Sources | <ul><li>Account counts</li><li>Account status</li><li>Active/inactive dataflows for each account</li><li>Source connector - dataflow relationship</li><li>Source account - dataflow relationship</li></ul> | <ul><li>Account credentials information</li><li>Account set up</li><li>Data ingestion metrics</li><li>Number of profiles</li><li>Source - batch relationships</li></ul> |
 
 {style="table-layout:auto"}

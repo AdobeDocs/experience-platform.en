@@ -4,12 +4,21 @@ title: Delete destinations
 type: Tutorial
 description: This tutorial lists the steps to delete an existing destination in the Adobe Experience Platform UI
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
+TQID: https://experienceleague.adobe.com/RzgP2Pf1j4arjAwC6jNg6CofW-2tb7NYpmWumTJFdes
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Delete destinations {#delete-destinations}
 
 ## Overview {#overview}
 
-In the Adobe Experience Platform user interface, you can delete existing connections to destinations.
+In the [!DNL Adobe Experience Platform] user interface, you can delete existing connections to destinations.
 
 Deleting a destination removes any existing dataflows to that destination. All audiences activated to the destinations that you delete are unmapped before the dataflow is deleted.
 
@@ -22,7 +31,7 @@ There are two ways you can delete destinations from the [!DNL Experience Platfor
 
 Follow the steps below to delete a destination from the [!UICONTROL Browse] tab.
 
-1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. To view your existing destinations, select **[!UICONTROL Browse]** from the top header.
+1. Go to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destinations.
 
     ![Browse destinations](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -37,11 +46,11 @@ Follow the steps below to delete a destination from the [!UICONTROL Browse] tab.
 
     ![Confirm delete destination](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
-## Delete destinations from the destination details page{#delete-destination-details-page}
+## Delete destinations from the destination details page {#delete-destination-details-page}
 
 Follow the steps below to delete a destination from the destination details page.
 
-1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. To view your existing destinations, select **[!UICONTROL Browse]** from the top header.
+1. Go to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destinations.
 
     ![Browse destinations](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -69,6 +78,6 @@ Follow the steps below to delete a destination from the destination details page
 
     ![Delete destination confirm](..//assets/ui/delete-destinations/delete-destinations-delete.png)
 
-    >[!NOTE]
-    >
-    >Depending on server load, it can take a few minutes for [!DNL Experience Platform] to delete the destination.
+>[!NOTE]
+>
+>Depending on server load, it can take a few minutes for [!DNL Experience Platform] to delete the destination.

@@ -5,6 +5,21 @@ title: Create a Veeva CRM Source Connection in the UI
 type: Tutorial
 description: Learn how to create a Veeva CRM source connection using the Adobe Experience Platform UI.
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
+TQID: https://experienceleague.adobe.com/krTyH1YFzy-ck3kYpPwe6a9a2f-zjXwd6s-SYQ7Oaqg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # Create a [!DNL Veeva CRM] source connection in the UI
 

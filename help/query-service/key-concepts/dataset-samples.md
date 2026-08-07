@@ -2,6 +2,15 @@
 title: Dataset Samples
 description: Query Service sample datasets enable you to conduct exploratory queries on big data with greatly reduced processing time at the cost of query accuracy. This guide provides information on how to manage your samples for approximate query processing
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
+TQID: https://experienceleague.adobe.com/ik21VPmbtGkLNZVLPo61MGLQ4htulpmLxtSi--y7ABA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Dataset samples
 

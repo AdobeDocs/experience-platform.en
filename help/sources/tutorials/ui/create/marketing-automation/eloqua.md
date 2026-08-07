@@ -2,6 +2,29 @@
 title: Connect Oracle Eloqua (V2) to Experience Platform in the UI
 description: Learn how to connect your Oracle Eloqua account to Experience Platform in the UI.
 exl-id: 87b6d2e2-fd0b-4ca7-860c-01957712ec2a
+TQID: https://experienceleague.adobe.com/d3-xkZdW2T2Jm7eYW7EobC89rej-8lP1OUj9u4Oei3Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Connect [!DNL Oracle Eloqua] (V2) to Experience Platform in the UI
 
@@ -119,7 +142,6 @@ Once you finish updating your calculated fields, select **[!UICONTROL Next]** to
 >* **Contacts:** `C_DateModified`
 >* **Accounts:** `M_DateModified`
 >* **Activity:** `CreatedAt`
->* **Custom Objects:** `UpdatedAt`
 >* **Campaign:** `updatedAt`
 
 With your mapping complete, you can now configure an ingestion schedule for your dataflow. Set your [!UICONTROL Frequency] to `Once` to configure a one-time ingestion run. For incremental ingestion, you can set your [!UICONTROL Frequency] to `Hour`, `Day`, or `Week`. When using incremental ingestion, you must also configure the [!UICONTROL Interval] to define the amount of time that occurs between ingestion runs. For example, an ingestion frequency set to `Day` and  an interval set to `15` means that your dataflow is scheduled to ingest data every 15 days.

@@ -5,6 +5,19 @@ title: Create a streaming dataflow for a cloud storage source in the UI
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Experience Platform dataset. This tutorial provides steps to configure a new dataflow using your cloud storage base connector.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
+TQID: https://experienceleague.adobe.com/7qlcYJDZR50WGwtVG5XyO2wEarWBJBhluqohzTIKyIw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a streaming dataflow for a cloud storage source in the UI
 

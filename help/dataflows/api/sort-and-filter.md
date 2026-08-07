@@ -2,20 +2,27 @@
 title: Sorting and Filtering Responses in the Flow Service API
 description: This tutorial covers the syntax for sorting and filtering using query parameters in the Flow Service API, including some advanced use cases.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
+TQID: https://experienceleague.adobe.com/f5WCgSH7n95jQGrAMPA5OvvtayXlTaFGB2EtM7TggXc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Sorting and filtering responses in the Flow Service API
 
-When performing listing (GET) requests in the [Flow Service API](https://www.adobe.io/experience-platform-apis/references/flow-service/), you can use query parameters to sort and filter responses. This guide provides a reference for how to use these parameters for different use cases.
+When performing listing (GET) requests in the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/flow-service), you can use query parameters to sort and filter responses. This guide provides a reference for how to use these parameters for different use cases.
 
 ## Sorting
 
 You can sort responses by using an `orderby` query param. The following resources can be sorted in the API:
 
-* [Connections](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Connections)
-* [Source connections](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
-* [Target connections](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Target-connections)
-* [Flows](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
-* [Runs](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Runs)
+* [Connections](https://developer.adobe.com/experience-platform-apis/references/flow-service#tag/Connections)
+* [Source connections](https://developer.adobe.com/experience-platform-apis/references/flow-service#tag/Source-connections)
+* [Target connections](https://developer.adobe.com/experience-platform-apis/references/flow-service#tag/Target-connections)
+* [Flows](https://developer.adobe.com/experience-platform-apis/references/flow-service#tag/Flows)
+* [Runs](https://developer.adobe.com/experience-platform-apis/references/flow-service#tag/Runs)
 
 To use the parameter, you must set its value to the specific property you want to sort by (for example, `?orderby=name`). You can prepend the value with a plus sign (`+`) for ascending order or minus sign (`-`) for descending order. If no ordering prefix is provided, the list is sorted in ascending order by default.
 
@@ -46,7 +53,7 @@ Filtering can be applied generically on any property in an entity as long as the
 GET /sourceConnections?property=params.tableName==lead
 ```
 
-**Return all flows for a specific segment ID:**
+**Return all flows for a specific audience ID:**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a
@@ -56,7 +63,7 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 Multiple `property` filters can be included in a query provided they are separated by "and" characters (`&`). An AND relationship is assumed when combining filters, meaning that an entity must satisfy all filters in order for it to be included in the response.
 
-**Return all enabled flows for a segment ID:**
+**Return all enabled flows for a audience ID:**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a&property=state==enabled
@@ -84,7 +91,7 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 GET /sourceConnections?property=params.columns[].name==firstName
 ```
 
-**Look up the flow run ID for a destination by filtering on segment ID:**
+**Look up the flow run ID for a destination by filtering on audience ID:**
 
 ```http
 GET /runs?property=metrics.recordSummary.targetSummaries[].entitySummaries[].id==segment:068d6e2c-b546-4c73-bfb7-9a9d33375659
@@ -244,3 +251,5 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 ## Next steps
 
 This guide covered how to use the `orderby` and `property` query parameters to sort and filter responses in the Flow Service API. For step-by-step guides on how to use the API for common workflows in Experience Platform, see the API tutorials contained in the [sources](../../sources/home.md) and [destinations](../../destinations/home.md) documentation.
+
+

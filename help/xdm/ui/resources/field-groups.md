@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Create and Edit Schema Field groups in the UI
 description: Learn how to create and edit schema field groups in the Experience Platform user interface.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
+TQID: https://experienceleague.adobe.com/68ipWr1cvhjhlcBQRcODN-ZwnoWQK1MFLNMlGqFBCWk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create and edit schema field groups in the UI {#ui-create-and-edit}
 
@@ -17,6 +24,12 @@ In Experience Data Model (XDM), schema field groups are reusable components that
 A field group defines which class(es) it is compatible with, based on the behavior of the data that the field group represents (record or time series). This means that not all field groups are available for use with all classes.
 
 Adobe Experience Platform provides many standard field groups that cover a wide range of marketing use cases. However, you can also create and edit your own custom field groups to define additional concepts related to your business within your XDM schemas. This guide provides an overview of how to create, edit, and manage custom field groups for your organization in the Experience Platform UI.
+
+To browse field groups in the Schema Library and understand schema usage, filtering, and metadata that affects schema design and data ingestion, see [Explore schema resources in the UI](../explore.md).
+
+>[!NOTE]
+>
+>XDM actions are available from the inventory table and the resource detail view (**[!UICONTROL More]**). Full actions apply only to custom (tenant-defined) resources; standard resources have limited options. See [Manage schemas, classes, field groups, and data types: actions and deletion](../explore.md#xdm-resource-actions).
 
 ## Prerequisites {#prerequisites}
 
@@ -69,10 +82,6 @@ To add fields to a custom field group, start by selecting the **plus (+)** icon 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
 An **[!UICONTROL Untitled Field]** placeholder appears in in the canvas, and the right rail updates to show controls to configure the field's properties. See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure different field types.
-
-Under **[!UICONTROL Assign to]**, select the **[!UICONTROL Field Group]** option, then use the dropdown to select the desired field group from the list. You can start typing in the name of the field group to narrow down results.
-
-![](../../images/ui/resources/field-groups/select-field-group.png)
 
 Under **[!UICONTROL Assign to]**, select the **[!UICONTROL Field Group]** option, then use the dropdown to select the desired field group from the list. You can start typing in the name of the field group to narrow down results.
 

@@ -5,6 +5,13 @@ title: Query Templates API Endpoint
 description: This guide details the various query template API calls you can make using the Query Service API.
 role: Developer
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
+TQID: https://experienceleague.adobe.com/29-sMVEKEw6yHYjFF6yz2y1MAKKgRY8bl27AfVAvuQI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Query templates endpoint
 
@@ -35,7 +42,7 @@ The following is a list of available query parameters for listing query template
 
 | Parameter | Description |
 | --------- | ----------- |
-| `orderby` | Specifies the field by which to order results. The supported fields are `created` and `updated`. For example, `orderby=created` will sort results by created in ascending order. Adding a `-` before created (`orderby=-created`) will sort items by created in descending order. | 
+| `orderby` | Specifies the field by which to order results. The supported fields are `created` and `updated`. For example, `orderby=created` will sort results by created in ascending order. Adding a `-` before created (`orderby=-created`) will sort items by created in descending order. |
 | `limit` | Specifies the page size limit to control the number of results that are included in a page. (*Default value: 20*) |
 | `start` | Specify an ISO format timestamp to order the results. If no start date is specified, the API call will return the oldest created templates first, then continue to list more recent results.<br> ISO timestamps allow for different levels of granularity in the date and time. The basic ISO timestamps take the format of: `2020-09-07` to express the date September 7, 2020. A more complex example would be written as `2022-11-05T08:15:30-05:00` and corresponds to November 5, 2022, 8:15:30 am, US Eastern Standard Time. A timezone can be provided with a UTC offset and is denoted by the suffix "Z" (`2020-01-01T01:01:01Z`). If no timezone is provided, it defaults to zero. |
 | `property` | Filter results based on fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The supported fields are `name` and `userId`. The only supported operator is `==` (equal to). For example, `name==my_template` will return all query templates with the name `my_template`. |
@@ -183,7 +190,7 @@ GET /query-templates/{TEMPLATE_ID}
 ```
 
 | Property | Description |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{TEMPLATE_ID}` | The `id` value of the query template you want to retrieve. |
 
 **Request**

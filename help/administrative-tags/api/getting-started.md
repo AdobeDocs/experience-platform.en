@@ -4,6 +4,18 @@ title: Getting Started with the Unified Tags API
 description: The following documentation provides additional information that you need to know in order to successfully work with the Unified Tags API.
 role: Developer
 exl-id: 8f33707f-b46d-4054-802c-9e42ecabd9ba
+TQID: https://experienceleague.adobe.com/NqOjMm0CoMKRcl5C2iHvvj0Lbl--Q6KSMyBNoEF7yRE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Getting started with the Unified Tags API {#getting-started}
 
@@ -17,7 +29,7 @@ The Unified Tags API documentation provides example API calls to demonstrate how
 
 ## Required headers
 
-The API documentation also requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to Experience Platform endpoints. Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
+The API documentation also requires you to have completed the [authentication tutorial](/help/landing/api-authentication.md) in order to successfully make calls to Experience Platform endpoints. Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -34,3 +46,5 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 ## Next steps
 
 To being making calls using the Unified Tags API, select one of the available endpoint guides either using the left navigation or within the [developer guide overview](./overview.md)
+
+

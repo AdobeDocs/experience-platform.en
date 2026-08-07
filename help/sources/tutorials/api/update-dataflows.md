@@ -2,10 +2,17 @@
 title: Update Dataflows Using the Flow Service API
 description: Learn how to a dataflow, including its name, description, and schedule, using the Flow Service API.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
+TQID: https://experienceleague.adobe.com/A9CUkHDJHIucIGXLe8vI7I0z0CWGJu9LmCBX5sl-lUo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Update dataflows using the Flow Service API
 
-This tutorial covers the steps for updating a dataflow, including its basic information, schedule, and mapping sets using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for updating a dataflow, including its basic information, schedule, and mapping sets using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!TIP]
 >
@@ -288,3 +295,5 @@ A successful response returns your flow ID and an updated etag. You can verify t
 ## Next steps
 
 By following this tutorial, you have updated the basic information, schedule, and mapping sets of your dataflow using the [!DNL Flow Service] API. For more information on using source connectors, see the [sources overview](../../home.md).
+
+

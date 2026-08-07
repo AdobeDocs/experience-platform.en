@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Square Source Connector Overview
 description: Learn how to connect Square to Adobe Experience Platform using APIs or the user interface.
 exl-id: 18d33c5a-2955-4d0b-938c-52b6f72a444d
+TQID: https://experienceleague.adobe.com/e-AxZsEI3Y-D5KOnxPlE1jJUfgEQfm-ANqskfm3PCE8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL Square] connector
 

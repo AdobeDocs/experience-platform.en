@@ -2,6 +2,21 @@
 description: This page exemplifies the API call used to retrieve a destination server configuration through Adobe Experience Platform Destination SDK.
 title: Retrieve a destination server configuration
 exl-id: 1b375343-e793-4c91-856f-af66fe71822e
+TQID: https://experienceleague.adobe.com/L2gwbE-YNp5ZqfB-GHLXapHQtflMjiXkmjpUyBoHLAE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Retrieve a destination server configuration
 
@@ -20,7 +35,7 @@ For a detailed description of the capabilities used by destination servers, read
 
 ## Getting started with destination server API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Retrieve a destination server configuration {#retrieve}
 
@@ -88,7 +103,7 @@ A successful response returns HTTP status 200 with a list of destination server 
          "httpTemplate":{
             "requestBody":{
                "templatingStrategy":"PEBBLE_V1",
-               "value":"{ \"audience\": { \"named_user_id\": [ {% for named_user in input.profile.identityMap.named_user_id %} \"{{ named_user.id }}\"{% if not loop.last %},{% endif %} {% endfor %} ] }, {% if addedSegments(input.profile.segmentMembership.ups) is not empty %} \"add\": { \"adobe-segments\": [ {% for added_segment in addedSegments(input.profile.segmentMembership.ups) %} \"{{ destination.segmentNames[added_segment.key] }}\"{% if not loop.last %},{% endif %} {% endfor %} ] } {% endif %} {% if addedSegments(input.profile.segmentMembership.ups) is not empty and removedSegments(input.profile.segmentMembership.ups) is not empty %} , {% endif %} {% if removedSegments(input.profile.segmentMembership.ups) is not empty %} \"remove\": { \"adobe-segments\": [ {% for removed_segment in removedSegments(input.profile.segmentMembership.ups) %} \"{{ destination.segmentNames[removed_segment.key] }}\"{% if not loop.last %},{% endif %} {% endfor %} ] } {% endif %} }"
+               "value":"{ \"audience\": { \"named_user_id\": [ {% for named_user in input.profile.identityMap.named_user_id %} \"{{ named_user.id }}\"{% if not loop.last %},{% endif %} {% endfor %} ] }, {% if addedSegments(input.profile.segmentMembership) is not empty %} \"add\": { \"adobe-segments\": [ {% set first_added = true %} {% for namespace in input.profile.segmentMembership %} {% for segment in input.profile.segmentMembership[namespace.key] %} {% if segment.value.status == \"realized\" %} {% if not first_added %},{% endif %} \"{{ destination.namespaceSegmentNames[namespace.key][segment.key] }}\" {% set first_added = false %} {% endif %} {% endfor %} {% endfor %} ] } {% endif %} {% if addedSegments(input.profile.segmentMembership) is not empty and removedSegments(input.profile.segmentMembership) is not empty %} , {% endif %} {% if removedSegments(input.profile.segmentMembership) is not empty %} \"remove\": { \"adobe-segments\": [ {% set first_removed = true %} {% for namespace in input.profile.segmentMembership %} {% for segment in input.profile.segmentMembership[namespace.key] %} {% if segment.value.status == \"exited\" %} {% if not first_removed %},{% endif %} \"{{ destination.namespaceSegmentNames[namespace.key][segment.key] }}\" {% set first_removed = false %} {% endif %} {% endfor %} {% endfor %} ] } {% endif %} }"
             },
             "httpMethod":"POST",
             "contentType":"application/json",
@@ -121,7 +136,7 @@ A successful response returns HTTP status 200 with a list of destination server 
          "httpTemplate":{
             "requestBody":{
                "templatingStrategy":"PEBBLE_V1",
-               "value":"{ \"audience\": { \"named_user_id\": [ {% for named_user in input.profile.identityMap.named_user_id %} \"{{ named_user.id }}\"{% if not loop.last %},{% endif %} {% endfor %} ] }, {% if addedSegments(input.profile.segmentMembership.ups) is not empty %} \"add\": { \"adobe-segments\": [ {% for added_segment in addedSegments(input.profile.segmentMembership.ups) %} \"{{ destination.segmentNames[added_segment.key] }}\"{% if not loop.last %},{% endif %} {% endfor %} ] } {% endif %} {% if addedSegments(input.profile.segmentMembership.ups) is not empty and removedSegments(input.profile.segmentMembership.ups) is not empty %} , {% endif %} {% if removedSegments(input.profile.segmentMembership.ups) is not empty %} \"remove\": { \"adobe-segments\": [ {% for removed_segment in removedSegments(input.profile.segmentMembership.ups) %} \"{{ destination.segmentNames[removed_segment.key] }}\"{% if not loop.last %},{% endif %} {% endfor %} ] } {% endif %} }"
+               "value":"{ \"audience\": { \"named_user_id\": [ {% for named_user in input.profile.identityMap.named_user_id %} \"{{ named_user.id }}\"{% if not loop.last %},{% endif %} {% endfor %} ] }, {% if addedSegments(input.profile.segmentMembership) is not empty %} \"add\": { \"adobe-segments\": [ {% set first_added = true %} {% for namespace in input.profile.segmentMembership %} {% for segment in input.profile.segmentMembership[namespace.key] %} {% if segment.value.status == \"realized\" %} {% if not first_added %},{% endif %} \"{{ destination.namespaceSegmentNames[namespace.key][segment.key] }}\" {% set first_added = false %} {% endif %} {% endfor %} {% endfor %} ] } {% endif %} {% if addedSegments(input.profile.segmentMembership) is not empty and removedSegments(input.profile.segmentMembership) is not empty %} , {% endif %} {% if removedSegments(input.profile.segmentMembership) is not empty %} \"remove\": { \"adobe-segments\": [ {% set first_removed = true %} {% for namespace in input.profile.segmentMembership %} {% for segment in input.profile.segmentMembership[namespace.key] %} {% if segment.value.status == \"exited\" %} {% if not first_removed %},{% endif %} \"{{ destination.namespaceSegmentNames[namespace.key][segment.key] }}\" {% set first_removed = false %} {% endif %} {% endfor %} {% endfor %} ] } {% endif %} }"
             },
             "httpMethod":"POST",
             "contentType":"application/json",
@@ -163,6 +178,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | -------- | ----------- |
 | `{INSTANCE_ID}` | The ID of the destination server configuration you want to retrieve. |
 
+{style="table-layout:auto"}
+
 +++
 
 +++Response
@@ -187,7 +204,7 @@ A successful response returns HTTP status 200 with the configuration of the dest
          "httpTemplate":{
             "requestBody":{
                "templatingStrategy":"PEBBLE_V1",
-               "value":"{ \"audience\": { \"named_user_id\": [ {% for named_user in input.profile.identityMap.named_user_id %} \"{{ named_user.id }}\"{% if not loop.last %},{% endif %} {% endfor %} ] }, {% if addedSegments(input.profile.segmentMembership.ups) is not empty %} \"add\": { \"adobe-segments\": [ {% for added_segment in addedSegments(input.profile.segmentMembership.ups) %} \"{{ destination.segmentNames[added_segment.key] }}\"{% if not loop.last %},{% endif %} {% endfor %} ] } {% endif %} {% if addedSegments(input.profile.segmentMembership.ups) is not empty and removedSegments(input.profile.segmentMembership.ups) is not empty %} , {% endif %} {% if removedSegments(input.profile.segmentMembership.ups) is not empty %} \"remove\": { \"adobe-segments\": [ {% for removed_segment in removedSegments(input.profile.segmentMembership.ups) %} \"{{ destination.segmentNames[removed_segment.key] }}\"{% if not loop.last %},{% endif %} {% endfor %} ] } {% endif %} }"
+               "value":"{ \"audience\": { \"named_user_id\": [ {% for named_user in input.profile.identityMap.named_user_id %} \"{{ named_user.id }}\"{% if not loop.last %},{% endif %} {% endfor %} ] }, {% if addedSegments(input.profile.segmentMembership) is not empty %} \"add\": { \"adobe-segments\": [ {% set first_added = true %} {% for namespace in input.profile.segmentMembership %} {% for segment in input.profile.segmentMembership[namespace.key] %} {% if segment.value.status == \"realized\" %} {% if not first_added %},{% endif %} \"{{ destination.namespaceSegmentNames[namespace.key][segment.key] }}\" {% set first_added = false %} {% endif %} {% endfor %} {% endfor %} ] } {% endif %} {% if addedSegments(input.profile.segmentMembership) is not empty and removedSegments(input.profile.segmentMembership) is not empty %} , {% endif %} {% if removedSegments(input.profile.segmentMembership) is not empty %} \"remove\": { \"adobe-segments\": [ {% set first_removed = true %} {% for namespace in input.profile.segmentMembership %} {% for segment in input.profile.segmentMembership[namespace.key] %} {% if segment.value.status == \"exited\" %} {% if not first_removed %},{% endif %} \"{{ destination.namespaceSegmentNames[namespace.key][segment.key] }}\" {% set first_removed = false %} {% endif %} {% endfor %} {% endfor %} ] } {% endif %} }"
             },
             "httpMethod":"POST",
             "contentType":"application/json",
@@ -215,7 +232,7 @@ A successful response returns HTTP status 200 with the configuration of the dest
 
 ## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 

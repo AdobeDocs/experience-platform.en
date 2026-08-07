@@ -5,6 +5,16 @@ title: Marketing Actions API Endpoint
 description: A marketing action, in the context of the Adobe Experience Platform Data Governance, is an action that an Experience Platform data consumer takes, for which there is a need to check for violations of data usage policies.
 role: Developer
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
+TQID: https://experienceleague.adobe.com/Gd3Uze-x2vmpxEPl2ZiLb-9uJGud8C-DRTdwllTgx1Q
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Marketing actions endpoint
 
@@ -14,7 +24,7 @@ You can manage marketing actions for your organization by using the `/marketingA
 
 ## Getting started
 
-The API endpoints used in this guide are part of the [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoints used in this guide are part of the [[!DNL Policy Service] API](https://developer.adobe.com/experience-platform-apis/references/policy-service). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Retrieve a list of marketing actions {#list}
 
@@ -244,3 +254,5 @@ curl -X DELETE \
 A successful response returns HTTP Status 200 (OK) with a blank response body. 
 
 You can confirm the deletion by attempting to [look up the marketing action](#look-up). You should receive an HTTP 404 (Not Found) error if the marketing action has been removed from the system.
+
+

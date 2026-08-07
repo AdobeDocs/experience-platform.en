@@ -3,6 +3,25 @@ title: Create and Activate an External Audience
 type: Tutorial
 description: Learn how to create an external audience in Adobe Experience Platform using the Experience Platform APIs.
 exl-id: 18271a29-1cda-4fdf-8c3d-0dc4c64428a5
+TQID: https://experienceleague.adobe.com/dWrBhVErisK4GplLPONSBELjenKvn1mchOj9VMGGJnE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 # Create and activate an external audience using the API
 
@@ -18,7 +37,7 @@ This tutorial requires a working understanding of the various Experience Platfor
 
 ### Required headers
 
-This tutorial also requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to [!DNL Experience Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+This tutorial also requires you to have completed the [authentication tutorial](/help/landing/api-authentication.md) in order to successfully make calls to [!DNL Experience Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -190,3 +209,5 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/{AUDIENCE_
 Once you've confirmed that the external audience has been successfully ingested, you can see it in Audience Portal and use it in downstream services such as destinations.
 
 For more information about Audience Portal, read the [Audience Portal UI guide](/help/segmentation/ui/audience-portal.md). For more information on destinations, read the [destinations overview](/help/destinations/home.md).
+
+

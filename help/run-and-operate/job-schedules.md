@@ -3,21 +3,20 @@ description: Learn how to inspect and troubleshoot scheduled batch processing jo
 solution: Experience Platform
 title: Inspect Job Schedules
 type: Tutorial
-hide: yes
 exl-id: ce855b19-66ab-4d3d-924e-fb9928676aa2
 ---
 # Inspect job schedules
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] are currently available as a limited release and only for the following Real-Time CDP jobs:
+>[!UICONTROL Job schedules] are currently available only for the following Real-Time CDP jobs:
 >
 > * Batch data lake ingestion
 > * Batch profile ingestion
-> * Batch sgmentation
-> * Batch destination activation.
+> * Batch segmentation
+> * Batch destination activation
 
-[!UICONTROL Job Schedules] provides a unified view of all scheduled batch processing jobs across your data pipeline—from ingestion through destination activation. Inspect execution status, identify scheduling conflicts, and diagnose configuration issues before they impact your business operations.
+[!UICONTROL Job Schedules] provides a unified view of all scheduled batch processing jobs across your data pipeline, from ingestion through destination activation. Inspect execution status, identify scheduling conflicts, and diagnose configuration issues before they impact your business operations.
 
 Use Job Schedules to investigate failures, optimize job timing, and understand dependencies between data lake ingestion, profile processing, segmentation, and destination activation. For guidance on resolving common configuration problems, see the documentation on [identifying job schedule anti-patterns](job-schedules-anti-patterns.md).
 
@@ -72,6 +71,10 @@ Use the time period selectors to choose how far back to look at scheduled jobs.
 * **Yesterday**: View jobs that ran yesterday.
 * **Last 7 days**: View jobs from the past week.
 
+When you select **[!UICONTROL Last 7 days]**, a calendar date picker becomes available. Select the calendar icon next to the displayed date range to open the picker and choose a specific 7-day window. Only 7-day ranges are supported.
+
+![The Last 7 days date range selector in Job Schedules showing a calendar pop-up for May 2026 with a seven-day range highlighted from May 19 to May 25.](assets/job-schedules/calendar-date-picker.png)
+
 ### Batch job schedules details {#job-schedules-details}
 
 The main view shows you when your batch jobs are scheduled to run throughout the day. You can:
@@ -101,7 +104,6 @@ As you review your job schedules, you may notice patterns that indicate configur
 These patterns can lead to job failures, incomplete data processing, and poor system performance. To learn how to identify and resolve these issues, see the documentation on [identifying job schedule anti-patterns](job-schedules-anti-patterns.md).
 
 When you need to investigate specific datasets or job runs, you can drill down into detailed views to see execution history, error messages, performance metrics, and dependencies. For information on viewing this detailed data, see the documentation on [viewing job details](job-schedules-details.md).
-
 
 ## Next steps {#next-steps}
 

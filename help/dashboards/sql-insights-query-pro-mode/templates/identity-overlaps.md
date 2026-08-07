@@ -2,6 +2,36 @@
 title: Audience Identity Overlaps
 description: Learn how to analyze audience identity overlaps using the Audience Identity Overlaps dashboard. Filter audiences, specify merge policies, and examine identity relationships to make data-driven decisions.
 exl-id: 355835b8-2a67-40b1-a0e8-6afef01ddc6a
+TQID: https://experienceleague.adobe.com/Gp3X3VJm6FV1YvtkrLHsu--wXLgJkW7IJzFBFxc6-AE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+subfeature_v2:
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+    internal-label: Audience segmentation
 ---
 # Audience identity overlaps
 
@@ -15,7 +45,7 @@ Use custom filters for targeted analysis of specific audiences and identity type
 
 The **[!UICONTROL Filters]** dialog appears. From this view, choose the global filters to configure your audience, merge policy, and the identities for comparison. Select your settings for analysis from each section's dropdown menu
 
-1. Select an **[!UICONTROL Audience]**: Choose the audience segment you want to analyze (for example, **Canada - Alberta**).
+1. Select an **[!UICONTROL Audience]**: Choose the audience you want to analyze (for example, **Canada - Alberta**).
 2. Specify a **[!UICONTROL Merge Policy]**: Define the merge policy that dictates how identities are combined across the selected audience (in the example screenshot, the **Default time based** policy is selected).
 3. Select an **[!UICONTROL Identity A]** and **[!UICONTROL  Identity B]** for comparison**: Choose the two identity types to compare. In the example, **Identity A** is selected as "crmId" and **Identity B** is selected as "email."
 4. **Set a date range**: Choose a predefined range like "Today" or manually set the start and end dates using the calendar fields.
@@ -40,7 +70,7 @@ The **[!UICONTROL Audience Identity Overlaps]** table displays identity overlaps
 
 | Column Name     | Description                   |
 |-----------------|-------------------------------|
-| **[!UICONTROL Audience Name]**     | The name of the audience being analyzed. This column identifies which audience segment is under review to ensure that the insights are focused on the intended target group. |
+| **[!UICONTROL Audience Name]**     | The name of the audience being analyzed. This column identifies which audience is under review to ensure that the insights are focused on the intended target group. |
 | **[!UICONTROL Identity A]** and **[!UICONTROL Identity B]** | The identities being compared (for example, `crmId` and `email`). Knowing which identity types are being compared helps you identify which identity resolution strategies contribute to audience overlap and optimize those relationships. |
 | **[!UICONTROL Overlap Count]**     | The count of profiles where both identities are present. This metric provides insights into the extent of identity overlap within the audience. This information is crucial for evaluating how effectively multiple identities are being resolved into unified profiles, which in turn can improve targeting and personalization strategies. |
 | **[!UICONTROL Identity A Count]**  | The total number of profiles in the selected audience that contain **Identity A**. Use this information to understand the prevalence of the primary identity type within the audience and assess its role in the overlap analysis. |

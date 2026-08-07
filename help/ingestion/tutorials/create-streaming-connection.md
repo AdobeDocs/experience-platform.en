@@ -5,6 +5,13 @@ title: Create a Streaming Connection Using the API
 type: Tutorial
 description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 exl-id: 23c03ace-795f-4a92-a220-c47ee86cec64
+TQID: https://experienceleague.adobe.com/nMFLuUObC0T5dDGbpsKduZ8xDmDOEk-0kigZFld0vyc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Creating a streaming connection using the API
 

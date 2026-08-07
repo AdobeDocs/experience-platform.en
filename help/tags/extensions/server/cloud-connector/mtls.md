@@ -2,6 +2,36 @@
 title: Mutual Transport Layer Security (mTLS) Overview
 description: Learn how you can use mTLS to securely retrieve public certificates issued by Adobe for Event Forwarding.
 exl-id: e8ee8655-213d-4d2a-93d4-d62824b53b1d
+TQID: https://experienceleague.adobe.com/EO4ttxcNABvLm-9pAmFCJvXZYDjGZDfTz-sJVVuj2cQ
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+    internal-label: Advertising
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+    internal-label: Event forwarding
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # Mutual Transport Layer Security ([!DNL mTLS]) overview
 
@@ -21,7 +51,7 @@ On the next page, select the environment you would like to use for this set up. 
 >
 >A property is limited to one development, one staging, and one production environment.
 
-| Environment | Description | 
+| Environment | Description |
 | --- | --- |
 | Development | The development environment is for team members to test libraries or changes in Event Forwarding.|
 | Staging | The staging environment is optional and allows approved team members to test and approve a library before it's published. |
@@ -43,7 +73,7 @@ To view the certificate details for an environment select the **[!UICONTROL Envi
 
 The following certificate details are displayed:
 
-| Field Name | Description | 
+| Field Name | Description |
 | --- | --- |
 | Certificate | Details of the certificate, which include:<ul><li>**Name**: The name of the cerificate.</li><li>**Date created**: The date when the certificate was created.</li><li>**Status**: The current status of the certificate:<ul><li>**Current**: The certificate is actively in use.</li><li>**Obsolete**: The certificate is not in use but hasn't expired yet. It can still be selected for use.</li><li>**Expired**: The certificate is expired, grayed out, and no longer available for use.</li></ul></ul>  |
 | Expires | Date the certificate will expire. |

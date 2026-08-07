@@ -5,10 +5,20 @@ title: Monitor Sources Dataflows Using the Flow Service API
 type: Tutorial
 description: This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the Flow Service API.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
+TQID: https://experienceleague.adobe.com/erscn4erHbl2SpX92Hq7H7fX-aUW67Cg49hejeGWL-0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Monitor sources dataflows using the Flow Service API
 
-This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!NOTE]
 >
@@ -230,3 +240,5 @@ A successful response returns details regarding your flow run, including informa
 ## Next steps
 
 By following this tutorial, you have retrieved metrics and error information on your dataflow using the [!DNL Flow Service] API. You can now continue to monitor your dataflow, depending on your ingestion schedule, to track its status and ingestion rates. For information on how to perform the same tasks using the user interface, see the tutorial on [monitoring dataflows using the user interface](../ui/monitor.md)
+
+

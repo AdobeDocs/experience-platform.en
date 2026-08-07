@@ -2,6 +2,38 @@
 title: Test an Adobe Target Implementation with Adobe Experience Platform Debugger
 description: Learn how to use Adobe Experience Platform Debugger to test and debug a website that is enabled with Adobe Target.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
+TQID: https://experienceleague.adobe.com/0rONlTRlBMQqPKeAhd8-mq62xqVwgH4jFjr5dcirr3o
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+    internal-label: Best practices
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+    internal-label: Troubleshooting
+  - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
+    internal-label: Hosts
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # Test an Adobe Target implementation with Adobe Experience Platform Debugger
 
@@ -63,7 +95,7 @@ The following values are captured:
 | [!DNL clientCode] | The identifier for your organization's account as recognized by Target.  |
 | [!DNL requestType] | The API that was used for the request. If using at.js 1.x, the value is `/json`. If using at.js 2.x, the value is `delivery`. |
 | [!DNL Audience Manager Blob] | Provides information on encrypted Audience Manager metadata referred to as the "blob". |
-| [!DNL Audience Location Hint] | The data collection region ID. This is a numeric identifier for the geographic location of a particular ID service data center. For more information, see the Audience Manager documentation on [DCS Region IDs, Locations, and Host Names](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html) and the Experience Cloud Identity Service guide on [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html#reference-a761030ff06c4439946bb56febf42d4c). |
+| [!DNL Audience Location Hint] | The data collection region ID. This is a numeric identifier for the geographic location of a particular Adobe Visitor ID Service data center. For more information, see the Audience Manager documentation on [DCS Region IDs, Locations, and Host Names](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html) and the Visitor ID Service guide on [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html#reference-a761030ff06c4439946bb56febf42d4c). |
 | [!DNL Browser Height] | The browser height in pixels. |
 | [!DNL Browser Time Offset] | The browser's time offset associated with its timezone. |
 | [!DNL Browser Width] | The browser width in pixels. |
@@ -85,7 +117,7 @@ The following values are captured:
 | [!DNL Screen Height] | The height of the screen in pixels. |
 | [!DNL Screen Width] | The width of the screen in pixels. |
 | [!DNL Supplemental Data ID] | A system-generated ID used to match visitors with corresponding Adobe Target and Adobe Analytics calls. See the [A4T troubleshooting guide](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/troubleshoot-a4t/a4t-troubleshooting.html?#section_75002584FA63456D8D9086172925DD8D) for more information. |
-| [!DNL vst] | The [Experience Cloud Identity Service API configuration](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html). |
+| [!DNL vst] | The [Visitor ID Service API configuration](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html). |
 | [!DNL webGLRenderer] | Provides information on the WebGL renderer used on the page, if applicable. |
 
 {style="table-layout:auto"}

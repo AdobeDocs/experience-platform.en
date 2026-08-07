@@ -4,6 +4,18 @@ title: Subscribe to Adobe I/O Event Notifications
 description: This document provides steps on how to subscribe to Adobe I/O event notifications for Adobe Experience Platform services. Reference information regarding available event types is also provided, along with links to further documentation on how to interpret returned event data for each applicable [!DNL Experience Platform] service.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
+TQID: https://experienceleague.adobe.com/YbSl4WsK5jaiQOq3bWBBBYX4AKA9WDTSI0Ss0CkEamU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Subscribe to Adobe I/O Event notifications
 
@@ -13,7 +25,7 @@ This document provides steps on how you can subscribe to Adobe I/O event notific
 
 ## Getting started
 
-This document requires a working understanding of webhooks and how to connect a webhook from one application to another. Refer to the [[!DNL I/O Events] documentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) for an introduction to webhooks.
+This document requires a working understanding of webhooks and how to connect a webhook from one application to another. Refer to the [[!DNL I/O Events] documentation](https://developer.adobe.com/events/docs/guides/runtime-webhooks/) for an introduction to webhooks.
 
 ## Create a webhook
 
@@ -81,7 +93,7 @@ In the next screen, provide a name and description for the event registration in
 
 ![](../images/notifications/registration-details.png)
 
-Further down on the same screen under the [!UICONTROL How to receive events] section, you can optionally configure how to receive events. **[!UICONTROL Webhook]** allows you to provide a custom webhook address to receive events, whereas **[!UICONTROL Runtime action]** allows you to do the same using [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+Further down on the same screen under the [!UICONTROL How to receive events] section, you can optionally configure how to receive events. **[!UICONTROL Webhook]** allows you to provide a custom webhook address to receive events, whereas **[!UICONTROL Runtime action]** allows you to do the same using [Adobe I/O Runtime](https://developer.adobe.com/app-builder/docs/intro_and_overview/).
 
 For this tutorial, select **[!UICONTROL Webhook]** and provide the URL of the webhook you created earlier. Once you are finished, select **[!UICONTROL Save configured events]** to complete the event registration.
 
@@ -99,3 +111,5 @@ By following this tutorial, you have registered a webhook to receive [!DNL I/O E
 * [[!DNL Flow Service] (sources) notifications](../../sources/notifications.md)
 
 See the [[!DNL Observability Insights] overview](../home.md) for more information on how you can monitor your activities on [!DNL Experience Platform] and [!DNL Privacy Service].
+
+

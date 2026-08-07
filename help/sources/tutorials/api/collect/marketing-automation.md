@@ -5,10 +5,23 @@ title: Create a Dataflow for Marketing Automation Sources Using the Flow Service
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a marketing automation system and bringing them into Adobe Experience Platform using source connectors and APIs.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
+TQID: https://experienceleague.adobe.com/KXO2to2u-oDC5FoU28dMrTzyrWnESaeNn0NDjenM5sk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a dataflow for marketing automation sources using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a marketing automation source and bringing them to Experience Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for retrieving data from a marketing automation source and bringing them to Experience Platform using [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!NOTE]
 >
@@ -100,7 +113,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../xdm/api/schemas.md).
 
@@ -654,3 +667,5 @@ By following this tutorial, you have created a source connector to collect data 
 
 * [Real-Time Customer Profile overview](../../../../profile/home.md)
 * [Data Science Workspace overview](../../../../data-science-workspace/home.md)
+
+

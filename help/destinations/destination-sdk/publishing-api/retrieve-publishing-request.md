@@ -2,6 +2,18 @@
 description: This page exemplifies the API call used to retrieve details about a destination publishing request through Adobe Experience Platform Destination SDK.
 title: Retrieve a destination publishing request
 exl-id: fceef12d-a52c-4259-a91e-7af88b132800
+TQID: https://experienceleague.adobe.com/tes1C-oqaSLtd7NKojnngO4OYiAebPqvdfYWiPAv1-E
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Retrieve a destination publishing request
 
@@ -26,7 +38,7 @@ Use the publish destinations API endpoint to submit a publishing request when:
 
 ## Getting started with destination publishing API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## List destination publish requests {#retrieve-list}
 
@@ -175,6 +187,6 @@ If you passed a `DESTINATION_ID` in the API call, the response returns HTTP stat
 
 >[!ENDTABS]
 
-## API error handling
+## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.

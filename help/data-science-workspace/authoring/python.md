@@ -5,6 +5,18 @@ title: Accessing Data Using Python in Data Science Workspace
 type: Tutorial
 description: The following document contains examples on how to access data in Python for use in Data Science Workspace.
 exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
+TQID: https://experienceleague.adobe.com/ZnNACjUyOdEHld7l1z8ksqitjc9oQIIuku3Tp2A8XQY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Accessing data using Python in Data Science Workspace 
 

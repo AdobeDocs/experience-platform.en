@@ -6,8 +6,26 @@ title: Data Requirements in Customer AI
 topic-legacy: Getting started
 description: Learn more about the required events, inputs, and outputs utilized by Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
+TQID: https://experienceleague.adobe.com/xgMO3T3fcu7ff-46cYQW3zmV9ZMmTiW9fSGnksvudLY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+    internal-label: Use cases
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+    internal-label: Behavioral data
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
-
 # Input and output in Customer AI 
 
 The following document outlines the different required events, inputs, and outputs utilized in Customer AI. 
@@ -139,9 +157,9 @@ The following are a selection of industry-specific custom event examples:
 | --- | --- |
 | Retail | In-store transaction<br>Sign up for club card<br>Clip mobile coupon. |
 | Entertainment | Purchase season membership <br> Stream video.|
-| Hospitality | Make restaurant reservation <br> Purchase loyalty points. | 
-| Travel | Add known traveler info Purchase miles. | 
-| Communications | Upgrade/downgrade/cancel plan. | 
+| Hospitality | Make restaurant reservation <br> Purchase loyalty points. |
+| Travel | Add known traveler info Purchase miles. |
+| Communications | Upgrade/downgrade/cancel plan. |
 
 Custom events must represent user-initiated actions in order to be selected. For example, "Email Send" is an action initiated by a marketer and not by the user, so it shouldn't be used as a custom event.  
 

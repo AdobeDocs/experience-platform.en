@@ -2,10 +2,17 @@
 title: Create a dataflow for Zendesk using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Zendesk using the Flow Service API.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
+TQID: https://experienceleague.adobe.com/zfOsLF0-qMoURGAZmhQG3NFNcyaZtXV0PFmnwcxT-D0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a dataflow for [!DNL Zendesk] using the [!DNL Flow Service] API
 
-The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL Zendesk] data to Experience Platform using the [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL Zendesk] data to Experience Platform using the [[!DNL Flow Service] API](<https://developer.adobe.com/experience-platform-apis/references/flow-service>).
 
 ## Getting started
 
@@ -29,7 +36,7 @@ For more information on authenticating your [!DNL Zendesk] source, see the [[!DN
 
 ## Connect [!DNL Zendesk] to Experience Platform using the [!DNL Flow Service] API
 
-The following tutorial walks you through the steps to create a [!DNL Zendesk] source connection and create a dataflow to bring [!DNL Zendesk] data to Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a [!DNL Zendesk] source connection and create a dataflow to bring [!DNL Zendesk] data to Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ### Create a base connection {#base-connection}
 
@@ -365,7 +372,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../../xdm/api/schemas.md).
 
@@ -437,7 +444,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 ### Create a mapping {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) with data mappings defined within the request payload.
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep) with data mappings defined within the request payload.
 
 **API format**
 
@@ -769,3 +776,4 @@ Delete your dataflow by performing a DELETE request to the [!DNL Flow Service] A
 ### Delete your account
 
 Delete your account by performing a DELETE request to the [!DNL Flow Service] API while providing the base connection ID of the account you want to delete. For complete API examples, read the guide on [deleting your source account using the API](../../delete.md).
+

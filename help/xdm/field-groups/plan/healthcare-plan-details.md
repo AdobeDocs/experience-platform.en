@@ -2,6 +2,13 @@
 title: Healthcare Plan Details Schema Field Group
 description: Learn about the Healthcare Plan Details schema field group.
 exl-id: 5a480c5b-74f8-48dd-858a-5cf2628dc7f0
+TQID: https://experienceleague.adobe.com/jQwPtDXiKRM87D2VJBNG9hY-2PzrkJXFq7C6Tc5VJag
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Healthcare Plan Details] schema field group
 

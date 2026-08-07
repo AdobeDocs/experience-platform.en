@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Catalog Service API Guide Appendix
 description: This document contains additional information to help you work with the Catalog API in Adobe Experience Platform.
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
+TQID: https://experienceleague.adobe.com/IcibZLmy1hwqPlWQ95xrI78EFXkjmhG7XXoWKTtci9M
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # [!DNL Catalog Service] API guide appendix
 

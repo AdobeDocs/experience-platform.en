@@ -3,6 +3,38 @@ keywords: Experience Platform;identity;identity service;troubleshooting;guardrai
 title: Guardrails for Identity Service
 description: This document provides information on use and rate limits for Identity Service data to help you optimize your use of the identity graph.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
+TQID: https://experienceleague.adobe.com/TxDQAH3mDss11-5alyyZG0e6ulXpvKuvwAWlaQ64oRY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+    internal-label: Troubleshooting
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+    internal-label: B2B
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+    internal-label: Get started
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Guardrails for [!DNL Identity Service] data
 
@@ -30,7 +62,7 @@ The following table outlines static limits applied to identity data.
 | Guardrail | Limit | Notes |
 | --- | --- | --- |
 | Number of identities in a graph | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity for this graph (**Note**: Real-Time Customer Profile is unaffected). Deletion is based on identity type and timestamp. The limit is applied at the sandbox level. For more information, read the section on [understanding the deletion logic](#deletion-logic). |
-| Number of links to an identity for a single batch ingestion | 50 | A single batch could contain anomalous identities that cause unwanted graph merges. To prevent this, Identity Service will not ingest identities that are already linked to 50 or more identities. |
+| Number of links to an identity for a single batch ingestion | 50 | If a single identity in a batch is linked to 50 or more other identities in the batch, the identity is considered invalid, and will be filtered out of the batch linkages. |
 | Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
 | Number of custom namespaces | None | There are no limits to the number of custom namespaces you can create. |
 | Number of characters for a namespace display name or identity symbol | None | There are no limits to the number of characters of a namespace display name or identity symbol. |
@@ -103,7 +135,7 @@ Deletion only happens to data in the Identity Service and not Real-Time Customer
 If you would like to preserve your authenticated events against the CRMID, then it is recommended that you change your primary IDs from ECID to CRMID. Read the following documents for steps on how to implement this change:
 
 * [Configure identity map for Experience Platform tags](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Identity data in the Experience Platform Web SDK](/help/collection/use-cases/identity/id-overview.md)
+* [Identity in Data Collection](/help/collection/identity/overview.md)
 
 ### Example scenarios
 

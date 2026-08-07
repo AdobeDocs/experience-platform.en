@@ -5,6 +5,16 @@ title: Data Governance Policies API Endpoint
 description: Data governance policies are rules your organization adopts that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform. The /policies endpoint is used for all API calls related to viewing, creating, updating, or deleting data governance policies.
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
+TQID: https://experienceleague.adobe.com/drRzpVXCNSmAKAM-rzNng6NOtjkFH83whP0IxCkFaiE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Data governance policies endpoint
 
@@ -16,7 +26,7 @@ Data governance policies are rules that describe the kinds of marketing actions 
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Policy Service] API](https://developer.adobe.com/experience-platform-apis/references/policy-service). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Retrieve a list of policies {#list}
 
@@ -692,7 +702,7 @@ curl -X GET \
 
 | Property | Description |
 | --- | --- |
-| `policyIds` | A list of core policy IDs that are to be enabled. Any core policies that are not included are set to `DISABLED` status and will not participate in evaluation. | 
+| `policyIds` | A list of core policy IDs that are to be enabled. Any core policies that are not included are set to `DISABLED` status and will not participate in evaluation. |
 
 **Response**
 
@@ -724,3 +734,5 @@ A successful response returns the updated list of enabled core policies under a 
 ## Next steps
 
 Once you have defined new policies or updated existing ones, you can use the [!DNL Policy Service] API to test marketing actions against specific labels or datasets and see whether your policies are raising violations as expected. See the guide on the [policy evaluation endpoints](./evaluation.md) for more information.
+
+

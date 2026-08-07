@@ -2,6 +2,18 @@
 title: Evolution from Audience Manager to Real-Time CDP
 description: Understand the considerations before planning your migration from Audience Manager to Adobe Real-Time CDP.
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
+TQID: https://experienceleague.adobe.com/Y4lLCzBp3q-WnWQ44n61hOSCzWPQ9LvU7ptUhz7mNls
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Evolution from Audience Manager to Real-Time CDP
 
@@ -17,13 +29,13 @@ Furthermore, think about the data sources that you currently use in Audience Man
 
 Adobe recommends that you categorize your segments as follows: 
 
-* Segments that can be sent to Experience Platform via the [[!UICONTROL Audience Manager Source Connector]](/help/sources/connectors/adobe-applications/audience-manager.md), as they have no data dependencies, no destination or activation challenges, and their segmentation rules can be created through the Real-Time CDP [segment builder](/help/segmentation/ui/segment-builder.md) later. 
+* Segments that can be sent to Experience Platform via the [[!UICONTROL Audience Manager Source Connector]](/help/sources/connectors/adobe-applications/audience-manager.md), as they have no data dependencies, no destination or activation challenges, and their segmentation rules can be created through the Real-Time CDP [Segment Builder](/help/segmentation/ui/segment-builder.md) later. 
 * Segments that have rules that can be supported but may have contain data that won't be available in Real-Time CDP.
 * Segments that cannot be created in Real-Time CDP and are missing functionality.
 
 >[!TIP]
 >
->Adobe Real-Time CDP offers [three types of segment evaluation](/help/segmentation/home.md#evaluate-segments): [!UICONTROL Batch], [!UICONTROL Streaming], and [!UICONTROL Edge]. Customers who use real-time segments in Audience Manager may be restricted by the current limitation of 500 streaming segments in Real-Time CDP. Read more about [segmentation guardrails](/help/profile/guardrails.md).
+>Adobe Real-Time CDP offers [three types of audience evaluation](/help/segmentation/home.md#evaluate-audiences): [!UICONTROL Batch], [!UICONTROL Streaming], and [!UICONTROL Edge]. Customers who use real-time segments in Audience Manager may be restricted by the current limitation of 500 streaming segments in Real-Time CDP. Read more about [segmentation guardrails](/help/profile/guardrails.md).
 
 ## 2. Which segments are critical to send through via [!UICONTROL Audience Manager Source Connector]?
 

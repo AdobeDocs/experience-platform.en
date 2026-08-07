@@ -2,12 +2,24 @@
 description: This page describes how to authenticate and start using Adobe Experience Platform Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name, and the destination authoring access control permission.
 title: Getting started with Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
+TQID: https://experienceleague.adobe.com/alsuk2QIp1-FinuS1dwhkNCC-3HQINeVZeriwDClrKo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Getting started 
 
 ## Overview {#overview}
 
-This page describes how to authenticate and start using Adobe Experience Platform Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name, and the destination authoring access control permission.
+This page describes how to authenticate and start using [!DNL Adobe Experience Platform] Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name, and the destination authoring access control permission.
 
 ## Terminology {#terminology}
 
@@ -15,30 +27,13 @@ This guide uses Experience Platform-specific concepts, such as organization and 
 
 ## Obtain required authentication credentials {#obtain-authentication-credentials}
 
-Destination SDK uses the [Adobe I/O](https://www.adobe.io/) gateway for authentication. To make API calls to Destination SDK endpoints, you must provide certain headers in your API calls. Work with the Adobe Exchange team to set up authentication for you to the [Adobe Developer Console](https://developer.adobe.com/console).
+Destination SDK uses the Adobe I/O gateway for authentication. To make API calls to Destination SDK endpoints, you must provide certain headers in your API calls. Work with the Adobe Exchange team to set up authentication for you to the [Adobe Developer Console](https://developer.adobe.com/console).
 
 To successfully make calls to Destination SDK API endpoints, follow the [Experience Platform authentication tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). Start the tutorial from the "[Generate an API key, organization ID, and client secret](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)" step. The Adobe Exchange team will handle the previous steps for you. Completing the authentication tutorial provides the values for each of the required headers in Destination SDK API calls, as shown below:
 
 * `x-api-key: {API_KEY}`, also referred to as Client ID
 * `x-gw-ims-org-id: {ORG_ID}`, also referred to as Organization ID
 * `Authorization: Bearer {ACCESS_TOKEN}`. The access token has an expiration time of 24 hours, expressed in milliseconds, so you will have to refresh it. To refresh the access token, repeat the steps outlined in the authentication tutorial.
-
-<!--
-
-### Obtain `Authorization: Bearer {ACCESS_TOKEN}`
-
-To obtain the `{ACCESS_TOKEN}`, you must generate a JWT token and exchange it for the access token. Follow the steps below:
-
-1. Follow the instructions in the [Generate JWT section](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) in the credentials guide.
-2. Follow the instructions in [Step 3: try it](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md) in the Service account connection guide.
-
-You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-ims-org-id: {ORG_ID}`, and `Authorization: Bearer {ACCESS_TOKEN}`.
-
->[!NOTE]
->
->The access token has an expiration time of 24 hours, expressed in milliseconds, so you will have to refresh it. To refresh the access token, repeat the steps outlined in this section.
-
--->
 
 ## Destination ownership and sandboxes {#destination-ownership}
 
@@ -74,5 +69,7 @@ By following the steps in this article, you obtained authentication credentials 
   * [Use Destination SDK to configure a streaming destination](guides/configure-destination-instructions.md)
   * [Use Destination SDK to configure a file-based destination](guides/configure-file-based-destination-instructions.md)
 
-* For all operations, refer to the [Destination Authoring API documentation](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
+* For all operations, see the [Destination Authoring API documentation](https://developer.adobe.com/experience-platform-apis/references/destination-authoring).
 * Use the [Destination Authoring API Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) to configure your destination using the Destination SDK API endpoints. To get started with Postman, see the [steps for importing environments and collections](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) and a [video guide for creating the Postman environment](https://video.tv.adobe.com/v/28832).
+
+

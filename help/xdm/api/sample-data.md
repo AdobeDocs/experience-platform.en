@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Sample Data API Endpoint
 description: The /sampledata endpoint in the Schema Registry API allows you to generate sample data mapped to the structure of any existing XDM schema.
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
+TQID: https://experienceleague.adobe.com/WOd6r69PzAffQt1SAVqIZJCLpyZEzkMW8R7pwXeKUxI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Sample data endpoint
 
@@ -13,7 +20,7 @@ Using the `/sampledata` endpoint in the [!DNL Schema Registry] API, you can gene
 
 ## Getting started
 
-The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 The sample data endpoint is part of the remote procedure calls (RPCs) that are supported by the [!DNL Schema Registry]. Unlike other endpoints in the [!DNL Schema Registry] API, RPC endpoints do not require additional headers like `Accept` or `Content-Type`, and do not use a `CONTAINER_ID`. Instead, they must use the `/rpc` namespace, as demonstrated in the API call below.
 
@@ -160,3 +167,4 @@ A successful response returns a sample data object for the specified schema.
     "xdm:repositoryLastModifiedBy": "string"
 }
 ```
+

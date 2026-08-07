@@ -2,6 +2,42 @@
 title: Extension Manifest
 description: Learn how to configure a JSON manifest file that informs Adobe Experience Platform how to properly consume your extension.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
+TQID: https://experienceleague.adobe.com/iJ8gwJaJa37G0hIvisujbf93Ez9deE7r5Shrirden-0
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+    internal-label: Advertising
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+    internal-label: Acrobat Sign
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+feature_v2:
+  - id: bef6f891-2e8a-425e-8f99-7ddf22070daa
+    internal-label: APIs
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+    internal-label: Sources
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+    internal-label: Properties
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # Extension manifest
 
@@ -25,7 +61,7 @@ An extension manifest must consist of the following:
 | `viewBasePath`                                   | The relative path to the subdirectory containing all your views and view-related resources (HTML, JavaScript, CSS, images). Experience Platform will host this directory on a web server and load iframe content from it. This is a required field and should not start with a slash. For example, if all your views are contained within `src/view/`, the value of `viewBasePath` would be `src/view/`.                                                                                                                                                                                                                                                                                                                                                                             |
 | `hostedLibFiles` *(Optional)*                    | Many of our users prefer hosting all tags-related files on their own server. This provides users an increased level of certainty regarding file availability at runtime and they can easily scan the code for security vulnerabilities. If the library portion of your extension needs to load JavaScript files at runtime, it is recommended you use this property to list those files. The listed files will be hosted alongside the tag runtime library. Your extension can then load the files via a URL retrieved using the [getHostedLibFileUrl](./turbine.md#get-hosted-lib-file) method.<br><br>This option contains an array with relative paths of 3rd party library files that need to be hosted.                                                                         |
 | `main` *(Optional)*                              | The relative path of a library module that should be executed at runtime.<br><br>This module will always be included in the runtime library and executed. Because the module is always included in the runtime library, we recommend only using a "main" module when absolutely necessary and keeping its code size minimal.<br><br>This module is not guaranteed to be executed first; other modules may be executed before it.                                                                                                                                                                                                                                                                                                                                                     |
-| `configuration` *(Optional)*                     | This describes the [extension configuration](./configuration.md) portion of the extension. This is necessary if you need users to provide global settings for the extension. See the [appendix](#config-object) for details on how this field should be structured.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | 
+| `configuration` *(Optional)*                     | This describes the [extension configuration](./configuration.md) portion of the extension. This is necessary if you need users to provide global settings for the extension. See the [appendix](#config-object) for details on how this field should be structured.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `events` *(Optional)*                            | An array of [event](./web/event-types.md) type definitions. See the appendix section on [type definitions](#type-definitions) for the structure of each object in the array.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `conditions` *(Optional)*                        | An array of [condition](./web/condition-types.md) type definitions. See the appendix section on [type definitions](#type-definitions) for the structure of each object in the array.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `actions` *(Optional)*                           | An array of [action](./web/action-types.md) type definitions. See the appendix section on [type definitions](#type-definitions) for the structure of each object in the array.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |

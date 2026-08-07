@@ -2,6 +2,36 @@
 title: Search endpoint
 description: Learn how to make calls to the /search endpoint in the Reactor API.
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
+TQID: https://experienceleague.adobe.com/zdBI249cv4BWflCTXBClxvi-zyLabGLwGaZ-rI1Glmc
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+    internal-label: Advertising
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+    internal-label: API
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # Search endpoint
 
@@ -36,7 +66,7 @@ For more in-depth information on how to use this functionality, refer to the [se
 
 ## Getting started
 
-The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
+The endpoint used in this guide is part of the [Reactor API](https://developer.adobe.com/experience-platform-apis/references/reactor). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
 
 ## Perform a search {#perform}
 
@@ -239,3 +269,5 @@ There are additional conventions for specific fields that appear in the API:
 | `name` | Exact match, case-sensitive |
 | `settings` | Text with a partial term analysis, case-insensitive |
 | `type` | Exact match, case-sensitive |
+
+

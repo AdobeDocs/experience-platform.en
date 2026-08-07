@@ -2,6 +2,28 @@
 description: Learn how to configure the partner schema for destinations built with Destination SDK.
 title: Partner schema configuration
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
+TQID: https://experienceleague.adobe.com/HGTfvHmF7wMm5BFb33T-T0u2NQNkM9HNaNAkz1GCEJA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Partner schema configuration
 
@@ -198,7 +220,7 @@ The example below shows both required source and destination mappings. When both
 
 {style="table-layout:auto"}
 
-As a result, both the **[!UICONTROL Source field]** and **[!UICONTROL Target field]** sections in the Experience Platform UI are greyed out.
+As a result, both the **[!UICONTROL Source field]** and **[!UICONTROL Target field]** sections in the Experience Platform UI are grayed out.
 
 ![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -223,12 +245,12 @@ The example below shows a required destination mapping. If only the destination 
 |---|---|---|---|
 |`requiredMappingsOnly`| Boolean | Optional | When this is set to true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define in the `requiredMappings` array.|
 |`requiredMappings.destination`| String | Required | Indicates the value of the target field. When only the destination field is specified, users can select a source field to map to the destination.|
-|`mandatoryRequired`| Boolean | Optional | Indicates whether the mapping should be marked as a [mandatory attribute](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes). |
-|`primaryKeyRequired`| Boolean | Optional | Indicates whether the mapping should be marked as a [deduplication key](../../../ui/activate-batch-profile-destinations.md#deduplication-keys).|
+|`mandatoryRequired`| Boolean | Optional | Indicates whether the mapping should be marked as a [mandatory attribute](../../../ui/batch-destinations-mapping-reference.md#mandatory-attributes). |
+|`primaryKeyRequired`| Boolean | Optional | Indicates whether the mapping should be marked as a [deduplication key](../../../ui/batch-destinations-mapping-reference.md#deduplication-keys).|
 
 {style="table-layout:auto"}
 
-As a result, the **[!UICONTROL Target field]** section in the Experience Platform UI is greyed out, while the **[!UICONTROL Source field]** section is active and users can interact with it. The **[!UICONTROL Mandatory key]** and **[!UICONTROL Deduplication key]** options are active, and users cannot change them.
+As a result, the **[!UICONTROL Target field]** section in the Experience Platform UI is grayed out, while the **[!UICONTROL Source field]** section is active and users can interact with it. The **[!UICONTROL Mandatory key]** and **[!UICONTROL Deduplication key]** options are active, and users cannot change them.
 
 ![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 

@@ -5,10 +5,17 @@ title: Delete a Dataflow Using the Flow Service API
 type: Tutorial
 description: Learn how to delete batch and streaming dataflows using the Flow Service API.
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
+TQID: https://experienceleague.adobe.com/Z7UYXXZQNH--E0B9GAma24TP4Q8fdXaEgMRWgC1PFQo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Delete a dataflow using the Flow Service API
 
-You can delete batch and streaming dataflows that contain errors or have become obsolete using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+You can delete batch and streaming dataflows that contain errors or have become obsolete using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 This tutorial covers the steps for deleting dataflows made with both batch and streaming sources using [!DNL Flow Service].
 
@@ -59,3 +66,5 @@ A successful response returns HTTP status 204 (No Content) and a blank body. You
 By following this tutorial, you have successfully used the [!DNL Flow Service] API to to delete an existing dataflow.
 
 For steps on how to perform these operations using the user interface, please refer to the tutorial on [deleting dataflows in the UI](../../tutorials/ui/delete.md)
+
+

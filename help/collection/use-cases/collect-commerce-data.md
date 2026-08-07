@@ -2,6 +2,31 @@
 title: Collect commerce, product, and order information using the Adobe Experience Platform Web SDK
 description: Learn how to add data related to products or a shopping cart using the Adobe Experience Platform Web SDK.
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
+TQID: https://experienceleague.adobe.com/2ISKS1Vq-MFW6Kw3AkNoIsS8m0SDsCGsawvZyfFQ4HU
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+    internal-label: Acrobat Sign
+  - id: dfc56824-e8b9-499e-85d4-21aedb507314
+    internal-label: Campaign
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a075b2c1-7748-4328-b7f6-343aa314616a
+    internal-label: Campaigns
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # Collect commerce, product, and order information
 
@@ -45,7 +70,7 @@ This section describes the fields available in the `commerce` object.
 
 Expand the section below to see an example of a Web SDK command using a field from the `commerce` object.
 
-+++`productViews`
++++ productViews
 
 A basic Web SDK `sendEvent` call setting the `productViews` field to `1`:
 
@@ -85,7 +110,7 @@ This section describes all the fields supported by the `order` object.
 
 Expand the section below to see an example of a Web SDK command using the `commerce` object.
 
-+++`Order` object example
++++ `Order` object example
 
 A Web SDK `sendEvent` call setting the `order` object that applies to multiple products in the `productListItems` array:
 
@@ -145,7 +170,7 @@ The product list indicates which products are related to the corresponding actio
 
 Expand the sections below to see examples of Web SDK commands using the `productListItems` object.
 
-+++`productListItems` example
++++ `productListItems` example
 
 A Web SDK `sendEvent` call setting the `productViews` for multiple products in the `productListItems` array:
 
@@ -173,7 +198,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`productListAdds` example
++++ `productListAdds` example
 
 A Web SDK `sendEvent` call setting the `productListAdds` event for multiple products in the `productListItems` array:
 
@@ -207,7 +232,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`checkouts` example
++++ `checkouts` example
 
 A Web SDK `sendEvent` call setting the `checkouts` event for multiple products in the `productListItems` array:
 

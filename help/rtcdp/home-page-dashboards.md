@@ -4,6 +4,16 @@ title: Real-Time Customer Data Platform Home Page and Dashboards
 description: Understand various dashboards, the home page, and the first-time user experience of Adobe Real-Time CDP.
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
+TQID: https://experienceleague.adobe.com/THfxsas5dP7HBk-tWzE43tkcZspHzw-wqAyKQa55xDU
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # [!DNL Real-Time Customer Data Platform] home page
 
@@ -21,7 +31,7 @@ The [!UICONTROL Getting started with Real-Time Customer Profile] widget is divid
 
 * **Ingest data into Experience Platform**: This widget directs you to the sources catalog. Use the sources catalog to select a source and ingest your data to Experience Platform. Select **[Configure sources]** to navigate to the sources catalog. For more information, read the [sources overview](../sources/home.md).
 * **Model data structures**: This widget directs you to the schemas overview. Use the schemas overview to browse for existing schemas or create a blueprint that describe the structure of your data. Select **[!UICONTROL Create schema]** to navigate to the schema creation interface. For more information, read the [schemas overview](../xdm/home.md).
-* **Build audiences**: This widget directs you to the Segment Builder in the UI. Use the Segment Builder to interact with Profile data elements and define the criteria for your segment definition. Select **[!UICONTROL Create audience]** to navigate to the Segment Builder. For more information, read the [Segmentation Service overview](../segmentation/home.md).
+* **Build audiences**: This widget directs you to Segment Builder in the UI. Use Segment Builder to interact with Profile data elements and define the criteria for your segment definition. Select **[!UICONTROL Create audience]** to navigate to Segment Builder. For more information, read the [Segmentation Service overview](../segmentation/home.md).
 * **Send data to destinations**: This widget directs you to the destinations catalog. Use the destinations catalog to select a destination that you can then connect to and send audiences to. Select **[!UICONTROL Set up destinations]** to navigate to the destinations catalog. For more information, read the [destinations overview](../destinations/home.md).
 
 ![The Experience Platform UI home page displaying the getting started widget](assets/platform-home/getting-started-widget.png)
@@ -70,7 +80,8 @@ Finally, the resources widget provides you with additional documentation resourc
 * [Connecting destinations](../destinations/home.md)
 * [Manage access](../access-control/abac/overview.md)
 
-<!-- ### Successful profile records
+<!-- 
+### Successful profile records
 
 In the leaderboard **[!UICONTROL Successful profile records]** shows the total number of records that have been successfully processed into the profile.
 
@@ -102,4 +113,5 @@ In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of
 
 The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Select **[!UICONTROL View datasets]** to see more details about the profile records.
 
-The number of failed profile records is updated hourly. -->
+The number of failed profile records is updated hourly. 
+-->

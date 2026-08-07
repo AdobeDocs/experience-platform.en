@@ -2,6 +2,16 @@
 title: CSV Template to Schema Conversion API Endpoint
 description: The /rpc/csv2schema endpoint in the Schema Registry API allows you to use CSV templates to automatically create Experience Data Model (XDM) schemas.
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
+TQID: https://experienceleague.adobe.com/5kR3-cOBH1lBfzP0iuY-Z3wmxJh4DlG2jWOBWh5CRRs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # CSV template to schema conversion API endpoint
 
@@ -9,7 +19,7 @@ The `/rpc/csv2schema` endpoint in the [!DNL Schema Registry] API allows you to a
 
 ## Getting started
 
-The `/rpc/csv2schema` endpoint is part of the [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Adobe Experience Platform API.
+The `/rpc/csv2schema` endpoint is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Adobe Experience Platform API.
 
 The `/rpc/csv2schema` endpoint is part of the remote procedure calls (RPCs) that are supported by the [!DNL Schema Registry]. Unlike other endpoints in the [!DNL Schema Registry] API, RPC endpoints do not require additional headers like `Accept` or `Content-Type`, and do not use a `CONTAINER_ID`. Instead, they must use the `/rpc` namespace, as demonstrated in the API calls below.
 
@@ -357,3 +367,5 @@ A successful response returns an export payload that was generated from the CSV 
 After generating the export payload from the CSV file, you can send that payload to the `/rpc/import` endpoint to generate the schema.
 
 See the [import endpoint guide](./import.md) for details on how to generate schemas from export payloads.
+
+

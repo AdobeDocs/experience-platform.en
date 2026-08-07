@@ -5,6 +5,7 @@ breadcrumb-title: Dashboards Guide
 user-guide-description: Learn how to visualize data in Experience Platform through customizable dashboards.
 feature: Dashboards
 role: Developer,User
+nudge: true
 ---
 
 # Adobe Experience Platform Dashboards {#dashboards}

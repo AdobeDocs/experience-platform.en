@@ -3,17 +3,32 @@ title: Create a new destination connection
 type: Tutorial
 description: Learn how to connect to a destination in Adobe Experience Platform, enable alerts, and set up marketing actions for your connected destination.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
+TQID: https://experienceleague.adobe.com/NbcgU4Ozh6CMWqCkAKn7hWMF-r6MGv0vih-mrwNWAvs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Create a new destination connection
 
 >[!IMPORTANT]
-> 
+>
 >* To connect to a destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
->* To connect to a destination that supports dataset exports,  you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To connect to a destination that supports dataset exports, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ## Overview {#overview}
 
-Before you can send audience data to a destination, you must set up a connection to your destination platform. This article shows you how to set up a new destination connection, to which you can then activate audiences or export datasets using the Adobe Experience Platform user interface.
+Before you can send audience data to a destination, you must set up a connection to your destination platform. This article shows you how to set up a new destination connection, to which you can then activate audiences or export datasets using the [!DNL Adobe Experience Platform] user interface.
 
 ## Find the desired destination in the catalog {#setup}
 
@@ -27,17 +42,15 @@ Before you can send audience data to a destination, you must set up a connection
    * **[!UICONTROL Activate]**. A connection has already been set up to this destination. This destination supports audience activation and dataset exports.
    * **[!UICONTROL Activate audiences]**. A connection has already been set up to this destination. This destination supports audience activation only.
    
-   For more information about the difference between these controls, you can also refer to the [Catalog](../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.
+   For more information about the difference between these controls, see the [Catalog](../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.
 
    Select either **[!UICONTROL Set up]**, **[!UICONTROL Activate]**, or **[!UICONTROL Activate audiences]**, depending on which control is available to you.
 
    ![Screenshot of the Experience Platform UI, showing the destinations catalog page with the Set up control highlighted.](../assets/ui/connect-destinations/set-up.png)
 
-   ![Screenshot of the Experience Platform UI, showing the destinations catalog page with the Activate audiences control highlighted.](../assets/ui/connect-destinations/activate-segments.png)
-
 3. If you selected **[!UICONTROL Set up]**, skip to the next step, to [authenticate](#authenticate) to the destination. 
    
-   If you selected **[!UICONTROL Activate]**, **[!UICONTROL Activate audiences]**, or **[!UICONTROL Export datasets]**, you can now see a list of existing destination connections. 
+   If you selected **[!UICONTROL Activate]** or **[!UICONTROL Activate audiences]** you can now see a list of existing destination connections. 
 
    Select **[!UICONTROL Configure new destination]** to establish a new connection to the destination.
 
@@ -77,13 +90,17 @@ Depending on the destination that you are connecting to, you might be asked to i
 >
 >The images below are used for illustration purposes only. The destination connection details vary between destinations. For detailed information about the connection details for your destination, read the **Connect to the destination** section in each [destination catalog](../catalog/overview.md) page (for example, [[!DNL Google Customer Match]](../catalog/advertising/google-customer-match.md#connect), [[!DNL Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md#connect), or [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)).
 
-**[!DNL Amazon S3] required and optional input parameters**
+>[!BEGINTABS]
+
+>[!TAB Amazon S3]
 
 ![Image showing the required and optional input parameters when connecting to an Amazon S3 destination.](../assets/ui/connect-destinations/connect-destination-amazons3-example.png)
 
-**[!DNL The Trade Desk] required and optional input parameters**
+>[!TAB The Trade Desk]
 
 ![Image showing the required and optional input parameters when connecting to a Trade Desk destination.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
+
+>[!ENDTABS]
 
 ### Set up file formatting options for exported files {#file-formatting-and-compression-options}
 
@@ -99,28 +116,22 @@ Some file-based destinations support audience activation to known customers, acc
 >
 >When exporting datasets, note that exports to JSON files are supported in a compressed mode only. Exports to [!DNL Parquet] files are supported in a compressed and uncompressed mode.
 
-![Image showing the data type selection control which allows users to select between audience activation and dataset exports.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
+![Image showing the data type selection control, which lets you choose between datasets, people lists, prospects, and audiences.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
 ### Enable destination alerts {#enable-alerts}
 
-1. (Optional) Select the destination dataflow alerts that you want to subscribe to. You can subscribe to alerts when creating a dataflow to receive alert messages regarding the status, success, or failure of your flow run. The available alerts differ based on the destination type (file-based or streaming) that you are connecting to. Read [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts.
+(Optional) Select the destination dataflow alerts that you want to subscribe to, then select **[!UICONTROL Next]**. Subscribe to alerts when creating a dataflow to receive alert messages regarding the status, success, or failure of your flow run. The available alerts differ based on the destination type (file-based or streaming) that you are connecting to. Read [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts.
 
-   ![The Configure new destination dialog with the in-context destination alerts subscription options highlighted.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
-
-2. Select **[!UICONTROL Next]**.
-
-   ![The Configure new destination dialog with the Next control highlighted, allowing the user to proceed to the next step in the workflow.](../assets/ui/connect-destinations/next.png)
+![The Configure new destination dialog with the destination alerts subscription options.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
 ## Select marketing actions {#select-marketing-actions}
 
-1. Select the marketing actions applicable to the data that you want to export to the destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [data usage policies overview](../../data-governance/policies/overview.md) page.
+Select the marketing actions applicable to the data that you want to export to the destination, then select **[!UICONTROL Save & Exit]** to save the destination configuration, or **[!UICONTROL Next]** to proceed to the audience data [activation flow](activation-overview.md). Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [data usage policies overview](../../data-governance/policies/overview.md) page.
 
-   ![The Configure new destination dialog with the available marketing actions highlighted. The available controls to complete the Connect to destination workflow are also highlighted.](../assets/ui/connect-destinations/governance.png)
-
-2. Select **[!UICONTROL Save & Exit]** to save the destination configuration, or select **[!UICONTROL Next]** to proceed to the audience data [activation flow](activation-overview.md).
+![The Configure new destination dialog showing the list of available marketing actions and the Save & exit and Create controls.](../assets/ui/connect-destinations/governance.png)
 
 ## Next steps {#next-steps}
 
-By reading this document, you have learned how to use the Experience Platform UI to establish a connection to a destination. As a reminder, the available and required connection parameters vary from destination to destination. You should also consult the destination documentation page in the [destinations catalog](/help/destinations/catalog/overview.md) for specific information about the required inputs and available options per destination type. 
+You now know how to use the Experience Platform UI to establish a connection to a destination. The available and required connection parameters vary from destination to destination. Consult the destination documentation page in the [destinations catalog](/help/destinations/catalog/overview.md) for specific information about the required inputs and available options per destination type.
 
-Next, you can proceed to [activating audiences](/help/destinations/ui/activation-overview.md) or [exporting datasets](/help/destinations/ui/export-datasets.md) to your destination.
+Next, proceed to [activating audiences](/help/destinations/ui/activation-overview.md) or [exporting datasets](/help/destinations/ui/export-datasets.md) to your destination.

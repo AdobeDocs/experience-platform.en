@@ -4,6 +4,21 @@ solution: Experience Platform
 title: Schema Registry API Guide
 description: The Schema Registry API allows developers to programmatically manage all schemas and related Experience Data Model (XDM) resources within Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
+TQID: https://experienceleague.adobe.com/vJJirubxD5D2tolsVNNY3ETu8YVeZSstUpjKMmd1ElY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # [!DNL Schema Registry] API guide
 
@@ -17,7 +32,7 @@ These endpoints are outlined below. Please visit the individual endpoint guides 
 >
 >XDM uses JSON Schema formatting to describe and validate the structure of ingested customer experience data. Before working with the Schema Registry API, it is strongly recommended that you review the [official JSON Schema documentation](https://json-schema.org/) for a better understanding of this underlying technology.
 
-To view all available endpoints and CRUD operations, visit the [Schema Registry API reference](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+To view all available endpoints and CRUD operations, visit the [Schema Registry API reference](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 ## Schemas
 
@@ -94,3 +109,4 @@ See the [audit log endpoint guide](./audit-log.md) for more information on the u
 ## Next steps
 
 To begin making calls using the Schema Registry API, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.
+

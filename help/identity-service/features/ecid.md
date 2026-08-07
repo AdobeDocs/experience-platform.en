@@ -4,8 +4,24 @@ solution: Experience Platform
 title: ECID Overview
 description: The Experience Cloud Identifier (ECID) is the client side module providing access to identity management, serving three primary functions.
 hide: true
-hidefromtoc: true
 exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
+TQID: https://experienceleague.adobe.com/NdtbYIxEjAmKBZ50IVhphyFgsog7vUDdM-MwidBFeyo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # ECID overview
 
@@ -25,7 +41,7 @@ Identifying your online users requires instrumentizing your site or mobile app w
 
 The following documentation provides further resources on understanding ECID across different Experience Platform and Experience Cloud applications:
 
-* To use ECID with website implementation, see the documentation for [Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html).
+* To use ECID with website implementation, see the documentation for the [Visitor ID Service (ECID)](https://experienceleague.adobe.com/docs/id-service/using/home.html).
 * To see how ECID is used with apps and mobile web content, see the documentation for [visitor tracking between an app and mobile web](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios).
 * Deploying these tools can be simple and easy to manage if you use [tags](../../tags/home.md).
 * See the [Privacy Service documentation](../../privacy-service/identity-data.md) for information on using ECID to facilitate compliance with privacy regulations like GDPR.

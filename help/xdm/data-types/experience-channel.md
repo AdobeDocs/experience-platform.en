@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Experience Channel Data Type
 description: Learn about the Experience channel Experience Data Model (XDM) data type.
 exl-id: 209654f7-0bde-439a-989c-ce2e41599105
+TQID: https://experienceleague.adobe.com/ztkh-QGjpud4jQ-6rTpePhUf5ITdyVcpc43qlTz855Q
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Experience channel] data type
 

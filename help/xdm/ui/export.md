@@ -4,6 +4,16 @@ title: Export XDM Schemas in the UI
 description: Learn how to export an existing schema to a different sandbox or organization in the Adobe Experience Platform user interface.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
+TQID: https://experienceleague.adobe.com/fzH5LC2MViIugJMfk5rTic5n3joGGz292UnVEon9204
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Export XDM schemas in the UI {#export-xdm-schemas-in-the-UI}
 
@@ -23,6 +33,10 @@ To address this need, the [!UICONTROL Schemas] workspace in the Adobe Experience
 ## Prerequisites
 
 While the Experience Platform UI allows you export XDM resources, you must use the Schema Registry API to import those resources into other sandboxes or organizations to complete the workflow. Refer to guide on [getting started with the Schema Registry API](../api/getting-started.md) for important information regarding required authentication headers before following this guide.
+
+>[!NOTE]
+>
+>If you cannot find actions such as **Delete** or **Copy JSON structure**, ensure you are working with a custom (tenant-defined) resource and accessing it from the table row menu or the detail view (**[!UICONTROL More]**). Action availability also depends on permissions and usage constraints. See [Manage schemas, classes, field groups, and data types: actions and deletion](./explore.md#xdm-resource-actions).
 
 ## Generate an export payload {#generate-export-payload}
 

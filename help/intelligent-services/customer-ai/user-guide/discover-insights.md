@@ -5,10 +5,40 @@ feature: Customer AI
 title: Discover Insights with Customer AI
 description: This document serves as a guide for interacting with service instance insights in the Intelligent Services Customer AI user interface.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
+TQID: https://experienceleague.adobe.com/ChexcCvlaKGZ43eoXm7xpgpJKkOJcZ6HX979rcMIabg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Discover insights with Customer AI
 
-Customer AI, as part of Intelligent Services provides marketers with the power to leverage Adobe Sensei to anticipate what your customers next action is going to be. Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale. This is accomplished without having to transform the business needs to a machine learning problem, picking an algorithm, training, or deployment.
+Customer AI, as part of Intelligent Services provides marketers with the power to leverage Adobe AI to anticipate what your customers next action is going to be. Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale. This is accomplished without having to transform the business needs to a machine learning problem, picking an algorithm, training, or deployment.
 
 This document serves as a guide for interacting with service instance insights in the Intelligent Services Customer AI user interface.
 
@@ -132,35 +162,35 @@ Hovering over any of the top influential factors further breaks down the data. Y
 
 ![Drilldown visualization showing a detailed breakdown of influential factors for a selected propensity bucket.](../images/insights/drilldown.png)
 
-Additionally, using drilldowns, you are able to compare a distribution factor if it occurs in two or more propensity buckets and create more specific segments with these values. The following example illustrates the first use case:
+Additionally, using drilldowns, you are able to compare a distribution factor if it occurs in two or more propensity buckets and create more specific audiences with these values. The following example illustrates the first use case:
 
 ![Comparison of distribution factors across propensity buckets, highlighting differences in influential factors.](../images/insights/drilldown-compare.png)
 
 You can see that profiles with low propensity to convert are less likely to have made a recent visit to the adobe.com webpages. The "Days since last webVisit" factor has only 8% coverage compared to 26% in medium propensity profiles. Using these numbers, you can compare the distribution within each bucket for the factor. This information can be used to infer that the recency in webvisit is not as influential in the low propensity bucket, as it is in medium propensity bucket.
 
-### Create a segment
+### Create an audience
 
-Selecting the **[!UICONTROL Create Segment]** button in any of the buckets for low, medium, and high propensity redirects you to the segment builder.
-
->[!NOTE]
->
->The **[!UICONTROL Create Segment]** button is only available if Real-Time Customer Profile is enabled for the dataset. For more information on how to enable Real-Time Customer Profile, visit the [Real-Time Customer Profile overview](../../../rtcdp/overview.md).
-
-![Button to create a segment from influential factors in Customer AI insights.](../images/insights/influential-factors-create-segment.png)
-
-![Button to create a segment from influential factors in Customer AI insights.](../images/insights/create-segment.png)
-
-The segment builder is used to define a segment. When selecting **[!UICONTROL Create Segment]** from the Insights page, Customer AI automatically adds the selected buckets information to the segment. To finish creating your segment, simply fill in the **Name** and **Description** containers located in the right rail of the segment builder user interface. After you have given the segment a name and description, select **[!UICONTROL Save]** in the top-right.
+Selecting the **[!UICONTROL Create audience]** button in any of the buckets for low, medium, and high propensity redirects you to Segment Builder.
 
 >[!NOTE]
 >
->Since the propensity scores are written to the individual profile, they are available in the Segment builder like any other profile attributes. When you navigate to the segment builder to create new segments you can see all the various propensity scores under your namespace Customer AI.
+>The **[!UICONTROL Create audience]** button is only available if Real-Time Customer Profile is enabled for the dataset. For more information on how to enable Real-Time Customer Profile, visit the [Real-Time Customer Profile overview](../../../rtcdp/overview.md).
 
-![Segment saving interface showing fields to input segment name and description before saving.](../images/insights/segment-saving.png)
+![Button to create an audience from influential factors in Customer AI insights.](../images/insights/influential-factors-create-segment.png)
 
-To view your new segment in the Experience Platform UI, select **[!UICONTROL Segments]** in the left navigation. The **[!UICONTROL Browse]** page appears and displays all available segments.
+![Button to create an audience from influential factors in Customer AI insights.](../images/insights/create-segment.png)
 
-![Segments dashboard displaying a list of all available segments in the Experience Platform UI.](../images/insights/Segments-dashboard.png)
+Segment Builder is used to create an audience. When selecting **[!UICONTROL Create audience]** from the Insights page, Customer AI automatically adds the selected buckets information to the audience. To finish creating your audience, simply fill in the **Name** and **Description** containers located in the right rail of the Segment Builder user interface. After you have given the audience a name and description, select **[!UICONTROL Save]** in the top-right.
+
+>[!NOTE]
+>
+>Since the propensity scores are written to the individual profile, they are available in Segment Builder like any other profile attributes. When you navigate to Segment Builder to create new audiences you can see all the various propensity scores under your namespace Customer AI.
+
+![Audience saving interface showing fields to input audience name and description before saving.](../images/insights/segment-saving.png)
+
+To view your new audience in the Experience Platform UI, select **[!UICONTROL Audiences]** in the left navigation. The **[!UICONTROL Browse]** page appears and displays all available audiences.
+
+![Audiences dashboard displaying a list of all available audiences in the Experience Platform UI.](../images/insights/Segments-dashboard.png)
 
 ## Historical performance {#historical-performance}
 

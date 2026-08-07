@@ -1,12 +1,30 @@
 ---
 title: Real-Time Customer Data Platform Insights Data Model B2B Edition
 description: Learn how to use SQL queries with the Real-Time Customer Data Platform Insights Data Models (B2B Edition) to customize your own Real-Time CDP reports for your marketing and KPI use cases.
-badgeB2B:
-  label="B2B Edition"
-  type="Informative"
-  url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions"
-  newtab=true
+badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
+TQID: https://experienceleague.adobe.com/5zA8YXF364wlpGwZsTXqu99TOhFsSWGboM3KPEzt3qg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+subfeature_v2:
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Real-Time CDP Insights data model B2B Edition
 

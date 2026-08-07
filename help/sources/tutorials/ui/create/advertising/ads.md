@@ -3,6 +3,23 @@ title: Connect Google Ads to Experience Platform Using The UI
 description: Learn how to connect your Google Ads account to Adobe Experience Platform in the UI.
 badge: Beta
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
+TQID: https://experienceleague.adobe.com/1yjXJFEWfzNTFVX-srzcqEfPmVrDcSHbXV55vTpF1kU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Connect [!DNL Google Ads] to Experience Platform using the UI
 
@@ -29,27 +46,35 @@ If you already have a valid [!DNL Google Ads] connection, you may skip the remai
 
 For information on authentication, read the [[!DNL Google Ads] source overview](../../../../connectors/advertising/ads.md).
 
-## Connect your Google Ads account
+## Connect your [!DNL Google Ads] account
 
-In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. You can select the appropriate category in the *[!UICONTROL Categories]* panel. Alternatively, you can use the search bar to navigate to the specific source that you want to use.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the Sources workspace. You can browse available connectors by category or use the search bar to find [!DNL Google Ads] directly.
 
-To use [!DNL Google Ads], select the **[!UICONTROL Google Ads]** source card under *[!UICONTROL Advertising]* and then select **[!UICONTROL Add data]**.
+To use [!DNL Google Ads], select the **[!UICONTROL Google Ads]** source card under [!UICONTROL Advertising], and then select **[!UICONTROL Add data]**.
 
 ![The sources catalog in the Experience Platform UI.](../../../../images/tutorials/create/ads/catalog.png).
 
 ### Existing account
 
-To use an existing account, select **[!UICONTROL Existing account]** and then select the account that you want to use from the list of accounts on the interface.
+To use an existing [!DNL Google Ads] account connection:
 
-Once you have selected your account, select **[!UICONTROL Next]** to proceed to the next step.
+1. Select **[!UICONTROL Existing account]**.
+2. Choose the Google Ads account that you want to use from the account list.
+3. Review the connection details.
+4. Select **[!UICONTROL Next]**.
+
+If the account already exists and is valid, you can skip credential re-entry and proceed directly to data selection.
 
 ![The selection page for existing accounts in the sources workflow.](../../../../images/tutorials/create/ads/existing.png).
 
 ### New account
 
-If you do not have an existing account, then you must create a new account by providing the necessary authentication credentials that correspond with your source.
+To create a new [!DNL Google Ads] account connection:
 
-To create a new account, select **[!UICONTROL New account]** and then provide an account name and optionally, a description for your account details. Next, provide the appropriate authentication values to authenticate your source against Experience Platform:
+1. Select **[!UICONTROL New account]**.
+2. Enter an **[!UICONTROL account name]**.
+3. Optionally provide a **[!UICONTROL description]**.
+4. Enter the required authentication values:
 
 * **Client customer ID**: The client customer ID is the account number that  corresponds with the [!DNL Google Ads] client account that you want to manage with the [!DNL Google Ads] API. This ID follows the template of `123-456-7890`.
 * **Login customer ID**: The login customer ID is the account number that corresponds with your [!DNL Google Ads] manager account and is used to fetch report data from a specific operating customer. For more information on the login customer ID, read the [[!DNL Google Ads] API documentation](https://developers.google.com/search-ads/reporting/concepts/login-customer-id).
@@ -65,9 +90,9 @@ Once you have inputted your credentials, select **[!UICONTROL Connect to source]
 
 ## Select data {#select-data}
 
-With [!DNL Google Ads], you must provide the list of attributes for ingestion during the data selection phase of the workflow. In order to retrieve these attributes, you must use the [[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v19/overview_query_builder).
+With [!DNL Google Ads], you must provide the list of attributes for ingestion during the data selection phase of the workflow. To retrieve those attributes, you must use the [[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v19/overview_query_builder).
 
-In the [!DNL Google Ads Query Builder], navigate to the resource type that you want to use and then use the attributes selector to select your attributes, segments, and metrics.
+In the [!DNL Google Ads Query Builder], navigate to the **resource type** that you want to use and then use the attributes selector to select your **attributes**, **segments**, and **metrics**.
 
 ![The attributes selector in the Google Ads Query Builder.](../../../../images/tutorials/create/ads/attributes.png)
 

@@ -5,6 +5,21 @@ title: Create a Customer Attributes Source Connection in the UI
 type: Tutorial
 description: Learn how to create a source connection in the UI to bring customer attributes profile data into Adobe Experience Platform.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
+TQID: https://experienceleague.adobe.com/rqJyW-NqCt0lwsrtEUUaI5ZBCvaQEOzkB-2VUDUvpcs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a Customer Attributes source connection in the UI
 

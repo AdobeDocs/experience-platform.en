@@ -15,6 +15,8 @@ The `conversation` object contains configuration options for Brand Concierge cha
 
 | Property | Type | Description |
 | --- | --- | --- |
+| **`collectSources`** | `boolean` | Determines if the Web SDK reads the `adobe_brand_concierge_source` query string parameter and includes it in `xdm.channel.referringSource`. Defaults to `false`. |
+| **`region`** | `string` | Routes Brand Concierge conversation requests to a specific data center instead of the nearest available one. Most organizations do not need to set this value. Only set it if conversation events do not arrive at the desired data center. This setting only affects conversation events; standard [`sendEvent`](../sendevent/overview.md) commands are unaffected. Some possible example values include `va7`, `or2`, or `irl1`. |
 | **`stickyConversationSession`** | `boolean` | Determines if the Web SDK sets a session cookie to preserve Brand Concierge chat sessions across page loads. Defaults to `false`. If omitted or set to `false`, Brand Concierge chat starts a new session on every page load. |
 
 ## Example
@@ -24,6 +26,8 @@ alloy("configure", {
   datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   conversation: {
+    collectSources: true,
+    region: "va7",
     stickyConversationSession: true
   }
 });

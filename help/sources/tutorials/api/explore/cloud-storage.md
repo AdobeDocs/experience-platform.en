@@ -3,10 +3,20 @@ keywords: Experience Platform;home;popular topics;cloud storage;Cloud storage
 title: Explore a Cloud Storage Folders Using the Flow Service API
 description: This tutorial uses the Flow Service API to explore a third-party cloud storage system.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
+TQID: https://experienceleague.adobe.com/Pvy6OInQXlukyhhuOkPWf6TB-sGKuFKHpxgjXzRkTtk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Explore your cloud storage folders using the [!DNL Flow Service] API
 
-This tutorial provides steps on how to explore and preview the structure and contents of your cloud storage using the [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API.
+This tutorial provides steps on how to explore and preview the structure and contents of your cloud storage using the [[!DNL Flow Service]](https://developer.adobe.com/experience-platform-apis/references/flow-service) API.
 
 >[!NOTE]
 >
@@ -152,7 +162,7 @@ A successful response returns the structure of the queried file including table 
 
 ## Using query parameters {#query}
 
-The [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) supports the use of query parameters to preview and inspect different file types.
+The [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service) supports the use of query parameters to preview and inspect different file types.
 
 | Parameter | Description |
 | --------- | ----------- |
@@ -163,3 +173,5 @@ The [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/refe
 ## Next steps
 
 By following this tutorial, you have explored your cloud storage system, found the path of the file you wish to bring in to [!DNL Experience Platform], and viewed its structure. You can use this information in the next tutorial to [collect data from your cloud storage and bring it into Experience Platform](../collect/cloud-storage.md).
+
+

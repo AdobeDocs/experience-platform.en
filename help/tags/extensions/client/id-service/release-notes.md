@@ -1,11 +1,45 @@
 ---
-title: Release Notes for the Adobe Experience Cloud Identity Service Extension
-description: The latest release notes for the Adobe Experience Cloud Identity Service tag extension in Adobe Experience Platform.
+title: Release Notes for the Adobe Experience Cloud ID Service Extension
+description: The latest release notes for the Adobe Experience Cloud ID Service tag extension in Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
+TQID: https://experienceleague.adobe.com/EgQQOzGQ6-G5So513F-YTlTLFLj56DmCeOscpe429EY
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+    internal-label: Advertising
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
+    internal-label: Audience Manager
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c814092e-2730-45e8-a12d-e084529f52cb
+    internal-label: Destinations
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+    internal-label: API
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
-# Adobe Experience Cloud Identity Service extension release notes
+# Adobe Experience Cloud ID Service extension release notes
 
-This document covers the release notes for the Adobe Experience Cloud Identity Service tag extension. For release notes on Experience Cloud Identity Service itself, please refer to the [Identity Service documentation](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html).
+This document covers the release notes for the Adobe Experience Cloud ID Service tag extension. For release notes on the Visitor ID Service itself, please refer to the [Visitor ID Service documentation](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html).
 
 ## Oct 17, 2022
 
@@ -74,7 +108,7 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 
 ### Experience Cloud ID Extension 4.6.0
 
-* Made `loadSSL` flag on by default. All calls to Identity Service will be on `https` by default. Customers can set it to false if they want to call Identity Services on http from their non-ssl pages.
+* Made `loadSSL` flag on by default. All calls to the Visitor ID Service will be on `https` by default. Customers can set it to false if they want to call the Visitor ID Service on http from their non-ssl pages.
 * Updated the function used to detect Internet-Explorer (IE) version, to fix an issue reported by ESLint.
 * Bug fix for a performance issue on Internet-Explorer (IE) 11 when ECID is given optIn pre-approval and updated later.
 
@@ -82,7 +116,7 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 
 ### Experience Cloud ID Extension 4.5.2
 
-* Updated visitor.js to 4.5.2
+* Updated `VisitorAPI.js` to 4.5.2
 * Visitor 4.5.1 includes a bug fix for IAB plugin for Optin
 * Updated `setCustomerIDs` method to reject any empty IDs sent.
 
@@ -90,7 +124,7 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 
 ### Experience Cloud ID Extension 4.4.2
 
-* Updated visitor.js to 4.4.2
+* Updated `VisitorAPI.js` to 4.4.2
 * Improvements for `getVisitorValues` method to fetch values faster
 
 
@@ -98,7 +132,7 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 
 ### Experience Cloud ID Extension 4.4.1
 
-* Updated visitor.js to 4.4.1
+* Updated `VisitorAPI.js` to 4.4.1
 * Fixed a bug for get Opt-In preApprovals Input
 * Renamed VIDEO_ANALYTICS to MEDIA_ANALYTICS in preOptInApprovals
 
@@ -108,7 +142,7 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 
 ### Experience Cloud ID Extension 4.4.0
 
-* Updated visitor.js to 4.4.0
+* Updated `VisitorAPI.js` to 4.4.0
 * Added SHA256 hashing support for setCustomerIDs
 
   ![](../../../images/ecid-setCustomerIDs-hash.png)
@@ -117,7 +151,7 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 
 ### Experience Cloud ID Extension 4.3.1
 
-* Updated visitor.js to 4.3
+* Updated `VisitorAPI.js` to 4.3
 * Added data element type for ECID as part of the tag extension
 
   ![](../../../images/ecid-data-element.png)
@@ -126,19 +160,19 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 
 ### Experience Cloud ID Extension 4.2.0
 
-* Updated visitor.js to 4.2 which included support for Audience Manager IAB TCF Plug-in
+* Updated `VisitorAPI.js` to 4.2 which included support for Audience Manager IAB TCF Plug-in
 
 ## February 25, 2019
 
 ### Experience Cloud ID Extension 4.1.0
 
-* Updated visitor.js to 4.1 which updated publishDestinations per new API change. With this update the referrer information of the page can be exposed during ID - sync if desired.
+* Updated `VisitorAPI.js` to 4.1 which updated publishDestinations per new API change. With this update the referrer information of the page can be exposed during ID - sync if desired.
 
 ## February 15, 2019
 
 ### Experience Cloud ID Extension 4.0.0
 
-* Updated visitor.js to 4.0
+* Updated `VisitorAPI.js` to 4.0
 * Added a configuration options for the new built-in Opt-In Object. Opti-In settings can be used to suppress cookie and beacon calls of Adobe Solutions to better support regulations such as GDPR
 
   ![](../../../images/ext-mcid-opt-in.png)
@@ -147,5 +181,5 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 
 ### Experience Cloud ID Extension 3.1.0
 
-* Updated visitor.js to 3.1
+* Updated `VisitorAPI.js` to 3.1
 * Adds two configuration properties: `resetBeforeVersion` and `serverState`

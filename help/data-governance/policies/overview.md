@@ -4,6 +4,33 @@ solution: Experience Platform
 title: Data Usage Policies Overview
 description: Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
+TQID: https://experienceleague.adobe.com/nLzYV-Grtp7Ek5mOtCjNAm0Y6qm-mA9wsDV1IXeWsrQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+    internal-label: Artificial intelligence
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Data usage policies overview {#policies-overview}
 
@@ -38,7 +65,7 @@ An example of a marketing action might be the desire to export a dataset to a th
 >
 >Marketing actions by themselves do not restrict data usage. They must be included in enabled data usage policies in order for those actions to be evaluated for policy violations.
 
-When data usage happens in your organization's service, relevant marketing actions should be indicated so that any policy violations can be identified. You can then use the [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) to check for policy violations in your integration.
+When data usage happens in your organization's service, relevant marketing actions should be indicated so that any policy violations can be identified. You can then use the [Policy Service API](https://developer.adobe.com/experience-platform-apis/references/policy-service) to check for policy violations in your integration.
 
 >[!NOTE]
 >
@@ -46,7 +73,8 @@ When data usage happens in your organization's service, relevant marketing actio
 
 See the appendix to this document for a list of [available Adobe-defined marketing actions](#core-actions). You can also define your own custom marketing actions using the [!DNL Policy Service] API or the [!DNL Experience Platform] user interface. More information on working with marketing actions and policies is provided in the next section.
 
-<!-- (Add after AAM DEC mapping doc is published)
+<!-- 
+(Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
@@ -95,3 +123,5 @@ The table below describes the core marketing actions that are provided out-of-th
 | Onsite Personalization | An action that uses data for onsite content personalization. Onsite personalization is any data that is used to make inferences about users' interests, and is used to select which content or ads are served based on those inferences. |
 | Segment Match | An action that uses data for Adobe Experience Platform Segment Match, which allows for two or more Experience Platform users to exchange audience data. By enabling policies that reference this action, you can restrict what data is used for Segment Match. For example, if the core policy "Restrict data sharing" is enabled, any data with a [C11 label](../labels/reference.md#c11) cannot be used for Segment Match. |
 | Single Identity Personalization | An action that requires that a single identity be used for personalization purposes instead of stitching identities from multiple sources. |
+
+

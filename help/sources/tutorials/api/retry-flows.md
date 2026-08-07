@@ -2,6 +2,13 @@
 title: Retry Failed Dataflow Runs
 description: Learn how to retry failed dataflow runs using the Flow Service API.
 exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
+TQID: https://experienceleague.adobe.com/YQqnTaU9Iu2kvckkmkkgxeQ-zahQPhs5i8HQGhMGnhs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Retry failed dataflow runs
 
@@ -9,7 +16,7 @@ exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
 >
 >Support for retrying failed dataflow runs is available to batch sources. You can only retry dataflow runs that have failed.
 
-This tutorial covers steps on how to retry failed dataflow runs using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers steps on how to retry failed dataflow runs using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -65,3 +72,5 @@ A successful response returns a newly created flow run ID and its corresponding 
     "etag": "\"1100c53e-0000-0200-0000-627138980000\""
 }
 ```
+
+

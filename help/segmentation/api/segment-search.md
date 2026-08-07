@@ -3,6 +3,32 @@ title: Segment Search API Endpoint
 description: In the Adobe Experience Platform Segmentation Service API, Segment Search is used to search fields contained across various data sources and return them in near real-time. This guide provides information to help you better understand Segment Search and includes sample API calls for performing basic actions using the API.
 role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
+TQID: https://experienceleague.adobe.com/FtoFDX8H00ENth7NPWrVL-V-EBS8Ve04F3ZmGRr3enQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+    internal-label: Best practices
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: f8667931-f646-4dd3-af2a-b9d0cb8098ad
+    internal-label: Taxonomy
 ---
 # Segment Search endpoint
 
@@ -29,8 +55,8 @@ GET /search/namespaces?schema.name={SCHEMA}
 GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 ```
 
-| Parameters | Description | 
-| ---------- | ----------- | 
+| Parameters | Description |
+| ---------- | ----------- |
 | `schema.name={SCHEMA}` | **(Required)** Where {SCHEMA} represents the schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
 | `s={SEARCH_TERM}` | *(Optional)* Where {SEARCH_TERM} represents a query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
 
@@ -89,8 +115,8 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&s={SEARCH_TERM}
 GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY_ID}
 ```
 
-| Parameters | Description | 
-| ---------- | ----------- | 
+| Parameters | Description |
+| ---------- | ----------- |
 | `schema.name={SCHEMA}`| **(Required)** Where {SCHEMA} contains the schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
 | `namespace={NAMESPACE}` | **(Required)** Where {NAMESPACE} contains the namespace you wish to search within. |
 | `s={SEARCH_TERM}` | *(Optional)* Where {SEARCH_TERM} contains a query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
@@ -160,8 +186,8 @@ This search endpoint can be used to get the structural information about the req
 GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY_ID}
 ```
 
-| Parameters | Description | 
-| ---------- | ----------- | 
+| Parameters | Description |
+| ---------- | ----------- |
 | `schema.name={SCHEMA}` | **(Required)** Where {SCHEMA} contains the schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
 | `namespace={NAMESPACE}` | **(Required)** Where {NAMESPACE} contains the namespace you wish to search within. |
 | `entityId={ENTITY_ID}` | **(Required)** The ID of the search object you want to get the structural information about, specified with {ENTITY_ID}. |
@@ -231,7 +257,7 @@ The following table lists the fields which can be searched within the search que
 | ---------- | ----------- |
 | folderId | The folder or folders that have the folder ID of your specified search. |
 | folderLocation | The location or locations that have the folder location of your specified search. |
-| parentFolderId | The segment definition or folder that have the parent folder ID of your specified search. | 
+| parentFolderId | The segment definition or folder that have the parent folder ID of your specified search. |
 | segmentId | The segment definition that matches the segment ID of your specified search. |
 | segmentName | The segment definition that matches the segment name of your specified search. |
 | segmentDescription | The segment definition that matches the segment description of your specified search. |

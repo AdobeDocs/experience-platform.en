@@ -2,6 +2,25 @@
 title: Destinations Insights
 description: Discover the SQL that powers your destinations insights and use these queries to generate custom insights to further explore the activation of data from Adobe Experience Platform.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
+TQID: https://experienceleague.adobe.com/O-Yz8FOv9rjXjT8eTWpIUIPkx9R2eQyatpCzKw71lbQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+    internal-label: Destinations dashboard
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Destinations insights
 
@@ -341,7 +360,8 @@ WHERE destination_id = 1458738325;
 
 See the [Mapped audiences widget documentation](../guides/destinations.md#mapped-audiences) for information on the appearance and functionality of this insight.
 
-<!-- Commented out until the Jan release as the SQL IS MISSING:
+<!-- 
+Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
 
 Questions answered by this insight:
@@ -480,7 +500,8 @@ LIMIT
 
 See the [Recently created destinations widget documentation](../guides/destinations.md#recently-created-destinations) for information on the appearance and functionality of this insight.
 
-<!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
+<!-- 
+Commented out until the Jan release as SQL MISSING FROM WIKI:
 
 ## Unmapped audiences by identity {#unmapped-audiences-by-identity}
 

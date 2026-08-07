@@ -3,8 +3,19 @@ title: Customer Timestamp Ordering
 description: Learn how to add customer timestamp ordering to your datasets to ensure consistency in your profile data.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
-hidefromtoc: true
 exl-id: 1cd9f0b5-6334-4815-860a-78596a9cea1a
+TQID: https://experienceleague.adobe.com/aLG9NXX2dnBkavqylpkVSWLNtvGht37lD5AmdzjdC7Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 # Customer timestamp ordering
 
@@ -21,7 +32,7 @@ During this private beta, the following constraints apply when using customer ti
 - You can only use customer timestamp ordering on **non-production** sandboxes.
 - You can only apply customer timestamp ordering to **5** datasets per sandbox.
 - You **cannot** use streaming upserts to send partial row updates in a dataset that has customer timestamp ordering enabled.
-- The `extSourceSystemAudit.lastUpdatedDate` field **must** be in the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format. When using the ISO 8601 format, it **must** be as a full datetime in the format `yyyy-MM-ddTHH:mm:ss.sssZ` (for example, `2028-11-13T15:06:49.001Z`). 
+- The `extSourceSystemAudit.lastUpdatedDate` field **must** be an [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) UTC timestamp with millisecond precision (`yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`).
 - All rows of data ingested **must** contain the `extSourceSystemAudit.lastUpdatedDate` field as a top level field group. This means that this field **must** not be nested within the XDM schema. If this field is missing or is in an incorrect format, the malformed record will **not** be ingested, and an corresponding error message will be sent.
 - Any dataset enabled for customer timestamp ordering **must** be a new dataset without any previously ingested data.
 - For any given profile fragment, only rows that contain a more recent `extSourceSystemAudit.lastUpdatedDate` will be ingested. Rows that contain an `extSourceSystemAudit.lastUpdatedDate` that is either older or the same age will be discarded.

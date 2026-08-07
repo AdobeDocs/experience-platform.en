@@ -5,6 +5,16 @@ title: Consent API Endpoint
 description: Learn how to manage customer consent requests for Experience Cloud applications using the Privacy Service API.
 role: Developer
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
+TQID: https://experienceleague.adobe.com/P9SG8xvWJrIX2qo6hZrrK4SrSTTk0dBK8VHBA2WxLJM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Consent endpoint
 

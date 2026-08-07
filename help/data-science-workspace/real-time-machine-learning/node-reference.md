@@ -4,6 +4,25 @@ solution: Experience Platform
 title: Real-time Machine Learning Node Reference
 description: A node is the fundamental unit of which graphs are formed. Each node performs a specific task and they can be chained together using links to form a graph that represents an ML pipeline. The task performed by a node represents an operation on input data such as a transformation of data or schema, or a machine learning inference. The node outputs the transformed or inferred value to the next node(s).
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
+TQID: https://experienceleague.adobe.com/sNpKUdNsLfRvOapjsFEfn2RfGU5Bk0knXtI0WnGWR6s
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Real-time Machine Learning node reference (Alpha)
 

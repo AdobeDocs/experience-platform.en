@@ -3,6 +3,16 @@ title: Getting Started with Self-Serve Sources (Streaming SDK)
 description: This document provides an introduction to the prerequisite information you need to know before attempting to create a new source using Self-Serve Sources (Streaming SDK).
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
 badge: Beta
+TQID: https://experienceleague.adobe.com/J39OuS8QMzrdhLz-Q7Rzx3WKH7CkGk-cykmL4Ry5U-8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Getting Started with Self-Serve Sources (Streaming SDK)
 
@@ -54,7 +64,7 @@ The Self-Serve Sources (Streaming SDK) and [!DNL Flow Service] API documentation
 
 ## Gather values for required headers
 
-In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -75,3 +85,5 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 ## Next steps
 
 To begin creating a new source with Self-Serve Sources (Streaming SDK), see the tutorial on [creating a new source](./create.md).
+
+

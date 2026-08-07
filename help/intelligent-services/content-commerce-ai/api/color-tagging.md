@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Color Tagging in the Content Tagging API
 description: The Color Tagging service, when given an image, can compute the histogram of pixel colors and sort them by dominant colors into buckets.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
+TQID: https://experienceleague.adobe.com/-3IcRpEwb6-nMVQKV-5-y7D8Ms2Nt0bX3BsatLZmvZU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Color tagging
 

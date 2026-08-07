@@ -2,12 +2,22 @@
 title: Update Accounts Using the Flow Service API
 description: This tutorial covers the steps for updating the details and credentials of an account using the Flow Service API.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
+TQID: https://experienceleague.adobe.com/l3lJf6eNMSAImgLB-EDui5rMuM1u5ih8Iv0G6UQfaM0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # Update accounts using the Flow Service API
 
 In some circumstances, it may be required to update the details of an existing base connection. [!DNL Flow Service] provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.
 
-This tutorial covers the steps for updating the details and credentials of a connection using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for updating the details and credentials of a connection using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!TIP]
 >
@@ -164,3 +174,5 @@ A successful response returns your connection ID and an updated etag. You can ve
 ## Next steps
 
 By following this tutorial, you have updated the credentials and information associated with your connection using the [!DNL Flow Service] API. For more information on using source connectors, see the [sources overview](../../home.md).
+
+

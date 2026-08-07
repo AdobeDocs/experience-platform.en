@@ -2,6 +2,18 @@
 description: Learn how to configure file formatting options for file-based destinations built with Adobe Experience Platform Destination SDK, via the `/destination-servers` endpoint.
 title: File formatting configuration
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
+TQID: https://experienceleague.adobe.com/VJ-jI3-0aBbZ96AvHuGMHsS6VuvrZmniwefj9gplnoI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # File formatting configuration
 
@@ -42,7 +54,7 @@ Refer to the table below for details on which types of integrations support the 
 
 ## Supported parameters {#supported-parameters}
 
-You can modify several properties of the exported files to match the requirements of your destination's file reception system, in order to optimally read and interpret the files received from Experience Platform.
+You can modify several properties of the exported files to match the requirements of your destination's file reception system, to optimally read and interpret the files received from Experience Platform.
 
 >[!NOTE]
 >

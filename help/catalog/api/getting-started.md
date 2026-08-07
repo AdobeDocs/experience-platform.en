@@ -4,6 +4,20 @@ solution: Experience Platform
 title: Catalog Service API Guide
 description: The Catalog Service API allows developers to manage dataset metadata in Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
+TQID: https://experienceleague.adobe.com/I-Ah3jW5AerEc1FXm5-BNh9N8dj-VGx18uD2d-PowPo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # [!DNL Catalog Service] API guide
 
@@ -27,7 +41,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ## Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -57,6 +71,8 @@ Since some queries can put a heavy load on the API, global limits have been impl
 
 This document covered the prerequisite knowledge required to make calls to the [!DNL Catalog] API. You can now proceed to the sample calls provided in this developer guide and follow along with their instructions.
 
-Most of the examples in this guide use the `/dataSets` endpoint, but the principles can be applied to other endpoints within [!DNL Catalog] (such as `/batches`). See the [Catalog Service API reference](https://www.adobe.io/experience-platform-apis/references/catalog/) for a complete list of all calls and operations available for each endpoint.
+Most of the examples in this guide use the `/dataSets` endpoint, but the principles can be applied to other endpoints within [!DNL Catalog] (such as `/batches`). See the [Catalog Service API reference](https://developer.adobe.com/experience-platform-apis/references/catalog) for a complete list of all calls and operations available for each endpoint.
 
 For a step-by-step workflow that demonstrates how the [!DNL Catalog] API is involved with data ingestion, see the tutorial on [creating a dataset](../datasets/create.md).
+
+

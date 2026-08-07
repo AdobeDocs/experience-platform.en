@@ -3,10 +3,17 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 title: Self-Serve Sources (Batch SDK) API Guide
 description: This document provides an overview of the process of creating a new source, including steps on how to retrieve, write, and submit a new connection specification using the Flow Service API.
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
+TQID: https://experienceleague.adobe.com/NLSktvAzH7e-WpTIzzfAT8iYDM-6aocmdw1nF2FCg2E
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Self-Serve Sources (Batch SDK) API Guide
 
-This document provides an overview of the process of creating a new source, including steps on how to write and submit a new connection specification using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This document provides an overview of the process of creating a new source, including steps on how to write and submit a new connection specification using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Experience Platform. The service provides a user interface and RESTful API that lets you set up source connections to various data providers with ease. These source connections enable you to authenticate your third-party systems, set times for ingestion runs, and manage data ingestion throughput.
 
@@ -39,3 +46,5 @@ To submit your source for integration to Experience Platform, you must first com
 ## Next steps
 
 To begin using the [!DNL Flow Service] API and create a new source through Self-Serve Sources (Batch SDK), read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.
+
+

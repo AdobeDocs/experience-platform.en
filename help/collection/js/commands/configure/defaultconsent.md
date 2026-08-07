@@ -2,8 +2,29 @@
 title: defaultConsent
 description: Set the default consent collection method for your web property.
 exl-id: 2a22fa8b-a234-4d3e-9b55-c7482a928fe6
+TQID: https://experienceleague.adobe.com/1bc7KJIMEOri1ExqjmpCXB9MoRIYKuZS8CEGJqtVvFU
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
-
 # `defaultConsent`
 
 The `defaultConsent` property determines how you handle data collection consent before you call the [`setConsent`](../setconsent.md) command. This property is valuable when you don't want to accidentally collect data from individuals who reside in areas where consent is required before collecting data.
@@ -14,7 +35,7 @@ Set the `defaultConsent` string property to the desired consent level when runni
 
 >[!IMPORTANT]
 >
->The `defaultConsent` value does not persist between page loads. Make sure that you set the desired default consent every time that you call the `configure` command.
+>The `defaultConsent` value does not persist between page loads. Make sure that you set the desired default consent every time that you call the `configure` command. In contrast, a visitor's resolved consent (set through [`setConsent`](../setconsent.md)) is persisted in a cookie and applied automatically on subsequent page loads.
 
 ```js
 alloy("configure", {
@@ -34,32 +55,7 @@ alloy("configure", {
 
 ## Using `defaultConsent` together with `setConsent` {#using-consent}
 
-The Web SDK offers two complementary consent options:
-
-* `defaultConsent` (this page): Determines the default consent preferences.
-* [`setConsent`](../setconsent.md): Capture the consent preferences of visitors.
-
-When used together, these settings can lead to different data collection and cookie setting results, depending on their configured values.
-
-See the table below to understand when data collection occurs and when cookies are set, based on consent settings.
-
-| `defaultConsent` | `setConsent` | Data collection occurs | Web SDK sets browser cookies |
-|---------|----------|---------|---------|
-| `in` | `in` | Yes |  Yes |
-| `in` | `out` | No | Yes |
-| `in` | Not set | Yes | Yes |
-| `pending` | `in` | Yes | Yes |
-| `pending` | `out` | No | Yes |
-| `pending` | Not set | No | No |
-| `out` | `in` | Yes | Yes |
-| `out` | `out` | No | Yes |
-| `out` | Not set | No | No |
-
-See [Adobe Experience Platform Web SDK cookies](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) for a list of cookies that the library sets.
-
->[!NOTE]
->
->Identity and consent cookies are set even if a visitor opts out of tracking. These cookies are necessary to honor their data collection preferences.
+When used together, `defaultConsent` and `setConsent` produce different data collection, cookie setting, and identity results depending on their configured values. See [Consent and identity in Data Collection](/help/collection/identity/consent.md#how-consent-affects-identity) for a complete interaction table.
 
 ## Setting default consent based on `gdprApplies`
 

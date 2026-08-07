@@ -5,10 +5,25 @@ title: Create a Streaming Dataflow for Raw Data Using the Flow Service API
 type: Tutorial
 description: This tutorial covers the steps for retrieving streaming data and bringing them in to Experience Platform using source connectors and APIs.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
+TQID: https://experienceleague.adobe.com/gSGoLUNRnBZc--pYoLQXN0u8KHRovw4QRUU0Tu03ekQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a streaming dataflow for raw data using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving raw data from a streaming source connector and bringing them to Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for retrieving raw data from a streaming source connector and bringing them to Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -37,7 +52,7 @@ This tutorial also requires you to have a valid source connection ID for a strea
 
 In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained. This target XDM schema also extends the XDM [!DNL Individual Profile] class.
 
-To create a target XDM schema, make a POST request to the `/schemas` endpoint of the [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+To create a target XDM schema, make a POST request to the `/schemas` endpoint of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 **API format**
 
@@ -145,7 +160,7 @@ A successful response returns details of the newly created schema including its 
 
 ## Create a target dataset
 
-With a target XDM schema created and its unique `$id` you can now create a target dataset to contain your source data. To create a target dataset, make a POST request to the `dataSets` endpoint of the [Catalog Service API](https://www.adobe.io/experience-platform-apis/references/catalog/), while providing the ID of the target schema within the payload.
+With a target XDM schema created and its unique `$id` you can now create a target dataset to contain your source data. To create a target dataset, make a POST request to the `dataSets` endpoint of the [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog), while providing the ID of the target schema within the payload.
 
 **API format**
 
@@ -568,3 +583,5 @@ By following this tutorial, you have created a dataflow to collect streaming dat
 
 - [Real-Time Customer Profile overview](../../../../profile/home.md)
 - [Data Science Workspace overview](../../../../data-science-workspace/home.md)
+
+

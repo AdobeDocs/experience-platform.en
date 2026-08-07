@@ -4,6 +4,23 @@ solution: Experience Platform
 title: Identity Service Troubleshooting Guide
 description: This document provides answers to frequently asked questions about Adobe Experience Platform Identity Service, as well as a troubleshooting guide for common errors.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
+TQID: https://experienceleague.adobe.com/CkZNMxP3j8J7cExgVAM9aJJeb32p8bFqtVWglAluo98
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Identity Service troubleshooting guide
 
@@ -71,11 +88,11 @@ Standard identity namespaces are namespaces available to all organizations. See 
 
 ## Where can I find the list of identity namespaces available for my organization?
 
-Using the [Identity Service API](https://www.adobe.io/experience-platform-apis/references/identity-service), you can list all available identity namespaces for your organization by making a GET request to the `/idnamespace/identities` endpoint. See the section on [listing available namespaces](./api/list-namespaces.md) in the Identity Service API overview for more information.
+Using the [Identity Service API](https://developer.adobe.com/experience-platform-apis/references/identity-service), you can list all available identity namespaces for your organization by making a GET request to the `/idnamespace/identities` endpoint. See the section on [listing available namespaces](./api/list-namespaces.md) in the Identity Service API overview for more information.
 
 ## How do I create a custom namespace for my organization?
 
-Using the [Identity Service API](https://www.adobe.io/experience-platform-apis/references/identity-service), you can create a custom identity namespace for your organization by making a POST request to the `/idnamespace/identities` endpoint. See the section on [creating a custom namespace](./api/create-custom-namespace.md) in the Identity Service API overview for more information.
+Using the [Identity Service API](https://developer.adobe.com/experience-platform-apis/references/identity-service), you can create a custom identity namespace for your organization by making a POST request to the `/idnamespace/identities` endpoint. See the section on [creating a custom namespace](./api/create-custom-namespace.md) in the Identity Service API overview for more information.
 
 ## What are composite identities and XIDs?
 
@@ -90,7 +107,8 @@ Identity Service has standard namespaces to support the ingestion of hashed iden
 If you are sending hashed PII values to Identity Service, you must use the same encryption method across your datasets. This ensures that the same identity value across datasets generates the same hashed values and are able to be properly matched and linked in the identity graph.
 
 <!-- Documentation does not show any methods of editing the identityMap directly, and this table never overtly recommends using identityMap anyway. This should probably be removed unless PM thinks otherwise. -->
-<!-- ## When should I use the Identity map rather than labeling individual XDM schema fields?
+<!-- 
+## When should I use the Identity map rather than labeling individual XDM schema fields?
 
 The following table describes when the recommended approach for including identity data in your XDM would be identity map and when an identity field is the better method.
 
@@ -105,7 +123,8 @@ Developer|Recommended|Supported
 ETL|Recommended|Avoid - While this is supported, data should be formatted naturally when using an ETL, favoring identity fields over `identityMap`.
 Internal solutions|Preferred|Common
 
---- -->
+--- 
+-->
 
 ## Why can't I access the identity graph page or APIs?
 
@@ -210,7 +229,7 @@ This error message displays when your organization has not been provisioned with
 }
 ```
 
-In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Experience Platform] APIs. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens.
+In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Experience Platform] APIs. See the [authentication tutorial](/help/landing/api-authentication.md) for instructions on generating new access tokens.
 
 ### Authorization service token is not valid
 
@@ -222,7 +241,7 @@ In the case of this error, your access token is invalid. Access tokens expire ev
 }
 ```
 
-In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Experience Platform] APIs. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens.
+In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Experience Platform] APIs. See the [authentication tutorial](/help/landing/api-authentication.md) for instructions on generating new access tokens.
 
 ### User token does not have valid product context
 
@@ -234,7 +253,7 @@ In the case of this error, your access token is invalid. Access tokens expire ev
 }
 ```
 
-This error message displays when your access token has not been generated from an [!DNL Experience Platform] integration. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens for an [!DNL Experience Platform] integration.
+This error message displays when your access token has not been generated from an [!DNL Experience Platform] integration. See the [authentication tutorial](/help/landing/api-authentication.md) for instructions on generating new access tokens for an [!DNL Experience Platform] integration.
 
 ### Internal error when getting native XID from identity and namespace code
 
@@ -276,7 +295,7 @@ This error displays when an unexpected exception occurs in the execution of an [
 
 [!DNL Identity Service] ingests identity data from record and time series data that is uploaded to [!DNL Experience Platform] using Batch Ingestion. As batch ingestion is an asynchronous process, you must view the details for a batch to view errors. Errors will accumulate as the batch progresses until the batch is complete.
 
-The following is a list of error messages related to [!DNL Identity Service] you may encounter when using the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
+The following is a list of error messages related to [!DNL Identity Service] you may encounter when using the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion).
 
 ### Unknown XDM schema
 
@@ -349,3 +368,5 @@ When ingesting batch data, this error message displays when your organization ha
 ```
 
 This error displays when an unexpected exception occurs during a batch ingestion. Best practice is to program your automated calls to retry their requests a few times at a timed interval when receiving this error. If the problem persists, contact your system administrator.
+
+

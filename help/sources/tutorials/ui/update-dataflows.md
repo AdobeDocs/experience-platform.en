@@ -2,6 +2,13 @@
 description: Learn how to update an existing sources dataflow in the Experience Platform UI.
 title: Update a Source Connection Dataflow in the UI
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
+TQID: https://experienceleague.adobe.com/VxOL3-TPnHKm6-l9KyhLjmuxyVMTtHZjzvaQR-hVhI0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Update dataflows in the UI
 
@@ -41,7 +48,7 @@ You are taken to the sources workflow where you can proceed to update aspects of
 
 >[!NOTE]
 >
->The edit mapping feature is currently not supported for the following sources: Adobe Analytics, Adobe Audience Manager, HTTP API, and [!DNL Marketo Engage].
+>The edit mapping feature is currently not supported for the following sources: Adobe Analytics, Adobe Audience Manager, and HTTP API.
 
 During this process, you can also update the mapping sets associated with your dataflow.  The mapping interface displays your dataflow's existing mapping and not a new recommended mapping set. Mapping updates are only applied to dataflow runs scheduled in the future. A dataflow that was scheduled for one-time ingestion cannot have its mapping sets updated.
 

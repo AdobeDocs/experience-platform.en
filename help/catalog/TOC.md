@@ -4,6 +4,7 @@ user-guide-title: Catalog and Datasets Guide
 user-guide-description: Explore data lineage, metadata, file descriptions, directories, and datasets within the Data Lake and learn more about the Catalog Service system.
 feature: Catalog
 role: Developer
+nudge: true
 ---
 
 # Catalog and Datasets {#catalog}
@@ -30,6 +31,6 @@ role: Developer
   * [Enable a dataset for Profile updates (upsert)](datasets/enable-upsert.md)
   * [Experience Event Dataset Retention in the data lake](datasets/experience-event-dataset-retention-ttl-guide.md)
 * [Privacy request processing in the Data Lake](privacy.md)
-* [API reference](https://www.adobe.io/experience-platform-apis/references/catalog/)
+* [API reference](https://developer.adobe.com/experience-platform-apis/references/catalog)
 * [Frequently asked questions](catalog-faq.md)
 * [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

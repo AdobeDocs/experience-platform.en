@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Local File Upload Source Connector Overview
 description: Learn how to connect your local system to Adobe Experience Platform using the user interface
 exl-id: 4b3cf486-7aff-4ffb-920c-10af04000083
+TQID: https://experienceleague.adobe.com/-9ew-alYXRis6-rxmzw5KnIoDnSbE0kD43jNmW704ss
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Local file upload connector
 

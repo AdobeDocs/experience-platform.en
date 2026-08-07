@@ -5,6 +5,21 @@ title: Monitor Dataflows Using the Flow Service API
 type: Tutorial
 description: This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the Flow Service API.
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
+TQID: https://experienceleague.adobe.com/GJ106bgXNxjDGVMjuraphQyBOtHDzZ0V74ml-tGbhiQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Monitor dataflows using the Flow Service API
 
@@ -12,7 +27,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources and destinations are connectable.
 
-This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the [[!DNL Flow Service API]](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -32,7 +47,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -195,3 +210,7 @@ A successful response returns details regarding your flow run, including informa
 ## Next steps
 
 By following this tutorial, you have retrieved metrics and error information on your dataflow using the [!DNL Flow Service] API. You can now continue to monitor your dataflow, depending on your ingestion schedule, to track its status and ingestion rates. For information on how to monitor dataflows for sources, please read the [monitoring dataflows for sources using the user interface](../ui/monitor-sources.md) tutorial. For more information on how to monitor dataflows for destinations, please read the [monitoring dataflows for destinations using the user interface](../ui/monitor-destinations.md) tutorial.
+
+To send multiple XDM entities to a dataflow, use a `messages` array in your HTTP request or upload a file (CSV, JSON, or Parquet) with multiple records. For detailed guidance and best practices, read [how to send multiple XDM entities to a dataflow](../../ingestion/tutorials/streaming-multiple-messages.md#send-multiple-xdm-entities-to-a-dataflow).
+
+
