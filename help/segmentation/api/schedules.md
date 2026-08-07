@@ -438,7 +438,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
 
 A successful response returns HTTP status 204 (No Content).
 
-## Add audiences to schedule
+## Add audiences to schedule {#add-audiences}
 
 You can add audiences to a specific schedule by making a POST request to the `/config/schedules/add-audiences` endpoint.
 
