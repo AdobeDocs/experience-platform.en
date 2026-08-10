@@ -1,5 +1,5 @@
 ---
-title: Google Ads (V2))
+title: Google Ads (V2)
 description: Learn how to connect Google Ads (V2) to Adobe Experience Platform using APIs or the user interface.
 ---
 # [!DNL Google Ads] (V2)
@@ -62,14 +62,8 @@ To connect Google Ads (V2) to Experience Platform, provide the following values.
 
 | Credential | Description |
 | --- | --- | 
-| `clientCustomerId` | The numeric customer ID of the Google Ads advertiser account to ingest. Do not include hyphens. |
 | `loginCustomerId` | The numeric customer ID of the manager account used to access the advertiser account. This credential is required for manager-account access. |
 | `developerToken` | The Google Ads developer token used to authorize API requests. |
-| `refreshToken` | The OAuth 2.0 refresh token used to obtain access tokens. |
-| `clientId` | The OAuth 2.0 client ID from the Google Cloud project. |
-| `clientSecret` | The OAuth 2.0 client secret from the Google Cloud project. |
-| `googleAdsApiVersion` | The Google Ads API version used by the connection. |
-| OAuth scope | `https://www.googleapis.com/auth/adwords` This value is applied by the authorization flow. |
 
 {style="table-layout:auto"}
 
