@@ -30,7 +30,7 @@ topic_v2:
 
 Streaming segmentation is the ability to evaluate audiences in Adobe Experience Platform in near real-time while focusing on data richness.
 
-With streaming segmentation, audience qualification now happens as streaming data lands into Experience Platform, alleviating the need to schedule and run segmentation jobs. This allows you to evaluate data as its passed into Experience Platform, letting audience membership be automatically kept up-to-date.
+With streaming segmentation, audience qualification now happens as streaming data lands into Experience Platform, alleviating the need to schedule and run segmentation jobs. This allows you to evaluate data as it is passed into Experience Platform, letting audience membership be automatically kept up-to-date.
 
 ## Eligible rulesets {#rulesets}
 
