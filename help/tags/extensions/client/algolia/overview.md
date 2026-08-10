@@ -72,6 +72,10 @@ To connect [!DNL Algolia] with Adobe Experience Platform, you'll need the follow
 | Application ID | Your Application Id can be found in the [API Keys](https://www.algolia.com/account/api-keys/all) section of your [!DNL Algolia] Dashboard. | 0ABCDEFG12 |
 | Search API Key | Your Search API Key can be found in the [API Keys](https://www.algolia.com/account/api-keys/all) section of your [!DNL Algolia] Dashboard. | 1234a12345678901b1234567890c1ab1 |
 
+>[!NOTE]
+>
+>If you route Insights events through your own server using the [!UICONTROL Proxy] authentication method, the proxy injects the [!DNL Algolia] Application ID and Search API Key server-side. In that case, you can leave the [!UICONTROL Application ID] and [!UICONTROL Search API Key] blank in the extension configuration to keep the key hidden from the browser.
+
 ## Install and configure the [!DNL Algolia] Insights extension {#install-configure}
 
 To install the [!DNL Algolia] Insights extension, navigate to the [!UICONTROL Data Collection UI] and select  **[!UICONTROL Tags]** from the left navigation. From here, select a property to add the extension to, or create a new property instead.
@@ -80,18 +84,41 @@ Once you have selected or created the desired property, select **[!UICONTROL Ext
 
 ![](../../../images/extensions/client/algolia/install.png)
 
-In the configuration view that appears, you must provide the following details:
+The configuration view is organized into an **[!UICONTROL Authentication]** section and a **[!UICONTROL Configuration]** section.
+
+### Authentication {#authentication}
+
+Use the **[!UICONTROL Authentication method]** option to choose how the extension authenticates with [!DNL Algolia]:
+
+* **[!UICONTROL Default]**: Send events directly to [!DNL Algolia] using your Application ID and Search API Key.
+* **[!UICONTROL Proxy]**: Route events through your own server, which injects the credentials server-side and keeps them hidden from the browser.
+
+The fields shown depend on the selected authentication method:
 
 | Property | Description |
 | --- | --- |
-| [!UICONTROL Application ID ] | Enter the [!UICONTROL Application Id] you previously gathered in the [configuration details](#configuration-details) section. |
-| [!UICONTROL Search API Key ] | Enter the [!UICONTROL Search API Key] you previously gathered in the [configuration details](#configuration-details) section. |
-| [!UICONTROL Index Name ] | The [!UICONTROL Index Name] contains the Products or Content.  This Index will be used as a default. |
-| [!UICONTROL User Token Data Element ]  | The Data Element that will return the User Token. |
-| [!UICONTROL Authenticated User Token Data Element ]  | Set the Data Element that will return the Authenticated User Token. |
-| [!UICONTROL Currency Code ] | Enter the currency code in ISO-4217 format, such as USD or EUR. This field supports data elements. |
+| [!UICONTROL Application ID] | Enter the [!UICONTROL Application Id] you previously gathered in the [configuration details](#configuration-details) section. This field is **required** when using the [!UICONTROL Default] method and **optional** when using the [!UICONTROL Proxy] method, since the proxy supplies the credentials. |
+| [!UICONTROL Search API Key] | Enter the [!UICONTROL Search API Key] you previously gathered in the [configuration details](#configuration-details) section. This field is **required** when using the [!UICONTROL Default] method. When using the [!UICONTROL Proxy] method, leave this blank to keep the key hidden from the browser. The proxy injects it server-side. |
+| [!UICONTROL Proxy URL] | Required when the [!UICONTROL Proxy] authentication method is selected. Enter the URL of your server to route Insights events through before Adobe Experience Platform forwards them to [!DNL Algolia]. Your proxy injects the [!DNL Algolia] Application ID and Search API Key, so you can leave those fields blank. This field supports data elements to set the value statically or resolve it dynamically at runtime. |
+
+The following image shows the [!UICONTROL Default] authentication method:
 
 ![](../../../images/extensions/client/algolia/configure.png)
+
+The following image shows the [!UICONTROL Proxy] authentication method:
+
+![](../../../images/extensions/client/algolia/configure-proxy.png)
+
+### Configuration {#configuration}
+
+In the **[!UICONTROL Configuration]** section, provide the following details:
+
+| Property | Description |
+| --- | --- |
+| [!UICONTROL Index Name ] | Required. The [!UICONTROL Index Name] contains the Products or Content.  This Index will be used as a default. |
+| [!UICONTROL User Token Data Element ]  | Required. The Data Element that will return the User Token. This field supports data elements. |
+| [!UICONTROL Authenticated User Token Data Element ]  | Optional. Set the Data Element that will return the Authenticated User Token. This field supports data elements. |
+| [!UICONTROL Currency Code ] | Optional. Enter the currency code in ISO-4217 format, such as USD or EUR. This field supports data elements. |
 
 ## [!DNL Algolia] Insights extension action types {#action-types}
 
@@ -183,7 +210,7 @@ Add the **[!UICONTROL Purchased]** action to your tag rule to send purchased eve
 | Property | Description |
 | --- | --- |
 | [!UICONTROL Event Name ] | The Event Name that will be used to further refine this **purchase** event. |
-| [!UICONTROL Event Details Data Element ] | The Data Element returns event details in JSON format, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`</li><li>`price`</li><li>`quantity`</li><li>`discount` (optional)</li><li>`queryID` (optional)</li><li>`currency` (optional)</li></ul>. |
+| [!UICONTROL Purchased Items Data Element ] | The Data Element that returns the purchased item IDs. These IDs are used to look up the matching events previously stored in browser storage, which are then sent to [!DNL Algolia] as a purchase event. |
 
 >[!NOTE]
 >
