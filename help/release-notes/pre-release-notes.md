@@ -39,12 +39,11 @@ Use Data Governance to manage data usage policies and enforce compliance with da
 
 | Feature | Description |
 | --- | --- |
-| Web Application Firewall (WAF) for Experience Platform | Experience Platform applications and APIs are now protected by a Web Application Firewall (WAF), adding an additional layer of security coverage. This update is being rolled out by region through mid-August 2026 and requires no action from you. |
-| Object-level access control for datasets | Apply data usage labels directly to an entire dataset, using the same core and custom governance labels used elsewhere on the platform. |
+| Object-level access control for datasets | Apply data usage labels directly to an entire dataset using the same core and custom governance labels used elsewhere on the platform. |
 
 {style="table-layout:auto"}
 
-For more information, read the [Data Governance overview](../data-governance/home.md).
+For more information, read the [Data Governance overview](/help/data-governance/home.md).
 
 ## Data Ingestion {#data-ingestion}
 
@@ -54,11 +53,11 @@ Use batch and streaming ingestion to bring data into Experience Platform from a 
 
 | Feature | Description |
 | --- | --- |
-| Updated [Batch Ingestion guardrails](../ingestion/guardrails.md) | Guardrail limits for the number of files and datasets you can ingest into Experience Platform through the Batch Ingestion API and batch sources have increased. New error messages help you identify when a limit is reached. |
+| Updated [Batch Ingestion guardrails](/help/ingestion/guardrails.md) | Guardrail limits for the number of files and datasets you can ingest into Experience Platform through the Batch Ingestion API and batch sources have increased. New error messages help you identify when a limit is reached. |
 
 {style="table-layout:auto"}
 
-For more information, read the [data ingestion overview](../ingestion/home.md).
+For more information, read the [data ingestion overview](/help/ingestion/home.md).
 
 ## Destinations {#destinations}
 
@@ -68,8 +67,8 @@ For more information, read the [data ingestion overview](../ingestion/home.md).
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Deliver audience now for streaming destinations | Trigger an immediate, on-demand resend of an audience's full current membership to a streaming destination, without waiting for the next scheduled export. This feature is in private beta and available for a limited number of streaming destinations. Contact your Adobe representative to request access. |
-| [Data type filter in the destinations catalog](../destinations/catalog/overview.md) | Filter destinations by data type in the destinations catalog **[!UICONTROL Browse]** tab. |
+| [!BADGE Beta]{type=Informative} Deliver audience now for streaming destinations | Trigger an immediate, on-demand resend of an audience's full current membership to a streaming destination without waiting for the next scheduled export. This feature is in private beta and available for a limited number of streaming destinations. Contact your Adobe representative to request access. |
+| [Data type filter in the destinations catalog](/help/destinations/catalog/overview.md) |Filter destinations by data type in the **[!UICONTROL Browse]** tab of the destinations catalog. |
 
 {style="table-layout:auto"}
 
@@ -77,9 +76,9 @@ For more information, read the [data ingestion overview](../ingestion/home.md).
 
 | Feature | Description |
 | --- | --- |
-| External ID support for [[!DNL Amazon S3] assumed-role authentication](../destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication)  | Adobe now presents your IMS Organization ID as the `sts:ExternalId` on every `AssumeRole` call for the [!DNL Amazon S3] destination's assumed-role authentication flow. Add an `sts:ExternalId` condition to your IAM role's trust policy in AWS and set it to your IMS Organization ID, to strengthen the security of your assumed-role connection. |
-| [!DNL ZoomInfo Account] | Use the [!DNL ZoomInfo Account] destination to activate account audiences from [!DNL Experience Platform] to [!DNL ZoomInfo] for account-based marketing use cases. |
-| Exclude exited profiles from [[!DNL LiveRamp] - Onboarding](../destinations/catalog/advertising/liveramp-onboarding.md) exports | Exports to the [!DNL LiveRamp] - Onboarding destination no longer include profiles that have exited an audience. |
+| External ID support for [[!DNL Amazon S3] assumed-role authentication](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication)  | Adobe now presents your Organization ID as the `sts:ExternalId` on every `AssumeRole` call for the [!DNL Amazon S3] destination's assumed-role authentication flow. Add an `sts:ExternalId` condition to your IAM role's trust policy in AWS and set it to your Organization ID to strengthen the security of your assumed-role connection. |
+| [!DNL ZoomInfo Account] | Use the [!DNL ZoomInfo Account] destination to activate account audiences from Experience Platform to [!DNL ZoomInfo] for account-based marketing use cases. |
+| Exclude exited profiles from [[!DNL LiveRamp] - Onboarding](/help/destinations/catalog/advertising/liveramp-onboarding.md) exports | Exports to the [!DNL LiveRamp] - Onboarding destination no longer include profiles that have exited an audience. |
 
 {style="table-layout:auto"}
 
@@ -87,11 +86,11 @@ For more information, read the [data ingestion overview](../ingestion/home.md).
 
 | Fix | Description |
 | --- | --- |
-| B2B audience export fix | When you export B2B audiences to a destination, [!DNL Experience Platform] now sends only the audiences that actually changed for a profile. Previously, an update to one audience caused every audience that profile qualified for to be resent, resulting in larger exports than necessary. This brings B2B audience exports in line with existing streaming and batch audience export behavior. |
+| B2B audience export fix | When you export B2B audiences to a destination, Experience Platform now sends only the audiences that have actually changed for a profile. Previously, an update to one audience caused every audience that the profile qualified for to be resent, resulting in larger exports than necessary. This brings B2B audience exports in line with existing streaming and batch audience export behavior. |
 
 {style="table-layout:auto"}
 
-For more information, read the [Destinations overview](../destinations/home.md).
+For more information, read the [Destinations overview](/help/destinations/home.md).
 
 ## Run and Operate {#run-and-operate}
 
@@ -99,7 +98,7 @@ For more information, read the [Destinations overview](../destinations/home.md).
 
 | Feature | Description |
 | --- | --- |
-| [Additional health checks](../run-and-operate/health-checks.md) | Health checks now cover additional checks across new categories, Query Service, Merge Policies, and Segmentation, in addition to the existing Schemas and Identities, Ingestion, automatic data expiration, and Datasets categories. |
+| [Additional health checks](/help/run-and-operate/health-checks.md) | Health checks now cover additional checks across the new Query Service, Merge Policies, and Segmentation categories, in addition to the existing Schemas and Identities, Ingestion, Automatic Data Expiration, and Datasets categories. |
 
 {style="table-layout:auto"}
 
@@ -112,7 +111,7 @@ Use Segmentation Service to create audiences from your customer data and manage 
 | Feature | Description |
 | ------- | ----------- |
 | Flexible Batch Schedules (Limited Availability) | Flexible Batch Schedules lets you evaluate audiences on demand using user-defined schedules, giving you greater control and flexibility over your audience evaluations. You can define the schedule's cadence, and each schedule can evaluate up to 10,000 audiences at a time. |
-| Run Now (Limited Availability) | Run Now lets you trigger audience evaluation for a specific audience on demand, without waiting for either a system-defined schedule or a user-defined schedule. |
+| Run Now (Limited Availability) | Run Now lets you trigger audience evaluation for a specific audience on demand, without waiting for a system-defined or user-defined schedule. |
 | Time-series custom objects (B2B) | You can now use time-series relational schemas in custom objects for segmentation use cases in B2BCDP. |
 
 {style="table-layout:auto"}
@@ -129,7 +128,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | --- | --- |
 | New sources in GA |The following sources have been promoted from Beta to General Availability (GA): <ul><li>[[!DNL Braze]](/help/sources/connectors/marketing-automation/braze.md)</li><li>[[!DNL Capillary]](/help/sources/connectors/loyalty/capillary.md)</li><li>[[!DNL Didomi]](/help/sources/connectors/consent-and-preferences/didomi.md)</li><li>[[!DNL LAVA]](/help/sources/connectors/loyalty/lava.md)</li><li>[[!DNL Rainfocus]](/help/sources/connectors/analytics/rainfocus.md)</li><li>[[!DNL Relay]](/help/sources/tutorials/ui/create/marketing-automation/relay-connector.md)</li><li>[[!DNL Shopify Streaming]](/help/sources/connectors/ecommerce/shopify-streaming.md)</li><li>[[!DNL Talon.One Batch]](/help/sources/tutorials/ui/create/loyalty/talon-one-batch.md)</li><li>[[!DNL Talon.One Streaming]](/help/sources/tutorials/ui/create/loyalty/talon-one-streaming.md)</li></ul> |
 | Self Serve Sources (Streaming SDK) now in GA | Self-Serve Sources (Streaming SDK) are now generally available. Partners can build and configure streaming sources with secure authentication using either OAuth or HMAC-based authentication. Authentication is required for all Streaming SDK sources. HMAC authentication validates incoming events using SHA-256 signatures, while existing configuration remains compatible with the new authentication options. |
-| Sources compatible with TLS v1.3 | The following source connectors are no compatible with Transport Layer Security (TLS) version 1.3: <ul><li>[[!DNL Azure Data Lake Storage Gen2]](/help/sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure Blob Storage]](/help/sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL Azure Event Hubs]](/help/sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL Azure Synapse Analytics]](/help/sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Data Landing Zone]](/help/sources/connectors/cloud-storage/data-landing-zone.md)</li><li>[[!DNL Snowflake] batch connector](/help/sources/connectors/databases/snowflake.md)</li></ul> |
+| Sources compatible with TLS v1.3 | The following source connectors are now compatible with Transport Layer Security (TLS) version 1.3: <ul><li>[[!DNL Azure Data Lake Storage Gen2]](/help/sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure Blob Storage]](/help/sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL Azure Event Hubs]](/help/sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL Azure Synapse Analytics]](/help/sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Data Landing Zone]](/help/sources/connectors/cloud-storage/data-landing-zone.md)</li><li>[[!DNL Snowflake] batch connector](/help/sources/connectors/databases/snowflake.md)</li></ul> |
 | [!DNL Google Ads] (V2) source connector | You can now use the Google Ads (V2) source connector to ingest advertising account, campaign, ad group, ad, asset, experience, and performance data from the [!DNL Google Ads] API into Experience Platform. |
 
 {style="table-layout:auto"}
@@ -137,3 +136,8 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 For more information, read the [sources overview](../sources/home.md).
 
 
+<!--
+
+| Web Application Firewall (WAF) for Experience Platform | Experience Platform applications and APIs are now protected by a Web Application Firewall (WAF), adding an additional layer of security. This update is being rolled out by region through mid-August 2026 and requires no action from you. |
+
+-->
