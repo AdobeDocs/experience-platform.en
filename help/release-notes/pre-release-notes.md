@@ -40,7 +40,7 @@ Use Data Governance to manage data usage policies and enforce compliance with da
 | Feature | Description |
 | --- | --- |
 | Object-Level Access Control for Datasets | Apply access labels to entire datasets to control which users can read or write them. |
-| mTLS Client Certificate Trust Chain | Adobe is transitioning mTLS client certificates to a new DigiCert CA hierarchy dedicated to client authentication. If your endpoint validates Adobe's mTLS client certificate, add the new root and intermediate CA certificates to your trust store to avoid connection or delivery failures. |
+| mTLS Certificate Hierarchy Update | Adobe is updating the CA hierarchy used to issue client certificates for outbound mTLS connections. If your systems validate Adobe's mTLS client certificate, add the new root and intermediate CA certificates to your trust store to avoid connection or delivery failures. |
 
 {style="table-layout:auto"}
 
@@ -135,10 +135,3 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 {style="table-layout:auto"}
 
 For more information, read the [sources overview](../sources/home.md).
-
-
-<!--
-
-| Web Application Firewall (WAF) for Experience Platform | Experience Platform applications and APIs are now protected by a Web Application Firewall (WAF), adding an additional layer of security. This update is being rolled out by region through mid-August 2026 and requires no action from you. |
-
--->
