@@ -53,7 +53,7 @@ For more information, read the [Data Governance overview](../data-governance/hom
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Deliver audience now for streaming destinations | Trigger an immediate, on-demand resend of an audience's full current membership to a streaming destination, without waiting for the next scheduled export. This feature is currently available for the [[!DNL Google Customer Match]](../destinations/catalog/advertising/google-customer-match.md) and [[!DNL The Trade Desk]](../destinations/catalog/advertising/tradedesk.md) destinations. This feature is in private beta. Contact your Adobe representative to request access. |
+| [!BADGE Beta]{type=Informative} Deliver audience now for streaming destinations | Trigger an immediate, on-demand resend of an audience's full current membership to a streaming destination, without waiting for the next scheduled export. This feature is in private beta and available for a limited number of streaming destinations. Contact your Adobe representative to request access. |
 | [Data type filter in the destinations catalog](../destinations/catalog/overview.md) | Filter destinations by data type in the destinations catalog **[!UICONTROL Browse]** tab. |
 
 {style="table-layout:auto"}
@@ -62,8 +62,9 @@ For more information, read the [Data Governance overview](../data-governance/hom
 
 | Feature | Description |
 | --- | --- |
-| External ID support for [[!DNL Amazon S3]](../destinations/catalog/cloud-storage/amazon-s3.md) assumed-role authentication | Adobe now presents your IMS Organization ID as the `sts:ExternalId` on every `AssumeRole` call for the [!DNL Amazon S3] destination's assumed-role authentication flow. Add an `sts:ExternalId` condition to your IAM role's trust policy in AWS and set it to your IMS Organization ID, to strengthen the security of your assumed-role connection. |
+| External ID support for [[!DNL Amazon S3]](../destinations/catalog/cloud-storage/amazon-s3.md#authenticate) assumed-role authentication | Adobe now presents your IMS Organization ID as the `sts:ExternalId` on every `AssumeRole` call for the [!DNL Amazon S3] destination's assumed-role authentication flow. Add an `sts:ExternalId` condition to your IAM role's trust policy in AWS and set it to your IMS Organization ID, to strengthen the security of your assumed-role connection. |
 | [!DNL ZoomInfo Account] | Use the [!DNL ZoomInfo Account] destination to activate account audiences from [!DNL Experience Platform] to [!DNL ZoomInfo] for account-based marketing use cases. |
+| Exclude exited profiles from [[!DNL LiveRamp] - Onboarding](../destinations/catalog/advertising/liveramp-onboarding.md) exports | Exports to the [!DNL LiveRamp] - Onboarding destination no longer include profiles that have exited an audience. |
 
 {style="table-layout:auto"}
 
@@ -71,7 +72,6 @@ For more information, read the [Data Governance overview](../data-governance/hom
 
 | Fix | Description |
 | --- | --- |
-| Exclude exited profiles from [[!DNL LiveRamp] - Onboarding](../destinations/catalog/advertising/liveramp-onboarding.md) exports | Exports to the [!DNL LiveRamp] - Onboarding destination no longer include profiles that have exited an audience. |
 | B2B audience export fix | When you export B2B audiences to a destination, [!DNL Experience Platform] now sends only the audiences that actually changed for a profile. Previously, an update to one audience caused every audience that profile qualified for to be resent, resulting in larger exports than necessary. This brings B2B audience exports in line with existing streaming and batch audience export behavior. |
 
 {style="table-layout:auto"}
