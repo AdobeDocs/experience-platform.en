@@ -23,6 +23,7 @@ exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 
 New features and updates to existing features in Adobe Experience Platform:
 
+- [Capacity](#capacity)
 - [Data Governance](#data-governance)
 - [Destinations](#destinations)
 - [Ingestion](#ingestion)
@@ -53,8 +54,8 @@ For more information, read the [Data Governance overview](../data-governance/hom
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Deliver audience now for streaming destinations | Trigger an immediate, on-demand resend of an audience's full current membership to a streaming destination, without waiting for the next scheduled export. This is available for the [!DNL Google Customer Match] and [!DNL The Trade Desk] destinations. This feature is in private beta. Contact your Adobe representative to request access. |
-| [Data type filter in the destinations catalog](../destinations/catalog/overview.md) | Filter destinations by data type in the destinations catalog **[!UICONTROL Browse]** tab and in the **[!UICONTROL Select destination]** step of the activation workflow. |
+| [!BADGE Beta]{type=Informative} Deliver audience now for streaming destinations | Trigger an immediate, on-demand resend of an audience's full current membership to a streaming destination, without waiting for the next scheduled export. This feature is currently available for the [[!DNL Google Customer Match]](../destinations/catalog/advertising/google-customer-match.md) and [[!DNL The Trade Desk]](../destinations/catalog/advertising/tradedesk.md) destinations. This feature is in private beta. Contact your Adobe representative to request access. |
+| [Data type filter in the destinations catalog](../destinations/catalog/overview.md) | Filter destinations by data type in the destinations catalog **[!UICONTROL Browse]** tab. |
 
 {style="table-layout:auto"}
 
@@ -62,7 +63,7 @@ For more information, read the [Data Governance overview](../data-governance/hom
 
 | Feature | Description |
 | --- | --- |
-| [[!DNL Amazon S3]](../destinations/catalog/cloud-storage/amazon-s3.md) `sts:ExternalId` support | When you authenticate to the [!DNL Amazon S3] destination using an assumed IAM role, Adobe now presents your IMS Organization ID as the `sts:ExternalId` on every `AssumeRole` call. Add an `sts:ExternalId` condition to your IAM role's trust policy in AWS, set to your IMS Organization ID, to prevent other Adobe customers from being able to point their own [!DNL Experience Platform] S3 destination at your role. |
+| External ID support for [[!DNL Amazon S3]](../destinations/catalog/cloud-storage/amazon-s3.md) assumed-role authentication | Adobe now presents your IMS Organization ID as the `sts:ExternalId` on every `AssumeRole` call for the [!DNL Amazon S3] destination's assumed-role authentication flow. Add an `sts:ExternalId` condition to your IAM role's trust policy in AWS and set it to your IMS Organization ID, to strengthen the security of your assumed-role connection. |
 | [[!DNL LiveRamp] - Onboarding](../destinations/catalog/advertising/liveramp-onboarding.md) excludes exited profiles | Exports to the [!DNL LiveRamp] - Onboarding destination no longer include profiles that have exited an audience. |
 | [!DNL ZoomInfo Account] | Use the [!DNL ZoomInfo Account] destination to activate account audiences from [!DNL Experience Platform] to [!DNL ZoomInfo] for account-based marketing use cases. |
 
@@ -84,6 +85,16 @@ Use batch and streaming ingestion to bring data into Experience Platform from a 
 
 For more information, read the [ingestion overview](../ingestion/home.md).
 
+## Capacity {#capacity}
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| [Edge throughput monitor now includes deeper visibility into requests, capacity, and per-region performance](../dataflows/ui/monitor-edge.md) | The edge monitoring dashboard has been enhanced to give you greater insight into how your edge requests are processed. In addition to requests received and peak throughput, the dashboard now reports requests evaluated, requests skipped, and requests failed, along with a throughput status indicator that flags when requested throughput exceeds your organization's capacity. The throughput graph now distinguishes between your capacity, requested throughput, and processing throughput. A new chart shows edge throughput broken down by edge location, and the datastream table includes the same new request metrics for each datastream. Filtering by edge is now a multi-select control, so you can scope the dashboard to any combination of edge locations. |
+
+{style="table-layout:auto"}
+
 ## Run and Operate {#run-and-operate}
 
 **New or updated features**
@@ -91,7 +102,6 @@ For more information, read the [ingestion overview](../ingestion/home.md).
 | Feature | Description |
 | --- | --- |
 | [Additional health checks](../run-and-operate/health-checks.md) | Health checks now cover 16 additional checks across four new categories: schemas and identities, Query Service, merge policies, and audiences, in addition to the existing ingestion, automatic data expiration, and dataset categories. |
-| [Edge throughput monitor now includes deeper visibility into requests, capacity, and per-region performance](../dataflows/ui/monitor-edge.md) | The edge monitoring dashboard has been enhanced to give you greater insight into how your edge requests are processed. In addition to requests received and peak throughput, the dashboard now reports requests evaluated, requests skipped, and requests failed, along with a throughput status indicator that flags when requested throughput exceeds your organization's capacity. The throughput graph now distinguishes between your capacity, requested throughput, and processing throughput. A new chart shows edge throughput broken down by edge location, and the datastream table includes the same new request metrics for each datastream. Filtering by edge is now a multi-select control, so you can scope the dashboard to any combination of edge locations. |
 
 {style="table-layout:auto"}
 
