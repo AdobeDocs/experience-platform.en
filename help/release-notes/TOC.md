@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Adobe Experience Platform Release Notes
 breadcrumb-title: Experience Platform Release Notes
 user-guide-description: Find monthly release notes for Adobe Experience Platform.
-nudge: all
+nudge: true
 ---
 
 # Adobe Experience Platform release notes {#release-notes}
