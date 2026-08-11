@@ -28,7 +28,6 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Destinations](#destinations)
 - [Ingestion](#ingestion)
 - [Run and Operate](#run-and-operate)
-- [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
 ## Data Governance {#data-governance}
@@ -64,8 +63,16 @@ For more information, read the [Data Governance overview](../data-governance/hom
 | Feature | Description |
 | --- | --- |
 | External ID support for [[!DNL Amazon S3]](../destinations/catalog/cloud-storage/amazon-s3.md) assumed-role authentication | Adobe now presents your IMS Organization ID as the `sts:ExternalId` on every `AssumeRole` call for the [!DNL Amazon S3] destination's assumed-role authentication flow. Add an `sts:ExternalId` condition to your IAM role's trust policy in AWS and set it to your IMS Organization ID, to strengthen the security of your assumed-role connection. |
-| [[!DNL LiveRamp] - Onboarding](../destinations/catalog/advertising/liveramp-onboarding.md) excludes exited profiles | Exports to the [!DNL LiveRamp] - Onboarding destination no longer include profiles that have exited an audience. |
 | [!DNL ZoomInfo Account] | Use the [!DNL ZoomInfo Account] destination to activate account audiences from [!DNL Experience Platform] to [!DNL ZoomInfo] for account-based marketing use cases. |
+
+{style="table-layout:auto"}
+
+**Fixes and improvements**
+
+| Fix | Description |
+| --- | --- |
+| Exclude exited profiles from [[!DNL LiveRamp] - Onboarding](../destinations/catalog/advertising/liveramp-onboarding.md) exports | Exports to the [!DNL LiveRamp] - Onboarding destination no longer include profiles that have exited an audience. |
+| B2B audience export fix | When you export B2B audiences to a destination, [!DNL Experience Platform] now sends only the audiences that actually changed for a profile. Previously, an update to one audience caused every audience that profile qualified for to be resent, resulting in larger exports than necessary. This brings B2B audience exports in line with existing streaming and batch audience export behavior. |
 
 {style="table-layout:auto"}
 
@@ -104,20 +111,6 @@ For more information, read the [ingestion overview](../ingestion/home.md).
 | [Additional health checks](../run-and-operate/health-checks.md) | Health checks now cover 16 additional checks across four new categories: schemas and identities, Query Service, merge policies, and audiences, in addition to the existing ingestion, automatic data expiration, and dataset categories. |
 
 {style="table-layout:auto"}
-
-## Segmentation Service {#segmentation-service}
-
-Use Segmentation Service to create audiences from your customer data and manage their full lifecycle in Experience Platform.
-
-**Fixes and improvements**
-
-| Fix | Description |
-| --- | --- |
-| B2B audience change tracking | Updates to B2B audiences now trigger downstream changes only for the audiences that actually changed, instead of for all of a profile's audiences. |
-
-{style="table-layout:auto"}
-
-For more information, read the [Audiences overview](../segmentation/home.md).
 
 ## Sources {#sources}
 
