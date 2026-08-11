@@ -1,6 +1,7 @@
 ---
 title: Experience Platform Pre-Release Notes
 description: A preview of the latest release notes for Adobe Experience Platform.
+last-update: 2026-08-11
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 ---
 # Adobe Experience Platform pre-release notes
@@ -23,11 +24,11 @@ exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 
 New features and updates to existing features in Adobe Experience Platform:
 
-- [Capacity](#capacity)
 - [Data Governance](#data-governance)
+- [Data Ingestion](#data-ingestion)
 - [Destinations](#destinations)
-- [Ingestion](#ingestion)
 - [Run and Operate](#run-and-operate)
+- [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
 ## Data Governance {#data-governance}
@@ -38,12 +39,26 @@ Use Data Governance to manage data usage policies and enforce compliance with da
 
 | Feature | Description |
 | --- | --- |
-| Web Application Firewall (WAF) for [!DNL Experience Platform] | [!DNL Experience Platform] applications and APIs are now protected by a Web Application Firewall (WAF), adding an additional layer of security coverage. This update is being rolled out by region through mid-August 2026 and requires no action from you. |
+| Web Application Firewall (WAF) for Experience Platform | Experience Platform applications and APIs are now protected by a Web Application Firewall (WAF), adding an additional layer of security coverage. This update is being rolled out by region through mid-August 2026 and requires no action from you. |
 | Object-level access control for datasets | Apply data usage labels directly to an entire dataset, using the same core and custom governance labels used elsewhere on the platform. |
 
 {style="table-layout:auto"}
 
 For more information, read the [Data Governance overview](../data-governance/home.md).
+
+## Data Ingestion {#data-ingestion}
+
+Use batch and streaming ingestion to bring data into Experience Platform from a variety of sources.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Updated [Batch Ingestion guardrails](../ingestion/guardrails.md) | Guardrail limits for the number of files and datasets you can ingest into Experience Platform through the Batch Ingestion API and batch sources have increased. New error messages help you identify when a limit is reached. |
+
+{style="table-layout:auto"}
+
+For more information, read the [data ingestion overview](../ingestion/home.md).
 
 ## Destinations {#destinations}
 
@@ -78,30 +93,6 @@ For more information, read the [Data Governance overview](../data-governance/hom
 
 For more information, read the [Destinations overview](../destinations/home.md).
 
-## Ingestion {#ingestion}
-
-Use batch and streaming ingestion to bring data into Experience Platform from a variety of sources.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Updated [batch ingestion guardrails](../ingestion/guardrails.md) | Guardrail limits for the number of files and datasets you can ingest into [!DNL Experience Platform] through the batch ingestion API and batch sources have increased. New error messages help you identify when a limit is reached. |
-
-{style="table-layout:auto"}
-
-For more information, read the [ingestion overview](../ingestion/home.md).
-
-## Capacity {#capacity}
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| [Edge throughput monitor now includes deeper visibility into requests, capacity, and per-region performance](../dataflows/ui/monitor-edge.md) | The edge monitoring dashboard has been enhanced to give you greater insight into how your edge requests are processed. In addition to requests received and peak throughput, the dashboard now reports requests evaluated, requests skipped, and requests failed, along with a throughput status indicator that flags when requested throughput exceeds your organization's capacity. The throughput graph now distinguishes between your capacity, requested throughput, and processing throughput. A new chart shows edge throughput broken down by edge location, and the datastream table includes the same new request metrics for each datastream. Filtering by edge is now a multi-select control, so you can scope the dashboard to any combination of edge locations. |
-
-{style="table-layout:auto"}
-
 ## Run and Operate {#run-and-operate}
 
 **New or updated features**
@@ -112,6 +103,22 @@ For more information, read the [ingestion overview](../ingestion/home.md).
 
 {style="table-layout:auto"}
 
+## Segmentation Service {#segmentation-service}
+
+Use Segmentation Service to create audiences from your customer data and manage their full lifecycle in Experience Platform.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Flexible Batch Schedules (Limited Availability) | Flexible Batch Schedules lets you evaluate audiences on demand using user-defined schedules, giving you greater control and flexibility over your audience evaluations. You can define the schedule's cadence, and each schedule can evaluate up to 10,000 audiences at a time. |
+| Run Now (Limited Availability) | Run Now lets you trigger audience evaluation for a specific audience on demand, without waiting for either a system-defined schedule or a user-defined schedule. |
+| Time-series custom objects (B2B) | You can now use time-series relational schemas in custom objects for segmentation use cases in B2BCDP. |
+
+{style="table-layout:auto"}
+
+For more information, read the [Segmentation Service overview](/help/segmentation/home.md).
+
 ## Sources {#sources}
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
@@ -120,8 +127,13 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| [[!DNL Rainfocus]](../sources/connectors/marketing-automation/rainfocus.md), [[!DNL Braze]](../sources/connectors/adobe-applications/braze.md), [!DNL Relay], [[!DNL Shopify Streaming]](../sources/connectors/ecommerce/shopify-streaming.md), [!DNL Didomi], [!DNL Capillary], [!DNL LAVA.AI], and [!DNL Talon.One] (streaming and batch) now generally available | These source connectors (formerly in beta) are now generally available. |
+| New sources in GA |The following sources have been promoted from Beta to General Availability (GA): <ul><li>[[!DNL Braze]](/help/sources/connectors/marketing-automation/braze.md)</li><li>[[!DNL Capillary]](/help/sources/connectors/loyalty/capillary.md)</li><li>[[!DNL Didomi]](/help/sources/connectors/consent-and-preferences/didomi.md)</li><li>[[!DNL LAVA]](/help/sources/connectors/loyalty/lava.md)</li><li>[[!DNL Rainfocus]](/help/sources/connectors/analytics/rainfocus.md)</li><li>[[!DNL Relay]](/help/sources/tutorials/ui/create/marketing-automation/relay-connector.md)</li><li>[[!DNL Shopify Streaming]](/help/sources/connectors/ecommerce/shopify-streaming.md)</li><li>[[!DNL Talon.One Batch]](/help/sources/tutorials/ui/create/loyalty/talon-one-batch.md)</li><li>[[!DNL Talon.One Streaming]](/help/sources/tutorials/ui/create/loyalty/talon-one-streaming.md)</li></ul> |
+| Self Serve Sources (Streaming SDK) now in GA | Self-Serve Sources (Streaming SDK) are now generally available. Partners can build and configure streaming sources with secure authentication using either OAuth or HMAC-based authentication. Authentication is required for all Streaming SDK sources. HMAC authentication validates incoming events using SHA-256 signatures, while existing configuration remains compatible with the new authentication options. |
+| Sources compatible with TLS v1.3 | The following source connectors are no compatible with Transport Layer Security (TLS) version 1.3: <ul><li>[[!DNL Azure Data Lake Storage Gen2]](/help/sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure Blob Storage]](/help/sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL Azure Event Hubs]](/help/sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL Azure Synapse Analytics]](/help/sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Data Landing Zone]](/help/sources/connectors/cloud-storage/data-landing-zone.md)</li><li>[[!DNL Snowflake] batch connector](/help/sources/connectors/databases/snowflake.md)</li></ul> |
+| [!DNL Google Ads] (V2) source connector | You can now use the Google Ads (V2) source connector to ingest advertising account, campaign, ad group, ad, asset, experience, and performance data from the [!DNL Google Ads] API into Experience Platform. |
 
 {style="table-layout:auto"}
 
 For more information, read the [sources overview](../sources/home.md).
+
+
