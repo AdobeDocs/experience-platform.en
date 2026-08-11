@@ -112,3 +112,4 @@ When using the **[!UICONTROL Export file now]** control, you might encounter any
 
 * [Activate audiences to batch destinations on-demand using the Experience Platform APIs](/help/destinations/api/ad-hoc-activation-api.md)
 * [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md)
+* [Deliver Audience Now for streaming destinations](/help/destinations/ui/deliver-audience-now.md)
