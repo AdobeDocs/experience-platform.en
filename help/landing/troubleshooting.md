@@ -230,7 +230,7 @@ This error message displays in either of the two cases below:
 
 If a mutual TLS (mTLS) connection to your endpoint previously worked and now fails without configuration changes on your side, your trust store may not include Adobe's new certificate authority (CA) hierarchy. This can affect HTTP API destinations, Adobe Journey Optimizer custom actions, and Event Forwarding integrations. Adobe is migrating the client certificates used for outbound mTLS connections to the new hierarchy. Endpoints that do not trust the new root and intermediate CA certificates will reject connections that use certificates issued from it.
 
-This trust store update is separate from the automated certificate retrieval available through the [mTLS Service API](../data-governance/mtls-api/overview.md). The API manages Adobe's client certificate, not the CA hierarchy your systems use to trust it. See [Troubleshooting the mTLS trust chain migration](./governance-privacy-security/mtls-trust-chain-migration.md#troubleshooting) for symptoms and resolution steps.
+This trust store update is separate from the automated certificate retrieval available through the [mTLS Service API](../data-governance/mtls-api/overview.md). The API manages Adobe's client certificate, not the CA hierarchy your systems use to trust it. See [Troubleshooting the mTLS certificate hierarchy migration](./governance-privacy-security/mtls-trust-chain-migration.md#troubleshooting) for symptoms and resolution steps.
 
 
 ## Service troubleshooting directory {#service-troubleshooting-directory}
@@ -244,7 +244,7 @@ The following is a list of troubleshooting guides and API reference documentatio
 | Adobe Experience Platform Data Ingestion | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion) | [Streaming ingestion troubleshooting guide](../ingestion/streaming-ingestion/troubleshooting.md)|
 | Adobe Experience Platform Data Science Workspace | [[!DNL Adobe AI Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) | [[!DNL Data Science Workspace] troubleshooting guide](../data-science-workspace/troubleshooting-guide.md) |
 | Adobe Experience Platform Data Governance | [[!DNL Policy Service API]](https://developer.adobe.com/experience-platform-apis/references/policy-service)||
-| Adobe Experience Platform mTLS Service | [[!DNL MTLS Service API]](https://developer.adobe.com/experience-platform-apis/references/mtls-service/) | [mTLS trust chain migration guide](./governance-privacy-security/mtls-trust-chain-migration.md#troubleshooting)|
+| Adobe Experience Platform mTLS Service | [[!DNL MTLS Service API]](https://developer.adobe.com/experience-platform-apis/references/mtls-service/) | [mTLS certificate hierarchy migration guide](./governance-privacy-security/mtls-trust-chain-migration.md#troubleshooting)|
 | Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://developer.adobe.com/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] troubleshooting guide](../identity-service/troubleshooting-guide.md)|
 | Adobe Experience Platform Query Service | [[!DNL Query Service API]](https://developer.adobe.com/experience-platform-apis/references/query-service) | [[!DNL Query Service] troubleshooting guide](../query-service/troubleshooting-guide.md)|
 | Adobe Experience Platform Segmentation | [[!DNL Segmentation API]](https://developer.adobe.com/experience-platform-apis/references/segmentation) ||

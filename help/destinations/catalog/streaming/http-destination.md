@@ -113,7 +113,7 @@ To use mTLS with HTTP API destinations, the **[!UICONTROL HTTP Endpoint]** (data
 
 >[!IMPORTANT]
 >
->Adobe is updating the certificate authority (CA) hierarchy used to issue the mTLS client certificate presented to your endpoint. Add Adobe's new root and intermediate CA certificates to your receiving endpoint's trust store. If the new hierarchy is not trusted when Adobe transitions the connection, the mTLS handshake fails and Experience Platform cannot deliver data to the destination. See  [Updating your mTLS trust chain](../../../landing/governance-privacy-security/mtls-trust-chain-migration.md) for migration instructions.
+>Adobe is updating the certificate authority (CA) hierarchy used to issue the mTLS client certificate presented to your endpoint. Add Adobe's new root and intermediate CA certificates to your receiving endpoint's trust store. If the new hierarchy is not trusted when Adobe transitions the connection, the mTLS handshake fails and Experience Platform cannot deliver data to the destination. See [the mTLS certificate hierarchy migration guide](../../../landing/governance-privacy-security/mtls-trust-chain-migration.md) for migration instructions.
 
 ### Retrieve and inspect certificate details {#certificate}
 
@@ -430,4 +430,4 @@ When requests to your HTTP API destination fail, Experience Platform stores them
 
 To ensure reliable data delivery and avoid timeout issues, make sure that your HTTP endpoint responds within 2 seconds to Experience Platform requests, as specified in the [prerequisites](#prerequisites) section. Responses that take longer will result in timeout errors.
 
-If you use mTLS and previously working deliveries begin failing without configuration changes on your side, confirm that your endpoint trusts Adobe's new mTLS certificate authority hierarchy. See [Troubleshooting the mTLS trust chain migration](../../../landing/governance-privacy-security/mtls-trust-chain-migration.md#troubleshooting) for symptoms and resolution steps.
+If you use mTLS and previously working deliveries begin failing without configuration changes on your side, confirm that your endpoint trusts Adobe's new mTLS certificate authority hierarchy. See [Troubleshooting the mTLS certificate hierarchy migration](../../../landing/governance-privacy-security/mtls-trust-chain-migration.md#troubleshooting) for symptoms and resolution steps.

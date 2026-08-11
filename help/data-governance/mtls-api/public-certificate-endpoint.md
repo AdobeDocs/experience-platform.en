@@ -135,7 +135,7 @@ You must update your integrations to support automated retrieval via the API. Do
 
 >[!IMPORTANT]
 >
->This automation covers only the public certificate returned by this API. It does not update the certificate authority (CA) hierarchy your systems use to trust that certificate. Adobe is updating this CA hierarchy separately. If your endpoint validates Adobe's mTLS client certificate, add the new root and intermediate CA certificates to your trust store as a one-time update. See [Updating your mTLS trust chain](../../landing/governance-privacy-security/mtls-trust-chain-migration.md) for details.
+>This automation covers only the public certificate returned by this API. It does not update the certificate authority (CA) hierarchy your systems use to trust that certificate. Adobe is updating this CA hierarchy separately. If your endpoint validates Adobe's mTLS client certificate, add the new root and intermediate CA certificates to your trust store as a one-time update. See [the mTLS certificate hierarchy migration guide](../../landing/governance-privacy-security/mtls-trust-chain-migration.md) for details.
 
 ## Next steps
 

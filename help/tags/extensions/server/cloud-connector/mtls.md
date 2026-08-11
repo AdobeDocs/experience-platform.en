@@ -98,7 +98,7 @@ To deploy the certificate, select **[!UICONTROL Save and deploy]** in the **[!UI
 
 >[!IMPORTANT]
 >
->Selecting and deploying a certificate here changes only the Adobe-issued certificate that Event Forwarding uses for outbound [!DNL mTLS] connections. It does not update the trust configuration on your receiving server. Add Adobe's new root and intermediate CA certificates to your server's trust store before Event Forwarding begins using certificates from the new hierarchy. Otherwise, the [!DNL mTLS] connection fails. See [Updating your mTLS trust chain](../../../../landing/governance-privacy-security/mtls-trust-chain-migration.md) for migration instructions.
+>Selecting and deploying a certificate here changes only the Adobe-issued certificate that Event Forwarding uses for outbound [!DNL mTLS] connections. It does not update the trust configuration on your receiving server. Add Adobe's new root and intermediate CA certificates to your server's trust store before Event Forwarding begins using certificates from the new hierarchy. Otherwise, the [!DNL mTLS] connection fails. See [the mTLS certificate hierarchy migration guide](../../../../landing/governance-privacy-security/mtls-trust-chain-migration.md) for migration instructions.
 
 ## Next steps {#next-steps}
 

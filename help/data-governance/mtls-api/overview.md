@@ -26,7 +26,7 @@ A public certificate is a digital document used to authenticate the identity of 
 
 >[!NOTE]
 >
->This API retrieves the public certificate Adobe presents on outbound mTLS connections. It does not manage the certificate authority (CA) hierarchy your systems use to trust that certificate. If your endpoint validates Adobe's mTLS client certificate, see [Updating your mTLS trust chain](../../landing/governance-privacy-security/mtls-trust-chain-migration.md) for a required, separate trust store update.
+>This API retrieves the public certificate Adobe presents on outbound mTLS connections. It does not manage the certificate authority (CA) hierarchy your systems use to trust that certificate. If your endpoint validates Adobe's mTLS client certificate, see [the mTLS certificate hierarchy migration guide](../../landing/governance-privacy-security/mtls-trust-chain-migration.md) for a required, separate trust store update.
 
 ## Next steps
 

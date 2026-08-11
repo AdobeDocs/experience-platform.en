@@ -93,7 +93,7 @@ These intervals will continue to shorten in line with [evolving CA/B Forum guide
 
 If you previously used links on this page to download certificates, update your process to retrieve them exclusively through the API.
 
-### Updating the mTLS certificate authority trust chain {#trust-chain-update}
+### Updating the mTLS certificate authority hierarchy {#certificate-hierarchy-update}
 
 Adobe is updating the certificate authority (CA) hierarchy used to issue client certificates for outbound mTLS connections. Industry standards require separate CA hierarchies for server and client authentication. To meet these requirements, Adobe is moving from a hierarchy that supports both server and client authentication to one dedicated to client authentication.
 
@@ -110,7 +110,7 @@ The following table compares the current and new certificate hierarchies.
 >
 >If your endpoint validates Adobe's mTLS client certificate, add the new root and intermediate CA certificates to your trust store. Adobe began transitioning certificates to the new hierarchy in mid-2026, with the migration expected to continue through spring 2027. This one-time trust store update is separate from the automated certificate lifecycle. You do not need to request, download, or replace Adobe's client certificate.
 
-Update your trust store as soon as possible rather than waiting for a specific connection to be affected. A trust store can hold both hierarchies at the same time, so adding the new root and intermediate does not disrupt your current connections. For certificate downloads, platform-specific instructions, verification steps, and migration details, see [Updating your mTLS trust chain](.\mtls-trust-chain-migration.md)
+Update your trust store as soon as possible rather than waiting for a specific connection to be affected. A trust store can hold both hierarchies at the same time, so adding the new root and intermediate does not disrupt your current connections. For certificate downloads, platform-specific instructions, verification steps, and migration details, see the [mTLS certificate hierarchy migration guide](./mtls-trust-chain-migration.md).
 
 ## Data at rest {#at-rest}
 
