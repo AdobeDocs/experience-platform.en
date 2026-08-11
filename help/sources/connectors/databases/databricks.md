@@ -174,7 +174,7 @@ Unable to access container '{CONTAINER_NAME}' in account '{STORAGE_ACCOUNT}.blob
 
 The Databricks source connector performs read and write (I/O) operations on your Databricks cluster during ingestion. These operations require Unity Catalog object permissions and, depending on your cluster's access mode, additional cluster-level permissions. Configure both before connecting.
 
-1. Grant Unity Catalog permissions
+**Grant Unity Catalog permissions**
 
 Grant the following Unity Catalog permissions on the source objects to the identity used by the connection (a service principal):
 
@@ -184,7 +184,7 @@ Grant the following Unity Catalog permissions on the source objects to the ident
 | `USE SCHEMA` | The schema |
 | `SELECT` | The source table |
 
-2. Configure your cluster's access mode
+**Configure your cluster's access mode**
 
 Select the access mode used by your Databricks cluster and complete the corresponding configuration.
 
