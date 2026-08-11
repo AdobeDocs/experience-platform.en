@@ -108,7 +108,7 @@ For more information, read the [ingestion overview](../ingestion/home.md).
 
 | Feature | Description |
 | --- | --- |
-| [Additional health checks](../run-and-operate/health-checks.md) | Health checks now cover 16 additional checks across four new categories: schemas and identities, Query Service, merge policies, and audiences, in addition to the existing ingestion, automatic data expiration, and dataset categories. |
+| [Additional health checks](../run-and-operate/health-checks.md) | Health checks now cover additional checks across new categories, Query Service, Merge Policies, and Segmentation, in addition to the existing Schemas and Identities, Ingestion, automatic data expiration, and Datasets categories. |
 
 {style="table-layout:auto"}
 
