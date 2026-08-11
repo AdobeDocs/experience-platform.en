@@ -103,15 +103,17 @@ After you create a schedule, you can assign additional audiences to the previous
 
 >[!TAB UI]
 
-To assign an audience a schedule using the Experience Platform UI, select the schedule you created within the **Evaluation** page.
+To assign audiences to a schedules using the Experience Platform UI, select the ICON next to the schedule, followed by **[!UICONTROL Schedule audiences]**.
 
 IMAGE
 
-????
+The **[!UICONTROL Schedule audiences]** popover is displayed. Select the audiences you want to add to the schedule, followed by **[!UICONTROL Schedule]** to confirm your scheduling changes.
+
+IMAGE
 
 >[!TAB API]
 
-To assign an audience a schedule using the Experience Platform API, you'll need to make a POST request to the `/schedules/add-audiences` endpoint.
+To assign audiences to a schedule using the Experience Platform API, you'll need to make a POST request to the `/schedules/add-audiences` endpoint.
 
 **API format**
 
@@ -180,7 +182,17 @@ You can see which schedules an audience belongs to either using the Experience P
 
 >[!TAB UI]
 
-???
+>[!NOTE]
+>
+>You can only view the schedules for audiences created using **Audience Builder**.
+
+To view the schedules an audience belongs to using the Experience Platform UI, go to [Audience Portal](/help/segmentation/ui/audience-portal.md) and select the audience, followed by **Edit audience**.
+
+IMAGE
+
+Within Audience Builder, select the ICON within the **Schedule** section of the **Audience properties** section to display the **Audience schedules** popover. This popover shows which schedules the audience belongs to, and lets you add or remove which schedules the audience belongs to.
+
+IMAGE
 
 >[!TAB API]
 
@@ -249,7 +261,13 @@ If you want to remove audiences from an already created schedule, you can use ei
 
 >[!TAB UI]
 
-???
+To remove audiences from a schedule using the Experience Platform UI, select the ICON next to the schedule, followed by **[!UICONTROL Schedule audiences]**.
+
+IMAGE
+
+The **[!UICONTROL Schedule audiences]** popover is displayed. Select the audiences you want to remove from the schedule, followed by **[!UICONTROL Schedule]** to confirm your scheduling changes.
+
+IMAGE
 
 >[!TAB API]
 
@@ -330,4 +348,81 @@ To manually run a schedule in the Experience Platform API, you'll need to make a
 POST /schedules/trigger
 ```
 
+**Request**
+
++++ A sample request to trigger a schedule's evaluation.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/config/schedules/trigger \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{ 
+    "id": "cd585edf-962d-420d-94ad-3be03e619ac2" 
+    }'
+```
+
+When you trigger a schedule evaluation, you need to provide the ID of the schedule you want to evaluate. You can **only** evaluate one schedule at a time. For more detailed information about triggering a schedule evaluation, read the [schedules endpoint guide](/help/segmentation/api/schedules.md#trigger).
+
++++
+
+**Response**
+
+A successful response returns HTTP status 200 with no content.
+
 >[!ENDTABS]
+
+## Enable or disable a schedule
+
+You can enable or disable a schedule using either the Experience Platform UI or API.
+
+>[!BEGINTABS]
+
+>[!TAB UI]
+
+To enable or disable a schedule using the Experience Platform UI, select the ICON next to the schedule. If you want to enable a currently disabled schedule, select **Enable**. If you want to disable a currently enabled schedule, select **Disable**.
+
+IMAGE
+
+>[!TAB API]
+
+To enable or disable a schedule using the Experience Platform API, you'll need to make a PATCH request to the `/schedules` endpoint, providing the ID of the schedule you want to update.
+
+**API format**
+
+```http
+PATCH /schedules/{SCHEDULE_ID}
+```
+
+**Request**
+
++++ A sample request to update a schedule
+
+```shell
+curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/cd585edf-962d-420d-94ad-3be03e619ac2 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '[
+        { 
+            "op": "replace", 
+            "path": "/state", 
+            "value": "inactive" 
+        }
+      ]'
+```
+
+When you update your schedule, you need to provide the operation, path, and value for the schedule. If you want to enable a disabled schedule, you'll need to set `value` to `active`. If you want to disable an enabled schedule, you'll need to set `value` to `inactive`. For more detailed information about updating a schedule, read the [schedules endpoint guide](/help/segmentation/api/schedules.md#update).
+
++++
+
+**Response**
+
+A successful response returns HTTP status 204 with no content.
+
+>[!ENDTABS]
+
