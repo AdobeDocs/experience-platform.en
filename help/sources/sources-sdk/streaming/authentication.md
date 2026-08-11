@@ -4,7 +4,7 @@ description: Learn how to configure authentication for a Streaming SDK source co
 ---
 # Configure authentication for a Streaming SDK connector
 
-Authentication is required for all connectors built with the Streaming SDK. Before you submit or release a connector, configure **one supported authentication mechanism**:
+Authentication is required for all connectors built with Streaming SDK. Before you submit or release a connector, configure **one supported authentication mechanism**:
 
 | Mechanism | Use when |
 | --- | --- |
