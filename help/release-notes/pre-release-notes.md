@@ -110,7 +110,7 @@ Use Segmentation Service to create audiences from your customer data and manage 
 
 | Feature | Description |
 | ------- | ----------- |
-| Flexible Batch Schedules (Limited Availability) | Flexible Batch Schedules lets you evaluate audiences on demand using user-defined schedules, giving you greater control and flexibility over your audience evaluations. You can define the schedule's cadence, and each schedule can evaluate up to 10,000 audiences at a time. |
+| Flexible Batch Schedules (Limited Availability) | Flexible Batch Schedules lets you evaluate audiences on demand using user-defined schedules, giving you greater control and flexibility over your audience evaluations. You can define the cadence, and each schedule can evaluate up to 10,000 audiences at a time. |
 | Run Now (Limited Availability) | Run Now lets you trigger audience evaluation for a specific audience on demand, without waiting for a system-defined or user-defined schedule. |
 | Time-series custom objects (B2B) | You can now use time-series relational schemas in custom objects for segmentation use cases in B2BCDP. |
 
