@@ -29,6 +29,46 @@ Adobe is updating the certificate authority (CA) hierarchy used to issue the cli
 >
 >This update is a one-time change to your trust store. It is separate from, and does not replace, the automated certificate retrieval and lifecycle you already use through the [mTLS Service API](../../data-governance/mtls-api/overview.md). You do not need to request, download, or replace Adobe's client certificate as part of this migration.
 
+## Who is affected {#who-is-affected}
+
+This change affects any endpoint you manage that validates Adobe's mTLS client certificate, including receiving endpoints for HTTP API destinations, Adobe Journey Optimizer custom actions, and Event Forwarding integrations. If you already use mTLS with any Adobe Experience Platform integration, review this guide and complete the trust store update described below.
+
+## What you need to do {#what-you-need-to-do}
+
+Add Adobe's new root and intermediate CA certificates to the trust store or trusted CA bundle used by the endpoint that validates Adobe's mTLS client certificate.
+
+Follow this sequence:
+
+1. Add the new root and intermediate CA certificates to your trust store, alongside your existing trusted certificates.
+2. Keep your current trusted hierarchy in place — don't remove it as part of this update.
+3. Apply or reload the trust configuration, if your platform requires it.
+4. Verify the update, as described in [Verify your trust store update](#verify).
+5. Leave both hierarchies trusted for the remainder of the transition.
+
+This is a trust store update only. You do not need to:
+
+- Request a new client certificate from Adobe.
+- Change how mTLS is enabled or configured in your Adobe integrations.
+- Modify how you retrieve certificates through the mTLS Service API.
+
+## When to complete this update {#when-to-update}
+
+Complete this update as soon as possible rather than waiting for a specific connection to be affected. Because a trust store can hold multiple valid hierarchies at the same time, adding the new root and intermediate now has no effect on your current, working connections.
+
+Adobe is transitioning mTLS client certificates to the new certificate hierarchy, with first customer impact expected around mid-2026 and the transition continuing through spring 2027.
+
+<!-- TODO: confirm the correct release notes cross-link once the announcement is published. -->
+
+## What happens if you don't update {#what-happens-if-you-dont-update}
+
+Once Adobe presents a certificate issued from the new hierarchy on a connection to your endpoint, the TLS handshake fails if your trust store doesn't yet include the new root and intermediate certificates. This surfaces as a connection or delivery failure on the affected integration — for example, a destination delivery failure or a failed custom action call — until you update your trust store.
+
+## How do you know you're ready? {#readiness}
+
+Verifying your certificate files is not the same as confirming your production endpoint is ready. Certificate verification confirms that the files you downloaded are valid and correctly chained; it does not confirm that the service actually terminating your Adobe mTLS connection is using the updated trust configuration.
+
+After completing the platform-specific steps below, use [Verify your trust store update](#verify) to confirm your certificate files and chain are valid. Adobe does not currently provide a universal end-to-end test that confirms your production endpoint is using the updated configuration — confirm readiness using whatever validation method your platform or environment supports.
+
 ## What is changing {#what-is-changing}
 
 Adobe issues mTLS client certificates to authenticate outbound connections to endpoints you control, such as an [HTTP API destination](../../destinations/catalog/streaming/http-destination.md) receiving endpoint, an Adobe Journey Optimizer custom action, or an Event Forwarding integration. Adobe is moving these certificates from a certificate hierarchy shared between server and client authentication to a hierarchy dedicated solely to client authentication.
@@ -38,20 +78,6 @@ This means the root and intermediate certificate authority behind Adobe's mTLS c
 ## Why this is changing {#why-this-is-changing}
 
 Industry certificate authority standards now require that certificates used for server authentication and certificates used for client authentication be issued from separate hierarchies. A certificate intended only for client authentication should not also be valid for server authentication, and vice versa. Separating the hierarchies reduces the risk that a certificate could be misused outside its intended purpose. This requirement applies across the industry to all major public certificate authorities, so it is not specific to Adobe or to any single integration.
-
-## Who is affected {#who-is-affected}
-
-This change affects any endpoint you manage that validates Adobe's mTLS client certificate, including receiving endpoints for HTTP API destinations, Adobe Journey Optimizer custom actions, and Event Forwarding integrations. If you already use mTLS with any Adobe Experience Platform integration, review this guide and complete the trust store update described below.
-
-## What you need to do {#what-you-need-to-do}
-
-Add Adobe's new root and intermediate CA certificates to the trust store or trusted CA bundle used by the endpoint that validates Adobe's mTLS client certificate. Add the new certificates alongside your existing trusted certificates rather than replacing them, and don't remove your current trusted hierarchy until you've confirmed the new one is in place and verified.
-
-This is a trust store update only. You do not need to:
-
-- Request a new client certificate from Adobe.
-- Change how mTLS is enabled or configured in your Adobe integrations.
-- Modify how you retrieve certificates through the mTLS Service API.
 
 ## The new certificate hierarchy {#new-certificate-hierarchy}
 
@@ -103,18 +129,6 @@ openssl verify -CAfile DigiCertAssuredIDRootG2.pem DigiCertAssuredIDClientCAG2.p
 A successful chain verification returns `DigiCertAssuredIDClientCAG2.pem: OK`.
 
 <!-- TODO: confirm whether Adobe should mirror these certificate files rather than linking directly to cacerts.digicert.com, and confirm certificate fingerprints/thumbprints for inclusion here, before publication. -->
-
-## When to complete this update {#when-to-update}
-
-Complete this update as soon as possible rather than waiting for a specific connection to be affected. Because a trust store can hold multiple valid hierarchies at the same time, adding the new root and intermediate now has no effect on your current, working connections.
-
-Adobe expects to begin transitioning individual connections to the new hierarchy gradually, with the full transition across all Adobe mTLS-issued certificates completing over the following months.
-
-<!-- TODO: confirm the correct release notes cross-link once the announcement is published. -->
-
-## What happens if you don't update {#what-happens-if-you-dont-update}
-
-Once Adobe presents a certificate issued from the new hierarchy on a connection to your endpoint, the TLS handshake fails if your trust store doesn't yet include the new root and intermediate certificates. This surfaces as a connection or delivery failure on the affected integration — for example, a destination delivery failure or a failed custom action call — until you update your trust store.
 
 ## Update your trust store {#update-trust-store}
 
@@ -423,9 +437,11 @@ Yes, and Adobe recommends doing so. See [When to complete this update](#when-to-
 
 **When will this affect my integration?**
 
-The transition happens gradually rather than on a single date.
+The transition is phased, with first customer impact expected around mid-2026 and continuing through spring 2027. See [When to complete this update](#when-to-update) for what to do in the meantime.
 
 ## Related documentation {#related-documentation}
+
+Use the following resources to learn more about mTLS configuration, certificate retrieval, and certificate lifecycle management in Experience Platform.
 
 - [Data encryption in Adobe Experience Platform](./encryption.md) for a broader overview of how Experience Platform encrypts data in transit and at rest, including mTLS support.
 - [mTLS Service API overview](../../data-governance/mtls-api/overview.md) for retrieving Adobe's public client certificate programmatically.
