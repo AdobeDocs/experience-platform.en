@@ -40,12 +40,12 @@ Add Adobe's new root and intermediate CA certificates to the trust store or trus
 Follow this sequence:
 
 1. Add the new root and intermediate CA certificates to your trust store, alongside your existing trusted certificates.
-2. Keep your current trusted hierarchy in place — don't remove it as part of this update.
+2. Keep your current trusted hierarchy in place. You don't remove it as part of this update.
 3. Apply or reload the trust configuration, if your platform requires it.
 4. Verify the update, as described in [Verify your trust store update](#verify).
 5. Leave both hierarchies trusted for the remainder of the transition.
 
-This is a trust store update only. You do not need to:
+This is a trust store update only. You do NOT need to:
 
 - Request a new client certificate from Adobe.
 - Change how mTLS is enabled or configured in your Adobe integrations.
@@ -55,29 +55,27 @@ This is a trust store update only. You do not need to:
 
 Complete this update as soon as possible rather than waiting for a specific connection to be affected. Because a trust store can hold multiple valid hierarchies at the same time, adding the new root and intermediate now has no effect on your current, working connections.
 
-Adobe is transitioning mTLS client certificates to the new certificate hierarchy, with first customer impact expected around mid-2026 and the transition continuing through spring 2027.
-
-<!-- TODO: confirm the correct release notes cross-link once the announcement is published. -->
+Adobe is transitioning mTLS client certificates to the new certificate hierarchy from mid-2026 and continuing through spring 2027.
 
 ## What happens if you don't update {#what-happens-if-you-dont-update}
 
-Once Adobe presents a certificate issued from the new hierarchy on a connection to your endpoint, the TLS handshake fails if your trust store doesn't yet include the new root and intermediate certificates. This surfaces as a connection or delivery failure on the affected integration — for example, a destination delivery failure or a failed custom action call — until you update your trust store.
+Once Adobe presents a certificate issued from the new hierarchy on a connection to your endpoint, the TLS handshake fails if your trust store doesn't yet include the new root and intermediate certificates. This surfaces as a connection or delivery failure on the affected integration. For example, a destination delivery failure or a failed custom action call, until you update your trust store.
 
 ## How do you know you're ready? {#readiness}
 
-Verifying your certificate files is not the same as confirming your production endpoint is ready. Certificate verification confirms that the files you downloaded are valid and correctly chained; it does not confirm that the service actually terminating your Adobe mTLS connection is using the updated trust configuration.
+Verifying your certificate files is not the same as confirming your production endpoint is ready. Certificate verification confirms that the downloaded files are valid and correctly chained, but does not confirm that the service terminating your Adobe mTLS connection is using the updated trust configuration.
 
-After completing the platform-specific steps below, use [Verify your trust store update](#verify) to confirm your certificate files and chain are valid. Adobe does not currently provide a universal end-to-end test that confirms your production endpoint is using the updated configuration — confirm readiness using whatever validation method your platform or environment supports.
+After completing the platform-specific steps below, follow the steps described in the [Verify your trust store update](#verify) section to confirm your certificate files and chain are valid. Adobe does not currently provide a universal end-to-end test that confirms your production endpoint is using the updated configuration. Confirm readiness using whatever validation method your platform or environment supports.
 
 ## What is changing {#what-is-changing}
 
 Adobe issues mTLS client certificates to authenticate outbound connections to endpoints you control, such as an [HTTP API destination](../../destinations/catalog/streaming/http-destination.md) receiving endpoint, an Adobe Journey Optimizer custom action, or an Event Forwarding integration. Adobe is moving these certificates from a certificate hierarchy shared between server and client authentication to a hierarchy dedicated solely to client authentication.
 
-This means the root and intermediate certificate authority behind Adobe's mTLS client certificate is changing. The certificate itself continues to work the same way it does today, and how you configure mTLS in your Adobe integrations does not change.
+This means the root and intermediate certificate authorities behind Adobe's mTLS client certificate are changing. This change does not affect how the certificate functions or how you configure mTLS in your Adobe integrations.
 
 ## Why this is changing {#why-this-is-changing}
 
-Industry certificate authority standards now require that certificates used for server authentication and certificates used for client authentication be issued from separate hierarchies. A certificate intended only for client authentication should not also be valid for server authentication, and vice versa. Separating the hierarchies reduces the risk that a certificate could be misused outside its intended purpose. This requirement applies across the industry to all major public certificate authorities, so it is not specific to Adobe or to any single integration.
+Industry standards for certificate authorities now require certificates used for server authentication and client authentication to be issued from separate hierarchies. This separation helps prevent certificates from being used outside their intended purpose.  The requirement applies broadly across the public-trust certificate ecosystem. It is not specific to Adobe or any single integration.
 
 ## The new certificate hierarchy {#new-certificate-hierarchy}
 
@@ -95,7 +93,7 @@ Both hierarchies are issued by [!DNL DigiCert], but they are separate root progr
 
 ### Download the new CA certificates {#download-certificates}
 
-Add both of the following certificates to your trust store. Depending on your platform, you may only need the root certificate if your system performs automatic intermediate certificate chasing — adding both is the safest option.
+Add both of the following certificates to your trust store. Some platforms may require only the root certificate if they automatically retrieve intermediate certificates. Adobe recommends that you add both the root and intermediate certificates to ensure the complete chain is available for validation.
 
 | Certificate | Type | Common name | Download |
 | --- | --- | --- | --- |
@@ -104,11 +102,11 @@ Add both of the following certificates to your trust store. Depending on your pl
 
 {style="table-layout:auto"}
 
-[!DNL DigiCert] distributes both files in DER format. Most of the platforms covered later in this guide expect PEM format, so download and convert both files before continuing.
+[!DNL DigiCert] distributes both files in DER format. Most of the platforms covered later in this guide use PEM format, so convert both files to PEM unless you are using [!DNL Windows].
 
 >[!NOTE]
 >
->Windows accepts the original `.crt` (DER) files directly — see [Windows](#windows) below. Every other platform in this guide uses the converted `.pem` files.
+>[!DNL Windows] accepts the original `.crt` (DER) files directly. Every other platform in this guide uses the converted `.pem` files.
 
 ```shell
 curl -O http://cacerts.digicert.com/DigiCertAssuredIDRootG2.crt
@@ -118,7 +116,7 @@ openssl x509 -inform DER -in DigiCertAssuredIDRootG2.crt -out DigiCertAssuredIDR
 openssl x509 -inform DER -in DigiCertAssuredIDClientCAG2.crt -out DigiCertAssuredIDClientCAG2.pem
 ```
 
-Before you continue, confirm that the downloaded files are correct. Each certificate's subject should match its expected common name, and the intermediate certificate should validate against the root:
+Before you continue, confirm that you downloaded the expected certificates and that they form a valid chain. Verify that each certificate's subject matches the expected common name, then verify that the intermediate certificate chains to the root:
 
 ```shell
 openssl x509 -in DigiCertAssuredIDRootG2.pem -noout -subject -issuer
@@ -128,11 +126,11 @@ openssl verify -CAfile DigiCertAssuredIDRootG2.pem DigiCertAssuredIDClientCAG2.p
 
 A successful chain verification returns `DigiCertAssuredIDClientCAG2.pem: OK`.
 
-<!-- TODO: confirm whether Adobe should mirror these certificate files rather than linking directly to cacerts.digicert.com, and confirm certificate fingerprints/thumbprints for inclusion here, before publication. -->
+<!-- TODO: Q) Should Adobe mirror these certificate files instead of linking directly to cacerts.digicert.com? Also, should we include the certificate fingerprints/thumbprints in this guide before publication? -->
 
 ## Update your trust store {#update-trust-store}
 
-The steps to add a new CA certificate to your trust store depend on the platform or software that terminates the mTLS connection at your endpoint. Each section below assumes you've already downloaded and converted the certificates as described in [Download the new CA certificates](#download-certificates). The following sections cover common platforms and configurations.
+The steps to add a new CA certificate to your trust store depend on the platform or software that terminates the mTLS connection at your endpoint. Each section below assumes you've already downloaded and converted the certificates as described in [Download the new CA certificates](#download-certificates) section. The following sections cover common platforms and configurations.
 
 ### Linux and OpenSSL {#linux-openssl}
 
@@ -192,7 +190,7 @@ keytool -list -keystore "$JAVA_CACERTS" -storepass changeit -alias digicert-assu
 >
 >If your application uses a custom trust store (specified with `-Djavax.net.ssl.trustStore=/path/to/truststore.jks`), import the certificates into that file instead of the JVM's default `cacerts` file.
 
-### nginx {#nginx}
+### [!DNL nginx] {#nginx}
 
 [!DNL nginx] uses the `ssl_client_certificate` directive to specify which CAs it trusts for client certificate validation. Append the [new certificates you downloaded](#download-certificates) to the bundle file referenced by that directive:
 
@@ -207,7 +205,7 @@ Test the configuration and reload [!DNL nginx] to apply the change:
 nginx -t && nginx -s reload
 ```
 
-### Apache httpd {#apache-httpd}
+### [!DNL Apache httpd] {#apache-httpd}
 
 [!DNL Apache httpd] uses the `SSLCACertificateFile` directive to specify trusted client CAs. Append the [new certificates you downloaded](#download-certificates) to the bundle file referenced by that directive:
 
@@ -222,7 +220,7 @@ Test the configuration and restart [!DNL Apache httpd] to apply the change:
 apachectl configtest && apachectl graceful
 ```
 
-### Windows {#windows}
+### [!DNL Windows] {#windows}
 
 Use `certutil` from an elevated command prompt to add the [certificates you downloaded](#download-certificates) to the appropriate stores:
 
@@ -231,24 +229,24 @@ certutil -addstore Root DigiCertAssuredIDRootG2.crt
 certutil -addstore CA DigiCertAssuredIDClientCAG2.crt
 ```
 
-Alternatively, use the Certificates MMC snap-in:
+Alternatively, you can use the [!DNL Windows] graphical interface to add the certificates to the local computer's certificate stores. To do this, open the Certificates snap-in in [!DNL Microsoft Management Console] (MMC) and follow these steps:
 
 1. Run `mmc.exe`.
-2. Select **[!UICONTROL File]** > **[!UICONTROL Add/Remove Snap-in]**.
-3. In the **[!UICONTROL Add or Remove Snap-ins]** window, select **[!UICONTROL Certificates]**, then select **[!UICONTROL Add]**.
-4. In the **[!UICONTROL Certificates snap-in]** window, select **[!UICONTROL Computer account]**, then select **[!UICONTROL Next]**.
-5. In the **[!UICONTROL Select Computer]** window, leave **[!UICONTROL Local computer]** selected, then select **[!UICONTROL Finish]**.
-6. In the **[!UICONTROL Add or Remove Snap-in]** window, select **[!UICONTROL OK]**.
-7. In the console tree, expand **[!UICONTROL Certificates (Local Computer)]** > **[!UICONTROL Trusted Root Certification Authorities]** > **[!UICONTROL Certificates]**.
-8. Right-click **[!UICONTROL Certificates]**, select **[!UICONTROL All Tasks]** > **[!UICONTROL Import]**, and import `DigiCertAssuredIDRootG2.crt`.
-9. Expand **[!UICONTROL Intermediate Certification Authorities]** > **[!UICONTROL Certificates]**.
-10. Right-click **[!UICONTROL Certificates]**, select **[!UICONTROL All Tasks]** > **[!UICONTROL Import]**, and import `DigiCertAssuredIDClientCAG2.crt`.
+2. Select **[!DNL File]** > **[!DNL Add/Remove Snap-in]**.
+3. In the **[!DNL Add or Remove Snap-ins]** window, select **[!DNL Certificates]**, then select **[!DNL Add]**.
+4. In the **[!DNL Certificates snap-in]** window, select **[!DNL Computer account]**, then select **[!DNL Next]**.
+5. In the **[!DNL Select Computer]** window, leave **[!DNL Local computer]** selected, then select **[!DNL Finish]**.
+6. In the **[!DNL Add or Remove Snap-in]** window, select **[!DNL OK]**.
+7. In the console tree, expand **[!DNL Certificates (Local Computer)]** > **[!DNL Trusted Root Certification Authorities]** > **[!DNL Certificates]**.
+8. Right-click **[!DNL Certificates]**, select **[!DNL All Tasks]** > **[!DNL Import]**, and import `DigiCertAssuredIDRootG2.crt`.
+9. Expand **[!DNL Intermediate Certification Authorities]** > **[!DNL Certificates]**.
+10. Right-click **[!DNL Certificates]**, select **[!DNL All Tasks]** > **[!DNL Import]**, and import `DigiCertAssuredIDClientCAG2.crt`.
 
 >[!NOTE]
 >
 >For the `certutil` commands, use the original `.crt` files as downloaded, not the converted `.pem` versions. Either format works when using the MMC snap-in.
 
-### AWS {#aws}
+### [!DNL AWS] {#aws}
 
 [!DNL AWS] uses different mTLS trust store mechanisms depending on which service terminates the connection.
 
@@ -273,7 +271,7 @@ aws apigateway update-domain-name \
 >  --patch-operations op=replace,path=/mutualTlsAuthentication/truststoreVersion,value=$(date +%s)
 >```
 
-For an [!DNL Application Load Balancer] or [!DNL Network Load Balancer] using mutual TLS, create or update a trust store resource through the ELBv2 API, then associate it with your listener:
+For an [!DNL Application Load Balancer] or [!DNL Network Load Balancer] using mutual TLS, use the ELBv2 API to create or update the trust store that contains the CA certificates used to validate client certificates. Then associate that trust store with the listener that handles the mTLS connection:
 
 ```shell
 aws elbv2 create-trust-store \
@@ -286,11 +284,13 @@ aws elbv2 modify-listener \
   --mutual-authentication Mode=verify,TrustStoreArn=arn:aws:elasticloadbalancing:us-east-1:123456789012:truststore/your-trust-store/abc123
 ```
 
-If you manage infrastructure as code, update `AWS::ApiGateway::DomainName` (`MutualTlsAuthentication.TruststoreUri`) or `AWS::ElasticLoadBalancingV2::TrustStore` in [!DNL CloudFormation], or `aws_api_gateway_domain_name` (`mutual_tls_authentication.truststore_uri`) or `aws_lb_trust_store` in [!DNL Terraform].
+If you manage this configuration with [!DNL CloudFormation], update `AWS::ApiGateway::DomainName` to reference the updated trust store through `MutualTlsAuthentication.TruststoreUri`, or update `AWS::ElasticLoadBalancingV2::TrustStore` to include the new CA certificates. For [!DNL Terraform], update `aws_api_gateway_domain_name` (`mutual_tls_authentication.truststore_uri`) or `aws_lb_trust_store` with the corresponding trust store changes.
 
-### Azure {#azure}
+
+### [!DNL Azure] {#azure}
 
 For [!DNL Azure Application Gateway], upload the [root and intermediate certificates you downloaded](#download-certificates) as trusted client certificates, then attach them to the SSL profile that has client authentication enabled:
+<!-- For [!DNL Azure Application Gateway], add the [root and intermediate certificates you downloaded](#download-certificates) as a trusted client CA chain in the SSL profile used for client certificate validation. Associate the SSL profile with the HTTPS listener that receives Adobe's mTLS connections. -->
 
 ```shell
 az network application-gateway root-cert create \
@@ -313,7 +313,7 @@ az network application-gateway ssl-profile update \
   --trusted-client-certificates DigiCertAssuredIDRootG2 DigiCertAssuredIDClientCAG2
 ```
 
-For [!DNL Azure API Management], upload both certificates and reference them as trusted issuers for client certificate validation:
+For [!DNL Azure API Management], add the root and intermediate CA certificates to the CA certificate stores used by the managed gateway. This allows [!DNL Azure API Management] to establish trust when validating Adobe's client certificate against the new hierarchy.
 
 ```shell
 az apim certificate create \
@@ -329,11 +329,11 @@ az apim certificate create \
   --certificate-file DigiCertAssuredIDClientCAG2.pem
 ```
 
-From your API Management instance in the Azure portal, you can also add these certificates from the **[!UICONTROL Client certificates]** page under **[!UICONTROL Security]**.
+You can also add the CA certificates in the Azure portal. From your API Management instance, select **[!UICONTROL Security]** > **[!UICONTROL Certificates]** > **[!UICONTROL CA certificates]**.
 
-If you manage infrastructure as code, update `azurerm_application_gateway` (`ssl_profile.trusted_client_certificate_names`) or `azurerm_api_management_certificate` in [!DNL Terraform].
+If you manage this configuration with [!DNL Terraform], update the trusted client certificate configuration in `azurerm_application_gateway` (`ssl_profile.trusted_client_certificate_names`) or the CA certificate configuration in `azurerm_api_management_certificate`.
 
-### Google Cloud {#google-cloud}
+### [!DNL Google Cloud] {#google-cloud}
 
 [!DNL Google Cloud Load Balancing] uses a Certificate Manager `TrustConfig` to define the CAs trusted for mTLS.
 
@@ -341,7 +341,7 @@ If you manage infrastructure as code, update `azurerm_application_gateway` (`ssl
 >
 >If you already have a `TrustConfig` with other trusted CAs, update it to include the new trust anchor and intermediate rather than creating a new one, using `gcloud certificate-manager trust-configs update` with a revised YAML file.
 
-Create a trust configuration file that includes the [new trust anchor and intermediate you downloaded](#download-certificates):
+Create a trust configuration file that adds the [new root and intermediate CA certificates you downloaded](#download-certificates) to the set of certificates trusted for client authentication:
 
 ```yaml
 trustStores:
@@ -369,7 +369,7 @@ gcloud compute target-https-proxies update my-https-proxy \
   --region=global
 ```
 
-If you manage infrastructure as code, update `google_certificate_manager_trust_config` (`trust_stores.trust_anchors` and `trust_stores.intermediate_cas`) in [!DNL Terraform].
+If you manage this configuration with [!DNL Terraform], update `google_certificate_manager_trust_config` to include the new root CA in `trust_stores.trust_anchors` and the new intermediate CA in `trust_stores.intermediate_cas`.
 
 ## Verify your trust store update {#verify}
 
@@ -437,7 +437,7 @@ Yes, and Adobe recommends doing so. See [When to complete this update](#when-to-
 
 **When will this affect my integration?**
 
-The transition is phased, with first customer impact expected around mid-2026 and continuing through spring 2027. See [When to complete this update](#when-to-update) for what to do in the meantime.
+The transition is phased, from mid-2026 and continuing through spring 2027. See [When to complete this update](#when-to-update) for what to do in the meantime.
 
 ## Related documentation {#related-documentation}
 
