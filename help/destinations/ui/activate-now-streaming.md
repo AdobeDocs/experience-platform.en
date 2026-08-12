@@ -69,7 +69,9 @@ To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL
 
 To use **[!UICONTROL Activate now]**, you must have successfully [connected to a destination](./connect-destination.md) and configured an activation dataflow to a streaming or API-based destination. If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 
-## How to deliver an audience on-demand {#how-to-deliver-audience-now}
+## How to activate an audience on-demand {#how-to-activate-audience-now}
+
+Follow these steps to trigger an on-demand refresh of an audience to a streaming or API-based destination.
 
 1. Go to **[!UICONTROL Connections > Destinations]**, select the **[!UICONTROL Browse]** tab, and select your streaming or API-based destination connection.
 
