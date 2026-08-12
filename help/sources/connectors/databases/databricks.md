@@ -203,7 +203,7 @@ GRANT MODIFY ON ANY FILE TO `<service-principal>`;
 
 >[!IMPORTANT]
 >
->`ANY FILE` is a broad, legacy privilege that permits direct filesystem access and bypasses table-level access controls. Review this grant with your security team before applying it. To avoid granting `ANY FILE`, use Dedicated (Single-user) access mode instead.
+>`ANY FILE` is a legacy privilege for direct file access and is not governed by Unity Catalog — it has a broader scope than Unity Catalog object permissions, and does not itself grant or bypass access to Unity Catalog objects (Unity Catalog tables still require their own UC grants). Review it with your security team; to avoid granting it, use Dedicated access mode instead.
 
 If the permissions required for your cluster's access mode are not in place, ingestion fails during execution with the following error:
 
