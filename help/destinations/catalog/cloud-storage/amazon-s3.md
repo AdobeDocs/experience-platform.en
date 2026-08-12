@@ -338,7 +338,7 @@ See [Activate audience data to batch profile export destinations](../../ui/activ
 
 ### Activate audiences from [!DNL Real-Time CDP Collaboration] {#activate-collaboration}
 
-For instructions on activating audiences to this destination from a [!DNL Real-Time CDP Collaboration] project, see the [Real-Time CDP Collaboration destinations overview](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/overview).
+For instructions on activating audiences to this destination from a [!DNL Real-Time CDP Collaboration] project, see the [Configure and manage cloud storage destinations in [!DNL Real-Time CDP Collaboration]](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/manage-destinations).
 
 ## Validate successful data export {#exported-data}
 

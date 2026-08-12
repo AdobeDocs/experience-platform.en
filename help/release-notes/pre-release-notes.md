@@ -39,7 +39,8 @@ Use Data Governance to manage data usage policies and enforce compliance with da
 
 | Feature | Description |
 | --- | --- |
-| Object-level access control for datasets | Apply data usage labels directly to an entire dataset using the same core and custom governance labels used elsewhere on the platform. |
+| Object-Level Access Control for Datasets | Apply access labels to entire datasets to control which users can read or write them. |
+| mTLS Certificate Hierarchy Update | Adobe is updating the CA hierarchy used to issue client certificates for outbound mTLS connections. If your systems validate Adobe's mTLS client certificate, add the new root and intermediate CA certificates to your trust store to avoid connection or delivery failures. |
 
 {style="table-layout:auto"}
 
@@ -53,7 +54,7 @@ Use batch and streaming ingestion to bring data into Experience Platform from a 
 
 | Feature | Description |
 | --- | --- |
-| Updated [Batch Ingestion guardrails](/help/ingestion/guardrails.md) | Guardrail limits for the number of files and datasets you can ingest into Experience Platform through the Batch Ingestion API and batch sources have increased. New error messages help you identify when a limit is reached. |
+| Updated [Batch Ingestion guardrails](/help/ingestion/guardrails.md) | Batch ingestion limits have increased to 25,000 files per batch and up to 1 TB for regular batches. Batches that exceed these maximums fail at ingestion time, with updated error messages to help identify the issue. |
 
 {style="table-layout:auto"}
 
@@ -134,10 +135,3 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 {style="table-layout:auto"}
 
 For more information, read the [sources overview](../sources/home.md).
-
-
-<!--
-
-| Web Application Firewall (WAF) for Experience Platform | Experience Platform applications and APIs are now protected by a Web Application Firewall (WAF), adding an additional layer of security. This update is being rolled out by region through mid-August 2026 and requires no action from you. |
-
--->
