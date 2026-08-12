@@ -40,6 +40,25 @@ Use the enriched attributes to improve segmentation, ranking, and sales alignmen
 Before you connect to [!DNL ZoomInfo], confirm that you have:
 
 * An active [!DNL ZoomInfo MarketingOS] account that you can authorize for use with [!DNL Adobe Experience Platform].
+* The external APIs add-on enabled on your [!DNL ZoomInfo] account. Contact [!DNL ZoomInfo] to enable and purchase this add-on.
+* At least one [!DNL ZoomInfo] user with admin access. Use this access to create an application in the [!DNL ZoomInfo] developer portal for [!DNL Adobe Experience Platform].
+
+### Create an application in the ZoomInfo developer portal {#create-application}
+
+In the [!DNL ZoomInfo] developer portal, create a standard application for [!DNL Adobe Experience Platform] and select the **Authorization Code Flow (PKCE)** authentication method. For instructions, see [Standard App creation](https://docs.zoominfo.com/docs/standard-app) in the [!DNL ZoomInfo] documentation.
+
+Select the **[!UICONTROL Company]** scope for the application. You do not need to select scopes for content, intent, news, or scoops data.
+
+Add the following sign in redirect URIs to the application.
+
+```
+https://platform.adobe.io/data/core/activation/oauth/api/v1/callback
+https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback
+https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback
+https://platform-aus5.adobe.io/data/core/activation/oauth/api/v1/callback
+https://platform-can2.adobe.io/data/core/activation/oauth/api/v1/callback
+https://platform-gbr9.adobe.io/data/core/activation/oauth/api/v1/callback
+```
 
 ## Supported audiences {#supported-audiences}
 
@@ -133,16 +152,26 @@ Configure all mappings in the following table. You cannot complete activation un
 | Source field | Target field | Type | Description |
 |---|---|---|---|
 | `xdm:accountName` | `xdm:companyName` | XDM attribute | The account company name. |
-| `xdm:accountOrganization.domain` or `xdm:accountOrganization.website` | `xdm:companyUrl` | XDM attribute | The company URL. Select the source field that contains data. [!DNL ZoomInfo] uses this value to match accounts. |
+| `xdm:accountOrganization.domain` or `xdm:accountOrganization.website` | `xdm:companyUrl` | XDM attribute | The company URL. [!DNL ZoomInfo] uses this value to match accounts. |
 | `xdm:accountKey.sourceKey` | `Identity: primaryId` | Identity | The primary identifier for the account. |
 
 {style="table-layout:auto"}
 
 ![The Mapping step maps accountKey.sourceKey to the primary ID identity, accountName to companyName, and accountOrganization.domain to companyUrl.](../../assets/catalog/advertising/zoominfo-account-audiences/mandatory-mappings.png "Configure mandatory mappings")
 
+Map the field that contains data for your accounts, either `xdm:accountOrganization.domain` or `xdm:accountOrganization.website`. Confirm which field your organization populates before you select it. If you map a field with no data, [!DNL ZoomInfo] cannot match the account.
+
 ## Audience sync behavior {#sync-behavior}
 
 After initial activation, [!DNL Adobe Experience Platform] streams account audience membership updates to [!DNL ZoomInfo].
+
+>[!NOTE]
+>
+>[!DNL ZoomInfo] processes and matches accounts in blocks. Matching can take up to 24 hours to complete. During this time, the account count for the audience updates incrementally in [!DNL ZoomInfo].
+
+[!DNL ZoomInfo] matches accounts using its own matching logic, based on the company name and company URL that you map. [!DNL Adobe Experience Platform] does not have visibility into which accounts matched or why an account did not match. Contact [!DNL ZoomInfo] for questions about match rates or unmatched accounts.
+
+![The Accounts tab in ZoomInfo shows matched accounts with columns for account name, funnel stage, audiences, campaigns, industry, and revenue.](../../assets/catalog/advertising/zoominfo-account-audiences/accounts-view.png "View synced accounts in ZoomInfo")
 
 ### Account additions {#account-additions}
 
