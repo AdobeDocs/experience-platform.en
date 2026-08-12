@@ -373,22 +373,22 @@ If you manage this configuration with [!DNL Terraform], update `google_certifica
 
 ## Verify your trust store update {#verify}
 
-After updating your trust store, confirm that it trusts a certificate issued from the new hierarchy. Build a combined bundle from both new certificates, then verify a clientAuth-only certificate against it:
+After updating your trust store, verify that a certificate issued from the new hierarchy validates against the new CA chain. Build a combined bundle from the new root and intermediate CA certificates, then use it to verify a certificate issued for client authentication:
 
 ```shell
 cat DigiCertAssuredIDRootG2.pem DigiCertAssuredIDClientCAG2.pem > digicert-assured-id-chain.pem
 openssl verify -CAfile digicert-assured-id-chain.pem -purpose sslclient client-cert.pem
 ```
 
-Replace `client-cert.pem` with a clientAuth-only certificate to test against, if you have one available. A successful result confirms the certificate validates against the new chain.
+If you have a client certificate issued from the new hierarchy, replace `client-cert.pem` with the path to that certificate. A successful result confirms that OpenSSL can validate the certificate against the new CA chain for TLS client authentication.
 
-If you don't yet have a clientAuth-only certificate to test against, you can still confirm the chain itself is valid:
+If you don't have a client certificate issued from the new hierarchy, you can still verify that the intermediate certificate validates against the new root:
 
 ```shell
 openssl verify -CAfile DigiCertAssuredIDRootG2.pem DigiCertAssuredIDClientCAG2.pem
 ```
 
-A successful result returns `DigiCertAssuredIDClientCAG2.pem: OK`, confirming the intermediate certificate is properly signed by the new root.
+A successful result returns `DigiCertAssuredIDClientCAG2.pem: OK`, confirming that the intermediate certificate validates against the new root.
 
 To confirm that a certificate is issued for client authentication only, inspect its extended key usage:
 
@@ -396,7 +396,7 @@ To confirm that a certificate is issued for client authentication only, inspect 
 openssl x509 -in client-cert.pem -noout -ext extendedKeyUsage
 ```
 
-A certificate issued from the new hierarchy shows only `TLS Web Client Authentication`.
+For a client-authentication-only certificate, the extended key usage should include `TLS Web Client Authentication` and not `TLS Web Server Authentication`.
 
 ## Troubleshooting {#troubleshooting}
 
@@ -406,12 +406,12 @@ Use the following symptoms to identify whether a connection failure is related t
 | --- | --- |
 | TLS handshake failures on a previously working mTLS connection, with no other configuration changes made | Your trust store doesn't yet include the new root and intermediate CA certificates. |
 | Certificate validation errors referencing an unknown or untrusted issuer | Your trust store is missing the intermediate certificate, the root certificate, or both. |
-| Failures affecting only some mTLS-authenticated connections and not others | Individual connections transition to the new hierarchy at different times; endpoints without the updated trust store will fail only for connections already using the new hierarchy. |
+| Failures affecting only some mTLS-authenticated connections and not others | Individual connections transition to the new hierarchy at different times. Endpoints without the updated trust store will fail only for connections already using the new hierarchy. |
 | Certificate import fails, or the imported certificate looks corrupted | You're using the wrong file format for your platform. Most platforms in this guide require the converted `.pem` files; Windows requires the original `.crt` (DER) files. See [Download the new CA certificates](#download-certificates). |
 
 {style="table-layout:auto"}
 
-If you continue to see failures after adding both the new root and intermediate certificates, verify the certificates were added to the correct trust store or bundle used by the specific service terminating the connection, and confirm the service has reloaded or restarted to pick up the change where required.
+If you continue to see failures after adding the new root and intermediate certificates, verify that they were added to the trust store or bundle used by the service terminating the connection. If required by your platform, also confirm that the service was reloaded or restarted to apply the updated trust configuration.
 
 ## Frequently asked questions {#faq}
 
