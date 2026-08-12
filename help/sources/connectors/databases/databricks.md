@@ -197,8 +197,8 @@ Select the access mode used by your Databricks cluster and complete the correspo
 Standard (Shared) access mode enforces Table Access Control. In addition to the Unity Catalog grants above, the connector's I/O operations require the ANY FILE privilege. Grant it to the connector's service principal:
 
 ```sql
-GRANT SELECT ON ANY FILE TO `<service-principal>`;
-GRANT MODIFY ON ANY FILE TO `<service-principal>`;
+GRANT SELECT ON ANY FILE TO `{SERVICE_PRINCIPAL}`;
+GRANT MODIFY ON ANY FILE TO `{SERVICE_PRINCIPAL}`;
 ```
 
 >[!IMPORTANT]
