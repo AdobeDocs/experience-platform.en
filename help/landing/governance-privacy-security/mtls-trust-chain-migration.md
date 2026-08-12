@@ -84,7 +84,7 @@ Add both of the following certificates to your trust store. Some platforms may r
 
 {style="table-layout:auto"}
 
-DigiCert maintains information about its trusted root certificates and certificate authorities in its [Trusted Root Authority Certificates](https://knowledge.digicert.com/general-information/digicert-trusted-root-authority-certificates) reference.
+[!DNL DigiCert] maintains information about its trusted root certificates and certificate authorities in its [Trusted Root Authority Certificates](https://knowledge.digicert.com/general-information/digicert-trusted-root-authority-certificates) reference.
 
 [!DNL DigiCert] distributes both files in DER format. Most of the platforms covered later in this guide use PEM format, so convert both files to PEM unless you are using [!DNL Windows].
 
@@ -180,7 +180,7 @@ keytool -list -keystore "$JAVA_CACERTS" -storepass changeit -alias digicert-assu
 >
 >If your application uses a custom trust store (specified with `-Djavax.net.ssl.trustStore=/path/to/truststore.jks`), import the certificates into that file instead of the JVM's default `cacerts` file.
 
-For the full set of `keytool` options, see Oracle's [keytool command reference](https://docs.oracle.com/en/java/javase/18/docs/specs/man/keytool.html).
+For the full set of `keytool` options, see [!DNL Oracle]'s [keytool command reference](https://docs.oracle.com/en/java/javase/18/docs/specs/man/keytool.html).
 
 ### [!DNL nginx] {#nginx}
 
@@ -197,7 +197,7 @@ Test the configuration and reload [!DNL nginx] to apply the change:
 nginx -t && nginx -s reload
 ```
 
-See nginx's [ngx_http_ssl_module documentation](https://nginx.org/en/docs/http/ngx_http_ssl_module.html) for the full set of `ssl_client_certificate` options.
+See [!DNL nginx]'s [ngx_http_ssl_module documentation](https://nginx.org/en/docs/http/ngx_http_ssl_module.html) for the complete list of SSL/TLS directives, including `ssl_client_certificate`.
 
 ### [!DNL Apache httpd] {#apache-httpd}
 
@@ -214,7 +214,7 @@ Test the configuration and restart [!DNL Apache httpd] to apply the change:
 apachectl configtest && apachectl graceful
 ```
 
-For the full set of `mod_ssl` directives, including `SSLCACertificateFile`, see Apache's [mod_ssl documentation](https://httpd.apache.org/docs/2.4/mod/mod_ssl.html).
+For the full set of `mod_ssl` directives, including `SSLCACertificateFile`, see [!DNL Apache]'s [mod_ssl documentation](https://httpd.apache.org/docs/2.4/mod/mod_ssl.html).
 
 ### [!DNL Windows] {#windows}
 
@@ -242,7 +242,7 @@ Alternatively, you can use the [!DNL Windows] graphical interface to add the cer
 >
 >For the `certutil` commands, use the original `.crt` files as downloaded, not the converted `.pem` versions. Either format works when using the MMC snap-in.
 
-For background on how [!DNL Windows] organizes certificate stores, see Microsoft's [certificate stores overview](https://learn.microsoft.com/en-us/windows-hardware/drivers/install/certificate-stores).
+For background on how [!DNL Windows] organizes certificate stores, see [!DNL Microsoft]'s [certificate stores overview](https://learn.microsoft.com/en-us/windows-hardware/drivers/install/certificate-stores).
 
 ### [!DNL AWS] {#aws}
 
@@ -273,7 +273,7 @@ aws apigateway update-domain-name \
 >  --patch-operations op=replace,path=/mutualTlsAuthentication/truststoreVersion,value=$(date +%s)
 >```
 
-See AWS's [mutual TLS for REST APIs documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/rest-api-mutual-tls.html) for the complete configuration reference.
+See [!DNL AWS]'s [mutual TLS for REST APIs documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/rest-api-mutual-tls.html) for the complete configuration guide.
 
 For an [!DNL Application Load Balancer] or [!DNL Network Load Balancer] using mutual TLS, use the ELBv2 API to create or update the trust store that contains the CA certificates used to validate client certificates:
 
@@ -301,7 +301,7 @@ aws elbv2 modify-listener \
   --mutual-authentication Mode=verify,TrustStoreArn=arn:aws:elasticloadbalancing:us-east-1:123456789012:truststore/your-trust-store/abc123
 ```
 
-See AWS's [Application Load Balancer mutual TLS documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/configuring-mtls-with-elb.html) for the complete configuration reference.
+See [!DNL AWS]'s [Application Load Balancer mutual TLS documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/configuring-mtls-with-elb.html) for the complete configuration guide.
 
 If you manage this configuration with [!DNL CloudFormation], update `AWS::ApiGateway::DomainName` to reference the updated trust store through `MutualTlsAuthentication.TruststoreUri`, or update `AWS::ElasticLoadBalancingV2::TrustStore` to include the new CA certificates. For [!DNL Terraform], update `aws_api_gateway_domain_name` (`mutual_tls_authentication.truststore_uri`) or `aws_lb_trust_store` with the corresponding trust store changes.
 
@@ -332,7 +332,7 @@ az network application-gateway ssl-profile update \
   --trusted-client-certificates DigiCertAssuredIDRootG2 DigiCertAssuredIDClientCAG2
 ```
 
-See Microsoft's [Application Gateway mutual authentication overview](https://learn.microsoft.com/en-us/azure/application-gateway/mutual-authentication-overview) for the complete configuration reference.
+See [!DNL Microsoft]'s [Application Gateway mutual authentication overview](https://learn.microsoft.com/en-us/azure/application-gateway/mutual-authentication-overview) for background on this configuration.
 
 For [!DNL Azure API Management], add the root and intermediate CA certificates to the CA certificate stores used by the managed gateway. This allows [!DNL Azure API Management] to establish trust when validating Adobe's client certificate against the new hierarchy.
 
@@ -352,7 +352,7 @@ az apim certificate create \
 
 You can also add the CA certificates in the Azure portal. From your API Management instance, select **[!UICONTROL Security]** > **[!UICONTROL Certificates]** > **[!UICONTROL CA certificates]**.
 
-See Microsoft's [guide to adding a custom CA certificate in API Management](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-ca-certificates) for the complete configuration reference.
+See [!DNL Microsoft]'s [guide to adding a custom CA certificate in API Management](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-ca-certificates) for step-by-step instructions.
 
 If you manage this configuration with [!DNL Terraform], update the trusted client certificate configuration in `azurerm_application_gateway` (`ssl_profile.trusted_client_certificate_names`) or the CA certificate configuration in `azurerm_api_management_certificate`.
 
@@ -408,7 +408,7 @@ gcloud compute target-https-proxies update my-https-proxy \
 
 If you manage this configuration with [!DNL Terraform], update `google_certificate_manager_trust_config` to include the new root CA in `trust_stores.trust_anchors` and the new intermediate CA in `trust_stores.intermediate_cas`.
 
-For the complete walkthrough of this configuration, see Google Cloud's [Set up frontend mTLS with user-provided certificates](https://docs.cloud.google.com/load-balancing/docs/https/setting-up-mtls-ccm) guide.
+For the complete walkthrough of this configuration, see [!DNL Google Cloud]'s [Set up frontend mTLS with user-provided certificates](https://docs.cloud.google.com/load-balancing/docs/https/setting-up-mtls-ccm) guide.
 
 ## Verify your trust store update {#verify}
 
