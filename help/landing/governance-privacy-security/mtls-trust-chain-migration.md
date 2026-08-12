@@ -161,7 +161,13 @@ Make sure each certificate block is separated by a newline, with no extra whites
 
 ### Java (keytool) {#java-keytool}
 
-Java applications use their own trust store, typically a file named `cacerts`, rather than the operating system trust store, so you need to import the [certificates you downloaded](#download-certificates) there directly:
+Java applications use their own trust store, typically a file named `cacerts`, rather than the operating system trust store, so you need to import the [certificates you downloaded](#download-certificates) there directly. First, locate your JVM's `cacerts` file:
+
+```shell
+JAVA_CACERTS="$(dirname $(dirname $(readlink -f $(which java))))/lib/security/cacerts"
+```
+
+Then import both certificates (the default `cacerts` password is `changeit`):
 
 ```shell
 keytool -importcert -trustcacerts \
@@ -250,7 +256,11 @@ Alternatively, you can use the [!DNL Windows] graphical interface to add the cer
 
 [!DNL AWS] uses different mTLS trust store mechanisms depending on which service terminates the connection.
 
-For [!DNL Amazon API Gateway] REST APIs using mutual TLS, upload a combined PEM bundle of the [certificates you downloaded](#download-certificates) to [!DNL Amazon S3], then update your custom domain to reference it:
+For [!DNL Amazon API Gateway] REST APIs using mutual TLS, upload a combined PEM bundle of the [certificates you downloaded](#download-certificates) to [!DNL Amazon S3], then update your custom domain to reference it.
+
+>[!NOTE]
+>
+>If you already have a trust store bundle with other CAs you still need, include them in the combined bundle as well — the command below creates a bundle containing only the two new certificates.
 
 ```shell
 cat DigiCertAssuredIDRootG2.pem DigiCertAssuredIDClientCAG2.pem > truststore.pem
@@ -271,14 +281,27 @@ aws apigateway update-domain-name \
 >  --patch-operations op=replace,path=/mutualTlsAuthentication/truststoreVersion,value=$(date +%s)
 >```
 
-For an [!DNL Application Load Balancer] or [!DNL Network Load Balancer] using mutual TLS, use the ELBv2 API to create or update the trust store that contains the CA certificates used to validate client certificates. Then associate that trust store with the listener that handles the mTLS connection:
+For an [!DNL Application Load Balancer] or [!DNL Network Load Balancer] using mutual TLS, use the ELBv2 API to create or update the trust store that contains the CA certificates used to validate client certificates:
 
 ```shell
 aws elbv2 create-trust-store \
   --name digicert-assured-id-trust-store \
   --ca-certificates-bundle-s3-bucket your-bucket \
   --ca-certificates-bundle-s3-key truststore.pem
+```
 
+If you already have a trust store for this listener, update it instead of creating a new one:
+
+```shell
+aws elbv2 modify-trust-store \
+  --trust-store-arn arn:aws:elasticloadbalancing:us-east-1:123456789012:truststore/your-trust-store/abc123 \
+  --ca-certificates-bundle-s3-bucket your-bucket \
+  --ca-certificates-bundle-s3-key truststore.pem
+```
+
+Then associate the trust store with the listener that handles the mTLS connection:
+
+```shell
 aws elbv2 modify-listener \
   --listener-arn arn:aws:elasticloadbalancing:us-east-1:123456789012:listener/app/my-alb/abc123/def456 \
   --mutual-authentication Mode=verify,TrustStoreArn=arn:aws:elasticloadbalancing:us-east-1:123456789012:truststore/your-trust-store/abc123
@@ -353,17 +376,31 @@ trustStores:
           <paste contents of DigiCertAssuredIDClientCAG2.pem here>
 ```
 
-Create the `TrustConfig` resource, then reference it from a `ServerTlsPolicy` attached to your target HTTPS proxy:
+Create the `TrustConfig` resource:
 
 ```shell
 gcloud certificate-manager trust-configs create digicert-assured-id-trust-config \
   --source=trust-config.yaml \
   --location=global
+```
 
+Then create a server TLS policy that references the trust config:
+
+```yaml
+mtlsPolicy:
+  clientValidationMode: REJECT_INVALID
+  clientValidationTrustConfig: projects/YOUR_PROJECT/locations/global/trustConfigs/digicert-assured-id-trust-config
+```
+
+```shell
 gcloud network-security server-tls-policies create my-mtls-policy \
   --source=server-tls-policy.yaml \
   --location=global
+```
 
+Attach the `ServerTlsPolicy` to your target HTTPS proxy:
+
+```shell
 gcloud compute target-https-proxies update my-https-proxy \
   --server-tls-policy=my-mtls-policy \
   --region=global
