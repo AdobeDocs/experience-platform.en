@@ -5,6 +5,10 @@ description: Learn how to use Flexible Batch Schedules to
 
 # Control your batch audience evaluation using Flexible Batch Schedules
 
+>[!AVAILABILITY]
+>
+>Flexible Batch Schedules are currently in **limited availability**. For more information, contact Adobe Customer Care.
+
 Batch segmentation is an evaluation method that lets you move profile data all at once to create a corresponding audience. Previously, these batch audiences relied on a single, fixed segmentation job that ran once a day.
 
 With Flexible Batch Schedules, you control when your audiences are evaluated, giving you more flexibility to prioritize your evaluation timings so you can better scale to larger audience volumes.
@@ -21,15 +25,15 @@ To create a schedule using the Experience Platform UI, you'll first need to acce
 
 Select **[!UICONTROL Audiences]** within the [!UICONTROL Customer] section, followed by **[!UICONTROL Evaluation]**.
 
-IMAGE
+![The Audiences and Evaluation buttons are highlighted, showing how to access the Evaluation page.](/help/segmentation/images/tutorials/flexible-batch-segmentation/access-evaluation.png)
 
-The **Evaluation** page appears, which displays all the currently available schedules in your organization. Select **Create schedule** to begin creating the schedule.
+The **[!UICONTROL Evaluation]** page appears, which displays all the currently available schedules in your organization. Select **[!UICONTROL Create schedule]** to begin creating the schedule.
 
-IMAGE
+![The Create schedule button is highlighted within the Evaluation page.](/help/segmentation/images/tutorials/flexible-batch-segmentation/create-schedule.png)
 
-The **Create schedule** popover appears. On this popover, you can fill in details of your schedule, including the name, cadence, and time of day you want the schedule to run. After inputting all the required details, select **Create** to continue.
+The **[!UICONTROL Create schedule]** popover appears. On this popover, you can fill in details of your schedule, including the name, cadence, and time of day you want the schedule to run. After inputting all the required details, select **[!UICONTROL Create]** to continue.
 
-IMAGE
+![The Create schedule popover is displayed.](/help/segmentation/images/tutorials/flexible-batch-segmentation/create-schedule-popover.png)
 
 >[!TAB API]
 
@@ -103,13 +107,13 @@ After you create a schedule, you can assign additional audiences to the previous
 
 >[!TAB UI]
 
-To assign audiences to a schedules using the Experience Platform UI, select the ICON next to the schedule, followed by **[!UICONTROL Schedule audiences]**.
+To assign audiences to a schedules using the Experience Platform UI, select the ![ellipsis icon](/help/images/icons/more.png) next to the schedule, followed by **[!UICONTROL Schedule audiences]**.
 
-IMAGE
+![The Schedule audiences button is highlighted.](/help/segmentation/images/tutorials/flexible-batch-segmentation/schedule-audiences.png)
 
 The **[!UICONTROL Schedule audiences]** popover is displayed. Select the audiences you want to add to the schedule, followed by **[!UICONTROL Schedule]** to confirm your scheduling changes.
 
-IMAGE
+![The Schedule audiences popover is displayed.](/help/segmentation/images/tutorials/flexible-batch-segmentation/schedule-audiences-popover.png)
 
 >[!TAB API]
 
@@ -168,11 +172,11 @@ A successful response returns HTTP status 200 with information about the added a
 
 >[!ENDTABS]
 
-Alternatively, you can assign a schedule to an audience during audience creation. Within Audience Builder, after saving your audience, go to the **Schedule** section in the audience properties section and select the ICON.
+Alternatively, you can assign a schedule to an audience during audience creation. Within Audience Builder, after saving your audience, go to the **[!UICONTROL Schedule]** section in the audience properties section and select the ![calendar icon](/help/images/icons/calendar.png).
 
-The **Audience schedules** popover appears. On this popover, you can assign which schedules the audience should belong to.
+The **[!UICONTROL Audience schedules]** popover appears. On this popover, you can assign which schedules the audience should belong to.
 
-IMAGE
+![The Assign schedules popover is displayed, showing which schedules an audience belongs to.](/help/segmentation/images/tutorials/flexible-batch-segmentation/assign-schedules.png)
 
 ## Checking which schedules an audience belongs to
 
@@ -188,11 +192,9 @@ You can see which schedules an audience belongs to either using the Experience P
 
 To view the schedules an audience belongs to using the Experience Platform UI, go to [Audience Portal](/help/segmentation/ui/audience-portal.md) and select the audience, followed by **Edit audience**.
 
-IMAGE
+Within Audience Builder, select the ![calendar icon](/help/images/icons/calendar.png). within the **[!UICONTROL Schedule]** section of the **[!UICONTROL Audience properties]** section to display the **[!UICONTROL Audience schedules]** popover. This popover shows which schedules the audience belongs to, and lets you add or remove which schedules the audience belongs to.
 
-Within Audience Builder, select the ICON within the **Schedule** section of the **Audience properties** section to display the **Audience schedules** popover. This popover shows which schedules the audience belongs to, and lets you add or remove which schedules the audience belongs to.
-
-IMAGE
+![The Assign schedules popover is displayed, showing which schedules an audience belongs to.](/help/segmentation/images/tutorials/flexible-batch-segmentation/assign-schedules.png)
 
 >[!TAB API]
 
@@ -261,13 +263,13 @@ If you want to remove audiences from an already created schedule, you can use ei
 
 >[!TAB UI]
 
-To remove audiences from a schedule using the Experience Platform UI, select the ICON next to the schedule, followed by **[!UICONTROL Schedule audiences]**.
+To remove audiences from a schedule using the Experience Platform UI, select the ![more icon](/help/images/icons/more.png) next to the schedule, followed by **[!UICONTROL Schedule audiences]**.
 
-IMAGE
+![The Schedule audiences button is highlighted.](/help/segmentation/images/tutorials/flexible-batch-segmentation/schedule-audiences.png)
 
 The **[!UICONTROL Schedule audiences]** popover is displayed. Select the audiences you want to remove from the schedule, followed by **[!UICONTROL Schedule]** to confirm your scheduling changes.
 
-IMAGE
+![The Schedule audiences popover is displayed.](/help/segmentation/images/tutorials/flexible-batch-segmentation/schedule-audiences-popover.png)
 
 >[!TAB API]
 
@@ -330,13 +332,13 @@ Instead of waiting for the schedule to run, you can manually trigger an existing
 
 >[!TAB UI]
 
-To manually run a schedule in the Experience Platform UI, select the ICON next to the schedule you want to evaluate in the **Evaluation** page, followed by **Run schedule**.
+To manually run a schedule in the Experience Platform UI, select the ![more icon](/help/images/icons/more.png) next to the schedule you want to evaluate in the **[!UICONTROL Evaluation]** page, followed by **[!UICONTROL Run schedule]**.
 
-IMAGE
+![The Run schedule button is highlighted.](/help/segmentation/images/tutorials/flexible-batch-segmentation/run-schedule.png)
 
-A confirmation popup appears. Select **Start** to immediately begin the schedule run.
+A confirmation popup appears. Select **[!UICONTROL Start]** to immediately begin the schedule run.
 
-IMAGE
+![The Run schedule popover is displayed.](/help/segmentation/images/tutorials/flexible-batch-segmentation/run-schedule-popover.png)
 
 >[!TAB API]
 
@@ -382,9 +384,9 @@ You can enable or disable a schedule using either the Experience Platform UI or 
 
 >[!TAB UI]
 
-To enable or disable a schedule using the Experience Platform UI, select the ICON next to the schedule. If you want to enable a currently disabled schedule, select **Enable**. If you want to disable a currently enabled schedule, select **Disable**.
+To enable or disable a schedule using the Experience Platform UI, select the ![more icon](/help/images/icons/more.png) next to the schedule. If you want to enable a currently disabled schedule, select **[!UICONTROL Enable]**. If you want to disable a currently enabled schedule, select **[!UICONTROL Disable]**.
 
-IMAGE
+![The Disable schedule button is highlighted.](/help/segmentation/images/tutorials/flexible-batch-segmentation/disable-schedule.png)
 
 >[!TAB API]
 
@@ -426,3 +428,6 @@ A successful response returns HTTP status 204 with no content.
 
 >[!ENDTABS]
 
+## Next steps
+
+After reading this guide, you now know how to use Flexible Batch Schedules either using the Experience Platform API or UI. For more information on the Flexible Batch Schedules UI, read the [evaluation overview](/help/segmentation/ui/evaluation.md). For more information on the schedules API, read the [schedules endpoint guide](/help/segmentation/api/schedules.md).
