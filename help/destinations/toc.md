@@ -48,7 +48,7 @@ debug: true
         * [Activate prospect audiences to destinations](./ui/activate-prospect-audiences.md)
         * [Activate account audiences to destinations](./ui/activate-account-audiences.md)
         * [Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
-        * [Deliver Audience Now for streaming destinations](./ui/deliver-audience-now.md)
+        * [Activate now for streaming destinations](./ui/deliver-audience-now.md)
         * [Export datasets using the Experience Platform UI](./ui/export-datasets.md)
         * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
         * [Export arrays, maps, and objects](/help/destinations/ui/export-arrays-maps-objects.md)

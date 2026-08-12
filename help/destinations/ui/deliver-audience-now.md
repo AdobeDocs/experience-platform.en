@@ -1,5 +1,5 @@
 ---
-title: Deliver Audience Now for Streaming Destinations
+title: Activate Now for Streaming Destinations
 badgeBeta: label="Beta" type="Informative"
 type: Tutorial
 description: Learn how to trigger an on-demand full-membership refresh of an audience to a streaming or API-based destination using the Experience Platform UI.
@@ -23,40 +23,49 @@ role_v2:
     internal-label: Admin
 ---
 
-# Deliver Audience Now for streaming destinations
+# Activate now for streaming destinations
 
 >[!IMPORTANT]
 >
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-## [!UICONTROL Deliver Audience Now] overview {#overview}
+## [!UICONTROL Activate now] overview {#overview}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_activationchaining_deliveraudiencenow"
->title="Deliver Audience Now"
+>id="platform_destinations_activate_now_streaming"
+>title="Activate now"
 >abstract="Select this control to trigger an immediate, on-demand refresh of an audience's full current membership to a streaming or API-based destination. Use this when a destination's time-to-live (TTL) has expired and previously qualified profiles need to be resent."
 
 This article explains how to use the Experience Platform UI to trigger an on-demand refresh of an audience's full membership to streaming and API-based destinations, such as [!DNL Facebook Custom Audiences] and [!DNL The Trade Desk].
 
 Many streaming and API-based destinations apply a time-to-live (TTL) to the audience membership they receive from [!DNL Adobe Experience Platform]. When that TTL expires on the destination side, previously qualified profiles are treated as inactive, even though they remain qualified in Experience Platform. This can cause your addressable audience to shrink mid-campaign.
 
-Use the **[!UICONTROL Deliver Audience Now]** control to resend every currently qualified profile for an audience through the existing streaming activation pipeline, without waiting for the next scheduled refresh. This gives you a self-serve way to counteract destination-side TTL expiration instead of filing a support ticket for a manual backfill.
+Use the **[!UICONTROL Activate now]** control to resend every currently qualified profile for an audience through the existing streaming activation pipeline, without waiting for the next scheduled refresh. This gives you a self-serve way to counteract destination-side TTL expiration instead of filing a support ticket for a manual backfill.
 
-**[!UICONTROL Deliver Audience Now]** is the streaming counterpart to [Export file now](/help/destinations/ui/export-file-now.md), which serves the same purpose for batch, file-based destinations.
+**[!UICONTROL Activate now]** is the streaming counterpart to [Export file now](/help/destinations/ui/export-file-now.md), which serves the same purpose for batch, file-based destinations.
 
 You can also use the Experience Platform APIs for this purpose. Read how to [activate audiences on-demand to streaming destinations via the ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md#streaming-destinations).
 
 ## v1 scope and limitations {#scope-and-limitations}
 
-Review the following limitations before you use **[!UICONTROL Deliver Audience Now]**.
+The **[!UICONTROL Activate now]** feature:
 
-* This action resends full audience membership regardless of qualification state. It does not perform a differential or changes-only refresh.
-* This action does not run automatically or on a schedule. Automatic, TTL-aware refresh is planned for a future release.
-* This action is available only for streaming and API-based destinations. File-based destinations continue to use [Export file now](/help/destinations/ui/export-file-now.md).
+* Resends full audience membership regardless of qualification state, rather than a differential or changes-only refresh.
+* Runs only on-demand. Automatic, TTL-aware refresh is planned for a future release.
+* Applies only to streaming and API-based destinations. For file-based destinations, use [Export file now](/help/destinations/ui/export-file-now.md).
+
+## Guardrails {#guardrails}
+
+Keep in mind the following sandbox-level daily limits when using **[!UICONTROL Activate now]**:
+
+* One on-demand run per dataflow, per audience, per day.
+* Five on-demand runs across all dataflows in the sandbox, per day.
+
+If you exceed a guardrail, the trigger is rejected, and the UI shows your remaining quota along with a message indicating when you can try again.
 
 ## Prerequisites {#prerequisites}
 
-To use **[!UICONTROL Deliver Audience Now]**, you must have successfully [connected to a destination](./connect-destination.md) and configured an activation dataflow to a streaming or API-based destination. If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
+To use **[!UICONTROL Activate now]**, you must have successfully [connected to a destination](./connect-destination.md) and configured an activation dataflow to a streaming or API-based destination. If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 
 ## How to deliver an audience on-demand {#how-to-deliver-audience-now}
 
@@ -64,31 +73,15 @@ To use **[!UICONTROL Deliver Audience Now]**, you must have successfully [connec
 
 1. On the destination details page, select the **[!UICONTROL Activation data]** tab.
 
-1. Select one or more audiences that you want to refresh, then select the **[!UICONTROL Deliver Audience Now]** control. This control is available for both a single audience row and a bulk selection of audiences.
+1. Select one or more audiences that you want to refresh, then select the **[!UICONTROL Activate now]** control. This control is available for both a single audience row and a bulk selection of audiences.
+
+   ![The Activation data tab of a streaming destination, with an audience selected and the Activate now control highlighted in the right panel](../assets/ui/deliver-audience-now/activate-now-streaming.png)
 
 1. In the confirmation dialog, select **[!UICONTROL Yes]** to confirm and trigger the refresh.
 
 1. A toast message appears, confirming that the refresh has been queued. Experience Platform creates one streaming job per selected audience.
 
-1. Track the status of each job, such as queued, in-flight, succeeded, failed, or partial, from the **[!UICONTROL Dataflow runs]** tab. Each trigger also creates an entry in the audit log.
-
-## Guardrails {#guardrails}
-
-**[!UICONTROL Deliver Audience Now]** enforces the following daily limits at the sandbox level:
-
-* One on-demand run per dataflow, per audience, per day.
-* Five on-demand runs across all dataflows in the sandbox, per day.
-
-If you exceed a guardrail, the trigger is rejected, and the UI shows your remaining quota along with a message indicating when you can try again.
-
-## UI error messages {#ui-error-messages}
-
-When using the **[!UICONTROL Deliver Audience Now]** control, you might encounter any of the following conditions. A trigger is rejected if any of these apply:
-
-* The selected audience isn't mapped to the destination.
-* The destination isn't a streaming or API-based destination.
-* You don't have the **[!UICONTROL Activate Destinations]** permission.
-* A [guardrail](#guardrails) has been exceeded. In this case, the UI shows your remaining quota and a message indicating when you can try again.
+1. Track the status of each job, such as queued, in-flight, succeeded, failed, or partial, from the **[!UICONTROL Dataflow runs]** tab.
 
 ## Related information {#related-information}
 

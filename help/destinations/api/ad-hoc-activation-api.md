@@ -278,13 +278,13 @@ When using the ad-hoc activation API, you can come across error messages that ar
 >
 >Ad-hoc activation to streaming and API-based destinations is currently in beta. This functionality is being rolled out in phases and is feature-flag gated.
 
-Use v4 of the ad-hoc activation API to trigger **[!UICONTROL Deliver Audience Now]**, an on-demand, full-membership refresh of an audience to a streaming or API-based destination, such as [!DNL Facebook Custom Audiences] and [!DNL The Trade Desk].
+Use v4 of the ad-hoc activation API to trigger **[!UICONTROL Activate now]**, an on-demand, full-membership refresh of an audience to a streaming or API-based destination, such as [!DNL Facebook Custom Audiences] and [!DNL The Trade Desk].
 
 Many streaming and API-based destinations apply a time-to-live (TTL) to the audience membership they receive from [!DNL Adobe Experience Platform]. When that TTL expires on the destination side, previously qualified profiles are treated as inactive, even though they remain qualified in Experience Platform. Trigger a v4 ad-hoc activation run to resend every currently qualified profile through the existing streaming activation pipeline, without waiting for the next scheduled refresh.
 
 This request resends full audience membership regardless of qualification state. It does not perform a differential or changes-only refresh.
 
-You can also trigger this refresh from the Experience Platform UI. Read [Deliver Audience Now for streaming destinations](/help/destinations/ui/deliver-audience-now.md).
+You can also trigger this refresh from the Experience Platform UI. Read [Activate now for streaming destinations](/help/destinations/ui/deliver-audience-now.md).
 
 ### Streaming guardrails {#streaming-guardrails}
 
@@ -362,5 +362,5 @@ If a guardrail is exceeded, the response indicates the remaining quota and when 
 
 * [Connect to batch destinations and activate data using the Flow Service API](/help/destinations/api/connect-activate-batch-destinations.md)
 * [Export files on-demand to batch destinations using the Experience Platform UI](/help/destinations/ui/export-file-now.md)
-* [Deliver Audience Now for streaming destinations](/help/destinations/ui/deliver-audience-now.md)
+* [Activate now for streaming destinations](/help/destinations/ui/deliver-audience-now.md)
 
