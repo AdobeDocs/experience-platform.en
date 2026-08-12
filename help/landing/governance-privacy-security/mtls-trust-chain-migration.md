@@ -84,7 +84,7 @@ Add both of the following certificates to your trust store. Some platforms may r
 
 {style="table-layout:auto"}
 
-DigiCert maintains the full list of its trusted root certificates, including these two, in its [Trusted Root Authority Certificates](https://knowledge.digicert.com/general-information/digicert-trusted-root-authority-certificates) reference.
+DigiCert maintains information about its trusted root certificates and certificate authorities in its [Trusted Root Authority Certificates](https://knowledge.digicert.com/general-information/digicert-trusted-root-authority-certificates) reference.
 
 [!DNL DigiCert] distributes both files in DER format. Most of the platforms covered later in this guide use PEM format, so convert both files to PEM unless you are using [!DNL Windows].
 
