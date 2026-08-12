@@ -27,7 +27,7 @@ role_v2:
 
 >[!IMPORTANT]
 >
->To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>This feature is in private beta and available for a limited number of streaming destinations. Contact your Adobe representative to request access.
 
 ## [!UICONTROL Activate now] overview {#overview}
 
@@ -42,7 +42,7 @@ Many streaming and API-based destinations apply a time-to-live (TTL) to the audi
 
 Use the **[!UICONTROL Activate now]** control to resend every currently qualified profile for an audience through the existing streaming activation pipeline, without waiting for the next scheduled refresh. This gives you a self-serve way to counteract destination-side TTL expiration instead of filing a support ticket for a manual backfill.
 
-**[!UICONTROL Activate now]** is the streaming counterpart to [Export file now](/help/destinations/ui/export-file-now.md), which serves the same purpose for batch, file-based destinations.
+**[!UICONTROL Activate now]** is the streaming counterpart to [Export file now](/help/destinations/ui/export-file-now.md), which serves the same purpose for file-based destinations.
 
 You can also use the Experience Platform APIs for this purpose. Read how to [activate audiences on-demand to streaming destinations via the ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md#streaming-destinations).
 
@@ -64,6 +64,8 @@ Keep in mind the following sandbox-level daily limits when using **[!UICONTROL A
 If you exceed a guardrail, the trigger is rejected, and the UI shows your remaining quota along with a message indicating when you can try again.
 
 ## Prerequisites {#prerequisites}
+
+To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To use **[!UICONTROL Activate now]**, you must have successfully [connected to a destination](./connect-destination.md) and configured an activation dataflow to a streaming or API-based destination. If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 
