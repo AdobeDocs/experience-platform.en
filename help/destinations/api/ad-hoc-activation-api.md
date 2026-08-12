@@ -284,7 +284,7 @@ Many streaming and API-based destinations apply a time-to-live (TTL) to the audi
 
 This request resends full audience membership regardless of qualification state. It does not perform a differential or changes-only refresh.
 
-You can also trigger this refresh from the Experience Platform UI. Read [Activate now for streaming destinations](/help/destinations/ui/deliver-audience-now.md).
+You can also trigger this refresh from the Experience Platform UI. Read [Activate now for streaming destinations](/help/destinations/ui/activate-now-streaming.md).
 
 ### Streaming guardrails {#streaming-guardrails}
 
@@ -362,5 +362,5 @@ If a guardrail is exceeded, the response indicates the remaining quota and when 
 
 * [Connect to batch destinations and activate data using the Flow Service API](/help/destinations/api/connect-activate-batch-destinations.md)
 * [Export files on-demand to batch destinations using the Experience Platform UI](/help/destinations/ui/export-file-now.md)
-* [Activate now for streaming destinations](/help/destinations/ui/deliver-audience-now.md)
+* [Activate now for streaming destinations](/help/destinations/ui/activate-now-streaming.md)
 

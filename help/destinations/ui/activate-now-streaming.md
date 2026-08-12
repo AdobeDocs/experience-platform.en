@@ -77,7 +77,7 @@ To use **[!UICONTROL Activate now]**, you must have successfully [connected to a
 
 1. Select one or more audiences that you want to refresh, then select the **[!UICONTROL Activate now]** control. This control is available for both a single audience row and a bulk selection of audiences.
 
-   ![The Activation data tab of a streaming destination, with an audience selected and the Activate now control highlighted in the right panel](../assets/ui/deliver-audience-now/activate-now-streaming.png)
+   ![The Activation data tab of a streaming destination, with an audience selected and the Activate now control highlighted in the right panel](../assets/ui/activate-now-streaming/activate-now-streaming.png)
 
 1. In the confirmation dialog, select **[!UICONTROL Yes]** to confirm and trigger the refresh.
 
