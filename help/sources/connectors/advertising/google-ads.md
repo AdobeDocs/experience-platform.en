@@ -4,74 +4,74 @@ description: Learn how to connect Google Ads (V2) to Adobe Experience Platform u
 ---
 # [!DNL Google Ads] (V2)
 
-Google Ads (V2) is an Adobe Experience Platform paid media source connector that ingests advertising account, campaign, ad group, ad, asset, experience, and performance data from the Google Ads API into Experience Platform.
+[!DNL Google Ads] (V2) is an Adobe Experience Platform paid media source connector that ingests advertising account, campaign, ad group, ad, asset, experience, and performance data from the [!DNL Google Ads] API into Experience Platform.
 
-The connector maps Google Ads data to standardized paid media Experience Data Model (XDM) structures, allowing you to analyze Google Ads data alongside data from other advertising networks, web properties, commerce systems, and customer applications.
+The connector maps [!DNL Google Ads] data to standardized paid media Experience Data Model (XDM) structures, allowing you to analyze [!DNL Google Ads] data alongside data from other advertising networks, web properties, commerce systems, and customer applications.
 
-Google Ads (V2) uses read-only access to retrieve reporting data and advertising metadata. It does not create, modify, or delete Google Ads resources.
+[!DNL Google Ads] (V2) uses read-only access to retrieve reporting data and advertising metadata. It does not create, modify, or delete [!DNL Google Ads] resources.
 
 ## Example use cases
 
-| Use case | Goal | How Google Ads (V2) helps |
+| Use case | Goal | How [!DNL Google Ads] (V2) helps |
 | --- | --- | --- |
-| Cross-channel advertising analysis | Compare Google Ads performance with Meta Ads and other paid media channels. | Ingests Google Ads data into common paid media XDM structures with standardized account, campaign, ad group, ad, asset, experience, and metric identifiers. |
+| Cross-channel advertising analysis | Compare [!DNL Google Ads] performance with Meta Ads and other paid media channels. | Ingests [!DNL Google Ads] data into common paid media XDM structures with standardized account, campaign, ad group, ad, asset, experience, and metric identifiers. |
 | Media mix modeling and attribution | Evaluate the contribution of paid media to business outcomes. | Provides campaign and advertising performance data, including impressions, clicks, spend, conversions, and conversion value for downstream analysis. |
 | Campaign and budget optimization | Understand which campaigns, bidding strategies, and targeting configurations are driving results. | Ingests campaign metadata, budgets, bidding strategies, channel types, statuses, dates, and selected targeting criteria. |
 | Creative and asset performance | Identify which creative assets, ad formats, and experiences perform best. | Ingests ad-level creative metadata, asset associations, asset types, asset performance labels, and derived experience compositions. |
-| Performance Max analysis | Analyze Performance Max asset groups and their associated assets. | Uses Performance Max asset-group data to represent asset-group performance and experience relationships where Google Ads does not expose a traditional ad-level structure. |
-| Customer journey analysis | Relate advertising engagement to web, commerce, CRM, and other customer events. | Makes Google Ads data available in Experience Platform for use with downstream analytics and activation workflows. |
+| Performance Max analysis | Analyze Performance Max asset groups and their associated assets. | Uses Performance Max asset-group data to represent asset-group performance and experience relationships where [!DNL Google Ads] does not expose a traditional ad-level structure. |
+| Customer journey analysis | Relate advertising engagement to web, commerce, CRM, and other customer events. | Makes [!DNL Google Ads] data available in Experience Platform for use with downstream analytics and activation workflows. |
 
 ## Prerequisites
 
-Before connecting Google Ads (V2) to Experience Platform, ensure that you have the following:
+Before connecting [!DNL Google Ads] (V2) to Experience Platform, ensure that you have the following:
 
 ### Configure permissions on Experience Platform
 
-You must have both **View Sources** and **Manage Sources** permissions enabled for your Experience Platform account.
+You must have both **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** permissions enabled for your Experience Platform account.
 
-Contact your product administrator if you do not have the required permissions.
+Contact your product administrator if you do not have the required permissions. For more information, read the [access control UI guide](../../../access-control/ui/overview.md).
 
 ### Configure a Google Cloud project
 
-Create or select a Google Cloud project for the connector and enable the Google Ads API.
+Create or select a Google Cloud project for the connector and enable the [!DNL Google Ads] API.
 
 The project must have OAuth 2.0 credentials configured for the authorization flow used by the connector.
 
-### Configure Google Ads API access
+### Configure [!DNL Google Ads] API access
 
 You must have:
 
-- A valid Google Ads developer token.
-- Access to the Google Ads advertiser account that you want to ingest.
+- A valid [!DNL Google Ads] developer token.
+- Access to the [!DNL Google Ads] advertiser account that you want to ingest.
 - An OAuth 2.0 client ID and client secret.
-- A Google Ads refresh token.
+- A [!DNL Google Ads] refresh token.
 - The `https://www.googleapis.com/auth/adwords` OAuth scope.
-- Permission to access the relevant advertiser accounts through Google Ads or a Google Ads manager account.
+- Permission to access the relevant advertiser accounts through [!DNL Google Ads] or a [!DNL Google Ads] manager account.
 
 ### Manager-account access
 
-If the advertiser account is accessed through a Google Ads manager account, also provide the appropriate manager customer ID as the `loginCustomerId`.
+If the advertiser account is accessed through a [!DNL Google Ads] manager account, also provide the appropriate manager customer ID as the `loginCustomerId`.
 
 The `loginCustomerId` is not required when the OAuth-authorized user can directly access the target advertiser account and no manager hierarchy is needed.
 
-Google Ads (V2) can enumerate accessible accounts, identify manager accounts, traverse the manager-account hierarchy, and resolve the advertiser accounts available for ingestion.
+[!DNL Google Ads] (V2) can enumerate accessible accounts, identify manager accounts, traverse the manager-account hierarchy, and resolve the advertiser accounts available for ingestion.
 
 ### Gather required credentials
 
-To connect Google Ads (V2) to Experience Platform, provide the following values.
+To connect [!DNL Google Ads] (V2) to Experience Platform, provide the following values.
 
 | Credential | Description |
-| --- | --- | 
+| --- | --- |
+| `developerToken` | The [!DNL Google Ads] developer token used to authorize API requests. |
 | `loginCustomerId` | The numeric customer ID of the manager account used to access the advertiser account. This credential is required for manager-account access. |
-| `developerToken` | The Google Ads developer token used to authorize API requests. |
 
 {style="table-layout:auto"}
 
 ## Authentication and account discovery
 
-Google Ads (V2) uses OAuth 2.0 to authenticate requests to the Google Ads API.
+[!DNL Google Ads] (V2) uses OAuth 2.0 to authenticate requests to the [!DNL Google Ads] API.
 
-After authorization, Experience Platform uses the supplied OAuth credentials and developer token to access Google Ads reporting resources. For manager-account configurations, the connector resolves the account hierarchy and identifies the advertiser accounts available for ingestion.
+After authorization, Experience Platform uses the supplied OAuth credentials and developer token to access [!DNL Google Ads] reporting resources. For manager-account configurations, the connector resolves the account hierarchy and identifies the advertiser accounts available for ingestion.
 
 The account-discovery workflow includes the following operations:
 
@@ -79,14 +79,14 @@ The account-discovery workflow includes the following operations:
 2. Determine whether an accessible account is a manager account.
 3. Traverse the manager-account hierarchy.
 4. Identify non-manager advertiser accounts.
-5. Use the appropriate loginCustomerId when requests are routed through an MCC hierarchy.
+5. Use the appropriate `loginCustomerId` when requests are routed through the manager-account hierarchy.
 6. Retrieve account metadata such as account ID, account name, currency, and time zone.
 
-Google Ads (V2) performs read-only API operations. It does not issue mutate, create, update, or delete requests against Google Ads resources.
+[!DNL Google Ads] (V2) performs read-only API operations. It does not issue mutate, create, update, or delete requests against [!DNL Google Ads] resources.
 
 ## Data selection and ingestion
 
-Google Ads (V2) uses Google Ads Query Language (GAQL) to retrieve account, metadata, and reporting data.
+[!DNL Google Ads] (V2) uses [!DNL Google Ads] Query Language (GAQL) to retrieve account, metadata, and reporting data.
 
 The connector uses resource-specific queries to retrieve the attributes, segments, and metrics required for each entity. SearchStream is used for reporting resources and large result sets where incremental row processing is beneficial.
 
@@ -112,9 +112,9 @@ Performance metrics are generally retrieved using date-based segments such as `s
 
 ## Schema configuration
 
-Google Ads (V2) maps source data to standardized paid media XDM structures. The data is organized by entity level so that metadata and performance metrics can be joined across account, campaign, ad group, ad, asset, and experience records.
+[!DNL Google Ads] (V2) maps source data to standardized paid media XDM structures. The data is organized by entity level so that metadata and performance metrics can be joined across account, campaign, ad group, ad, asset, and experience records.
 
-| Entity | Primary Google Ads resources | Data represented |
+| Entity | Primary [!DNL Google Ads] resources | Data represented |
 | --- | --- | --- |
 | Account | `customer`, `customer_client` | Account ID, account name, currency, time zone, manager status, and account metadata. |
 | Campaign | `campaign`, `campaign_budget`, `campaign_criterion` | Campaign name, status, advertising channel, subtype, objective, budgets, bidding strategy, dates, URL tracking, and targeting configuration. |
@@ -128,10 +128,10 @@ Google Ads (V2) maps source data to standardized paid media XDM structures. The 
 
 The V2 mapping defines platform-qualified identifiers for paid media entities. For example:
 
-- Account identifiers are derived from the Google Ads customer ID.
-- Campaign identifiers combine the Google Ads customer ID and campaign ID.
+- Account identifiers are derived from the [!DNL Google Ads] customer ID.
+- Campaign identifiers combine the [!DNL Google Ads] customer ID and campaign ID.
 - Ad group and ad identifiers include their parent hierarchy.
-- Asset identifiers combine the Google Ads customer ID and asset ID.
+- Asset identifiers combine the [!DNL Google Ads] customer ID and asset ID.
 - Experience identifiers are derived from creative-combination or asset-group context.
 - Hierarchy paths represent the relationship between account, campaign, ad group, ad, experience, and asset entities.
 
@@ -148,23 +148,23 @@ For Performance Max data:
 
 ## Data limitations and considerations
 
-Consider the following limitations when planning your Google Ads (V2) implementation.
+Consider the following limitations when planning your [!DNL Google Ads] (V2) implementation.
 
 ### Resource-specific metric support
 
-Google Ads does not expose every metric for every resource. For example, some resources do not support metrics or segments, while others support only a limited set of metrics.
+[!DNL Google Ads] does not expose every metric for every resource. For example, some resources do not support metrics or segments, while others support only a limited set of metrics.
 
 Metric availability can also vary between ad, asset, experience, campaign, and Performance Max queries.
 
 ### Derived experience records
 
-Google Ads does not provide a single universal experience entity equivalent to the experience model used by the paid media XDM schemas.
+[!DNL Google Ads] does not provide a single universal experience entity equivalent to the experience model used by the paid media XDM schemas.
 
 Experience records are therefore derived from available ad, asset-combination, and asset-group data.
 
 ### Video metadata
 
-The Google Ads API provides video identifiers and related asset references, but some media properties—such as video duration, codec, bitrate, frame rate, and audio presence—are not directly available through the Google Ads API.
+The [!DNL Google Ads] API provides video identifiers and related asset references. However, some media properties, such as video duration, codec, bitrate, frame rate, and audio presence, are not directly available through the [!DNL Google Ads] API.
 
 These fields may be null unless an approved enrichment service is added.
 
@@ -174,13 +174,13 @@ Asset metadata and performance support vary by asset type. For example, image an
 
 ### Google-specific fields
 
-Google Ads concepts that do not have a direct equivalent in the common paid media XDM model should be represented using additionalDetails or left null according to the approved mapping.
+[!DNL Google Ads] concepts that do not have a direct equivalent in the common paid media XDM model should be represented using additionalDetails or left null according to the approved mapping.
 
 ### Enum mappings
 
-Google Ads API enum values are mapped to XDM values using exact matches, close semantic matches, or approved fallback values. Unsupported, unknown, deprecated, or unspecified values may be skipped or set to null.
+[!DNL Google Ads] API enum values are mapped to XDM values using exact matches, close semantic matches, or approved fallback values. Unsupported, unknown, deprecated, or unspecified values may be skipped or set to null.
 
 ## Next steps
 
-After you have confirmed your Google Ads credentials and account-access model, continue by [creating a connection to Google Ads using the Experience Platform UI].
+After you have confirmed your [!DNL Google Ads] credentials and account-access model, continue by [creating a connection to [!DNL Google Ads] using the Experience Platform UI](../../tutorials/ui/create/advertising/google-ads.md).
 
