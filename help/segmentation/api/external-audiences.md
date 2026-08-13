@@ -29,7 +29,7 @@ External audiences let you upload profile data from your external sources into A
 
 ## Guardrails
 
-Starting with the March release, the following guardrails will be enforced when using the external audiences endpoint:
+The following guardrails are enforced when using the external audiences endpoint:
 
 | Guardrail | Limit | Limit type | Description |
 | --------- | ----- | ---------- | ----------- |
