@@ -400,6 +400,7 @@ role: Developer
     - [Create a connection specification for a streaming source](sources-sdk/streaming/create.md)
     - [Update a connection specification for a streaming source](sources-sdk/streaming/update-connection-specs.md)
     - [Update the streaming flow specification](sources-sdk/streaming/update-flow-specs.md)
+    - [Configure authentication for a Streaming SDK connector](sources-sdk/streaming/authentication.md)
     - [Test and submit your connection specification for verification](sources-sdk/streaming/submit.md)
     - [Document your source (Streaming SDK)](sources-sdk/streaming/document-streaming.md)
     - [Documentation self-service API streaming template](sources-sdk/streaming/streaming-template-api.md)

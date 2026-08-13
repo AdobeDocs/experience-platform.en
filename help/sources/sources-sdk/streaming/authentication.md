@@ -1,6 +1,12 @@
 ---
-title: Configure Authentication For A Streaming SDK Connector
-description: Learn how to configure authentication for a Streaming SDK source connector.
+title: Configure authentication for a Streaming SDK connector
+description: Learn how to configure OAuth 2.0 or HMAC-based authentication for a Streaming SDK source connector.
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Configure authentication for a Streaming SDK connector
 
@@ -11,7 +17,11 @@ Authentication is required for all connectors built with Streaming SDK. Before y
 | OAuth 2.0 | The connector uses Adobe credentials, scopes, or customer authorization to access Adobe APIs. |
 | HMAC | The connector signs each event with a shared secret before sending it to the Streaming Ingestion API. |
 
-Configure the mechanism that matches your connector's integration model. Do not leave authentication without configuring your authentication type.
+Configure the mechanism that matches your connector's integration model.
+
+>[!IMPORTANT]
+>
+>You must configure OAuth 2.0 or HMAC-based authentication for your connector. Adobe does not accept a Streaming SDK connector for submission or release without a configured authentication mechanism.
 
 ## Before you begin
 
@@ -81,20 +91,18 @@ Store the following values securely:
 
 Do not commit client secrets to source control or include them in logs, error messages, screenshots, or test results.
 
-### 3. Add OAuth configuration to the connector
+### 3. Add the OAuth configuration to your connector
 
-Add the OAuth configuration fields required by the Streaming SDK connector.
+Store the OAuth configuration values in your connector's own configuration or service. Streaming SDK does not define a connection specification field for this authentication step, because it governs how your connector calls the Streaming Ingestion API, not how Experience Platform connects to your source.
 
-Use the field names defined by the current SDK schema:
+Your connector's configuration must include:
 
-| Configuration value | SDK field |
-| --- | --- |
-| Authentication type | |
-| Client ID | |
-| Client secret | |
-| Scopes | |
-| Token endpoint | |
-| Additional tenant or organization value | |
+- Authentication type.
+- Client ID.
+- Client secret.
+- Scopes.
+- Token endpoint.
+- Any additional tenant or organization value required by your credential type.
 
 ### 4. Obtain an access token
 
@@ -103,16 +111,16 @@ Implement the OAuth flow documented for your credential type.
 The connector must:
 
 1. Authenticate using the configured OAuth credentials.
-2. Request the scopes required by the Streaming SDK integration.
-3. Store the access token in memory or another secure location.
-4. Refresh or reacquire the token according to the token lifetime.
-5. Avoid logging the token or the client secret.
+1. Request the scopes required by the Streaming SDK integration.
+1. Store the access token in memory or another secure location.
+1. Refresh or reacquire the token according to the token lifetime.
+1. Avoid logging the token or the client secret.
 
 ### 5. Add the access token to requests
 
 Include the access token as a bearer token on requests sent by the connector:
 
-```https
+```http
 Authorization: Bearer {ACCESS_TOKEN}
 ```
 
@@ -155,36 +163,50 @@ Serialize the event before calculating the signature.
 
 The signature must be calculated from the same serialized message that the connector sends in the request body.
 
-`serializedMessage = serialize(event)` Do not calculate the signature from one representation of the event and send another representation. Changes to whitespace, property order, escaping, encoding, or line endings can cause signature validation to fail.
+```text
+serializedMessage = serialize(event)
+```
+
+Do not calculate the signature from one representation of the event and send another representation. Changes to whitespace, property order, escaping, encoding, or line endings can cause signature validation to fail.
 
 ### 3. Calculate the HMAC-SHA256 signature
 
 Calculate the HMAC-SHA256 value using:
 
-Key: The configured shared secret.
+- Key: The configured shared secret.
+- Message: The serialized request body.
 
-Message: The serialized request body.
-
+```text
 signature = HMAC-SHA256(secret, serializedMessage)
+```
 
 <!--
+
 Publishing note: Confirm whether the signature must be encoded as lowercase hexadecimal, uppercase hexadecimal, or Base64. The current ticket example uses a hexadecimal-looking value, but the required output encoding must be confirmed by Engineering.
 
 -->
 
 ### 4. Add the HMAC header
 
-Add the calculated signature to the request using the following header:
+Add the calculated signature to the request as the `x-hmac-sha256` header:
 
-```json
-{ 
-     "x-hmac-sha256": "5f2c8b7e0d9c3a4e6b1f2d3c4a5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3" 
-} 
+```http
+POST <streaming-ingestion-endpoint>
+Content-Type: application/json
+x-hmac-sha256: {CALCULATED_SIGNATURE}
+
+<serialized-message>
 ```
 
-POST <streaming-ingestion-endpoint> Content-Type: application/json x-hmac-sha256: {CALCULATED_SIGNATURE}
+For example, the header resolves to a value similar to:
 
-<serialized-message> The header value must represent the HMAC-SHA256 calculation for the exact request body sent to Adobe.
+```json
+{
+  "x-hmac-sha256": "5f2c8b7e0d9c3a4e6b1f2d3c4a5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3"
+}
+```
+
+The header value must represent the HMAC-SHA256 calculation for the exact request body sent to Adobe.
 
 ### 5. Send the request
 
@@ -194,18 +216,20 @@ The Streaming Ingestion API verifies the signature before processing the event. 
 
 ### 6. Rotate the secret safely
 
-When rotating a secret:
+When you rotate a secret, follow this sequence:
 
-The following is a generic sequence, subject to confirmation of the actual Streaming SDK behavior:
+1. Create a new secret in your credential-management system.
+1. Keep the existing secret active while you deploy the new secret, if overlapping secrets are supported.
+1. Update the connector configuration with the new secret.
+1. Deploy or save the configuration.
+1. Send a test request and verify that authentication succeeds.
+1. Monitor for authentication failures, then revoke the old secret after all connector instances use the new one.
 
-Create a new secret in the credential-management system.
-Keep the existing secret active while the new secret is being deployed, if overlapping secrets are supported.
-Update the connector configuration with the new secret.
-Deploy or save the configuration.
-Send a test request and verify that authentication succeeds.
-Monitor for authentication failures, then revoke the old secret after all connector instances use the new one.
+<!--
 
-<!-- Publishing note: Confirm whether the Streaming SDK HMAC implementation supports simultaneous current and previous secrets during rotation. -->
+Publishing note: This is a generic rotation sequence. Confirm whether the Streaming SDK HMAC implementation supports simultaneous current and previous secrets during rotation before publishing this section.
+
+-->
 
 ## Verify the connector
 
@@ -278,4 +302,13 @@ Check the following:
 
 ## Submission requirements
 
-## Related documentation
+Before you submit or release your connector, confirm the following:
+
+- Your connector uses OAuth 2.0 or HMAC-based authentication for every request to the Streaming Ingestion API.
+- You tested the scenarios in [Verify the connector](#verify-the-connector) and recorded the results.
+- Your connector rejects unauthenticated and incorrectly authenticated requests.
+- Your secrets and tokens are not committed to source control, logs, error messages, or screenshots.
+
+## Next steps
+
+With authentication configured and verified, continue to [Test and submit your source](submit.md). To learn how to document the authentication requirements for your source, see [Document your source (Streaming SDK)](document-streaming.md).

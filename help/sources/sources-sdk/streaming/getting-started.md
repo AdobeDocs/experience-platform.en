@@ -25,7 +25,12 @@ The step-by-step process to configure your source in Experience Platform is outl
 
 * [Create a new connection specification for Streaming SDK](create.md).
 * [Update the streaming flow specification with your new connection specification ID](update-flow-specs.md).
+* [Configure authentication for your connector](authentication.md).
 * [Test and submit your streaming source](submit.md).
+
+>[!IMPORTANT]
+>
+>Authentication is required for all connectors built with Streaming SDK. Configure OAuth 2.0 or HMAC-based authentication before you test and submit your connector. See [Configure authentication for a Streaming SDK connector](authentication.md) for steps.
 
 ### Documentation
 
