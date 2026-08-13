@@ -237,7 +237,7 @@ The list of available filters is displayed.
 
 ### Bulk actions {#bulk-actions}
 
-Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions include [moving to a folder](#folders), [editing or applying a tag](#tags), [evaluating audiences](#flexible-audience-evaluation), [applying access labels](../../access-control/abac/ui/labels.md),and [deleting](#browse).
+Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions include [moving to a folder](#folders), [editing or applying a tag](#tags), [evaluating audiences](#flexible-audience-evaluation), [immediately evaluating an audience](#run-now), [applying access labels](../../access-control/abac/ui/labels.md), [evaluating audiences](#bulk-evaluate), and [deleting](#browse).
 
 ![The available options for bulk actions are displayed.](../images/ui/audience-portal/bulk-actions.png)
 
@@ -250,6 +250,10 @@ When you apply bulk actions to audiences, the following conditions apply:
 #### Flexible audience evaluation {#flexible-audience-evaluation}
 
 Flexible audience evaluation lets you run a segmentation job on demand. To learn more about flexible audience evaluation, read the [flexible audience evaluation guide](../methods/flexible-audience-evaluation.md).
+
+#### Run now evaluation {#run-now}
+
+Run now evaluation lets you immediately evaluate an audience to a destination. To learn more about run now evaluation, read the [run now evaluation guide](../methods/run-now.md). 
 
 ## Audience details {#audience-details}
 
