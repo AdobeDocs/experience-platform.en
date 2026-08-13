@@ -75,6 +75,8 @@ When making this request, you'll need to specify the following information:
 
 - The name of the audience
 - A description for the audience
+- The type of audience being created
+  - Supported values include `people` and `account`
 - The corresponding fields between the CSV and the schema
 - The source specification information
   - This includes the file path of the CSV file for ingestion
