@@ -1,6 +1,6 @@
 ---
 title: Run Now Evaluation Guide
-description: Learn how to immediately evaluate an audience so you can activate it to a destination.
+description: Learn how to immediately evaluate an audience, using run now evaluation, so you can activate it to a destination.
 ---
 
 # Run now evaluation guide
@@ -9,14 +9,16 @@ description: Learn how to immediately evaluate an audience so you can activate i
 >
 >Run now evaluation is currently in beta. For more information, contact Adobe Customer Care.
 
-Run now evaluation lets you **immediately** activate an audience to a destination on demand. With run now evaluation, you don't need to wait for your system schedule to activate your audience and you can move immediately from building your audience to evaluating your audience.
+Run now evaluation lets you **immediately** activate an audience to a destination on demand. With run now evaluation, you don't need to wait for your system schedule to activate your audience and you can move immediately from building your audience to evaluating your audience. 
+
+As a result, you can iterate through the process of audience creation - building, validating, iterating, and activating - much more quickly, since you can move straight from building an audience to activating an audience.
 
 ## Guardrails {#guardrails}
 
 With run now evaluation, please keep the following conditions in mind:
 
 - You have a **maximum** of 1000 runs per year.
-  - A year is defined as one year starting on the date of your Experience Platform contract for flexible audience evaluation. For example, if you contract started on May 18th, your number of flexible audience evaluation runs will reset every May 18th.
+  - A year is defined as one year starting on the date of your Experience Platform contract for run now evaluations. For example, if you contract started on May 18th, your number of run now evaluation runs will reset every May 18th.
 - Run Evaluation results can **only** be sent to the following locations:
   - File-based destinations configured with **After segment evaluation** schedule
   - The **Audience Orchestration Run Now Profile Dataset**
@@ -74,11 +76,11 @@ Yes. Each audience evaluated using a run now evaluation consumes 1 Run. If your 
 
 ### Can I send my run now evaluation results to my regular scheduled destination?
 
-It depends on the destination that the audience would be exported to. If the destination is a filed-based destination that is set to the **After segment evaluation** frequency **or** the results are sent to the **Audience Orchestration Run Now Profile Dataset**, you can send your evaluation results to your regular scheduled destinations. Otherwise, you will not be able to do so.
+No, you cannot send run now evaluation results to scheduled audiences. You can only use run now if your destination is a file-based destination that uses the **After segment evaluation** frequency **or** the results are sent to the **Audience Orchestration Run Now Profile Dataset**, you can send your evaluation results to your regular scheduled destinations.
 
 ### Does run now evaluation permanently update my customer profiles?
 
-By default, run now evaluation does **not** permanently update your customer profiles. However, if you enable write-back, it can permanently update your customer profiles.
+By default, run now evaluation does **not** permanently update your customer profiles.
 
 ### Can I trigger run now evaluation on the same audience twice at the same time?
 
