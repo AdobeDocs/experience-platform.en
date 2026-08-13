@@ -143,6 +143,10 @@ Once you have acquired the connection specification template, you can now start 
 
 A connection specification can be divided into two distinct parts: the source specifications and the explore specifications. 
 
+>[!NOTE]
+>
+>Leave `authSpec` as an empty array. This field does not apply to Self-Serve Sources (Streaming SDK). Streaming SDK connectors authenticate directly with the Streaming Ingestion API using OAuth 2.0 or HMAC-based authentication instead. See [Configure authentication for a Streaming SDK connector](./authentication.md).
+
 See the following documents for more information on the sections of a connection specification:
 
 * [Configure your source specification](../config/sourcespec.md)

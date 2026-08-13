@@ -19,6 +19,10 @@ The final steps to integrating your new source to Adobe Experience Platform usin
 
 The following document provides steps on how to test and debug your source using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
+>[!IMPORTANT]
+>
+>Authentication is required for all connectors built with Streaming SDK. Before you test and submit your source, configure OAuth 2.0 or HMAC-based authentication. See [Configure authentication for a Streaming SDK connector](./authentication.md).
+
 ## Getting started
 
 * For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../landing/api-guide.md).
