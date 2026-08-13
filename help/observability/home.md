@@ -33,6 +33,16 @@ By subscribing to alerts, you can set up your own downstream protocols for when 
 
 See the overview on [alerts](./alerts/overview.md) for more information.
 
+## MCP support {#mcp}
+
+You can also query [!DNL Observability Insights] metrics and breach data using conversational prompts, through the Model Context Protocol (MCP). MCP is an open standard that lets AI assistants and other MCP-compatible clients call Experience Platform tools directly.
+
+>[!AVAILABILITY]
+>
+>[!DNL Observability Insights] MCP support is in Beta.
+
+For the list of supported tools and setup instructions, see [[!DNL Observability Insights] tools in the Adobe Experience Platform MCP server](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/mcp/mcp-product-tools/aep-mcp).
+
 ## Next steps
 
 This document covered the various capabilities of [!DNL Observability Insights]. Refer to the documentation linked to throughout this overview to learn more about each feature.
