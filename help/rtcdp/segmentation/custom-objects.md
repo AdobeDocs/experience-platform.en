@@ -19,15 +19,10 @@ The **[!UICONTROL Create relational schema]** page appears. You can add the deta
 
 ![The create a schema page is displayed.](/help/rtcdp/assets/segmentation/custom-objects/create-schema.png)
 
->[!IMPORTANT]
->
->Currently, only **record** data is supported. Time series data is **not** supported at this time.
-
 | Schema behavior | Description |
 | --------------- | ----------- |
 | Record | Record data provides information about the attributes of a subject. This subject can be an organization or an individual. |
-
-<!-- | Time series | Time series data provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject. | -->
+| Time series | Time series data provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject. |
 
 ## Add your fields {#add-fields}
 
@@ -49,7 +44,7 @@ Once you created your schema, you'll need to create a dataset that uses the sche
 
 ![The previously created schema is selected on the create dataset page.](/help/rtcdp/assets/segmentation/custom-objects/create-dataset.png)
 
-For more information on creating a dataset, read the [create a dataset guide](/help/catalog/datasets/user-guide.md#create)
+For more information on creating a dataset, read the [create a dataset guide](/help/catalog/datasets/user-guide.md#create).
 
 ## Enable the schema for segmentation {#enable-schema}
 
@@ -87,7 +82,9 @@ To get data from your source to Experience Platform, you'll need to create a dat
 >
 >If you use the Marketo Connector, the Marketo Connector can **automatically** create the schema for the selected custom object if the schema doesn't already exist. 
 >
->The created schema will be prefixed with `MKTO_CUST_OBJ_$(Custom object name)` and includes the primaryKey and versionDescriptors by default. However, you **must** manually update the schema if changes are required, since modifications made after the schema is generated are **not** automatically applied.
+>The created schema will be prefixed with `MKTO_CUST_OBJ_$(Custom object name)` and includes the primaryKey and versionDescriptors by default. 
+>
+>However, you **must** manually update the schema if changes are required, since modifications made after the schema is generated are **not** automatically applied.
 >
 >Similarly to the other connectors, you **must** enable the dataset for segmentation and configure relationships.
 
