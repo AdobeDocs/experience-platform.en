@@ -237,9 +237,15 @@ The list of available filters is displayed.
 
 ### Bulk actions {#bulk-actions}
 
-Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions include [moving to a folder](#folders), [editing or applying a tag](#tags), [evaluating audiences](#flexible-audience-evaluation), [immediately evaluating an audience](#run-now), [applying access labels](../../access-control/abac/ui/labels.md), [evaluating audiences](#bulk-evaluate), and [deleting](#browse).
+Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions depend on the number of audiences selected. 
 
-![The available options for bulk actions are displayed.](../images/ui/audience-portal/bulk-actions.png)
+If you select one audience, you can [move the audience to a folder](#folders), [edit or apply a tag](#tags), [evaluate the audience's schedule](#flexible-audience-evaluation), [immediately evaluate an audience](#run-now), [apply access labels to the audience](../../access-control/abac/ui/labels.md), [delete the audience](#browse), and copy the audience's contents.
+
+![The available options for bulk actions are displayed if one audience is selected.](../images/ui/audience-portal/single-bulk-actions.png)
+
+If you select multiple audiences, you can [move the audience to a folder](#folders), [edit or apply a tag](#tags), [evaluate the audience's schedule](#flexible-audience-evaluation), [apply access labels to the audience](../../access-control/abac/ui/labels.md), [delete the audience](#browse), and copy the audience's contents.
+
+![The available options for bulk actions are displayed if multiple audiences are selected.](../images/ui/audience-portal/multi-bulk-actions.png)
 
 When you apply bulk actions to audiences, the following conditions apply:
 
