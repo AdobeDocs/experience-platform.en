@@ -265,15 +265,17 @@ Run now evaluation lets you immediately evaluate an audience to a destination. T
 
 To see more details about a specific audience, select an audience's name within the **[!UICONTROL Browse]** tab.
 
-The audience details page appears. On the top, there is a summary of the audience, information about the qualified audience size, as well as destinations the segment is activated for. 
+The audience details page appears. On the top, there is a summary of the audience, information about the qualified audience size, as well as destinations the audience is activated for. 
 
-![The audience details page is displayed. The audience summary, audience total, and activated destinations cards are highlighted.](/help/segmentation/images/ui/audience-portal/audience-details-summary.png)
+![The audience details page is displayed. The audience summary, audience total, and activated destinations cards are displayed.](/help/segmentation/images/ui/audience-portal/audience-details-summary.png)
 
 ### Audience summary {#audience-summary}
 
 The **[!UICONTROL Audience summary]** section provides information such as the ID, name, description, origin, and details of the attributes. 
 
-Additionally, you are given the option to activate the audience to a destination, apply access labels, or edit/update the audience. 
+Additionally, you are given the option to begin a run now evaluation, activate the audience to a destination, apply access labels, or edit/update the audience. 
+
+Selecting **[!UICONTROL Run now]** lets you immediately activate the audience to a destination on demand. For more information on run now evaluation, read the [run now evaluation guide](/help/segmentation/methods/run-now.md).
 
 Selecting **[!UICONTROL Activate to destination]** lets you activate the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md).
 
