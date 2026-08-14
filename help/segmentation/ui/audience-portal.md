@@ -71,13 +71,13 @@ To open Audience Portal, select the **[!UICONTROL Browse]** tab within the Segme
 
 By default, Audience Portal displays a list of all the audiences in your organization and sandbox including the profile count, origin, created date, last modified date, tags, and breakdown. 
 
-![The browse screen is displayed. A list of all the audiences belonging to the organization is shown.](../images/ui/audience-portal/audience-browse.png)
+![The browse screen is displayed. A list of all the audiences belonging to the organization is shown.](/help/segmentation/images/ui/audience-portal/audience-browse.png)
 
 ### Quick actions {#quick-actions}
 
 Next to each audience is an ellipsis icon. Selecting this displays a list of available quick actions for the audience. This list of actions differs, based on the audience's origin.
 
-![The quick actions list is shown for audiences with the origin of [!UICONTROL Audience composition].](../images/ui/audience-portal/browse-audience-composition-details.png)
+![The quick actions list is shown for audiences with the origin of [!UICONTROL Audience composition].](/help/segmentation/images/ui/audience-portal/browse-audience-composition-details.png)
 
 | Action | Origins | Description |
 | ------ | ------- | ----------- |
@@ -106,15 +106,15 @@ Selecting **[!UICONTROL Import audience]** will let you import an externally gen
 
 Selecting **[!UICONTROL Create audience]** will let you create an audience. To learn more about creating audiences, please read the section on [creating an audience in the user guide](#create-audience).
 
-![The top navigation bar on the audience browse page is highlighted. This bar contains a button to create an audience and a button to import an audience.](../images/ui/audience-portal/browse-audiences-top.png)
+![The top navigation bar on the audience browse page is highlighted. This bar contains a button to create an audience and a button to import an audience.](/help/segmentation/images/ui/audience-portal/browse-audiences-top.png)
 
 You can select **[!UICONTROL Evaluation summary]** to display a pie chart that shows a summary of the audience evaluations.
 
-![The Evaluation summary button is highlighted.](../images/ui/audience-portal/browse-audience-evaluation-summary.png)
+![The Evaluation summary button is highlighted.](/help/segmentation/images/ui/audience-portal/browse-audience-evaluation-summary.png)
 
 The pie chart appears, displaying a breakdown of the audiences by audience evaluation. The chart displays the total number of audiences in the middle, and the daily batch evaluation time in UTC at the bottom. If you hover over the different parts of the audience, it will display the number of audiences that belong to each update frequency type.
 
-![The audience evaluation pie chart is highlighted, with the batch segmentation evaluation time also displayed.](../images/ui/audience-portal/evaluation-summary.png)
+![The audience evaluation pie chart is highlighted, with the batch segmentation evaluation time also displayed.](/help/segmentation/images/ui/audience-portal/evaluation-summary.png)
 
 ### Customize {#customize}
 
@@ -146,7 +146,7 @@ If breakdown is selected, the display shows a bar graph outlining the percentage
 
 After you select the fields you want to display, you can also re-size the width of the displayed columns. You can either do this by dragging the area between the columns or by selecting the ![arrow icon](/help/images/icons/chevron-down.png) of the column you want to re-size, followed by **[!UICONTROL Resize column]**.
 
-![The Resize column button is highlighted.](../images/ui/audience-portal/browse-audience-resize-column.png)
+![The Resize column button is highlighted.](/help/segmentation/images/ui/audience-portal/browse-audience-resize-column.png)
 
 ### Filtering, folders, and tagging {#manage-audiences}
 
@@ -158,7 +158,7 @@ You can search your existing audiences in up to 9 different languages with [!DNL
 
 To use [!DNL Unified Search], add the term you want to search in the highlighted search bar.
 
-![The search bar is highlighted.](../images/ui/audience-portal/browse-audience-search.png)
+![The search bar is highlighted.](/help/segmentation/images/ui/audience-portal/browse-audience-search.png)
 
 For more information about [!DNL Unified Search], including supported features, please read the [Unified Search documentation](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
 
@@ -168,7 +168,7 @@ You can add user-defined tags to better describe, find, and manage your audience
 
 To add a tag, select **[!UICONTROL Manage tags]** on the audience you want to tag.
 
-![The [!UICONTROL Manage tags] button is selected for a specified audience.](../images/ui/audience-portal/browse-manage-tags.png)
+![The [!UICONTROL Manage tags] button is selected for a specified audience.](/help/segmentation/images/ui/audience-portal/browse-manage-tags.png)
 
 The **[!UICONTROL Manage tags]** popover appears. On this popover, you can either select a categorized tag or an uncategorized tag.
 
@@ -177,11 +177,11 @@ The **[!UICONTROL Manage tags]** popover appears. On this popover, you can eithe
 | Categorized | A tag that is created and managed by your organization's administrators. |
 | Uncategorized | A tag that is created within the [!UICONTROL Manage tags] popover. Anyone can create or manage these types of tags. |
 
-![The [!UICONTROL Manage tags] popover is displayed. The options to choose a categorized or uncategorized are highlighted.](../images/ui/audience-portal/create-tag.png)
+![The [!UICONTROL Manage tags] popover is displayed. The options to choose a categorized or uncategorized are highlighted.](/help/segmentation/images/ui/audience-portal/create-tag.png)
 
 After adding all the tags you want to attach to the audience, select **[!UICONTROL Save]**.
 
-![On the [!UICONTROL Manage tags] popover, the added tags are highlighted.](../images/ui/audience-portal/created-tags.png)
+![On the [!UICONTROL Manage tags] popover, the added tags are highlighted.](/help/segmentation/images/ui/audience-portal/created-tags.png)
 
 For more information on creating and managing tags, please read the [Managing Tags guide](../../administrative-tags/ui/managing-tags.md).
 
@@ -191,7 +191,7 @@ You can place audiences within folders for better audience management.
 
 To create a folder to hold your audiences, select **[!UICONTROL Create folder]**.
 
-![The Create folder button is highlighted.](../images/ui/audience-portal/create-folder.png)
+![The Create folder button is highlighted.](/help/segmentation/images/ui/audience-portal/create-folder.png)
 
 >[!NOTE]
 >
@@ -199,19 +199,19 @@ To create a folder to hold your audiences, select **[!UICONTROL Create folder]**
 
 A popover appears, letting you name your newly created folder. Select **[!UICONTROL Save]** after naming your folder to finish creating the folder. Please note that names **must** be unique to the parent folder.
 
-![The Save button on the create folder dialog is highlighted.](../images/ui/audience-portal/create-folder-dialog.png)
+![The Save button on the create folder dialog is highlighted.](/help/segmentation/images/ui/audience-portal/create-folder-dialog.png)
 
 To move an audience into a folder, select **[!UICONTROL Move to folder]** on the audience you want to move.
 
-![The [!UICONTROL Move to folder] button is selected for a specific audience.](../images/ui/audience-portal/browse-move-to-folder.png)
+![The [!UICONTROL Move to folder] button is selected for a specific audience.](/help/segmentation/images/ui/audience-portal/browse-move-to-folder.png)
 
 The **Move audience to folder** popover appears. Select the folder you want to move the audience to, then select **[!UICONTROL Save]**.
 
-![The Move audience to folder popover is displayed. The folder that the audience will be moved to is highlighted.](../images/ui/audience-portal/move-to-folder.png)
+![The Move audience to folder popover is displayed. The folder that the audience will be moved to is highlighted.](/help/segmentation/images/ui/audience-portal/move-to-folder.png)
 
 Once the audience is in a folder, you can choose to only display audiences that belong to a specific folder.
 
-![Audiences that belong to a specific folder are displayed.](../images/ui/audience-portal/browse-folders.png)
+![Audiences that belong to a specific folder are displayed.](/help/segmentation/images/ui/audience-portal/browse-folders.png)
 
 #### Filter {#filter}
 
@@ -219,7 +219,7 @@ You can also filter your audiences, based on a variety of settings.
 
 To filter the available audiences, select the ![filter icon](/help/images/icons/filter.png). 
 
-![The browse audiences page is displayed, with the filter icon highlighted.](../images/ui/audience-portal/browse-select-filter.png)
+![The browse audiences page is displayed, with the filter icon highlighted.](/help/segmentation/images/ui/audience-portal/browse-select-filter.png)
 
 The list of available filters is displayed.
 
@@ -233,7 +233,7 @@ The list of available filters is displayed.
 | [!UICONTROL Creation date] | Lets you filter based on the creation date of the audience. You can choose a date range to filter when the audience was created. |
 | [!UICONTROL Modified date] | Lets you filter based on the last modified date of the audience. You can choose a date range to filter when the audience was last modified. |
 
-![The available filters are displayed and highlighted on the browse audiences page.](../images/ui/audience-portal/filter-audiences.png)
+![The available filters are displayed and highlighted on the browse audiences page.](/help/segmentation/images/ui/audience-portal/filter-audiences.png)
 
 ### Bulk actions {#bulk-actions}
 
@@ -241,11 +241,11 @@ Additionally, you can select up to 25 different audiences, and perform various a
 
 If you select one audience, you can [move the audience to a folder](#folders), [edit or apply a tag](#tags), [evaluate the audience's schedule](#flexible-audience-evaluation), [immediately evaluate an audience](#run-now), [apply access labels to the audience](../../access-control/abac/ui/labels.md), [delete the audience](#browse), and copy the audience's contents.
 
-![The available options for bulk actions are displayed if one audience is selected.](../images/ui/audience-portal/single-bulk-actions.png)
+![The available options for bulk actions are displayed if one audience is selected.](/help/segmentation/images/ui/audience-portal/single-bulk-actions.png)
 
 If you select multiple audiences, you can [move the audience to a folder](#folders), [edit or apply a tag](#tags), [evaluate the audience's schedule](#flexible-audience-evaluation), [apply access labels to the audience](../../access-control/abac/ui/labels.md), [delete the audience](#browse), and copy the audience's contents.
 
-![The available options for bulk actions are displayed if multiple audiences are selected.](../images/ui/audience-portal/multi-bulk-actions.png)
+![The available options for bulk actions are displayed if multiple audiences are selected.](/help/segmentation/images/ui/audience-portal/multi-bulk-actions.png)
 
 When you apply bulk actions to audiences, the following conditions apply:
 
@@ -267,7 +267,7 @@ To see more details about a specific audience, select an audience's name within 
 
 The audience details page appears. On the top, there is a summary of the audience, information about the qualified audience size, as well as destinations the segment is activated for. 
 
-![The audience details page is displayed. The audience summary, audience total, and activated destinations cards are highlighted.](../images/ui/audience-portal/audience-details-summary.png)
+![The audience details page is displayed. The audience summary, audience total, and activated destinations cards are highlighted.](/help/segmentation/images/ui/audience-portal/audience-details-summary.png)
 
 ### Audience summary {#audience-summary}
 
@@ -277,29 +277,29 @@ Additionally, you are given the option to activate the audience to a destination
 
 Selecting **[!UICONTROL Activate to destination]** lets you activate the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md).
 
-![The Activate to destination button is highlighted.](../images/ui/audience-portal/audience-details-activate.png)
+![The Activate to destination button is highlighted.](/help/segmentation/images/ui/audience-portal/audience-details-activate.png)
 
 Selecting **[!UICONTROL Apply access labels]** lets you manage the access labels that belong to the audience. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md).
 
-![The Apply access labels button is highlighted.](../images/ui/audience-portal/audience-details-access-labels.png)
+![The Apply access labels button is highlighted.](/help/segmentation/images/ui/audience-portal/audience-details-access-labels.png)
 
 >[!BEGINTABS]
 
 >[!TAB Audience composition]
 
-![The audience details page is shown, with the [!UICONTROL Open composition] button highlighted.](../images/ui/audience-portal/audience-details-open-composition.png)
+![The audience details page is shown, with the [!UICONTROL Open composition] button highlighted.](/help/segmentation/images/ui/audience-portal/audience-details-open-composition.png)
 
 Selecting **[!UICONTROL Open composition]** lets you view your audience in Audience Composition. For more information about Audience Composition, please read the [Audience Composition UI guide](./audience-composition.md).
 
 >[!TAB Custom upload]
 
-![The audience details page is shown, with the [!UICONTROL Update audience] button highlighted.](../images/ui/audience-portal/audience-details-update-audience.png)
+![The audience details page is shown, with the [!UICONTROL Update audience] button highlighted.](/help/segmentation/images/ui/audience-portal/audience-details-update-audience.png)
 
 Selecting **[!UICONTROL Update audience]** lets you re-upload an externally generated audience. For more information on importing an externally generated audience, please read the section on [importing an audience](#import-audience).
 
 If your audience is within seven days of expiring, you can select **[!UICONTROL Refresh data expiration]** to re-ingest the last successful batch for the audience. 
 
-![The [!UICONTROL Refresh data expiration] button is highlighted within the audience details page.](../images/ui/audience-portal/refresh-data-expiration.png)
+![The [!UICONTROL Refresh data expiration] button is highlighted within the audience details page.](/help/segmentation/images/ui/audience-portal/refresh-data-expiration.png)
 
 This extends the data expiration by the number of days defined on the initial upload and uses the same audience metadata. If the data expiration was not previously defined, the data expiration is extended by 30 days. Once the button has been pressed, you cannot select it for another 20 minutes.
 
@@ -312,7 +312,7 @@ This button will **not** be selectable in the following situations:
 
 >[!TAB Segmentation Service]
 
-![The audience details page is shown, with the [!UICONTROL Edit audience] button highlighted.](../images/ui/audience-portal/audience-details-edit-audience.png)
+![The audience details page is shown, with the [!UICONTROL Edit audience] button highlighted.](/help/segmentation/images/ui/audience-portal/audience-details-edit-audience.png)
 
 Selecting **[!UICONTROL Edit audience]** lets you edit your audience in Segment Builder. For more detailed information about using the [!DNL Segment Builder] workspace, please read the [[!DNL Segment Builder] user guide](./segment-builder.md).
 
@@ -320,7 +320,7 @@ Selecting **[!UICONTROL Edit audience]** lets you edit your audience in Segment 
 
 Selecting **[!UICONTROL Edit properties]** will let you edit the basic details of the audience, such as the name, description, and tags.
 
-![The edit properties button is highlighted within the audience details page.](../images/ui/audience-portal/audience-details-edit-properties.png)
+![The edit properties button is highlighted within the audience details page.](/help/segmentation/images/ui/audience-portal/audience-details-edit-properties.png)
 
 ### Audience total {#audience-total}
 
@@ -340,7 +340,7 @@ For audiences with an origin of **[!UICONTROL Custom upload]**, the **[!UICONTRO
 >
 >It may take up to 30 minutes following the export job for the profile count of the audience to be fully updated.
 
-![The ingestion details section for the audience details page is displayed.](../images/ui/audience-portal/audience-details-ingestion-details.png)
+![The ingestion details section for the audience details page is displayed.](/help/segmentation/images/ui/audience-portal/audience-details-ingestion-details.png)
 
 | Property | Description |
 | -------- | ----------- |
@@ -386,7 +386,7 @@ The sample size of the scan depends on the overall number of entities in your Pr
 
 More detailed information about each [!DNL Profile] can be seen by selecting the [!DNL Profile] ID. To learn more about a profile's details, please read the [[!DNL Real-Time Customer Profile] user guide](../../profile/ui/user-guide.md#profile-detail).
 
-![The sample profiles for the audience are highlighted. Sample profile information includes the profile ID, the first name, the last name, and the person's email.](../images/ui/audience-portal/audience-details-profiles.png)
+![The sample profiles for the audience are highlighted. Sample profile information includes the profile ID, the first name, the last name, and the person's email.](/help/segmentation/images/ui/audience-portal/audience-details-profiles.png)
 
 ## Scheduled segmentation {#scheduled-segmentation}
 
@@ -409,29 +409,29 @@ Enabling your audiences for scheduled evaluation can be done using the UI or the
 
 Schedules can currently only be created using the API. For detailed steps on creating, editing, and working with schedules using the API, please follow the tutorial for evaluating and accessing segmentation results, specifically the section on [scheduled evaluation using the API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
-![The toggle to Schedule all audiences is highlighted on Audience Portal.](../images/ui/audience-portal/browse-audiences-scheduled.png)
+![The toggle to Schedule all audiences is highlighted on Audience Portal.](/help/segmentation/images/ui/audience-portal/browse-audiences-scheduled.png)
 
 ## Creating an audience {#create-audience}
 
 You can select **[!UICONTROL Create audience]** to create an audience. 
 
-![On the Audience browse page, the Create audience button is highlighted.](../images/ui/audience-portal/browse-create-audience.png)
+![On the Audience browse page, the Create audience button is highlighted.](/help/segmentation/images/ui/audience-portal/browse-create-audience.png)
 
 A popover appears, letting you choose between composing an audience or building rules.
 
-![A popover that displays the two types of audiences you can create.](../images/ui/audience-portal/create-audience-type.png)
+![A popover that displays the two types of audiences you can create.](/help/segmentation/images/ui/audience-portal/create-audience-type.png)
 
 ### Audience Composition {#audience-composition}
 
 Selecting **[!UICONTROL Compose audiences]** takes you to Audience Composition. This workspace provides intuitive controls for building and editing audiences, such as drag-and-drop tiles used to represent different actions. To learn more about creating audiences, please read the [Audience Composition guide](./audience-composition.md).
 
-![The Audience Composition workspace is displayed.](../images/ui/audience-portal/audience-composition.png)
+![The Audience Composition workspace is displayed.](/help/segmentation/images/ui/audience-portal/audience-composition.png)
 
 ### Segment Builder {#segment-builder}
 
 Selecting **[!UICONTROL Build rule]** takes you to Segment Builder. This workspace provides intuitive controls for building and editing segment definitions, such as drag-and-drop tiles used to represent data properties. To learn more about creating segment definitions, please read the [Segment Builder guide](./segment-builder.md)
 
-![The Segment Builder workspace is displayed.](../images/ui/audience-portal/segment-builder.png)
+![The Segment Builder workspace is displayed.](/help/segmentation/images/ui/audience-portal/segment-builder.png)
 
 ### Federated Audience Composition {#fac}
 
@@ -439,7 +439,7 @@ You can use Adobe Federated Audience Composition to build new audiences from ent
 
 You can also enrich existing audiences in Adobe Experience Platform by utilizing composed audience data that has been federated from the enterprise data warehouse. Please read the guide on [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
 
-![A list of audiences created in Federated Audience Composition for your organization.](../images/ui/overview/federated-audience-composition.png)
+![A list of audiences created in Federated Audience Composition for your organization.](/help/segmentation/images/ui/overview/federated-audience-composition.png)
 
 ### Data Distiller {#data-distiller}
 
@@ -460,11 +460,11 @@ More information about Data Distiller can be found in the [building audiences us
 
 You can select **[!UICONTROL Import audience]** to import an externally generated audience.
 
-![On the Audience browse page, the Import audience button is highlighted.](../images/ui/audience-portal/browse-import-audience.png)
+![On the Audience browse page, the Import audience button is highlighted.](/help/segmentation/images/ui/audience-portal/browse-import-audience.png)
 
 The **[!UICONTROL Import audience CSV]** workflow appears. You can select a CSV file to import as an externally generated audience.
 
-![In the [!UICONTROL Import audience CSV] workflow, the [!UICONTROL Drag and drop files] box is highlighted, showing where you can upload your externally generated audience.](../images/ui/audience-portal/import-audience-csv.png)
+![In the [!UICONTROL Import audience CSV] workflow, the [!UICONTROL Drag and drop files] box is highlighted, showing where you can upload your externally generated audience.](/help/segmentation/images/ui/audience-portal/import-audience-csv.png)
 
 >[!NOTE]
 >
@@ -476,13 +476,13 @@ The **[!UICONTROL Import audience CSV]** workflow appears. You can select a CSV 
 
 After selecting the CSV file to import, a list of sample data is shown for this externally generated audience. After confirming that the sample data is correct, select **[!UICONTROL Next]**.
 
-![Sample data for the externally generated audience is displayed.](../images/ui/audience-portal/import-audience-sample-data.png)
+![Sample data for the externally generated audience is displayed.](/help/segmentation/images/ui/audience-portal/import-audience-sample-data.png)
 
 The **[!UICONTROL Audience details]** page appears. You can add information about your audience, including its name, description, primary identity, and identity namespace value. 
 
 When importing the externally generated audience, you must select one of the columns to be the primary identity field and specify the namespace value. Please note that all the remaining fields will be considered **payload attributes**. These attributes are considered **non-durable**, as they will only be associated with this audience for purposes of personalization, and are **not** connected to the profile.
 
-![The [!UICONTROL Audience details] page is displayed.](../images/ui/audience-portal/import-audience-audience-details.png)
+![The [!UICONTROL Audience details] page is displayed.](/help/segmentation/images/ui/audience-portal/import-audience-audience-details.png)
 
 You can also optionally add some extra details to your externally generated audience, including giving it an external ID, defining its merge policy, editing its column data type, or applying a custom data expiration.
 
@@ -503,11 +503,11 @@ You can also optionally add some extra details to your externally generated audi
 
 After filling in your audience details, select **[!UICONTROL Next]**.
 
-![The [!UICONTROL Next] button is highlighted on the [!UICONTROL Audience details] page.](../images/ui/audience-portal/import-audience-filled-details.png)
+![The [!UICONTROL Next] button is highlighted on the [!UICONTROL Audience details] page.](/help/segmentation/images/ui/audience-portal/import-audience-filled-details.png)
 
 The **[!UICONTROL Review]** page is displayed. You can review the details of your newly imported externally generated audience.
 
-![The [!UICONTROL Review] page is displayed, showing details of your newly imported externally generated audience.](../images/ui/audience-portal/import-audience-review-details.png)
+![The [!UICONTROL Review] page is displayed, showing details of your newly imported externally generated audience.](/help/segmentation/images/ui/audience-portal/import-audience-review-details.png)
 
 After confirming the details are correct, select **[!UICONTROL Finish]** to import your externally generated audience into Adobe Experience Platform.
 
