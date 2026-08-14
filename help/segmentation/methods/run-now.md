@@ -11,7 +11,7 @@ description: Learn how to immediately evaluate an audience, using run now evalua
 
 Run now evaluation lets you **immediately** activate an audience to a destination on demand. With run now evaluation, you don't need to wait for your system schedule to activate your audience and you can move immediately from building your audience to evaluating your audience. 
 
-As a result, you can iterate through the process of audience creation - building, validating, iterating, and activating - much more quickly, since you can move straight from building an audience to activating an audience.
+As a result, you can iterate through the process of audience creation - building, validating, iterating, and activating - in a manner of minutes, since you can move straight from building an audience to activating an audience.
 
 ## Guardrails {#guardrails}
 
