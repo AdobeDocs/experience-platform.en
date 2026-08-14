@@ -17,7 +17,7 @@ As a result, you can iterate through the process of audience creation - building
 
 With run now evaluation, please keep the following conditions in mind:
 
-- You have a **maximum** of 1000 runs per year.
+- You receive 1,000 included run now evaluation runs per contract year. The allowance resets on your contract anniversary. Additional runs can be purchased in packs of 100.
   - A year is defined as one year starting on the date of your Experience Platform contract for run now evaluations. For example, if you contract started on May 18th, your number of run now evaluation runs will reset every May 18th.
 - Run Evaluation results can **only** be sent to the following locations:
   - File-based destinations configured with **After segment evaluation** schedule
@@ -76,7 +76,7 @@ Yes. Each audience evaluated using a run now evaluation consumes 1 Run. If your 
 
 ### Can I send my run now evaluation results to my regular scheduled destination?
 
-No, you cannot send run now evaluation results to scheduled audiences. You can only use run now if your destination is a file-based destination that uses the **After segment evaluation** frequency **or** the results are sent to the **Audience Orchestration Run Now Profile Dataset**, you can send your evaluation results to your regular scheduled destinations.
+No. Run now evaluation results can only be sent to file-based destinations configured with the **After segment evaluation** frequency or to the **Audience Orchestration Run Now Profile Dataset**. Scheduled-only destinations, such as daily or weekly batch destinations, cannot receive on-demand run now results.
 
 ### Does run now evaluation permanently update my customer profiles?
 

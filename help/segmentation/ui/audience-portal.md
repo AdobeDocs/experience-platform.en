@@ -255,7 +255,7 @@ When you apply bulk actions to audiences, the following conditions apply:
 
 #### Flexible audience evaluation {#flexible-audience-evaluation}
 
-Flexible audience evaluation lets you run a segmentation job on demand. To learn more about flexible audience evaluation, read the [flexible audience evaluation guide](../methods/flexible-audience-evaluation.md).
+Flexible audience evaluation lets you run a segmentation job on demand. You can select up to a maximum of 20 audiences for flexible audience evaluation. To learn more about flexible audience evaluation, read the [flexible audience evaluation guide](../methods/flexible-audience-evaluation.md).
 
 #### Run now evaluation {#run-now}
 
