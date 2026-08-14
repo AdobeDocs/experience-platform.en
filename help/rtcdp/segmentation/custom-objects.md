@@ -36,8 +36,6 @@ Once you created your relational schema, you can add the fields for your schema,
 
 ![The add a field button is highlighted within the Schema Editor.](/help/rtcdp/assets/segmentation/custom-objects/add-field.png)
 
-When adding fields to your schema, note the following differences between record and time series data:
-
 For more information on creating your relational schema, read the [create a schema guide](/help/xdm/ui/resources/schemas.md#create-manually).
 
 ## Create a dataset {#create-dataset}
