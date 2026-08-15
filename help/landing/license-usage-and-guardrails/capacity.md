@@ -340,3 +340,333 @@ To best manage your streaming ingestion throughput, you should evaluate your dat
 If real-time processing is not required, you should use batch ingestion instead of streaming ingestion.
 
 +++
+
+## Unified credit dashboard
+
+The unified credit dashboard gives you a single place to view your credit balance, plan capacity, and monitor usage across Experience Platform. You can use it to:
+
+- **View your available credits** and understand how much headroom remains.
+- **Schedule capacity changes** for planned increases in demand.
+- **Monitor usage and alerts** so you can address potential overages before they affect your workloads.
+
+>[!NOTE]
+>
+>The **Unified Credits Framework** is automatically available when your organization has purchased **Axia Credits**. Once credits are provisioned, you can access the framework from the **License Usage** tab in Experience Platform.
+
+### Access requirements
+
+Access to the Unified Credits Framework is controlled through **role-based access control**. You must have the **Platform Administrator** role, or an equivalent administrator role, to:
+
+- View your organization's credit position.
+- View credit and capacity usage.
+- Configure capacity schedules.
+- Configure and manage alerts.
+
+Your sandbox-level views are limited to the sandboxes you have permission to access.
+
+>[!NOTE]
+>
+>If you don't see the Unified Credits Framework or expected sandbox data, verify that you have the required administrator role and access to the relevant sandboxes.
+
+### Access the Capacity overview
+
+To access the Capacity overview, select **[!UICONTROL License usage]** and then select the **[!UICONTROL Capacity]** tab.
+
+![The License Usage UI with Capacity section highlighted.](/help/landing/images/capacity/access-capacity.png)
+
+As a Platform Administrator, you can review current allocations and schedule capacity changes for upcoming demand.
+
+## Understand your credit utilization
+
+Use the Unified Credit Dashboard to see how your credits are being used and identify available headroom or potential overages.
+
+### Review your credit summary
+
+Select a sandbox, then select **[!UICONTROL View credit details]**.
+
+![The credit summary with view credits highlighted.](/help/landing/images/capacity/view-credit-details.png)
+
+The credit summary shows your current credit position for the selected sandbox:
+
+- **Licensed Credits** — The total number of credits included in your contract.
+- **Credits used** — Credits consumed based on your usage.
+- **Credits reserved** — Credits committed to future scheduled capacity or projected Batch and Activation overage. These credits haven't been consumed yet.
+- **Credits available** — Credits remaining after consumed and reserved credits are deducted.
+- **Credit period** — The contract start and end dates covered by your credit entitlement.
+
+**Available = Licensed − Consumed − Reserved**
+
+![The credit summary showing capacity credits information.](/help/landing/images/capacity/capacity-credits.png)
+
+You can view **Licensed, Consumed, Reserved, and Available** credits by service type—Streaming, Edge, Batch, and Activation—and by sandbox.
+
+For Batch and Activation, the system automatically calculates and reserves credits based on projected monthly usage. You don't need to create reservations manually.
+
+>[!NOTE]
+>
+>Reserved credits aren't consumed yet, but they reduce your available credit balance because they're committed to future usage. This gives you a more accurate view of your credit headroom before you commit to additional capacity.
+
+If **Credits available is negative**, your consumed and reserved credits exceed your licensed credits:
+
+**Consumed + Reserved > Licensed**
+
+The impact depends on the service type:
+
+- **Capacity-based services:** You can't create new capacity schedules while you're in an overage state.
+- **Consumption-based services:** Operations continue, but usage beyond your licensed credits may result in additional costs.
+
+>[!WARNING]
+>
+>If you're in an overage state, review your consumption and reserved capacity to identify the main drivers. Consider reducing future capacity or addressing high-usage workloads before additional costs are incurred.
+
+### Understand which services consume credits
+
+The following table shows how each service uses credits and when additional credits are consumed.
+
+| Service | Credit Model | Baseline Included | How Credits Are Consumed |
+| --- | --- | --- | --- |
+| **Streaming Ingestion** | Capacity-based | 1,500 RPS per org | Credits are consumed daily on a prorated basis while capacity is reserved. |
+| **Edge Throughput** | Capacity-based | 1,500 RPS per org | Credits are consumed daily on a prorated basis while capacity is reserved. |
+| **Batch Segmentation** | Consumption-based | 1.5M BEUs per sandbox/year | Credits are consumed only when usage exceeds the included baseline. |
+| **Destination Activation** | Consumption-based | ~1T records/year at the org level | Credits are consumed only when usage exceeds the included baseline. |
+
+![The credit summary with credit usage per service highlighted.](/help/landing/images/capacity/credit-usage-per-service.png)
+
+### Review credit usage by dimension
+
+Use the dashboard to identify **which services and sandboxes are driving your credit usage**:
+
+1. Review usage by **service type**: Streaming, Edge, Batch, and Activation.
+1. Enable **Include scheduled capacity** to account for future capacity commitments.
+1. Drill down to the **sandbox level** to identify which sandbox or business unit is driving usage.
+1. Drill down using the predefined time periods (Last 6 hours, Last 12 hours, Last 24 hours), or specify a custom date range.
+
+![The capacities by service summary with dates highlighted.](/help/landing/images/capacity/capacity-dates.png)
+
+## Plan and schedule capacity
+
+For Streaming and Edge, **schedule additional capacity when you expect demand to exceed your current capacity.** The self-service workflow lets you specify when you need the capacity, review its credit impact, and allocate it across sandboxes.
+
+### Determine your capacity needs
+
+Before creating a schedule:
+
+- **Review peak usage:** Check current peak usage in the Capacity Detail View at the sandbox level.
+- **Estimate required RPS:** Determine the throughput you'll need for the upcoming event or workload.
+- **Determine additional capacity:** Calculate how much capacity you need above your baseline.
+- **Plan the schedule:** Define the start and end dates for the capacity increase.
+- **Review credit impact:** Check the credits that will be reserved.
+- **Plan allocation:** For multiple sandboxes, determine how to distribute capacity. For Edge, also review regional allocation.
+- **Review capacity limits:** Understand how the service responds if your workload exceeds the scheduled capacity.
+
+>[!TIP]
+>
+>Set your target RPS above your expected peak usage to provide headroom during demand spikes and help avoid throttling.
+
+### Check scheduling requirements
+
+Before creating a schedule, make sure that:
+
+- **You plan ahead:** Create your schedule at least **7 days before the start date**. For Edge, allow approximately **3 weeks of lead time**.
+- **You don't have another active schedule:** Only one schedule can be active at a time. You can submit a new schedule after the previous schedule has fully ended.
+- **The schedule stays within your contract year:** A schedule can't span the contract anniversary date.
+- **You have enough credit availability:** You can't save or update a schedule if the required credits would exceed your licensed credits.
+
+>[!NOTE]
+>
+>Capacity changes require lead time. Schedule increases early, especially for time-sensitive events.
+
+### Create a capacity schedule
+
+Navigate to the **[!UICONTROL Capacity]** tab and select **[!UICONTROL Manage capacity]** under **Streaming** or **Edge**. Next, select **[!UICONTROL Schedule allocation]**.
+
+![The Allocation screen with schedule allocation highlighted.](/help/landing/images/capacity/schedule-allocation.png)
+
+Specify the target capacity and schedule:
+
+- **Target RPS:** Enter the throughput you need above your baseline capacity.
+- **Start date:** Select a date at least **7 days from today**.
+- **End date:** Optionally specify when the capacity increase should end. If you don't specify an end date, credits are reserved from the start date through the end of your contract.
+
+Review the automatically calculated **credit impact**, including:
+
+- **Daily credit rate**
+- **Projected total credits** for the schedule
+
+![Specified scheduled details highlighted.](/help/landing/images/capacity/specified-schedule.png)
+
+If you have multiple sandboxes, configure the **capacity distribution** across them. Then select **[!UICONTROL Save]** and **[!UICONTROL Confirm]**.
+
+![Distributed capacity across sandboxes.](/help/landing/images/capacity/distributed-capacity.png)
+
+>[!NOTE]
+>
+>Saving a schedule immediately reserves the required credits. Review the credit impact before saving to understand how the schedule will affect your available balance.
+
+After you confirm the schedule, the schedule appears in the relevant capacity section.
+
+### Cancel a capacity schedule
+
+To cancel a schedule, navigate to the **[!UICONTROL Capacity]** tab and select **[!UICONTROL View schedule]**.
+
+![Scheduled notification highlighted under streaming.](/help/landing/images/capacity/scheduled-notification.png)
+
+Select **[!UICONTROL Delete]**.
+
+![Schedule allocation highlighting delete button.](/help/landing/images/capacity/delete-scheduled-notification.png)
+
+Confirm the cancellation.
+
+>[!NOTE]
+>
+>When you cancel a schedule, its reserved credits are immediately released and added back to your available credit balance.
+
+### Consumption-based: Manage Batch Segmentation and Activation Credits
+
+Manage your Batch Segmentation and Activation usage by understanding your included entitlements, monitoring consumption, and identifying potential overages before they result in additional costs.
+
+Unlike capacity-based services, these services consume credits when usage exceeds your included baseline.
+
+#### Understand baseline entitlements
+
+Your included baseline determines when additional credit consumption begins:
+
+- **Batch Segmentation:** Includes **1.5M BEUs per sandbox per year** at no additional credit charge.
+- **BEU (Batch Evaluation Unit)** = Number of audiences × Number of evaluation runs.
+- **Activation:** The included entitlement varies by application. For example, RTCDP includes approximately **1T records per year at the org level**.
+- **Additional credits are consumed only when usage exceeds the applicable baseline.**
+
+>[!NOTE]
+>
+>Your baseline entitlement is included in your contract. Compare your current usage with the baseline to understand how much headroom remains before additional credits are consumed.
+
+#### Manage scheduled batch runs
+
+Your baseline includes **one evaluation run per day for all batch audiences**. Additional scheduled runs can increase your BEU consumption.
+
+- Runs within the daily baseline don't result in additional credit consumption.
+- Additional scheduled runs above the baseline generate incremental BEUs.
+- You don't need to reserve credits manually for scheduled batch runs.
+- If the system projects that your consumption will exceed the baseline, it automatically calculates and reserves the estimated credits.
+- If projected reserved credits exceed the applicable threshold, you'll see a warning, but you can still save the schedule.
+
+>[!NOTE]
+>
+>Batch Segmentation reservations are based on projected consumption. You can continue to schedule runs when projected usage exceeds your baseline, but the additional usage may consume credits.
+
+#### Manage on-demand batch runs
+
+On-demand batch runs, including FAE, Express Mode, and FCE, don't require capacity reservations or a credit availability check before execution.
+
+- No upfront credit reservation is required.
+- Credit usage is checked when the run executes.
+- Runs continue even if they exceed your available credits.
+- Any resulting overage is managed after execution through right-sizing or purchasing additional credits.
+
+>[!WARNING]
+>
+>On-demand runs can result in overage costs because they're not blocked when available credits are exceeded. Monitor usage regularly to avoid unexpected costs.
+
+#### Monitor Activation consumption
+
+Use the consumption view to understand your activation volume and identify trends that could lead to overages.
+
+- Review exported records at the org and sandbox levels.
+- Select a time interval of **1 day, 7 days, 14 days, 30 days, 6 months, 12 months, or the contractual year**.
+- Compare cumulative consumption with your yearly entitlement to understand current usage and projected consumption.
+- Monitor your monthly average to identify whether your current usage is likely to exceed your provisioned entitlement.
+
+>[!TIP]
+>
+>Review consumption regularly and investigate sustained increases before they result in additional credit usage.
+
+## Monitor and respond to alerts
+
+Alerts are enabled by default with thresholds of **80%, 90%, and 100%**. When your capacity or credit usage reaches a threshold, alerts trigger automatically.
+
+Alerts appear **in-product and through notifications**, giving you time to investigate and take action before capacity or credit limits affect your workloads, customers, or downstream pipelines.
+
+>[!NOTE]
+>
+>No additional setup is required to receive alerts.
+
+### Understand alert thresholds
+
+Alerts help you identify potential issues before you reach a limit:
+
+- **Streaming and Edge:** Alerts trigger at **80%, 90%, and 100%** of capacity.
+- **Consumption-based services:** Alerts trigger when projected usage reaches **70%, 80%, 90%, or 100%** of your base entitlement plus purchased credits.
+- Alerts are available in **Capacity Home** and are delivered through **in-product and email notifications**.
+
+>[!NOTE]
+>
+>Alerts are configured automatically. Review your notification settings to make sure the appropriate team members can respond before a capacity or credit limit is reached.
+
+### Respond to capacity alerts
+
+Use the alert level to determine when to act:
+
+| Alert level | Recommended action |
+| --- | --- |
+| **80% — Warning** | Review usage trends and identify your highest-consuming sandboxes or dataflows. If a business event is approaching, **start planning additional capacity**. |
+| **90% — Critical** | **Plan a capacity increase.** Consider redistributing capacity across sandboxes and verify that you have enough available credits. |
+| **100% — Breach** | **Take immediate action.** For Streaming and Edge, traffic may be throttled, so schedule additional capacity as soon as possible. For Batch and Activation, operations continue, but overage costs may apply. |
+
+>[!WARNING]
+>
+>Capacity increases require lead time. For Streaming and Edge, plan at least **7 days in advance**. **Don't wait until you reach 100% to begin planning.**
+
+### Identify the cause of increased usage
+
+When usage increases unexpectedly, use the detailed monitoring views to identify the source of the increase.
+
+- **Streaming:** Drill down to the **dataflow and dataset** level to identify the data sources driving peak usage. Use up to **13 months of historical data** to compare trends.
+- **Batch:** Filter by **audience category** and review evaluation units at the **segment job** level.
+- **Activation:** Break down usage by **destination, dataflow, activation type** (audience or dataset export), and **application** (RTCDP, AJO B2B, or Collaboration).
+- **Edge:** Review throughput by **region and sandbox** and use upstream metrics to identify latency trends.
+
+>[!TIP]
+>
+>**Start with the highest-consuming sandbox, dataflow, dataset, or destination.** Drilling down from the overall capacity view can help you identify the cause of a usage spike faster.
+
+### Prevent and resolve overages
+
+Monitor your credit position regularly and take action when usage or reserved capacity puts you at risk of exceeding your entitlement.
+
+### Detect an overage
+
+Use the **Credit Dashboard** to monitor your available credit balance.
+
+- If **Available Credits** is negative, your organization is in an overage state.
+- Reserved Credits also count toward your credit balance, so future capacity commitments can cause an overage before that capacity is consumed.
+
+>[!TIP]
+>
+>Review both consumed and reserved credits when assessing available headroom. This gives you a more accurate view of the credits available for new commitments.
+
+#### Understand overage behavior
+
+The platform responds differently depending on whether the service is capacity-based or consumption-based.
+
+| Service type | Overage behavior |
+| --- | --- |
+| **Capacity-based (Streaming, Edge)** | **Hard block:** New capacity schedules are blocked, while existing capacity continues to run. In-context enforcement banners appear in affected workflows. |
+| **Consumption-based (Batch, Activation)** | **Soft warning:** Operations continue and runs aren't blocked. Warnings indicate the overage, which is managed after usage occurs. |
+
+>[!NOTE]
+>
+>An overage doesn't affect all services in the same way. Capacity-based services block new capacity schedules, while consumption-based services continue to operate and may incur additional costs.
+
+### Resolve an overage
+
+Choose the approach that best fits your workload and upcoming capacity needs:
+
+- **Release reserved credits:** Cancel or shorten future schedules you no longer need to return reserved credits to your available balance.
+- **Reduce capacity:** Lower scheduled RPS if you've over-provisioned capacity.
+- **Redistribute capacity:** Move capacity from under-utilized sandboxes to sandboxes with higher demand, where supported.
+- **Optimize consumption:** Reduce batch evaluation frequency or activation volume for non-critical workloads.
+- **Purchase additional credits:** Contact Adobe to increase your available credits or adjust your contract.
+
+>[!TIP]
+>
+>Start by reviewing your largest sources of consumed and reserved credits. Releasing unused reservations or reducing unnecessary capacity can restore credit headroom without requiring additional credits.
