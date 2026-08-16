@@ -376,6 +376,14 @@ To access the Capacity overview, select **[!UICONTROL License usage]** and then 
 
 As a Platform Administrator, you can review current allocations and schedule capacity changes for upcoming demand.
 
+Select **[!UICONTROL Manage capacity]** under **Streaming** or **Edge**.
+
+![The allocation screen with schedule allocation highlighted.](/help/landing/images/capacity/manage-capacity.png)
+
+The table shows the **[!Current Capacity]** allocation for each sandbox. Use the up/down arrows or enter the **[!UICONTROL New Capacity]** allocations as required.
+
+![The allocation screen with current allocation highlighted.](/help/landing/images/capacity/update-capacity.png)
+
 ## Understand your credit utilization
 
 Use the Unified Credit Dashboard to see how your credits are being used and identify available headroom or potential overages.
@@ -390,7 +398,7 @@ The credit summary shows your current credit position for the selected sandbox:
 
 - **Licensed Credits** — The total number of credits included in your contract.
 - **Credits used** — Credits consumed based on your usage.
-- **Credits reserved** — Credits committed to future scheduled capacity or projected Batch and Activation overage. These credits haven't been consumed yet.
+- **Credits reserved** — Credits committed to future scheduled capacity or projected Batch and Activation overage.
 - **Credits available** — Credits remaining after consumed and reserved credits are deducted.
 - **Credit period** — The contract start and end dates covered by your credit entitlement.
 
@@ -398,17 +406,15 @@ The credit summary shows your current credit position for the selected sandbox:
 
 ![The credit summary showing capacity credits information.](/help/landing/images/capacity/capacity-credits.png)
 
-You can view **Licensed, Consumed, Reserved, and Available** credits by service type—Streaming, Edge, Batch, and Activation—and by sandbox.
+You can view **Licensed, Consumed, Reserved, and Available** credits by service type Streaming, Edge, and Batch.
 
-For Batch and Activation, the system automatically calculates and reserves credits based on projected monthly usage. You don't need to create reservations manually.
+For Batch, the system automatically calculates and reserves credits based on projected monthly usage. You don't need to create reservations manually.
 
 >[!NOTE]
 >
 >Reserved credits aren't consumed yet, but they reduce your available credit balance because they're committed to future usage. This gives you a more accurate view of your credit headroom before you commit to additional capacity.
 
-If **Credits available is negative**, your consumed and reserved credits exceed your licensed credits:
-
-**Consumed + Reserved > Licensed**
+If **Credits available is negative**, your consumed and reserved credits exceed your licensed credits.
 
 The impact depends on the service type:
 
@@ -451,7 +457,7 @@ For Streaming and Edge, **schedule additional capacity when you expect demand to
 
 Before creating a schedule:
 
-- **Review peak usage:** Check current peak usage in the Capacity Detail View at the sandbox level.
+- **Review peak usage:** Check current peak usage in the capacity detail view at the sandbox level.
 - **Estimate required RPS:** Determine the throughput you'll need for the upcoming event or workload.
 - **Determine additional capacity:** Calculate how much capacity you need above your baseline.
 - **Plan the schedule:** Define the start and end dates for the capacity increase.
@@ -480,7 +486,7 @@ Before creating a schedule, make sure that:
 
 Navigate to the **[!UICONTROL Capacity]** tab and select **[!UICONTROL Manage capacity]** under **Streaming** or **Edge**. Next, select **[!UICONTROL Schedule allocation]**.
 
-![The Allocation screen with schedule allocation highlighted.](/help/landing/images/capacity/schedule-allocation.png)
+![The Allocation screen with schedule allocation highlighted.](/help/landing/images/capacity/manage-capacity.png)
 
 Specify the target capacity and schedule:
 
