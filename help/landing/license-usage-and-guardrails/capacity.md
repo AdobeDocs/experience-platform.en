@@ -414,7 +414,7 @@ For Batch, the system automatically calculates and reserves credits based on pro
 >
 >Reserved credits aren't consumed yet, but they reduce your available credit balance because they're committed to future usage. This gives you a more accurate view of your credit headroom before you commit to additional capacity.
 
-If **Credits available is negative**, your consumed and reserved credits exceed your licensed credits.
+If **Credits available** is negative, your consumed and reserved credits exceed your licensed credits.
 
 The impact depends on the service type:
 
@@ -439,10 +439,9 @@ The following table shows how each service uses credits and when additional cred
 
 ### Review credit usage by dimension
 
-Use the dashboard to identify **which services and sandboxes are driving your credit usage**:
+Use the dashboard to identify which services and sandboxes are driving your credit usage:
 
 1. Review usage by **service type**: Streaming, Edge, and Batch.
-1. Enable **Include scheduled capacity** to account for future capacity commitments.
 1. Drill down to the **sandbox level** to identify which sandbox or business unit is driving usage.
 1. Drill down using the predefined time periods (Last 6 hours, Last 12 hours, Last 24 hours), or specify a custom date range.
 
