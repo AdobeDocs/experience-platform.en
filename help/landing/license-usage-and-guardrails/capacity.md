@@ -380,7 +380,7 @@ Select **[!UICONTROL Manage capacity]** under **Streaming** or **Edge**.
 
 ![The allocation screen with schedule allocation highlighted.](/help/landing/images/capacity/manage-capacity.png)
 
-The table shows the **[!Current Capacity]** allocation for each sandbox. Use the up/down arrows or enter the **[!UICONTROL New Capacity]** allocations as required.
+The table shows the **[!UICONTROL Current Capacity]** allocation for each sandbox. Use the up/down arrows or enter the **[!UICONTROL New Capacity]** allocations as required.
 
 ![The allocation screen with current allocation highlighted.](/help/landing/images/capacity/update-capacity.png)
 
@@ -396,13 +396,13 @@ Select a sandbox, then select **[!UICONTROL View credit details]**.
 
 The credit summary shows your current credit position for the selected sandbox:
 
-- **Licensed Credits** — The total number of credits included in your contract.
+- **Licensed credits** — The total number of credits included in your contract.
 - **Credits used** — Credits consumed based on your usage.
 - **Credits reserved** — Credits committed to future scheduled capacity or projected Batch and Activation overage.
 - **Credits available** — Credits remaining after consumed and reserved credits are deducted.
 - **Credit period** — The contract start and end dates covered by your credit entitlement.
 
-**Available = Licensed − Consumed − Reserved**
+**Credits available = Licensed credits − Credits used − credits reserved**
 
 ![The credit summary showing capacity credits information.](/help/landing/images/capacity/capacity-credits.png)
 
