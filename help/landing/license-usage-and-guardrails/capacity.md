@@ -480,7 +480,7 @@ Before creating a schedule, make sure that:
 >
 >Capacity changes require lead time. Schedule increases early, especially for time-sensitive events.
 
-### Create a capacity schedule
+### Create a streaming or edge capacity schedule
 
 Navigate to the **[!UICONTROL Capacity]** tab and select **[!UICONTROL Manage capacity]** under **Streaming** or **Edge**. Next, select **[!UICONTROL Schedule allocation]**.
 
@@ -544,19 +544,6 @@ Your baseline includes **one evaluation run per day for all batch audiences**. A
 >[!NOTE]
 >
 >Batch Segmentation reservations are based on projected consumption. You can continue to schedule runs when projected usage exceeds your baseline, but the additional usage may consume credits.
-
-#### Manage on-demand batch runs
-
-On-demand batch runs, including FAE, Express Mode, and FCE, don't require capacity reservations or a credit availability check before execution.
-
-- No upfront credit reservation is required.
-- Credit usage is checked when the run executes.
-- Runs continue even if they exceed your available credits.
-- Any resulting overage is managed after execution through right-sizing or purchasing additional credits.
-
->[!WARNING]
->
->On-demand runs can result in overage costs because they're not blocked when available credits are exceeded. Monitor usage regularly to avoid unexpected costs.
 
 >[!TIP]
 >
