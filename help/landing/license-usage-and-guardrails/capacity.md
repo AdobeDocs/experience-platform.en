@@ -398,7 +398,7 @@ The credit summary shows your current credit position for the selected sandbox:
 
 - **Licensed credits** — The total number of credits included in your contract.
 - **Credits used** — Credits consumed based on your usage.
-- **Credits reserved** — Credits committed to future scheduled capacity or projected Batch and Activation overage.
+- **Credits reserved** — Credits committed to future scheduled capacity or projected Batch overage.
 - **Credits available** — Credits remaining after consumed and reserved credits are deducted.
 - **Credit period** — The contract start and end dates covered by your credit entitlement.
 
@@ -434,7 +434,6 @@ The following table shows how each service uses credits and when additional cred
 | **Streaming Ingestion** | Capacity-based | 1,500 RPS per org | Credits are consumed daily on a prorated basis while capacity is reserved. |
 | **Edge Throughput** | Capacity-based | 1,500 RPS per org | Credits are consumed daily on a prorated basis while capacity is reserved. |
 | **Batch Segmentation** | Consumption-based | 1.5M BEUs per sandbox/year | Credits are consumed only when usage exceeds the included baseline. |
-| **Destination Activation** | Consumption-based | ~1T records/year at the org level | Credits are consumed only when usage exceeds the included baseline. |
 
 ![The credit summary with credit usage per service highlighted.](/help/landing/images/capacity/credit-usage-per-service.png)
 
@@ -442,7 +441,7 @@ The following table shows how each service uses credits and when additional cred
 
 Use the dashboard to identify **which services and sandboxes are driving your credit usage**:
 
-1. Review usage by **service type**: Streaming, Edge, Batch, and Activation.
+1. Review usage by **service type**: Streaming, Edge, and Batch.
 1. Enable **Include scheduled capacity** to account for future capacity commitments.
 1. Drill down to the **sandbox level** to identify which sandbox or business unit is driving usage.
 1. Drill down using the predefined time periods (Last 6 hours, Last 12 hours, Last 24 hours), or specify a custom date range.
@@ -527,24 +526,11 @@ Confirm the cancellation.
 >
 >When you cancel a schedule, its reserved credits are immediately released and added back to your available credit balance.
 
-### Consumption-based: Manage Batch Segmentation and Activation Credits
+### Consumption-based: Manage Batch Segmentation Credits
 
-Manage your Batch Segmentation and Activation usage by understanding your included entitlements, monitoring consumption, and identifying potential overages before they result in additional costs.
+Manage your Batch Segmentation usage by understanding your included entitlements, monitoring consumption, and identifying potential overages before they result in additional costs.
 
 Unlike capacity-based services, these services consume credits when usage exceeds your included baseline.
-
-#### Understand baseline entitlements
-
-Your included baseline determines when additional credit consumption begins:
-
-- **Batch Segmentation:** Includes **1.5M BEUs per sandbox per year** at no additional credit charge.
-- **BEU (Batch Evaluation Unit)** = Number of audiences × Number of evaluation runs.
-- **Activation:** The included entitlement varies by application. For example, RTCDP includes approximately **1T records per year at the org level**.
-- **Additional credits are consumed only when usage exceeds the applicable baseline.**
-
->[!NOTE]
->
->Your baseline entitlement is included in your contract. Compare your current usage with the baseline to understand how much headroom remains before additional credits are consumed.
 
 #### Manage scheduled batch runs
 
@@ -572,15 +558,6 @@ On-demand batch runs, including FAE, Express Mode, and FCE, don't require capaci
 >[!WARNING]
 >
 >On-demand runs can result in overage costs because they're not blocked when available credits are exceeded. Monitor usage regularly to avoid unexpected costs.
-
-#### Monitor Activation consumption
-
-Use the consumption view to understand your activation volume and identify trends that could lead to overages.
-
-- Review exported records at the org and sandbox levels.
-- Select a time interval of **1 day, 7 days, 14 days, 30 days, 6 months, 12 months, or the contractual year**.
-- Compare cumulative consumption with your yearly entitlement to understand current usage and projected consumption.
-- Monitor your monthly average to identify whether your current usage is likely to exceed your provisioned entitlement.
 
 >[!TIP]
 >
@@ -616,7 +593,7 @@ Use the alert level to determine when to act:
 | --- | --- |
 | **80% — Warning** | Review usage trends and identify your highest-consuming sandboxes or dataflows. If a business event is approaching, **start planning additional capacity**. |
 | **90% — Critical** | **Plan a capacity increase.** Consider redistributing capacity across sandboxes and verify that you have enough available credits. |
-| **100% — Breach** | **Take immediate action.** For Streaming and Edge, traffic may be throttled, so schedule additional capacity as soon as possible. For Batch and Activation, operations continue, but overage costs may apply. |
+| **100% — Breach** | **Take immediate action.** For Streaming and Edge, traffic may be throttled, so schedule additional capacity as soon as possible. For Batch, operations continue, but overage costs may apply. |
 
 >[!WARNING]
 >
@@ -627,9 +604,8 @@ Use the alert level to determine when to act:
 When usage increases unexpectedly, use the detailed monitoring views to identify the source of the increase.
 
 - **Streaming:** Drill down to the **dataflow and dataset** level to identify the data sources driving peak usage. Use up to **13 months of historical data** to compare trends.
-- **Batch:** Filter by **audience category** and review evaluation units at the **segment job** level.
-- **Activation:** Break down usage by **destination, dataflow, activation type** (audience or dataset export), and **application** (RTCDP, AJO B2B, or Collaboration).
 - **Edge:** Review throughput by **region and sandbox** and use upstream metrics to identify latency trends.
+- **Batch:** Filter by **audience category** and review evaluation units at the **segment job** level.
 
 >[!TIP]
 >
@@ -657,7 +633,7 @@ The platform responds differently depending on whether the service is capacity-b
 | Service type | Overage behavior |
 | --- | --- |
 | **Capacity-based (Streaming, Edge)** | **Hard block:** New capacity schedules are blocked, while existing capacity continues to run. In-context enforcement banners appear in affected workflows. |
-| **Consumption-based (Batch, Activation)** | **Soft warning:** Operations continue and runs aren't blocked. Warnings indicate the overage, which is managed after usage occurs. |
+| **Consumption-based (Batch)** | **Soft warning:** Operations continue and runs aren't blocked. Warnings indicate the overage, which is managed after usage occurs. |
 
 >[!NOTE]
 >
@@ -670,7 +646,7 @@ Choose the approach that best fits your workload and upcoming capacity needs:
 - **Release reserved credits:** Cancel or shorten future schedules you no longer need to return reserved credits to your available balance.
 - **Reduce capacity:** Lower scheduled RPS if you've over-provisioned capacity.
 - **Redistribute capacity:** Move capacity from under-utilized sandboxes to sandboxes with higher demand, where supported.
-- **Optimize consumption:** Reduce batch evaluation frequency or activation volume for non-critical workloads.
+- **Optimize consumption:** Reduce batch evaluation frequency for non-critical workloads.
 - **Purchase additional credits:** Contact Adobe to increase your available credits or adjust your contract.
 
 >[!TIP]
