@@ -467,26 +467,13 @@ Before creating a schedule:
 >
 >Set your target RPS above your expected peak usage to provide headroom during demand spikes and help avoid throttling.
 
-### Check scheduling requirements
-
-Before creating a schedule, make sure that:
-
-- **You plan ahead:** Create your schedule at least **7 days before the start date**. For Edge, allow approximately **3 weeks of lead time**.
-- **You don't have another active schedule:** Only one schedule can be active at a time. You can submit a new schedule after the previous schedule has fully ended.
-- **The schedule stays within your contract year:** A schedule can't span the contract anniversary date.
-- **You have enough credit availability:** You can't save or update a schedule if the required credits would exceed your licensed credits.
-
->[!NOTE]
->
->Capacity changes require lead time. Schedule increases early, especially for time-sensitive events.
-
 ### Create a streaming or edge capacity schedule
 
-Navigate to the **[!UICONTROL Capacity]** tab and select **[!UICONTROL Manage capacity]** under **Streaming** or **Edge**. Next, select **[!UICONTROL Schedule allocation]**.
+Navigate to the **[!UICONTROL Capacity]** tab and select **[!UICONTROL Manage capacity]** under **Streaming** or **Edge**. 
 
 ![The Allocation screen with schedule allocation highlighted.](/help/landing/images/capacity/manage-capacity.png)
 
-Specify the target capacity and schedule:
+Next, select **[!UICONTROL Schedule allocation]** and specify the target capacity and schedule:
 
 - **Target RPS:** Enter the throughput you need above your baseline capacity.
 - **Start date:** Select a date at least **7 days from today**.
@@ -502,6 +489,10 @@ Review the automatically calculated **credit impact**, including:
 If you have multiple sandboxes, configure the **capacity distribution** across them. Then select **[!UICONTROL Save]** and **[!UICONTROL Confirm]**.
 
 ![Distributed capacity across sandboxes.](/help/landing/images/capacity/distributed-capacity.png)
+
+>[!IMPORTANT]
+>
+>You can't save or update a schedule if the required credits would exceed your licensed credits.
 
 >[!NOTE]
 >
