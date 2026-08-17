@@ -553,10 +553,24 @@ The **On-demand runs** table updates to reflect the new run capacity.
 >
 >Review consumption regularly and investigate sustained increases before they result in additional credit usage.
 
-From the **[!UICONTROL Manage batch capacity]** page, select **[!UICONTROL Scheduled runs]**. The table displays usage/capacity details for each sandbox. Select **[!UICONTROL Add runs]** for the sandbox you want to update.
+From the **[!UICONTROL Manage batch capacity]** page, select **[!UICONTROL Scheduled runs]**. The table displays usage and capacity details for each sandbox. Select **[!UICONTROL Add runs]** for the sandbox you want to update.
 
-<!--![Manage batch capacity page highlighting on-demand runs and add runs.](/help/landing/images/capacity/scheduled-runs-add-runs.png)--->
+<!--![Manage batch capacity page highlighting Scheduled runs and Add runs.](/help/landing/images/capacity/scheduled-runs-add-runs.png)-->
 
 Enter the number of batch runs you want to add to the sandbox in increments of 100, then confirm your selection.
 
-<!--![Manage batch capacity page highlighting updated runs and confirm.](/help/landing/images/capacity/scheduled-runs-enter-runs.png)--->
+<!--![Manage batch capacity page highlighting the number of scheduled runs and confirmation.](/help/landing/images/capacity/scheduled-runs-enter-runs.png)-->
+
+To increase the audience limit for a sandbox, select **[!UICONTROL Upgrade]**. From the dropdown, select **[!UICONTROL Audience limit per run]**, then select **[!UICONTROL Confirm]**.
+
+>[!IMPORTANT]
+>
+>Audience limit upgrades are locked for the remainder of the current contract year.
+
+<!--![Manage batch capacity page highlighting the Audience limit per run upgrade option.](/help/landing/images/capacity/scheduled-runs-audience-limit.png)-->
+
+You are returned to the **[!UICONTROL Manage batch capacity]** page, which displays the pending updates. Select **[!UICONTROL Update capacity]** to confirm your changes, then select **[!UICONTROL Confirm]**.
+
+<!--![Manage batch capacity page highlighting pending scheduled run updates and the Update capacity action.](/help/landing/images/capacity/batch-scheduled-run-update-capacity.png)-->
+
+The **Scheduled runs** table updates to reflect the new usage, capacity, and audience limit per run.
