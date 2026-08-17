@@ -171,6 +171,38 @@ A successful response returns an array containing the ID of the updated dataset,
 ]
 ```
 
+### Updating array fields {#array-fields}
+
+When a field in the request payload is an array, such as `accessLabels`, the `/v2/dataSets/{DATASET_ID}` endpoint replaces the entire array rather than merging it with the existing value. Include every value you want the field to contain, not just the values you want to add.
+
+To remove all values from an array field, send an empty array.
+
+**Request**
+
+The following request clears the `accessLabels` field of a dataset.
+
+```shell
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3077efa10d92ab7a71858 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "accessLabels": []
+      }'
+```
+
+**Response**
+
+A successful response returns an array containing the ID of the updated dataset.
+
+```json
+[
+    "@/dataSets/67b3077efa10d92ab7a71858"
+]
+```
+
 ### An example dataset before and after update
 
 The example JSON below illustrates the dataset structure **before** the PATCH request, where the `extensions.adobe_lakeHouse.rowExpiration` object is not present in the dataset.
