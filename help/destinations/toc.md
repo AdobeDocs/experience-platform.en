@@ -95,7 +95,7 @@ debug: true
         * [DoubleClick Floodlight (Beta) extension](./catalog/advertising/doubleclick-floodlight.md)
         * [Facebook Pixel extension](./catalog/advertising/facebook-pixel.md)
         * [Flashtalking OneTag extension](./catalog/advertising/flashtalking.md)
-        * {hide-from-toc} [(Beta) FreeWheel connection](./catalog/advertising/freewheel.md)
+        * [(Beta) FreeWheel connection](./catalog/advertising/freewheel.md)
         * [Google Ads connection](./catalog/advertising/google-ads-destination.md)
         * [Google Ad Manager connection](./catalog/advertising/google-ad-manager.md)
         * [Google Ad Manager 360 connection](./catalog/advertising/google-ad-manager-360-connection.md)
