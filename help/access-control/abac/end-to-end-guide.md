@@ -164,6 +164,42 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 >
 > Assign labels created in the [!UICONTROL Permissions] workspace (such as the audience labels above) to various objects in Adobe Journey Optimizer using [Object Level Access Control](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access)." 
 
+## Apply labels to datasets
+
+Use Object-Level Access Control (OLAC) to restrict access to entire datasets that contain sensitive information.
+
+In this healthcare example, you can apply the **[!UICONTROL PHI/ Regulated Health Data]** label to datasets that contain protected health information (PHI). After you apply the label, only users whose roles contain the required label can access the dataset.
+
+### Understand dataset access labels
+
+Object Level Access Control uses the same access labels that are available throughout Adobe Experience Platform. Manage these labels in **[!UICONTROL Permissions]** under **[!UICONTROL Roles]** > **[!UICONTROL Labels]**.
+
+Apply Adobe-defined labels, custom labels created by your organization, or a combination of both to a dataset. Object Level Access Control uses the same labels that are already available throughout Experience Platform.
+
+Examples of Adobe-defined labels include:
+
+- Contract labels (`C1-C12`)
+- Identity labels (`I1`, `I2`)
+- Sensitive data labels (`S1`, `S2`, `PSPD`, `RHD`)
+
+Before Experience Platform saves labels on a dataset, it validates them against your organization's label catalog.
+
+>[!IMPORTANT]
+>
+>Dataset access control requires the **[!UICONTROL Default-Label-Based-Access-Control-Policy]** to be active. Without this policy, Adobe Experience Platform does not evaluate dataset access labels.
+
+After you apply labels to a dataset, Experience Platform evaluates those labels whenever a user or application attempts to access the dataset.
+
+For this example, only users whose roles include the **[!UICONTROL RHD]** label can access datasets labeled with **[!UICONTROL PHI/ Regulated Health Data]**.
+
+>[!NOTE]
+>
+>Use dataset labels to control access to an entire dataset. To control access to specific data elements while still allowing access to the dataset, apply labels to schema fields by using field-level access control.
+>
+>You can use dataset-level and field-level access controls together to meet your organization's access requirements.
+
+For information on applying and managing dataset labels, see the [update an onject](../../catalog/api/update-object.md#update-using-patch-v2-notation-patch-v2-notation) documentation.
+
 ## Activate the access control policy {#policy}
 
 The default access control policy will leverage labels to define which user roles have access to specific Experience Platform resources. In this example, access to schema fields and audiences will be denied in all sandboxes for users who aren't in a role that has the corresponding labels in the schema field.
