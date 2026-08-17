@@ -155,19 +155,15 @@ For more information, see the [schema composition documentation](/help/xdm/schem
 
 Monitors the number of multi-entity relationships defined in a sandbox as they approach the platform limit.
 
->[!IMPORTANT]
->
->The product UI is currently inconsistent about this limit: the check card states 4, while the detail panel description states 5. Confirm the correct value with the Health Checks product team before publishing, then remove this note.
-
 | Detail | Description |
 | --- | --- |
-| **Issue** | The number of multi-entity relationships defined in the sandbox is approaching the limit of {X}. |
+| **Issue** | The number of multi-entity relationships defined in the sandbox is approaching the limit of 5. |
 | **Impact** | High cardinality and excessive schema joins increase computational complexity across the [!DNL Real-Time Customer Profile] store. Exceeding the limit may degrade Segmentation Service performance and increase audience evaluation latency. |
 | **Remediation** | Review existing multi-entity relationships and remove any that are no longer needed before creating new ones. |
 
 When you select the **[!UICONTROL Multi-Entity Relationship Count]** card, a detail panel opens on the right. The panel shows:
 
-* **[!UICONTROL Description]**: Explains that multi-entity relationships link primary entities, such as [!DNL Real-Time Customer Profiles] or [!DNL ExperienceEvents], to secondary dimension entities, such as product catalogs, store locations, or business accounts. This check inspects whether the limit of {X} multi-entity relationships defined in the sandbox is exceeded.
+* **[!UICONTROL Description]**: Explains that multi-entity relationships link primary entities, such as [!DNL Real-Time Customer Profiles] or [!DNL ExperienceEvents], to secondary dimension entities, such as product catalogs, store locations, or business accounts. This check inspects whether the limit of 5 multi-entity relationships defined in the sandbox is exceeded.
 * **[!UICONTROL Impact]**: High cardinality and excessive schema joins increase computational complexity across the [!DNL Real-Time Customer Profile] store. Exceeding the limit may degrade Segmentation Service performance and increase audience evaluation latency.
 * **[!UICONTROL General areas of impact]**: Batch segmentation.
 * **[!UICONTROL Experience League Documentation]**: A link to best practices for data modeling.

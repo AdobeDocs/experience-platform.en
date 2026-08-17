@@ -40,20 +40,16 @@ For more information, see the [merge policies overview](/help/profile/merge-poli
 
 Detects XDM Individual Profile merge policies that share an identical definition, which wastes a limited merge policy slot.
 
->[!IMPORTANT]
->
->The live product UI states a limit of 3 merge policies per sandbox, while an earlier internal source referenced a limit of 5. Confirm the correct value with the Health Checks product team before publishing.
-
 | Detail | Description |
 | --- | --- |
 | **Issue** | Two or more XDM Individual Profile merge policies share an identical definition. |
-| **Impact** | Duplicate merge policies subtract from the allowed limit of {X} merge policies per sandbox. Every merge policy requires separate processing during batch segmentation, increasing the total elapsed time for both segmentation and profile export. |
+| **Impact** | Duplicate merge policies subtract from the allowed limit of 3 merge policies per sandbox. Every merge policy requires separate processing during batch segmentation, increasing the total elapsed time for both segmentation and profile export. |
 | **Remediation** | Review the affected merge policies and delete the duplicate, keeping the one that is referenced by existing segments and activations. |
 
 When you select the **[!UICONTROL Duplicate Merge Policy Definitions]** card, a detail panel opens on the right. The panel shows:
 
-* **[!UICONTROL Description]**: Explains that [!DNL Experience Platform] allows for no more than {X} merge policies per sandbox. When multiple merge policies are configured with identical definitions, they are functionally redundant. This check inspects for instances of duplicate merge policy definitions.
-* **[!UICONTROL Impact]**: Duplicate merge policies subtract from the allowed limit of {X} merge policies. Every merge policy requires separate processing during batch segmentation, increasing the total elapsed time for both segmentation and profile export.
+* **[!UICONTROL Description]**: Explains that [!DNL Experience Platform] allows for no more than 3 merge policies per sandbox. When multiple merge policies are configured with identical definitions, they are functionally redundant. This check inspects for instances of duplicate merge policy definitions.
+* **[!UICONTROL Impact]**: Duplicate merge policies subtract from the allowed limit of 3 merge policies. Every merge policy requires separate processing during batch segmentation, increasing the total elapsed time for both segmentation and profile export.
 * **[!UICONTROL General areas of impact]**: Batch segmentation and subsequent activation.
 * **[!UICONTROL Experience League Documentation]**: A link to guardrails for merge policies.
 
