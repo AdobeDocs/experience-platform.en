@@ -437,16 +437,6 @@ The following table shows how each service uses credits and when additional cred
 
 ![The credit summary with credit usage per service highlighted.](/help/landing/images/capacity/credit-usage-per-service.png)
 
-### Review credit usage by dimension
-
-Use the dashboard to identify which services and sandboxes are driving your credit usage:
-
-1. Review usage by **service type**: Streaming, Edge, and Batch.
-1. Drill down to the **sandbox level** to identify which sandbox or business unit is driving usage.
-1. Drill down using the predefined time periods (Last 6 hours, Last 12 hours, Last 24 hours), or specify a custom date range.
-
-![The capacities by service summary with dates highlighted.](/help/landing/images/capacity/capacity-dates.png)
-
 ## Plan and schedule streaming and edge capacity
 
 For Streaming and Edge, **schedule additional capacity when you expect demand to exceed your current capacity.** The self-service workflow lets you specify when you need the capacity, review its credit impact, and allocate it across sandboxes.
@@ -531,25 +521,25 @@ To view the batch run dashboard, select a sandbox from **[!UICONTROL Batch runs]
 
 The table provides details about on-demand runs for each sandbox.
 
-![Batch run dashboard highlighting filter options.](/help/landing/images/capacity/batch-run-dashboard.png)
+<!--![Batch run dashboard highlighting filter options.](/help/landing/images/capacity/batch-run-dashboard.png)-->
 
 To manage your on-demand batch runs, select **[!UICONTROL Manage capacity]** from the **[!UICONTROL Batch runs]** dashboard.
 
-![Batch run dashboard highlighting filter manage capacity.](/help/landing/images/capacity/batch-run-manage-capacity.png)
+<!--![Batch run dashboard highlighting filter manage capacity.](/help/landing/images/capacity/batch-run-manage-capacity.png)--->
 
 ### Manage on-demand batch runs
 
 From the **[!UICONTROL Manage batch capacity]** page, select **[!UICONTROL On-demand runs]**. The table displays usage details for each sandbox. Select **[!UICONTROL Add runs]** for the sandbox you want to update.
 
-![Manage batch capacity page highlighting on-demand runs and add runs.](/help/landing/images/capacity/add-runs.png)
+<!--![Manage batch capacity page highlighting on-demand runs and add runs.](/help/landing/images/capacity/add-runs.png)--->
 
 Enter the number of batch runs you want to add to the sandbox in increments of 100, then confirm your selection.
 
-![Manage batch capacity page highlighting updated runs and confirm.](/help/landing/images/capacity/enter-runs.png)
+<!--![Manage batch capacity page highlighting updated runs and confirm.](/help/landing/images/capacity/enter-runs.png)--->
 
 The usage and capacity values update to show the pending runs. Select **[!UICONTROL Update capacity]** to apply the changes, then select **[!UICONTROL Confirm]**.
 
-![Batch run dashboard highlighting pending runs and update capacity.](/help/landing/images/capacity/batch-run-update-capacity.png)
+<!--![Batch run dashboard highlighting pending runs and update capacity.](/help/landing/images/capacity/batch-run-update-capacity.png)--->
 
 The **On-demand runs** table updates to reflect the new run capacity.
 
