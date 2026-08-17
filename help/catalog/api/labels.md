@@ -23,4 +23,4 @@ The [!DNL Dataset Service] API provides endpoints to manage data usage labels fo
 
 >[!NOTE]
 >
->Data usage labels, managed through the [!DNL Dataset Service] API, are separate from `accessLabels`, which restrict access to an entire dataset and are managed directly through this [!DNL Catalog Service] API instead. See [Update array fields](./update-object.md#array-fields) for more information on setting `accessLabels`.
+>Data usage labels, managed through the [!DNL Dataset Service] API, are separate from `accessLabels`, which restrict access to an entire dataset and are managed directly through this [!DNL Catalog Service] API instead. Both use the same core and custom label definitions, applied for different purposes. See [Update array fields](./update-object.md#array-fields) for more information on setting `accessLabels`.

@@ -177,7 +177,7 @@ To replace or clear an array-valued field such as `accessLabels`, include its fu
 
 >[!IMPORTANT]
 >
->The endpoint replaces the entire array rather than merging it with the existing value. Include every value you want the field to contain, not just the values you want to add, or you will lose any values you omit.
+>The endpoint replaces the entire array instead of merging it with the existing values, so include every value that you want to retain. It also validates each value before saving the array. For example, every value in `accessLabels` must exist in your organization's label catalog, or the request fails.
 
 To remove all values from an array field, send an empty array.
 
