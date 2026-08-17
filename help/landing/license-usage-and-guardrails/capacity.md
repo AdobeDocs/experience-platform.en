@@ -529,7 +529,7 @@ To manage your on-demand batch runs, select **[!UICONTROL Manage capacity]** fro
 
 ### Manage on-demand batch runs
 
-From the **[!UICONTROL Manage batch capacity]** page, select **[!UICONTROL On-demand runs]**. The table displays usage details for each sandbox. Select **[!UICONTROL Add runs]** for the sandbox you want to update.
+From the **[!UICONTROL Manage batch capacity]** page, select **[!UICONTROL On-demand runs]**. The table displays usage/capacity details for each sandbox. Select **[!UICONTROL Add runs]** for the sandbox you want to update.
 
 <!--![Manage batch capacity page highlighting on-demand runs and add runs.](/help/landing/images/capacity/add-runs.png)--->
 
@@ -545,14 +545,6 @@ The **On-demand runs** table updates to reflect the new run capacity.
 
 ### Manage scheduled batch runs
 
-Your baseline includes **one evaluation run per day for all batch audiences**. Additional scheduled runs can increase your BEU consumption.
-
-- Runs within the daily baseline don't result in additional credit consumption.
-- Additional scheduled runs above the baseline generate incremental BEUs.
-- You don't need to reserve credits manually for scheduled batch runs.
-- If the system projects that your consumption will exceed the baseline, it automatically calculates and reserves the estimated credits.
-- If projected reserved credits exceed the applicable threshold, you'll see a warning, but you can still save the schedule.
-
 >[!NOTE]
 >
 >Batch Segmentation reservations are based on projected consumption. You can continue to schedule runs when projected usage exceeds your baseline, but the additional usage may consume credits.
@@ -560,6 +552,14 @@ Your baseline includes **one evaluation run per day for all batch audiences**. A
 >[!TIP]
 >
 >Review consumption regularly and investigate sustained increases before they result in additional credit usage.
+
+From the **[!UICONTROL Manage batch capacity]** page, select **[!UICONTROL Scheduled runs]**. The table displays usage/capacity details for each sandbox. Select **[!UICONTROL Add runs]** for the sandbox you want to update.
+
+<!--![Manage batch capacity page highlighting on-demand runs and add runs.](/help/landing/images/capacity/scheduled-runs-add-runs.png)--->
+
+Enter the number of batch runs you want to add to the sandbox in increments of 100, then confirm your selection.
+
+<!--![Manage batch capacity page highlighting updated runs and confirm.](/help/landing/images/capacity/scheduled-runs-enter-runs.png)--->
 
 ## Monitor and respond to alerts
 
