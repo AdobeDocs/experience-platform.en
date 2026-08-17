@@ -561,6 +561,10 @@ Enter the number of batch runs you want to add to the sandbox in increments of 1
 
 <!--![Manage batch capacity page highlighting the number of scheduled runs and confirmation.](/help/landing/images/capacity/scheduled-runs-enter-runs.png)-->
 
+>[!NOTE]
+>
+>Your baseline includes one evaluation run per day for all batch audiences.
+
 To increase the audience limit for a sandbox, select **[!UICONTROL Upgrade]**. From the dropdown, select **[!UICONTROL Audience limit per run]**, then select **[!UICONTROL Confirm]**.
 
 >[!IMPORTANT]
