@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;destination api;ad-hoc activation;activate audiences ad-hoc
 solution: Experience Platform
-title: Activate audiences to batch destinations via the ad-hoc activation API
+title: Activate audiences via the ad-hoc activation API
 description: This article illustrates the end-to-end workflow for activating audiences via the ad-hoc activation API, including the segmentation jobs that take place before activation.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
@@ -34,7 +34,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
     internal-label: Troubleshooting
 ---
-# Activate audiences on-demand to batch destinations via the ad-hoc activation API
+# Activate audiences on-demand via the ad-hoc activation API
 
 >[!IMPORTANT]
 >
@@ -46,7 +46,7 @@ topic_v2:
 
 The ad-hoc activation API allows marketers to programmatically activate audience audiences to destinations, in a fast and efficient manner, for situations where immediate activation is required.
 
-Use the ad-hoc activation API to export full files to your desired file reception system. Ad-hoc audience activation is supported by [batch file-based destinations](../destination-types.md#file-based) and, starting with v4, by streaming and API-based destinations. See [Activate audiences to streaming destinations](#streaming-destinations) further below in this tutorial.
+Use the ad-hoc activation API to activate audiences on-demand to [batch file-based destinations](../destination-types.md#file-based) and, starting with v4, to streaming and API-based destinations. See [Trigger an ad-hoc activation run](#streaming-destinations) further below in this tutorial.
 
 The diagram below illustrates the end-to-end workflow for activating audiences via the ad-hoc activation API, including the segmentation jobs that take place in Experience Platform every 24 hours.
 
@@ -272,17 +272,15 @@ When using the ad-hoc activation API, you can come across error messages that ar
 | Run already going on for audience `segment ID` for order `dataflow ID` with run id `flow run ID` | This error message indicates that an ad-hoc activation flow is currently ongoing for an audience. Wait for the job to finish before triggering the activation job again.|
 | Segments `<segment name>` are not part of this dataflow or out of schedule range! | This error message indicates that the audiences you selected to activate are not mapped to the dataflow or that the activation schedule set up for the audiences has either expired or not yet started. Check if the audience is indeed mapped to the dataflow and verify that the audience activation schedule overlaps with the present date.|
 
-## Activate audiences to streaming destinations {#streaming-destinations}
+## (Beta) Trigger an ad-hoc activation run {#streaming-destinations}
 
 >[!IMPORTANT]
 >
 >Ad-hoc activation to streaming and API-based destinations is currently in beta. This functionality is being rolled out in phases and is feature-flag gated.
 
-Use v4 of the ad-hoc activation API to trigger **[!UICONTROL Activate now]**, an on-demand, full-membership refresh of an audience to a streaming or API-based destination, such as [!DNL Facebook Custom Audiences] and [!DNL The Trade Desk].
+Use v4 of the ad-hoc activation API to trigger **[!UICONTROL Activate now]**, an on-demand, full-membership refresh of an audience to a streaming or API-based destination.
 
 Many streaming and API-based destinations apply a time-to-live (TTL) to the audience membership they receive from [!DNL Adobe Experience Platform]. When that TTL expires on the destination side, previously qualified profiles are treated as inactive, even though they remain qualified in Experience Platform. Trigger a v4 ad-hoc activation run to resend every currently qualified profile through the existing streaming activation pipeline, without waiting for the next scheduled refresh.
-
-This request resends full audience membership regardless of qualification state. It does not perform a differential or changes-only refresh.
 
 You can also trigger this refresh from the Experience Platform UI. Read [Activate now for streaming destinations](/help/destinations/ui/activate-now-streaming.md).
 

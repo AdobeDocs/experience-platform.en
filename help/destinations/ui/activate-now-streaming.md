@@ -36,23 +36,25 @@ role_v2:
 >title="Activate now"
 >abstract="Select this control to trigger an immediate, on-demand refresh of an audience's full current membership to a streaming or API-based destination. Use this when a destination's time-to-live (TTL) has expired and previously qualified profiles need to be resent."
 
-This article explains how to use the Experience Platform UI to trigger an on-demand refresh of an audience's full membership to streaming and API-based destinations, such as [!DNL Facebook Custom Audiences] and [!DNL The Trade Desk].
+This article explains how to use the Experience Platform UI to trigger an on-demand refresh of an audience's full membership to streaming and API-based destinations.
+
+## Use cases {#use-cases}
 
 Many streaming and API-based destinations apply a time-to-live (TTL) to the audience membership they receive from [!DNL Adobe Experience Platform]. When that TTL expires on the destination side, previously qualified profiles are treated as inactive, even though they remain qualified in Experience Platform. This can cause your addressable audience to shrink mid-campaign.
 
-Use the **[!UICONTROL Activate now]** control to resend every currently qualified profile for an audience through the existing streaming activation pipeline, without waiting for the next scheduled refresh. This gives you a self-serve way to counteract destination-side TTL expiration instead of filing a support ticket for a manual backfill.
+Use the **[!UICONTROL Activate now]** control to resend every currently qualified profile for an audience through the existing streaming activation pipeline, without waiting for the next scheduled refresh or audience qualification event. This gives you a self-serve way to counteract destination-side TTL expiration instead of filing a support ticket for a manual backfill.
 
 **[!UICONTROL Activate now]** is the streaming counterpart to [Export file now](/help/destinations/ui/export-file-now.md), which serves the same purpose for file-based destinations.
 
 You can also use the Experience Platform APIs for this purpose. Read how to [activate audiences on-demand to streaming destinations via the ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md#streaming-destinations).
 
-## v1 scope and limitations {#scope-and-limitations}
+## Known limitations {#known-limitations}
 
 The **[!UICONTROL Activate now]** feature:
 
 * Resends full audience membership regardless of qualification state, rather than a differential or changes-only refresh.
-* Runs only on-demand. Automatic, TTL-aware refresh is planned for a future release.
-* Applies only to streaming and API-based destinations. For file-based destinations, use [Export file now](/help/destinations/ui/export-file-now.md).
+* Runs only on-demand.
+* Is available at first for [!DNL The Trade Desk] and [!DNL Google Customer Match]. Adobe plans to add support for more streaming and API-based destinations.
 
 ## Guardrails {#guardrails}
 
@@ -90,5 +92,5 @@ Follow these steps to trigger an on-demand refresh of an audience to a streaming
 ## Related information {#related-information}
 
 * [Export files on-demand to batch destinations using the Experience Platform UI](/help/destinations/ui/export-file-now.md)
-* [Activate audiences to streaming destinations via the ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md#streaming-destinations)
+* [Trigger an ad-hoc activation run to streaming destinations via the API](/help/destinations/api/ad-hoc-activation-api.md#streaming-destinations)
 * [Audience lifecycle in streaming destinations](/help/destinations/how-destinations-work/audience-lifecycle-streaming-destinations.md)
