@@ -2,7 +2,6 @@
 title: RainFocus source overview
 description: Learn how to bring event management and analytics data from your RainFocus account to Experience Platform
 last-substantial-update: 2023-06-21T00:00:00.000Z
-badge: Beta
 exl-id: 88e333e3-2b93-4d66-8412-efadea58ac46
 TQID: https://experienceleague.adobe.com/olP6fi0NQZKb4kQcDLgJvHqBV72QX56-af7BMPddSms
 product_v2:
@@ -19,10 +18,6 @@ topic_v2:
     internal-label: Audience segmentation
 ---
 # [!DNL RainFocus]
-
->[!NOTE]
->
->The [!DNL RainFocus] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 [!DNL RainFocus] is a platform that you can use to promote your events and build your audiences. You can use [!DNL RainFocus] to create beautiful promotional pages, track campaign performances, and optimize registration conversions.
 

@@ -1,7 +1,6 @@
 ---
 title: Talon.One Source Overview
 description: Learn about the Talon.One sources on Adobe Experience Platform
-badge: Beta
 last-substantial-update: 2026-04-06T00:00:00.000Z
 exl-id: 92ed180a-6175-45e2-a831-0f40fd8606b0
 TQID: https://experienceleague.adobe.com/n63J-9mfD746paefTO61kaJi1JjHLsB--3-ZgFkfkaE
@@ -16,10 +15,6 @@ role_v2:
     internal-label: Developer
 ---
 # [!DNL Talon.One]
-
->[!AVAILABILITY]
->
->The [!DNL Talon.One] sources are in beta. Read the [terms and conditions](../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
 With [!DNL Talon.One], you can easily create, manage, and optimize personalized marketing campaigns tailored to your customers. Use this powerful platform to run discounts, distribute coupons, launch referral programs, set up loyalty programs, and offer gamified incentives—all from one scalable system designed to help you engage and reward your audience.
 
