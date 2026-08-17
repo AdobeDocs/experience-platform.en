@@ -433,7 +433,7 @@ The following table shows how each service uses credits and when additional cred
 | --- | --- | --- | --- |
 | **Streaming Ingestion** | Capacity-based | 1,500 RPS per org | Credits are consumed daily on a prorated basis while capacity is reserved. |
 | **Edge Throughput** | Capacity-based | 1,500 RPS per org | Credits are consumed daily on a prorated basis while capacity is reserved. |
-| **Batch Segmentation** | Consumption-based | 1.5M BEUs per sandbox/year | Credits are consumed only when usage exceeds the included baseline. |
+| **Batch Runs** | Consumption-based | 1.5M BEUs per sandbox/year | Credits are consumed only when usage exceeds the included baseline. |
 
 ![The credit summary with credit usage per service highlighted.](/help/landing/images/capacity/credit-usage-per-service.png)
 
@@ -506,23 +506,30 @@ To cancel a schedule, navigate to the **[!UICONTROL Capacity]** tab and select *
 
 ![Scheduled notification highlighted under streaming.](/help/landing/images/capacity/scheduled-notification.png)
 
-Select **[!UICONTROL Delete]**.
+Select **[!UICONTROL Delete]**, the confirm the cancellation.
 
 ![Schedule allocation highlighting delete button.](/help/landing/images/capacity/delete-scheduled-notification.png)
-
-Confirm the cancellation.
 
 >[!NOTE]
 >
 >When you cancel a schedule, its reserved credits are immediately released and added back to your available credit balance.
 
-### Consumption-based: Manage Batch Segmentation Credits
+### Manage batch capacity
 
-Manage your Batch Segmentation usage by understanding your included entitlements, monitoring consumption, and identifying potential overages before they result in additional costs.
+Batch capacity management is consumption based and include two types of batch runs: 
 
-Unlike capacity-based services, these services consume credits when usage exceeds your included baseline.
+- On-Demand Runs
+- Scheduled Runs
 
-#### Manage scheduled batch runs
+Each run type uses a separate API request, so the system processes them independently. Keeping the run types separate ensures that capacity updates are completed in full and prevents partial updates.
+
+>[!NOTE]
+>
+>Unlike capacity-based services, these services consume credits when usage exceeds your included baseline.
+
+
+
+### Manage scheduled batch runs
 
 Your baseline includes **one evaluation run per day for all batch audiences**. Additional scheduled runs can increase your BEU consumption.
 
