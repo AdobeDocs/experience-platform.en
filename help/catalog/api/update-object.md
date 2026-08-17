@@ -171,9 +171,13 @@ A successful response returns an array containing the ID of the updated dataset,
 ]
 ```
 
-### Updating array fields {#array-fields}
+### Update array fields {#array-fields}
 
-When a field in the request payload is an array, such as `accessLabels`, the `/v2/dataSets/{DATASET_ID}` endpoint replaces the entire array rather than merging it with the existing value. Include every value you want the field to contain, not just the values you want to add.
+To replace or clear an array-valued field such as `accessLabels`, include its full desired value in a PATCH request to `/v2/dataSets/{DATASET_ID}`.
+
+>[!IMPORTANT]
+>
+>The endpoint replaces the entire array rather than merging it with the existing value. Include every value you want the field to contain, not just the values you want to add, or you will lose any values you omit.
 
 To remove all values from an array field, send an empty array.
 
@@ -195,7 +199,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3
 
 **Response**
 
-A successful response returns an array containing the ID of the updated dataset.
+A successful response returns an array containing the ID of the updated dataset. Performing a GET request for this dataset now shows that the `accessLabels` field is empty.
 
 ```json
 [

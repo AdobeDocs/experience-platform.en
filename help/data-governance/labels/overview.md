@@ -56,7 +56,7 @@ In addition to the labels provided by Adobe, you can also define your own custom
 
 >[!NOTE]
 >
->These same core and custom labels can also restrict access to an entire dataset using `accessLabels`, evaluated through object-level access control. See [Updating array fields](../../catalog/api/update-object.md#array-fields) for more information on setting `accessLabels`.
+>These same core and custom labels can also restrict access to an entire dataset using `accessLabels`, evaluated through object-level access control. See [Update array fields](../../catalog/api/update-object.md#array-fields) for more information on setting `accessLabels`.
 
 ## Label inheritance for audiences
 

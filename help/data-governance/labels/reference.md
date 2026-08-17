@@ -56,7 +56,7 @@ This document outlines the core data usage labels currently provided by Experien
 
 >[!NOTE]
 >
->These same labels are also used as `core/` labels when restricting access to an entire dataset using `accessLabels`. See [Updating array fields](../../catalog/api/update-object.md#array-fields) for more information on setting `accessLabels`.
+>These same labels are also used as `core/` labels when restricting access to an entire dataset using `accessLabels`. See [Update array fields](../../catalog/api/update-object.md#array-fields) for more information on setting `accessLabels`.
 
 ## Contract labels {#contract}
 
