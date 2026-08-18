@@ -44,7 +44,7 @@ topic_v2:
 
 ## Overview {#overview}
 
-The ad-hoc activation API allows marketers to programmatically activate audience audiences to destinations, in a fast and efficient manner, for situations where immediate activation is required.
+The ad-hoc activation API allows marketers to programmatically activate audiences to destinations, in a fast and efficient manner, for situations where immediate activation is required.
 
 Use the ad-hoc activation API to activate audiences on-demand to [batch file-based destinations](../destination-types.md#file-based) and, starting with v4, to streaming and API-based destinations. See [Trigger an ad-hoc activation run](#streaming-destinations) further below in this tutorial.
 
@@ -65,6 +65,10 @@ A hotel expects inclement weather over the following days, and the team wants to
 ### Integration testing {#integration-testing}
 
 IT managers can use the Experience Platform ad-hoc activation API to export audiences on-demand, so they can test their custom integration with [!DNL Adobe Experience Platform], and ensure everything is working correctly.
+
+### Audience refresh for streaming destinations {#audience-refresh-streaming}
+
+A streaming or API-based destination applies a time-to-live (TTL) to the audience membership it receives from [!DNL Adobe Experience Platform]. When that TTL expires on the destination side, previously qualified profiles are treated as inactive, even though they remain qualified in Experience Platform. The marketing team can use v4 of the ad-hoc activation API to resend an audience's full current membership on-demand, without waiting for the next scheduled refresh. See [Trigger an ad-hoc activation run](#streaming-destinations) further below in this tutorial.
 
 ## Guardrails {#guardrails}
 
@@ -294,7 +298,7 @@ Ad-hoc activation to streaming destinations enforces the following limit:
 
 >[!IMPORTANT]
 >
->It is mandatory to include the `Accept: application/vnd.adobe.adhoc.streaming.activation+json; version=1` header in your request to use v4 of the ad-hoc activation API. Note this is a separate media type from the batch ad-hoc activation API, not a version bump on `application/vnd.adobe.adhoc.activation+json`.
+>It is mandatory to include the `Accept: application/vnd.adobe.adhoc.streaming.activation+json; version=1` header in your request to use v4 of the ad-hoc activation API.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \

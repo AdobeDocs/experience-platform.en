@@ -34,7 +34,7 @@ role_v2:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_now_streaming"
 >title="Activate now"
->abstract="Select this control to trigger an immediate, on-demand refresh of an audience's full current membership to a streaming or API-based destination. Use this when a destination's time-to-live (TTL) has expired and previously qualified profiles need to be resent."
+>abstract="Select this control to trigger an immediate, on-demand refresh of an audience's full current membership to a streaming or API-based destination. Use this for example when a destination's time-to-live (TTL) has expired and previously qualified profiles need to be resent."
 
 This article explains how to use the Experience Platform UI to trigger an on-demand refresh of an audience's full membership to streaming and API-based destinations.
 
@@ -52,11 +52,11 @@ You can also use the Experience Platform APIs for this purpose. Read how to [act
 
 The **[!UICONTROL Activate now]** feature:
 
-* Resends full audience membership regardless of qualification state, rather than a differential or changes-only refresh.
+* In this first release, resends full audience membership regardless of qualification state, rather than a differential or changes-only refresh.
 * Runs only on-demand.
 * Is available at first for [!DNL The Trade Desk] and [!DNL Google Customer Match]. Adobe plans to add support for more streaming and API-based destinations.
 * A guardrail rejects **[!UICONTROL Activate now]** for an audience that was mapped to the dataflow within the last 24 hours. This prevents the on-demand trigger from racing the automatic backfill dispatched when the audience was mapped, which can otherwise cause a silent double-delivery or drop. If you need to refresh an audience shortly after mapping it, wait 24 hours from the mapping time.
-* There is no way to check job status from the UI. The API does have a status endpoint, but it always shows the job as `QUEUED`. There is no callback from delivery back to this status field, so `QUEUED` does not distinguish in-progress, succeeded, or failed.
+* There is currently no feedback mechanism in the form of a triggered dataflow run after you use **[!UICONTROL Activate now]** on an audience, apart from the in-product confirmation toast.
 
 ## Guardrails {#guardrails}
 
