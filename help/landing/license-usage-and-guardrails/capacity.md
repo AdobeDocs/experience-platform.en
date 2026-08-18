@@ -341,13 +341,13 @@ If real-time processing is not required, you should use batch ingestion instead 
 
 +++
 
-## Unified credit dashboard
+## Growth credits dashboard
 
 >[!AVAILABILITY]
 >
->The unified credit dashboard is currently in **Limited availability**.
+>The Growth credits dashboard is currently in **Limited availability**.
 
-The unified credit dashboard gives you a single place to view your credit balance, plan capacity, and monitor usage across Experience Platform. You can use it to:
+The Growth credit dashboard gives you a single place to view your credit balance, plan capacity, and monitor usage across Experience Platform. You can use it to:
 
 - **View your available credits** and understand how much headroom remains.
 - **Schedule capacity changes** for planned increases in demand.
@@ -355,11 +355,11 @@ The unified credit dashboard gives you a single place to view your credit balanc
 
 >[!NOTE]
 >
->The **Unified Credits Framework** is automatically available when your organization has purchased **Axia Credits**. Once credits are provisioned, you can access the framework from the **License Usage** tab in Experience Platform.
+>The **Growth credits dashboard** is automatically available when your organization has purchased **Growth credits**. Once credits are provisioned, you can access the dashboard from the **License Usage** tab in Experience Platform.
 
 ### Access requirements
 
-Access to the Unified Credits Framework is controlled through **role-based access control**. You must have the **Platform Administrator** role, or an equivalent administrator role, to:
+Access to the Growth credits dashboard is controlled through **role-based access control**. You must have the **Platform Administrator** role, or an equivalent administrator role, to:
 
 - View your organization's credit position.
 - View credit and capacity usage.
@@ -370,7 +370,7 @@ Your sandbox-level views are limited to the sandboxes you have permission to acc
 
 >[!NOTE]
 >
->If you don't see the Unified Credits Framework or expected sandbox data, verify that you have the required administrator role and access to the relevant sandboxes.
+>If you don't see the Growth credits dashboard or expected sandbox data, verify that you have the required administrator role and access to the relevant sandboxes.
 
 ### Access the Capacity overview
 
@@ -390,7 +390,7 @@ The table shows the **[!UICONTROL Current Capacity]** allocation for each sandbo
 
 ## Understand your credit utilization
 
-Use the Unified Credit Dashboard to see how your credits are being used and identify available headroom or potential overages.
+Use the Growth credit dashboard to see how your credits are being used and identify available headroom or potential overages.
 
 ### Review your credit summary
 
@@ -398,7 +398,7 @@ Select a sandbox, then select **[!UICONTROL View credit details]**.
 
 ![The credit summary with view credits highlighted.](/help/landing/images/capacity/view-credit-details.png)
 
-The credit summary shows your current credit position for the selected sandbox:
+The credit summary shows your current credit position for your organization:
 
 - **Licensed credits** — The total number of credits included in your contract.
 - **Credits used** — Credits consumed based on your usage.
@@ -433,11 +433,14 @@ The impact depends on the service type:
 
 The following table shows how each service uses credits and when additional credits are consumed.
 
-| Service | Credit Model | Baseline Included | How Credits Are Consumed |
+| Service | Definition | Capacity Baseline | Monthly Usage Calculation |
 | --- | --- | --- | --- |
-| **Streaming Ingestion** | Capacity-based | 1,500 RPS per org | Credits are consumed daily on a prorated basis while capacity is reserved. |
-| **Edge Throughput** | Capacity-based | 1,500 RPS per org | Credits are consumed daily on a prorated basis while capacity is reserved. |
-| **Batch Runs** | Consumption-based | 1.5M BEUs per sandbox/year | Credits are consumed only when usage exceeds the included baseline. |
+| **Streaming throughput** | This combined streaming throughput measures the combined peak inbound events per second for streaming ingestion into Real-Time Customer Profile across your production and development sandboxes. | 1,500 RPS per org | Credits are deducted daily based on the allocated streaming throughput capacity. |
+| **Edge throughput** | This edge throughput capacity measures the peak inbound events per second processed at edge nodes for real-time personalization and decisioning across your production and development sandboxes. | 1,500 RPS per org | Credits are deducted daily based on the allocated edge throughput capacity. |
+
+>[!NOTE]
+>
+>You can check the conversion rate in the Product Description.
 
 ![The credit summary with credit usage per service highlighted.](/help/landing/images/capacity/credit-usage-per-service.png)
 
@@ -476,7 +479,7 @@ Next, select **[!UICONTROL Schedule allocation]** and specify the target capacit
 Review the automatically calculated **credit impact**, including:
 
 - **Daily credit rate**
-- **Projected total credits** for the schedule
+- **Reserved credits** for the schedule
 
 ![Specified scheduled details highlighted.](/help/landing/images/capacity/specified-schedule.png)
 
@@ -507,8 +510,12 @@ Select **[!UICONTROL Delete]**, the confirm the cancellation.
 >[!NOTE]
 >
 >When you cancel a schedule, its reserved credits are immediately released and added back to your available credit balance.
+>
+>The scheduled capacity is locked and cannot be updated or canceled within two weeks of the start date.
 
-## Manage batch capacity
+
+
+<!--## Manage batch capacity
 
 Batch capacity management is consumption-based and includes two types of batch runs:
 
@@ -525,25 +532,25 @@ To view the batch run dashboard, select a sandbox from **[!UICONTROL Batch runs]
 
 The table provides details about on-demand runs for each sandbox.
 
-<!--![Batch run dashboard highlighting filter options.](/help/landing/images/capacity/batch-run-dashboard.png)-->
+![Batch run dashboard highlighting filter options.](/help/landing/images/capacity/batch-run-dashboard.png)
 
 To manage your on-demand batch runs, select **[!UICONTROL Manage capacity]** from the **[!UICONTROL Batch runs]** dashboard.
 
-<!--![Batch run dashboard highlighting filter manage capacity.](/help/landing/images/capacity/batch-run-manage-capacity.png)--->
+![Batch run dashboard highlighting filter manage capacity.](/help/landing/images/capacity/batch-run-manage-capacity.png)
 
 ### Manage on-demand batch runs
 
 From the **[!UICONTROL Manage batch capacity]** page, select **[!UICONTROL On-demand runs]**. The table displays usage/capacity details for each sandbox. Select **[!UICONTROL Add runs]** for the sandbox you want to update.
 
-<!--![Manage batch capacity page highlighting on-demand runs and add runs.](/help/landing/images/capacity/add-runs.png)--->
+![Manage batch capacity page highlighting on-demand runs and add runs.](/help/landing/images/capacity/add-runs.png)
 
 Enter the number of batch runs you want to add to the sandbox in increments of 100, then confirm your selection.
 
-<!--![Manage batch capacity page highlighting updated runs and confirm.](/help/landing/images/capacity/enter-runs.png)--->
+![Manage batch capacity page highlighting updated runs and confirm.](/help/landing/images/capacity/enter-runs.png)
 
 The usage and capacity values update to show the pending runs. Select **[!UICONTROL Update capacity]** to apply the changes, then select **[!UICONTROL Confirm]**.
 
-<!--![Batch run dashboard highlighting pending runs and update capacity.](/help/landing/images/capacity/batch-run-update-capacity.png)--->
+![Batch run dashboard highlighting pending runs and update capacity.](/help/landing/images/capacity/batch-run-update-capacity.png)
 
 The **On-demand runs** table updates to reflect the new run capacity.
 
@@ -559,11 +566,11 @@ The **On-demand runs** table updates to reflect the new run capacity.
 
 From the **[!UICONTROL Manage batch capacity]** page, select **[!UICONTROL Scheduled runs]**. The table displays usage and capacity details for each sandbox. Select **[!UICONTROL Add runs]** for the sandbox you want to update.
 
-<!--![Manage batch capacity page highlighting Scheduled runs and Add runs.](/help/landing/images/capacity/scheduled-runs-add-runs.png)-->
+![Manage batch capacity page highlighting Scheduled runs and Add runs.](/help/landing/images/capacity/scheduled-runs-add-runs.png)
 
 Enter the number of batch runs you want to add to the sandbox in increments of 100, then confirm your selection.
 
-<!--![Manage batch capacity page highlighting the number of scheduled runs and confirmation.](/help/landing/images/capacity/scheduled-runs-enter-runs.png)-->
+![Manage batch capacity page highlighting the number of scheduled runs and confirmation.](/help/landing/images/capacity/scheduled-runs-enter-runs.png)
 
 >[!NOTE]
 >
@@ -575,10 +582,10 @@ To increase the audience limit for a sandbox, select **[!UICONTROL Upgrade]**. F
 >
 >Audience limit upgrades are locked for the remainder of the current contract year.
 
-<!--![Manage batch capacity page highlighting the Audience limit per run upgrade option.](/help/landing/images/capacity/scheduled-runs-audience-limit.png)-->
+![Manage batch capacity page highlighting the Audience limit per run upgrade option.](/help/landing/images/capacity/scheduled-runs-audience-limit.png)
 
 You are returned to the **[!UICONTROL Manage batch capacity]** page, which displays the pending updates. Select **[!UICONTROL Update capacity]** to confirm your changes, then select **[!UICONTROL Confirm]**.
 
-<!--![Manage batch capacity page highlighting pending scheduled run updates and the Update capacity action.](/help/landing/images/capacity/batch-scheduled-run-update-capacity.png)-->
+![Manage batch capacity page highlighting pending scheduled run updates and the Update capacity action.](/help/landing/images/capacity/batch-scheduled-run-update-capacity.png)
 
-The **Scheduled runs** table updates to reflect the new usage, capacity, and audience limit per run.
+The **Scheduled runs** table updates to reflect the new usage, capacity, and audience limit per run.-->
