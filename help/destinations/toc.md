@@ -94,7 +94,7 @@ debug: true
         * [DoubleClick Floodlight (Beta) extension](./catalog/advertising/doubleclick-floodlight.md)
         * [Facebook Pixel extension](./catalog/advertising/facebook-pixel.md)
         * [Flashtalking OneTag extension](./catalog/advertising/flashtalking.md)
-        * {hide-from-toc} [(Beta) FreeWheel connection](./catalog/advertising/freewheel.md)
+        * [(Beta) FreeWheel connection](./catalog/advertising/freewheel.md)
         * [Google Ads connection](./catalog/advertising/google-ads-destination.md)
         * [Google Ad Manager connection](./catalog/advertising/google-ad-manager.md)
         * [Google Ad Manager 360 connection](./catalog/advertising/google-ad-manager-360-connection.md)
@@ -122,6 +122,7 @@ debug: true
         * [The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
         * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)
+        * [ZoomInfo Account Audiences connection](./catalog/advertising/zoominfo-account-audiences.md)
     * Analytics destinations {#analytics}
         * [Analytics destinations overview](./catalog/analytics/overview.md)
         * [Adform Website Tracking extension](./catalog/analytics/adform.md)
