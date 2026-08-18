@@ -311,6 +311,21 @@ You can use the following sources to ingest protocol data to Experience Platform
 
 {style="table-layout:auto"}
 
+## TLS v1.3 compatibility
+
+Transport Layer Security (TLS) is a security protocol that protects data exchanged between a client and a server. It encrypts data in transit, helps authenticate the communicating parties, and protects the data from being modified during transmission. TLS 1.3 is a newer version that provides stronger security and a more efficient connection setup than earlier versions.
+
+TLS version support can vary by source connector. The following Experience Platform source connectors are compatible with TLS v1.3 connections:
+
+- [[!DNL Azure Blob Storage]](connectors/cloud-storage/blob.md) 
+- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md)
+- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md)
+- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md)
+- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md)
+- [[!DNL Snowflake] batch connector](connectors/databases/snowflake.md)
+
+For authentication, network configuration, and connector-specific setup requirements, see the documentation for the individual source connector.
+
 ## Access control for sources in data ingestion
 
 Permissions for sources in data ingestion can be managed within the Adobe Admin Console. You can access permissions through the **[!UICONTROL Permissions]** tab in a particular product profile. From the **[!UICONTROL Edit Permissions]** panel, you can access the permissions pertaining to sources through the **[!UICONTROL data ingestion]** menu entry. The **[!UICONTROL View Sources]** permission grants read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab, while the **[!UICONTROL Manage Sources]** permission grants full access to read, create, edit, and disable sources.
