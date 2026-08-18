@@ -35,7 +35,7 @@ Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.c
 
 | Feature | Description |
 | --- | --- |
-| Object-Level Access Control for Datasets | You can now apply access labels to entire datasets to control which users and applications can read or write dataset data. Use the same Adobe-defined and custom access labels available throughout Adobe Experience Platform to enforce dataset-level access restrictions. For information about applying and managing dataset labels, see the [end to end guide](help/access-control/abac/end-to-end-guide.md) |
+| Object-Level Access Control for Datasets | You can now apply access labels to entire datasets to control which users and applications can read or write dataset data. Use the same Adobe-defined and custom access labels available throughout Adobe Experience Platform to enforce dataset-level access restrictions. For information about applying and managing dataset labels, see the [end to end guide](/help/access-control/abac/end-to-end-guide.md) |
 
 {style="table-layout:auto"}
 
@@ -49,7 +49,7 @@ Use Data Governance to manage data usage policies and enforce compliance with da
 
 | Feature | Description |
 | --- | --- |
-| mTLS Certificate Hierarchy Update | Adobe is transitioning outbound mTLS client certificates to a new certificate authority (CA) hierarchy. If your endpoint validates Adobe's mTLS client certificate, add the new root and intermediate CA certificates alongside the existing trusted hierarchy to prevent connection or delivery failures. See [Update your trust store for Adobe's new mTLS certificate hierarchy](help/landing/governance-privacy-security/mtls-trust-chain-migration.md) for more details. |
+| mTLS Certificate Hierarchy Update | Adobe is transitioning outbound mTLS client certificates to a new certificate authority (CA) hierarchy. If your endpoint validates Adobe's mTLS client certificate, add the new root and intermediate CA certificates alongside the existing trusted hierarchy to prevent connection or delivery failures. See [Update your trust store for Adobe's new mTLS certificate hierarchy](/help/landing/governance-privacy-security/mtls-trust-chain-migration.md) for more details. |
 
 {style="table-layout:auto"}
 
