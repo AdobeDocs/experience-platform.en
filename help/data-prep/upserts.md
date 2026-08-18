@@ -280,6 +280,7 @@ The following outlines a list of known limitations to consider when streaming up
 * The streaming upserts method should only be used when sending partial row updates to [!DNL Real-Time Customer Profile]. Partial row updates are **not** consumed by data lake.
 * The streaming upserts method does not support updating, replacing, and removing identities. New identities are created if they do not exist. Hence the `identity` operation must always be set to create. If an identity already exists, the operation is a no-op.
 * The streaming upserts method currently does not support the [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) or the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* The streaming upserts method does not validate the request body. [!DNL Data Collection Validation Service] validates only request headers for `xdmEntityUpdates` payloads. **Impact:** Schema constraints such as required fields, data types, patterns, and enum values are not enforced on these payloads. Values that batch ingestion would reject can be accepted without error. **Workaround:** Validate and normalize values upstream before you send them. For example, use a [!DNL Data Prep] mapping function such as [`lower`](./functions.md#string) to normalize the case of a value before it reaches an enum field. See the [validation coverage note](/help/ingestion/quality/streaming-validation.md#validation-coverage) in the streaming ingestion validation guide for more information.
 
 ## Next steps
 
