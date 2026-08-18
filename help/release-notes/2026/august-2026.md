@@ -19,12 +19,27 @@ last-update: 2026-08-18
 
 New features and updates to existing features in Adobe Experience Platform:
 
+- [Access control](#access-control)
 - [Data Governance](#data-governance)
 - [Data Ingestion](#data-ingestion)
 - [Destinations](#destinations)
 - [Run and Operate](#run-and-operate)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
+
+## Access control {#access-control}
+
+Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Experience Platform capabilities, including data modeling, profile management, and sandbox administration.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Object-Level Access Control for Datasets | You can now apply access labels to entire datasets to control which users and applications can read or write dataset data. Use the same Adobe-defined and custom access labels available throughout Adobe Experience Platform to enforce dataset-level access restrictions. For information about applying and managing dataset labels, see the [end to end guide](help/access-control/abac/end-to-end-guide.md) |
+
+{style="table-layout:auto"}
+
+For more information, read the [Access control overview](/help/access-control/home.md). 
 
 ## Data Governance {#data-governance}
 
@@ -34,8 +49,7 @@ Use Data Governance to manage data usage policies and enforce compliance with da
 
 | Feature | Description |
 | --- | --- |
-| Object-Level Access Control for Datasets | Apply access labels to entire datasets to control which users can read or write them. |
-| mTLS Certificate Hierarchy Update | Adobe is updating the CA hierarchy used to issue client certificates for outbound mTLS connections. If your systems validate Adobe's mTLS client certificate, add the new root and intermediate CA certificates to your trust store to avoid connection or delivery failures. |
+| mTLS Certificate Hierarchy Update | Adobe is transitioning outbound mTLS client certificates to a new certificate authority (CA) hierarchy. If your endpoint validates Adobe's mTLS client certificate, add the new root and intermediate CA certificates alongside the existing trusted hierarchy to prevent connection or delivery failures. See [Update your trust store for Adobe's new mTLS certificate hierarchy](help/landing/governance-privacy-security/mtls-trust-chain-migration.md) for more details. |
 
 {style="table-layout:auto"}
 
@@ -106,9 +120,10 @@ Use Segmentation Service to create audiences from your customer data and manage 
 
 | Feature | Description |
 | --- | --- |
-| Flexible Batch Schedules (Limited Availability) | Flexible Batch Schedules lets you evaluate audiences on demand using user-defined schedules, giving you greater control and flexibility over your audience evaluations. You can define the cadence, and each schedule can evaluate up to 10,000 audiences at a time. |
-| Run Now (Limited Availability) | Run Now lets you trigger audience evaluation for a specific audience on demand, without waiting for a system-defined or user-defined schedule. |
-| Time-series custom objects (B2B) | You can now use time-series relational schemas in custom objects for segmentation use cases in [!DNL Real-Time CDP B2B Edition]. |
+| Batch segmentation progress transparency | When a batch segmentation job is processing, you can now see the percentage of audience evaluation. This lets you better estimate the remaining time needed for the segmentation job, so you can meet your audience's activation timeline. For more information, read the [monitor audiences guide](/help/dataflows/ui/monitor-audiences.md). |
+| Run Now (Limited Availability) | Run Now lets you trigger audience evaluation for a specific audience on demand, without waiting for a system-defined or user-defined schedule. For more information, read the [run now guide](/help/segmentation/methods/run-now.md). |
+| External account audiences (B2B) | You can now upload account audiences using the external audiences endpoint. For more information, read the [external audiences endpoint guide](/help/segmentation/api/external-audiences.md). |
+| Time-series custom objects (B2B) | You can now use time-series relational schemas in custom objects for segmentation use cases in [!DNL Real-Time CDP B2B Edition]. For more information, read the [custom objects guide](/help/rtcdp/segmentation/custom-objects.md). |
 
 {style="table-layout:auto"}
 
