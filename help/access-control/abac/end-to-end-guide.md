@@ -166,7 +166,7 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 
 ## Apply labels to datasets
 
-Use Object-Level Access Control (OLAC) to restrict access to entire datasets that contain sensitive information.
+Use Object-Level Access Control to restrict access to entire datasets that contain sensitive information.
 
 In this healthcare example, you can apply the **[!UICONTROL PHI/ Regulated Health Data]** label to datasets that contain protected health information (PHI). After you apply the label, only users whose roles contain the required label can access the dataset.
 
