@@ -73,7 +73,7 @@ For more information, read the [data ingestion overview](/help/ingestion/home.md
 | Feature | Description |
 | --- | --- |
 | External ID support for [[!DNL Amazon S3] assumed role authentication](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) | Adobe now presents your Organization ID as the `sts:ExternalId` on every `AssumeRole` call for the [!DNL Amazon S3] destination's assumed role authentication flow. Add an `sts:ExternalId` condition to your IAM role's trust policy in AWS and set it to your Organization ID to strengthen the security of your assumed role connection. |
-| [!DNL ZoomInfo Account] | Use the [!DNL ZoomInfo Account] destination to activate account audiences from Experience Platform to [!DNL ZoomInfo] for account-based marketing use cases. |
+| [[!DNL ZoomInfo Account Audiences]](/help/destinations/catalog/advertising/zoominfo-account-audiences.md) | Use the [!DNL ZoomInfo Account Audiences] destination to activate account audiences from Experience Platform to [!DNL ZoomInfo] for account-based marketing use cases. |
 | Exclude exited profiles from [[!DNL LiveRamp] - Onboarding](/help/destinations/catalog/advertising/liveramp-onboarding.md) exports | Exports to the [!DNL LiveRamp] - Onboarding destination no longer include profiles that have exited an audience. |
 
 {style="table-layout:auto"}
