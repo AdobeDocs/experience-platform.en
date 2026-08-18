@@ -654,4 +654,5 @@ You are returned to the **[!UICONTROL Manage batch capacity]** page, which displ
 
 ![Manage batch capacity page highlighting pending scheduled run updates and the Update capacity action.](/help/landing/images/capacity/batch-scheduled-run-update-capacity.png)
 
-The **Scheduled runs** table updates to reflect the new usage, capacity, and audience limit per run.-->
+The **Scheduled runs** table updates to reflect the new usage, capacity, and audience limit per run.
+-->
