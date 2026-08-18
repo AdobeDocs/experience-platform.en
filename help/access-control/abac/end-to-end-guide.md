@@ -188,7 +188,7 @@ Before Experience Platform saves labels on a dataset, it validates them against 
 >
 >Dataset access control requires the **[!UICONTROL Default-Label-Based-Access-Control-Policy]** to be active. Without this policy, Adobe Experience Platform does not evaluate dataset access labels.
 
-After you apply labels to a dataset, Experience Platform evaluates those labels whenever a user or application attempts to access the dataset. For information about applying and managing labels for datasets and fields by using the Dataset Service API, see [Manage data usage labels for datasets using APIs](../../data-governance/labels/dataset-api.md). 
+After you apply labels to a dataset, Experience Platform evaluates those labels whenever a user or application attempts to access the dataset. 
 
 For this example, only users whose roles include the **[!UICONTROL RHD]** label can access datasets labeled with **[!UICONTROL PHI/ Regulated Health Data]**.
 
@@ -198,7 +198,7 @@ For this example, only users whose roles include the **[!UICONTROL RHD]** label 
 >
 >You can use dataset-level and field-level access controls together to meet your organization's access requirements.
 
-For information on applying and managing dataset labels, see the [update an object](../../catalog/api/update-object.md#update-using-patch-v2-notation-patch-v2-notation) documentation.
+For information about applying and managing labels for datasets and fields by using the Dataset Service API, see [Manage data usage labels for datasets using APIs](../../data-governance/labels/dataset-api.md) ad [update an object](../../catalog/api/update-object.md#update-using-patch-v2-notation-patch-v2-notation).
 
 ## Activate the access control policy {#policy}
 
