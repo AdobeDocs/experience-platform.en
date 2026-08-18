@@ -123,6 +123,7 @@ debug: true
         * [The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
         * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)
+        * [ZoomInfo Account Audiences connection](./catalog/advertising/zoominfo-account-audiences.md)
     * Analytics destinations {#analytics}
         * [Analytics destinations overview](./catalog/analytics/overview.md)
         * [Adform Website Tracking extension](./catalog/analytics/adform.md)

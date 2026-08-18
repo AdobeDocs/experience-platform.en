@@ -238,8 +238,11 @@ Exported CSV files contain profiles with the selected attributes and the corresp
 The profiles included in the exported files can match one the following audience qualification statuses:
 
 * `Active`: The profile is currently qualified for the audience.
-* `Expired`: The profile is no longer qualified for the audience, but has qualified in the past.
 * `""`(empty string): The profile never qualfied for the audience.
+
+>[!NOTE]
+>
+>As of August 2026, Adobe no longer sends the `Expired` status to [!DNL LiveRamp]. In [!DNL LiveRamp], use the full file refresh import method to keep your audience membership current. See [Ways to update an existing audience](https://docs.liveramp.com/connect/en/ways-to-update-an-existing-audience.html#ways-to-update-an-existing-audience-136998) in the [!DNL LiveRamp] documentation.
 
 For instance, an exported CSV file with one `email` attribute, two audiences originating from the Experience Platform [Segmentation Service](../../../segmentation/home.md), and one [imported](../../../segmentation/ui/audience-portal.md#import-audience) external audience, could look like this:
 
@@ -249,7 +252,7 @@ abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
 abc116@testemailabc.com,active,,
-abc107@testemailabc.com,active,expired,active
+abc107@testemailabc.com,active,,active
 abc101@testemailabc.com,active,active,
 ```
 
@@ -285,6 +288,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
+|August 2026| Functionality and documentation update|<ul><li> The `Expired` audience qualification status is no longer sent to [!DNL LiveRamp].</li></ul>|
 |July 2026| Functionality and documentation update|<ul><li> Added support for one-time delivery cadence.</li><li> Increased maximum file size to 100 million rows (from 10 million, previously).|
 |February 2025| Functionality and documentation update|<ul><li> Added support for weekly and monthly delivery cadences.|
 |March 2024|Functionality and documentation update|<ul><li>Added support for deliveries to Europe and Australia [!DNL LiveRamp] [!DNL SFTP] instances.</li><li>Updated documentation to describe specific configurations for newly supported regions.</li><li>Increased maximum file size to 10 million rows (from 5 million, previously).</li><li>Updated documentation to reflect increased file sizes.</li></ul>|
