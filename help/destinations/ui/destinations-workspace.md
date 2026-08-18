@@ -142,11 +142,11 @@ Use the filters in the left sidebar to narrow down your search.
 ![Destination filters in the Browse tab](../assets/ui/workspace/destination-filters.png)
 
 * **[!UICONTROL Data type]**: Filter dataflows by the type of data activated to the destination:
-    * **[!UICONTROL Audiences]**: Shows only dataflows that activate audiences
-    * **[!UICONTROL Datasets]**: Shows only dataflows that activate datasets
-    * **[!UICONTROL Accounts]**: Shows only dataflows that activate accounts
-    * **[!UICONTROL People lists]**: Shows only dataflows that activate people lists
-    * **[!UICONTROL Prospects]**: Shows only dataflows that activate prospects
+    * **[!UICONTROL Audiences]**: Shows only dataflows that [activate audiences](activate-batch-profile-destinations.md)
+    * **[!UICONTROL Datasets]**: Shows only dataflows that [export datasets](export-datasets.md)
+    * **[!UICONTROL Accounts]**: Shows only dataflows that [activate account audiences](activate-account-audiences.md)
+    * **[!UICONTROL People lists]**: Shows only dataflows that [activate people lists](connect-destination.md#segment-activation-or-dataset-exports)
+    * **[!UICONTROL Prospects]**: Shows only dataflows that [activate prospect audiences](activate-prospect-audiences.md)
 * **[!UICONTROL Destination platform]**: Filter dataflows by specific destination platforms (for example, [!DNL Amazon S3], [!DNL Facebook Custom Audience], [!DNL LinkedIn Matched Audience], etc.). You can select multiple platforms simultaneously.
 * **[!UICONTROL Has any tag]**: Filter dataflows that have specific tags assigned to them. This helps you organize and find dataflows based on your custom tagging.
 * **[!UICONTROL Status]**: Filter dataflows by their operational status:
