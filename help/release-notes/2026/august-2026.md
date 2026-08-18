@@ -121,7 +121,7 @@ Use Segmentation Service to create audiences from your customer data and manage 
 | Feature | Description |
 | --- | --- |
 | Batch segmentation progress transparency | When a batch segmentation job is processing, you can now see the percentage of audience evaluation. This lets you better estimate the remaining time needed for the segmentation job, so you can meet your audience's activation timeline. For more information, read the [monitor audiences guide](/help/dataflows/ui/monitor-audiences.md). |
-| Run Now (Limited Availability) | Run Now lets you trigger audience evaluation for a specific audience on demand, without waiting for a system-defined or user-defined schedule. For more information, read the [run now guide](/help/segmentation/methods/run-now.md). |
+| [!BADGE Beta]{type=Informative} Run Now | Run Now lets you trigger audience evaluation for a specific audience on demand, without waiting for a system-defined or user-defined schedule. For more information, read the [run now guide](/help/segmentation/methods/run-now.md). |
 | External account audiences (B2B) | You can now upload account audiences using the external audiences endpoint. For more information, read the [external audiences endpoint guide](/help/segmentation/api/external-audiences.md). |
 | Time-series custom objects (B2B) | You can now use time-series relational schemas in custom objects for segmentation use cases in [!DNL Real-Time CDP B2B Edition]. For more information, read the [custom objects guide](/help/rtcdp/segmentation/custom-objects.md). |
 
