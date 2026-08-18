@@ -44,6 +44,7 @@ This destination is available in the following [!DNL Adobe CX Enterprise] applic
  
 |Release month|Update type|Description|
 |---|---|---|
+|August 2026| Functionality and documentation update | Adobe now includes your Organization ID as the `sts:ExternalId` on every `AssumeRole` call for assumed role authentication. Read more about it in the [authentication section](#assumed-role-authentication). |
 |January 2024| Functionality and documentation update | The Amazon S3 destination connector now supports a new assumed role authentication type. Read more about it in the [authentication section](#assumed-role-authentication). |
 |July 2023|Functionality and documentation update| With the July 2023 Experience Platform release, the [!DNL Amazon S3] destination provides new functionality, as listed below: <br><ul><li>[Dataset export support](/help/destinations/ui/export-datasets.md)</li><li>Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
 
@@ -217,6 +218,41 @@ Ensure that your role has the following configuration:
 
 * **Permissions**: The role should have permissions to access S3 (either full access or the minimal permissions provided in the **Create a policy with the required permissions** step above)
 * **Trust relationships**: The role should have the root Adobe account (`670664943635`) in its trust relationships
+
+**Secure your role with an external ID (Recommended)**
+
+Add an `sts:ExternalId` condition to your IAM role's trust policy to ensure that only calls made on behalf of your organization can assume the role.
+
+Adobe automatically includes your Adobe IMS Organization ID as the `sts:ExternalId` value on every `AssumeRole` call. No setup is required on the Adobe side.
+
+In AWS, set the `sts:ExternalId` condition in your trust policy to your Adobe IMS Organization ID:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::670664943635:root"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {
+                "StringEquals": {
+                    "sts:ExternalId": "your-organization-id"
+                }
+            }
+        }
+    ]
+}
+```
+
+Replace `your-organization-id` with your Adobe IMS Organization ID. Once you add the condition, AWS checks it on every `AssumeRole` call:
+
+* If the incoming `sts:ExternalId` matches the value in your trust policy, AWS allows the role to be assumed.
+* If it does not match, or if the call has no `sts:ExternalId` at all, AWS denies the request.
+
+Adding this condition is optional and does not break existing assumed role connections, since Adobe already sends the correct value on every call. Adobe recommends adding it to all assumed role connections. For more information, see the [AWS documentation on using an external ID](https://aws.amazon.com/blogs/security/how-to-use-external-id-when-granting-access-to-your-aws-resources/).
 
 **Alternative: Restrict to specific Adobe user (Optional)**
 
