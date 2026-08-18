@@ -286,23 +286,15 @@ You can also trigger this refresh from the Experience Platform UI. Read [Activat
 
 ### Streaming guardrails {#streaming-guardrails}
 
-Ad-hoc activation to streaming destinations enforces the following daily limits at the sandbox level:
+Ad-hoc activation to streaming destinations enforces the following limit:
 
-* One on-demand run per dataflow, per audience, per day.
-* Five on-demand runs across all dataflows in the sandbox, per day.
-
-A request is rejected if any of the following apply:
-
-* The requested audience isn't mapped to the destination.
-* The destination isn't a streaming or API-based destination.
-* You don't have the **[!UICONTROL Activate Destinations]** permission.
-* A guardrail listed above has been exceeded.
+* One on-demand run per dataflow, per audience, within a rolling 24-hour window (not a calendar-day reset).
 
 ### Streaming request {#streaming-request}
 
 >[!IMPORTANT]
 >
->It is mandatory to include the `Accept: application/vnd.adobe.adhoc.activation+json; version=4` header in your request to use v4 of the ad-hoc activation API.
+>It is mandatory to include the `Accept: application/vnd.adobe.adhoc.streaming.activation+json; version=1` header in your request to use v4 of the ad-hoc activation API. Note this is a separate media type from the batch ad-hoc activation API, not a version bump on `application/vnd.adobe.adhoc.activation+json`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \
@@ -311,7 +303,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -H 'Accept: application/vnd.adobe.adhoc.activation+json; version=4' \
+ -H 'Accept: application/vnd.adobe.adhoc.streaming.activation+json; version=1' \
  -d '
 {
    "activationInfo":{
@@ -332,15 +324,18 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 ### Streaming response {#streaming-response}
 
-A successful response returns HTTP status 200 and creates one streaming job per requested audience.
+A successful response returns HTTP status 202 (Accepted) and creates one streaming job per requested audience.
 
 ```shell
 {
-   "order":[
+   "jobs":[
       {
-         "segment":"db8961e9-d52f-45bc-b3fb-76d0382a6851",
-         "order":"ef2dcbd6-36fc-49a3-afed-d7b8e8f724eb",
-         "statusURL":"https://platform.adobe.io/data/foundation/flowservice/runs/88d6da63-dc97-460e-b781-fc795a7386d9"
+         "jobId":"88d6da63-dc97-460e-b781-fc795a7386d9",
+         "flowId":"ef2dcbd6-36fc-49a3-afed-d7b8e8f724eb",
+         "audienceId":"db8961e9-d52f-45bc-b3fb-76d0382a6851",
+         "imsOrgId":"{ORG_ID}",
+         "status":"QUEUED",
+         "createdAt":"2026-08-17T14:00:00Z"
       }
    ]
 }
@@ -348,13 +343,15 @@ A successful response returns HTTP status 200 and creates one streaming job per 
 
 | Property | Description |
 | -------- | ----------- |
-| `segment` | The ID of the audience for which delivery was triggered. |
-| `order` | The ID of the destination to which the audience is being delivered. |
-| `statusURL` | The status URL of the streaming job. You can track job status, such as queued, in-flight, succeeded, failed, or partial, using the [Flow Service API](../../sources/tutorials/api/monitor.md). |
+| `jobId` | A unique identifier for this streaming job. |
+| `flowId` | The ID of the dataflow the job was triggered against. |
+| `audienceId` | The ID of the audience being delivered. |
+| `status` | Always `QUEUED` in this release. There is currently no mechanism to track progress past this state. See [Known limitations](/help/destinations/ui/activate-now-streaming.md#known-limitations). |
+| `createdAt` | Timestamp the job was created. |
 
 {style="table-layout:auto"}
 
-If a guardrail is exceeded, the response indicates the remaining quota and when you can try the request again.
+If the same audience was already triggered for this dataflow within the last 24 hours, the request is rejected with HTTP 409 and a `Retry-After` header indicating how many seconds until you can try again.
 
 ## Related information {#related-information}
 

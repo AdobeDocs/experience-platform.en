@@ -55,15 +55,16 @@ The **[!UICONTROL Activate now]** feature:
 * Resends full audience membership regardless of qualification state, rather than a differential or changes-only refresh.
 * Runs only on-demand.
 * Is available at first for [!DNL The Trade Desk] and [!DNL Google Customer Match]. Adobe plans to add support for more streaming and API-based destinations.
+* A guardrail rejects **[!UICONTROL Activate now]** for an audience that was mapped to the dataflow within the last 24 hours. This prevents the on-demand trigger from racing the automatic backfill dispatched when the audience was mapped, which can otherwise cause a silent double-delivery or drop. If you need to refresh an audience shortly after mapping it, wait 24 hours from the mapping time.
+* There is no way to check job status from the UI. The API does have a status endpoint, but it always shows the job as `QUEUED`. There is no callback from delivery back to this status field, so `QUEUED` does not distinguish in-progress, succeeded, or failed.
 
 ## Guardrails {#guardrails}
 
-Keep in mind the following sandbox-level daily limits when using **[!UICONTROL Activate now]**:
+**[!UICONTROL Activate now]** enforces the following limit:
 
-* One on-demand run per dataflow, per audience, per day.
-* Five on-demand runs across all dataflows in the sandbox, per day.
+* One on-demand run per dataflow, per audience, within a rolling 24-hour window (not a calendar-day reset).
 
-If you exceed a guardrail, the trigger is rejected, and the UI shows your remaining quota along with a message indicating when you can try again.
+If the same audience was already triggered for this dataflow within the last 24 hours, the trigger is rejected, and the UI shows a message indicating when you can try again.
 
 ## Prerequisites {#prerequisites}
 
@@ -87,7 +88,9 @@ Follow these steps to trigger an on-demand refresh of an audience to a streaming
 
 1. A toast message appears, confirming that the refresh has been queued. Experience Platform creates one streaming job per selected audience.
 
-1. Track the status of each job, such as queued, in-flight, succeeded, failed, or partial, from the **[!UICONTROL Dataflow runs]** tab.
+>[!NOTE]
+>
+>There is currently no way to check the status of a triggered job from the UI. The toast confirms that the job was queued, but delivery isn't otherwise visible in Experience Platform. See [Known limitations](#known-limitations).
 
 ## Related information {#related-information}
 
