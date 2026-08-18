@@ -290,57 +290,6 @@ You can resolve your edge segmentation throughput violations by adopting one of 
 2. Optimize your ingestion by using batch ingestion for lower latency use cases.
 3. Contact your Adobe Customer Care representative if issues still persist.
 
-## Video overview {#video}
-
-The following video provides an overview of Capacity.
-
->[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
-
-## Frequently asked questions {#faq}
-
-The following section outlines frequently asked questions about the capabilities of Capacity.
-
-### Can I have a maximum combined throughput limit that sums up to less than my target maximum?
-
-+++ Answer
-
-No. The maximum combined throughput limit **must** sum up to your organization's guardrail. 
-
-+++
-
-### What happens if I exceed my maximum capacities?
-
-+++ Answer
-
-This depends on which capacity is exceeded. 
-
-Currently, if you exceed the maximum number of allowed audiences, your excessive audiences will not be affected. However, the ability to create new audiences may be restricted in the future.
-
-If you exceed your streaming throughput, you will experience performance latency in your ingestion and segmentation. 
-
-+++
-
-### Why should I adhere to my maximum capacities?
-
-+++ Answer
-
-Working within your maximum capacities ensures your data remains consistent and keeps your data integrity intact.
-
-You ensure consistent performance during peak events, avoiding technical issues that could adversely affect system performance and impact your downstream customer experiences, ultimately improving your data hygiene and overall system performance.
-
-+++
-
-### What are best practices to manage streaming ingestion throughput?
-
-+++ Answer
-
-To best manage your streaming ingestion throughput, you should evaluate your datasets to ensure they are prioritizing data necessary for personalization. 
-
-
-If real-time processing is not required, you should use batch ingestion instead of streaming ingestion.
-
-+++
-
 ## Growth credits dashboard
 
 >[!AVAILABILITY]
@@ -512,6 +461,124 @@ Select **[!UICONTROL Delete]**, the confirm the cancellation.
 >When you cancel a schedule, its reserved credits are immediately released and added back to your available credit balance.
 >
 >The scheduled capacity is locked and cannot be updated or canceled within two weeks of the start date.
+
+## Video overview {#video}
+
+The following video provides an overview of Capacity.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
+
+## Frequently asked questions {#faq}
+
+The following section outlines frequently asked questions about the capabilities of Capacity.
+
+### Can I have a maximum combined throughput limit that sums up to less than my target maximum?
+
++++ Answer
+
+No. The maximum combined throughput limit **must** sum up to your organization's guardrail. 
+
++++
+
+### What happens if I exceed my maximum capacities?
+
++++ Answer
+
+This depends on which capacity is exceeded. 
+
+Currently, if you exceed the maximum number of allowed audiences, your excessive audiences will not be affected. However, the ability to create new audiences may be restricted in the future.
+
+If you exceed your streaming throughput, you will experience performance latency in your ingestion and segmentation. 
+
++++
+
+### Why should I adhere to my maximum capacities?
+
++++ Answer
+
+Working within your maximum capacities ensures your data remains consistent and keeps your data integrity intact.
+
+You ensure consistent performance during peak events, avoiding technical issues that could adversely affect system performance and impact your downstream customer experiences, ultimately improving your data hygiene and overall system performance.
+
++++
+
+### What are best practices to manage streaming ingestion throughput?
+
++++ Answer
+
+To best manage your streaming ingestion throughput, you should evaluate your datasets to ensure they are prioritizing data necessary for personalization. 
+
+If real-time processing is not required, you should use batch ingestion instead of streaming ingestion.
+
++++
+
+### Can I have more than one active schedule?
+
++++ Answer
+
+No. Growth Credits for streaming and edge support only one active or pending schedule per sandbox. A new schedule can only be created after the current one has fully completed.
+
++++
+
+### What happens if I need to update the default allocation while there is an active schedule?
+
++++ Answer
+
+Baseline redistribution at or below 1,500 RPS can normally be done at any time from the Default Allocation page without a schedule. But if a schedule is already pending, it's blocked because only one active or pending schedule per sandbox is allowed.
+
++++
+
+### Will Growth Credits expire after the contract period?
+
++++ Answer
+
+Yes. Remaining credits expire and reset on the contract anniversary date.
+
++++
+
+### What enforcement applies for Streaming capacity?
+
++++ Answer
+
+You do not get more capacity above your default streaming entitlement. Traffic may be throttled, delayed, or dropped if you send more than the entitlement. Any increase above baseline requires reserving credits first.
+
++++
+
+### Can a scheduled capacity change span across contract periods?
+
++++ Answer
+
+No. Schedules must fit entirely within the current contract year and cannot span an annual contract boundary. Credits (reserved and used) reset on the anniversary date, and after that, you can schedule capacity for the new contract year.
+
++++
+
+### What happens when the schedule ends?
+
++++ Answer
+
+Capacity immediately reverts to the baseline allocation (for example, 1,500 RPS). There is no automatic extension or carryover, and no credits are charged after the schedule ends. To continue at a scaled RPS, you must create a new schedule (full lead time: 2 weeks for Streaming and 3 weeks for Edge). Previous settings are not pre-filled.
+
++++
+
+### How are credits reserved and released for scheduled capacity?
+
++++ Answer
+
+Credits are reserved upfront for the scheduled window and then consumed daily during the scheduled period. If a schedule is removed, the reserved credits are immediately released back to the available balance: 
+
+**Available = Licensed − Used − Reserved***
+
+Reservations draw from the included baseline entitlement first and only draw Growth Credits for capacity above the baseline.
+
++++
+
+### What permission is required to create or edit a capacity schedule?
+
++++ Answer
+
+You must have the sandbox-manage permission, access to all sandboxes, and the organization must be provisioned with the "acp_growth_credits" feature.
+
++++
 
 <!--
 ## Manage batch capacity
