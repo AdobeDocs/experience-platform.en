@@ -173,11 +173,44 @@ A successful response returns an array containing the ID of the updated dataset,
 
 ### Update array fields {#array-fields}
 
+The `accessLabels` field is used by Object-Level Access Control to restrict access to an entire dataset. For information on how dataset access is evaluated, see [Attribute-based access control end-to-end guide](../../access-control/abac/end-to-end-guide.md).
+
 To replace or clear an array-valued field such as `accessLabels`, include its full desired value in a PATCH request to `/v2/dataSets/{DATASET_ID}`.
 
 >[!IMPORTANT]
 >
 >The endpoint replaces the entire array instead of merging it with the existing values, so include every value that you want to retain. It also validates each value before saving the array. For example, every value in `accessLabels` must exist in your organization's label catalog, or the request fails.
+
+To set access labels on a dataset, include all core and custom labels that you want the dataset to contain.
+
+**Request**
+
+The following request sets the `core/C1` and `custom/L1` access labels on a dataset.
+
+```shell
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3077efa10d92ab7a71858 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "accessLabels": [
+          "core/C1",
+          "custom/L1"
+        ]
+      }'
+```
+
+**Response**
+
+A successful response returns an array containing the ID of the updated dataset. Performing a GET request for this dataset now shows the updated values in the `accessLabels` field.
+
+```json
+[
+    "@/dataSets/67b3077efa10d92ab7a71858"
+]
+```
 
 To remove all values from an array field, send an empty array.
 
