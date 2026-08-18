@@ -343,6 +343,10 @@ If real-time processing is not required, you should use batch ingestion instead 
 
 ## Unified credit dashboard
 
+>[!AVAILABILITY]
+>
+>The unified credit dashboard is currently in **Limited availability**.
+
 The unified credit dashboard gives you a single place to view your credit balance, plan capacity, and monitor usage across Experience Platform. You can use it to:
 
 - **View your available credits** and understand how much headroom remains.
