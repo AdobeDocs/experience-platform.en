@@ -63,8 +63,8 @@ For more information, read the [data ingestion overview](/help/ingestion/home.md
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Activate audiences on-demand for streaming destinations | Trigger an immediate, on-demand resend of an audience's full current membership to a streaming destination without waiting for the next scheduled export. This feature is in private beta and available for a limited number of streaming destinations. Contact your Adobe representative to request access. <br> ![Triggering an on-demand resend of an audience's full membership to a streaming destination using Activate now.](assets/august/activate-now-streaming.gif){zoomable="yes"} |
-| [Data type filter in the destinations catalog](/help/destinations/catalog/overview.md) | Filter destinations by data type in the **[!UICONTROL Browse]** tab of the destinations catalog. <br> ![Filtering destinations by data type in the Browse tab of the destinations catalog.](assets/august/data-type-filter-browse.gif){zoomable="yes"} |
+| [!BADGE Beta]{type=Informative} Activate audiences on-demand for streaming destinations | Trigger an immediate, on-demand resend of an audience's full current membership to a streaming destination without waiting for the next audience qualification or disqualification event. This update is rolling out throughout this week. This feature is in private beta and available for a limited number of streaming destinations. Contact your Adobe representative to request access. <br> ![Triggering an on-demand resend of an audience's full membership to a streaming destination using Activate now.](assets/august/activate-now-streaming.gif){zoomable="yes"} |
+| [Data type filter in the destinations catalog](/help/destinations/catalog/overview.md) | Find the destination you need faster by filtering the **[!UICONTROL Browse]** tab of the destinations catalog by data type. <br> ![Filtering destinations by data type in the Browse tab of the destinations catalog.](assets/august/data-type-filter-browse.gif){zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -72,9 +72,9 @@ For more information, read the [data ingestion overview](/help/ingestion/home.md
 
 | Feature | Description |
 | --- | --- |
-| External ID support for [[!DNL Amazon S3] assumed role authentication](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) | Adobe now presents your Organization ID as the `sts:ExternalId` on every `AssumeRole` call for the [!DNL Amazon S3] destination's assumed role authentication flow. Add an `sts:ExternalId` condition to your IAM role's trust policy in AWS and set it to your Organization ID to strengthen the security of your assumed role connection. |
+| External ID support for [[!DNL Amazon S3] assumed role authentication](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) | Adobe now includes your Organization ID as the `sts:ExternalId` on every `AssumeRole` call for the [!DNL Amazon S3] destination's assumed role authentication flow. Add an `sts:ExternalId` condition to your IAM role's trust policy in AWS and set it to your Organization ID to strengthen the security of your assumed role connection. View the [documentation](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) for examples of how to use this feature. |
 | [[!DNL ZoomInfo Account Audiences]](/help/destinations/catalog/advertising/zoominfo-account-audiences.md) | Use the [!DNL ZoomInfo Account Audiences] destination to activate account audiences from Experience Platform to [!DNL ZoomInfo] for account-based marketing use cases. |
-| Exclude exited profiles from [[!DNL LiveRamp] - Onboarding](/help/destinations/catalog/advertising/liveramp-onboarding.md) exports | Exports to the [!DNL LiveRamp] - Onboarding destination no longer include profiles that have exited an audience. |
+| Exclude exited profiles from [[!DNL LiveRamp] - Onboarding](/help/destinations/catalog/advertising/liveramp-onboarding.md) exports | Exports to the [!DNL LiveRamp] - Onboarding destination no longer include profiles that have exited an audience. This helps reduce your [Records Under Management (RUM)](https://docs.liveramp.com/connect/en/records-under-management.html) count in [!DNL LiveRamp]. This update is rolling out throughout this week. |
 
 {style="table-layout:auto"}
 
@@ -82,7 +82,7 @@ For more information, read the [data ingestion overview](/help/ingestion/home.md
 
 | Fix | Description |
 | --- | --- |
-| B2B audience export fix | When you export B2B audiences to a destination, Experience Platform now sends only the audiences that have actually changed for a profile. Previously, an update to one audience caused every audience that the profile qualified for to be resent, resulting in larger exports than necessary. This brings B2B audience exports in line with existing streaming and batch audience export behavior. |
+| B2B audience export fix | When you export B2B audiences to a destination, Experience Platform now sends only the audiences that have actually changed for a profile. Previously, an update to one audience caused every audience that the profile qualified for to be resent, resulting in larger exports than necessary. This matches the existing streaming and batch audience export behavior. |
 
 {style="table-layout:auto"}
 
@@ -108,7 +108,7 @@ Use Segmentation Service to create audiences from your customer data and manage 
 | --- | --- |
 | Flexible Batch Schedules (Limited Availability) | Flexible Batch Schedules lets you evaluate audiences on demand using user-defined schedules, giving you greater control and flexibility over your audience evaluations. You can define the cadence, and each schedule can evaluate up to 10,000 audiences at a time. |
 | Run Now (Limited Availability) | Run Now lets you trigger audience evaluation for a specific audience on demand, without waiting for a system-defined or user-defined schedule. |
-| Time-series custom objects (B2B) | You can now use time-series relational schemas in custom objects for segmentation use cases in B2BCDP. |
+| Time-series custom objects (B2B) | You can now use time-series relational schemas in custom objects for segmentation use cases in [!DNL Real-Time CDP B2B Edition]. |
 
 {style="table-layout:auto"}
 
