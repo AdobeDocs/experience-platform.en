@@ -94,8 +94,10 @@ If the IT admin has not yet approved the request, authentication will fail with 
 
 When configuring the destination, you must provide the following information:
 
-* [!UICONTROL Customer ID]: your [!DNL Microsoft Ads] Customer ID (CID), in integer format. See the [Microsoft Advertising documentation](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) for instructions on how to find your Customer ID.
-* [!UICONTROL Customer Account ID]: your [!DNL Microsoft Ads] Customer Account ID. See the [Microsoft Advertising documentation](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) for instructions on how to find your Customer Account ID.
+* [!UICONTROL Customer ID]: your [!DNL Microsoft Ads] Customer ID (CID), in integer format. Find this value in the `cid=` parameter of your [!DNL Microsoft Advertising] campaign URL, or as the **Manager Account ID** under **Settings > Manager Account Settings** in [!DNL Microsoft Advertising]. See the [Microsoft Advertising documentation](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) for more information.
+* [!UICONTROL Customer Account ID]: your [!DNL Microsoft Ads] Customer Account ID. Find this value in the `aid=` parameter of your [!DNL Microsoft Advertising] campaign URL (not `uid=` or `cid=`), or as the **Account ID** under **Settings > Account Settings** in [!DNL Microsoft Advertising]. See the [Microsoft Advertising documentation](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) for more information.
+
+For an example of where these values appear in a campaign URL, see [Fill in destination details](#parameters).
 
 ## Connect to the destination {#connect}
 
@@ -110,13 +112,13 @@ To connect to this destination, follow the steps described in the [destination c
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_id"
 >title="Customer ID"
->abstract="Your Microsoft Advertising Customer ID, also known as the Manager account ID. This is the top-level identifier in Microsoft Advertising that can have multiple advertiser accounts (Customer Account IDs) under it."
+>abstract="Your Microsoft Advertising Customer ID, also known as the Manager Account ID. This is the top-level identifier in Microsoft Advertising that can have multiple advertiser accounts (Customer Account IDs) under it. Find it in the cid= value in your Microsoft Advertising campaign URL, or under Settings > Manager Account Settings in Microsoft Advertising."
 >additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Find your Customer ID"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_account_id"
 >title="Customer Account ID"
->abstract="Your Microsoft Advertising Customer Account ID, also known as the Advertiser account ID. This identifies a specific advertiser account under your Customer ID."
+>abstract="Your Microsoft Advertising Customer Account ID, also known as the Advertiser account ID. This identifies a specific advertiser account under your Customer ID. Find it in the aid= value in your Microsoft Advertising campaign URL (not the uid= or cid= value), or under Settings > Account Settings in Microsoft Advertising."
 >additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Find your Customer Account ID"
 
 >[!CONTEXTUALHELP]
@@ -134,12 +136,25 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Customer ID]**: Your [!DNL Microsoft Ads] Customer ID (CID). See the [Microsoft Advertising documentation](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) for instructions on how to find your Customer ID.
-* **[!UICONTROL Customer Account ID]**: Your [!DNL Microsoft Ads] Customer Account ID. See the [Microsoft Advertising documentation](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) for instructions on how to find your Customer Account ID.
+* **[!UICONTROL Customer ID]**: Your [!DNL Microsoft Ads] Customer ID (CID). Find this value in the `cid=` parameter of your [!DNL Microsoft Advertising] campaign URL, or as the **Manager Account ID** under **Settings > Manager Account Settings** in [!DNL Microsoft Advertising]. See the [Microsoft Advertising documentation](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) for more information.
+* **[!UICONTROL Customer Account ID]**: Your [!DNL Microsoft Ads] Customer Account ID. Find this value in the `aid=` parameter of your [!DNL Microsoft Advertising] campaign URL (not `uid=` or `cid=`), or as the **Account ID** under **Settings > Account Settings** in [!DNL Microsoft Advertising]. See the [Microsoft Advertising documentation](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) for more information.
 * **[!UICONTROL Membership Duration]**: The number of days a user remains in the customer match list. Accepted values are between 1 and 390 days.
 * **[!UICONTROL Customer Match List Availability]**: Select the availability of the customer match list. In [!DNL Microsoft Advertising], a Customer ID can have multiple Customer Account IDs (advertiser accounts) under it. Select **[!UICONTROL Customer ID (all advertising accounts)]** to make the list available across all advertiser accounts under your Customer ID, or **[!UICONTROL Customer Account ID (single advertising account)]** to restrict the list to the specific Customer Account ID you provided above. See the [Microsoft Advertising documentation](https://help.ads.microsoft.com/apex/index/3/en/56727) for more details.
 
     ![Platform UI image showing the destination details fields for the Microsoft Ads Customer Match destination.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
+
+The [!DNL Microsoft Advertising] campaign URL contains several similar identifiers. The following anonymized example URL shows which value maps to each field:
+
+`https://ui.ads.microsoft.com/campaign/vnext/overview?aid=<ACCOUNT_ID>&ccuisrc=4&cid=<CUSTOMER_ID>&uid=<USER_ID>`
+
+* `aid=` maps to **[!UICONTROL Customer Account ID]**.
+* `cid=` maps to **[!UICONTROL Customer ID]**.
+* `uid=` does not map to either field.
+
+You can also find these values in the [!DNL Microsoft Advertising] user interface:
+
+* **[!UICONTROL Customer ID]** is the **Manager Account ID** under **Settings > Manager Account Settings**.
+* **[!UICONTROL Customer Account ID]** is the **Account ID** under **Settings > Account Settings**.
 
 ### Enable alerts {#enable-alerts}
 
