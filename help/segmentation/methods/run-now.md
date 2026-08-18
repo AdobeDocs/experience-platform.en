@@ -7,7 +7,7 @@ description: Learn how to immediately evaluate an audience, using run now evalua
 
 >[!AVAILABILITY]
 >
->Run now evaluation is currently in beta. For more information, contact Adobe Customer Care.
+>Run now evaluation is currently in **Limited availability**. For more information, contact Adobe Customer Care.
 
 Run now evaluation lets you **immediately** activate an audience to a destination on demand. With run now evaluation, you don't need to wait for your system schedule to activate your audience and you can move immediately from building your audience to evaluating your audience. 
 
