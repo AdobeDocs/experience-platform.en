@@ -242,7 +242,7 @@ The profiles included in the exported files can match one the following audience
 
 >[!NOTE]
 >
->As of August 2026, Adobe no longer sends the `Expired` status to [!DNL LiveRamp]. In [!DNL LiveRamp], set up full file imports from Adobe to keep your audience membership current.
+>As of August 2026, Adobe no longer sends the `Expired` status to [!DNL LiveRamp]. In [!DNL LiveRamp], use the full file refresh import method to keep your audience membership current. See [Ways to update an existing audience](https://docs.liveramp.com/connect/en/ways-to-update-an-existing-audience.html#ways-to-update-an-existing-audience-136998) in the [!DNL LiveRamp] documentation.
 
 For instance, an exported CSV file with one `email` attribute, two audiences originating from the Experience Platform [Segmentation Service](../../../segmentation/home.md), and one [imported](../../../segmentation/ui/audience-portal.md#import-audience) external audience, could look like this:
 
