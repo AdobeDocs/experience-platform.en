@@ -52,7 +52,7 @@ You can also use the Experience Platform APIs for this purpose. Read how to [act
 
 The **[!UICONTROL Activate now]** feature:
 
-* In this first release, resends full audience membership regardless of qualification state, rather than a differential or changes-only refresh.
+* Resends full audience membership regardless of qualification state, rather than a differential or changes-only refresh. This behavior may change in future updates.
 * Runs only on-demand.
 * Is available at first for [!DNL The Trade Desk] and [!DNL Google Customer Match]. Adobe plans to add support for more streaming and API-based destinations.
 * A guardrail rejects **[!UICONTROL Activate now]** for an audience that was mapped to the dataflow within the last 24 hours. This prevents the on-demand trigger from racing the automatic backfill dispatched when the audience was mapped, which can otherwise cause a silent double-delivery or drop. If you need to refresh an audience shortly after mapping it, wait 24 hours from the mapping time.
