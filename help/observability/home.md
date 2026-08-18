@@ -33,11 +33,11 @@ By subscribing to alerts, you can set up your own downstream protocols for when 
 
 See the overview on [alerts](./alerts/overview.md) for more information.
 
-## [!DNL Coworker] skills {#coworker}
+## Coworker skills {#coworker}
 
-You can also access [!DNL Observability Insights] capacity metrics and breach information through [!DNL Adobe CX Coworker] Chat. Use natural language prompts to check streaming capacity, review usage trends, and identify capacity breaches across your sandboxes.
+You can also access [!DNL Observability Insights] capacity metrics and breach information through Coworker Chat. Use natural language prompts to check streaming capacity, review usage trends, and identify capacity breaches across your sandboxes.
 
-For supported skills and sample prompts, see [Observability Insights skills in Adobe CX Coworker](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/coworker/chat/use-cases/overview).
+For supported skills and sample prompts, see [Observability Insights skills in Coworker Chat](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/coworker/chat/use-cases/overview).
 
 ## Next steps
 
