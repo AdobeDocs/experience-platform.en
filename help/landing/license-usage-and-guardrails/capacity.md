@@ -513,9 +513,8 @@ Select **[!UICONTROL Delete]**, the confirm the cancellation.
 >
 >The scheduled capacity is locked and cannot be updated or canceled within two weeks of the start date.
 
-
-
-<!--## Manage batch capacity
+<!--
+## Manage batch capacity
 
 Batch capacity management is consumption-based and includes two types of batch runs:
 
