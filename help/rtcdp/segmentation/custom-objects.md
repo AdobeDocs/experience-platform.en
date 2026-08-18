@@ -21,7 +21,7 @@ The **[!UICONTROL Create relational schema]** page appears. You can add the deta
 
 >[!NOTE]
 >
->If you use a time-series relational schema, you **must** select the relevant event fields within your schema. Additionally, with a time-series relational schema, you'll be able to use AND/OR capabilities within Segmentation Service. If you need to use more advanced chained queries, create a **Standard** schema using Experience Events.
+>If you use a time series relational schema, you **must** select the relevant event fields within your schema. Additionally, with a time series relational schema, you'll be able to use AND/OR capabilities within Segmentation Service. If you need to use more advanced chained queries, create a **Standard** schema using Experience Events.
 
 | Schema behavior | Description |
 | --------------- | ----------- |
