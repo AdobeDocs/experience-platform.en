@@ -145,7 +145,6 @@ Use the filters in the left sidebar to narrow down your search.
     * **[!UICONTROL Audiences]**: Shows only dataflows that activate [audiences](../../segmentation/types/overview.md)
     * **[!UICONTROL Datasets]**: Shows only dataflows that export [datasets](../../catalog/datasets/overview.md)
     * **[!UICONTROL Accounts]**: Shows only dataflows that activate [account audiences](../../segmentation/types/account-audiences.md)
-    * **[!UICONTROL People lists]**: Shows only dataflows that activate [people audiences](../../segmentation/types/people-audiences.md)
     * **[!UICONTROL Prospects]**: Shows only dataflows that activate [prospect audiences](../../segmentation/types/prospect-audiences.md)
 * **[!UICONTROL Destination platform]**: Filter dataflows by specific destination platforms (for example, [!DNL Amazon S3], [!DNL Facebook Custom Audience], [!DNL LinkedIn Matched Audience], etc.). You can select multiple platforms simultaneously.
 * **[!UICONTROL Has any tag]**: Filter dataflows that have specific tags assigned to them. This helps you organize and find dataflows based on your custom tagging.
