@@ -1,7 +1,6 @@
 ---
 title: FreeWheel connection
 description: Learn how to activate audiences from Adobe Experience Platform to FreeWheel for programmatic advertising across connected TV, display, and video inventory.
-hide: true
 badge: label="Beta" type="Informative"
 exl-id: 1f1d3e57-a8ef-4971-b3d1-43521bd158bb
 ---
@@ -9,7 +8,7 @@ exl-id: 1f1d3e57-a8ef-4971-b3d1-43521bd158bb
 
 >[!AVAILABILITY]
 >
->The [!DNL FreeWheel] destination is currently in Beta and is only available to select customers. To request access, contact your Adobe representative.
+>The [!DNL FreeWheel] destination is currently in Beta.
 
 ## Overview {#overview}
 
@@ -65,7 +64,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of an audience, together with the desired identity fields as chosen in the mapping step of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of an audience, together with the desired identity fields as chosen in the mapping step of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). |
 | Export frequency | **[!UICONTROL Batch]** | The first export is a full snapshot of all profiles qualified for the activated audiences. Subsequent exports are daily incremental updates that include new audience qualifications (adds) and audience exits (removes). A configurable full audience refresh interval (4, 8, or 12 weeks) is also available, triggering periodic full exports in addition to the daily incrementals. Full exports contain only currently qualified profiles. Audience exits are not included and are delivered exclusively through the daily incremental updates. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}

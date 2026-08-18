@@ -18,6 +18,7 @@ nudge: true
 - Data Distiller {#data-distiller}
     - [Overview](data-distiller/overview.md)
     - [License usage](data-distiller/license-usage.md)
+    - [Long-term personalization](data-distiller/long-term-personalization.md)
     - Derived datasets {#derived-datasets}
         - [Overview](data-distiller/derived-datasets/overview.md)
         - [Create derived datasets with SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -141,5 +142,5 @@ nudge: true
     - [Prepared statements](sql/prepared-statements.md)
 - [Frequently asked questions](troubleshooting-guide.md)
 - [IP address allowlist](ip-address-allowlist.md)
-- [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
+- [API reference](https://developer.adobe.com/experience-platform-apis/references/query-service)
 - [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

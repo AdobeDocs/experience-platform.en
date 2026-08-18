@@ -97,9 +97,9 @@ The fields shown depend on the selected authentication method:
 
 | Property | Description |
 | --- | --- |
-| [!UICONTROL Application ID ] | Enter the [!UICONTROL Application Id] you previously gathered in the [configuration details](#configuration-details) section. This field is **required** when using the [!UICONTROL Default] method and **optional** when using the [!UICONTROL Proxy] method, since the proxy supplies the credentials. |
-| [!UICONTROL Search API Key ] | Enter the [!UICONTROL Search API Key] you previously gathered in the [configuration details](#configuration-details) section. This field is **required** when using the [!UICONTROL Default] method. When using the [!UICONTROL Proxy] method, leave this blank to keep the key hidden from the browser; the proxy injects it server-side. |
-| [!UICONTROL Proxy URL ] | Required when the [!UICONTROL Proxy] authentication method is selected. Enter the URL of your server to route Insights events through before they are forwarded to [!DNL Algolia]. Your proxy is responsible for injecting the [!DNL Algolia] Application ID and Search API Key, so those fields can be left blank to keep the credentials hidden from the browser. This field supports data elements, so the value can be set statically or resolved dynamically at runtime. |
+| [!UICONTROL Application ID] | Enter the [!UICONTROL Application Id] you previously gathered in the [configuration details](#configuration-details) section. This field is **required** when using the [!UICONTROL Default] method and **optional** when using the [!UICONTROL Proxy] method, since the proxy supplies the credentials. |
+| [!UICONTROL Search API Key] | Enter the [!UICONTROL Search API Key] you previously gathered in the [configuration details](#configuration-details) section. This field is **required** when using the [!UICONTROL Default] method. When using the [!UICONTROL Proxy] method, leave this blank to keep the key hidden from the browser. The proxy injects it server-side. |
+| [!UICONTROL Proxy URL] | Required when the [!UICONTROL Proxy] authentication method is selected. Enter the URL of your server to route Insights events through before Adobe Experience Platform forwards them to [!DNL Algolia]. Your proxy injects the [!DNL Algolia] Application ID and Search API Key, so you can leave those fields blank. This field supports data elements to set the value statically or resolve it dynamically at runtime. |
 
 The following image shows the [!UICONTROL Default] authentication method:
 

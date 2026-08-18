@@ -16,6 +16,8 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 * [A customer experience powered by Experience Platform (Video)](video/customer-experience.md)
 * [Behind the scenes of a customer experience powered by Experience Platform (Video)](video/customer-experience-bts.md)
 * Getting started {#getting-started}
+  * [How Adobe Experience Platform and applications work together](apps-overview.md)
+  * [Adobe Experience Platform integrations](integrations.md)
   * [End-to-end example workflow](end-to-end-tutorial.md)
   * [Key capabilities (Video)](video/key-capabilities.md)
   * [Key use cases (Video)](video/platform-use-cases.md)
@@ -63,6 +65,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
       * [Events](./governance-privacy-security/audit-logs/api/events.md)
       * [Export](./governance-privacy-security/audit-logs/api/export.md)
   * [Data encryption](./governance-privacy-security/encryption.md)
+  * [Update your mTLS trust store](./governance-privacy-security/mtls-trust-chain-migration.md)
   * Customer Managed Keys {#customer-managed-keys}
     * [Customer Managed Keys](./governance-privacy-security/customer-managed-keys/overview.md)
     * Azure {#azure}

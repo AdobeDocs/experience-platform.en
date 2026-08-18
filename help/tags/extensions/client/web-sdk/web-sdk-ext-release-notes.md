@@ -67,6 +67,10 @@ topic_v2:
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Adobe Experience Platform Web SDK release notes](/help/collection/js/release-notes.md).
 
+## Version 2.37.1 - July 30, 2026
+
+- Contains [version 2.35.0](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
+
 ## Version 2.37.0 - June 10, 2026
 
 - Contains [version 2.34.1](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
@@ -389,7 +393,7 @@ Contains version 2.14.0 of Adobe Experience Platform Web SDK.
 
 ## Version 2.14.1 - October 13, 2022
 
-- Fixed an issue where the Web SDK does not honor the ID from the Experience Cloud ID Service.
+- Fixed an issue where the Web SDK does not honor the ID from the Visitor ID Service.
 
 Contains version 2.13.1 of the Adobe Experience Platform Web SDK Library.
 

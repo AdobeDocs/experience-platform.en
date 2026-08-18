@@ -33,7 +33,7 @@ Evaluation requests can be made in one of three ways:
 
 ## Getting started
 
-The API endpoints used in this guide is part of the [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoints used in this guide is part of the [[!DNL Policy Service] API](https://developer.adobe.com/experience-platform-apis/references/policy-service). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Evaluate for policy violations using data usage labels {#labels}
 
@@ -696,3 +696,5 @@ A successful response returns an array of evaluation results; one for each polic
 ## Policy evaluation for [!DNL Real-Time Customer Profile]
 
 The [!DNL Policy Service] API can also be used to check for policy violations involving the use of [!DNL Real-Time Customer Profile] audiences. See the tutorial on [enforcing data usage compliance for audiences](../../segmentation/tutorials/governance.md) for more information.
+
+

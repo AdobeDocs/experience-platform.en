@@ -88,7 +88,7 @@ Before you can make calls to the [!DNL Adobe Experience Platform] APIs, make sur
 
 ## Step 2: Gather credentials {#credentials}
 
-To make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+To make calls to Experience Platform APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
@@ -142,7 +142,6 @@ In the response, look for the first record that includes the schema property bel
 The audience export job ID is in the `id` property, as shown below.
 
 ![audience export job ID](../assets/api/ad-hoc-activation/segment-export-job-id.png)
-
 
 ## Step 5: Run the ad-hoc activation job {#activation-job}
 
@@ -202,14 +201,6 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 {style="table-layout:auto"}
 
 ### Request with export IDs {#request-export-ids}
-
-<!--
-
->[!IMPORTANT]
->
->**Deprecated request type**. This example type describes the request type for the API version 1. In the v2 of the ad-hoc activation API, you do not need to include the latest audience export job ID.
-
--->
 
 ```shell
 
@@ -285,3 +276,4 @@ When using the ad-hoc activation API, you can come across error messages that ar
 
 * [Connect to batch destinations and activate data using the Flow Service API](/help/destinations/api/connect-activate-batch-destinations.md)
 * [Export files on-demand to batch destinations using the Experience Platform UI](/help/destinations/ui/export-file-now.md)
+

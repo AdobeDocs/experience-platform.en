@@ -37,7 +37,7 @@ This tutorial requires a working understanding of the various Experience Platfor
 
 ### Required headers
 
-This tutorial also requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to [!DNL Experience Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+This tutorial also requires you to have completed the [authentication tutorial](/help/landing/api-authentication.md) in order to successfully make calls to [!DNL Experience Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -75,6 +75,8 @@ When making this request, you'll need to specify the following information:
 
 - The name of the audience
 - A description for the audience
+- The type of audience being created
+  - Supported values include `people` and `account`
 - The corresponding fields between the CSV and the schema
 - The source specification information
   - This includes the file path of the CSV file for ingestion
@@ -209,3 +211,5 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/{AUDIENCE_
 Once you've confirmed that the external audience has been successfully ingested, you can see it in Audience Portal and use it in downstream services such as destinations.
 
 For more information about Audience Portal, read the [Audience Portal UI guide](/help/segmentation/ui/audience-portal.md). For more information on destinations, read the [destinations overview](/help/destinations/home.md).
+
+

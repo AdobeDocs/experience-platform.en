@@ -34,11 +34,6 @@ There are several destination types in Experience Platform, as shown in the diag
 >
 >This documentation page only describes the profile export behavior for the connections highlighted at the bottom of the diagram.
 
-<!--
->* Note the export behavior change introduced in September 2025 for [enterprise destinations](#enterprise-behavior)
->* This documentation page only describes the profile export behavior for the connections highlighted at the bottom of the diagram.
--->
-
 ![Types of destinations diagram](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
 ## Message aggregation in streaming destinations {#message-aggregation}
@@ -129,13 +124,28 @@ In all the cases described above, only the profiles where relevant updates have 
 >
 >All the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
+Experience Platform monitors attributes for changes at the sandbox and [merge policy](/help/profile/merge-policies/overview.md) level, not per destination. If audiences that use the same merge policy are mapped to two different destinations in the same sandbox, and one of those destinations maps an [object field](/help/xdm/ui/fields/object.md) (a field that contains its own sub-fields, also called child fields), that object field is added to the shared set of monitored attributes for the merge policy.
+
+As a result, a change to a child field of that object field can trigger an export to the other destination, even when that destination's own mapping does not include the object field or child field. An overwrite of a field with the same value also counts as a change, and can trigger an export.
+
+Customers with several streaming destinations in the same sandbox, where the mapped audiences share a merge policy, might see more exports than expected for this reason. To reduce unnecessary exports, review which destinations have audiences mapped to them that share a merge policy, and limit object field mappings to only the child fields each destination needs.
+
+For example, consider two streaming destinations, Destination A and Destination B, in the same sandbox. Audiences that use the same merge policy are mapped to each destination.
+
+* Destination A maps the object field `person.loyalty`, which contains the child field `loyaltyId`.
+* Destination B maps a different field, `person.demographics.age`, and does not map `person.loyalty` or `loyaltyId`.
+
+These two fields are otherwise unrelated. The only connection is that the audiences mapped to each destination use the same merge policy, which causes the shared set of monitored attributes to include both fields. Because Destination A's mapping adds `person.loyalty` to that shared set, a change to `loyaltyId` can also trigger an export to Destination B, even though Destination B never mapped that object field.
+
+If `loyaltyId` is overwritten with the same value, this still counts as a change. Both Destination A and Destination B can receive an export as a result.
+
 ### What determines a data export and what is included in the export {#streaming-behavior}
 
 Regarding the data that is exported for a given profile, it is important to understand the two different concepts of what determines a data export to your streaming API destination and which data is included in the export.
 
 |What determines a destination export | What is included in the destination export |
 |---------|----------|
-|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>A change in the identity map is defined as an identity that is added / removed for the [identity graph](/help/identity-service/features/identity-graph-viewer.md) of the profile, for identity namespaces that are mapped for export.</li><li>A change for an attribute is defined as any update on the attribute, for attributes that are mapped to the destination.</li></ul> | <ul><li>The segments that are mapped to the destination and have changed will be included in the `segmentMembership` object. In some scenarios they might be exported using multiple calls. Also, in some scenarios, some segments that have not changed might be included in the call as well. In any case, only mapped segments will be exported.</li><li>All identities from the namespaces that are mapped to the destination in the `identityMap` object are included as well .</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
+|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>A change in the identity map is defined as an identity that is added / removed for the [identity graph](/help/identity-service/features/identity-graph-viewer.md) of the profile, for identity namespaces that are mapped for export.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li><li>Attributes are monitored for changes at the sandbox and merge policy level, not per destination. If the audiences mapped to another destination use the same merge policy as the audiences mapped to yours, a change to an attribute mapped by that other destination can trigger an export to yours, even if your destination does not map that attribute.</li></ul> | <ul><li>The segments that are mapped to the destination and have changed will be included in the `segmentMembership` object. In some scenarios they might be exported using multiple calls. Also, in some scenarios, some segments that have not changed might be included in the call as well. In any case, only mapped segments will be exported.</li><li>All identities from the namespaces that are mapped to the destination in the `identityMap` object are included as well .</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
 
 {style="table-layout:fixed"}
 

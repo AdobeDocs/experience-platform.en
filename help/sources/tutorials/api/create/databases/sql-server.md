@@ -18,7 +18,7 @@ topic_v2:
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-Read this tutorial to learn how to create a base connection for [!DNL Microsoft SQL Server] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this tutorial to learn how to create a base connection for [!DNL Microsoft SQL Server] using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Get started
 
@@ -105,3 +105,4 @@ By following this tutorial, you have created an [!DNL Microsoft SQL Server] base
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
 * [Create a dataflow to bring database data to Experience Platform using the [!DNL Flow Service] API](../../collect/database-nosql.md)
+

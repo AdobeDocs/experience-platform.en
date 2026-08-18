@@ -16,7 +16,7 @@ All resources within the [!DNL Schema Library] are contained in a specific sandb
 
 ## Getting started
 
-The `/rpc/export` endpoint is part of the [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The `/rpc/export` endpoint is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 The `/rpc/export` endpoint is part of the remote procedure calls (RPCs) that are supported by the [!DNL Schema Registry]. Unlike other endpoints in the [!DNL Schema Registry] API, RPC endpoints do not require additional headers like `Accept` or `Content-Type`, and do not use a `CONTAINER_ID`. Instead, they must use the `/rpc` namespace, as demonstrated in the API calls below.
 
@@ -199,3 +199,5 @@ Note that all instances of the resource's tenant ID are replaced with `<XDM_TENA
 After generating the export payload from the CSV file, you can send that payload to the `/rpc/import` endpoint to generate the schema.
 
 See the [import endpoint guide](./import.md) for details on how to generate schemas from export payloads.
+
+

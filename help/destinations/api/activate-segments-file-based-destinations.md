@@ -59,14 +59,6 @@ This article explains the workflow required to use the [Flow Service API](https:
 >
 >You can also use the Experience Platform user interface to export profiles to cloud storage destinations. Read the [activate file-based destinations tutorial](/help/destinations/ui/activate-batch-profile-destinations.md) for more information.
 
-<!--
-
-## API users migration {#api-migration}
-
-If you were already using the Flow Service API to export profiles to the Amazon S3, Azure Blob, or SFTP cloud storage destinations, read the [API migration guide](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) for necessary migration steps as Adobe transitions users from the legacy destinations to the new destinations. 
-
--->
-
 ## Getting started {#get-started}
 
 ![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
@@ -91,7 +83,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values-headers}
 
-To make calls to [!DNL Experience Platform] APIs, you must first complete the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+To make calls to [!DNL Experience Platform] APIs, you must first complete the [Experience Platform authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -511,7 +503,6 @@ Note the highlighted line with inline comments in the [!DNL connection spec] exa
 
 +++
 
-
 >[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] showing [!DNL auth spec]
@@ -566,7 +557,6 @@ Note the highlighted line with inline comments in the [!DNL connection spec] exa
 ```
 
 +++
-
 
 >[!TAB Data Landing Zone(DLZ)]
 
@@ -1122,7 +1112,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Optionally, you can add encryption to your exported files. To do this, you need to add items from the `encryption` object. See the request example below with the mandatory parameters highlighted:
 
-
 >[!BEGINSHADEBOX]
 
 +++ View encryption specs for cloud storage destinations
@@ -1641,7 +1630,6 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
 ```
 
 +++
-
 
 >[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
@@ -3303,7 +3291,6 @@ Note the Dataflow ID from the response. This ID will be required in later steps.
 
 In this step, you can also select which audiences you want to export to the destination. For extensive information about this step and the request format to add an audience to the dataflow, view the examples in the [Update a destination dataflow](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) section of the API reference documentation.
 
-
 ## Set up attribute and identity mapping {#attribute-and-identity-mapping}
 
 ![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step6.png)
@@ -3491,14 +3478,11 @@ The response below has been shortened for brevity.
             }
         }
 
-
 ```
 
 +++
 
 >[!ENDSHADEBOX]
-
-
 
 >[!BEGINSHADEBOX]
 
@@ -4415,7 +4399,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
     }
 }
 
-
 ```
 
 The ID in the response represents the unique identifier of the input schema that you have created. Copy the ID from the response as you will reuse this in a later step.
@@ -4627,7 +4610,6 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 +++
 
-
 **Response**
 
 +++Add a marketing action - Response
@@ -4647,7 +4629,7 @@ A successful response returns response code `200` along with the ID of the updat
 
 ### Add a mandatory key {#add-mandatory-key}
 
-To add a [mandatory key](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes), see the request and response examples below.
+To add a [mandatory key](/help/destinations/ui/batch-destinations-mapping-reference.md#mandatory-attributes), see the request and response examples below.
 
 >[!IMPORTANT]
 >
@@ -4726,7 +4708,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ### Add a deduplication key {#add-deduplication-key}
 
-To add a [deduplication key](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys), see the request and response examples below
+To add a [deduplication key](/help/destinations/ui/batch-destinations-mapping-reference.md#deduplication-keys), see the request and response examples below
 
 >[!IMPORTANT]
 >
@@ -4944,3 +4926,4 @@ You have successfully connected Experience Platform to one of your preferred clo
 * [Destinations overview](../home.md)
 * [Destinations Catalog overview](../catalog/overview.md)
 * [Update destination dataflows using the Flow Service API](../api/update-destination-dataflows.md)
+

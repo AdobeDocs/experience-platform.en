@@ -65,7 +65,7 @@ An example of a marketing action might be the desire to export a dataset to a th
 >
 >Marketing actions by themselves do not restrict data usage. They must be included in enabled data usage policies in order for those actions to be evaluated for policy violations.
 
-When data usage happens in your organization's service, relevant marketing actions should be indicated so that any policy violations can be identified. You can then use the [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) to check for policy violations in your integration.
+When data usage happens in your organization's service, relevant marketing actions should be indicated so that any policy violations can be identified. You can then use the [Policy Service API](https://developer.adobe.com/experience-platform-apis/references/policy-service) to check for policy violations in your integration.
 
 >[!NOTE]
 >
@@ -123,3 +123,5 @@ The table below describes the core marketing actions that are provided out-of-th
 | Onsite Personalization | An action that uses data for onsite content personalization. Onsite personalization is any data that is used to make inferences about users' interests, and is used to select which content or ads are served based on those inferences. |
 | Segment Match | An action that uses data for Adobe Experience Platform Segment Match, which allows for two or more Experience Platform users to exchange audience data. By enabling policies that reference this action, you can restrict what data is used for Segment Match. For example, if the core policy "Restrict data sharing" is enabled, any data with a [C11 label](../labels/reference.md#c11) cannot be used for Segment Match. |
 | Single Identity Personalization | An action that requires that a single identity be used for personalization purposes instead of stitching identities from multiple sources. |
+
+

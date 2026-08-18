@@ -82,4 +82,3 @@ Once you complete these steps, any support admins in your onboarded organization
 For more information, watch the following video to learn how you can use Product Support Agent to seamlessly troubleshoot without leaving your workflows.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
-

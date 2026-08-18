@@ -41,9 +41,9 @@ Each destination in the [catalog](/help/destinations/catalog/overview.md) is sli
 
 ## File-based destinations {#file-based}
 
-For [file-based destinations](/help/destinations/destination-types.md#file-based) (for example [!DNL Amazon S3], SFTP, most email marketing destinations such as [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]), the identity setup in most of these destinations is open, meaning that you are not required to select any identity in the [Select attributes](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) step of the batch activation workflow.
+For [file-based destinations](/help/destinations/destination-types.md#file-based) (for example [!DNL Amazon S3], SFTP, most email marketing destinations such as [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]), the identity setup in most of these destinations is open, meaning that you are not required to select any identity in the [Mapping](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) step of the batch activation workflow (or the [Select attributes](/help/destinations/ui/select-profile-attributes-legacy.md) step for [!DNL Adobe Campaign], [!DNL Oracle Eloqua], and [!DNL Salesforce Marketing Cloud]).
 
-If you choose to add identities to your file exports, note that only a single identity from the [identity namespace](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer) can be selected in an export. When you select an identity for export, it is automatically selected as a [mandatory attribute](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) and [deduplication key](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
+If you choose to add identities to your file exports, note that only a single identity from the [identity namespace](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer) can be selected in an export. When you select an identity for export, it is automatically selected as a [mandatory attribute](/help/destinations/ui/batch-destinations-mapping-reference.md#mandatory-attributes) and [deduplication key](/help/destinations/ui/batch-destinations-mapping-reference.md#deduplication-keys).
 
 ![An identity selected as mandatory attribute and deduplication key.](/help/destinations/assets/how-destinations-work/selected-identity.png)
 
@@ -103,11 +103,11 @@ Note, however, that you have the flexibility to use data from either [private gr
 
 ### Advertising destinations relying on third-party cookie integrations {#third-party-cookie-destinations}
 
-Advertising destinations relying on third party cookies (for example: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) do not require customers to select IDs in the activation workflow. For these destinations, when setting up an activation workflow, Experience Platform automatically looks up the identity match table constructed by the [[!UICONTROL Experience Cloud ID service]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) and exports all identities that are available for a profile and supported by the destination. 
+Advertising destinations relying on third party cookies (for example: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) do not require customers to select IDs in the activation workflow. For these destinations, when setting up an activation workflow, Experience Platform automatically looks up the identity match table constructed by the [[!UICONTROL Experience Cloud ID Service]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) and exports all identities that are available for a profile and supported by the destination. 
 
-These destinations require an ID sync to happen through either the [!UICONTROL Experience Cloud ID service] or through [!UICONTROL Experience Platform Web SDK]. 
+These destinations require an ID sync to happen through either the [!UICONTROL Experience Cloud ID Service] or through [!UICONTROL Experience Platform Web SDK]. 
 
-If you are using [!UICONTROL Experience Platform Web SDK] and the legacy [!UICONTROL Experience Cloud ID service] is not implemented on the page, then you need to ensure that the datastream for the website in question is enabled to allow for Third Party ID syncing, as outlined in the [configure datastream documentation](/help/datastreams/configure.md#create).
+If you are using [!UICONTROL Experience Platform Web SDK] and the legacy [!UICONTROL Experience Cloud ID Service] is not implemented on the page, then you need to ensure that the datastream for the website in question is enabled to allow for Third Party ID syncing, as outlined in the [configure datastream documentation](/help/datastreams/configure.md#create).
 
 When configuring a datastream as described in the documentation linked above, you need to ensure that the **[!UICONTROL Third Party ID Sync]** slider is enabled. Most customers would leave the `container_id` field blank (it will default to 0). You only need to change this value if your legacy Audience Manager implementation used a specific container ID (note, however, that this would be the vast minority of customers).
 
@@ -122,11 +122,6 @@ When configuring a datastream as described in the documentation linked above, yo
 ## Personalization destinations {#personalization-destinations}
 
 [Personalization (or edge) destinations](/help/destinations/destination-types.md#edge-personalization-destinations) (for example: [!DNL Adobe Target], [!DNL Custom Personalization]) do not require any identity selection in the activation workflow, as the integration is a profile lookup. The client ([!DNL Target], [!DNL Web SDK], or others) queries the [[!UICONTROL Edge]](/help/collection/home.md) and pulls the profile information that it needs for on-site personalization.
-
-<!--
-![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)
-
--->
 
 ## Next steps {#next-steps}
 

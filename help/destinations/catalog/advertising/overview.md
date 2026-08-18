@@ -36,6 +36,7 @@ To understand the difference between connections and extensions, see [Connection
 * [(Beta) Acxiom Real ID Audience Connection](acxiom-real-id-audience-connection.md)
 * [Adobe Advertising DSP connection](adobe-advertising-dsp-connection.md)
 * [Legacy Adobe Advertising DSP connection](adobe-advertising-cloud-dsp-connection-legacy.md)
+* [Adhese connection](adhese.md)
 * [Amazon Ads connection](amazon-ads.md)
 * [Amazon Ads v2 connection](amazon-ads-v2.md)
 * [Bombora connection](bombora.md)

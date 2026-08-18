@@ -42,7 +42,7 @@ Advertisers have the choice to share audiences either with authenticated first-p
 
   * For [!DNL RampID] and [!DNL UID2.0], profiles must contain hashed email IDs.
 
-  * For cookies, set up a cookie sync process with either [!DNL Web SDK] datastreams or the [!DNL Experience Cloud ID Service]. See [Set up ID syncing to share cookies](#cookie-sync) below.
+  * For cookies, set up a cookie sync process with either [!DNL Web SDK] datastreams or the [!DNL Visitor ID Service]. See [Set up ID syncing to share cookies](#cookie-sync) below.
 
   * For profiles with MAIDs:
 
@@ -58,15 +58,15 @@ Advertisers have the choice to share audiences either with authenticated first-p
 
 ### Set up ID syncing to share cookies {#cookie-sync}
 
-ID syncing is a prerequisite to share third-party cookies. Set up a cookie sync process with either [!DNL Web SDK] datastreams or the [!DNL Experience Cloud ID Service]. For more context about identity handling for third-party cookies, see [Advertising destinations relying on third-party cookie integrations](/help/destinations/how-destinations-work/identity-handling.md#third-party-cookie-destinations).
+ID syncing is a prerequisite to share third-party cookies. Set up a cookie sync process with either [!DNL Web SDK] datastreams or the [!DNL Visitor ID Service]. For more context about identity handling for third-party cookies, see [Advertising destinations relying on third-party cookie integrations](/help/destinations/how-destinations-work/identity-handling.md#third-party-cookie-destinations).
 
 **Enable third-party ID syncing with [!DNL Web SDK]**
 
 If you are using [!DNL Experience Platform Web SDK], enable third-party ID syncing on your datastream by configuring the [!UICONTROL Third Party ID Sync] option in the advanced settings. For instructions, see [Configure advanced options](/help/datastreams/configure.md#advanced-options) in the datastreams documentation.
 
-**Enable third-party ID syncing with the [!DNL Experience Cloud ID Service]**
+**Enable third-party ID syncing with the [!DNL Visitor ID Service]**
 
-If you are using [!DNL Experience Platform] tags with the [!DNL Experience Cloud ID Service], configure the third-party ID sync using the [Experience Cloud ID Service extension](/help/tags/extensions/client/id-service/overview.md). This allows the matched Adobe Advertising cookie for the given ECID to be available when you activate the audience from [!DNL Real-Time CDP].
+If you are using [!DNL Experience Platform] tags with the [!DNL Visitor ID Service], configure the third-party ID sync using the [Experience Cloud ID Service extension](/help/tags/extensions/client/id-service/overview.md). This allows the matched Adobe Advertising cookie for the given ECID to be available when you activate the audience from [!DNL Real-Time CDP].
 
 ## Supported identities {#supported-identities}
 
