@@ -393,6 +393,25 @@ The following table shows how each service uses credits and when additional cred
 
 ![The credit summary with credit usage per service highlighted.](/help/landing/images/capacity/credit-usage-per-service.png)
 
+### Credit usage alerts
+
+>[!NOTE]
+>
+>You can view all capacity-related alerts in the **[!UICONTROL Alerts]** browse view by filtering on the **[!UICONTROL Capacity]** service.
+
+Use credit usage alerts to monitor credit consumption and identify potential overages before they affect your business operations or result in unexpected charges.
+
+Credit usage alerts help administrators track organization-level credit usage and take action as consumption approaches licensed limits.
+
+The following credit usage alerts are available at the organization level:
+
+| Alert | Description |
+| --- | --- |
+| 80% credit consumption | Receive an alert when consumed and reserved credits reach 80% of your organization's licensed credits. |
+| 90% credit consumption | Receive an alert when consumed and reserved credits reach 90% of your organization's licensed credits. |
+| Credit overage | Receive an alert when your organization exceeds its licensed credit allocation. |
+| Credit expiration | Receive notifications when credits are approaching expiration. For multi-year contracts, notifications inform you when credits reset at the end of a contract year. In the final contract year, notifications help you prepare for contract renewal discussions. |
+
 ## Plan and schedule streaming and edge capacity
 
 For Streaming and Edge, **schedule additional capacity when you expect demand to exceed your current capacity.** The self-service workflow lets you specify when you need the capacity, review its credit impact, and allocate it across sandboxes.
