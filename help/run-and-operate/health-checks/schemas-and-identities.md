@@ -38,7 +38,7 @@ When you select the **[!UICONTROL Identity Field Validation]** card, a detail pa
 * **[!UICONTROL Experience League Documentation]**: A link to best practices for data modeling.
 * **[!UICONTROL Affected Schemas]**: A list of affected schemas, each with an expander to view more details and a link to open the schema.
 
-![Identity Field Validation detail panel showing description, impact, and affected schemas](../assets/health-checks/identity-field-validation-detail.png)
+![Identity Field Validation detail panel showing description, impact, and affected schemas](../assets/health-checks/identity-field-validation-detail.png){zoomable="yes"}
 
 For more information, see the [data integrity tips](/help/xdm/schema/best-practices.md#data-integrity-tips) in the schema best practices documentation.
 
@@ -60,7 +60,7 @@ When you select the **[!UICONTROL Identity Graph Linking Rules]** card, a detail
 * **[!UICONTROL Experience League Documentation]**: A link to the Identity Graph Linking Rules overview for more information.
 * **[!UICONTROL Configure linking rules]**: When the check fails, a button appears so you can configure linking rules directly from the panel.
 
-![Identity Graph Linking Rules detail panel showing description, impact, and Configure linking rules button](../assets/health-checks/identity-graph-linking-detail.png)
+![Identity Graph Linking Rules detail panel showing description, impact, and Configure linking rules button](../assets/health-checks/identity-graph-linking-detail.png){zoomable="yes"}
 
 For more information, see the [identity graph linking rules overview](/help/identity-service/identity-graph-linking-rules/overview.md) and the [implementation guide](/help/identity-service/identity-graph-linking-rules/implementation-guide.md).
 
@@ -81,7 +81,7 @@ When you select the **[!UICONTROL People & Non-People Identity Config]** card, a
 * **[!UICONTROL General areas of impact]**: Incomplete identity graphs; inflated profile counts; lookup misuse.
 * **[!UICONTROL Affected Schemas]**: A list of schemas with issues. Expand a schema row to see the path, identity name, and schema type for each misconfiguration. Use the link icon to open the schema.
 
-![People & Non-People Identity Config detail panel showing description, impact, and affected schemas with expandable rows](../assets/health-checks/people-non-people-identity-detail.png)
+![People & Non-People Identity Config detail panel showing description, impact, and affected schemas with expandable rows](../assets/health-checks/people-non-people-identity-detail.png){zoomable="yes"}
 
 For more information, see the [identity type documentation](/help/identity-service/features/namespaces.md#identity-type) and the [schema best practices](/help/xdm/schema/best-practices.md).
 
@@ -103,7 +103,7 @@ When you select the **[!UICONTROL Custom Identity Namespace Description]** card,
 * **[!UICONTROL Experience League Documentation]**: A link to Create Custom Namespaces for further information.
 * **[!UICONTROL Affected namespaces]**: A list of custom identity namespaces that are missing descriptions. Use the link icon next to each namespace to view or edit it.
 
-![Custom Identity Namespace Description detail panel showing description, impact, and affected namespaces list](../assets/health-checks/custom-namespace-description-detail.png)
+![Custom Identity Namespace Description detail panel showing description, impact, and affected namespaces list](../assets/health-checks/custom-namespace-description-detail.png){zoomable="yes"}
 
 For more information, see the documentation on [creating custom namespaces](/help/identity-service/features/namespaces.md#create-namespaces).
 
@@ -125,7 +125,7 @@ When you select the **[!UICONTROL Deprecated Identity Namespace]** card, a detai
 * **[!UICONTROL Experience League Documentation]**: A link to Obsolete Identity Namespaces for further documentation.
 * **[!UICONTROL Affected namespaces]**: A list of obsolete or unused identity namespaces. Use the link icon next to each namespace to view or manage it.
 
-![Deprecated Identity Namespace detail panel showing description, impact, and affected namespaces list](../assets/health-checks/deprecated-namespace-detail.png)
+![Deprecated Identity Namespace detail panel showing description, impact, and affected namespaces list](../assets/health-checks/deprecated-namespace-detail.png){zoomable="yes"}
 
 For more information, see the [Experience Cloud knowledge base article on obsolete namespaces](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
@@ -147,7 +147,7 @@ When you select the **[!UICONTROL Non-Person Identity on Relationship Field]** c
 * **[!UICONTROL Experience League Documentation]**: A link to XDM schema composition for identity.
 * **[!UICONTROL Affected schemas]**: A list of schemas with fields that have conflicting descriptors, when applicable. When no issues are detected, the panel shows a **[!UICONTROL Check Passed]** confirmation instead.
 
-![Non-Person Identity on Relationship Field detail panel showing description, impact, and Check Passed confirmation](../assets/health-checks/non-person-identity-relationship-field-detail.png)
+![Non-Person Identity on Relationship Field detail panel showing description, impact, and Check Passed confirmation](../assets/health-checks/non-person-identity-relationship-field-detail.png){zoomable="yes"}
 
 For more information, see the [schema composition documentation](/help/xdm/schema/composition.md).
 
@@ -168,7 +168,7 @@ When you select the **[!UICONTROL Multi-Entity Relationship Count]** card, a det
 * **[!UICONTROL General areas of impact]**: Batch segmentation.
 * **[!UICONTROL Experience League Documentation]**: A link to best practices for data modeling.
 
-![Multi-Entity Relationship Count detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/multi-entity-relationship-count-detail.png)
+![Multi-Entity Relationship Count detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/multi-entity-relationship-count-detail.png){zoomable="yes"}
 
 For more information, see the [data modeling best practices](/help/xdm/schema/best-practices.md) and the [multi-entity segmentation tutorial](/help/segmentation/tutorials/multi-entity-segmentation.md).
 
@@ -191,7 +191,7 @@ When you select the **[!UICONTROL Missing Audit Field Group]** card, a detail pa
 * **[!UICONTROL Recommendation]**: Where missing, add the External Source System Audit Details field group.
 * **[!UICONTROL Affected schemas]**: A list of schemas that are missing the field group. Use the link icon next to each schema to open it.
 
-![Missing Audit Field Group detail panel showing description, impact, recommendation, and affected schemas](../assets/health-checks/missing-audit-field-group-detail.png)
+![Missing Audit Field Group detail panel showing description, impact, recommendation, and affected schemas](../assets/health-checks/missing-audit-field-group-detail.png){zoomable="yes"}
 
 For more information, see the [External Source System Audit Details field group documentation](/help/xdm/field-groups/shared/external-source-system-audit-details.md).
 

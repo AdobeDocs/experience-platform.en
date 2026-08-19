@@ -35,7 +35,7 @@ To access the Run and Operate tools from the Experience Platform UI:
 1. Log in to your Experience Platform account and select **[!UICONTROL Run and Operate]** from the left navigation.
 2. Select the tool that matches your inspection or troubleshooting needs.
 
-![Experience Platform UI showing the Run and Operate left nav.](assets/overview/run-and-operate.png)
+![Experience Platform UI showing the Run and Operate left nav.](assets/overview/run-and-operate.png){zoomable="yes"}
 
 ## Available tools {#available-tools}
 
@@ -54,7 +54,7 @@ The following tools help you inspect and optimize your data operations.
 
 With [Job Schedules](job-schedules.md), you can inspect all scheduled batch operations across your organization, per sandbox, including data lake ingestion, profile ingestion, segmentation, and destination activation. View job execution status, performance metrics, and execution history to identify patterns and diagnose configuration issues that affect reliability.
 
-![Experience Platform UI showing the Job Schedules screen.](assets/overview/job-schedules-interface.png)
+![Experience Platform UI showing the Job Schedules screen.](assets/overview/job-schedules-interface.png){zoomable="yes"}
 
 Job Schedules provides three levels of investigation:
 

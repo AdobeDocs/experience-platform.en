@@ -32,7 +32,7 @@ When you select the **[!UICONTROL Profile Dataset Count]** card, a detail panel 
 * **[!UICONTROL Recommendation]**: Disable [!UICONTROL Profile] on datasets that no longer feed active journeys, segments, or destinations by going to **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** and turning off the **[!UICONTROL Profile]** toggle. Aim for one profile-enabled dataset per schema class. Platform-managed datasets count against the limit but cannot be disabled, so focus remediation on your own datasets.
 * **[!UICONTROL Profile Dataset Count]**: The current count of profile-enabled datasets for the schema class against the limit.
 
-![Profile Dataset Count detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/profile-dataset-count-detail.png)
+![Profile Dataset Count detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/profile-dataset-count-detail.png){zoomable="yes"}
 
 For more information, see the [default guardrails for Real-Time Customer Profile data](/help/profile/guardrails.md) and the [datasets user guide](/help/catalog/datasets/user-guide.md).
 

@@ -32,7 +32,7 @@ When you select the **[!UICONTROL Stale Destination Schedules]** card, a detail 
 * **[!UICONTROL Recommendation]**: Delete unnecessary expired schedules.
 * **[!UICONTROL Affected flows]**: A list of activation flows with a past end date that remain active, including the associated audience and expired end date. Use the link icon to open the flow.
 
-![Stale Destination Schedules detail panel showing description, impact, recommendation, and affected flows](../assets/health-checks/stale-destination-schedules-detail.png)
+![Stale Destination Schedules detail panel showing description, impact, recommendation, and affected flows](../assets/health-checks/stale-destination-schedules-detail.png){zoomable="yes"}
 
 For more information, see the [default guardrails for data activation](/help/destinations/guardrails.md).
 

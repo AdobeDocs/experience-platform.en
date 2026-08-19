@@ -32,7 +32,7 @@ When you select the **[!UICONTROL Audience Sandbox Limit]** card, a detail panel
 * **[!UICONTROL General areas of impact]**: Batch segmentation and activation.
 * **[!UICONTROL Experience League Documentation]**: A link to guardrails for [!DNL Real-Time Customer Profile].
 
-![Audience Sandbox Limit detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/audience-sandbox-limit-detail.png)
+![Audience Sandbox Limit detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/audience-sandbox-limit-detail.png){zoomable="yes"}
 
 For more information, see the [guardrails for Real-Time Customer Profile data and segmentation](/help/profile/guardrails.md).
 
@@ -53,7 +53,7 @@ When you select the **[!UICONTROL Streaming Audiences]** card, a detail panel op
 * **[!UICONTROL General areas of impact]**: Real-time audience evaluation and activation.
 * **[!UICONTROL Experience League Documentation]**: A link to guardrails for [!DNL Real-Time Customer Profile].
 
-![Streaming Audiences detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/streaming-audiences-detail.png)
+![Streaming Audiences detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/streaming-audiences-detail.png){zoomable="yes"}
 
 For more information, see the [guardrails for Real-Time Customer Profile data and segmentation](/help/profile/guardrails.md) and the [streaming segmentation documentation](/help/segmentation/methods/streaming-segmentation.md).
 
@@ -76,7 +76,7 @@ When you select the **[!UICONTROL Edge Audiences]** card, a detail panel opens o
 * **[!UICONTROL Recommendation]**: Consolidate overlapping edge audiences where possible to reduce the total count. Audit existing edge audiences to identify candidates that can move to streaming evaluation.
 * **[!UICONTROL Edge Audiences]**: The current count of edge audiences against the sandbox limit.
 
-![Edge Audiences detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/edge-audiences-detail.png)
+![Edge Audiences detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/edge-audiences-detail.png){zoomable="yes"}
 
 For more information, see the [guardrails for Real-Time Customer Profile data and segmentation](/help/profile/guardrails.md) and the [edge segmentation documentation](/help/segmentation/methods/edge-segmentation.md).
 

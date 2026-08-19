@@ -33,7 +33,7 @@ When you select the **[!UICONTROL Scheduled Queries Failing]** card, a detail pa
 * **[!UICONTROL Recommendation]**: Inspect each failing scheduled query to find the root cause. Modify the query as needed to resolve the issue.
 * **[!UICONTROL Affected scheduled queries]**: A list of failing scheduled queries with their run ID and status. Use the link icon to open the query.
 
-![Scheduled Queries Failing detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/scheduled-queries-failing-detail.png)
+![Scheduled Queries Failing detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/scheduled-queries-failing-detail.png){zoomable="yes"}
 
 For more information, see the [guardrails for Query Service](/help/query-service/guardrails.md).
 
@@ -56,7 +56,7 @@ When you select the **[!UICONTROL Scheduled Queries Slowing]** card, a detail pa
 * **[!UICONTROL Recommendation]**: Set a data expiration on every Experience Event dataset your scheduled queries read from, since datasets that grow indefinitely cause continued increases in query duration. Review the start times of your scheduled queries to reduce overlap.
 * **[!UICONTROL Affected scheduled queries]**: A list of slowing scheduled queries with their latest duration, average duration, and percentage slowdown. Use the link icon to open the query.
 
-![Scheduled Queries Slowing detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/scheduled-queries-slowing-detail.png)
+![Scheduled Queries Slowing detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/scheduled-queries-slowing-detail.png){zoomable="yes"}
 
 For more information, see the [guardrails for Query Service](/help/query-service/guardrails.md) and the [Experience Event dataset retention documentation](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
 

@@ -31,7 +31,7 @@ To access health checks from the [!UICONTROL Experience Platform] UI:
 
 The health checks dashboard displays a summary of your most recent scan results.
 
-![Health checks dashboard showing objects evaluated, scan results, and identified issues](../assets/health-checks/dashboard.png)
+![Health checks dashboard showing objects evaluated, scan results, and identified issues](../assets/health-checks/dashboard.png){zoomable="yes"}
 
 ## Understanding the dashboard {#understanding-dashboard}
 

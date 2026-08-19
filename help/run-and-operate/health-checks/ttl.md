@@ -34,7 +34,7 @@ When you select the **[!UICONTROL Pseudonymous Profile TTL]** card, a detail pan
 * **[!UICONTROL Experience League Documentation]**: Links to pseudonymous profile expiration documentation and data management best practices.
 * **[!UICONTROL Configure profile settings]**: A button to navigate to profile settings and activate the expiration policy.
 
-![Pseudonymous Profile TTL detail panel showing impact, general areas of impact, Experience League documentation links, and Configure profile settings button](../assets/health-checks/pseudonymous-profile-ttl-detail.png)
+![Pseudonymous Profile TTL detail panel showing impact, general areas of impact, Experience League documentation links, and Configure profile settings button](../assets/health-checks/pseudonymous-profile-ttl-detail.png){zoomable="yes"}
 
 For more information, see the documentation on [pseudonymous profile expiration](/help/profile/pseudonymous-profiles.md) and [data management best practices](/help/landing/license-usage-and-guardrails/data-management-best-practices.md).
 
@@ -56,7 +56,7 @@ When you select the **[!UICONTROL Experience Event Datasets TTL]** card, a detai
 * **[!UICONTROL Experience League Documentation]**: A link to Experience Event dataset retention documentation.
 * **[!UICONTROL Affected datasets]**: A list of Lake and Profile event datasets without a configured data expiration. Select a dataset to open it. When no issues are detected, the panel shows a **[!UICONTROL Check Passed]** confirmation instead.
 
-![Experience Event Datasets TTL detail panel showing impact, general areas of impact, Experience League documentation links, and Check Passed confirmation](../assets/health-checks/experience-event-datasets-ttl-detail.png)
+![Experience Event Datasets TTL detail panel showing impact, general areas of impact, Experience League documentation links, and Check Passed confirmation](../assets/health-checks/experience-event-datasets-ttl-detail.png){zoomable="yes"}
 
 For more information, see the documentation on [Experience Event dataset retention](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md) and [Experience Event expirations](/help/profile/event-expirations.md).
 
@@ -78,7 +78,7 @@ When you select the **[!UICONTROL Segment Lookback Window Required]** card, a de
 * **[!UICONTROL Experience League Documentation]**: A link to segment lookback window best practices.
 * **[!UICONTROL Affected segments]**: A list of segment definitions that reference Experience Event data without a lookback constraint. Select a segment to open it. When no issues are detected, the panel shows a **[!UICONTROL Check Passed]** confirmation instead.
 
-![Segment Lookback Window Required detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/segment-lookback-window-required-detail.png)
+![Segment Lookback Window Required detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/segment-lookback-window-required-detail.png){zoomable="yes"}
 
 For more information, see the [PQL overview](/help/segmentation/pql/overview.md) and the [Experience Event dataset retention documentation](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
 
@@ -100,7 +100,7 @@ When you select the **[!UICONTROL Segment Lookback vs Dataset TTL]** card, a det
 * **[!UICONTROL Experience League Documentation]**: A link to Experience Event expirations.
 * **[!UICONTROL Affected segments]**: A list of segments whose lookback window exceeds the referenced dataset TTL, when applicable. When no issues are detected, the panel shows a **[!UICONTROL Check Passed]** confirmation instead.
 
-![Segment Lookback vs Dataset TTL detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/segment-lookback-vs-dataset-ttl-detail.png)
+![Segment Lookback vs Dataset TTL detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/segment-lookback-vs-dataset-ttl-detail.png){zoomable="yes"}
 
 For more information, see the [Experience Event dataset retention documentation](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md) and the [Experience Event expirations documentation](/help/profile/event-expirations.md).
 
