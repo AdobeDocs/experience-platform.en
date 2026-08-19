@@ -166,39 +166,25 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 
 ## Apply labels to datasets
 
-Use Object-Level Access Control to restrict access to entire datasets that contain sensitive information.
-
-In this healthcare example, you can apply the **[!UICONTROL PHI/ Regulated Health Data]** label to datasets that contain protected health information (PHI). After you apply the label, only users whose roles contain the required label can access the dataset.
-
-### Understand dataset access labels
-
-Object Level Access Control uses the same access labels that are available throughout Adobe Experience Platform. Manage these labels in **[!UICONTROL Permissions]** under **[!UICONTROL Roles]** > **[!UICONTROL Labels]**.
-
-Apply Adobe-defined labels, custom labels created by your organization, or a combination of both to a dataset. Object Level Access Control uses the same labels that are already available throughout Experience Platform.
-
-Examples of Adobe-defined labels include:
-
-- Contract labels (`C1-C12`)
-- Identity labels (`I1`, `I2`)
-- Sensitive data labels (`S1`, `S2`, `PSPD`, `RHD`)
-
-Before Experience Platform saves labels on a dataset, it validates them against your organization's label catalog.
-
 >[!IMPORTANT]
 >
 >Dataset access control requires the **[!UICONTROL Default-Label-Based-Access-Control-Policy]** to be active. Without this policy, Adobe Experience Platform does not evaluate dataset access labels.
 
-After you apply labels to a dataset, Experience Platform evaluates those labels whenever a user or application attempts to access the dataset. 
+Use Object-Level Access Control to restrict access to entire datasets that contain sensitive information.
 
-For this example, only users whose roles include the **[!UICONTROL RHD]** label can access datasets labeled with **[!UICONTROL PHI/ Regulated Health Data]**.
+In this healthcare example, you can apply the **[!UICONTROL PHI/ Regulated Health Data]** label to datasets that contain protected health information (PHI). After you apply the label, only users whose roles contain the required label can access the dataset.
 
->[!NOTE]
->
->Use dataset labels to control access to an entire dataset. To control access to specific data elements while still allowing access to the dataset, apply labels to schema fields by using field-level access control.
->
->You can use dataset-level and field-level access controls together to meet your organization's access requirements.
+Once you have completed labeling your schema fields, you can now label your datasets.
 
-For information about applying and managing labels for datasets and fields by using the Dataset Service API, see [Manage data usage labels for datasets using APIs](../../data-governance/labels/dataset-api.md) ad [update an object](../../catalog/api/update-object.md#update-using-patch-v2-notation-patch-v2-notation).
+Select **[!UICONTROL Datasets]** from the left navigation under the **[!UICONTROL Data Management]** section. A list of available datasets is displayed.
+
+Select the ellipsis (`...`) next to the dataset, then select **[!UICONTROL Manage access labels]**.
+
+![The dataset UI highlighting the dataset menu](../images/abac-end-to-end-user-guide/abac-dataset-menu.png)
+
+The **[!UICONTROL Apply access labels]** page appears, allowing you to choose the labels that you want to apply to the dataset. For this use case, select the **[!UICONTROL PHI/ Regulated Health Data]** label, then select **[!UICONTROL Save]**.
+
+![Apply access labels with PHI/Regulated health data selected and highlighting Save.](../images/abac-end-to-end-user-guide/abac-dataset-select-labels.png)
 
 ## Activate the access control policy {#policy}
 
