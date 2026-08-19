@@ -66,7 +66,7 @@ You can also understand dependencies between data processing stages, helping you
 
 ### Health checks {#health-checks}
 
-With [Health Checks](health-checks.md), you can proactively detect configuration issues before they impact your business operations. Currently, health checks run daily automatic scans across your sandbox, surfacing missing best practices, misconfigurations, and patterns that lead to downstream failures.
+With [Health Checks](health-checks/overview.md), you can proactively detect configuration issues before they impact your business operations. Currently, health checks run daily automatic scans across your sandbox, surfacing missing best practices, misconfigurations, and patterns that lead to downstream failures.
 
 Health checks currently evaluate eight categories:
 
@@ -83,7 +83,7 @@ Health checks currently evaluate eight categories:
 
 Now that you understand the purpose and capabilities of [!UICONTROL Run and Operate] tools, explore the following resources to deepen your knowledge:
 
-* Learn how to use [health checks](health-checks.md) to detect schema and identity configuration issues
+* Learn how to use [health checks](health-checks/overview.md) to detect schema and identity configuration issues
 * Learn how to [inspect job schedules](job-schedules.md) for your batch ingestion and activations
 * Learn about [batch ingestion](../ingestion/batch-ingestion/overview.md) to understand how data is ingested into Experience Platform
 * Understand how to [configure scheduled activations](../destinations/ui/activate-batch-profile-destinations.md) for batch destinations

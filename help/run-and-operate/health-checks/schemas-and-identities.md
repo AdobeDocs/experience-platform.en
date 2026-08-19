@@ -197,7 +197,7 @@ For more information, see the [External Source System Audit Details field group 
 
 ## Next steps {#next-steps}
 
-* Return to the [health checks overview](/help/run-and-operate/health-checks.md) to explore other check categories.
+* Return to the [health checks overview](/help/run-and-operate/health-checks/overview.md) to explore other check categories.
 * Learn about [schema best practices](/help/xdm/schema/best-practices.md) for designing reliable data models.
 * Understand [identity graph linking rules](/help/identity-service/identity-graph-linking-rules/overview.md) to prevent profile collapse.
 * Review [identity namespace documentation](/help/identity-service/features/namespaces.md) for namespace management best practices.

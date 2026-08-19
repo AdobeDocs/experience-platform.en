@@ -80,5 +80,5 @@ For more information, see the [merge policies overview](/help/profile/merge-poli
 
 ## Next steps {#next-steps}
 
-* Return to the [health checks overview](/help/run-and-operate/health-checks.md) to explore other check categories.
+* Return to the [health checks overview](/help/run-and-operate/health-checks/overview.md) to explore other check categories.
 * Review the [merge policies overview](/help/profile/merge-policies/overview.md) to manage your merge policies.

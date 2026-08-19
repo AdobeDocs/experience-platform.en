@@ -38,5 +38,5 @@ For more information, see the [default guardrails for Real-Time Customer Profile
 
 ## Next steps {#next-steps}
 
-* Return to the [health checks overview](/help/run-and-operate/health-checks.md) to explore other check categories.
+* Return to the [health checks overview](/help/run-and-operate/health-checks/overview.md) to explore other check categories.
 * Review the [datasets user guide](/help/catalog/datasets/user-guide.md) to manage your profile-enabled datasets.

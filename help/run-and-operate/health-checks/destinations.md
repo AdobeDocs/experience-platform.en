@@ -38,5 +38,5 @@ For more information, see the [default guardrails for data activation](/help/des
 
 ## Next steps {#next-steps}
 
-* Return to the [health checks overview](/help/run-and-operate/health-checks.md) to explore other check categories.
+* Return to the [health checks overview](/help/run-and-operate/health-checks/overview.md) to explore other check categories.
 * Review the [guardrails for data activation](/help/destinations/guardrails.md) to manage your destination activation schedules.

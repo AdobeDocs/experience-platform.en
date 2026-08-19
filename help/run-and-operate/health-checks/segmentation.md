@@ -82,5 +82,5 @@ For more information, see the [guardrails for Real-Time Customer Profile data an
 
 ## Next steps {#next-steps}
 
-* Return to the [health checks overview](/help/run-and-operate/health-checks.md) to explore other check categories.
+* Return to the [health checks overview](/help/run-and-operate/health-checks/overview.md) to explore other check categories.
 * Learn about [streaming segmentation](/help/segmentation/methods/streaming-segmentation.md) and [edge segmentation](/help/segmentation/methods/edge-segmentation.md).

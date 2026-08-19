@@ -62,5 +62,5 @@ For more information, see the [guardrails for Query Service](/help/query-service
 
 ## Next steps {#next-steps}
 
-* Return to the [health checks overview](/help/run-and-operate/health-checks.md) to explore other check categories.
+* Return to the [health checks overview](/help/run-and-operate/health-checks/overview.md) to explore other check categories.
 * Review the [guardrails for Query Service](/help/query-service/guardrails.md) to manage your scheduled queries.

@@ -108,7 +108,7 @@ For more information, read the [Destinations overview](/help/destinations/home.m
 
 | Feature | Description |
 | --- | --- |
-| [Additional health checks](/help/run-and-operate/health-checks.md) | Health checks now include additional checks for the new Query Service, Merge Policies, and Segmentation categories, in addition to the existing Schemas and Identities, Ingestion, Automatic Data Expiration, and Datasets categories. |
+| [Additional health checks](/help/run-and-operate/health-checks/overview.md) | Health checks now include additional checks for the new Query Service, Merge Policies, and Segmentation categories, in addition to the existing Schemas and Identities, Ingestion, Automatic Data Expiration, and Datasets categories. |
 
 {style="table-layout:auto"}
 

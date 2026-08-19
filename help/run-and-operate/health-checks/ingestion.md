@@ -37,5 +37,5 @@ For more information, see the [guardrails for data ingestion](/help/ingestion/gu
 
 ## Next steps {#next-steps}
 
-* Return to the [health checks overview](/help/run-and-operate/health-checks.md) to explore other check categories.
+* Return to the [health checks overview](/help/run-and-operate/health-checks/overview.md) to explore other check categories.
 * Review [job schedules](/help/run-and-operate/job-schedules.md) to identify which datasets need batch count reduction.
