@@ -42,13 +42,36 @@ Before you connect [!DNL Google Ads] (V2) to Experience Platform, make sure that
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. Locate the [!DNL Google Ads] source card under **[!UICONTROL Advertising]** and then select **[!UICONTROL Add data]**.
 
+>[!IMPORTANT]
+>
+>The **[!UICONTROL Advertising]** category displays two [!DNL Google Ads] source cards. Select the card that does not display a **[!UICONTROL Beta]** label. The card labeled **[!UICONTROL Beta]** connects to the previous version of the [!DNL Google Ads] source.
+
 The **[!UICONTROL Connect Google Ads account]** page appears. On this page, you can either create a new account connection or use an existing account connection.
+
+![](../../../../images/tutorials/create/google-ads/catalog.png)
 
 ### Use an existing account
 
 To use an existing account connection, select **[!UICONTROL Existing account]** and select the [!DNL Google Ads] account that you want to use. When finished, select **[!UICONTROL Next]**.
 
+![](../../../../images/tutorials/create/google-ads/existing.png)
+
 ### Create a new account
 
 To create a new [!DNL Google Ads] account connection, select **[!UICONTROL New account]**. Next, enter a name for the connection and an optional description. When finished, select **[!UICONTROL Connect to source]** and allow a few moments for the connection to establish.
 
+![](../../../../images/tutorials/create/google-ads/new.png)
+
+## Authorize your [!DNL Google] account
+
+Once your account is connected, you are prompted to select the [!DNL Google] account that you would like to use for [!DNL Google Ads].
+
+When complete, select **[!UICONTROL Next]** to proceed.
+
+## Provide dataflow details
+
+Provide a name and optional description for your dataflow. You can also configure alerts for your dataflow during this step.
+
+## Review your dataflow
+
+Review your dataflow. Use the [!UICONTROL Connection] panel to review details of your dataflow, including its corresponding account name, source platform, and path to file. Use the [!UICONTROL Assign dataset and map fields] panel to confirm that your dataset is correctly assigned.

@@ -16,7 +16,7 @@ The connector maps [!DNL Google Ads] data to standardized paid media Experience 
 | --- | --- | --- |
 | Cross-channel advertising analysis | Compare [!DNL Google Ads] performance with Meta Ads and other paid media channels. | Ingests [!DNL Google Ads] data into common paid media XDM structures with standardized account, campaign, ad group, ad, asset, experience, and metric identifiers. |
 | Media mix modeling and attribution | Evaluate the contribution of paid media to business outcomes. | Provides campaign and advertising performance data, including impressions, clicks, spend, conversions, and conversion value for downstream analysis. |
-| Campaign and budget optimization | Understand which campaigns, bidding strategies, and targeting configurations are driving results. | Ingests campaign metadata, budgets, bidding strategies, channel types, statuses, dates, and selected targeting criteria. |
+| Campaign and budget optimization | Understand which campaigns, bidding strategies, and targeting configurations produce the best results. | Ingests campaign metadata, budgets, bidding strategies, channel types, statuses, dates, and selected targeting criteria. |
 | Creative and asset performance | Identify which creative assets, ad formats, and experiences perform best. | Ingests ad-level creative metadata, asset associations, asset types, asset performance labels, and derived experience compositions. |
 | Performance Max analysis | Analyze Performance Max asset groups and their associated assets. | Uses Performance Max asset-group data to represent asset-group performance and experience relationships where [!DNL Google Ads] does not expose a traditional ad-level structure. |
 | Customer journey analysis | Relate advertising engagement to web, commerce, CRM, and other customer events. | Makes [!DNL Google Ads] data available in Experience Platform for use with downstream analytics and activation workflows. |
@@ -31,21 +31,14 @@ You must have both **[!UICONTROL View Sources]** and **[!UICONTROL Manage Source
 
 Contact your product administrator if you do not have the required permissions. For more information, read the [access control UI guide](../../../access-control/ui/overview.md).
 
-### Configure a Google Cloud project
-
-Create or select a Google Cloud project for the connector and enable the [!DNL Google Ads] API.
-
-The project must have OAuth 2.0 credentials configured for the authorization flow used by the connector.
-
 ### Configure [!DNL Google Ads] API access
+
+Experience Platform manages the OAuth 2.0 authorization flow for [!DNL Google Ads] (V2). You do not create a Google Cloud project, OAuth client, or refresh token.
 
 You must have:
 
 - A valid [!DNL Google Ads] developer token.
 - Access to the [!DNL Google Ads] advertiser account that you want to ingest.
-- An OAuth 2.0 client ID and client secret.
-- A [!DNL Google Ads] refresh token.
-- The `https://www.googleapis.com/auth/adwords` OAuth scope.
 - Permission to access the relevant advertiser accounts through [!DNL Google Ads] or a [!DNL Google Ads] manager account.
 
 ### Manager-account access
@@ -54,7 +47,7 @@ If the advertiser account is accessed through a [!DNL Google Ads] manager accoun
 
 The `loginCustomerId` is not required when the OAuth-authorized user can directly access the target advertiser account and no manager hierarchy is needed.
 
-[!DNL Google Ads] (V2) can enumerate accessible accounts, identify manager accounts, traverse the manager-account hierarchy, and resolve the advertiser accounts available for ingestion.
+[!DNL Google Ads] (V2) enumerates accessible accounts, identifies manager accounts, traverses the manager-account hierarchy, and resolves the advertiser accounts available for ingestion.
 
 ### Gather required credentials
 
@@ -69,9 +62,9 @@ To connect [!DNL Google Ads] (V2) to Experience Platform, provide the following 
 
 ## Authentication and account discovery
 
-[!DNL Google Ads] (V2) uses OAuth 2.0 to authenticate requests to the [!DNL Google Ads] API.
+[!DNL Google Ads] (V2) uses OAuth 2.0 to authorize access to the [!DNL Google Ads] API. Experience Platform manages the authorization flow, so you do not configure OAuth scopes or permissions on the [!DNL Google Ads] side.
 
-After authorization, Experience Platform uses the supplied OAuth credentials and developer token to access [!DNL Google Ads] reporting resources. For manager-account configurations, the connector resolves the account hierarchy and identifies the advertiser accounts available for ingestion.
+After you authorize your account, Experience Platform uses your developer token to access [!DNL Google Ads] reporting resources. For manager-account configurations, the connector resolves the account hierarchy and identifies the advertiser accounts available for ingestion.
 
 The account-discovery workflow includes the following operations:
 
@@ -128,11 +121,11 @@ Performance metrics are generally retrieved using date-based segments such as `s
 
 The V2 mapping defines platform-qualified identifiers for paid media entities. For example:
 
-- Account identifiers are derived from the [!DNL Google Ads] customer ID.
+- The connector derives account identifiers from the [!DNL Google Ads] customer ID.
 - Campaign identifiers combine the [!DNL Google Ads] customer ID and campaign ID.
 - Ad group and ad identifiers include their parent hierarchy.
 - Asset identifiers combine the [!DNL Google Ads] customer ID and asset ID.
-- Experience identifiers are derived from creative-combination or asset-group context.
+- The connector derives experience identifiers from creative-combination or asset-group context.
 - Hierarchy paths represent the relationship between account, campaign, ad group, ad, experience, and asset entities.
 
 ### Performance Max data
@@ -144,7 +137,7 @@ For Performance Max data:
 - `asset_group` represents the primary grouping of assets.
 - `asset_group_asset` represents asset-to-group relationships.
 - Asset-group metrics provide the context required to analyze asset performance.
-- Asset groups may act as an experience proxy where a native experience entity is not available.
+- Asset groups act as an experience proxy when a native experience entity is not available.
 
 ## Data limitations and considerations
 
@@ -154,27 +147,27 @@ Consider the following limitations when planning your [!DNL Google Ads] (V2) imp
 
 [!DNL Google Ads] does not expose every metric for every resource. For example, some resources do not support metrics or segments, while others support only a limited set of metrics.
 
-Metric availability can also vary between ad, asset, experience, campaign, and Performance Max queries.
+Metric availability also varies between ad, asset, experience, campaign, and Performance Max queries.
 
 ### Derived experience records
 
 [!DNL Google Ads] does not provide a single universal experience entity equivalent to the experience model used by the paid media XDM schemas.
 
-Experience records are therefore derived from available ad, asset-combination, and asset-group data.
+The connector derives experience records from available ad, asset-combination, and asset-group data.
 
 ### Video metadata
 
 The [!DNL Google Ads] API provides video identifiers and related asset references. However, some media properties, such as video duration, codec, bitrate, frame rate, and audio presence, are not directly available through the [!DNL Google Ads] API.
 
-These fields may be null unless an approved enrichment service is added.
+These fields are null unless an approved enrichment service is added.
 
 ### Asset availability
 
-Asset metadata and performance support vary by asset type. For example, image and text metadata may be available directly, while some video properties require additional enrichment.
+Asset metadata and performance support vary by asset type. For example, image and text metadata is available directly, while some video properties require additional enrichment.
 
 ### Google-specific fields
 
-[!DNL Google Ads] concepts that do not have a direct equivalent in the common paid media XDM model should be represented using additionalDetails or left null according to the approved mapping.
+[!DNL Google Ads] concepts that do not have a direct equivalent in the common paid media XDM model are represented using additionalDetails, or left null, according to the approved mapping.
 
 ### Enum mappings
 
