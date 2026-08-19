@@ -31,7 +31,7 @@ To access health checks from the [!UICONTROL Experience Platform] UI:
 
 The health checks dashboard displays a summary of your most recent scan results.
 
-![Health checks dashboard showing objects evaluated, scan results, and identified issues](assets/health-checks/dashboard.png)
+![Health checks dashboard showing objects evaluated, scan results, and identified issues](../assets/health-checks/dashboard.png){zoomable="yes"}
 
 ## Understanding the dashboard {#understanding-dashboard}
 
@@ -61,14 +61,14 @@ Health checks currently evaluate checks across eight categories. Select a catego
 
 | Category | Description | Checks |
 | --- | --- | --- |
-| [Schemas and identities](health-checks/schemas-and-identities.md) | Data modeling and identity configuration issues across schemas and identity namespaces. | 8 |
-| [TTL](health-checks/ttl.md) | Data expiration and lookback window configuration for profiles, datasets, and segments. | 4 |
-| [Segmentation](health-checks/segmentation.md) | Audience counts and evaluation methods approaching sandbox limits. | 3 |
-| [Ingestion](health-checks/ingestion.md) | Batch ingestion volume approaching platform guardrails. | 1 |
-| [Datasets](health-checks/datasets.md) | Profile-enabled dataset counts approaching platform limits. | 1 |
-| [Destinations](health-checks/destinations.md) | Destination activation schedule configuration issues. | 1 |
-| [Merge policies](health-checks/merge-policies.md) | Merge policy naming and definition issues that affect segmentation and activation. | 3 |
-| [Query Service](health-checks/query-service.md) | Scheduled query failures and performance degradation. | 2 |
+| [Schemas and identities](schemas-and-identities.md) | Data modeling and identity configuration issues across schemas and identity namespaces. | 8 |
+| [TTL](ttl.md) | Data expiration and lookback window configuration for profiles, datasets, and segments. | 4 |
+| [Segmentation](segmentation.md) | Audience counts and evaluation methods approaching sandbox limits. | 3 |
+| [Ingestion](ingestion.md) | Batch ingestion volume approaching platform guardrails. | 1 |
+| [Datasets](datasets.md) | Profile-enabled dataset counts approaching platform limits. | 1 |
+| [Destinations](destinations.md) | Destination activation schedule configuration issues. | 1 |
+| [Merge policies](merge-policies.md) | Merge policy naming and definition issues that affect segmentation and activation. | 3 |
+| [Query Service](query-service.md) | Scheduled query failures and performance degradation. | 2 |
 
 These checks target the most impactful data modeling, data lifecycle, segmentation, ingestion, and activation issues across the platform.
 
