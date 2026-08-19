@@ -31,11 +31,11 @@ When you select the **[!UICONTROL Batches Per Day (Profile)]** card, a detail pa
 * **[!UICONTROL Experience League Documentation]**: A link to guardrails for data ingestion.
 * **[!UICONTROL Recommendation]**: Consolidate ingestion to no more than one batch per dataset per 24 hours. Refer to the [!UICONTROL Job Schedules] dashboard to identify which datasets need batch count reduction.
 
-![Batches Per Day (Profile) detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/batches-per-day-profile-detail.png)
+![Batches Per Day (Profile) detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/batches-per-day-profile-detail.png){zoomable="yes"}
 
 For more information, see the [guardrails for data ingestion](/help/ingestion/guardrails.md).
 
 ## Next steps {#next-steps}
 
-* Return to the [health checks overview](/help/run-and-operate/health-checks.md) to explore other check categories.
+* Return to the [health checks overview](/help/run-and-operate/health-checks/overview.md) to explore other check categories.
 * Review [job schedules](/help/run-and-operate/job-schedules.md) to identify which datasets need batch count reduction.

@@ -32,7 +32,7 @@ When you select the **[!UICONTROL Default Merge Policy Naming]** card, a detail 
 * **[!UICONTROL General areas of impact]**: Segmentation, profile retrieval, and activation correctness.
 * **[!UICONTROL Experience League Documentation]**: A link to guardrails for merge policies.
 
-![Default Merge Policy Naming detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/default-merge-policy-naming-detail.png)
+![Default Merge Policy Naming detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/default-merge-policy-naming-detail.png){zoomable="yes"}
 
 For more information, see the [merge policies overview](/help/profile/merge-policies/overview.md) and [guardrails for merge policies](/help/profile/guardrails.md).
 
@@ -53,7 +53,7 @@ When you select the **[!UICONTROL Duplicate Merge Policy Definitions]** card, a 
 * **[!UICONTROL General areas of impact]**: Batch segmentation and subsequent activation.
 * **[!UICONTROL Experience League Documentation]**: A link to guardrails for merge policies.
 
-![Duplicate Merge Policy Definitions detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/duplicate-merge-policy-definitions-detail.png)
+![Duplicate Merge Policy Definitions detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/duplicate-merge-policy-definitions-detail.png){zoomable="yes"}
 
 For more information, see the [merge policies overview](/help/profile/merge-policies/overview.md) and [guardrails for merge policies](/help/profile/guardrails.md).
 
@@ -74,11 +74,11 @@ When you select the **[!UICONTROL Duplicate Merge Policy Names]** card, a detail
 * **[!UICONTROL General areas of impact]**: Segmentation, profile lookup, and activation.
 * **[!UICONTROL Experience League Documentation]**: A link to the merge policies overview.
 
-![Duplicate Merge Policy Names detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/duplicate-merge-policy-names-detail.png)
+![Duplicate Merge Policy Names detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/duplicate-merge-policy-names-detail.png){zoomable="yes"}
 
 For more information, see the [merge policies overview](/help/profile/merge-policies/overview.md).
 
 ## Next steps {#next-steps}
 
-* Return to the [health checks overview](/help/run-and-operate/health-checks.md) to explore other check categories.
+* Return to the [health checks overview](/help/run-and-operate/health-checks/overview.md) to explore other check categories.
 * Review the [merge policies overview](/help/profile/merge-policies/overview.md) to manage your merge policies.

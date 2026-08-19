@@ -68,7 +68,7 @@ A common example is batch ingestion jobs running at the same time as a scheduled
 
 When [!UICONTROL Job Schedules] detects segmentation running too close to a scheduled destination activation, a warning indicator appears on the **[!UICONTROL Destination activation]** summary card. Select the warning indicator to open a panel showing the number of detected occurrences, a description of the timing conflict, recommendations, and a table of affected destinations.
 
-![The Segmentation too close to scheduled destination activation panel in Job Schedules, showing a description of the timing conflict, recommendations, and a table of affected destinations.](assets/job-schedules/segmentation-too-close-to-activation.png)
+![The Segmentation too close to scheduled destination activation panel in Job Schedules, showing a description of the timing conflict, recommendations, and a table of affected destinations.](assets/job-schedules/segmentation-too-close-to-activation.png){zoomable="yes"}
 
 ## Scheduled job density {#scheduled-density}
 
@@ -99,7 +99,7 @@ This pattern typically includes:
 
 When [!UICONTROL Job Schedules] detects profile ingestion jobs running too close to a scheduled segmentation run, a warning indicator appears on the **[!UICONTROL Segmentation]** summary card. Select the warning indicator to open a panel showing the number of detected occurrences, a description of the timing conflict, recommendations, and a table of affected datasets.
 
-![The Profile ingestion too close to segmentation panel in Job Schedules, showing a blue vertical line marking the segmentation run time, a description of the timing conflict, recommendations, and a table of affected datasets.](assets/job-schedules/profile-ingestion-too-close-to-segmentation.png)
+![The Profile ingestion too close to segmentation panel in Job Schedules, showing a blue vertical line marking the segmentation run time, a description of the timing conflict, recommendations, and a table of affected datasets.](assets/job-schedules/profile-ingestion-too-close-to-segmentation.png){zoomable="yes"}
 
 ## Profile ingestion daily limit {#profile-ingestion-daily-limit}
 
@@ -113,7 +113,7 @@ The chart uses color-coded bars to indicate where counts fall relative to the li
 * **Orange bars (72 to 89 runs)**: Approaching the daily limit.
 * **Green bars (below 72 runs)**: Within the acceptable range.
 
-![The Daily number of profile ingestion runs chart in Job Schedules, showing daily run counts color-coded as red bars that exceeded the 90-run daily limit, orange bars in the warning zone between 72 and 89 runs, and one green bar within the acceptable range.](assets/job-schedules/profile-ingestion-daily-limit.png)
+![The Daily number of profile ingestion runs chart in Job Schedules, showing daily run counts color-coded as red bars that exceeded the 90-run daily limit, orange bars in the warning zone between 72 and 89 runs, and one green bar within the acceptable range.](assets/job-schedules/profile-ingestion-daily-limit.png){zoomable="yes"}
 
 **Why this is problematic**:
 
