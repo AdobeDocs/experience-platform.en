@@ -7,3 +7,5 @@ mcp-server.log
 .claude/
 usage-agents.log
 .playwright-mcp/
+.github/copilot-instructions.md
+AGENTS.md
