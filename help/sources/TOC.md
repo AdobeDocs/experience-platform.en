@@ -116,6 +116,7 @@ role: Developer
     - [PathFactory](connectors/marketing-automation/pathfactory.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
     - [Salesforce Marketing Cloud (V2)](connectors/marketing-automation/sfmc.md)
+    - {hide-from-toc} [WhatsApp Business](connectors/marketing-automation/whatsapp-business.md)
   - Payments {#payments}
     - [Square](connectors/payments/square.md)
     - [Stripe](connectors/payments/stripe.md)
@@ -340,6 +341,7 @@ role: Developer
       - [Relay Connector](tutorials/ui/create/marketing-automation/relay-connector.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - [Salesforce Marketing Cloud (V2)](tutorials/ui/create/marketing-automation/sfmc.md)
+      - {hide-from-toc} [WhatsApp Business](tutorials/ui/create/marketing-automation/whatsapp-business.md)
     - Payments {#payments}
       - [Square](tutorials/ui/create/payments/square.md)
       - [Stripe](tutorials/ui/create/payments/stripe.md)
