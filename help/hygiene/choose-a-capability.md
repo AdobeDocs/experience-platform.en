@@ -6,7 +6,7 @@ keywords: Experience Platform;data lifecycle;record delete;dataset expiration;da
 ---
 # Choose the right Data Lifecycle Management capability
 
-Advanced Data Lifecycle Management helps you manage the data you store in Adobe Experience Platform by removing or expiring data that is no longer useful. In the product navigation, it's called [!UICONTROL Data Lifecycle]. Use this guide to understand why managing your data lifecycle matters and to choose the right capability for your goal. For step-by-step instructions, follow the UI and API links in each section.
+To manage the data you store in Adobe Experience Platform, use Advanced Data Lifecycle Management to remove or expire data that is no longer useful. In the product navigation, these capabilities are available under [!UICONTROL Data Lifecycle]. Use this guide to understand why managing your data lifecycle matters and to choose the right capability for your goal. For step-by-step instructions, follow the UI and API links in each section.
 
 This guide is for administrators and developers who manage data volumes, retention, and entitlements in Experience Platform. It assumes you are familiar with core Experience Platform concepts, including datasets, [identities](../identity-service/home.md), [profiles](../profile/home.md), and sandboxes. The availability and permissions required for each action are described on the linked UI and API pages.
 
@@ -50,11 +50,11 @@ These capabilities fall into two groups. Record delete and dataset expiration ar
 
 >[!IMPORTANT]
 >
->Data Lifecycle Management capabilities—including record delete, dataset expiration, Experience Event TTL, and Pseudonymous Profile TTL—manage your data for operational reasons such as data cleansing, removing anonymous data, and data minimization. None of them are for privacy or regulatory compliance. To fulfill data subject rights requests under regulations such as the General Data Protection Regulation (GDPR), use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead.
+>Use Data Lifecycle Management capabilities for operational data management, such as data cleansing, removing anonymous data, and data minimization, not for privacy or regulatory compliance. To fulfill data subject rights requests under regulations such as the General Data Protection Regulation (GDPR), use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead.
 
 ## Record delete {#record-delete}
 
-When you need to remove specific individuals' data for operational reasons such as data cleansing, removing anonymous data, or data minimization, use record delete. It removes individual records from Experience Platform based on their primary identity. By default, this affects the data lake, Identity Service, and Real-Time Customer Profile. Record delete is not a compliance tool; to fulfill data subject rights requests, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md).
+When you need to remove specific individuals' data for operational reasons such as data cleansing, removing anonymous data, or data minimization, use record delete. It removes individual records from Experience Platform based on their primary identity. By default, this affects the data lake, Identity Service, and Real-Time Customer Profile. Record delete is not a compliance tool. To fulfill data subject rights requests, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md).
 
 >[!IMPORTANT]
 >
@@ -65,12 +65,12 @@ Record delete acts only on the primary identity defined in each dataset's schema
 * Only the primary identity is matched. Records cannot be targeted by secondary identities.
 * Records without a populated primary identity are skipped.
 * Data ingested before the primary identity was configured in the dataset's schema cannot be deleted this way.
-* A dataset with an active dataset expiration cannot also receive a record delete request until that expiration completes.
-* For relational-schema datasets with change data capture, deleted records may be re-ingested unless the source is updated accordingly; see [relational schema considerations](./ui/record-delete.md#relational-record-delete).
+* A dataset with a scheduled or in-progress dataset expiration cannot receive a record delete request. Cancel the scheduled expiration or wait until the expiration completes before you submit the record delete request.
+* For relational-schema datasets with change data capture, deleted records may be re-ingested unless the source is updated accordingly. For requirements and limitations that apply to these datasets, see [relational schema considerations](./ui/record-delete.md#relational-record-delete).
 
 Depending on your organization's configuration, you can delete records from a single dataset or from all datasets.
 
-After you submit a request, Experience Platform batches it before processing; processing completes within the service level agreement (SLA) for your entitlement. For the processing stages and how long each takes, see [Data Lifecycle processing timelines](./data-lifecycle-processing-timelines.md). Record delete requests are also subject to daily and monthly identifier submission limits; for the current limits, see [identifier submission quotas](./ui/record-delete.md#quotas).
+After you submit a request, Experience Platform batches it before processing. Processing completes within the service level agreement (SLA) for your entitlement. For the processing stages and how long each takes, see [Data Lifecycle processing timelines](./data-lifecycle-processing-timelines.md). Record delete requests are also subject to daily and monthly identifier submission limits. For the current limits, see [identifier submission quotas](./ui/record-delete.md#quotas).
 
 You can create record delete requests in the [!UICONTROL Data Lifecycle] workspace or with the API. See [Create a record delete request](./ui/record-delete.md) for the UI workflow and the [work order endpoint guide](./api/workorder.md) for the API.
 
@@ -92,7 +92,7 @@ When you want to trim stale data from the Profile store automatically over time,
 
 ### Experience Event TTL {#experience-event-ttl}
 
-Experience Event TTL (also called Experience Event expiration) applies at the dataset level and removes event data once it reaches the age that you set. It only removes events, not profile attributes. If a profile has no attributes of its own, it stops existing once all of its events are removed. The minimum expiration is one day. This setting requires Adobe to enable it for your organization; contact your Adobe account team or Customer Care. For how to configure it, see [Experience Event expirations](../profile/event-expirations.md).
+Experience Event TTL (also called Experience Event expiration) applies at the dataset level and removes event data once it reaches the age that you set. It only removes events, not profile attributes. If a profile has no attributes of its own, it stops existing once all of its events are removed. The minimum expiration is one day. This setting requires Adobe to enable it for your organization. Contact your Adobe account team or Customer Care to enable Experience Event TTL. For configuration guidance, see [Experience Event expirations](../profile/event-expirations.md).
 
 >[!NOTE]
 >
