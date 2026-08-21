@@ -12,10 +12,11 @@ This guide is for administrators and developers who manage data volumes, retenti
 
 ## Why manage your data lifecycle {#why-manage}
 
-Adobe Experience Platform ingests data continuously, and the amount of data you store grows over time. As those volumes grow, your data can exceed your licensing entitlements. Managing your data lifecycle keeps the data in Experience Platform aligned with your active use cases, so you retain what delivers value and remove what no longer does.
+Adobe Experience Platform ingests data continuously, and the amount of data you store grows over time. Managing your data lifecycle keeps that data aligned with your active use cases, so you retain what continues to deliver value and remove what no longer does. A well-defined retention strategy also helps you meet your organization's data retention requirements and keep data volumes within your licensing entitlements.
 
 When data accumulates beyond what your use cases require, you face several risks:
 
+* **Reduced relevance:** Retaining signals beyond the period when they remain useful can reduce the relevance of segmentation, activation, and personalization.
 * **Cost pressure:** Growing data volumes can push you toward or beyond your licensing entitlements, which can lead to overages.
 * **Degraded performance:** Excess data increases system load and can slow processing.
 * **Privacy exposure:** Retaining data longer than it is useful increases privacy risk and regulatory exposure.
@@ -29,7 +30,7 @@ A key part of managing your data lifecycle is matching data to the workflow it s
 | Analytical | Long-term retention with slower access, held in the data lake | Historical analysis, reporting, data science |
 | Engagement | Real-time or near-real-time access, held in the Profile store | Segmentation, activation, personalization |
 
-Aligning each dataset to the workflow it supports helps you keep only the data you need in the Profile store, where it counts toward your license usage, while retaining longer-lived data in the data lake.
+Align each dataset to the workflow it supports and retain the data only as long as that workflow requires it. Both Profile and data lake storage are subject to licensing entitlements, which vary by the products your organization has purchased. Confirm the entitlements available to your organization when you plan where data is stored and how long it is retained.
 
 ![Diagram showing Adobe Experience Platform splitting into two workflows: Analytical Workflows generating data-driven insights, and Engagement Workflows powered by Real-time Customer Profile.](./images/choose-a-capability/analytical-engagement-workflows.png){width="600" zoomable="yes"}
 
