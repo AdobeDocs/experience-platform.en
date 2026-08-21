@@ -92,7 +92,7 @@ When you want to trim stale data from the Profile store automatically over time,
 
 ### Experience Event TTL {#experience-event-ttl}
 
-Experience Event TTL (also called Experience Event expiration) applies at the dataset level and removes event data once it reaches the age that you set. It only removes events, not profile attributes. If a profile has no attributes of its own, it stops existing once all of its events are removed. The minimum expiration is one day. This setting requires Adobe to enable it for your organization. Contact your Adobe account team or Customer Care to enable Experience Event TTL. For configuration guidance, see [Experience Event expirations](../profile/event-expirations.md).
+Experience Event TTL (also called Experience Event expiration) applies at the dataset level and removes event data after it reaches the age that you set. It removes events only, not profile attributes. If a profile has no attributes of its own, the profile stops existing after all of its events are removed. The minimum expiration period is one day. Adobe must enable Experience Event TTL for your organization before you can configure the setting. Contact your Adobe account team or Customer Care to request access. After Adobe enables the capability, see [Experience Event expirations](../profile/event-expirations.md) for configuration guidance.
 
 >[!NOTE]
 >
@@ -100,7 +100,7 @@ Experience Event TTL (also called Experience Event expiration) applies at the da
 
 ### Pseudonymous Profile TTL {#pseudonymous-profile-ttl}
 
-Pseudonymous Profile TTL (Pseudonymous Profile data expiration) applies at the sandbox level and removes pseudonymous (unknown) profiles that have had no activity for the period that you set. It removes both events and profile records. This setting is self-serve, with a default expiration of 14 days in production sandboxes and 3 days in development sandboxes. Removal runs on a recurring cycle rather than instantly, so expect a short delay after a profile becomes eligible. For how to configure it, see [Pseudonymous profile data expiration](../profile/pseudonymous-profiles.md).
+Pseudonymous Profile TTL (also called Pseudonymous Profile data expiration) applies at the sandbox level and removes pseudonymous (unknown) profiles after they have been inactive for the period that you set. It removes both events and profile records. You can configure the setting yourself, with a default expiration period of 14 days for production sandboxes and 3 days for development sandboxes. Because removal runs on a recurring cycle, eligible profiles are not removed immediately. For configuration guidance, see [Pseudonymous profile data expiration](../profile/pseudonymous-profiles.md).
 
 The two settings differ in scope and in what they remove:
 
