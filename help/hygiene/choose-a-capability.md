@@ -93,7 +93,7 @@ When you want to trim stale data from the Profile store automatically over time,
 
 ### Experience Event TTL {#experience-event-ttl}
 
-Experience Event TTL (also called Experience Event expiration) applies at the dataset level and removes event data after it reaches the age that you set. It removes events only, not profile attributes. If a profile has no attributes of its own, the profile stops existing after all of its events are removed. The minimum expiration period is one day. Adobe must enable Experience Event TTL for your organization before you can configure the setting. Contact your Adobe account team or Customer Care to request access. After Adobe enables the capability, see [Experience Event expirations](../profile/event-expirations.md) for configuration guidance.
+Experience Event TTL (also called Experience Event expiration) applies at the dataset level and controls how long event data is retained in the Profile store. It removes events only, not profile attributes. If a profile has no attributes of its own, the profile stops existing after all of its events are removed. The minimum retention period is one day. You can configure Profile retention from the [!UICONTROL Datasets] workspace. See [Set data retention policy](../catalog/datasets/user-guide.md#data-retention-policy) for configuration guidance.
 
 >[!NOTE]
 >
@@ -117,7 +117,7 @@ The two settings complement each other. Set Experience Event TTL on your dataset
 >
 >Data removed by either setting is permanently deleted and cannot be restored.
 
-Experience Event TTL and Pseudonymous Profile TTL control data in the Profile store, which serves engagement use cases. To control how long the same event data is retained in the data lake for analytical use, set a data lake retention period instead. Data lake retention is independent, so you can keep events for long-term analysis after they expire from the Profile store. See [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+Experience Event TTL and Pseudonymous Profile TTL control data in the Profile store, which serves engagement use cases. To control how long the same event data is retained in the data lake for analytical use, configure a separate data lake retention period. For ExperienceEvent datasets, Profile and data lake retention are independent, so you can retain events for long-term analysis after they expire from the Profile store. You can configure these retention periods from the [!UICONTROL Datasets] workspace. See [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) for data lake retention guidance.
 
 ## Plan your retention strategy {#plan-retention}
 
