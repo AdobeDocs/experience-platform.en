@@ -118,7 +118,7 @@ The two settings complement each other. Set Experience Event TTL on your dataset
 >
 >Data removed by either setting is permanently deleted and cannot be restored.
 
-<!-- Experience Event TTL controls how long events are retained in the Profile store. An ExperienceEvent dataset can also have a separate data lake retention policy. Both policies are configured from the same [!UICONTROL Set data retention policy] workflow in the [!UICONTROL Datasets] workspace. -->In addition to Profile retention, an ExperienceEvent dataset can have a separate data lake retention policy. Both policies are configured from the same [!UICONTROL Set data retention policy] workflow in the [!UICONTROL Datasets] workspace.
+Experience Event TTL is not the only retention option available for an ExperienceEvent dataset. The same dataset can also have a separate data lake retention policy, configured from the same [!UICONTROL Set data retention policy] workflow in the [!UICONTROL Datasets] workspace.
 
 Use the following guidance to distinguish the available retention options:
 
@@ -159,4 +159,4 @@ For guidance on tracking and managing your license entitlements, see [Data manag
 
 ## Next steps {#next-steps}
 
-Once you've chosen a capability, use the linked implementation guidance in its section to carry it out. If you're implementing record delete or dataset expiration through the API, see [best practices for record delete and dataset expiration requests](./best-practices.md) for guidance on batching requests, handling throttling, and monitoring work order status. For broader Data Lifecycle orientation, see the [Data Lifecycle UI guide](./ui/overview.md) or the [Data Hygiene API guide](./api/overview.md).
+Once you've chosen a capability, use the linked implementation guidance in its section to carry it out. Record delete and dataset expiration are submitted as asynchronous work orders, so if you're implementing either through the API, see [best practices for record delete and dataset expiration requests](./best-practices.md) for guidance on batching requests, handling throttling, and monitoring work order status. For broader Data Lifecycle orientation, see the [Data Lifecycle UI guide](./ui/overview.md) or the [Data Hygiene API guide](./api/overview.md).
