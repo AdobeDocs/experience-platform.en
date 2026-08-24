@@ -6,7 +6,7 @@ keywords: Experience Platform;data lifecycle;record delete;dataset expiration;da
 ---
 # Choose the right Data Lifecycle Management capability
 
-To manage the data you store in Adobe Experience Platform, use Advanced Data Lifecycle Management to remove or expire data that is no longer useful. In the product navigation, these capabilities are available under [!UICONTROL Data Lifecycle]. Use this guide to understand why managing your data lifecycle matters and to choose the right capability for your goal. For step-by-step instructions, follow the UI and API links in each section.
+To manage the data you store in Adobe Experience Platform, use Advanced Data Lifecycle Management to remove or expire data that is no longer useful. Use this guide to understand why managing your data lifecycle matters and to choose the right capability for your goal. For step-by-step instructions, follow the implementation links in each section.
 
 This guide is for administrators and developers who manage data volumes, retention, and entitlements in Experience Platform. It assumes you are familiar with core Experience Platform concepts, including datasets, [identities](../identity-service/home.md), [profiles](../profile/home.md), and sandboxes. The availability and permissions required for each action are described on the linked UI and API pages.
 
@@ -21,7 +21,7 @@ When data accumulates beyond what your use cases require, you face several risks
 * **Degraded performance:** Excess data increases system load and can slow processing.
 * **Privacy exposure:** Retaining data longer than it is useful increases privacy risk and regulatory exposure.
 
-To avoid these outcomes, retain data only as long as it supports an active use case. Apply the same principle at ingestion by using [ingestion filters](../landing/license-usage-and-guardrails/data-management-best-practices.md#ingestion-filters) to bring in only the data your use cases require. Behavioral data, such as event data, typically consumes far more storage than record data, so it is usually where unmanaged growth has the greatest impact.
+To avoid these outcomes, retain data only as long as it supports an active use case. Apply the same principle at ingestion by using [ingestion filters](../landing/license-usage-and-guardrails/data-management-best-practices.md#ingestion-filters) to bring in only the data your use cases require. Behavioral data, such as event data, typically consumes far more storage than record data, so unmanaged behavioral data usually has the greatest impact on storage growth.
 
 A key part of managing your data lifecycle is matching data to the workflow it serves. Experience Platform stores data in two repositories that serve different purposes:
 
@@ -38,16 +38,17 @@ For guidance on tracking and managing your license entitlements, see [Data manag
 
 ## Choose the right capability {#choose-a-capability}
 
-Your data management goal determines which capability to use. The following table maps common goals to the capability that fits. Each capability is described in the section that follows.
+Your data management goal determines which retention or deletion option to use. The following table maps common goals to the option that fits. Each option is described in the section that follows.
 
-| Your goal | Capability |
+| Your goal | Option |
 | --- | --- |
 | Remove specific individuals' records, matched by identity | [Record delete](#record-delete) |
 | Delete an entire dataset on a date you schedule | [Dataset expiration](#dataset-expiration) |
-| Automatically remove stale events from a dataset over time | [Experience Event TTL](#experience-event-ttl) |
+| Automatically remove stale Experience Events from the Profile store over time | [Experience Event TTL](#experience-event-ttl) |
 | Automatically remove inactive pseudonymous (unknown) profiles | [Pseudonymous Profile TTL](#pseudonymous-profile-ttl) |
+| Automatically remove old Experience Event records from the data lake while keeping the dataset | [Data lake retention](#automatic-expiration) |
 
-These capabilities fall into two groups. Record delete and dataset expiration are targeted, one-time actions that you submit when you need them. Experience Event TTL and Pseudonymous Profile TTL are automated settings that remove data on an ongoing basis once you configure them. If your goal requires more than one of these—for example, removing specific records while also trimming ongoing event growth—combine capabilities as described in [Plan your retention strategy](#plan-retention).
+These capabilities fall into two groups. Record delete and dataset expiration are targeted, one-time actions that you submit when you need them. Experience Event TTL and Pseudonymous Profile TTL are automated settings that remove data on an ongoing basis once you configure them. Data lake retention is a related, separately configured setting that follows the same automated pattern. If your goal requires more than one of these—for example, removing specific records while also trimming ongoing event growth—combine capabilities as described in [Plan your retention strategy](#plan-retention).
 
 >[!IMPORTANT]
 >
@@ -55,7 +56,7 @@ These capabilities fall into two groups. Record delete and dataset expiration ar
 
 ## Record delete {#record-delete}
 
-When you need to remove specific individuals' data for operational reasons such as data cleansing, removing anonymous data, or data minimization, use record delete. It removes individual records from Experience Platform based on their primary identity. By default, this affects the data lake, Identity Service, and Real-Time Customer Profile. Record delete is not a compliance tool. To fulfill data subject rights requests, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md).
+When you need to remove specific individuals' data for operational reasons such as data cleansing, removing anonymous data, or data minimization, use record delete. It removes individual records from Experience Platform based on their primary identity. By default, record delete affects the data lake, Identity Service, and Real-Time Customer Profile. Record delete is not a compliance tool. To fulfill data subject rights requests, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md).
 
 >[!IMPORTANT]
 >
@@ -77,11 +78,11 @@ You can create record delete requests in the [!UICONTROL Data Lifecycle] workspa
 
 ## Dataset expiration {#dataset-expiration}
 
-When you need to retire an entire dataset that is no longer needed for your use cases, use dataset expiration. It deletes the dataset on a date that you schedule, and you can modify or cancel the scheduled date at any time before it executes. When the dataset reaches its expiration date, the data lake, Identity Service, and Real-Time Customer Profile each remove the dataset's contents, and the expiration completes once all three services finish.
+When you need to retire an entire dataset that is no longer needed for your use cases, use dataset expiration. It deletes the dataset on a date that you schedule, and you can modify or cancel the scheduled expiration at any time before the expiration process begins. When the dataset reaches its expiration date, the data lake, Identity Service, and Real-Time Customer Profile each remove the dataset's contents, and the expiration completes once all three services finish.
 
 >[!IMPORTANT]
 >
->Before a dataset expires, update any dataflows that ingest data into it so that your downstream workflows are not affected. Because the dataset is removed from the data lake before the rest of the expiration process completes, any dataflow that still ingests into it begins to fail as soon as the dataset is removed.
+>Before a dataset expires, update any dataflows that ingest data into it to avoid ingestion failures that can affect downstream workflows. The dataset is removed from the data lake before the rest of the expiration process completes, so any dataflow that still ingests into it begins to fail as soon as the dataset is removed.
 
 You can have only a limited number of scheduled dataset expirations pending at one time. The limit depends on your product and any Shield entitlement. For the current limit, see [pending expiration limits](./ui/dataset-expiration.md#schedule-dataset-expiration). Data Lifecycle Management does not support batch dataset deletion.
 
@@ -89,11 +90,11 @@ You can schedule dataset expirations in the [!UICONTROL Data Lifecycle] workspac
 
 ## Automatic expiration: Experience Event and Pseudonymous Profile TTL {#automatic-expiration}
 
-When you want to trim stale data from the Profile store automatically over time, rather than deleting it yourself, use Experience Event TTL or Pseudonymous Profile TTL. Once you configure these settings, data is removed when it is no longer useful, without requiring you to submit individual requests. The settings continue to apply until you change or remove them.
+When you want to trim stale data from the Profile store automatically over time, rather than deleting it yourself, use Experience Event TTL or Pseudonymous Profile TTL. Once configured, these settings remove eligible data automatically according to the retention or inactivity period you set, without requiring you to submit individual requests. The settings continue to apply until you change or remove them.
 
 ### Experience Event TTL {#experience-event-ttl}
 
-Experience Event TTL (also called Experience Event expiration) applies at the dataset level and controls how long event data is retained in the Profile store. It removes events only, not profile attributes. If a profile has no attributes of its own, the profile stops existing after all of its events are removed. The minimum retention period is one day. You can configure Profile retention from the [!UICONTROL Datasets] workspace. See [Set data retention policy](../catalog/datasets/user-guide.md#data-retention-policy) for configuration guidance.
+Experience Event TTL (also called Experience Event expiration) is the Profile retention setting for an ExperienceEvent dataset. It applies at the dataset level and controls how long event data is retained in the Profile store. It removes events only, not profile attributes. If a profile has no attributes of its own, the profile stops existing after all of its events are removed. The minimum retention period is one day. Configure this Profile retention setting from the [!UICONTROL Datasets] workspace. See the [Set data retention policy](../catalog/datasets/user-guide.md#data-retention-policy) document for configuration guidance.
 
 >[!NOTE]
 >
@@ -101,7 +102,7 @@ Experience Event TTL (also called Experience Event expiration) applies at the da
 
 ### Pseudonymous Profile TTL {#pseudonymous-profile-ttl}
 
-Pseudonymous Profile TTL (also called Pseudonymous Profile data expiration) applies at the sandbox level and removes pseudonymous (unknown) profiles after they have been inactive for the period that you set. It removes both events and profile records. You can configure the setting yourself, with a default expiration period of 14 days for production sandboxes and 3 days for development sandboxes. Because removal runs on a recurring cycle, eligible profiles are not removed immediately. For configuration guidance, see [Pseudonymous profile data expiration](../profile/pseudonymous-profiles.md).
+Pseudonymous Profile TTL (also called Pseudonymous Profile data expiration) applies at the sandbox level and removes pseudonymous (unknown) profiles after they have been inactive for the period that you set. It removes both events and profile records. You can configure the setting yourself. The default expiration period is 14 days for production sandboxes and 3 days for development sandboxes. Because the removal process runs on a recurring cycle, eligible profiles are not removed immediately. For configuration guidance, see [Pseudonymous profile data expiration](../profile/pseudonymous-profiles.md).
 
 The two settings differ in scope and in what they remove:
 
@@ -117,7 +118,7 @@ The two settings complement each other. Set Experience Event TTL on your dataset
 >
 >Data removed by either setting is permanently deleted and cannot be restored.
 
-For an ExperienceEvent dataset, Profile retention and data lake retention are separate policies, but both are configured from the same [!UICONTROL Set data retention policy] workflow in the [!UICONTROL Datasets] workspace.
+<!-- Experience Event TTL controls how long events are retained in the Profile store. An ExperienceEvent dataset can also have a separate data lake retention policy. Both policies are configured from the same [!UICONTROL Set data retention policy] workflow in the [!UICONTROL Datasets] workspace. -->In addition to Profile retention, an ExperienceEvent dataset can have a separate data lake retention policy. Both policies are configured from the same [!UICONTROL Set data retention policy] workflow in the [!UICONTROL Datasets] workspace.
 
 Use the following guidance to distinguish the available retention options:
 
@@ -131,7 +132,7 @@ Because Profile and data lake retention are independent, you can retain events i
 
 ## Plan your retention strategy {#plan-retention}
 
-Managing your data lifecycle is an ongoing practice, not a one-time task. Retain data only as long as it supports an active use case, and set each capability's duration to match how long the data stays useful.
+Managing your data lifecycle is an ongoing practice, not a one-time task. Retain data only as long as it supports an active use case, and configure retention periods and expiration dates to match how long the data stays useful.
 
 ### Key considerations to guide your data strategy
 
@@ -158,4 +159,4 @@ For guidance on tracking and managing your license entitlements, see [Data manag
 
 ## Next steps {#next-steps}
 
-Once you've chosen a capability, use the linked UI and API pages in each section to carry it out. If you're implementing record delete or dataset expiration through the API, see [best practices for record delete and dataset expiration requests](./best-practices.md) for guidance on batching requests, handling throttling, and monitoring work order status. For broader orientation across any of the four capabilities, see the [Data Lifecycle UI guide](./ui/overview.md) or the [Data Hygiene API guide](./api/overview.md).
+Once you've chosen a capability, use the linked implementation guidance in its section to carry it out. If you're implementing record delete or dataset expiration through the API, see [best practices for record delete and dataset expiration requests](./best-practices.md) for guidance on batching requests, handling throttling, and monitoring work order status. For broader Data Lifecycle orientation, see the [Data Lifecycle UI guide](./ui/overview.md) or the [Data Hygiene API guide](./api/overview.md).
