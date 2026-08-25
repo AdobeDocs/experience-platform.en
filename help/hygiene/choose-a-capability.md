@@ -48,7 +48,7 @@ Your data management goal determines which retention or deletion option to use. 
 | Automatically remove inactive pseudonymous (unknown) profiles | [Pseudonymous Profile TTL](#pseudonymous-profile-ttl) |
 | Automatically remove old Experience Event records from the data lake while keeping the dataset | [Data lake retention](#automatic-expiration) |
 
-These capabilities fall into two groups. Record delete and dataset expiration are targeted, one-time actions that you submit when you need them. Experience Event TTL and Pseudonymous Profile TTL are automated settings that remove data on an ongoing basis once you configure them. Data lake retention is a related, separately configured setting that follows the same automated pattern. If your goal requires more than one of these—for example, removing specific records while also trimming ongoing event growth—combine capabilities as described in [Plan your retention strategy](#plan-retention).
+These capabilities fall into two groups. Record delete and dataset expiration are targeted, one-time actions that you submit when you need them. Experience Event TTL and Pseudonymous Profile TTL are automated settings that remove data on an ongoing basis once you configure them. Data lake retention is a related automated retention setting for ExperienceEvent datasets. If your goal requires more than one option—for example, removing specific records while also trimming ongoing event growth—combine them as described in [Plan your retention strategy](#plan-retention).
 
 >[!IMPORTANT]
 >
@@ -118,7 +118,9 @@ The two settings complement each other. Set Experience Event TTL on your dataset
 >
 >Data removed by either setting is permanently deleted and cannot be restored.
 
-Experience Event TTL is not the only retention option available for an ExperienceEvent dataset. The same dataset can also have a separate data lake retention policy, configured from the same [!UICONTROL Set data retention policy] workflow in the [!UICONTROL Datasets] workspace.
+### Profile and data lake retention {#profile-and-data-lake-retention}
+
+Experience Event TTL controls how long events are retained in the Profile store. An ExperienceEvent dataset can also have a separate data lake retention policy. Both policies are configured from the same [!UICONTROL Set data retention policy] workflow in the [!UICONTROL Datasets] workspace.
 
 Use the following guidance to distinguish the available retention options:
 
@@ -128,19 +130,19 @@ Use the following guidance to distinguish the available retention options:
 | Remove old Experience Event records from the data lake while keeping the dataset | Data lake retention                      |
 | Remove the entire dataset                                                        | Dataset expiration                       |
 
-Because Profile and data lake retention are independent, you can retain events in the data lake for long-term analysis after they expire from the Profile store. For data lake retention guidance, including API configuration, see [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
-
 ## Plan your retention strategy {#plan-retention}
 
 Managing your data lifecycle is an ongoing practice, not a one-time task. Retain data only as long as it supports an active use case, and configure retention periods and expiration dates to match how long the data stays useful.
 
+Because Experience Event TTL and data lake retention are independent, you can retain events in the data lake for long-term analysis after they expire from the Profile store. For data lake retention guidance, including API configuration, see [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+
 ### Key considerations to guide your data strategy
 
-Answer the following questions for each dataset before you set specific retention durations:
+Answer the following questions for each dataset before you configure retention or expiration settings:
 
 * **Is this data still needed for an active use case?** Retaining data beyond what your use cases require increases storage and processing costs without adding value.
 * **Does this data belong in an analytical or engagement workflow?** Align each dataset to the [workflow it serves](#why-manage) so it lives in the right repository.
-* **How long does this data need to be retained to stay useful?** Match each capability's duration to how long the data supports your use case, not to a default or indefinite period.
+* **How long does this data need to be retained to stay useful?** Set retention periods and expiration dates according to how long the data supports your use case, rather than relying on a default or indefinite period.
 * **How often do you review data usage?** Review usage on a regular basis, such as weekly, so you can catch inefficiencies and adjust retention settings before they affect cost or performance.
 
 Use the following guidance when you set retention durations:
@@ -159,4 +161,4 @@ For guidance on tracking and managing your license entitlements, see [Data manag
 
 ## Next steps {#next-steps}
 
-Once you've chosen a capability, use the linked implementation guidance in its section to carry it out. Record delete and dataset expiration are submitted as asynchronous work orders, so if you're implementing either through the API, see [best practices for record delete and dataset expiration requests](./best-practices.md) for guidance on batching requests, handling throttling, and monitoring work order status. For broader Data Lifecycle orientation, see the [Data Lifecycle UI guide](./ui/overview.md) or the [Data Hygiene API guide](./api/overview.md).
+Once you've chosen the right retention or deletion option, use the linked implementation guidance in its section to carry it out. Record delete and dataset expiration are submitted as asynchronous work orders, so if you're implementing either through the API, see [best practices for record delete and dataset expiration requests](./best-practices.md) for guidance on batching requests, handling throttling, and monitoring work order status. For broader Data Lifecycle orientation, see the [Data Lifecycle UI guide](./ui/overview.md) or the [Data Hygiene API guide](./api/overview.md).
