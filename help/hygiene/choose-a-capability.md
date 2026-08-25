@@ -113,7 +113,7 @@ The two settings differ in scope and in what they remove:
 | Removes        | Events only                   | Events and profile records                        |
 | Targets        | Events older than the set age | Pseudonymous profiles inactive for the set period |
 
-The two settings complement each other. Set Experience Event TTL on your datasets to control how long event data is retained, and use a shorter Pseudonymous Profile TTL to remove unknown profiles sooner. For guidance on choosing durations, see [Plan your retention strategy](#plan-retention).
+The two settings complement each other. Set Experience Event TTL on your datasets to control how long event data is retained, and use Pseudonymous Profile TTL to remove inactive unknown profiles based on how long they remain useful. For guidance on choosing durations, see [Plan your retention strategy](#plan-retention).
 
 >[!IMPORTANT]
 >
@@ -142,7 +142,7 @@ Managing your data lifecycle is an ongoing practice, not a one-time task. Retain
 Answer the following questions for each dataset before you configure retention or expiration settings:
 
 * **Is this data still needed for an active use case?** Retaining data beyond what your use cases require increases storage and processing costs without adding value.
-* **Does this data belong in an analytical or engagement workflow?** Align each dataset to the [workflow it serves](#why-manage) so it lives in the right repository.
+* **Does this data support analytical workflows, engagement workflows, or both** Align each dataset to the [workflow it serves](#why-manage) and manage retention accordingly.
 * **How long does this data need to be retained to stay useful?** Set retention periods and expiration dates according to how long the data supports your use case, rather than relying on a default or indefinite period.
 * **How often do you review data usage?** Review usage regularly, even weekly, so you can catch inefficiencies and adjust retention settings before they affect cost or performance.
 
@@ -156,10 +156,10 @@ Use the following guidance when you set retention durations:
 >
 >Apply the same retention discipline to non-production sandboxes as you do to production. Avoid copying full production datasets into a non-production sandbox without a defined use case, since unmanaged non-production data still counts toward your license usage.
 
-Apply these capabilities based on your data retention requirements. For example, for high-volume clickstream data, apply an Experience Event TTL with a shorter Pseudonymous Profile TTL to control your Profile store footprint. Set a longer data lake retention period separately to preserve the same events for long-term analysis. Use dataset expiration to retire entire datasets you no longer need, and record delete to remove specific records on request.
+Apply these capabilities based on your data retention requirements. For example, for high-volume clickstream data, apply an Experience Event TTL and, if inactive unknown profiles lose value sooner, a shorter Pseudonymous Profile TTL to control your Profile store footprint. Set a longer data lake retention period separately to preserve the same events for long-term analysis. Use dataset expiration to retire entire datasets you no longer need, and record delete to remove specific records on request.
 
 For guidance on tracking and managing your license entitlements, see [Data management license entitlement best practices](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 ## Next steps {#next-steps}
 
-Once you've chosen the right retention or deletion option, use the linked implementation guidance in its section to carry it out. Record delete and dataset expiration are submitted as asynchronous work orders, so if you're implementing either through the API, see [best practices for record delete and dataset expiration requests](./best-practices.md) for guidance on batching requests, handling throttling, and monitoring work order status. For broader Data Lifecycle orientation, see the [Data Lifecycle UI guide](./ui/overview.md) or the [Data Hygiene API guide](./api/overview.md).
+Once you've chosen the right retention or deletion option, use the linked implementation guidance to carry it out. Record delete and dataset expiration are submitted as asynchronous work orders, so if you're implementing either through the API, see [best practices for record delete and dataset expiration requests](./best-practices.md) for guidance on batching requests, handling throttling, and monitoring work order status. For broader Data Lifecycle orientation, see the [Data Lifecycle UI guide](./ui/overview.md) or the [Data Hygiene API guide](./api/overview.md).
