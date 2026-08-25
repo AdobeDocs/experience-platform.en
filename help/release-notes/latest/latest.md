@@ -123,7 +123,7 @@ For more information, read the [data ingestion overview](/help/ingestion/home.md
 | Feature | Description |
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [Activate audiences on-demand for streaming destinations](/help/destinations/ui/activate-now-streaming.md) | Trigger an immediate, on-demand resend of an audience's full current membership to a streaming destination without waiting for the next audience qualification or disqualification event. This update is rolling out through August 21, 2026. This feature is in private beta and available for a limited number of streaming destinations. Contact your Adobe representative to request access. <br> ![Triggering an on-demand resend of an audience's full membership to a streaming destination using Activate now.](../2026/assets/august/activate-now-streaming.gif){zoomable="yes"} |
-| [Data type filter in the destinations catalog](/help/destinations/catalog/overview.md) | Find the destination you need faster by filtering the **[!UICONTROL Browse]** tab of the destinations catalog by data type. This update is rolling out through August 21, 2026. <br> ![Filtering destinations by data type in the Browse tab of the destinations catalog.](../2026/assets/august/data-type-filter-browse.gif){zoomable="yes"} |
+| [Data type filter in the destinations catalog](/help/destinations/catalog/overview.md) | Find the destination you need faster by filtering the **[!UICONTROL Browse]** tab of the destinations catalog by data type. This update is rolling out through the first week of September 2026. <br> ![Filtering destinations by data type in the Browse tab of the destinations catalog.](../2026/assets/august/data-type-filter-browse.gif){zoomable="yes"} |
 
 {style="table-layout:auto"}
 
