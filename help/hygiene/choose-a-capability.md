@@ -142,9 +142,9 @@ Managing your data lifecycle is an ongoing practice, not a one-time task. Retain
 Answer the following questions for each dataset before you configure retention or expiration settings:
 
 * **Is this data still needed for an active use case?** Retaining data beyond what your use cases require increases storage and processing costs without adding value.
-* **Does this data support analytical workflows, engagement workflows, or both** Align each dataset to the [workflow it serves](#why-manage) and manage retention accordingly.
+* **Does this data support analytical workflows, engagement workflows, or both?** Align each dataset to the [workflow it serves](#why-manage) and manage retention accordingly.
 * **How long does this data need to be retained to stay useful?** Set retention periods and expiration dates according to how long the data supports your use case, rather than relying on a default or indefinite period.
-* **How often do you review data usage?** Review usage regularly, even weekly, so you can catch inefficiencies and adjust retention settings before they affect cost or performance.
+* **How often do you review data usage?** Review usage regularly so you can catch inefficiencies and adjust retention settings before they affect cost or performance.
 
 Use the following guidance when you set retention durations:
 
