@@ -39,11 +39,11 @@ In the Experience Platform UI, select **[!UICONTROL Sources]** from the left nav
 
 Go to the *[!UICONTROL Marketing automation]* category, select the [!DNL WhatsApp] source card, and select **[!UICONTROL Add data]**.
 
-<!-- TODO: screenshot of the WhatsApp source card in the sources catalog -->
+![The sources catalog with the WhatsApp source selected in the Marketing automation category.](../../../../images/tutorials/create/whatsapp/catalog.png)
 
 The **[!UICONTROL Authentication]** tab appears. Select **[!UICONTROL New account]**, or select an existing [!DNL WhatsApp] account to reuse, then provide the following information.
 
-<!-- TODO: screenshot of the account page showing the App Secret and Verify Token fields -->
+![The new account interface for authenticating a new WhatsApp account, showing the account name, description, Verify Token, and App Secret fields.](../../../../images/tutorials/create/whatsapp/new.png)
 
 | Field | What to enter |
 | --- | --- |
@@ -69,13 +69,11 @@ The **[!UICONTROL Review]** tab appears. Review the dataflow details and select 
 
 ## Step 3: Copy the Callback URL {#copy-callback-url}
 
-After the dataflow is created, Platform exposes a Callback URL on the dataflow. Copy it. You enter it into Meta in the next step. It has the form:
+After the dataflow is created, Experience Platform exposes a Callback URL on the dataflow. Copy it. You enter it into Meta in the next step. It has the form:
 
-```
+```http
 https://dcs.adobedc.net/collection/webhooks/{inletId}?x-adobe-flow-id={flowId}
 ```
-
-<!-- TODO: screenshot of the Callback URL (streaming endpoint) on the dataflow -->
 
 ## Step 4: Configure the webhook in Meta {#configure-webhook}
 
