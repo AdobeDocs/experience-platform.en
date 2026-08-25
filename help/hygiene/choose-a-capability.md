@@ -30,7 +30,7 @@ A key part of managing your data lifecycle is matching data to the workflow it s
 | Analytical | Long-term retention with slower access, held in the data lake | Historical analysis, reporting, data science |
 | Engagement | Real-time or near-real-time access, held in the Profile store | Segmentation, activation, personalization |
 
-Align each dataset to the workflow it supports and retain the data only as long as that workflow requires it. Both Profile and data lake storage are subject to licensing entitlements, which vary by the products your organization has purchased. Confirm the entitlements available to your organization when you plan where data is stored and how long it is retained.
+A dataset can support analytical workflows, engagement workflows, or both. For ExperienceEvent data available in both the Profile store and data lake, you can manage retention independently in each repository. Retain the data only as long as the workflows it supports require it. Both Profile and data lake storage are subject to licensing entitlements, which vary by the products your organization has purchased. Confirm the entitlements available to your organization when you plan where data is stored and how long it is retained.
 
 ![Diagram showing Adobe Experience Platform splitting into two workflows: Analytical Workflows generating data-driven insights, and Engagement Workflows powered by Real-time Customer Profile.](./images/choose-a-capability/analytical-engagement-workflows.png){width="600" zoomable="yes"}
 
@@ -38,15 +38,16 @@ For guidance on tracking and managing your license entitlements, see [Data manag
 
 ## Choose the right capability {#choose-a-capability}
 
-Your data management goal determines which retention or deletion option to use. The following table maps common goals to the option that fits. Each option is described in the section that follows.
+Your data management goal determines which retention or deletion option to use. The following table maps common goals, including privacy or regulatory deletion requests, to the option that fits. Each Data Lifecycle Management option is described in the section that follows.
 
 | Your goal | Option |
 | --- | --- |
-| Remove specific individuals' records, matched by identity | [Record delete](#record-delete) |
+| Fulfill a privacy or regulatory data-subject request | [Privacy Service](../privacy-service/home.md) |
+| Operationally remove records matched by primary identity | [Record delete](#record-delete) |
 | Delete an entire dataset on a date you schedule | [Dataset expiration](#dataset-expiration) |
 | Automatically remove stale Experience Events from the Profile store over time | [Experience Event TTL](#experience-event-ttl) |
 | Automatically remove inactive pseudonymous (unknown) profiles | [Pseudonymous Profile TTL](#pseudonymous-profile-ttl) |
-| Automatically remove old Experience Event records from the data lake while keeping the dataset | [Data lake retention](#automatic-expiration) |
+| Automatically remove old Experience Event records from the data lake while keeping the dataset | [Data lake retention](#profile-and-data-lake-retention) |
 
 These capabilities fall into two groups. Record delete and dataset expiration are targeted, one-time actions that you submit when you need them. Experience Event TTL and Pseudonymous Profile TTL are automated settings that remove data on an ongoing basis once you configure them. Data lake retention is a related automated retention setting for ExperienceEvent datasets. If your goal requires more than one option—for example, removing specific records while also trimming ongoing event growth—combine them as described in [Plan your retention strategy](#plan-retention).
 
@@ -56,7 +57,7 @@ These capabilities fall into two groups. Record delete and dataset expiration ar
 
 ## Record delete {#record-delete}
 
-When you need to remove specific individuals' data for operational reasons such as data cleansing, removing anonymous data, or data minimization, use record delete. It removes individual records from Experience Platform based on their primary identity. By default, record delete affects the data lake, Identity Service, and Real-Time Customer Profile. Record delete is not a compliance tool. To fulfill data subject rights requests, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md).
+When you need to remove records associated with a primary identity for purposes such as data cleansing, removing anonymous data, or data minimization, use record delete. It removes individual records from Experience Platform based on their primary identity. By default, record delete affects the data lake, Identity Service, and Real-Time Customer Profile. Record delete is not a compliance tool. To fulfill data subject rights requests, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md).
 
 >[!IMPORTANT]
 >
@@ -88,9 +89,9 @@ You can have only a limited number of scheduled dataset expirations pending at o
 
 You can schedule dataset expirations in the [!UICONTROL Data Lifecycle] workspace or with the API. See [Schedule a dataset expiration](./ui/dataset-expiration.md) for the UI workflow and the [dataset expiration endpoint guide](./api/dataset-expiration.md) for the API.
 
-## Automatic expiration: Experience Event and Pseudonymous Profile TTL {#automatic-expiration}
+## Automatic retention and expiration {#automatic-expiration}
 
-When you want to trim stale data from the Profile store automatically over time, rather than deleting it yourself, use Experience Event TTL or Pseudonymous Profile TTL. Once configured, these settings remove eligible data automatically according to the retention or inactivity period you set, without requiring you to submit individual requests. The settings continue to apply until you change or remove them.
+When you want to trim stale data from the Profile store or data lake automatically over time, rather than deleting it yourself, use Experience Event TTL, Pseudonymous Profile TTL, or data lake retention. Once configured, these settings remove eligible data automatically according to the retention or inactivity period you set, without requiring you to submit individual requests. The settings continue to apply until you change or remove them.
 
 ### Experience Event TTL {#experience-event-ttl}
 
@@ -130,11 +131,11 @@ Use the following guidance to distinguish the available retention options:
 | Remove old Experience Event records from the data lake while keeping the dataset | Data lake retention                      |
 | Remove the entire dataset                                                        | Dataset expiration                       |
 
+Because Experience Event TTL and data lake retention are independent, you can retain events in the data lake for long-term analysis after they expire from the Profile store. For data lake retention guidance, including API configuration, see [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+
 ## Plan your retention strategy {#plan-retention}
 
 Managing your data lifecycle is an ongoing practice, not a one-time task. Retain data only as long as it supports an active use case, and configure retention periods and expiration dates to match how long the data stays useful.
-
-Because Experience Event TTL and data lake retention are independent, you can retain events in the data lake for long-term analysis after they expire from the Profile store. For data lake retention guidance, including API configuration, see [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
 
 ### Key considerations to guide your data strategy
 
@@ -143,12 +144,12 @@ Answer the following questions for each dataset before you configure retention o
 * **Is this data still needed for an active use case?** Retaining data beyond what your use cases require increases storage and processing costs without adding value.
 * **Does this data belong in an analytical or engagement workflow?** Align each dataset to the [workflow it serves](#why-manage) so it lives in the right repository.
 * **How long does this data need to be retained to stay useful?** Set retention periods and expiration dates according to how long the data supports your use case, rather than relying on a default or indefinite period.
-* **How often do you review data usage?** Review usage on a regular basis, such as weekly, so you can catch inefficiencies and adjust retention settings before they affect cost or performance.
+* **How often do you review data usage?** Review usage regularly, even weekly, so you can catch inefficiencies and adjust retention settings before they affect cost or performance.
 
 Use the following guidance when you set retention durations:
 
 * **Experience Event TTL:** Set the expiration to cover the longest lookback your audiences need, and keep your audience lookback windows within that period so that segmentation stays accurate.
-* **Pseudonymous Profile TTL:** Set a shorter period than your Experience Event TTL to remove inactive unknown profiles sooner.
+* **Pseudonymous Profile TTL:** If inactive unknown profiles lose value sooner than the Experience Events you retain, set a shorter period to remove those profiles sooner.
 * **Data lake retention:** Set a longer period for event data you still need for analysis, independent of when the same data expires from the Profile store. Match the duration to how the data is used: shorter for frequently accessed data, longer for archival needs. See [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) for recommended durations and minimums.
 
 >[!TIP]
