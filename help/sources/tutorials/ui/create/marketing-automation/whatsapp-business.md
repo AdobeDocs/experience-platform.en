@@ -1,6 +1,6 @@
 ---
-title: Create a WhatsApp Business Source Connection in the UI
-description: Learn how to create a WhatsApp Business source connection using the Adobe Experience Platform UI.
+title: Create a WhatsApp Source Connection in the UI
+description: Learn how to create a WhatsApp source connection using the Adobe Experience Platform UI.
 badge: Beta
 hide: true
 product_v2:
@@ -11,13 +11,13 @@ role_v2:
     internal-label: Developer
 ---
 
-# Create a [!DNL WhatsApp Business] source connection in the UI
+# Create a [!DNL WhatsApp] source connection in the UI
 
 >[!NOTE]
 >
->The [!DNL WhatsApp Business] source is in beta. Read the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
+>The [!DNL WhatsApp] source is in beta. Read the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
-This tutorial provides steps for creating a [!DNL WhatsApp Business] source connection using the Adobe Experience Platform user interface.
+This tutorial provides steps for creating a [!DNL WhatsApp] source connection using the Adobe Experience Platform user interface.
 
 ## Getting started {#getting-started}
 
@@ -28,7 +28,7 @@ This tutorial requires a working understanding of the following components of Ex
 
 ## Prerequisites {#prerequisites}
 
-Before you create a [!DNL WhatsApp Business] source connection, complete the [Prerequisites](../../../../connectors/marketing-automation/whatsapp-business.md#prerequisites) in the [!DNL WhatsApp Business] source overview, including subscribing your app to the WABA, and have the following ready:
+Before you create a [!DNL WhatsApp] source connection, complete the [Prerequisites](../../../../connectors/marketing-automation/whatsapp-business.md#prerequisites) in the [!DNL WhatsApp] source overview, including subscribing your app to the WABA, and have the following ready:
 
 * Your Meta App Secret
 * Your Verify Token
@@ -37,11 +37,11 @@ Before you create a [!DNL WhatsApp Business] source connection, complete the [Pr
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace.
 
-Go to the *[!UICONTROL Marketing automation]* category, select the [!DNL WhatsApp Business] source card, and select **[!UICONTROL Add data]**.
+Go to the *[!UICONTROL Marketing automation]* category, select the [!DNL WhatsApp] source card, and select **[!UICONTROL Add data]**.
 
-<!-- TODO: screenshot of the WhatsApp Business source card in the sources catalog -->
+<!-- TODO: screenshot of the WhatsApp source card in the sources catalog -->
 
-The **[!UICONTROL Authentication]** tab appears. Select **[!UICONTROL New account]**, or select an existing [!DNL WhatsApp Business] account to reuse, then provide the following information.
+The **[!UICONTROL Authentication]** tab appears. Select **[!UICONTROL New account]**, or select an existing [!DNL WhatsApp] account to reuse, then provide the following information.
 
 <!-- TODO: screenshot of the account page showing the App Secret and Verify Token fields -->
 
@@ -87,6 +87,6 @@ In Meta, go to **[!DNL WhatsApp]** > **[!DNL Configuration]** and complete the f
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have configured a streaming dataflow to bring your [!DNL WhatsApp Business] data to Experience Platform. To monitor the data that is being ingested, refer to the guide on [monitoring streaming dataflows using Experience Platform UI](../../monitor-streaming.md).
+By following this tutorial, you have configured a streaming dataflow to bring your [!DNL WhatsApp] data to Experience Platform. To monitor the data that is being ingested, refer to the guide on [monitoring streaming dataflows using Experience Platform UI](../../monitor-streaming.md).
 
-If no data appears after you send a test message, see [Troubleshooting](../../../../connectors/marketing-automation/whatsapp-business.md#troubleshooting) in the [!DNL WhatsApp Business] source overview.
+If no data appears after you send a test message, see [Troubleshooting](../../../../connectors/marketing-automation/whatsapp-business.md#troubleshooting) in the [!DNL WhatsApp] source overview.

@@ -1,6 +1,6 @@
 ---
-title: WhatsApp Business Source Overview
-description: Learn how to connect WhatsApp Business to Adobe Experience Platform using the user interface by leveraging webhooks.
+title: WhatsApp Source Overview
+description: Learn how to connect WhatsApp to Adobe Experience Platform using the user interface by leveraging webhooks.
 badge: Beta
 hide: true
 product_v2:
@@ -11,11 +11,11 @@ role_v2:
     internal-label: Developer
 ---
 
-# [!DNL WhatsApp Business]
+# [!DNL WhatsApp]
 
 >[!NOTE]
 >
->The [!DNL WhatsApp Business] source is in beta. Read the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
+>The [!DNL WhatsApp] source is in beta. Read the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 >[!IMPORTANT]
 >
@@ -23,23 +23,23 @@ role_v2:
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-Experience Platform provides support for ingesting data from streaming applications. Support for messaging providers includes [!DNL WhatsApp Business].
+Experience Platform provides support for ingesting data from streaming applications. Support for messaging providers includes [!DNL WhatsApp].
 
-[!DNL WhatsApp Business] is a messaging platform that businesses use to communicate with customers over [!DNL WhatsApp]. The [!DNL WhatsApp Business] source streams inbound messages that your customers send to your [!DNL WhatsApp Business] phone number into Experience Platform in near real time.
+[!DNL WhatsApp Business] is a messaging platform that businesses use to communicate with customers over [!DNL WhatsApp]. The [!DNL WhatsApp] source streams inbound messages that your customers send to your [!DNL WhatsApp Business] phone number into Experience Platform in near real time.
 
 Meta delivers each message to a Platform streaming endpoint (a webhook), where it is captured as a raw Experience Event record and added to a dataset in the data lake for downstream use. The connector ingests the raw webhook payload as is, so every [!DNL WhatsApp] message type is preserved.
 
 ## How the connector works {#how-it-works}
 
-The [!DNL WhatsApp Business] source follows this sequence to bring a message into Experience Platform:
+The [!DNL WhatsApp] source follows this sequence to bring a message into Experience Platform:
 
 1. A customer sends a message to your [!DNL WhatsApp Business] phone number.
 1. Meta signs the webhook payload with your App Secret (`X-Hub-Signature-256`) and sends it to the Callback URL you configured on the Platform streaming endpoint.
-1. Platform validates the signature, captures the raw payload as an Experience Event, and adds it to your [!DNL WhatsApp Business] dataset.
+1. Platform validates the signature, captures the raw payload as an Experience Event, and adds it to your [!DNL WhatsApp] dataset.
 
 ## Prerequisites {#prerequisites}
 
-Before you create a [!DNL WhatsApp Business] source connection, complete the following on Meta at [developers.facebook.com](http://developers.facebook.com):
+Before you create a [!DNL WhatsApp] source connection, complete the following on Meta at [developers.facebook.com](http://developers.facebook.com):
 
 * Create a Meta app of type **[!UICONTROL Business]**, and add the **[!UICONTROL WhatsApp]** product to it.
 * Create a [!DNL WhatsApp] Business Account (WABA) with a registered phone number.
@@ -78,11 +78,11 @@ Both calls require a token with the `whatsapp_business_management` permission an
 
 ## What the connector provisions automatically {#automatic-provisioning}
 
-When you finish creating a [!DNL WhatsApp Business] dataflow, the connector creates and wires the following entities. You do not select a target dataset or map fields yourself.
+When you finish creating a [!DNL WhatsApp] dataflow, the connector creates and wires the following entities. You do not select a target dataset or map fields yourself.
 
 | Entity | Name or identifier | Created or reused | Notes |
 | --- | --- | --- | --- |
-| Schema | WhatsApp Webhook Raw Events (XDM ExperienceEvent class) | Reused if present, otherwise created once per sandbox | The first [!DNL WhatsApp Business] dataflow in a sandbox creates it. Every later dataflow reuses the same schema. |
+| Schema | WhatsApp Webhook Raw Events (XDM ExperienceEvent class) | Reused if present, otherwise created once per sandbox | The first [!DNL WhatsApp] dataflow in a sandbox creates it. Every later dataflow reuses the same schema. |
 | Field group | WhatsApp Webhook Payload V2 | Reused (standard) | The connector references the existing standard field group. It never creates one. |
 | Dataset | WhatsApp Webhook Raw Events | Created per dataflow | Raw landing Experience Event dataset for the inbound messages. |
 | Field mapping | System-generated | Created per dataflow | Maps the raw webhook payload into the schema, and is wired into the dataflow as a transformation. |
@@ -102,13 +102,13 @@ The following table describes common issues and how to resolve them.
 | Everything in Platform looks healthy, but no data is ingested. | The app is not subscribed to the WABA. Complete the WABA subscription described in [Subscribe your app to the WABA](#subscribe-app). This is the most common cause and fails silently. If the app is subscribed, confirm that the App Secret in Platform matches the current App Secret in Meta under **[!UICONTROL App Settings]** > **[!UICONTROL Basic]**. |
 | "[!UICONTROL Verify and Save]" fails in Meta. | The Verify Token in Meta must exactly match the Verify Token entered in Platform. |
 
-## Connect [!DNL WhatsApp Business] to Experience Platform {#connect-to-platform}
+## Connect [!DNL WhatsApp] to Experience Platform {#connect-to-platform}
 
-The documentation below provides information on how to create a [!DNL WhatsApp Business] streaming connector to connect with Experience Platform using the user interface:
+The documentation below provides information on how to create a [!DNL WhatsApp] streaming connector to connect with Experience Platform using the user interface:
 
-### Connect [!DNL WhatsApp Business] to Experience Platform using the UI {#connect-to-platform-using-ui}
+### Connect [!DNL WhatsApp] to Experience Platform using the UI {#connect-to-platform-using-ui}
 
-* [Create a source connection to bring WhatsApp Business data to Experience Platform using the user interface.](../../tutorials/ui/create/marketing-automation/whatsapp-business.md)
+* [Create a source connection to bring WhatsApp data to Experience Platform using the user interface.](../../tutorials/ui/create/marketing-automation/whatsapp-business.md)
 
 ## Additional resources {#additional-resources}
 
