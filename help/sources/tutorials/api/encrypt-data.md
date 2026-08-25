@@ -16,7 +16,7 @@ role_v2:
 >
 >Encrypted data ingestion is not available when using the VA6 region and connecting to [Adobe Experience Platform on AWS](../../../landing/multi-cloud.md).
 
-You can ingest encrypted data files to Adobe Experience Platform using cloud storage batch sources. With encrypted data ingestion, you can leverage asymmetric encryption mechanisms to securely transfer batch data into Experience Platform. Currently, the supported asymmetric encryption mechanisms are PGP and GPG.
+You can ingest encrypted data files to Adobe Experience Platform using cloud storage batch sources. With encrypted data ingestion, you can leverage asymmetric encryption mechanisms to securely transfer batch data into Experience Platform. Currently, the supported asymmetric encryption mechanisms are PGP and GPG. If you use [!DNL Amazon S3] as your source, you can also combine PGP encryption with [!DNL Amazon S3] server-side encryption (SSE). For more information, see [server-side encryption for Amazon S3](#server-side-encryption-for-amazon-s3).
 
 The encrypted data ingestion process is as follows:
 
@@ -66,6 +66,62 @@ The list of supported file extensions for encrypted files are:
 >[!NOTE]
 >
 >Encrypted file ingestion in Adobe Experience Platform Sources supports openPGP and not any specific proprietary version of PGP.
+
+## Server-side encryption for Amazon S3 {#server-side-encryption-for-amazon-s3}
+
+<!-- DRAFT (PLAT-297965): Content below is based on an engineering wiki draft and needs SME confirmation before publishing. See open questions in the PR description. -->
+
+If you use [!DNL Amazon S3] as your cloud storage source, you can combine PGP file encryption with [!DNL Amazon S3] server-side encryption (SSE). SSE and PGP file encryption protect different things and work independently of each other.
+
+| Encryption type | What it protects | Who manages it |
+| --- | --- | --- |
+| Server-side encryption (SSE) | Your files while they are stored in your [!DNL Amazon S3] bucket | [!DNL Amazon S3], automatically |
+| PGP file encryption | The contents of a file, wherever it travels | You and Experience Platform, using the key pair described in this guide |
+
+{style="table-layout:auto"}
+
+You can use SSE on its own, PGP file encryption on its own, or both together. When you use both, Experience Platform decrypts the SSE layer first, and then decrypts the PGP-encrypted file contents.
+
+### Check your bucket's SSE support {#check-your-buckets-sse-support}
+
+Check your bucket's encryption settings in the [!DNL Amazon S3] console under **[!UICONTROL Properties]** > **[!UICONTROL Default encryption]**. The following table describes which SSE modes Experience Platform supports.
+
+| SSE mode | Support | Action required |
+| --- | --- | --- |
+| SSE-S3 ([!DNL Amazon S3] managed keys) | Supported | None. |
+| SSE-KMS with a customer managed key | Supported | Add the key policy described in [add a key policy for SSE-KMS](#add-a-key-policy-for-sse-kms). |
+| SSE-KMS with the default `aws/s3` key | Not supported | Switch to a customer managed key, and then add the key policy described in [add a key policy for SSE-KMS](#add-a-key-policy-for-sse-kms). Existing files do not automatically re-encrypt. Re-upload any files that were encrypted with the default key. |
+| SSE-C (customer-provided keys) | Not supported | Switch to SSE-S3 or to SSE-KMS with a customer managed key. |
+
+{style="table-layout:auto"}
+
+### Add a key policy for SSE-KMS with a customer managed key {#add-a-key-policy-for-sse-kms}
+
+If your bucket uses SSE-KMS with a customer managed key, you must allow the Experience Platform connector role to decrypt your key.
+
+To add the required permissions, complete the following steps:
+
+1. In the AWS KMS console, select your key.
+1. Select **[!UICONTROL Key policy]**, and then select **[!UICONTROL Edit]**.
+1. Add the following statement to the key policy, replacing the account and sandbox placeholders with your own values.
+
+   ```json
+   {
+     "Sid": "Enable Experience Platform connector permissions",
+     "Effect": "Allow",
+     "Principal": {
+       "AWS": [
+         "arn:aws:iam::{ACCOUNT_ID}:role/aep-connector-{SANDBOX_ID}"
+       ]
+     },
+     "Action": "kms:Decrypt",
+     "Resource": "*"
+   }
+   ```
+
+1. Save your changes.
+
+This statement grants the same connector role that you already trust for [!DNL Amazon S3] access. You do not need to create a new role.
 
 ## Create encryption key pair {#create-encryption-key-pair}
 
