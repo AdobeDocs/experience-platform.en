@@ -1,6 +1,6 @@
 ---
 title: Choose the right Data Lifecycle Management capability
-description: Understand why data lifecycle management matters in Adobe Experience Platform. Compare record delete, dataset expiration, Experience Event TTL, and Pseudonymous Profile TTL, and choose the right capability for your data management goal.
+description: Understand why data lifecycle management matters in Adobe Experience Platform. Compare record delete, dataset expiration, Experience Event expiration, and Pseudonymous Profile data expiration, and choose the right capability for your data management goal.
 solution: Experience Platform
 keywords: Experience Platform;data lifecycle;record delete;dataset expiration;data hygiene;time to live;ttl;data minimization
 ---
@@ -45,11 +45,11 @@ Your data management goal determines which retention or deletion option to use. 
 | Fulfill a privacy or regulatory data-subject request | [Privacy Service](../privacy-service/home.md) |
 | Operationally remove records matched by primary identity | [Record delete](#record-delete) |
 | Delete an entire dataset on a date you schedule | [Dataset expiration](#dataset-expiration) |
-| Automatically remove stale Experience Events from the Profile store over time | [Experience Event TTL](#experience-event-ttl) |
-| Automatically remove inactive pseudonymous (unknown) profiles | [Pseudonymous Profile TTL](#pseudonymous-profile-ttl) |
+| Automatically remove stale Experience Events from the Profile store over time | [Experience Event expiration](#experience-event-ttl) |
+| Automatically remove inactive pseudonymous (unknown) profiles | [Pseudonymous Profile data expiration](#pseudonymous-profile-ttl) |
 | Automatically remove old Experience Event records from the data lake while keeping the dataset | [Data lake retention](#profile-and-data-lake-retention) |
 
-These capabilities fall into two groups. Record delete and dataset expiration are targeted, one-time actions that you submit when you need them. Experience Event TTL and Pseudonymous Profile TTL are automated settings that remove data on an ongoing basis once you configure them. Data lake retention is a related automated retention setting for ExperienceEvent datasets. If your goal requires more than one option—for example, removing specific records while also trimming ongoing event growth—combine them as described in [Plan your retention strategy](#plan-retention).
+These capabilities fall into two groups. Record delete and dataset expiration are targeted, one-time actions that you submit when you need them. Experience Event expiration and Pseudonymous Profile data expiration are automated settings that remove data on an ongoing basis once you configure them. Data lake retention is a related automated retention setting for ExperienceEvent datasets. If your goal requires more than one option—for example, removing specific records while also trimming ongoing event growth—combine them as described in [Plan your retention strategy](#plan-retention).
 
 >[!IMPORTANT]
 >
@@ -91,47 +91,47 @@ You can schedule dataset expirations in the [!UICONTROL Data Lifecycle] workspac
 
 ## Automatic retention and expiration {#automatic-expiration}
 
-When you want to trim stale data from the Profile store or data lake automatically over time, rather than deleting it yourself, use Experience Event TTL, Pseudonymous Profile TTL, or data lake retention. Once configured, these settings remove eligible data automatically according to the retention or inactivity period you set, without requiring you to submit individual requests. The settings continue to apply until you change or remove them.
+When you want to trim stale data from the Profile store or data lake automatically over time, rather than deleting it yourself, use Profile retention, Pseudonymous Profile data expiration, or data lake retention. Once configured, these settings remove eligible data automatically according to the retention or inactivity period you set, without requiring you to submit individual requests. The settings continue to apply until you change or remove them.
 
-### Experience Event TTL {#experience-event-ttl}
+### Experience Event expiration {#experience-event-ttl}
 
-Experience Event TTL (also called Experience Event expiration) is the Profile retention setting for an ExperienceEvent dataset. It applies at the dataset level and controls how long event data is retained in the Profile store. It removes events only, not profile attributes. If a profile has no attributes of its own, the profile stops existing after all of its events are removed. The minimum retention period is one day. Configure this Profile retention setting from the [!UICONTROL Datasets] workspace. See the [Set data retention policy](../catalog/datasets/user-guide.md#data-retention-policy) document for configuration guidance.
+Experience Event expiration controls how long Experience Events remain in the Profile store. For an ExperienceEvent dataset, you configure this behavior through the Profile retention setting in the [!UICONTROL Datasets] workspace. This setting applies at the dataset level and removes events only, not profile attributes. If a profile has no attributes of its own, the profile stops existing after all of its events are removed. The minimum retention period is one day. See the [Set data retention policy](../catalog/datasets/user-guide.md#data-retention-policy) document for configuration guidance.
 
 >[!NOTE]
 >
 >Unexpectedly high event volume can also result from bot traffic rather than genuine user activity. For guidance on identifying and filtering bot traffic, see [Bot filtering in Query Service](../query-service/use-cases/bot-filtering.md).
 
-### Pseudonymous Profile TTL {#pseudonymous-profile-ttl}
+### Pseudonymous Profile data expiration {#pseudonymous-profile-ttl}
 
-Pseudonymous Profile TTL (also called Pseudonymous Profile data expiration) applies at the sandbox level and removes pseudonymous (unknown) profiles after they have been inactive for the period that you set. It removes both events and profile records. You can configure the setting yourself. The default expiration period is 14 days for production sandboxes and 3 days for development sandboxes. Because the removal process runs on a recurring cycle, eligible profiles are not removed immediately. For configuration guidance, see [Pseudonymous profile data expiration](../profile/pseudonymous-profiles.md).
+Pseudonymous Profile data expiration applies at the sandbox level and removes pseudonymous (unknown) profiles after they have been inactive for the period that you set. It removes both events and profile records. You can configure the setting yourself. The default expiration period is 14 days for production sandboxes and 3 days for development sandboxes. Because the removal process runs on a recurring cycle, eligible profiles are not removed immediately. For configuration guidance, see [Pseudonymous profile data expiration](../profile/pseudonymous-profiles.md).
 
 The two settings differ in scope and in what they remove:
 
-| Characteristic | Experience Event TTL          | Pseudonymous Profile TTL                          |
+| Characteristic | Experience Event expiration   | Pseudonymous Profile data expiration              |
 | -------------- | ----------------------------- | ------------------------------------------------- |
 | Applies at     | Dataset level                 | Sandbox level                                     |
 | Removes        | Events only                   | Events and profile records                        |
 | Targets        | Events older than the set age | Pseudonymous profiles inactive for the set period |
 
-The two settings complement each other. Set Experience Event TTL on your datasets to control how long event data is retained, and use Pseudonymous Profile TTL to remove inactive unknown profiles based on how long they remain useful. For guidance on choosing durations, see [Plan your retention strategy](#plan-retention).
+The two settings complement each other. Set Experience Event expiration on your datasets to control how long event data is retained, and use Pseudonymous Profile data expiration to remove inactive unknown profiles based on how long they remain useful. For guidance on choosing durations, see [Plan your retention strategy](#plan-retention).
 
 >[!IMPORTANT]
 >
 >Data removed by either setting is permanently deleted and cannot be restored.
 
-### Profile and data lake retention {#profile-and-data-lake-retention}
+### Profile store and data lake retention {#profile-and-data-lake-retention}
 
-Experience Event TTL controls how long events are retained in the Profile store. An ExperienceEvent dataset can also have a separate data lake retention policy. Both policies are configured from the same [!UICONTROL Set data retention policy] workflow in the [!UICONTROL Datasets] workspace.
+Experience Event expiration controls how long events are retained in the Profile store An ExperienceEvent dataset can also have a separate data lake retention policy. Both policies are configured from the same [!UICONTROL Set data retention policy] workflow in the [!UICONTROL Datasets] workspace.
 
 Use the following guidance to distinguish the available retention options:
 
 | If you want to…                                                                  | Use                                      |
 | -------------------------------------------------------------------------------- | ---------------------------------------- |
-| Remove old Experience Events from the Profile store while keeping the dataset    | Experience Event TTL (Profile retention) |
-| Remove old Experience Event records from the data lake while keeping the dataset | Data lake retention                      |
-| Remove the entire dataset                                                        | Dataset expiration                       |
+| Remove old Experience Events from the Profile store while keeping the dataset    | Experience Event expirations |
+| Remove old Experience Event records from the data lake while keeping the dataset | Data lake retention policies                      |
+| Remove the entire dataset                                                        | Dataset expirations                       |
 
-Because Experience Event TTL and data lake retention are independent, you can retain events in the data lake for long-term analysis after they expire from the Profile store. For data lake retention guidance, including API configuration, see [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+Because Experience Event expiration and data lake retention policies are independent, you can retain events in the data lake for long-term analysis after they expire from the Profile store. For data lake retention guidance, including API configuration, see [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
 
 ## Plan your retention strategy {#plan-retention}
 
@@ -148,15 +148,15 @@ Answer the following questions for each dataset before you configure retention o
 
 Use the following guidance when you set retention durations:
 
-* **Experience Event TTL:** Set the expiration to cover the longest lookback your audiences need, and keep your audience lookback windows within that period so that segmentation stays accurate.
-* **Pseudonymous Profile TTL:** If inactive unknown profiles lose value sooner than the Experience Events you retain, set a shorter period to remove those profiles sooner.
-* **Data lake retention:** Set a longer period for event data you still need for analysis, independent of when the same data expires from the Profile store. Match the duration to how the data is used: shorter for frequently accessed data, longer for archival needs. See [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) for recommended durations and minimums.
+* **Experience Event expirations:** Set the expiration to cover the longest lookback your audiences need, and keep your audience lookback windows within that period so that segmentation stays accurate.
+* **Pseudonymous Profile expirations:** If inactive unknown profiles lose value sooner than the Experience Events you retain, set a shorter period to remove those profiles sooner.
+* **Data lake retention policy:** Set a longer period for event data you still need for analysis, independent of when the same data expires from the Profile store. Match the duration to how the data is used: shorter for frequently accessed data, longer for archival needs. See [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) for recommended durations and minimums.
 
 >[!TIP]
 >
 >Apply the same retention discipline to non-production sandboxes as you do to production. Avoid copying full production datasets into a non-production sandbox without a defined use case, since unmanaged non-production data still counts toward your license usage.
 
-Apply these capabilities based on your data retention requirements. For example, for high-volume clickstream data, apply an Experience Event TTL and, if inactive unknown profiles lose value sooner, a shorter Pseudonymous Profile TTL to control your Profile store footprint. Set a longer data lake retention period separately to preserve the same events for long-term analysis. Use dataset expiration to retire entire datasets you no longer need, and record delete to remove specific records on request.
+Apply these capabilities based on your data retention requirements. For example, for high-volume clickstream data, apply an Experience Event expiration and, if inactive unknown profiles lose value sooner, a shorter Pseudonymous Profile data expiration period to control your Profile store footprint. Set a longer data lake retention period separately to preserve the same events for long-term analysis. Use dataset expiration to retire entire datasets you no longer need, and record delete to remove specific records on request.
 
 For guidance on tracking and managing your license entitlements, see [Data management license entitlement best practices](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
