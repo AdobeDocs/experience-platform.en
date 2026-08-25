@@ -36,8 +36,8 @@ You must add region-specific IP addresses to your allowlist prior to connecting 
 This section outlines prerequisite steps to complete to authenticate your [!DNL Zendesk] account.
 
 * The first step in authenticating your [!DNL Zendesk] account is to ensure that you have a [!DNL Zendesk] support account. If you do not have one already, see the [[!DNL Zendesk] register page](https://www.zendesk.com/register/) to register and create your Zendesk account.
-* Once you have successfully registered, navigate to the [[!DNL Zendesk] website](https://www.zendesk.com/login/) and provide your **subdomain**. See the [[!DNL Zendesk] documentation on subdomains](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) for information on how to retrieve your subdomain.
-* Next, generate an API token by following the [[!DNL Zendesk] guide on generating a new API token](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>).
+* Once you have successfully registered, navigate to the [[!DNL Zendesk] website](https://www.zendesk.com/login/) and provide your **subdomain**. See the [[!DNL Zendesk] documentation on subdomains](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain) for information on how to retrieve your subdomain.
+* Next, generate an API token by following the [[!DNL Zendesk] guide on generating a new API token](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).
 
 ![Zendesk API token](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
