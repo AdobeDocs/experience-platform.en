@@ -22,55 +22,123 @@ topic_v2:
 ---
 # Advanced Data Lifecycle Management in Adobe Experience Platform
 
-Adobe Experience Platform provides a robust set of tools to manage large, complicated data operations in order to orchestrate consumer experiences. As data is ingested into the system over time, it becomes increasingly important to manage your data stores so that data is used as expected, is updated when incorrect data needs correcting, and is deleted when organizational policies deem it necessary.
+As data accumulates in Adobe Experience Platform, manage its lifecycle so that the data you retain continues to support active use cases. Removing data that is no longer useful helps reduce stale signals, unnecessary storage and processing, and supports your organization's retention requirements and licensing entitlements.
 
-If you're deciding which capability fits your goal, see [Choose the right Data Lifecycle Management capability](./choose-a-capability.md) to understand why data lifecycle management matters and choose between record delete, dataset expiration, and automatic expiration.
+Advanced Data Lifecycle Management provides capabilities to remove specific records, retire entire datasets, and automatically expire data that no longer needs to remain in the Profile store or data lake. Use the appropriate capability based on what you need to remove, where the data is stored, and whether the removal is a one-time action or an ongoing retention policy.
 
-These activities can be performed using the [[!UICONTROL Data Lifecycle] UI workspace](#ui) or the [Data Hygiene API](#api). When a data lifecycle job executes, the system provides transparency updates at each step of process. See the section on [timelines and transparency](#timelines-and-transparency) for more information on how each job type is represented in the system.
+## Data Lifecycle Management and Privacy Service {#privacy-service}
 
->[!NOTE]
->
->Advanced Data Lifecycle Management supports dataset deletions through the [dataset expiration endpoint](./api/dataset-expiration.md) and ID deletions (row-level data) using primary identities via the [workorder endpoint](./api/workorder.md). You can also manage [dataset expirations](./ui/dataset-expiration.md) and [record deletions](./ui/record-delete.md) through the Experience Platform UI. See the linked documentation for more information. Note that Data Lifecycle does not support batch deletion.
+Use Advanced Data Lifecycle Management when you need to remove or retain data for operational purposes, such as data cleansing, data minimization, or managing stored data over time.
 
-## [!UICONTROL Data Lifecycle] UI workspace {#ui}
+For privacy or regulatory data-subject rights requests, use [Adobe Experience Platform Privacy Service](placeholder.md) instead. Do not use Record delete or other Data Lifecycle Management capabilities to fulfill these requests.
 
-The [!UICONTROL Data Lifecycle] workspace in the Experience Platform UI allows you to configure and schedule data lifecycle operations, helping to ensure that your records are being maintained as expected.
+## Understand retention across Experience Platform {#retention-across-platform}
 
-For detailed steps on managing data lifecycle tasks in the UI, see the [data lifecycle UI guide](./ui/overview.md).
+[PLACEHOLDER: Introduce only the mental model needed to understand retention choices.
 
-## Data Hygiene API {#api}
+Include:
+- Profile store supports engagement workflows such as segmentation, activation, and personalization
+- data lake supports analytical and longer-term workflows
+- datasets can support one or both
+- Experience Event retention can be managed independently in each repository
+- removing data from one repository does not automatically remove it from the other
+- both Profile and data lake storage are subject to licensing entitlements
 
-The [!UICONTROL Data Lifecycle] UI is built on top of the Data Hygiene API, whose endpoints are available for you to use directly if you prefer to automate your data lifecycle activities. See the [Data Hygiene API guide](./api/overview.md) for more information.
+Do not turn this into a full architecture explanation.]
+
+## Data Lifecycle Management capabilities {#capabilities}
+
+[PLACEHOLDER: One short introduction explaining that the correct capability depends on what the customer needs to remove and where.]
+
+| If you need to… | Use |
+| --- | --- |
+| Remove records associated with a primary identity for operational purposes | [Record delete](PLACEHOLDER) |
+| Remove an entire dataset on a scheduled date | [Dataset expiration](PLACEHOLDER) |
+| Remove old Experience Events from the Profile store over time | [Experience Event expiration](PLACEHOLDER) |
+| Remove old Experience Event records from the data lake while keeping the dataset | [Data lake retention policy](PLACEHOLDER) |
+| Remove inactive pseudonymous profiles | [Pseudonymous Profile data expiration](PLACEHOLDER) |
+| Fulfill privacy or regulatory data-subject requests | [Privacy Service](PLACEHOLDER) |
+
+[PLACEHOLDER: Brief synthesis only.
+
+Clarify:
+- Record delete and Dataset expiration are actions submitted when needed
+- Experience Event expiration, data lake retention, and Pseudonymous Profile data expiration are ongoing controls
+- avoid limitations, quotas, defaults, or procedural detail]
+
+## Choose or implement a capability {#choose-or-implement}
+
+[PLACEHOLDER: Make the routing model explicit.
+
+Two clear paths:
+
+**Still deciding which capability to use?**
+Route to **Choose the right Data Lifecycle Management capability**.
+Explain that it compares the available mechanisms, their scope, and when to use each.
+
+**Already know what you need to do?**
+Use the implementation routes below.
+
+This section should make the handoff between overview → decision guide → implementation unmistakable.]
+
+## Implement a data lifecycle task {#implement}
+
+[PLACEHOLDER: Short introduction for readers who already know their intended action.
+
+Organize by customer task rather than by UI/API technology.]
+
+### Remove specific records
+
+[PLACEHOLDER:
+- route to Record delete UI guidance
+- route to Record delete API/work order guidance
+- optionally route to processing timelines and quota reference where relevant
+- do not reproduce limits or edge cases here]
+
+### Remove an entire dataset
+
+[PLACEHOLDER:
+- route to Dataset expiration UI guidance
+- route to Dataset expiration API guidance
+- optionally route to processing timelines
+- do not reproduce the detailed processing-stage table]
+
+### Configure Experience Event retention
+
+[PLACEHOLDER:
+- route to the Datasets / Set data retention policy workflow
+- distinguish:
+  - Experience Event expiration = Profile-side behavior
+  - Profile retention = current UI label
+  - Data lake retention policy = separate data lake policy
+- make clear the two retention periods are independent
+- do not use TTL as public terminology except where reproducing an exact technical identifier]
+
+### Remove inactive pseudonymous profiles
+
+[PLACEHOLDER:
+- route to Pseudonymous Profile data expiration guidance
+- clarify that it is configured separately at sandbox level in Profile settings
+- do not present it as part of the Dataset retention workflow]
 
 ## Timelines and transparency {#timelines-and-transparency}
 
-[Record delete](./ui/record-delete.md) and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows.
+[PLACEHOLDER: Briefly explain that Record delete and Dataset expiration have defined processing stages and status visibility.
 
->[!TIP]
->
->For additional reference information:
->- To monitor your current usage against quota limits, see the [Quota reference guide](./api/quota.md).
->- For entitlement rules, monthly caps, SLA timelines, and exception handling policies, see the [Record delete quota guide (UI)](./ui/record-delete.md#quotas) and [Work order quota guide (API)](./api/workorder.md#quotas).
+Include:
+- these operations do not complete immediately
+- customers can monitor request/job status
+- link to Data Lifecycle processing timelines for detailed timing, SLA, and processing-stage information
+- do not reproduce timeline tables, SLA values, or quota details here]
 
-### Dataset expiration timelines {#dataset-expiration-timelines}
+## Additional guidance {#additional-guidance}
 
-The following takes place when a [dataset expiration request](./ui/dataset-expiration.md) is created:
+[PLACEHOLDER: Keep only distinct supporting routes that answer questions not already handled above.
 
-| Stage | Time after scheduled expiration | Description |
-| --- | --- | --- |
-| Request is submitted | 0 hours | A data steward or privacy analyst submits a request for a dataset to expire at a given time. The request is visible in the [!UICONTROL Data Lifecycle UI] after it has been submitted and remains in a pending status until the scheduled expiration time, after which the request will execute. |
-| Dataset is dropped from data lake | 1 hour | The dataset is dropped from the [dataset inventory page](../catalog/datasets/user-guide.md) in the UI. The data within the data lake is only soft deleted, and will remain so until the end of the process, after which it will be hard deleted. |
-| Dataset is dropped from profile service | 3 hours | From this point forward, operations including batch and streaming segmentation, preview or estimation, export, and entity access will no longer read data from this dataset. The data within the profile service is only soft deleted and will remain so until the end of the process, after which it will be hard deleted. |
-| Profile count and audiences updated | 48 hours | Once all affected profiles are updated, all related [audiences](../segmentation/home.md) are updated to reflect their new size. Depending on the dataset that was removed and the attributes that you are segmenting on, the size of each audience could increase or decrease because of the deletion. At this point any resulting changes in overall profile counts are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
-| Journeys and destinations updated | 50 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
-| Hard deletion complete | 15 days | All data related to the dataset is hard deleted from the data lake and profile service. The [status of the data lifecycle job](./ui/browse.md#view-details) that deleted the dataset is updated to reflect this. |
+Potential routes:
+- processing timelines and SLA behavior
+- quota and entitlement guidance
+- data-management / license entitlement best practices
+- API overview for broader programmatic lifecycle management
 
-{style="table-layout:auto"}
-
-### Record delete timelines {#record-delete-transparency}
-
-Record delete requests are processed based on entitlement tier, with different SLA commitments for standard and Shield customers. For a full breakdown of processing stages and timelines, see [Data Lifecycle processing timelines](./data-lifecycle-processing-timelines.md).
-
-## Next steps {#next-steps}
-
-This document provides an overview of Experience Platform's Data Lifecycle capabilities. To get started making data hygiene requests in the UI, see the [data lifecycle UI guide](./ui/overview.md). To create Data Lifecycle jobs programmatically, see the [Data Hygiene API guide](./api/overview.md).
+Each link should explain what question it answers. Avoid turning this into a generic resource directory.]

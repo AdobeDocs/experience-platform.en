@@ -63,6 +63,21 @@ The accelerated timeline below applies only to organizations that have purchased
 
 {style="table-layout:auto"}
 
+### Dataset expiration processing timelines {#dataset-expiration-timelines}
+
+The following takes place when a [dataset expiration request](./ui/dataset-expiration.md) is created:
+
+| Stage | Time after scheduled expiration | Description |
+| --- | --- | --- |
+| Request is submitted | 0 hours | A data steward or privacy analyst submits a request for a dataset to expire at a given time. The request is visible in the [!UICONTROL Data Lifecycle UI] after it has been submitted and remains in a pending status until the scheduled expiration time, after which the request will execute. |
+| Dataset is dropped from data lake | 1 hour | The dataset is dropped from the [dataset inventory page](../catalog/datasets/user-guide.md) in the UI. The data within the data lake is only soft deleted, and will remain so until the end of the process, after which it will be hard deleted. |
+| Dataset is dropped from profile service | 3 hours | From this point forward, operations including batch and streaming segmentation, preview or estimation, export, and entity access will no longer read data from this dataset. The data within the profile service is only soft deleted and will remain so until the end of the process, after which it will be hard deleted. |
+| Profile count and audiences updated | 48 hours | Once all affected profiles are updated, all related [audiences](../segmentation/home.md) are updated to reflect their new size. Depending on the dataset that was removed and the attributes that you are segmenting on, the size of each audience could increase or decrease because of the deletion. At this point any resulting changes in overall profile counts are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
+| Journeys and destinations updated | 50 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
+| Hard deletion complete | 15 days | All data related to the dataset is hard deleted from the data lake and profile service. The [status of the data lifecycle job](./ui/browse.md#view-details) that deleted the dataset is updated to reflect this. |
+
+{style="table-layout:auto"}
+
 ## Quota and submission limits {#quota-and-submission-limits}
 
 Processing timelines apply after a request is accepted. Record delete requests are also subject to monthly and daily identifier submission quotas that are separate from and independent of processing SLAs. If a submitted request does not appear to be progressing, [confirm it was accepted](./ui/browse.md) before attributing the delay to batching. A request blocked by quota exhaustion requires action and does not enter the processing queue. Exceeding your quota prevents new requests from being accepted, regardless of your SLA tier.
