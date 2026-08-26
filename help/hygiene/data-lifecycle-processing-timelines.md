@@ -6,7 +6,11 @@ solution: Experience Platform
 ---
 # Data Lifecycle processing timelines {#data-lifecycle-processing-timelines}
 
-Use this document to understand when a record delete request completes and what affects that timeline. Timelines differ by entitlement tier, either the standard (30-day SLA) or Privacy and Security Shield or Healthcare Shield (15-day SLA). If you are unsure which tier applies to your organization, check your [quota usage](./api/quota.md) or contact your Adobe representative. For dataset expiration timelines, see the [dataset expiration guide](./ui/dataset-expiration.md).
+Use this document to understand the processing timelines for Data Lifecycle requests in Adobe Experience Platform. Record delete and dataset expiration requests follow different processing timelines.
+
+Record delete timelines vary by entitlement tier: standard entitlements have a 30-day SLA, while organizations with a Privacy and Security Shield or Healthcare Shield add-on have a 15-day SLA. If you are unsure which tier applies to your organization, check your [quota usage](./api/quota.md) or contact your Adobe representative.
+
+Dataset expiration requests follow a separate timeline that is independent of the record delete entitlement tiers. See [Dataset expiration processing timelines](#dataset-expiration-timelines) for the stages that occur after the scheduled expiration time.
 
 ## How record delete requests are processed {#how-record-delete-timelines-work}
 
@@ -63,7 +67,9 @@ The accelerated timeline below applies only to organizations that have purchased
 
 {style="table-layout:auto"}
 
-### Dataset expiration processing timelines {#dataset-expiration-timelines}
+## Dataset expiration processing timelines {#dataset-expiration-timelines}
+
+Dataset expiration requests follow a separate processing timeline from record delete requests. The 15-day and 30-day entitlement SLAs described above do not apply to dataset expiration.
 
 The following takes place when a [dataset expiration request](./ui/dataset-expiration.md) is created:
 
