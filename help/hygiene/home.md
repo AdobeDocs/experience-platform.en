@@ -22,7 +22,7 @@ topic_v2:
 ---
 # Advanced Data Lifecycle Management in Adobe Experience Platform
 
-As data accumulates in Adobe Experience Platform, manage its lifecycle so that the data you retain continues to support active use cases. Removing data that is no longer useful helps reduce stale signals and unnecessary storage and processing, support your organization's retention requirements, and keep data usage aligned with your licensing entitlements.
+Keep only the data in Adobe Experience Platform that continues to support active use cases. By removing data that no longer provides value, you can reduce stale signals and unnecessary storage and processing, support your organization's retention requirements, and stay within your licensing entitlements.
 
 Use Advanced Data Lifecycle Management to remove specific records, delete entire datasets, or automatically remove data that no longer needs to remain in Experience Platform. Choose the appropriate capability based on what you need to remove, where the data is stored, and whether you need a one-time action or an ongoing retention policy.
 
@@ -30,13 +30,13 @@ Use Advanced Data Lifecycle Management to remove specific records, delete entire
 
 Use Advanced Data Lifecycle Management when you need to manage data retention or remove data for operational purposes, such as data cleansing, data minimization, or managing stored data over time.
 
-For privacy or regulatory data-subject rights requests, use [Adobe Experience Platform Privacy Service](placeholder.md) instead. Do not use Record delete or other Data Lifecycle Management capabilities to fulfill these requests.
+For privacy or regulatory data-subject rights requests, use [Adobe Experience Platform Privacy Service](placeholder.md) instead. Do not use record delete or other Data Lifecycle Management capabilities to fulfill these requests.
 
 ## Understand retention across Experience Platform {#retention-across-platform}
 
 To choose an appropriate retention policy, first consider where your data is stored and how you use it. The Profile store supports engagement workflows such as segmentation, activation, and personalization, while the data lake supports analytical and longer-term use cases. A dataset can support either type of workflow or both.
 
-For Experience Event data stored in both repositories, manage retention in each repository independently. Removing data from one repository does not automatically remove the same data from the other. Both Profile store and data lake storage are subject to your organization's licensing entitlements.
+For Experience Event data stored in both repositories, manage retention in each repository independently. For Experience Event data stored in both repositories, manage retention in each repository independently. Expiring data under one retention policy does not automatically cause the same data to expire under the other. Both Profile store and data lake storage are subject to your organization's licensing entitlements.
 
 ## Data retention and deletion options {#capabilities}
 
@@ -44,11 +44,11 @@ Choose a capability based on what you need to remove and where the data is store
 
 | Goal | Recommended option |
 | --- | --- |
-| Remove records associated with a primary identity for operational purposes | [Record delete](placeholder.md) |
+| Remove records matched by primary identity for operational purposes | [Record delete](placeholder.md) |
 | Remove an entire dataset on a scheduled date | [Dataset expiration](placeholder.md) |
 | Remove old Experience Events from the Profile store over time | [Experience Event expiration](placeholder.md) |
 | Remove old Experience Event records from the data lake while keeping the dataset | [Data lake retention policy](placeholder.md) |
-| Remove inactive pseudonymous profiles | [Pseudonymous Profile data expiration](placeholder.md) |
+| Remove inactive pseudonymous profiles from the Profile store | [Pseudonymous Profile data expiration](placeholder.md) |
 | Fulfill privacy or regulatory data-subject requests | [Privacy Service](placeholder.md) |
 
 Use record delete or dataset expiration for one-time removal actions. To manage data automatically over time, use Experience Event expiration, a data lake retention policy, or Pseudonymous Profile data expiration.
@@ -61,20 +61,19 @@ If you already know which capability you need, continue to the implementation gu
 
 ## Implement a data lifecycle task {#implement}
 
-Use the task-specific guidance below to navigate to the relevant UI and API documentation.
+Use the task-specific guidance below to navigate to the relevant implementation documentation.
 
 ### Remove specific records
 
-To remove records associated with a primary identity, use [Record delete in the [!UICONTROL Data Lifecycle] workspace](placeholder.md) or submit a request with the [work order API](placeholder.md).
+To remove records associated with a primary identity, use [record delete in the [!UICONTROL Data Lifecycle] workspace](placeholder.md) or submit a request with the [work order API](placeholder.md).
 
 ### Remove an entire dataset
 
-To remove an entire dataset on a scheduled date, use [Dataset expiration in the [!UICONTROL Data Lifecycle] workspace](placeholder.md) or the [dataset expiration API](placeholder.md).
+To remove an entire dataset on a scheduled date, use [dataset expiration in the [!UICONTROL Data Lifecycle] workspace](placeholder.md) or the [dataset expiration API](placeholder.md).
 
 ### Configure Experience Event retention
 
-To control how long Experience Events remain in the Profile store or data lake, use the [Set data retention policy](placeholder.md) workflow in the [!UICONTROL Datasets workspace]. In this workflow, a **Profile retention policy** controls how long Experience Events remain in the Profile store, while a **data lake retention policy** controls row-level retention in the data lake. Configure each retention policy independently based on how long you need the data in each repository.
-
+To control how long Experience Events remain in the Profile store or data lake, use the [Set data retention policy](placeholder.md) workflow in the [!UICONTROL Datasets] workspace. In this workflow, a **Profile Service retention policy** controls how long Experience Events remain in the Profile store, while a **data lake retention policy** controls row-level retention in the data lake. Configure each retention policy independently based on how long you need the data in each repository.
 
 ### Remove inactive pseudonymous profiles
 
@@ -82,7 +81,7 @@ To remove inactive pseudonymous profiles, configure [Pseudonymous Profile data e
 
 ## Timelines and transparency {#timelines-and-transparency}
 
-Record delete requests and Dataset expirations do not complete immediately. A scheduled Dataset expiration remains pending until its expiration time, after which processing begins. You can monitor the status of these operations as they progress.
+Record delete requests and dataset expiration do not complete immediately. A scheduled dataset expiration remains pending until its expiration time, after which processing begins. You can [monitor the current status of these operations](./ui/browse.md) at key processing milestones.
 
 For detailed processing stages and timing, including applicable SLA information for record delete requests, see [Data Lifecycle processing timelines](placeholder.md).
 
@@ -90,6 +89,6 @@ For detailed processing stages and timing, including applicable SLA information 
 
 Use the following resources when you need supporting information beyond the task-specific guidance above:
 
-- To review Record delete submission limits and quota usage, see [Data Lifecycle quotas](placeholder.md).
+- To review record delete submission limits and quota usage, see [Data Lifecycle quotas](placeholder.md).
 - To understand how stored data affects license usage and how to manage that usage, see [Data management license entitlement best practices](placeholder.md).
 - To automate Data Lifecycle operations programmatically, see the [Data Hygiene API overview](placeholder.md).
