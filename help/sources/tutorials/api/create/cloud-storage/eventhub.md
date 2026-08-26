@@ -384,7 +384,7 @@ curl -X POST \
 | `params.eventHubName` | The name for your [!DNL Event Hubs] source. |
 | `params.dataType` | This parameter defines the type of the data that is being ingested. Supported data types include: `raw` and `xdm`. |
 | `params.reset` | This parameter defines how the data will be read. Use `latest` to start reading from the most recent data, and use `earliest` to start reading from the first available data in the stream. This parameter is optional and defaults to `earliest` if unprovided. |
-| `params.consumerGroup` | The publish or subscription mechanism to be used for [!DNL Event Hubs]. This parameter is optional and defaults to `$Default` if unprovided. Refer to this [[!DNL Event Hubs] guide on event consumers](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) for more information. **Note**: An [!DNL Event Hubs] consumer group can only be used for a single flow at a given time.  |
+| `params.consumerGroup` | The publish or subscription mechanism to be used for [!DNL Event Hubs]. This parameter is optional and defaults to `$Default` if unprovided. Your [!DNL Event Hub] must have a consumer group configured in [!DNL Azure], and the `$Default` consumer group must exist if you do not provide this parameter. If no consumer group exists, this request fails with an internal server error. Refer to this [[!DNL Event Hubs] guide on event consumers](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) for more information. **Note**: An [!DNL Event Hubs] consumer group can only be used for a single flow at a given time.  |
 
 >[!NOTE]
 >
