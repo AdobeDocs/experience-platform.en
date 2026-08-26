@@ -13,12 +13,12 @@ Use the [[!DNL Growth credits] dashboard](/help/landing/license-usage-and-guardr
 
 Review dashboard metrics to:
 
-* Monitor consumed, reserved, and available [!DNL Growth credits] to understand current credit utilization and remaining capacity.
-* Identify which services contribute to credit consumption so that you can determine which workloads drive [!DNL Growth credit] usage.
-* Understand how credit usage changes over time by reviewing historical consumption trends and comparing usage across reporting periods.
-* Determine how much additional capacity is currently reserved for active or scheduled capacity increases.
-* Estimate when additional credits may be required by comparing current consumption trends against your available credit balance.
-* Evaluate the impact of capacity changes before requesting additional throughput or processing capacity.
+- Monitor consumed, reserved, and available [!DNL Growth credits] to understand current credit utilization and remaining capacity.
+- Identify which services contribute to credit consumption so that you can determine which workloads drive [!DNL Growth credit] usage.
+- Understand how credit usage changes over time by reviewing historical consumption trends and comparing usage across reporting periods.
+- Determine how much additional capacity is currently reserved for active or scheduled capacity increases.
+- Estimate when additional credits may be required by comparing current consumption trends against your available credit balance.
+- Evaluate the impact of capacity changes before requesting additional throughput or processing capacity.
 
 [!DNL Growth credit] usage is calculated using the following formula:
 
@@ -26,9 +26,9 @@ Review dashboard metrics to:
 
 Where:
 
-* **Credits used** represents [!DNL Growth credits] that have already been used by capacity services such as streaming throughput, and edge throughput.
-* **Credits reserved** represents [!DNL Growth credits] allocated to active or scheduled capacity increases that have not yet been fully consumed.
-* **Usage** represents the total amount of [!DNL Growth credits] committed by your organization, including both consumed and reserved credits.
+- **Credits used** represents [!DNL Growth credits] that have already been used by capacity services such as streaming throughput, and edge throughput.
+- **Credits reserved** represents [!DNL Growth credits] allocated to active or scheduled capacity increases that have not yet been fully consumed.
+- **Usage** represents the total amount of [!DNL Growth credits] committed by your organization, including both consumed and reserved credits.
 
 Review the dashboard regularly to understand usage patterns and anticipate future capacity requirements.
 
