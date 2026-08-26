@@ -24,7 +24,7 @@ Currently, the following validations are supported:
 | Validation check | Type | Threshold |
 | ---------------- | ---- | --------- |
 | Logical complexity | Critical validation | The audience definition contains too many queries, resulting in unnecessary logical complexity. |
-| Sequential events | Critical validation | There are more than 6 sequential events within an audience definition. |
+| Sequential events | Critical validation | There are more than 3 sequential events within an audience definition. |
 | Aggregated count | Performance optimization | There are more than 3 aggregation functions within an audience definition. |
 | Nested data | Performance optimization | There are more than 2 levels of nested data (array or map data types) depth within an audience definition. |
 | Audience size | Performance optimization | The audience qualification size is greater than 30% of the total number of profiles in the sandbox. |
@@ -104,9 +104,9 @@ plan.equals("trial") AND region.equals("canada")
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_chaincountcheck"
 >title="Event sequence limit"
->abstract="Your audience contains too many sequential events. You can only have a maximum of 6 sequential events within your audience definition. Please remove some sequential events from your audience definition before continuing."
+>abstract="Your audience contains too many sequential events. You can only have a maximum of 3 sequential events within your audience definition. Please remove some sequential events from your audience definition before continuing."
 
-The sequential event complexity validation limits the number of sequential events in a sequence to 6 events.
+The sequential event complexity validation limits the number of sequential events in a sequence to 3 events.
 
 Sequential segmentation is one of the most computationally complicated operations within Experience Platform, since the system needs to scan a customer's entire history of Experience Events, sort them by timestamp, and verify if the specified order matches your query. As a result, when the chain grows, the number of permutations the system needs to calculate drastically increases.
 
@@ -197,7 +197,7 @@ For critical validation errors, you will not be able to save the audience.
 
 +++ Answer
 
-No, you cannot. This is a hard guardrail designed to protect the stability of the entire Experience Platform environment. If your sequence requires more than 6 steps, it's a strong indicator that the logic should either be simplified or broken into two different audiences (such as an "Engagement" audience and a "Conversion" audience).
+No, you cannot. This is a hard guardrail designed to protect the stability of the entire Experience Platform environment. If your sequence requires more than 3 steps, it's a strong indicator that the logic should either be simplified or broken into two different audiences (such as an "Engagement" audience and a "Conversion" audience).
 
 +++
 
