@@ -30,7 +30,7 @@ A key part of managing your data lifecycle is matching data to the workflow it s
 | Analytical | Long-term retention with slower access, held in the data lake | Historical analysis, reporting, data science |
 | Engagement | Real-time or near-real-time access, held in the Profile store | Segmentation, activation, personalization |
 
-A dataset can support analytical workflows, engagement workflows, or both. For ExperienceEvent data available in both the Profile store and data lake, you can manage retention independently in each repository. Retain the data only as long as the workflows it supports require it. Both Profile and data lake storage are subject to licensing entitlements, which vary by the products your organization has purchased. Confirm the entitlements available to your organization when you plan where data is stored and how long it is retained.
+A dataset can support analytical workflows, engagement workflows, or both. For ExperienceEvent data available in both the Profile store and data lake, retention is managed independently in each repository. Expiring data from one repository does not automatically remove the same data from the other. Retain the data only as long as the workflows it supports require it. Both Profile and data lake storage are subject to licensing entitlements, which vary by the products your organization has purchased. Confirm the entitlements available to your organization when you plan where data is stored and how long it is retained.
 
 ![Diagram showing Adobe Experience Platform splitting into two workflows: Analytical Workflows generating data-driven insights, and Engagement Workflows powered by Real-time Customer Profile.](./images/choose-a-capability/analytical-engagement-workflows.png){width="600" zoomable="yes"}
 
@@ -47,17 +47,17 @@ Your data management goal determines which retention or deletion option to use. 
 | Delete an entire dataset on a date you schedule | [Dataset expiration](#dataset-expiration) |
 | Automatically remove stale Experience Events from the Profile store over time | [Experience Event expiration](#experience-event-ttl) |
 | Automatically remove inactive pseudonymous (unknown) profiles | [Pseudonymous Profile data expiration](#pseudonymous-profile-ttl) |
-| Automatically remove old Experience Event records from the data lake while keeping the dataset | [Data lake retention](#profile-and-data-lake-retention) |
+| Automatically remove old Experience Event records from the data lake while keeping the dataset | [Data lake retention policy](#profile-and-data-lake-retention) |
 
-These capabilities fall into two groups. Record delete and dataset expiration are targeted, one-time actions that you submit when you need them. Experience Event expiration and Pseudonymous Profile data expiration are automated settings that remove data on an ongoing basis once you configure them. Data lake retention is a related automated retention setting for ExperienceEvent datasets. If your goal requires more than one option—for example, removing specific records while also trimming ongoing event growth—combine them as described in [Plan your retention strategy](#plan-retention).
+Among the Data Lifecycle Management options, record delete and dataset expiration are targeted, one-time actions that you submit when you need them. Experience Event expiration automatically removes old Experience Events from the Profile store, while Pseudonymous Profile data expiration removes inactive unknown profiles on an ongoing basis. A data lake retention policy applies row-level expiration to ExperienceEvent datasets in the data lake. If your goal requires more than one option—for example, removing specific records while also trimming ongoing event growth—combine them as described in [Plan your retention strategy](#plan-retention).
 
 >[!IMPORTANT]
 >
->Use Data Lifecycle Management capabilities for operational data management, such as data cleansing, removing anonymous data, and data minimization, not for privacy or regulatory compliance. To fulfill data subject rights requests under regulations such as the General Data Protection Regulation (GDPR), use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead.
+>Use Data Lifecycle Management capabilities for operational data management, such as data cleansing and data minimization, not for privacy or regulatory compliance. To fulfill data subject rights requests under regulations such as the General Data Protection Regulation (GDPR), use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead.
 
 ## Record delete {#record-delete}
 
-When you need to remove records associated with a primary identity for purposes such as data cleansing, removing anonymous data, or data minimization, use record delete. It removes individual records from Experience Platform based on their primary identity. By default, record delete affects the data lake, Identity Service, and Real-Time Customer Profile. Record delete is not a compliance tool. To fulfill data subject rights requests, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md).
+When you need to remove records associated with a primary identity for purposes such as data cleansing or data minimization, use record delete. It removes individual records from Experience Platform based on their primary identity. By default, record delete affects the data lake, Identity Service, and Real-Time Customer Profile. Record delete is not a compliance tool. To fulfill data subject rights requests, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md).
 
 >[!IMPORTANT]
 >
@@ -79,7 +79,7 @@ You can create record delete requests in the [!UICONTROL Data Lifecycle] workspa
 
 ## Dataset expiration {#dataset-expiration}
 
-When you need to retire an entire dataset that is no longer needed for your use cases, use dataset expiration. It deletes the dataset on a date that you schedule, and you can modify or cancel the scheduled expiration at any time before the expiration process begins. When the dataset reaches its expiration date, the data lake, Identity Service, and Real-Time Customer Profile each remove the dataset's contents, and the expiration completes once all three services finish.
+When you need to retire an entire dataset that is no longer needed for your use cases, use dataset expiration. It schedules the dataset for deletion on a date that you choose, and you can modify or cancel the scheduled expiration at any time before the expiration process begins. When the dataset reaches its expiration date, the data lake, Identity Service, and Real-Time Customer Profile each begin removing the dataset's contents, and the expiration completes once all three services finish.
 
 >[!IMPORTANT]
 >
@@ -91,11 +91,13 @@ You can schedule dataset expirations in the [!UICONTROL Data Lifecycle] workspac
 
 ## Automatic retention and expiration {#automatic-expiration}
 
-When you want to trim stale data from the Profile store or data lake automatically over time, rather than deleting it yourself, use Profile retention, Pseudonymous Profile data expiration, or data lake retention. Once configured, these settings remove eligible data automatically according to the retention or inactivity period you set, without requiring you to submit individual requests. The settings continue to apply until you change or remove them.
+When you want to trim stale data from the Profile store or data lake automatically over time, use Experience Event expiration, Pseudonymous Profile data expiration, or a data lake retention policy for row-level expiration. Once configured, these settings remove eligible data automatically according to the retention or inactivity period you set, without requiring you to submit individual requests. The settings continue to apply until you change or remove them.
+
+Experience Event expiration and Pseudonymous Profile data expiration are complementary features, but they are configured differently. Experience Event expiration is configured per dataset in the Datasets workspace, while Pseudonymous Profile data expiration is configured separately at the sandbox level in Profile settings.
 
 ### Experience Event expiration {#experience-event-ttl}
 
-Experience Event expiration controls how long Experience Events remain in the Profile store. For an ExperienceEvent dataset, you configure this behavior through the Profile retention setting in the [!UICONTROL Datasets] workspace. This setting applies at the dataset level and removes events only, not profile attributes. If a profile has no attributes of its own, the profile stops existing after all of its events are removed. The minimum retention period is one day. See the [Set data retention policy](../catalog/datasets/user-guide.md#data-retention-policy) document for configuration guidance.
+Experience Event expiration removes Experience Events from the Profile store after the configured retention period. For an ExperienceEvent dataset, you configure its retention period in the [!UICONTROL Datasets] workspace. This setting applies at the dataset level and removes events only, not profile attributes. If a profile has no attributes of its own, the profile stops existing after all of its events are removed. The minimum retention period is one day. See the [Set data retention policy](../catalog/datasets/user-guide.md#data-retention-policy) document for configuration guidance.
 
 >[!NOTE]
 >
@@ -105,7 +107,7 @@ Experience Event expiration controls how long Experience Events remain in the Pr
 
 Pseudonymous Profile data expiration applies at the sandbox level and removes pseudonymous (unknown) profiles after they have been inactive for the period that you set. It removes both events and profile records. You can configure the setting yourself. The default expiration period is 14 days for production sandboxes and 3 days for development sandboxes. Because the removal process runs on a recurring cycle, eligible profiles are not removed immediately. For configuration guidance, see [Pseudonymous profile data expiration](../profile/pseudonymous-profiles.md).
 
-The two settings differ in scope and in what they remove:
+The two expiration mechanisms differ in scope and in what they remove:
 
 | Characteristic | Experience Event expiration   | Pseudonymous Profile data expiration              |
 | -------------- | ----------------------------- | ------------------------------------------------- |
@@ -113,25 +115,25 @@ The two settings differ in scope and in what they remove:
 | Removes        | Events only                   | Events and profile records                        |
 | Targets        | Events older than the set age | Pseudonymous profiles inactive for the set period |
 
-The two settings complement each other. Set Experience Event expiration on your datasets to control how long event data is retained, and use Pseudonymous Profile data expiration to remove inactive unknown profiles based on how long they remain useful. For guidance on choosing durations, see [Plan your retention strategy](#plan-retention).
+The two settings complement each other. Set an Experience Event expiration period on your datasets to control how long event data remains in the Profile store, and use Pseudonymous Profile data expiration to remove inactive unknown profiles based on how long they remain useful. For guidance on choosing durations, see [Plan your retention strategy](#plan-retention).
 
 >[!IMPORTANT]
 >
->Data removed by either setting is permanently deleted and cannot be restored.
+>Data removed by either mechanism is permanently deleted and cannot be restored.
 
 ### Profile store and data lake retention {#profile-and-data-lake-retention}
 
-Experience Event expiration controls how long events are retained in the Profile store An ExperienceEvent dataset can also have a separate data lake retention policy. Both policies are configured from the same [!UICONTROL Set data retention policy] workflow in the [!UICONTROL Datasets] workspace.
+For an ExperienceEvent dataset, the configured retention period determines when Experience Events expire from the Profile store. An ExperienceEvent dataset can also have a separate data lake retention policy. Both are configured from the same [!UICONTROL Set data retention policy] workflow in the [!UICONTROL Datasets] workspace.
 
 Use the following guidance to distinguish the available retention options:
 
 | If you want to…                                                                  | Use                                      |
 | -------------------------------------------------------------------------------- | ---------------------------------------- |
-| Remove old Experience Events from the Profile store while keeping the dataset    | Experience Event expirations |
-| Remove old Experience Event records from the data lake while keeping the dataset | Data lake retention policies                      |
-| Remove the entire dataset                                                        | Dataset expirations                       |
+| Remove old Experience Events from the Profile store while keeping the dataset    | Experience Event expiration |
+| Remove old Experience Event records from the data lake while keeping the dataset | Data lake retention policy |
+| Remove the entire dataset                                                        | Dataset expiration |
 
-Because Experience Event expiration and data lake retention policies are independent, you can retain events in the data lake for long-term analysis after they expire from the Profile store. For data lake retention guidance, including API configuration, see [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+Because retention in the Profile store and data lake is configured independently, you can retain events in the data lake for long-term analysis after they expire from the Profile store. For data lake retention guidance, including API configuration, see [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
 
 ## Plan your retention strategy {#plan-retention}
 
@@ -148,15 +150,15 @@ Answer the following questions for each dataset before you configure retention o
 
 Use the following guidance when you set retention durations:
 
-* **Experience Event expirations:** Set the expiration to cover the longest lookback your audiences need, and keep your audience lookback windows within that period so that segmentation stays accurate.
-* **Pseudonymous Profile expirations:** If inactive unknown profiles lose value sooner than the Experience Events you retain, set a shorter period to remove those profiles sooner.
+* **Experience Event expiration:** Set the retention period to cover the longest lookback your audiences need, and keep your audience lookback windows within that period so that segmentation stays accurate.
+* **Pseudonymous Profile data expiration:** If inactive unknown profiles lose value sooner than the Experience Events you retain, set a shorter expiration period to remove those profiles sooner.
 * **Data lake retention policy:** Set a longer period for event data you still need for analysis, independent of when the same data expires from the Profile store. Match the duration to how the data is used: shorter for frequently accessed data, longer for archival needs. See [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) for recommended durations and minimums.
 
 >[!TIP]
 >
 >Apply the same retention discipline to non-production sandboxes as you do to production. Avoid copying full production datasets into a non-production sandbox without a defined use case, since unmanaged non-production data still counts toward your license usage.
 
-Apply these capabilities based on your data retention requirements. For example, for high-volume clickstream data, apply an Experience Event expiration and, if inactive unknown profiles lose value sooner, a shorter Pseudonymous Profile data expiration period to control your Profile store footprint. Set a longer data lake retention period separately to preserve the same events for long-term analysis. Use dataset expiration to retire entire datasets you no longer need, and record delete to remove specific records on request.
+Apply these capabilities based on your data retention requirements. For example, for high-volume clickstream data, set an Experience Event expiration period and, if inactive unknown profiles lose value sooner, a shorter Pseudonymous Profile data expiration period to control your Profile store footprint. Set a longer data lake retention period separately to preserve the same events for long-term analysis. Use dataset expiration to retire entire datasets you no longer need, and record delete to remove specific records on request.
 
 For guidance on tracking and managing your license entitlements, see [Data management license entitlement best practices](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
