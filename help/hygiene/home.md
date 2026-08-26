@@ -34,111 +34,61 @@ For privacy or regulatory data-subject rights requests, use [Adobe Experience Pl
 
 ## Understand retention across Experience Platform {#retention-across-platform}
 
-[PLACEHOLDER: Introduce only the mental model needed to understand retention choices.
+To choose an appropriate retention policy, first consider where your data is stored and how you use it. The Profile store supports engagement workflows such as segmentation, activation, and personalization, while the data lake supports analytical and longer-term use cases. A dataset can support either type of workflow or both.
 
-Include:
-- Profile store supports engagement workflows such as segmentation, activation, and personalization
-- data lake supports analytical and longer-term workflows
-- datasets can support one or both
-- Experience Event retention can be managed independently in each repository
-- removing data from one repository does not automatically remove it from the other
-- both Profile and data lake storage are subject to licensing entitlements
-
-Do not turn this into a full architecture explanation.]
+For Experience Event data stored in both repositories, manage retention in each repository independently. Removing data from the Profile store does not automatically remove the same data from the data lake, and vice versa. Both Profile store and data lake storage are subject to your organization's licensing entitlements.
 
 ## Data Lifecycle Management capabilities {#capabilities}
 
-[PLACEHOLDER: One short introduction explaining that the correct capability depends on what the customer needs to remove and where.]
+Choose a capability based on what you need to remove and where the data is stored.
 
 | If you need to… | Use |
 | --- | --- |
-| Remove records associated with a primary identity for operational purposes | [Record delete](PLACEHOLDER) |
-| Remove an entire dataset on a scheduled date | [Dataset expiration](PLACEHOLDER) |
-| Remove old Experience Events from the Profile store over time | [Experience Event expiration](PLACEHOLDER) |
-| Remove old Experience Event records from the data lake while keeping the dataset | [Data lake retention policy](PLACEHOLDER) |
-| Remove inactive pseudonymous profiles | [Pseudonymous Profile data expiration](PLACEHOLDER) |
-| Fulfill privacy or regulatory data-subject requests | [Privacy Service](PLACEHOLDER) |
+| Remove records associated with a primary identity for operational purposes | [Record delete](placeholder.md) |
+| Remove an entire dataset on a scheduled date | [Dataset expiration](placeholder.md) |
+| Remove old Experience Events from the Profile store over time | [Experience Event expiration](placeholder.md) |
+| Remove old Experience Event records from the data lake while keeping the dataset | [Data lake retention policy](placeholder.md) |
+| Remove inactive pseudonymous profiles | [Pseudonymous Profile data expiration](placeholder.md) |
+| Fulfill privacy or regulatory data-subject requests | [Privacy Service](placeholder.md) |
 
-[PLACEHOLDER: Brief synthesis only.
-
-Clarify:
-- Record delete and Dataset expiration are actions submitted when needed
-- Experience Event expiration, data lake retention, and Pseudonymous Profile data expiration are ongoing controls
-- avoid limitations, quotas, defaults, or procedural detail]
+Use Record delete or Dataset expiration when you need to submit a specific removal action. To manage data automatically over time, use Experience Event expiration, a data lake retention policy, or Pseudonymous Profile data expiration.
 
 ## Choose or implement a capability {#choose-or-implement}
 
-[PLACEHOLDER: Make the routing model explicit.
+If you are still deciding which capability fits your goal, see [Choose the right Data Lifecycle Management capability](placeholder.md). The guide compares the available retention and deletion options, explains their scope, and helps you determine when to use each one.
 
-Two clear paths:
-
-**Still deciding which capability to use?**
-Route to **Choose the right Data Lifecycle Management capability**.
-Explain that it compares the available mechanisms, their scope, and when to use each.
-
-**Already know what you need to do?**
-Use the implementation routes below.
-
-This section should make the handoff between overview → decision guide → implementation unmistakable.]
+If you already know which capability you need, use the implementation guidance below to complete the task.
 
 ## Implement a data lifecycle task {#implement}
 
-[PLACEHOLDER: Short introduction for readers who already know their intended action.
-
-Organize by customer task rather than by UI/API technology.]
+Use the task-specific guidance below when you already know which Data Lifecycle Management capability you need. Each section routes you to the relevant UI and API documentation without repeating the implementation steps here.
 
 ### Remove specific records
 
-[PLACEHOLDER:
-- route to Record delete UI guidance
-- route to Record delete API/work order guidance
-- optionally route to processing timelines and quota reference where relevant
-- do not reproduce limits or edge cases here]
+To remove records associated with a primary identity, use [Record delete in the Data Lifecycle workspace](placeholder.md) or submit a request with the [work order API](placeholder.md).
 
 ### Remove an entire dataset
 
-[PLACEHOLDER:
-- route to Dataset expiration UI guidance
-- route to Dataset expiration API guidance
-- optionally route to processing timelines
-- do not reproduce the detailed processing-stage table]
+To remove an entire dataset on a scheduled date, use [Dataset expiration in the Data Lifecycle workspace](placeholder.md) or the [dataset expiration API](placeholder.md).
 
 ### Configure Experience Event retention
 
-[PLACEHOLDER:
-- route to the Datasets / Set data retention policy workflow
-- distinguish:
-  - Experience Event expiration = Profile-side behavior
-  - Profile retention = current UI label
-  - Data lake retention policy = separate data lake policy
-- make clear the two retention periods are independent
-- do not use TTL as public terminology except where reproducing an exact technical identifier]
+To control how long Experience Events remain in the Profile store or data lake, use the [Set data retention policy](placeholder.md) workflow in the Datasets workspace. **Profile retention** controls Experience Event expiration from the Profile store, while a **data lake retention policy** controls row-level retention in the data lake. Configure the two retention periods independently based on how long you need the data in each repository.
 
 ### Remove inactive pseudonymous profiles
 
-[PLACEHOLDER:
-- route to Pseudonymous Profile data expiration guidance
-- clarify that it is configured separately at sandbox level in Profile settings
-- do not present it as part of the Dataset retention workflow]
+To remove inactive pseudonymous profiles, configure [Pseudonymous Profile data expiration](placeholder.md) in Profile settings. This setting applies at the sandbox level and is separate from the dataset-level retention settings used for Experience Events.
 
 ## Timelines and transparency {#timelines-and-transparency}
 
-[PLACEHOLDER: Briefly explain that Record delete and Dataset expiration have defined processing stages and status visibility.
+When you submit a Record delete request or schedule a Dataset expiration, the operation does not complete immediately. You can monitor its status as it moves through the applicable processing stages.
 
-Include:
-- these operations do not complete immediately
-- customers can monitor request/job status
-- link to Data Lifecycle processing timelines for detailed timing, SLA, and processing-stage information
-- do not reproduce timeline tables, SLA values, or quota details here]
+For detailed processing stages, timing, and SLA information, see [Data Lifecycle processing timelines](placeholder.md).
 
 ## Additional guidance {#additional-guidance}
 
-[PLACEHOLDER: Keep only distinct supporting routes that answer questions not already handled above.
+Use the following resources when you need supporting information beyond the task-specific guidance above:
 
-Potential routes:
-- processing timelines and SLA behavior
-- quota and entitlement guidance
-- data-management / license entitlement best practices
-- API overview for broader programmatic lifecycle management
-
-Each link should explain what question it answers. Avoid turning this into a generic resource directory.]
+- To review Record delete submission limits and quota usage, see [Data Lifecycle quotas](placeholder.md).
+- To understand how stored data contributes to your licensing entitlements and how to manage usage, see [Data management license entitlement best practices](placeholder.md).
+- To automate Data Lifecycle operations programmatically, see the [Data Hygiene API overview](placeholder.md).
