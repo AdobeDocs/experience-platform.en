@@ -8,7 +8,7 @@ The Live Activities view in Adobe Experience Platform Assurance helps you valida
 
 Live Activities rely on a valid push notification setup. Before debugging Live Activities, use the [push debug view](./push-debug-view.md) to validate the device’s push configuration and troubleshoot any push-related issues.
 
-The Live Activities view is a companion debugging tool for the AEP Messaging Live Activity SDK and supports the iOS Live Activities channel in Adobe Journey Optimizer. For implementation guidance, see the [live activities tutorial](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer/live-activities/tutorial/).
+The Live Activities view is a companion debugging tool for the AEP Messaging Live Activity SDK and supports the iOS Live Activities channel in Adobe Journey Optimizer. For implementation guidance, see the [Adobe Journey Optimizer Live Activities implementation tutorial](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer/live-activities/tutorial/), which describes how to register and manage Live Activities using the Adobe Journey Optimizer extension.
 
 ## Prerequisites
 
@@ -251,4 +251,4 @@ For example, an **[!UICONTROL Invalid Edge configuration]** error looks like thi
 
 ## Next steps
 
-To finish setting up your app, see the [configure the mobile Live Activity SDK](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/live-activity/configure/mobile-live-configuration-sdk) guide or walk through the [live activities tutorial](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer/live-activities/tutorial/). If you're also debugging push notifications, see the [push debug view](./push-debug-view.md).
+If you're also debugging push notifications, see the [push debug view](./push-debug-view.md).
