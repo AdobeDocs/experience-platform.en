@@ -148,7 +148,31 @@ For the selected activity, the **[!UICONTROL Overview]** sub-tab shows the attri
 
 ### Send an update or end a Live Activity
 
-From the **[!UICONTROL Overview]** sub-tab, select **[!UICONTROL Send Update]** to open the **[!UICONTROL Update Live Activity]** dialog for the selected activity. Under **[!UICONTROL Event Type]**, choose **[!UICONTROL Update]** to send new content, or **[!UICONTROL End]** to end the activity. The **[!UICONTROL Activity Type]** field shows whether the activity is **[!UICONTROL Unitary]** or **[!UICONTROL Broadcast]**; this is set when you start the activity and can't be changed here. Assurance uses the activity's update token for Unitary activities, and no token for Broadcast activities. Edit the payload in the JSON editor, which Assurance prefills with the activity's current content state and attributes. The payload must be valid JSON and must match the activity's attribute schema.
+1. From the **[!UICONTROL Overview]** sub-tab, select **[!UICONTROL Send Update]**. The **[!UICONTROL Update Live Activity]** dialog opens for the selected activity.
+
+2. Under **[!UICONTROL Event Type]**, select one of the following options:
+
+   * **[!UICONTROL Update]**: Send new content to the activity.
+   * **[!UICONTROL End]**: End the activity.
+
+3. Review the **[!UICONTROL Activity Type]** field. It indicates whether the activity is:
+
+   * **[!UICONTROL Unitary]**
+   * **[!UICONTROL Broadcast]**
+
+    The activity type is set when the activity starts and cannot be changed in this dialog.
+
+4. Use the appropriate update token:
+
+   * For **[!UICONTROL Unitary]** activities, Assurance uses the activity's update token.
+   * For **[!UICONTROL Broadcast]** activities, Assurance does not use a token.
+
+5. Edit the payload in the JSON editor. Assurance prepopulates the editor with the activity's current content state and attributes.
+
+    The payload must:
+
+   * Be valid JSON.
+   * Match the activity's attribute schema.
 
 ![Send Update dialog for updating or ending a Live Activity](../images/live-activities-view/send-update.png)
 
