@@ -38,6 +38,7 @@ For information about accessing and using the dashboard, see the [[!DNL Growth c
 
 [!DNL Growth credits] are consumed when you increase capacity for supported Experience Platform services.
 
-| Capacity service | Description | Use case | Growth Credit conversion rate |
+| Feature | Description | Usage Calculation | Credits per metric |
 | --- | --- | --- | --- |
-| Streaming throughput | Measures the combined peak inbound events per second for streaming ingestion into Real-Time Customer Profile across production and development sandboxes. | Increase streaming ingestion capacity for Real-Time Customer Profile workloads. | Every additional **250 events per second** consumes **7,000 [!DNL Growth credits]s**. |
+| Streaming segmentation | Streaming Segmentation evaluates audiences as data is ingested into Adobe Experience Platform via streaming ingestion connectors. Throughput is measured in records per second (RPS). Baseline is 1,500 RPS at an organization level, across all sandboxes.<br><br>Incremental throughput capacity is licensed in packs of 100 RPS. | Capacity-based **daily burn**. A daily rate (credits/day) is set from the allocated RPS above baseline per the active rate card. | 7,500 per year for every 100 RPS |
+| Edge segmentation | Edge Segmentation throughput, measured in RPS, deployed per Edge region × production sandbox. Baseline is 1,500 RPS at org level (500 RPS x 3 Edges); Incremental throughput will be sold as follows:<ul><li>*Minimum of 500 RPS for activating each new Edge region over and above the 3 default Edges.</li><li>Increments of 100 RPS for scaling each sandbox beyond the default capacity.</li></ul| Capacity-based **daily burn**. A daily rate (credits/day) is set from the allocated RPS above baseline per the rate card. | 12,000 per year for every 100 RPS |
