@@ -8,7 +8,7 @@ The Live Activities view in Adobe Experience Platform Assurance helps you valida
 
 Live Activities rely on a valid push notification setup. Before debugging Live Activities, use the [push debug view](./push-debug-view.md) to validate the device’s push configuration and troubleshoot any push-related issues.
 
-The Live Activities view is a companion debugging tool for the AEP Messaging Live Activity SDK and supports the iOS Live Activities channel in Adobe Journey Optimizer. For implementation guidance, see the [Adobe Journey Optimizer Live Activities implementation tutorial](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer/live-activities/tutorial/), which describes how to register and manage Live Activities using the Adobe Journey Optimizer extension.
+For implementation guidance, see the [Adobe Journey Optimizer Live Activities implementation tutorial](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer/live-activities/tutorial/), which describes how to register and manage Live Activities using the Adobe Journey Optimizer extension.
 
 ## Prerequisites
 
@@ -16,10 +16,10 @@ Before you use the Live Activities view, confirm the following:
 
 | Requirement | Detail |
 |---|---|
-| Assurance session | An active Assurance session with a connected compatible iOS client. The app must include and initialize the [!DNL AEP] Assurance extension. |
+| Assurance session | An active Assurance session with a connected compatible iOS client. The app must include and initialize the Experience Platform Assurance extension. |
 | iOS 16.1+ | Required to support Live Activities on the device. |
 | iOS 17.2+ | Required to start a Live Activity remotely from Assurance through a push-to-start token. |
-| [!DNL AEP Messaging] SDK | Must be installed in your app and configured in the Data Collection UI. |
+| Experience Platform Messaging SDK | Must be installed in your app and configured in the Data Collection UI. |
 | Push-to-start token | Must be present in the user profile to enable remote start. |
 | Channel configuration | Apple Push Notification service (APNs) credentials must be uploaded to the Live Activities channel (push) configuration in Adobe Journey Optimizer. |
 
@@ -66,7 +66,7 @@ If the selected client is not an iOS device or does not meet the minimum iOS ver
 
 ### Profile
 
-Use this section to verify that the app has registered its push notification and Live Activity push-to-start data through the AEP Messaging SDK, and that the data has been ingested into the user profile.
+Use this section to verify that the app has registered its push notification and Live Activity push-to-start data through the Experience Platform Messaging SDK, and that the data has been ingested into the user profile.
 
 >[!NOTE]
 >
@@ -194,8 +194,8 @@ Use the following tables when a validation fails or an action does not behave as
 
 | Error | Resolution |
 |---|---|
-| No ECID detected | Initialize the [!DNL AEP] SDK and Assurance, and confirm that ECID events appear in the session. |
-| Messaging extension not initialized | Add the [!DNL AEP Messaging] SDK, register the extension for your platform, and verify it in your Launch environment. |
+| No ECID detected | Initialize the Experience Platform SDK and Assurance, and confirm that ECID events appear in the session. |
+| Messaging extension not initialized | Add the Experience Platform Messaging SDK, register the extension for your platform, and verify it in your Launch environment. |
 | Push token not captured | Request notification permission, then call `MobileCore.setPushIdentifier` with the APNs or FCM token. |
 | Edge not configured | Install the Edge Network extension, publish a datastream, and don't override `edge.configId` in the app. |
 | Messaging not configured | Set `messaging.eventDataset` using the [!DNL Messaging] extension shared state, and don't override `messaging.*` in code. |
