@@ -1,30 +1,22 @@
 ---
 solution: Experience Platform
-title: Payload Exclude and Payload Rank Operators
-description: Learn how to use the payload exclude and payload rank operators in audience compositions.
+title: Payload Exclude Operator
+description: Learn how to use the payload exclude in audience compositions.
 hide: true
 ---
 
-# Payload Exclude and Payload Rank operators
-
-Currently, audiences that are built on array-based schemas (such as a customer profile holding multiple product or account records) cannot exclude specific array elements or use a single element within an array to rank the audience.
-
-The Payload Exclude and Payload Rank operators help mitigate this, as they can directly act upon the direct array elements within your audience.
-
-## Payload operators {#operators}
+# Payload Exclude operator
 
 The **Payload Exclude** operator is used to remove specific array elements from consideration of the audience **without** removing the customer from the audience. This removal is based off of a separately maintained and provided exclusion list.
 
-The **Payload Ranking** operator is used to select a single best element for a customer that qualified through more than one array element. You can use this operator to choose a specific element to rank the customers by.
-
-You can use these operators when your audience is built on an **array attribute** (such as a list of products or account records per profile) and either of the following is true:
+You can use this operator when your audience is built on an **array attribute** (such as a list of products or account records per profile) and either of the following is true:
 
 - Certain array elements **cannot** be targeted, and the exclusion list is maintained outside of the composition
 - Customers can qualify through multiple array elements, but only one of those elements should drive personalization
 
-## Usage {#usage}
+## Operation {#operation}
 
-If you're using these operators, the composition evaluates in the following order: Targeting criteria, exclusion, followed by ranking.
+If you're using the Payload Exclude operator, the composition evaluates in the following order: Targeting criteria, exclusion, followed by ranking.
 
 >[!IMPORTANT]
 >
@@ -35,6 +27,15 @@ The targeting criteria is applied to the array attribute. This targeting criteri
 After the targeting criteria  is applied, the **Payload Exclude** operator removes any array values that match the disallowed values.
 
 Once the exclusion is applied, the **Payload Rank** operator selects the top element from what remains.
+
+## Usage {#usage}
+
+To use the PayloadExclude operator, you'll need to complete the following prerequisites:
+
+- Add an audience with a payload to the composition
+- Add a [Payload Rank](./payload-rank.md) block to the composition
+
+Once you complete these steps, you can add the PayloadExclude operator to your composition. The PayloadExclude operator will automatically be placed between the audience with a payload and the PayloadRank operator.
 
 ## PayloadExclude {#exclude}
 
@@ -61,43 +62,43 @@ curl -X PATCH https://platform.adobe.io/journey/audience-orchestration/recipes/{
   -H "If-Match: {_etag}" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
+  -H "x-api-key: {API_KEY}" \
   -d '{
-    "arrayAttribute": "{NAMESPACE}.productDetailsList",
     "qualifyingSource": {
-        "array": "{NAMESPACE}.productExclusionList",
-        "localKey": "productUniqueId",
-        "remoteKey": "productUniqueId"
+        "array": {
+            "path": "{NAMESPACE}.productExclusionList",
+            "xdmType": "ARRAY"
+        },
+        "localKey": {
+            "path": "{NAMESPACE}.productDetailsList.productUniqueId",
+            "xdmType": "STRING"
+        },
+        "remoteKey": {
+            "path": "{NAMESPACE}.productExclusionList.productUniqueId",
+            "xdmType": "STRING"
+        }
     },
     "excludeIfAnyOf": {
-        "field": "qualifyingSource.exclusionList",
-        "values": ["EXCL0001", "EXCL0020"]
+        "field": {
+            "path": "{NAMESPACE}.productExclusionList.exclusionList",
+            "xdmType": "ARRAY"
+        },
+        "values": [
+            "EXCL0001", "EXCL0020"
+        ]
     }
   }'
 ```
 
 | Field | Description |
 | ----- | ----------- |
-| `arrayAttribute` | The array that is being filtered. |
-| `qualifyingSource.array` | The separate array that holds the exclusion codes for each element. |
-| `qualifyingSource.localKey` | The join key on the `arrayAttribute`. |
+| `qualifyingSource.array.path` | The location of the array that holds the exclusion codes for each element. |
+| `qualifyingSource.localKey.path` | The location of the join key on the `arrayAttribute`. |
 | `qualifyingSource.remoteKey` | The join key on the `qualifyingSource.array`. |
 | `excludeIfAnyOf.field` | The field on the exclusion source that contains the exclusion codes. |
 | `excludeIfAnyOf.values` | The specific exclusion codes to enforce for the composition. |
 
 +++
-
-## PayloadRank {#rank}
-
-The **PayloadRank** operator ranks array elements by a chosen attribute and returns the top number of elements specified.
-
-When you use the rank operator, you'll need to use the following fields:
-
-| Field | Description |
-| ----- | ----------- |
-| `attribute.path` | The array that is being ranked. |
-| `rankOrder[0].rankColumn.path` | The attribute to rank the array by. |
-| `rankOrder[0].sortOrder` | The sort order for the array. This can either be ascending or descending. |
-| `limit` | The number of top elements to return. |
 
 ## Sample flow {#sample-flow}
 
@@ -121,7 +122,7 @@ When this request runs, the **PayloadExclude** operator checks each element's ex
 | Element 03 | EXCL0001, EXCL0020 | Yes | Excluded |
 | Element 04 | EXCL0001 | Yes | Excluded |
 
-After the exclusion is ran, only two elements remain: Element 1 and Element 2. You can now rank these remaining elements with PayloadRank.
+After the exclusion is ran, only two elements remain: Element 1 and Element 2. You can now rank these remaining elements with the [PayloadRank operator](./payload-rank.md).
 
 If you rank the remaining elements by descending order on spend, returning only the top 1 result, the remaining elements would look as follows:
 
@@ -136,7 +137,7 @@ For the final audience, the customer **remains** in the audience, since the excl
 
 ## Limitation {#limitations}
 
-The following limitations apply when using the PayloadExclude or the PayloadRank operators:
+The following limitations apply when using the PayloadExclude operator:
 
 - PayloadExclude **only** operates on array elements. This operator **cannot** remove an entire profile from an audience.
 - The `excludeIfAnyOf.values` field is scoped **per campaign** and is set by the API caller for each composition. This field is **not** a persistent, audience-wide rule.
