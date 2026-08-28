@@ -64,7 +64,7 @@ Access control in Adobe Experience Platform is managed by role-based permissions
 
 This section outlines the required access control permissions that a user must have in order to fully utilize Query Service features. See the documents on [managing permissions](../../access-control/ui/permissions.md) and [managing users](../../access-control/ui/users.md) for detailed instructions on assigning access to a product profile.
 
-#### Relevant permissions
+#### Relevant permissions {#permissions}
 
 The relevant access control permissions are defined in the tables below according to their level of scope.
 
@@ -77,6 +77,10 @@ To run queries within Query Service, a user must be assigned a role with the fol
 | [!UICONTROL Manage Queries] | This permission allows users to execute data exploration and batch queries, which can either read an existing dataset or write data on datasets. This includes both `CREATE TABLE AS SELECT` (`CTAS`) and `INSERT INTO AS SELECT` (`ITAS`) queries. |
 
 **Dataset permissions**
+
+>[!IMPORTANT]
+>
+>As of September 22, 2026, Accelerated Queries honor existing schema-level READ permissions. Ensure that roles used for Accelerated Queries have READ access to the required schemas. Missing permissions may affect custom dashboards and other tools that rely on these queries.
 
 This section serves as a guide for the resource-based access required to access datasets while querying data through Query Service.
 
