@@ -179,7 +179,7 @@ To replace or clear an array-valued field such as `accessLabels`, include its fu
 
 >[!IMPORTANT]
 >
->The endpoint replaces the entire array instead of merging it with the existing values, so include every value that you want to retain. It also validates each value before saving the array. For example, every value in `accessLabels` must exist in your organization's label catalog, or the request fails.
+>The endpoint replaces the entire array instead of merging it with the existing values, so include every value that you want to retain. For `accessLabels`, the endpoint validates each value against your organization's label catalog before saving the array. If a label does not exist in the catalog, the request fails.
 
 To set access labels on a dataset, include all core and custom labels that you want the dataset to contain.
 
