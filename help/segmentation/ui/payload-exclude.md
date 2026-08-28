@@ -7,7 +7,7 @@ hide: true
 
 # Payload Exclude operator
 
-The **Payload Exclude** operator is used to remove specific array elements from consideration of the audience **without** removing the customer from the audience. This removal is based off of a separately maintained and provided exclusion list.
+The **Payload Exclude** operator lets you remove specific array elements from consideration of the audience **without** removing the customer from the audience. This removal is based off of a separately maintained and provided exclusion list.
 
 You can use this operator when your audience is built on an **array attribute** (such as a list of products or account records per profile) and either of the following is true:
 

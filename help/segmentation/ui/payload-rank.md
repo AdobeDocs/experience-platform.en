@@ -9,12 +9,9 @@ hide: true
 
 Currently, audiences that are built on array-based schemas (such as a customer profile holding multiple product or account records) cannot use a single element within an array to rank the audience.
 
-The **Payload Ranking** operator is used to select a single best element for a customer that qualified through more than one array element. You can use this operator to choose a specific element to rank the customers by.
+The **Payload Ranking** operator lets you select a single best element for a customer that qualified through more than one array element. You can then choose a specific element to rank the customers by.
 
-You can use this operator when your audience is built on an **array attribute** (such as a list of products or account records per profile) and either of the following is true:
-
-- Certain array elements **cannot** be targeted, and the exclusion list is maintained outside of the composition
-- Customers can qualify through multiple array elements, but only one of those elements should drive personalization
+You can use this operator when your audience is built on an **array attribute** (such as a list of products or account records per profile) and if customers can qualify through multiple array elements, but only one of those elements should drive personalization.
 
 ## PayloadRank {#rank}
 
@@ -22,7 +19,23 @@ The **PayloadRank** operator ranks array elements by a chosen attribute and retu
 
 After adding an audience with a payload attribute, you can add the PayloadRank operator.
 
-When you use the rank operator, you'll need to use the following fields:
+IMAGE
+
+When you use the rank operator, you can set the following fields:
+
+| Field | Description |
+| ----- | ----------- |
+| Payload array | The array that is being ranked. |
+| Rank order attribute |  |
+| Rank order sort direction | |
+| Attribute | |
+| Value | |
+| Limit | |
+
+IMAGE
+
+
+need to use the following fields:
 
 | Field | Description |
 | ----- | ----------- |
