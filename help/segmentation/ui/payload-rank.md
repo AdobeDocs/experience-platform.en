@@ -19,70 +19,53 @@ The **PayloadRank** operator ranks array elements by a chosen attribute and retu
 
 After adding an audience with a payload attribute, you can add the PayloadRank operator.
 
-IMAGE
+![The add Payload rank button is highlighted within Audience Composition.](/help/segmentation/images/ui/payload-rank/add-payload-rank.png)
 
 When you use the rank operator, you can set the following fields:
 
 | Field | Description |
 | ----- | ----------- |
 | Payload array | The array that is being ranked. |
-| Rank order attribute |  |
-| Rank order sort direction | |
-| Attribute | |
-| Value | |
-| Limit | |
+| Rank order attribute | The attribute that you want to rank the array by. |
+| Rank order sort direction | The sort order for the array. This can either be ascending or descending. |
+| Limit | The number of top elements to return. |
 
-IMAGE
+![The Payload rank options are highlighted.](/help/segmentation/images/ui/payload-rank/payload-rank-options.png)
 
-
-need to use the following fields:
+If two fields are tied, you can add a tie-breaker field as a way to determine which field will be chosen. If you add a tie-breaker field, you can set the following fields:
 
 | Field | Description |
 | ----- | ----------- |
-| `attribute.path` | The array that is being ranked. |
-| `rankOrder[0].rankColumn.path` | The attribute to rank the array by. |
-| `rankOrder[0].sortOrder` | The sort order for the array. This can either be ascending or descending. |
-| `limit` | The number of top elements to return. |
+| Attribute | The tiebreaking attribute that you want to rank the array by. |
+| Sort direction | The sort order for the tiebreaker field. This can either be ascending or descending. |
+
+You can also enable the **[!UICONTROL Override with a priority match]** option if you want a way to override the payload rank. If you enable this option, you can set the following additional fields:
+
+| Field | Description |
+| ----- | ----------- |
+| Attribute | The attribute, in the array, that you want to override the ranking for. |
+| Value | The value to look for in the override attribute. |
+
+![The override options within the Payload rank operator are highlighted.](/help/segmentation/images/ui/payload-rank/override-options.png)
 
 ## Sample flow {#sample-flow}
 
-Let's say you have a profile with the following four array elements, with the exclusion codes precomputed from the source array. 
+Let's say you have a profile with the following four array elements.
 
-| Element | Exclusion codes | Spend |
-| ------- | --------------- | ----- |
-| Element 1 | EXCL0008 | 1000 |
-| Element 2 | EXCL0015 | 2000 |
-| Element 3 | EXCL0001, EXCL0020 | 4000 |
-| Element 4 | EXCL0001 | 5000 |
+| Element | Spend |
+| ------- | ----- |
+| Element 1 | 1000 |
+| Element 2 | 2000 |
+| Element 3 | 1500 |
+| Element 4 | 1750 |
 
-For the current example, `EXCL0001` and `EXCL0020` are the policies that will be enforced.
-
-When this request runs, the **PayloadExclude** operator checks each element's exclusion codes against the exclusion codes that were just injected. An element is excluded if it contains **any** of the exclusion codes that are enforced on the array. | 
-
-| Element | Exclusion codes | Contains the specified exclusion code? | Result |
-| --- | --- | --- | --- |
-| Element 01 | EXCL0008 | No | Kept |
-| Element 02 | EXCL0015 | No | Kept |
-| Element 03 | EXCL0001, EXCL0020 | Yes | Excluded |
-| Element 04 | EXCL0001 | Yes | Excluded |
-
-After the exclusion is ran, only two elements remain: Element 1 and Element 2. You can now rank these remaining elements with PayloadRank.
-
-If you rank the remaining elements by descending order on spend, returning only the top 1 result, the remaining elements would look as follows:
+If you rank the elements by descending order on spend, returning only the top 1 result, the remaining elements would look as follows:
 
 | Element | Spend | Rank |
 | ------- | ----- | ---- |
 | Element 02 | 2000 | 1 (selected) |
-| Element 01 | 1000 | 2 |
+| Element 04 | 1750 | 2 |
+| Element 03 | 1500 | 3 |
+| Element 01 | 1000 | 4 |
 
-As a result, Element 02 is selected since it has the highest spend of the remaining elements. The rank operator **never** sees Element 03 or Element 04, so their spend values do not matter. 
-
-For the final audience, the customer **remains** in the audience, since the exclusion only removes the array elements within the profile.
-
-## Limitation {#limitations}
-
-The following limitations apply when using the PayloadExclude or the PayloadRank operators:
-
-- PayloadExclude **only** operates on array elements. This operator **cannot** remove an entire profile from an audience.
-- The `excludeIfAnyOf.values` field is scoped **per campaign** and is set by the API caller for each composition. This field is **not** a persistent, audience-wide rule.
-- You can only use a PayloadExclude on a composition that is in the **Draft** state.
+As a result, Element 02 is selected since it has the highest spend of the elements.
