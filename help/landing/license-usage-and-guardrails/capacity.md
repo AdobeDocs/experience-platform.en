@@ -290,6 +290,197 @@ You can resolve your edge segmentation throughput violations by adopting one of 
 2. Optimize your ingestion by using batch ingestion for lower latency use cases.
 3. Contact your Adobe Customer Care representative if issues still persist.
 
+## Growth credits dashboard
+
+>[!AVAILABILITY]
+>
+>The [!DNL Growth credits] dashboard is currently in **Limited availability**.
+
+The [!DNL Growth credits] dashboard gives you a single place to view your credit balance, plan capacity, and monitor usage across Experience Platform. You can use it to:
+
+- **View your available credits** and understand how much headroom remains.
+- **Schedule capacity changes** for planned increases in demand.
+- **Monitor usage and alerts** so you can address potential overages before they affect your workloads.
+
+>[!NOTE]
+>
+>The **[!DNL Growth credits] dashboard** is automatically available when your organization has purchased **Growth credits**. Once credits are provisioned, you can access the dashboard from the **License Usage** tab in Experience Platform.
+
+### Access requirements
+
+Access to the [!DNL Growth credits] dashboard is controlled through **role-based access control**. You must have the **Platform Administrator** role, or an equivalent administrator role, to:
+
+- View your organization's credit position.
+- View credit and capacity usage.
+- Configure capacity schedules.
+- Configure and manage alerts.
+
+Your sandbox-level views are limited to the sandboxes you have permission to access.
+
+>[!NOTE]
+>
+>If you don't see the [!DNL Growth credits] dashboard or expected sandbox data, verify that you have the required administrator role and access to the relevant sandboxes.
+
+### Access the Capacity overview
+
+To access the Capacity overview, select **[!UICONTROL License usage]** and then select the **[!UICONTROL Capacity]** tab.
+
+![The License Usage UI with Capacity section highlighted.](/help/landing/images/capacity/access-capacity.png)
+
+As a Platform Administrator, you can review current allocations and schedule capacity changes for upcoming demand.
+
+Select **[!UICONTROL Manage capacity]** under **Streaming** or **Edge**.
+
+![The allocation screen with schedule allocation highlighted.](/help/landing/images/capacity/manage-capacity.png)
+
+The table shows the **[!UICONTROL Current Capacity]** allocation for each sandbox. Use the up/down arrows or enter the **[!UICONTROL New Capacity]** allocations as required.
+
+![The allocation screen with current allocation highlighted.](/help/landing/images/capacity/update-capacity.png)
+
+## Understand your credit utilization
+
+Use the [!DNL Growth credits] dashboard to see how your credits are being used and identify available headroom or potential overages.
+
+### Review your credit summary
+
+Select a sandbox, then select **[!UICONTROL View credit details]**.
+
+![The credit summary with view credits highlighted.](/help/landing/images/capacity/view-credit-details.png)
+
+The credit summary shows your current credit position for your organization:
+
+- **Licensed credits** — The total number of credits included in your contract.
+- **Credits used** — Credits consumed based on your usage.
+- **Credits reserved** — Credits committed to future scheduled capacity or projected Batch overage.
+- **Credits available** — Credits remaining after consumed and reserved credits are deducted.
+- **Credit period** — The contract start and end dates covered by your credit entitlement.
+
+**Credits available = Licensed credits − Credits used − credits reserved**
+
+![The credit summary showing capacity credits information.](/help/landing/images/capacity/capacity-credits.png)
+
+You can view **Licensed, Consumed, Reserved, and Available** credits by service type Streaming, Edge, and Batch.
+
+For Batch, the system automatically calculates and reserves credits based on projected monthly usage. You don't need to create reservations manually.
+
+>[!NOTE]
+>
+>Reserved credits aren't consumed yet, but they reduce your available credit balance because they're committed to future usage. This gives you a more accurate view of your credit headroom before you commit to additional capacity.
+
+If **Credits available** is negative, your consumed and reserved credits exceed your licensed credits.
+
+The impact depends on the service type:
+
+- **Capacity-based services:** You can't create new capacity schedules while you're in an overage state.
+- **Consumption-based services:** Operations continue, but usage beyond your licensed credits may result in additional costs.
+
+>[!WARNING]
+>
+>If you're in an overage state, review your consumption and reserved capacity to identify the main drivers. Consider reducing future capacity or addressing high-usage workloads before additional costs are incurred.
+
+### Understand which services consume credits
+
+The following table shows how each service uses credits and when additional credits are consumed.
+
+| Service | Definition | Capacity Baseline | Monthly Usage Calculation |
+| --- | --- | --- | --- |
+| **Streaming throughput** | This combined streaming throughput measures the combined peak inbound events per second for streaming ingestion into Real-Time Customer Profile across your production and development sandboxes. | 1,500 RPS per org | Credits are deducted daily based on the allocated streaming throughput capacity. |
+| **Edge throughput** | This edge throughput capacity measures the peak inbound events per second processed at edge nodes for real-time personalization and decisioning across your production and development sandboxes. | 1,500 RPS per org | Credits are deducted daily based on the allocated edge throughput capacity. |
+
+>[!NOTE]
+>
+>You can check the conversion rate in the Product Description.
+
+![The credit summary with credit usage per service highlighted.](/help/landing/images/capacity/credit-usage-per-service.png)
+
+### Credit usage alerts
+
+>[!NOTE]
+>
+>You can view all capacity-related alerts in the **[!UICONTROL Alerts]** browse view by filtering on the **[!UICONTROL Capacity]** service.
+
+Use credit usage alerts to monitor credit consumption and identify potential overages before they affect your business operations or result in unexpected charges.
+
+Credit usage alerts help administrators track organization-level credit usage and take action as consumption approaches licensed limits.
+
+The following credit usage alerts are available at the organization level:
+
+| Alert | Description |
+| --- | --- |
+| 80% credit consumption | Receive an alert when consumed and reserved credits reach 80% of your organization's licensed credits. |
+| 90% credit consumption | Receive an alert when consumed and reserved credits reach 90% of your organization's licensed credits. |
+| Credit overage | Receive an alert when your organization exceeds its licensed credit allocation. |
+| Credit expiration | Receive notifications when credits are approaching expiration. For multi-year contracts, notifications inform you when credits reset at the end of a contract year. In the final contract year, notifications help you prepare for contract renewal discussions. |
+
+## Plan and schedule streaming and edge capacity
+
+For Streaming and Edge, **schedule additional capacity when you expect demand to exceed your current capacity.** The self-service workflow lets you specify when you need the capacity, review its credit impact, and allocate it across sandboxes.
+
+### Determine your capacity needs
+
+Before creating a schedule:
+
+- **Review peak usage:** Check current peak usage in the capacity detail view at the sandbox level.
+- **Estimate required RPS:** Determine the throughput you'll need for the upcoming event or workload.
+- **Determine additional capacity:** Calculate how much capacity you need above your baseline.
+- **Plan the schedule:** Define the start and end dates for the capacity increase.
+- **Review credit impact:** Check the credits that will be reserved.
+- **Plan allocation:** For multiple sandboxes, determine how to distribute capacity. For Edge, also review regional allocation.
+- **Review capacity limits:** Understand how the service responds if your workload exceeds the scheduled capacity.
+
+>[!TIP]
+>
+>Set your target RPS above your expected peak usage to provide headroom during demand spikes and help avoid throttling.
+
+### Create a streaming or edge capacity schedule
+
+Navigate to the **[!UICONTROL Capacity]** tab and select **[!UICONTROL Manage capacity]** under **Streaming** or **Edge**. 
+
+![The Allocation screen with schedule allocation highlighted.](/help/landing/images/capacity/manage-capacity.png)
+
+Next, select **[!UICONTROL Schedule allocation]** and specify the target capacity and schedule:
+
+- **Target RPS:** Enter the throughput you need above your baseline capacity.
+- **Start date:** Select a date at least **7 days from today**.
+- **End date:** Optionally specify when the capacity increase should end. If you don't specify an end date, credits are reserved from the start date through the end of your contract.
+
+Review the automatically calculated **credit impact**, including:
+
+- **Daily credit rate**
+- **Reserved credits** for the schedule
+
+![Specified scheduled details highlighted.](/help/landing/images/capacity/specified-schedule.png)
+
+If you have multiple sandboxes, configure the **capacity distribution** across them. Then select **[!UICONTROL Save]** and **[!UICONTROL Confirm]**.
+
+![Distributed capacity across sandboxes.](/help/landing/images/capacity/distributed-capacity.png)
+
+>[!IMPORTANT]
+>
+>You can't save or update a schedule if the required credits would exceed your licensed credits.
+
+>[!NOTE]
+>
+>Saving a schedule immediately reserves the required credits. Review the credit impact before saving to understand how the schedule will affect your available balance.
+
+After you confirm the schedule, the schedule appears in the relevant capacity section.
+
+### Cancel a capacity schedule
+
+To cancel a schedule, navigate to the **[!UICONTROL Capacity]** tab and select **[!UICONTROL View schedule]**.
+
+![Scheduled notification highlighted under streaming.](/help/landing/images/capacity/scheduled-notification.png)
+
+Select **[!UICONTROL Delete]**, the confirm the cancellation.
+
+![Schedule allocation highlighting delete button.](/help/landing/images/capacity/delete-scheduled-notification.png)
+
+>[!NOTE]
+>
+>When you cancel a schedule, its reserved credits are immediately released and added back to your available credit balance.
+>
+>The scheduled capacity is locked and cannot be updated or canceled within two weeks of the start date.
+
 ## Video overview {#video}
 
 The following video provides an overview of Capacity.
@@ -336,7 +527,151 @@ You ensure consistent performance during peak events, avoiding technical issues 
 
 To best manage your streaming ingestion throughput, you should evaluate your datasets to ensure they are prioritizing data necessary for personalization. 
 
-
 If real-time processing is not required, you should use batch ingestion instead of streaming ingestion.
 
 +++
+
+### Can I have more than one active schedule?
+
++++ Answer
+
+No. [!DNL Growth credits] for streaming and edge support only one active or pending schedule per sandbox. A new schedule can only be created after the current one has fully completed.
+
++++
+
+### What happens if I need to update the default allocation while there is an active schedule?
+
++++ Answer
+
+Baseline redistribution at or below 1,500 RPS can normally be done at any time from the Default Allocation page without a schedule. But if a schedule is already pending, it's blocked because only one active or pending schedule per sandbox is allowed.
+
++++
+
+### Will [!DNL Growth credits] expire after the contract period?
+
++++ Answer
+
+Yes. Remaining credits expire and reset on the contract anniversary date.
+
++++
+
+### What enforcement applies for Streaming capacity?
+
++++ Answer
+
+You do not get more capacity above your default streaming entitlement. Traffic may be throttled, delayed, or dropped if you send more than the entitlement. Any increase above baseline requires reserving credits first.
+
++++
+
+### Can a scheduled capacity change span across contract periods?
+
++++ Answer
+
+No. Schedules must fit entirely within the current contract year and cannot span an annual contract boundary. Credits (reserved and used) reset on the anniversary date, and after that, you can schedule capacity for the new contract year.
+
++++
+
+### What happens when the schedule ends?
+
++++ Answer
+
+Capacity immediately reverts to the baseline allocation (for example, 1,500 RPS). There is no automatic extension or carryover, and no credits are charged after the schedule ends. To continue at a scaled RPS, you must create a new schedule (full lead time: 2 weeks for Streaming and 3 weeks for Edge). Previous settings are not pre-filled.
+
++++
+
+### How are credits reserved and released for scheduled capacity?
+
++++ Answer
+
+Credits are reserved upfront for the scheduled window and then consumed daily during the scheduled period. If a schedule is removed, the reserved credits are immediately released back to the available balance: 
+
+**Available = Licensed − Used − Reserved***
+
+Reservations draw from the included baseline entitlement first and only draw Growth Credits for capacity above the baseline.
+
++++
+
+### What permission is required to create or edit a capacity schedule?
+
++++ Answer
+
+You must have the sandbox-manage permission, access to all sandboxes, and the organization must be provisioned with the "acp_growth_credits" feature.
+
++++
+
+<!--
+## Manage batch capacity
+
+Batch capacity management is consumption-based and includes two types of batch runs:
+
+- On-demand runs
+- Scheduled runs
+
+Each run type uses a separate API request, so the system processes them independently. Keeping the run types separate ensures that capacity updates are completed in full and prevents partial updates.
+
+>[!NOTE]
+>
+>Unlike capacity-based services, these services consume credits when usage exceeds your included baseline.
+
+To view the batch run dashboard, select a sandbox from **[!UICONTROL Batch runs]**. The dashboard displays your current usage. You can drill down by selecting a date range or specifying a custom date range. You can also view cumulative usage or a monthly breakdown.
+
+The table provides details about on-demand runs for each sandbox.
+
+![Batch run dashboard highlighting filter options.](/help/landing/images/capacity/batch-run-dashboard.png)
+
+To manage your on-demand batch runs, select **[!UICONTROL Manage capacity]** from the **[!UICONTROL Batch runs]** dashboard.
+
+![Batch run dashboard highlighting filter manage capacity.](/help/landing/images/capacity/batch-run-manage-capacity.png)
+
+### Manage on-demand batch runs
+
+From the **[!UICONTROL Manage batch capacity]** page, select **[!UICONTROL On-demand runs]**. The table displays usage/capacity details for each sandbox. Select **[!UICONTROL Add runs]** for the sandbox you want to update.
+
+![Manage batch capacity page highlighting on-demand runs and add runs.](/help/landing/images/capacity/add-runs.png)
+
+Enter the number of batch runs you want to add to the sandbox in increments of 100, then confirm your selection.
+
+![Manage batch capacity page highlighting updated runs and confirm.](/help/landing/images/capacity/enter-runs.png)
+
+The usage and capacity values update to show the pending runs. Select **[!UICONTROL Update capacity]** to apply the changes, then select **[!UICONTROL Confirm]**.
+
+![Batch run dashboard highlighting pending runs and update capacity.](/help/landing/images/capacity/batch-run-update-capacity.png)
+
+The **On-demand runs** table updates to reflect the new run capacity.
+
+### Manage scheduled batch runs
+
+>[!NOTE]
+>
+>Batch Segmentation reservations are based on projected consumption. You can continue to schedule runs when projected usage exceeds your baseline, but the additional usage may consume credits.
+
+>[!TIP]
+>
+>Review consumption regularly and investigate sustained increases before they result in additional credit usage.
+
+From the **[!UICONTROL Manage batch capacity]** page, select **[!UICONTROL Scheduled runs]**. The table displays usage and capacity details for each sandbox. Select **[!UICONTROL Add runs]** for the sandbox you want to update.
+
+![Manage batch capacity page highlighting Scheduled runs and Add runs.](/help/landing/images/capacity/scheduled-runs-add-runs.png)
+
+Enter the number of batch runs you want to add to the sandbox in increments of 100, then confirm your selection.
+
+![Manage batch capacity page highlighting the number of scheduled runs and confirmation.](/help/landing/images/capacity/scheduled-runs-enter-runs.png)
+
+>[!NOTE]
+>
+>Your baseline includes one evaluation run per day for all batch audiences.
+
+To increase the audience limit for a sandbox, select **[!UICONTROL Upgrade]**. From the dropdown, select **[!UICONTROL Audience limit per run]**, then select **[!UICONTROL Confirm]**.
+
+>[!IMPORTANT]
+>
+>Audience limit upgrades are locked for the remainder of the current contract year.
+
+![Manage batch capacity page highlighting the Audience limit per run upgrade option.](/help/landing/images/capacity/scheduled-runs-audience-limit.png)
+
+You are returned to the **[!UICONTROL Manage batch capacity]** page, which displays the pending updates. Select **[!UICONTROL Update capacity]** to confirm your changes, then select **[!UICONTROL Confirm]**.
+
+![Manage batch capacity page highlighting pending scheduled run updates and the Update capacity action.](/help/landing/images/capacity/batch-scheduled-run-update-capacity.png)
+
+The **Scheduled runs** table updates to reflect the new usage, capacity, and audience limit per run.
+-->

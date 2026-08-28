@@ -83,7 +83,7 @@ To view details for a specific dataset:
 
 The dataset details view opens in a right-side panel, showing information about all jobs associated with this dataset.
 
-![The dataset details panel showing aggregated lake and profile ingestion metrics for a selected dataset.](assets/job-schedules/view-dataset-details.png)
+![The dataset details panel showing aggregated lake and profile ingestion metrics for a selected dataset.](assets/job-schedules/view-dataset-details.png){zoomable="yes"}
 
 The dataset details panel displays the dataset name, ID, and job-specific metrics organized by job type. At the top of the panel, the dataset ID is displayed as a clickable link. Select this ID to navigate to the full dataset details page.
 
@@ -155,7 +155,7 @@ To view details for a specific job run:
 
 The **[!UICONTROL Dataflow run details]** panel opens, showing information about that specific job execution.
 
-![The dataflow run details panel showing execution information for a specific job run.](assets/job-schedules/job-details.png)
+![The dataflow run details panel showing execution information for a specific job run.](assets/job-schedules/job-details.png){zoomable="yes"}
 
 ### Dataflow run details {#dataflow-run-details}
 
