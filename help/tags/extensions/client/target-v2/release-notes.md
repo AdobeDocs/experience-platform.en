@@ -57,6 +57,11 @@ topic_v2:
 ---
 # Adobe Target v2 extension release notes
 
+## v0.26.1 (July 21, 2026)
+
+- Updated to support `at.js` 2.11.9
+- Added the support for LWC components during personalisation delivery.
+
 ## v0.20.3 (January 23, 2024)
 
 - Updated to support `at.js` 2.11.4
