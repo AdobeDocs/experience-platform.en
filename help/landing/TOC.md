@@ -79,6 +79,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
     * [CMK alert resolution reference](./governance-privacy-security/customer-managed-keys/alert-resolution-reference.md)
 * License usage and guardrails {#license}
   * [Data management license entitlement best practices](./license-usage-and-guardrails/data-management-best-practices.md)
+  * [Growth Credits usage](./license-usage-and-guardrails/growth-credit-consumption.md) 
   * [License usage dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)
   * [License usage and capacity](./license-usage-and-guardrails/capacity.md)    
   * [Total data volume](./license-usage-and-guardrails/total-data-volume.md)
