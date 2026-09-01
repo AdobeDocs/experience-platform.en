@@ -2,7 +2,6 @@
 title: Create a dataflow for Braze data in the UI
 description: Learn how to create a dataflow for your Braze account using the Adobe Experience Platform UI.
 last-substantial-update: 2024-01-30T00:00:00.000Z
-badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
 TQID: https://experienceleague.adobe.com/eMrd-O8reuZNvyj2-lXg0n7CPzBWwctx1-53m4fw98I
 product_v2:
@@ -21,10 +20,6 @@ topic_v2:
     internal-label: Customer experience
 ---
 # Create a [!DNL Braze Currents] source connection in the UI
-
->[!NOTE]
->
->The [!DNL Braze Currents] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 [!DNL Braze] powers customer-centric interactions between consumers and brands in real-time. [!DNL Braze Currents] is a real-time data stream of engagement events from the Braze platform that is the most robust yet granular export out of the [!DNL Braze] platform. 
 

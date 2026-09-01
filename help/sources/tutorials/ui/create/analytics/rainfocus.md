@@ -1,7 +1,6 @@
 ---
 title: Connect Your RainFocus Account To Experience Platform Using the UI
 description: Learn how to connect your RainFocus account to Experience Platform using the UI.
-badge: Beta
 exl-id: a349e37e-9f2c-47ff-8360-ccbe578dce27
 TQID: https://experienceleague.adobe.com/trIZaZnO2OxuY9jmJUzyDJ1mk5PFq87H0nLXUs3ZjJs
 product_v2:
@@ -18,10 +17,6 @@ topic_v2:
     internal-label: Customer experience
 ---
 # Connect your [!DNL RainFocus] account to Experience Platform using the UI
-
->[!NOTE]
->
->The [!DNL RainFocus] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps on how to connect your [!DNL RainFocus] account and stream event management and analytics data to Adobe Experience Platform.
 
