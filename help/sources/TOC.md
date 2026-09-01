@@ -32,7 +32,7 @@ role: Developer
       - [ECID mapping migration guide](connectors/adobe-applications/marketo/migration.md)
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
-    - {hide-from-toc} [Meta Ads connector](connectors/advertising/meta-ads.md)
+    - [Meta Ads connector](connectors/advertising/meta-ads.md)
     - {hide-from-toc} [Pinterest Ads](connectors/advertising/pinterest-ads.md)
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
@@ -250,7 +250,7 @@ role: Developer
       - [Marketo Custom Activities](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
-      - {hide-from-toc} [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
+      - [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
       - {hide-from-toc} [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
@@ -400,6 +400,7 @@ role: Developer
     - [Create a connection specification for a streaming source](sources-sdk/streaming/create.md)
     - [Update a connection specification for a streaming source](sources-sdk/streaming/update-connection-specs.md)
     - [Update the streaming flow specification](sources-sdk/streaming/update-flow-specs.md)
+    - [Configure authentication for a Streaming SDK connector](sources-sdk/streaming/authentication.md)
     - [Test and submit your connection specification for verification](sources-sdk/streaming/submit.md)
     - [Document your source (Streaming SDK)](sources-sdk/streaming/document-streaming.md)
     - [Documentation self-service API streaming template](sources-sdk/streaming/streaming-template-api.md)

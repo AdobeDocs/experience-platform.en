@@ -78,8 +78,6 @@ This section describes which types of audiences you can export to this destinati
 
 {style="table-layout:auto"}
 
-
-
 Supported audiences by audience data type:
 
 | Audience data type | Supported | Description | Use cases |
@@ -90,7 +88,6 @@ Supported audiences by audience data type:
 | [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
-
 
 ## Connect to the destination {#connect}
 
@@ -212,8 +209,6 @@ To configure details for the destination, fill in the fields below.
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="Advertiser data destination terms agreement"
 >abstract="Type in `I AGREE` to confirm the acknowledgment and agreement to the Disney advertiser data terms."
-
-<!-- >additional-url="<https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/>" text="Read the agreement" -->
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_client"

@@ -45,8 +45,6 @@ This section describes which types of audiences you can export to this destinati
 
 {style="table-layout:auto"}
 
-
-
 Supported audiences by audience data type:
 
 | Audience data type | Supported | Description | Use cases |
@@ -58,14 +56,13 @@ Supported audiences by audience data type:
 
 {style="table-layout:auto"}
 
-
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/select-profile-attributes-legacy.md).|
 | Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
@@ -109,14 +106,6 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * **[!UICONTROL Description]**: Enter a description for your destination.
 * **[!UICONTROL Folder Path]**: Provide the path in your storage location where Experience Platform will deposit your export data as CSV files.
 * **[!UICONTROL File Format]**: Select **CSV** to export CSV files to your storage location.
-
-<!--
-
-Commenting out Amazon S3 bucket part for now until support is clarified
-
-- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Experience Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
-
--->
 
 ### Enable alerts {#enable-alerts}
 
