@@ -58,15 +58,19 @@ To use an existing account connection, select **[!UICONTROL Existing account]** 
 
 ### Create a new account
 
-To create a new [!DNL Google Ads] account connection, select **[!UICONTROL New account]**. Next, enter a name for the connection and an optional description. When finished, select **[!UICONTROL Connect to source]**. You are prompted for your Google account credentials to establish the connection to your Google Ads environment.
+To create a new [!DNL Google Ads] account connection, select **[!UICONTROL New account]**. Next, enter a name for the connection and an optional description. 
 
 ![](../../../../images/tutorials/create/google-ads/new.png)
 
+When finished, select **[!UICONTROL Connect to source]**. 
+
 ## Authorize your [!DNL Google] account
 
-Once your account is connected, you are prompted to select the [!DNL Google] account that you would like to use for [!DNL Google Ads].
+You are prompted for your Google account credentials to establish the connection to the Google Ads environment associated with the Google account.
 
-When complete, select **[!UICONTROL Next]** to proceed.
+Select **[!UICONTROL Continue]** in the dialog that asks for access to your Google Account.
+
+Upon successful connection, you see **[!UICONTROL Connected]**. Select **[!UICONTROL Next]** to proceed.
 
 ## Provide dataflow details
 
@@ -75,3 +79,8 @@ Provide a name and optional description for your dataflow. You can also configur
 ## Review your dataflow
 
 Review your dataflow. Use the [!UICONTROL Connection] panel to review details of your dataflow, including its corresponding account name, source platform, and path to file. Use the [!UICONTROL Assign dataset and map fields] panel to confirm that your dataset is correctly assigned.
+
+
+## Finish
+
+Select **[!UICONTROL Finish]** to finish the setup of your Google Ads source connector.
