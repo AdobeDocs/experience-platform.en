@@ -5,7 +5,7 @@ description: Use [!DNL Growth Credits] to increase capacity for eligible Adobe E
 
 # [!DNL Growth Credits] usage {#usage}
 
-Use [!DNL Growth Credits] to increase Adobe Experience Platform capacity for eligible capabilities beyond your existing entitlement. Monitor [!DNL Growth Credits] consumption, identify which services consume credits, and plan future capacity needs using the [!DNL Growth Credits] dashboard. 
+Use [!DNL Growth Credits] to increase Adobe Experience Platform capacity for eligible capabilities beyond your existing entitlement. Monitor [!DNL Growth Credits] usage, identify which services are eligible for Growth Credits, and plan future capacity needs using the [!DNL Growth Credits] dashboard. 
 
 ## Monitor [!DNL Growth Credits] usage {#monitor-usage}
 
@@ -14,8 +14,8 @@ Use the [[!DNL Growth Credits] dashboard](/help/landing/license-usage-and-guardr
 Review dashboard metrics to:
 
 - Monitor used, reserved, and available [!DNL Growth Credits] to understand current credit usage and remaining capacity.
-- Identify which services contribute to credit consumption so that you can determine which workloads drive [!DNL Growth Credits] usage.
-- Understand how credit usage changes over time by reviewing historical consumption trends and comparing usage across reporting periods.
+- Identify which services contribute to credit usage so that you can determine which workloads drive [!DNL Growth Credits] usage.
+- Understand how credit usage changes over time by reviewing historical usage trends and comparing usage across reporting periods.
 - Determine how much additional capacity is currently reserved for active or scheduled capacity increases.
 - Estimate when additional credits may be required by comparing current usage trends against your available credit balance.
 - Evaluate the impact of capacity changes before requesting additional throughput or processing capacity.
@@ -40,5 +40,5 @@ For information about accessing and using the dashboard, see the [[!DNL Growth C
 
 | Feature | Description | Credits per metric |
 | --- | --- | --- |
-| Streaming Segmentation | Streaming Segmentation evaluates audiences as data is ingested into Adobe Experience Platform via streaming ingestion connectors<br><br>Incremental throughput capacity may be licensed in increments of 100 RPS, up to a maximum of 15,000 RPS total. | 7,500 [!DNL Growth Credits] per year for each increment of 100 RPS that is deployed. |
+| Streaming Segmentation | Incremental throughput capacity may be licensed in increments of 100 RPS, up to a maximum of 15,000 RPS total. | 7,500 [!DNL Growth Credits] per year for each increment of 100 RPS that is deployed. |
 | Edge Segmentation | Incremental throughput capacity may be licensed in increments of 100 RPS. | 12,000 [!DNL Growth Credits] per year for each increment of 100 RPS that is deployed. |
