@@ -58,7 +58,7 @@ To use an existing account connection, select **[!UICONTROL Existing account]** 
 
 ### Create a new account
 
-To create a new [!DNL Google Ads] account connection, select **[!UICONTROL New account]**. Next, enter a name for the connection and an optional description. When finished, select **[!UICONTROL Connect to source]** and allow a few moments for the connection to establish.
+To create a new [!DNL Google Ads] account connection, select **[!UICONTROL New account]**. Next, enter a name for the connection and an optional description. When finished, select **[!UICONTROL Connect to source]**. You are prompted for your Google account credentials to establish the connection to your Google Ads environment.
 
 ![](../../../../images/tutorials/create/google-ads/new.png)
 
