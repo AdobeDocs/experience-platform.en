@@ -60,7 +60,7 @@ topic_v2:
 ## v0.26.1 (July 21, 2026)
 
 - Updated to support `at.js` 2.11.9
-- Added the support for LWC components during personalisation delivery.
+- Added support for LWC components during personalization delivery.
 
 ## v0.20.3 (January 23, 2024)
 
