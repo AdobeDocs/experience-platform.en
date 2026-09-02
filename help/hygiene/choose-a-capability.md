@@ -69,7 +69,7 @@ Record delete acts on the primary identity used by the target service. Before yo
 * Records without a populated primary identity are skipped.
 * Data ingested before the primary identity was configured in the dataset's schema cannot be deleted this way.
 * A dataset with a scheduled or in-progress dataset expiration cannot receive a record delete request. Cancel the scheduled expiration or wait until the expiration completes before you submit the record delete request.
-* For relational-schema datasets with change data capture, deleted records may be re-ingested unless the source is updated accordingly. For requirements and limitations that apply to these datasets, see [relational schema considerations](./ui/record-delete.md#relational-record-delete).
+* For relational-schema datasets synchronized with an external source system through Data Mirror, deleted records may be re-ingested if they still exist in the source system. Update the source as part of your deletion workflow. See [Data Mirror](../xdm/data-mirror/overview.md) and [relational schema considerations](./ui/record-delete.md#relational-record-delete).
 
 Depending on your organization's configuration, you can delete records from a single dataset or from all datasets.
 

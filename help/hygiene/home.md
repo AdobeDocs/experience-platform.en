@@ -36,7 +36,7 @@ For privacy or regulatory data-subject rights requests, use [Adobe Experience Pl
 
 To choose an appropriate retention policy, first consider where your data is stored and how you use it. The Profile store supports engagement workflows such as segmentation, activation, and personalization, while the data lake supports analytical and longer-term use cases. A dataset can support either type of workflow or both.
 
-For Experience Event data stored in both repositories, manage retention in each repository independently. For Experience Event data stored in both repositories, manage retention in each repository independently. Expiring data under one retention policy does not automatically cause the same data to expire under the other. Both Profile store and data lake storage are subject to your organization's licensing entitlements.
+For Experience Event data stored in both repositories, manage retention in each repository independently. Expiring data under one retention policy does not automatically cause the same data to expire under the other. Both Profile store and data lake storage are subject to your organization's licensing entitlements.
 
 ## Data retention and deletion options {#capabilities}
 
@@ -89,6 +89,7 @@ For detailed processing stages and timing, including applicable SLA information 
 
 Use the following resources when you need supporting information beyond the task-specific guidance above:
 
-- To review record delete submission limits and quota usage, see [Data Lifecycle quotas](placeholder.md).
 - To understand how stored data affects license usage and how to manage that usage, see [Data management license entitlement best practices](placeholder.md).
+- To review record delete submission limits and quota usage, see [Data Lifecycle quotas](placeholder.md).
+- If you use Data Mirror to keep relational-schema datasets synchronized with an external source system, consider how source-system changes can affect deleted records. See the [Data Mirror overview](../xdm/data-mirror/overview.md).
 - To automate Data Lifecycle operations programmatically, see the [Data Hygiene API overview](placeholder.md).
