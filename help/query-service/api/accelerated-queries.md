@@ -26,7 +26,7 @@ The Data Distiller SKU is required to use the query accelerated store. Please se
 
 >[!IMPORTANT]
 >
->Accelerated Queries honor schema-level READ permissions. Ensure that the role used to run accelerated queries has READ access to the required schemas. See [access control in Query Service](../data-governance/overview.md#access-control) for more information.
+>Starting September 22, 2026, Accelerated Queries honor existing schema-level READ permissions. Ensure that the role used to run Accelerated Queries has the View Profiles permission and READ access to the required schemas. If the role queries destination data, it also requires the View Destinations permission. See [access control in Query Service](../data-governance/overview.md#access-control) for more information.
 
 The following sections detail the API calls necessary to access the query accelerated store in a stateless manner through the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 

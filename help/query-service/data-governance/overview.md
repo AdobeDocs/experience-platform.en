@@ -80,7 +80,7 @@ To run queries within Query Service, a user must be assigned a role with the fol
 
 >[!IMPORTANT]
 >
->As of September 22, 2026, Accelerated Queries honor existing schema-level READ permissions. Ensure that roles used for Accelerated Queries have READ access to the required schemas. Missing permissions may affect custom dashboards and other tools that rely on these queries.
+>As of September 22, 2026, Accelerated Queries honor existing schema-level READ permissions. Roles used for Accelerated Queries require the **[!UICONTROL View Profiles]** permission and READ access to the required schemas. If a role queries destination data, it also requires the **[!UICONTROL View Destinations]** permission. Missing permissions may affect custom dashboards and other tools that rely on these queries.
 
 This section serves as a guide for the resource-based access required to access datasets while querying data through Query Service.
 
