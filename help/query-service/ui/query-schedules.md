@@ -83,13 +83,17 @@ The schedule details page appears. Use this page to configure the schedule setti
 
 #### Scheduled query frequency {#scheduled-query-frequency}
 
+>[!IMPORTANT]
+>
+>Starting August 18, 2026, you cannot create a new query schedule that runs more than once per hour, either in the Query Service UI or by using the [schedules endpoint](../api/scheduled-queries.md). Existing sub-hourly schedules continue to run as configured and are not changed by this release.
+
 You can choose the following options for **[!UICONTROL Frequency]**:
 
-- **[!UICONTROL Hourly]**: The scheduled query will run every hour for the date period you selected.
-- **[!UICONTROL Daily]**: The scheduled query will run every X days at the time and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
-- **[!UICONTROL Weekly]**: The selected query will run on the days of the week, time, and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
-- **[!UICONTROL Monthly]**: The selected query will run every month at the day, time, and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
-- **[!UICONTROL Yearly]**: The selected query will run every year at the day, month, time, and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
+- **[!UICONTROL Hourly]**: The scheduled query runs every hour for the date period you select.
+- **[!UICONTROL Daily]**: The scheduled query runs every X days at the time and the date period you select. The selected time is in **UTC**, not your local time zone.
+- **[!UICONTROL Weekly]**: The selected query runs on the days of the week, time, and date period you select. The selected time is in **UTC**, not your local time zone.
+- **[!UICONTROL Monthly]**: The selected query runs every month on the day, time, and date period you select. The selected time is in **UTC**, not your local time zone.
+- **[!UICONTROL Yearly]**: The selected query runs every year on the day, month, time, and date period you select. The selected time is in **UTC**, not your local time zone.
 
 ### Provide dataset details {#dataset-details}
 
