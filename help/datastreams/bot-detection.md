@@ -37,7 +37,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# Configure bot detection for datastreams
+# Configure bot detection for datastreams {#bot-detection}
 
 Nonhuman traffic from automated programs, web scrapers, spiders, and scripted scanners can make it difficult to identify events from human visitors. This type of traffic can negatively affect important business metrics, leading to incorrect traffic reporting.
 
@@ -81,6 +81,13 @@ For bot detection to work on your datastream, you must add the **[Bot Detection 
 
 ## Configure bot detection for datastreams {#configure}
 
+<!-- Contextual help for the signal-based detection toggle. With no additional-url, it links to the section it is authored under (Configure bot detection for datastreams). Once the signal-based detection section is authored, move this block beneath that section heading. -->
+
+>[!CONTEXTUALHELP]
+>id="platform_datastreams_bots_signal"
+>title="Signal-based detection"
+>abstract="Signal-based detection flags automated traffic that doesn't identify itself as a bot. It evaluates a range of technical characteristics in each request, such as browser and network fingerprints, and applies a weighted scoring model to flag traffic that behaves like a bot. Unlike the IAB/ABC list, which matches known bots by their user agent, signal-based detection can catch bots that disguise themselves as ordinary visitors."
+
 You can configure bot detection after creating a datastream configuration. See the documentation on how to [create and configure a datastream](/help/datastreams/configure.md), then follow the instructions below to add bot detection capabilities to your datastream.
 
 Go to the datastreams list and select the datastream to which you want to add bot detection.
@@ -101,6 +108,12 @@ From the Bot Detection Rules page, you can configure bot detection by using the 
 * Creating your own bot detection rules.
 
 ### Use the IAB/ABC International Spiders and Bots List {#iab-list}
+
+>[!CONTEXTUALHELP]
+>id="platform_datastreams_bots_iab"
+>title="IAB/ABC list"
+>abstract="The IAB/ABC International Spiders and Bots List is a third-party, industry-standard list of internet spiders and bots. It helps you identify automated traffic such as search engine crawlers, monitoring tools, and other nonhuman traffic that you might want to omit from reporting."
+>additional-url="https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/" text="IAB/ABC International Spiders and Bots List"
 
 The [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) is a third-party, industry-standard list of internet spiders and bots. This list helps you identify automated traffic such as search engine crawlers, monitoring tools, and other nonhuman traffic that you may not want to include in your analytics counts.
 

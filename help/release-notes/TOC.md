@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Adobe Experience Platform Release Notes
 breadcrumb-title: Experience Platform Release Notes
 user-guide-description: Find monthly release notes for Adobe Experience Platform.
-nudge: all
+nudge: true
 ---
 
 # Adobe Experience Platform release notes {#release-notes}
@@ -11,6 +11,7 @@ nudge: all
 * [Current Experience Platform Release Notes](latest/latest.md)
 * [Experience Platform Pre-Release Notes](./pre-release-notes.md)
 * 2026 {#2026}
+  * [August 2026](2026/august-2026.md)
   * [July 2026](2026/july-2026.md)
   * [June 2026](2026/june-2026.md)
   * [May 2026](2026/may-2026.md)

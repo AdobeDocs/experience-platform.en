@@ -2,7 +2,6 @@
 title: Document Your Source (Streaming SDK)
 description: The final step before your new source can be made live in Adobe Experience Platform is to document your new source.
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
-badge: Beta
 TQID: https://experienceleague.adobe.com/QDV7MtYYingzJzNtbHA1rhSB81yl9-OZqxESSi88Nng
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
@@ -12,10 +11,6 @@ role_v2:
     internal-label: Developer
 ---
 # Document your source (Streaming SDK)
-
->[!NOTE]
->
->Self-Serve Sources Streaming SDK is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 The final step before your new source can be set live in Adobe Experience Platform is to document your new source.
 
