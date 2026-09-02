@@ -75,12 +75,12 @@ For more information about guardrails in Experience Platform, please read the [R
 >[!CONTEXTUALHELP]
 >id="platform_capacity_creditperiod"
 >title="Credit period"
->abstract="Temporary fill in text."
+>abstract="The applicable period of the License Term during which Growth Credit usage is measured against your organization's licensed Growth Credit entitlement. Growth Credits are licensed on an annual basis. Unused credits are non-refundable and do not carry over into subsequent year(s) of the License Term, any renewal term, or subsequent license term."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_credit_reserved"
 >title="Credit reserved"
->abstract="Temporary fill in text."
+>abstract="Reserved credits are determined by the configured target capacity and the duration of the scheduled period."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_ondemandrun"
