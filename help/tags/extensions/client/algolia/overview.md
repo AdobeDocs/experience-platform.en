@@ -149,7 +149,7 @@ Add the **[!UICONTROL Click]** action to your tag rule to send clicked events to
 | Property | Description |
 | --- | --- |
 | [!UICONTROL Event Name ] | The Event Name that can be used to further refine this click event. |
-| [!UICONTROL Event Details Data Element ] | The Data Element returns event details in JSON format, including: <ul><li>`indexName` (string)</li><li>`objectIDs` (array of strings)</li><li>`queryID` (string, optional)</li><li>`positions` (array of integers, optional)</li><li>`price` (number, optional)</li><li>`quantity` (integer, optional)</li><li>`discount` (number, optional)</li><li>`objectData` (array of objects, optional) — one object per `objectID`, each with: <ul><li>`price` (number)</li><li>`quantity` (integer)</li><li>`discount` (number, optional)</li></ul></li><li>`currency` (string, optional)</li></ul> |
+| [!UICONTROL Event Details Data Element ] | The Data Element returns event details in JSON format, including: <ul><li>`indexName` (string)</li><li>`objectIDs` (array of strings)</li><li>`queryID` (string, optional)</li><li>`positions` (array of integers, optional)</li></ul> |
 
 
 >[!NOTE]
@@ -157,6 +157,8 @@ Add the **[!UICONTROL Click]** action to your tag rule to send clicked events to
 >If both `queryID` and `positions` are included, the event is classed as **Clicked object IDs after Search**. Otherwise, it's classed as a **Clicked object IDs** event.
 ><br>
 >If the Data Element does not provide an `indexName`, the **Default Index Name** will be used when the event is sent.
+><br>
+>The same Data Element may also return fields used by other actions, such as commerce details (`price`, `quantity`, `discount`, `objectData`, `currency`) or `recordID`. Those are not click event parameters. Only the fields listed above are sent to [!DNL Algolia] with a click event.
 
 The following example shows the event details for a click on the second search result:
 
@@ -193,9 +195,11 @@ Add the **[!UICONTROL Converted]** action to your tag rule to send converted eve
 
 >[!NOTE]
 >
->If the Data Element contains `queryId`, the event is classed as **Converted after Search**. Otherwise, it will be classed as a **Converted** event. 
+>If the Data Element contains `queryID`, the event is classed as **Converted after Search**. Otherwise, it will be classed as a **Converted** event. 
 ><br>
 >If the Data Element does not provide an `indexName`, the **Default Index Name** will be used when the event is sent. 
+><br>
+>The same Data Element may also return fields used by other actions, such as `positions` or commerce details (`price`, `quantity`, `discount`, `objectData`, `currency`). Those are not conversion event parameters. Only the fields listed above are sent to [!DNL Algolia] with a conversion event.
 ><br>
 >The [DataSet](#dataset) and [Storage](#storage) data elements also return a `recordID`. This is not an event parameter and is never sent to [!DNL Algolia]. The extension uses it as the key to remove the matching event from browser storage once the conversion is sent, unless [!UICONTROL Disable Removal of Event Data] is selected.
 
@@ -229,13 +233,15 @@ Add the **[!UICONTROL Added to Cart]** action to your tag rule to send added to 
 
 >[!NOTE]
 >
->If the Data Element contains `queryId`, the event will be classed as **Added to cart object IDs after Search**. Otherwise, it will be classed as a **Added to cart object IDs** event. 
+>If the Data Element contains `queryID`, the event will be classed as **Added to cart object IDs after Search**. Otherwise, it will be classed as a **Added to cart object IDs** event. 
 ><br>
 >If the Data Element does not provide an `indexName`, the **Default Index Name** will be used when the event is sent. 
 ><br>
->If the default Data Elements do not meet your requirements, a custom one Data Element can be created to return the desired event details.
+>If the default Data Elements do not meet your requirements, a custom Data Element can be created to return the desired event details.
 ><br>
 >Commerce details are read from `objectData`, so include the `price`, `quantity`, and `discount` for each item there. The extension calculates the event's total `value` for you from those entries, so your Data Element does not need to provide it.
+><br>
+>The same Data Element may also return fields used by other actions, such as `positions` or `recordID`. Those are not add-to-cart event parameters. Only the fields listed above are sent to [!DNL Algolia] with an add-to-cart event, plus the calculated `value`.
 
 The following example shows the event details for an add to cart event resulting from a search, where the top-level `queryID` applies to every item in `objectData`:
 
@@ -287,6 +293,8 @@ Add the **[!UICONTROL Purchased]** action to your tag rule to send purchased eve
 >The extension calculates the event's total `value` from the `price`, `quantity`, and `discount` of each item in `objectData`, so you do not need to provide it.
 ><br>
 >Purchased items are grouped by index name. If a purchase contains items from more than one index, the extension sends a separate purchase event for each index. After a purchase event is sent, the extension clears the corresponding data from browser storage so that no further events are sent for those items.
+><br>
+>Only the following properties are sent to [!DNL Algolia] with a purchase event: `index`, `objectIDs`, `objectData` (`price`, `quantity`, `discount`, and per-item `queryID` when available), calculated `value`, and `currency`. Other stored fields, such as `positions` and `recordID`, are not purchase event parameters and are not sent.
 
 Unlike the other actions, you don't author the event details for a purchase. The extension assembles them from browser storage and sends them as a [`purchasedObjectIDsAfterSearch`](https://www.algolia.com/doc/libraries/search-insights/purchased-object-ids-after-search) event, or as a [`purchasedObjectIDs`](https://www.algolia.com/doc/libraries/search-insights/purchased-object-ids) event when none of the purchased items came from a search. The following example shows the details it assembles for a purchase where one item was bought as the result of a search, and one wasn't:
 
@@ -328,6 +336,8 @@ Add the **[!UICONTROL Viewed]** action to your tag rule to send view events to [
 >[!NOTE]
 >
 >If the Data Element does not provide an `indexName`, the **Default Index Name** will be used when sending the event.
+><br>
+>The same Data Element may also return fields used by other actions, such as `queryID`, `positions`, commerce details (`price`, `quantity`, `discount`, `objectData`, `currency`), or `recordID`. Those are not view event parameters. Only the fields listed above are sent to [!DNL Algolia] with a view event.
 
 The following example shows the event details for a view event covering two items:
 
