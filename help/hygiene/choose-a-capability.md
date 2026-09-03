@@ -1,12 +1,12 @@
 ---
-title: Choose the right Data Lifecycle Management capability
+title: Choose the Right Data Lifecycle Management Capability
 description: Understand why data lifecycle management matters in Adobe Experience Platform. Compare record delete, dataset expiration, Experience Event expiration, and Pseudonymous Profile data expiration, and choose the right capability for your data management goal.
 solution: Experience Platform
 keywords: Experience Platform;data lifecycle;record delete;dataset expiration;data hygiene;time to live;ttl;data minimization
 ---
-# Choose the right Data Lifecycle Management capability
+# Choose the right data lifecycle management capability
 
-To manage the data you store in Adobe Experience Platform, use Advanced Data Lifecycle Management to remove or expire data that is no longer useful. Use this guide to understand why managing your data lifecycle matters and to choose the right capability for your goal. For step-by-step instructions, follow the implementation links in each section.
+Use Advanced Data Lifecycle Management to remove or expire data in Adobe Experience Platform when you no longer need it. Use this guide to understand why managing your data lifecycle matters and to choose the right capability for your goal. For step-by-step instructions, follow the implementation links in each section.
 
 This guide is for administrators and developers who manage data volumes, retention, and entitlements in Experience Platform. It assumes you are familiar with core Experience Platform concepts, including datasets, [identities](../identity-service/home.md), [profiles](../profile/home.md), and sandboxes. The availability and permissions required for each action are described on the linked UI and API pages.
 
@@ -30,7 +30,11 @@ A key part of managing your data lifecycle is matching data to the workflow it s
 | Analytical | Long-term retention with slower access, held in the data lake | Historical analysis, reporting, data science |
 | Engagement | Real-time or near-real-time access, held in the Profile store | Segmentation, activation, personalization |
 
-A dataset can support analytical workflows, engagement workflows, or both. For ExperienceEvent data available in both the Profile store and data lake, retention is managed independently in each repository. Expiring data from one repository does not automatically remove the same data from the other. Retain the data only as long as the workflows it supports require it. Both Profile and data lake storage are subject to licensing entitlements, which vary by the products your organization has purchased. Confirm the entitlements available to your organization when you plan where data is stored and how long it is retained.
+A dataset can support analytical workflows, engagement workflows, or both. When Experience Event data is available in both the Profile store and the data lake, each repository has its own retention policy. Expiring data from one repository does not automatically remove the same data from the other. Retain data only for as long as the workflows that use it require. 
+
+>[!NOTE]
+>
+>Both Profile and data lake storage are subject to licensing entitlements, which vary by the products your organization has purchased. Confirm the entitlements available to your organization when you plan where data is stored and how long it is retained.
 
 ![Diagram showing Adobe Experience Platform splitting into two workflows: Analytical Workflows generating data-driven insights, and Engagement Workflows powered by Real-time Customer Profile.](./images/choose-a-capability/analytical-engagement-workflows.png){width="600" zoomable="yes"}
 
@@ -38,7 +42,7 @@ For guidance on tracking and managing your license entitlements, see [Data manag
 
 ## Choose the right capability {#choose-a-capability}
 
-Your data management goal determines which retention or deletion option to use. The following table maps common goals, including privacy or regulatory deletion requests, to the option that fits. Each Data Lifecycle Management option is described in the section that follows.
+Your data management goal determines which retention or deletion option to use. The following table maps common goals, including privacy or regulatory deletion requests, to the option that fits. The sections that follow describe each retention and deletion option.
 
 >[!IMPORTANT]
 >
@@ -85,7 +89,7 @@ When you need to retire an entire dataset that is no longer needed for your use 
 >
 >Before a dataset expires, update any dataflows that ingest data into it to avoid ingestion failures that can affect downstream workflows. The dataset is removed from the data lake before the rest of the expiration process completes, so any dataflow that still ingests into it begins to fail as soon as the dataset is removed.
 
-You can have only a limited number of scheduled dataset expirations pending at one time. The limit depends on your product and any Shield entitlement. For the current limit, see [pending expiration limits](./ui/dataset-expiration.md#schedule-dataset-expiration). Data Lifecycle Management does not support batch dataset deletion.
+You can have only a limited number of scheduled dataset expirations pending at one time. The limit depends on your product and any Shield entitlement. For the current limit, see [pending expiration limits](./ui/dataset-expiration.md#schedule-dataset-expiration). Advanced Data Lifecycle Management does not support batch dataset deletion.
 
 You can schedule dataset expirations in the [!UICONTROL Data Lifecycle] workspace or with the API. See [Schedule a dataset expiration](./ui/dataset-expiration.md) for the UI workflow and the [dataset expiration endpoint guide](./api/dataset-expiration.md) for the API.
 
@@ -158,7 +162,9 @@ Use the following guidance when you set retention durations:
 >
 >Apply the same retention discipline to non-production sandboxes as you do to production. Avoid copying full production datasets into a non-production sandbox without a defined use case, since unmanaged non-production data still counts toward your license usage.
 
-Apply these capabilities based on your data retention requirements. For example, for high-volume clickstream data, set an Experience Event expiration period and, if inactive unknown profiles lose value sooner, a shorter Pseudonymous Profile data expiration period to control your Profile store footprint. Set a longer data lake retention period separately to preserve the same events for long-term analysis. Use dataset expiration to retire entire datasets you no longer need, and record delete to remove specific records on request.
+Apply these capabilities based on your data retention requirements. For example, for high-volume clickstream data, set an Experience Event expiration period and, if inactive unknown profiles lose value sooner, a shorter Pseudonymous Profile data expiration period to control your Profile store footprint. Set a longer data lake retention period separately to preserve the same events for long-term analysis.
+
+Use dataset expiration to retire entire datasets you no longer need, and record delete to remove specific records on request.
 
 For guidance on tracking and managing your license entitlements, see [Data management license entitlement best practices](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
