@@ -38,9 +38,9 @@ The **[!UICONTROL Client]** dropdown at the top of the view lists the unique cli
 
 If you reinstall the app on a device and reconnect it to the Assurance session, it appears as a new client.
 
-The Live Activities view displays information for one client at a time. When you select a different client from the **[!UICONTROL Client]** dropdown, Assurance updates the **[!UICONTROL Client Info]**, **[!UICONTROL Activities]**, and **[!UICONTROL Events]** tabs for that client.
+The Live Activities view displays information for one client at a time. When you select a different client from the **[!UICONTROL Client]** dropdown, Assurance updates the **[!UICONTROL Client Info]**, **[!UICONTROL Messages on Device]**, and **[!UICONTROL Events]** tabs for that client.
 
-![Client picker showing a list of connected devices in the Live Activities view](../images/live-activities-view/client-picker.png)
+![Client selector showing the currently selected client in the Live Activities view](../images/live-activities-view/client-picker.png)
 
 ## Client Info tab
 
@@ -50,7 +50,7 @@ The **[!UICONTROL Client Info]** tab validates that the app is correctly set up 
 
 The tab organizes validation into three sections. Each section displays a green check mark when it is correctly configured. If a section fails validation, an alert explains how to fix it.
 
-### Client details
+### Client
 
 Use this section to verify that the selected client is configured for Live Activities. It shows whether the required extensions are configured in the Data Collection UI, the extension and its dependencies are initialized in the app, and the client is reporting the expected data.
 
@@ -66,7 +66,7 @@ If the selected client is not an iOS device or does not meet the minimum iOS ver
 
 ### Profile
 
-Use this section to verify that the app has registered its push notification and Live Activity push-to-start data through the Experience Platform Messaging SDK, and that the data has been ingested into the user profile.
+Use this section to verify that the app has registered its push notification and Live Activity push-to-start data through the Experience Platform Messaging SDK, and that the data has been ingested into the user profile. Select **[!UICONTROL Inspect Profile]** to view the full profile.
 
 >[!NOTE]
 >
@@ -76,11 +76,12 @@ When valid, this section displays:
 
 * **[!UICONTROL ECID]** - The identity for the profile.
 * **[!UICONTROL Sandbox]** - The sandbox associated with the profile.
-* **[!UICONTROL Push token]** - The push notification token stored in the profile.
+* **[!UICONTROL Push Token]** - The push notification token stored in the profile.
 * **[!UICONTROL App ID]** - The application ID associated with the profile.
 * **[!UICONTROL Platform]** - For example, `apns` or `apnsSandbox`.
 * **[!UICONTROL Denylisted]** - Indicates whether the push token is denylisted, for example, because the user disabled push notifications or uninstalled the app.
-* **Live Activity push-to-start details** - When available, the push-to-start token and related profile data used to start a Live Activity remotely.
+* **[!UICONTROL Device Match]** - Indicates whether the profile's push token matches the token reported by the device.
+* **[!UICONTROL Live Activities]** - For each registered attribute type, the push-to-start token and whether it **[!UICONTROL Matches device]**.
 
 ### App Store credentials and configuration
 
@@ -88,13 +89,13 @@ Use this section to verify that the app ID and platform associated with the prof
 
 When available, this section displays:
 
-* **Channel configuration** - The name of the matching channel configuration.
+* **[!UICONTROL Sandbox]**
 * **[!UICONTROL App ID]** - The application ID associated with the channel configuration.
-* **[!UICONTROL Messaging service]** - The messaging service configured for the app, such as Apple Push Notification service.
+* **[!UICONTROL Messaging Service]** - The messaging service configured for the app, such as Apple Push Notification service.
 
-## Activities tab
+## Messages on Device tab
 
-Use the **[!UICONTROL Activities]** tab to view Live Activities for the selected client. Depending on the client's capabilities, you can start a Live Activity remotely or update and end an existing Live Activity.
+Use the **[!UICONTROL Messages on Device]** tab to view Live Activities for the selected client. Depending on the client's capabilities, you can start a Live Activity remotely or update and end an existing Live Activity.
 
 ### No activities state
 
@@ -107,24 +108,39 @@ If the selected client has no Live Activities, the tab displays an empty state w
 
 When remote start is available, **[!UICONTROL Start Live Activity]** appears in the tab so you can start a Live Activity without using the device UI.
 
-![Activities tab showing the empty state with no Live Activities started](../images/live-activities-view/activities-empty-state.png)
+![Messages on Device tab showing the empty state with no Live Activities started](../images/live-activities-view/activities-empty-state.png)
 
 ### Activity list and detail panels
 
 When at least one Live Activity exists, the tab displays a list panel and a detail panel:
 
-* **List panel** - Lists the Live Activities for the selected client. Each entry shows the activity type (Unitary or Broadcast), the **[!UICONTROL Live Activity ID]** or **[!UICONTROL Broadcast Channel ID]**, the status (for example, Active or Completed), and the event count. You can search the list and filter by **[!UICONTROL All]**, **[!UICONTROL Active]**, or **[!UICONTROL Completed]**.
+* **List panel** - Lists the Live Activities for the selected client. Each entry shows:
+
+   * The activity's name (the **[!UICONTROL Live Activity ID]** or **[!UICONTROL Broadcast Channel ID]**), attribute set, and how long ago it was last updated.
+   * The event count.
+   * Badges for the message type (**[!UICONTROL Live Activity]**) and the activity type (**[!UICONTROL Unitary]** or **[!UICONTROL Broadcast]**).
+
+   You can search the list by title or token. To narrow the list further, select the filter icon to open **[!UICONTROL Filter outbound]**, then filter by:
+
+   * **[!UICONTROL Channel]** - **[!UICONTROL Live Activity]** or **[!UICONTROL Push]**.
+   * **[!UICONTROL Type]** - **[!UICONTROL Unitary]** or **[!UICONTROL Broadcast]**.
+
+   Select **[!UICONTROL Clear filters]** to reset.
 * **Detail panel** - Displays information about the selected Live Activity in three tabs: **[!UICONTROL Overview]**, **[!UICONTROL Activity Flow]**, and **[!UICONTROL Event Details]**. If no Live Activity is selected, this panel prompts you to choose one from the list.
 
-![Activities tab showing the activity list and the detail panel for a selected activity](../images/live-activities-view/activities-list-and-details.png)
+![Messages on Device tab showing the message list and the detail panel for a selected activity](../images/live-activities-view/activities-list-and-details.png)
 
 ### Start a Live Activity
 
-Use the **[!UICONTROL Start Live Activity]** dialog to start a new Live Activity remotely. To open it, select **[!UICONTROL Start Live Activity]** in the empty state, or **[!UICONTROL New]** in the activity list header.
+Use the **[!UICONTROL Start Live Activity]** dialog to start a new Live Activity remotely. To open it, select **[!UICONTROL Start Live Activity]** in the empty state, or **[!UICONTROL New]** in the **[!UICONTROL Messages]** panel header.
 
-![New live activities button](../images/live-activities-view/new-live-activities-button.png)
+![New button in the Messages panel header](../images/live-activities-view/new-live-activities-button.png)
 
-In the dialog, choose a registered Live Activity attribute type that has a push-to-start token from **[!UICONTROL Select Attribute Type]**, then select **[!UICONTROL View Schema]** to review the attribute schema. Next, choose an **[!UICONTROL Activity Type]** of **[!UICONTROL Unitary]** or **[!UICONTROL Broadcast]**.  You can edit the payload content in the JSON editor, which Assurance prefills from the captured schema. The payload must be valid JSON and must match the activity's attribute schema, or Assurance rejects the request.
+Selecting **[!UICONTROL New]** opens the **[!UICONTROL Start something new]** dialog, where you choose **[!UICONTROL Live Activity]** to continue to the **[!UICONTROL Start Live Activity]** dialog described below. Select **[!UICONTROL Push]** to send a standard test push notification to the device through the regular iOS push configuration. This option does not start or update a Live Activity.
+
+![Start something new dialog with Live Activity and Push options](../images/live-activities-view/start-something-new-dialog.png)
+
+In the dialog, choose a registered Live Activity attribute type that has a push-to-start token from **[!UICONTROL Select Attribute Type]**, then select **[!UICONTROL View Schema]** to review the attribute schema. Next, choose an **[!UICONTROL Activity Type]** of **[!UICONTROL Unitary]** or **[!UICONTROL Broadcast]**. You can edit the payload content in the JSON editor, which Assurance prefills from the captured schema. The payload must be valid JSON and must match the activity's attribute schema, or Assurance rejects the request.
 
 For a Unitary activity, the dialog shows the fields for a single target device.
 
