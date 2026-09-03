@@ -190,7 +190,7 @@ Add the **[!UICONTROL Converted]** action to your tag rule to send converted eve
 | Property | Description |
 | --- | --- |
 | [!UICONTROL Event Name] | The Event Name that will be used to further refine this **convert** event. |
-| [!UICONTROL Event Details Data Element]| The Data Element returns event details, including: <ul><li>`indexName` (string)</li><li>`objectIDs` (array of strings)</li><li>`queryID` (string, optional)</li></ul> |
+| [!UICONTROL Event Details Data Element]| The Data Element returns event details, including: <ul><li>`indexName` (string)</li><li>`objectIDs` (array of strings)</li><li>`queryID` (string, optional)</li><li>`recordID` (string, optional) — local storage key used by this action if provided; not sent to [!DNL Algolia]</li></ul> |
 | [!UICONTROL Disable Removal of Event Data] | Check this box to disable removing the event data from storage. When disabled, the data can be reused for other conversion events. The default value is `false`. |
 
 >[!NOTE]
@@ -199,9 +199,9 @@ Add the **[!UICONTROL Converted]** action to your tag rule to send converted eve
 ><br>
 >If the Data Element does not provide an `indexName`, the **Default Index Name** will be used when the event is sent. 
 ><br>
->The same Data Element may also return fields used by other actions, such as `positions` or commerce details (`price`, `quantity`, `discount`, `objectData`, `currency`). Those are not conversion event parameters. Only the fields listed above are sent to [!DNL Algolia] with a conversion event.
+>The same Data Element may also return fields used by other actions, such as `positions` or commerce details (`price`, `quantity`, `discount`, `objectData`, `currency`). Those are not conversion event parameters. Only `indexName`, `objectIDs`, and `queryID` are sent to [!DNL Algolia] with a conversion event.
 ><br>
->The [DataSet](#dataset) and [Storage](#storage) data elements also return a `recordID`. This is not an event parameter and is never sent to [!DNL Algolia]. The extension uses it as the key to remove the matching event from browser storage once the conversion is sent, unless [!UICONTROL Disable Removal of Event Data] is selected.
+>If `recordID` is provided, the Converted action uses it as the key to remove the matching event from browser storage after the conversion is sent, unless [!UICONTROL Disable Removal of Event Data] is selected. The [DataSet](#dataset) and [Storage](#storage) data elements return this field automatically. If `recordID` is omitted, the conversion is still sent, but no stored event is removed.
 
 The following example shows the event details your Data Element returns for a conversion following a search:
 
