@@ -22,9 +22,9 @@ topic_v2:
 ---
 # Advanced Data Lifecycle Management in Adobe Experience Platform
 
-Keep only the data in Adobe Experience Platform that continues to support active use cases. By removing data that no longer provides value, you can reduce stale signals and unnecessary storage and processing, support your organization's retention requirements, and stay within your licensing entitlements.
+Manage the data you retain in Adobe Experience Platform so that it continues to support your active use cases, retention requirements, and licensing entitlements. As your data volumes grow, use retention and deletion controls to remove data that is no longer needed and keep storage aligned with how the data is used.
 
-Use Advanced Data Lifecycle Management to remove specific records, delete entire datasets, or automatically remove data that no longer needs to remain in Experience Platform. Choose the appropriate capability based on what you need to remove, where the data is stored, and whether you need a one-time action or an ongoing retention policy.
+This overview introduces the available options and explains when to use each one, including targeted deletion, dataset expiration, and ongoing retention policies.
 
 ## Data Lifecycle Management and Privacy Service {#privacy-service}
 

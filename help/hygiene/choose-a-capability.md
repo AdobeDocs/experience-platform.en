@@ -6,7 +6,7 @@ keywords: Experience Platform;data lifecycle;record delete;dataset expiration;da
 ---
 # Choose the right data lifecycle management capability
 
-Use Advanced Data Lifecycle Management to remove or expire data in Adobe Experience Platform when you no longer need it. Use this guide to understand why managing your data lifecycle matters and to choose the right capability for your goal. For step-by-step instructions, follow the implementation links in each section.
+Manage how long data remains in Adobe Experience Platform based on your operational, retention, and storage requirements. This guide explains the available retention and deletion options and helps you determine which one fits your goal. For step-by-step instructions, follow the implementation links in each section.
 
 This guide is for administrators and developers who manage data volumes, retention, and entitlements in Experience Platform. It assumes you are familiar with core Experience Platform concepts, including datasets, [identities](../identity-service/home.md), [profiles](../profile/home.md), and sandboxes. The availability and permissions required for each action are described on the linked UI and API pages.
 
