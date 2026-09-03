@@ -108,7 +108,7 @@ The documentation below provides information on how to create a [!DNL WhatsApp] 
 
 ### Connect [!DNL WhatsApp] to Experience Platform using the UI {#connect-to-platform-using-ui}
 
-* [Create a source connection to bring WhatsApp data to Experience Platform using the user interface.](../../tutorials/ui/create/marketing-automation/whatsapp-business.md)
+* [Create a source connection to bring WhatsApp data to Experience Platform using the user interface.](../../tutorials/ui/create/marketing-automation/whatsapp.md)
 
 ## Additional resources {#additional-resources}
 

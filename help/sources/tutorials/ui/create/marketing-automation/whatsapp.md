@@ -28,7 +28,7 @@ This tutorial requires a working understanding of the following components of Ex
 
 ## Prerequisites {#prerequisites}
 
-Before you create a [!DNL WhatsApp] source connection, complete the [Prerequisites](../../../../connectors/marketing-automation/whatsapp-business.md#prerequisites) in the [!DNL WhatsApp] source overview, including subscribing your app to the WABA, and have the following ready:
+Before you create a [!DNL WhatsApp] source connection, complete the [Prerequisites](../../../../connectors/marketing-automation/whatsapp.md#prerequisites) in the [!DNL WhatsApp] source overview, including subscribing your app to the WABA, and have the following ready:
 
 * Your Meta App Secret
 * Your Verify Token
@@ -105,4 +105,4 @@ In Meta, go to **[!DNL WhatsApp]** > **[!DNL Configuration]** and complete the f
 
 By following this tutorial, you have configured a streaming dataflow to bring your [!DNL WhatsApp] data to Experience Platform. To monitor the data that is being ingested, refer to the guide on [monitoring streaming dataflows using Experience Platform UI](../../monitor-streaming.md).
 
-If no data appears after you send a test message, see [Troubleshooting](../../../../connectors/marketing-automation/whatsapp-business.md#troubleshooting) in the [!DNL WhatsApp] source overview.
+If no data appears after you send a test message, see [Troubleshooting](../../../../connectors/marketing-automation/whatsapp.md#troubleshooting) in the [!DNL WhatsApp] source overview.
