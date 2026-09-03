@@ -39,47 +39,65 @@ In the Experience Platform UI, select **[!UICONTROL Sources]** from the left nav
 
 Go to the *[!UICONTROL Marketing automation]* category, select the [!DNL WhatsApp] source card, and select **[!UICONTROL Add data]**.
 
-![The sources catalog with the WhatsApp source selected in the Marketing automation category.](../../../../images/tutorials/create/whatsapp/catalog.png)
+![The WhatsApp source card in the Marketing automation category of the sources catalog.](../../../../images/tutorials/create/whatsapp/catalog.png)
 
-The **[!UICONTROL Authentication]** tab appears. Select **[!UICONTROL New account]**, or select an existing [!DNL WhatsApp] account to reuse, then provide the following information.
+The **[!UICONTROL Authentication]** tab appears. On this tab, you can either use a new account or an existing account.
 
-![The new account interface for authenticating a new WhatsApp account, showing the account name, description, Verify Token, and App Secret fields.](../../../../images/tutorials/create/whatsapp/new.png)
+>[!BEGINTABS]
+
+>[!TAB Create a new account]
+
+Select **[!UICONTROL New account]** and provide the following information.
 
 | Field | What to enter |
 | --- | --- |
 | Account name | A name for this connection. |
 | Description *(optional)* | A short description of the account. |
-| App Secret | Your Meta App Secret from Prerequisites. Stored as the primary secret and used to validate the `X-Hub-Signature-256` signature on inbound webhooks. |
-| Secondary secret *(optional)* | A second App Secret, used only during secret rotation, so that you can roll the App Secret without downtime. |
 | Verify Token | The Verify Token you chose in Prerequisites. It is the shared secret used for the one-time webhook verification handshake with Meta. |
+| App Secret (current) | Your Meta App Secret from Prerequisites. Used to validate the `X-Hub-Signature-256` signature on inbound webhooks. |
+| App Secret (previous) *(optional)* | A previous App Secret, used only during secret rotation, so that you can roll the App Secret without downtime. |
 
 Select **[!UICONTROL Connect to source]** to validate and create the account, then select **[!UICONTROL Next]**. An account can be reused across multiple dataflows, so you only enter these credentials once per account.
 
+![The new account interface for authenticating a new WhatsApp account, showing the account name, description, Verify Token, and App Secret fields.](../../../../images/tutorials/create/whatsapp/new.png)
+
+>[!TAB Use an existing account]
+
+Select **[!UICONTROL Existing account]**, select the account that you want to reuse, and then select **[!UICONTROL Next]**.
+
+![The existing account interface where you can select an existing WhatsApp account to reuse.](../../../../images/tutorials/create/whatsapp/existing.png)
+
+>[!ENDTABS]
+
 ## Step 2: Configure the dataflow {#configure-dataflow}
 
-The **[!UICONTROL Dataflow detail]** tab appears. Enter a **[!UICONTROL Dataflow name]**, an optional **[!UICONTROL Description]**, and optionally subscribe to **[!UICONTROL Alerts]** for dataflow run start, success, or failure.
+The **[!UICONTROL Dataflow detail]** tab appears. Enter a **[!UICONTROL Dataflow name]**, an optional **[!UICONTROL Description]**, and optionally subscribe to alerts by selecting **[!UICONTROL Sources Dataflow Run Start]**, **[!UICONTROL Sources Dataflow Run Success]**, or **[!UICONTROL Sources Dataflow Run Failure]**.
 
 >[!NOTE]
 >
 >You do not select a target dataset or map fields. The connector creates and assigns the dataset, schema, and field mapping automatically.
 
+![The dataflow detail tab, showing the dataflow name, description, and alert subscription options.](../../../../images/tutorials/create/whatsapp/dataflow-detail.png)
+
 Select **[!UICONTROL Next]**.
 
-The **[!UICONTROL Review]** tab appears. Review the dataflow details and select **[!UICONTROL Finish]**.
+The **[!UICONTROL Review]** tab appears. Review the connection and dataset assignment, then select **[!UICONTROL Finish]**.
 
-## Step 3: Copy the Callback URL {#copy-callback-url}
+![The review tab, confirming that the account is connected and a dataset is assigned.](../../../../images/tutorials/create/whatsapp/review.png)
 
-After the dataflow is created, Experience Platform exposes a Callback URL on the dataflow. Copy it. You enter it into Meta in the next step. It has the form:
+## Step 3: Retrieve the streaming endpoint {#retrieve-streaming-endpoint}
 
-```http
-https://dcs.adobedc.net/collection/webhooks/{inletId}?x-adobe-flow-id={flowId}
-```
+After the dataflow is created, go to its **[!UICONTROL Dataflow activity]** page and find the **[!UICONTROL API Usage]** section of the **[!UICONTROL Properties]** panel. Copy the **[!UICONTROL Streaming endpoint]** and **[!UICONTROL Dataflow ID]** values.
+
+![The streaming endpoint and dataflow ID in the API Usage section of the Properties panel.](../../../../images/tutorials/create/whatsapp/streaming-endpoint.png)
+
+Combine both values to build the Callback URL that you enter in Meta: `{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}`.
 
 ## Step 4: Configure the webhook in Meta {#configure-webhook}
 
 In Meta, go to **[!DNL WhatsApp]** > **[!DNL Configuration]** and complete the following steps.
 
-1. Enter the Callback URL from Step 3 and the same Verify Token from Prerequisites.
+1. Enter the Callback URL you built in Step 3 and the same Verify Token from Prerequisites.
 1. Select **[!DNL Verify and Save]**. Meta calls the Callback URL with a `GET` challenge, which Platform answers to complete the handshake.
 1. Subscribe to the `messages` webhook field.
 
