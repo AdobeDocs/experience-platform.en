@@ -55,6 +55,10 @@ When a user performs an action, two types of audit events are recorded. A core e
 
 >[!NOTE]
 >
+>A single event can act on multiple assets (batch operations; currently [!DNL Profile] events). These events return each affected asset and its status in an `assets` array, alongside an overall batch status. In CSV exports this appears as an `assets` column. See [multi-asset events](./api/events.md#multi-asset-events).
+
+>[!NOTE]
+>
 > The metadata for the actions **Add user** and **Remove user** within the **Role** resource will not contain the email ID of the user who performed the action. Instead, the logs will display the system generated email ID (system@adobe.com).
 
 This document covers audit logs in Experience Platform, including how to view and manage them in UI or API.

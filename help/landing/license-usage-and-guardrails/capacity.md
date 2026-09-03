@@ -75,7 +75,12 @@ For more information about guardrails in Experience Platform, please read the [R
 >[!CONTEXTUALHELP]
 >id="platform_capacity_creditperiod"
 >title="Credit period"
->abstract="Temporary fill in text."
+>abstract="The applicable period of the License Term during which Growth Credit usage is measured against your organization's licensed Growth Credit entitlement. Growth Credits are licensed on an annual basis. Unused credits are non-refundable and do not carry over into subsequent year(s) of the License Term, any renewal term, or subsequent license term."
+
+>[!CONTEXTUALHELP]
+>id="platform_capacity_credit_reserved"
+>title="Credit reserved"
+>abstract="Reserved credits are determined by the configured target capacity and the duration of the scheduled period."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_ondemandrun"
@@ -86,6 +91,11 @@ For more information about guardrails in Experience Platform, please read the [R
 >id="platform_capacity_scheduledruns"
 >title="Scheduled runs"
 >abstract="Temporary fill in text."
+
+>[!CONTEXTUALHELP]
+>id="platform_capacity_scheduled_run_tiers"
+>title="Scheduled runs tiers"
+>abstract="Scheduled Runs are available in three tiers based on the maximum number of audiences supported per run:<ul><li>T1: Up to 500 audiences/run</li><li>T2: Up to 1,000 audiences/run</li><li>T3: Up to 5,000 audiences/run</li></ul>**Note:** Once you upgrade to T2 or T3, the selected tier is locked until the next contract year.
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_systemjob"
