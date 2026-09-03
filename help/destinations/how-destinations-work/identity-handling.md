@@ -41,9 +41,9 @@ Each destination in the [catalog](/help/destinations/catalog/overview.md) is sli
 
 ## File-based destinations {#file-based}
 
-For [file-based destinations](/help/destinations/destination-types.md#file-based) (for example [!DNL Amazon S3], SFTP, most email marketing destinations such as [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]), the identity setup in most of these destinations is open, meaning that you are not required to select any identity in the [Select attributes](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) step of the batch activation workflow.
+For [file-based destinations](/help/destinations/destination-types.md#file-based) (for example [!DNL Amazon S3], SFTP, most email marketing destinations such as [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]), the identity setup in most of these destinations is open, meaning that you are not required to select any identity in the [Mapping](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) step of the batch activation workflow (or the [Select attributes](/help/destinations/ui/select-profile-attributes-legacy.md) step for [!DNL Adobe Campaign], [!DNL Oracle Eloqua], and [!DNL Salesforce Marketing Cloud]).
 
-If you choose to add identities to your file exports, note that only a single identity from the [identity namespace](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer) can be selected in an export. When you select an identity for export, it is automatically selected as a [mandatory attribute](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) and [deduplication key](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
+If you choose to add identities to your file exports, note that only a single identity from the [identity namespace](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer) can be selected in an export. When you select an identity for export, it is automatically selected as a [mandatory attribute](/help/destinations/ui/batch-destinations-mapping-reference.md#mandatory-attributes) and [deduplication key](/help/destinations/ui/batch-destinations-mapping-reference.md#deduplication-keys).
 
 ![An identity selected as mandatory attribute and deduplication key.](/help/destinations/assets/how-destinations-work/selected-identity.png)
 
@@ -122,11 +122,6 @@ When configuring a datastream as described in the documentation linked above, yo
 ## Personalization destinations {#personalization-destinations}
 
 [Personalization (or edge) destinations](/help/destinations/destination-types.md#edge-personalization-destinations) (for example: [!DNL Adobe Target], [!DNL Custom Personalization]) do not require any identity selection in the activation workflow, as the integration is a profile lookup. The client ([!DNL Target], [!DNL Web SDK], or others) queries the [[!UICONTROL Edge]](/help/collection/home.md) and pulls the profile information that it needs for on-site personalization.
-
-<!--
-![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)
-
--->
 
 ## Next steps {#next-steps}
 

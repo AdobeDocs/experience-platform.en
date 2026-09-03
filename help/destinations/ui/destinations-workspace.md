@@ -141,13 +141,18 @@ Use the filters in the left sidebar to narrow down your search.
 
 ![Destination filters in the Browse tab](../assets/ui/workspace/destination-filters.png)
 
+* **[!UICONTROL Data type]**: Filter dataflows by the type of data activated to the destination:
+    * **[!UICONTROL Audiences]**: Shows only dataflows that activate [audiences](../../segmentation/types/overview.md)
+    * **[!UICONTROL Datasets]**: Shows only dataflows that export [datasets](../../catalog/datasets/overview.md)
+    * **[!UICONTROL Accounts]**: Shows only dataflows that activate [account audiences](../../segmentation/types/account-audiences.md)
+    * **[!UICONTROL Prospects]**: Shows only dataflows that activate [prospect audiences](../../segmentation/types/prospect-audiences.md)
 * **[!UICONTROL Destination platform]**: Filter dataflows by specific destination platforms (for example, [!DNL Amazon S3], [!DNL Facebook Custom Audience], [!DNL LinkedIn Matched Audience], etc.). You can select multiple platforms simultaneously.
 * **[!UICONTROL Has any tag]**: Filter dataflows that have specific tags assigned to them. This helps you organize and find dataflows based on your custom tagging.
 * **[!UICONTROL Status]**: Filter dataflows by their operational status:
     * **[!UICONTROL Enabled]**: Shows only active dataflows
     * **[!UICONTROL Disabled]**: Shows only inactive dataflows
 * **[!UICONTROL Account name]**: Filter dataflows by the associated account name. This helps you find all dataflows connected to a specific destination account.
-* **[!UICONTROL Created]**: Filter dataflows by the user who created them. Use this filter to find dataflows created by specific team members.
+* **[!UICONTROL Created by]**: Filter dataflows by the user who created them. Use this filter to find dataflows created by specific team members.
 * **[!UICONTROL Modified by]**: Filter dataflows by the user who last modified them. Use this filter to identify recent changes made by specific users.
 * **[!UICONTROL Creation date]**: Filter dataflows by their creation date using a date range:
     * **[!UICONTROL Start date]**: Set the beginning of the date range

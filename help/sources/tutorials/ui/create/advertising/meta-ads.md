@@ -1,14 +1,8 @@
 ---
 title: Connect Meta Ads to Experience Platform UI
 description: Learn how to connect your Meta Ads account to Adobe Experience Platform in the UI.
-badge: Beta
-hide: true
 ---
 # Ingest [!DNL Meta Ads] data to Experience Platform in the UI
-
->[!NOTE]
->
->The [!DNL Meta Ads] source is in beta. Read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Learn how to connect your [!DNL Meta Ads] account and import ads data into Adobe Experience Platform using the sources workspace.
 

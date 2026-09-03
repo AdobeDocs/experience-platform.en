@@ -145,6 +145,11 @@ More information on these available actions can be found in their respective sec
 
 ### Preview a dataset {#preview}
 
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_previewdataset"
+>title="Preview dataset"
+>abstract="Preview displays a random sample of 100 rows from the dataset."
+
 You can preview up to 100 rows of sample data for any dataset, either from the inline options in the [!UICONTROL Browse] tab or from the [!UICONTROL Dataset activity] view.
 
 From the [!UICONTROL Browse] tab, select the ellipsis (...) next to the dataset name and choose [!UICONTROL Preview dataset]. If the dataset is empty, the preview option is deactivated. Alternatively, from the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen.

@@ -141,7 +141,36 @@ A successful response returns the resulting datapoints for the metrics and filte
 | `assetType` | The type of Experience Platform resource that the action was performed on. |
 | `assetId` | A unique identifier for the Experience Platform resource that the action was performed on. |
 | `assetName` | The name of the Experience Platform resource that the action was performed on. |
+| `assets` | Present when a single request acts on multiple assets (batch operations; currently [!DNL Profile] events). When present, the event's top-level `assetId` and `assetName` are empty. Each object describes one asset: <ul><li>`assetId`</li><li>`assetName`</li><li>`status`: `Success` or `Failure`</li><li>`failureCode`: present only when `status` is `Failure`</li></ul> |
 | `action` | The type of action that was recorded for the event. An action can be any of the following: <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
 | `status` | The status of the action. A status can be any of the following: </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
+| `failureCode` | The error code for a failed action; empty when the action succeeded. |
 
 {style="table-layout:auto"}
+
+## Multi-asset events {#multi-asset-events}
+
+For batch operations, a single request can act on multiple assets. The event then returns an `assets` array in place of `assetId`/`assetName` (which are empty). The event-level `status`/`failureCode` describe the overall request; each object in `assets` carries its own per-asset `status`/`failureCode`. `assets` can appear on core or enhanced events, though today it is mainly enhanced (execution) events that carry it, currently for [!DNL Profile] events.
+
+```json
+{
+  "assetType": "Profile",
+  "action": "Browse",
+  "status": "Allow",
+  "assetId": "",
+  "assetName": "",
+  "enhancedEvents": [
+    {
+      "action": "Browse",
+      "status": "Success",
+      "failureCode": "",
+      "assetId": "",
+      "assetName": "",
+      "assets": [
+        { "assetId": "id-1", "assetName": "name-1", "status": "Success" },
+        { "assetId": "id-2", "assetName": "name-2", "status": "Failure", "failureCode": "SMS-2010-403" }
+      ]
+    }
+  ]
+}
+```

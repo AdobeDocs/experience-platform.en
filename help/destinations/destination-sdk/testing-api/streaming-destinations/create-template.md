@@ -101,19 +101,22 @@ If the destination ID you provide corresponds to a destination configuration wit
         {%- endfor -%}{%- if not loop.last -%},{%- endif -%}
     {% endfor %}
     ],
-    "AdobeExperiencePlatformSegments": {
-        "add": [
-        {%- for segment in input.profile.segmentMembership.ups | added %}
-            "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
-        {% endfor %}
-        ],
-        "remove": [
-        {#- Alternative syntax for filtering audiences by status: -#}
-        {% for segment in removedSegments(input.profile.segmentMembership.ups) %}
-            "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
-        {% endfor %}
-        ]
-    }
+    "segments": [
+    {%- set first = true %}
+    {%- for namespace in input.profile.segmentMembership %}
+    {%- for segment in input.profile.segmentMembership[namespace.key] %}
+    {%- if destination.namespaceSegmentAliases[namespace.key][segment.key] is defined %}
+    {%- if not first %},{% endif %}
+        {
+            "id": "{{ segment.key }}",
+            "status": "{{ segment.value.status }}",
+            "qualificationTime": "{{ segment.value.lastQualificationTime }}"
+        }
+    {%- set first = false %}
+    {%- endif %}
+    {% endfor %}
+    {% endfor %}
+    ]
 }
 
 
@@ -141,19 +144,22 @@ If the destination ID you provide corresponds to a destination server template w
                 {%- endfor -%}{%- if not loop.last -%},{%- endif -%}
             {% endfor %}
             ],
-            "AdobeExperiencePlatformSegments": {
-                "add": [
-                {%- for segment in profile.segmentMembership.ups | added %}
-                    "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
-                {% endfor %}
-                ],
-                "remove": [
-                {#- Alternative syntax for filtering audiences by status: -#}
-                {% for segment in removedSegments(profile.segmentMembership.ups) %}
-                    "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
-                {% endfor %}
-                ]
-            }
+            "segments": [
+            {%- set first = true %}
+            {%- for namespace in profile.segmentMembership %}
+            {%- for segment in profile.segmentMembership[namespace.key] %}
+            {%- if destination.namespaceSegmentAliases[namespace.key][segment.key] is defined %}
+            {%- if not first %},{% endif %}
+                {
+                    "id": "{{ segment.key }}",
+                    "status": "{{ segment.value.status }}",
+                    "qualificationTime": "{{ segment.value.lastQualificationTime }}"
+                }
+            {%- set first = false %}
+            {%- endif %}
+            {% endfor %}
+            {% endfor %}
+            ]
         }{%- if not loop.last -%},{%- endif -%}
     {% endfor %}
     ]

@@ -92,7 +92,7 @@ The following metrics are available for this dashboard view:
 | Metric | Description |
 | ------ | ----------- |
 | **[!UICONTROL Job start]** | The date and time when the segmentation job started. |
-| **[!UICONTROL Type]** | Indicates the type of the segmentation job. The two supported job types are **activation** and **evaluation** jobs. |
+| **[!UICONTROL Type]** | The type of the segmentation job. The two supported job types are **activation** and **evaluation** jobs. |
 | **[!UICONTROL Job complete]** | The date and time when the segmentation job completed. |
 | **[!UICONTROL Processing time]** | The amount of time it took for the segmentation job to complete. |
 | **[!UICONTROL Job status]** | The status of the segmentation job. Supported values include **[!UICONTROL Success]**, **[!UICONTROL In Progress]**, and **[!UICONTROL Failed]**. |
@@ -174,7 +174,7 @@ For the [!UICONTROL Audiences] section, the following metrics are available:
 | Metric | Description |
 | ------ | ----------- |
 | **[!UICONTROL Name]** | The name of the audience that is being evaluated. |
-| **[!UICONTROL Profile count]** | The number of profiles that are being evaluated. |
+| **[!UICONTROL Profile count]** | The number of profiles that are being evaluated. This number is finalized once the evaluation and corresponding jobs are completed. |
 
 ## Monitoring segmentation jobs dashboard {#monitoring-segmentation-jobs-dashboard}
 
@@ -185,11 +185,7 @@ For the [!UICONTROL Audiences] section, the following metrics are available:
 
 To access the **[!UICONTROL Segmentation Jobs]** dashboard, select **[!UICONTROL Segmentation jobs]** in the [!UICONTROL Audiences] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on the evaluation and export jobs.
 
->[!NOTE]
->
->Only **segmentation evaluation jobs** are supported for per-audience monitoring. Segmentation export jobs only support organization-level monitoring.
-
-![The segmentation jobs monitoring dashboard is displayed. The toggle to switch between Audiences and Segmentation jobs is highlighted.](../assets/ui/monitor-audiences/segmentation-jobs-dashboard.png)
+![The segmentation jobs monitoring dashboard is displayed, with the available metrics for monitoring shown.](../assets/ui/monitor-audiences/segment-job-dashboard.png)
 
 Use the [!UICONTROL Segmentation Jobs] dashboard to understand if profile evaluation and export occurs on time and without any exceptions, so the downstream services for destination activation can have the latest evaluated profile data.
 
@@ -197,8 +193,10 @@ The following metrics are available for segmentation jobs:
 
 | Metric | Description |
 | ------ | ----------- |
-| **[!UICONTROL Segmentation job]** | Indicates the name of the segmentation job. |
-| **[!UICONTROL Type]** | Indicates the type of segmentation job - export or evaluation. Note that in both cases, the segmentation job evaluates or exports **all** audiences belonging to an organization. To learn more about export jobs, please read the guide on the [export jobs endpoint](../../segmentation/api/export-jobs.md). To learn more about evaluation jobs, please read the tutorial on [evaluating an audience](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-an-audience). |
+| **[!UICONTROL Flow run ID]** | The ID of the flow run that evaluates the segmentation job. |
+| **[!UICONTROL Segmentation job]** | The name of the segmentation job. |
+| **[!UICONTROL Type]** | The type of segmentation job - export or evaluation. Note that in both cases, the segmentation job evaluates or exports **all** audiences belonging to an organization. To learn more about export jobs, please read the guide on the [export jobs endpoint](../../segmentation/api/export-jobs.md). To learn more about evaluation jobs, please read the tutorial on [evaluating an audience](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-an-audience). |
 | **[!UICONTROL Job start]** | The date and time when the segmentation job started. |
 | **[!UICONTROL Job end]** | The date and time when the segmentation job completed. |
-| **[!UICONTROL Status]** | The status of the completed job. Possible statuses for the segmentation job include success or failed. |
+| **[!UICONTROL Processing time]** | The amount of time it took for the job to complete. |
+| **[!UICONTROL Status]** | The status of the completed job. Possible statuses for the segmentation job include **[!UICONTROL Success]**, **[!UICONTROL Failed]**, or **[!UICONTROL Processing]**. If the status is in **[!UICONTROL Processing]**, a percentage that shows the progress of audience evaluation. You can use this to estimate the remaining time needed for the segmentation job to ensure it can meet your audience's activation timeline. |

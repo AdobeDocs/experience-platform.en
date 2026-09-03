@@ -29,7 +29,6 @@ topic_v2:
 
 Use Adobe Experience Platform Dashboards to expedite insights and customize visualization through the Dashboards feature. Use this feature to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics relevant to your organization.
 
-
 <!-- 
 Getting started / permissions section commented out for Beta. This will be necessary after GA only
 

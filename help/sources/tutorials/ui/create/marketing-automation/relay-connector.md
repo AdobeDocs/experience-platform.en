@@ -12,10 +12,6 @@ role_v2:
 ---
 # Connect Relay to Experience Platform in the UI
 
->[!NOTE]
->
->The [!DNL Relay Connector] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
-
 With [!DNL Relay Connector], you can deliver personalized experiences to your customers at the most meaningful moments in their journey, helping you build stronger relationships and drive greater loyalty and value by creating an inbound connection to stream Events from your [!DNL Relay Network] integration into Adobe Experience Platform.
 
 Read this guide to learn how to use the [!DNL Relay Connector] within the sources workspace of the Experience Platform UI.

@@ -46,6 +46,10 @@ This tutorial requires a working understanding of the following components of Ad
 >
 >You can only create one source dataflow per consumer group for a given Event Hub.
 
+>[!IMPORTANT]
+>
+>If you are using an [!DNL Azure Event Hubs] source and no consumer group is configured on your [!DNL Event Hub], the data stream browser in this step returns an empty list or fails with an internal server error. Create a consumer group in [!DNL Azure] before proceeding. See the [Microsoft documentation on consumer groups](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#consumer-groups) for steps to create one.
+
 After creating your authenticating your streaming cloud storage account, the **[!UICONTROL Select data]** step appears, providing an interface for you to select which data stream you will bring to Experience Platform.
 
 - The left part of the interface is a browser that allows you to view the available data streams within your account;

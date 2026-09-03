@@ -84,7 +84,7 @@ Once a scheduled query is disabled, you can enable the schedule through the same
 
 To edit a scheduled query, select the ellipsis (**...**) for the schedule you want to modify, then select **[!UICONTROL Edit schedule]** from the options in the pop-up menu. The edit workflow opens, allowing you to update supported schedule settings such as frequency, end date, Query Quarantine enrollment, and alert subscriptions.
 
-The **[!UICONTROL Edit schedule]** option is only available for active schedules. Schedules that have ended, been deleted, or are still registering do not display this option.
+The **[!UICONTROL Edit schedule]** option is only available for active or upcoming schedules. Schedules that have ended are read-only and cannot be changed. Schedules that have been deleted or are still registering also do not display this option.
 
 For complete instructions on the edit workflow, editable fields, and eligibility requirements, see [Edit a schedule](./query-schedules.md#edit-schedule).
 
