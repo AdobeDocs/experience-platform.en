@@ -55,7 +55,7 @@ Use record delete or dataset expiration for one-time removal actions. To manage 
 
 ## Choose or implement a capability {#choose-or-implement}
 
-If you are still deciding which capability fits your goal, see [Choose the right Data Lifecycle Management capability](./choose-a-capability.md). The guide compares the available retention and deletion options, explains their scope, and helps you determine when to use each one.
+For more detailed help choosing the right capability, see [Choose the right data lifecycle management capability](./choose-a-capability.md). It compares the available retention and deletion options, explains their scope, and helps you determine when to use each one.
 
 If you already know which capability you need, continue to the implementation guidance below.
 
