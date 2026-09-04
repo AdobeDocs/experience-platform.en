@@ -190,7 +190,7 @@ Add the **[!UICONTROL Converted]** action to your tag rule to send converted eve
 | Property | Description |
 | --- | --- |
 | [!UICONTROL Event Name] | The Event Name that will be used to further refine this **convert** event. |
-| [!UICONTROL Event Details Data Element]| The Data Element returns event details, including: <ul><li>`indexName` (string)</li><li>`objectIDs` (array of strings)</li><li>`queryID` (string, optional)</li><li>`recordID` (string, optional) — local storage key used by this action if provided; not sent to [!DNL Algolia]</li></ul> |
+| [!UICONTROL Event Details Data Element] | The Data Element returns event details, including: <ul><li>`indexName` (string)</li><li>`objectIDs` (array of strings)</li><li>`queryID` (string, optional)</li><li>`recordID` (string, optional): local storage key used by this action if provided. Not sent to [!DNL Algolia].</li></ul> |
 | [!UICONTROL Disable Removal of Event Data] | Check this box to disable removing the event data from storage. When disabled, the data can be reused for other conversion events. The default value is `false`. |
 
 >[!NOTE]
@@ -229,7 +229,15 @@ Add the **[!UICONTROL Added to Cart]** action to your tag rule to send added to 
 | Property | Description |
 | --- | --- |
 | [!UICONTROL Event Name ] | The Event Name that will be used to further refine this **add to cart** event. |
-| [!UICONTROL Event Details Data Element ] | The Data Element returns event details in JSON format, including: <ul><li>`indexName` (string)</li><li>`objectIDs` (array of strings)</li><li>`queryID` (string, optional)</li><li>`objectData` (array of objects) — one object per `objectID`, each with: <ul><li>`price` (number)</li><li>`quantity` (integer)</li><li>`discount` (number, optional)</li></ul></li><li>`currency` (string, optional)</li></ul> |
+| [!UICONTROL Event Details Data Element ] | The Data Element returns event details in JSON format, including: <ul><li>`indexName` (string)</li><li>`objectIDs` (array of strings)</li><li>`queryID` (string, optional)</li><li>`objectData` (array of objects, one per `objectID`)</li><li>`currency` (string, optional)</li></ul> |
+
+`objectData` contains one object per `objectID`, with the following properties:
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `price` | number | The price for the item. |
+| `quantity` | integer | The quantity for the item. |
+| `discount` | number | The discount for the item as a decimal rate, optional. For example, use `0.2` for 20% off. |
 
 >[!NOTE]
 >
@@ -288,7 +296,7 @@ Add the **[!UICONTROL Purchased]** action to your tag rule to send purchased eve
 ><br>
 >This approach allows the purchase event to automatically include all relevant context (query ID, index name, price, quantity, discount) from the user's earlier interactions with the items.
 ><br>
->Because a single purchase can include items that came from different searches (or no search at all), the `queryID` is tracked per item inside `objectData`, rather than once for the whole event. The action copies each stored item's Query ID into its `objectData` entry as it assembles the purchase event. Only items with a `queryID` are attributed to a search and included in revenue analytics; items without one are still sent as part of the purchase event, but aren't counted toward that query's revenue.
+>Because a single purchase can include items that came from different searches (or no search at all), the `queryID` is tracked per item inside `objectData`, rather than once for the whole event. The action copies each stored item's Query ID into its `objectData` entry as it assembles the purchase event. Only items with a `queryID` are attributed to a search and included in revenue analytics. Items without one are still sent as part of the purchase event, but aren't counted toward that query's revenue.
 ><br>
 >The extension calculates the event's total `value` from the `price`, `quantity`, and `discount` of each item in `objectData`, so you do not need to provide it.
 ><br>
