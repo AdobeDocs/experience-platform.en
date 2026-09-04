@@ -85,12 +85,12 @@ For more information about guardrails in Experience Platform, please read the [R
 >[!CONTEXTUALHELP]
 >id="platform_capacity_ondemandrun"
 >title="On-demand run"
->abstract="Temporary fill in text."
+>abstract="The number of on-demand runs your organization has. Each Run represents each audience that is evaluated with a Run Evaluation trigger. If your audience depends on other audiences, each evaluated audience counts as one Run."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_scheduledruns"
 >title="Scheduled runs"
->abstract="Temporary fill in text."
+>abstract="The number of schedule runs your organization has. A schedule run is consumed every time a custom schedule evaluates. A system schedule evaluation does not consume a schedule run."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_scheduled_run_tiers"
@@ -105,7 +105,7 @@ For more information about guardrails in Experience Platform, please read the [R
 >[!CONTEXTUALHELP]
 >id="platform_capacity_batchaudience"
 >title="Batch audience"
->abstract="Temporary fill in text."
+>abstract="The maximum number of batch audiences per sandbox."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgesegmentationthroughput"
@@ -125,8 +125,11 @@ Currently, Capacity supports the following services:
 
 Within these services, the following guardrails are tracked:
 
+- The maximum number of batch audiences is 4000
 - The maximum number of streaming audiences is 500
 - The maximum number of edge audiences is 150
+- The maximum number of custom schedules is 4
+- The maximum number of audiences in a custom schedule is 3000
 - The initial combined throughput for streaming ingestion is 1500 records per second (rps)
   - This combined streaming throughput measures the combined peak inbound events per second for streaming ingestion into Real-Time Customer Profile across your production and development sandboxes.
   - You can purchase additional streaming segmentation support of up to 13,500 records per second. More information about purchasing additional entitlements can be found in the [Real-Time CDP product description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
