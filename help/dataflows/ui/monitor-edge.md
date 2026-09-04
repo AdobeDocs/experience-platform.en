@@ -35,35 +35,42 @@ If you filter by edge, you can choose which edge you want to view information ab
 
 If you filter by date, you can choose the timescale to filter your events. This timescale can be set up to 30 days. Alternatively, you can use one of the following preconfigured time scales: [!UICONTROL Last 6 hours], [!UICONTROL Last 12 hours], [!UICONTROL Last 24 hours], [!UICONTROL Last 7 days], and [!UICONTROL Last 30 days].
 
-## Monitoring metrics for edge throughput
+## Monitoring metrics for edge throughput {#monitoring-metrics}
 
 The metrics table provides information specific to the selected service's edge throughput. You can refer to the following table for more details on each column.
 
 | Metric | Description |
 | ------ | ----------- |
 | Requests received | The number of requests received by the selected edges within the timeframe. |
+| Requests evaluated | The number of requests evaluated by the selected edges within the timeframe. |
 | Peak throughput | The highest rate of requests received by the selected edges within the timeframe. |
 
 {style="table-layout:auto"}
 
-## Monitoring graph for edge segmentation throughput
+## Monitoring graph for edge segmentation throughput {#throughput}
 
-The monitoring graph shows the records per second received by the selected edges within the alloted timeframe, compared to the maximum capacity allowed.
+The edge segmentation throughput monitoring graph shows the records per second received by the selected edges within the alloted timeframe, compared to the maximum capacity allowed.
 
 ![The edge segmentation throughput graph is displayed.](/help/dataflows/assets/ui/monitor-edge/edge-segmentation-throughput.png)
 
-## Datastream view
+## Monitoring graph for edge segmentation throughput breakdown {#throughput-breakdown}
+
+The edge segmentation throughput breakdown monitoring graph shows the records received on a per-edge basis within the alloted timeframe, compared to the maximum capacity allowed.
+
+![The edge segmentation throughput breakdown graph is displayed.](/help/dataflows/assets/ui/monitor-edge/edge-segmentation-throughput-breakdown.png)
+
+## Datastream view {#datastream-view}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_edgerequestthroughput"
 >title="Edge request throughput"
->abstract="Temporary fill in text."
+>abstract="The edge request throughput represents the number of records per second received by the selected edge within the alloted timeframe."
 
 >[!NOTE]
 >
 >The datastream view is **only** available if you're filtering for Edge segmentation throughput.
 
-The datastream view section displays a list of the latest datastreams that passed through the sandbox's edges.
+The datastream view section displays a list of the latest datastreams that passed through the selected edges.
 
 ![The datastream view is displayed, showing information about the listed datastreams.](/help/dataflows/assets/ui/monitor-edge/datastream-view.png)
 
@@ -72,5 +79,6 @@ The datastream view section displays a list of the latest datastreams that passe
 | Datastream name | The name of the datastream. |
 | Datasets | The name of datasets the datastream belongs to. |
 | Service enabled | The names of the services the datastream is enabled for. |
-| Requests | The number of requests that passed through the datastream. |
+| Requests received | The number of requests that the datastream received. |
+| Requests evaluated | The number of requests that the datastream evaluated. |
 | Peak throughput | The highest rate of requests that passed through the datastream. |
