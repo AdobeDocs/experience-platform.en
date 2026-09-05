@@ -1,32 +1,36 @@
 ---
 solution: Experience Platform
-title: Payload Rank Exclude Operator
-description: Learn how to use the payload rank and exclude operations in audience compositions. These operations let you directly affect the elements of the array without modifying the audience itself.
+title: Payload Rank and Payload Exclude Operators
+description: Learn how to use the Payload rank and Payload exclude operations in audience compositions. These operations let you directly affect the elements of the array without modifying the audience itself.
 hide: true
 ---
 
-# Payload Ranks and Payload Exclude operators
+# Payload rank and Payload exclude operators
 
 Currently, audiences that are built on array-based schemas (such as a customer profile holding multiple product or account records) cannot exclude specific array elements or use a single element within an array to rank the audience.
 
-The Payload Rank and Payload Exclude operators help mitigate this, as they can directly act upon the elements within the array that live inside your audience.
+The Payload rank and Payload Exclude operators help mitigate this, as they can directly act upon the elements within the array that live inside your audience.
 
-## Operators
+## Getting started {#getting-started}
 
-The **Payload Exclude** operator lets you remove specific array elements from consideration of the audience **without** removing the customer from the audience. This removal is based off of a separately maintained and provided exclusion list.
+Before continuing this guide, review the [getting started with APIs guide](/help/segmentation/api/getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
-The **Payload Ranking** operator lets you select a single best element for a customer that qualified through more than one array element. You can then choose a specific element to rank the customers by.
+## Operators {#operators}
+
+The **Payload exclude** operator lets you remove specific array elements from consideration of the audience **without** removing the customer from the audience. This removal is based off of a separately maintained and provided exclusion list.
+
+The **Payload rank** operator lets you select a single best element for a customer that qualified through more than one array element. You can then choose a specific element to rank the customers by.
 
 You can use these operators when your audience is built on an **array attribute** (such as a list of products or account records per profile) and either of the following is true:
 
 - Certain array elements **cannot** be targeted, and the exclusion list is maintained outside of the composition
 - Customers can qualify through multiple array elements, but only one of those elements should drive personalization
 
-## Payload Rank {#payload-rank}
+## Payload rank {#payload-rank}
 
-The **PayloadRank** operator ranks array elements by a chosen attribute and returns the top number of elements specified.
+The **Payload rank** operator ranks array elements by a chosen attribute and returns the top number of elements specified.
 
-After adding an audience with a payload attribute, you can add the PayloadRank operator.
+After adding an audience with a payload attribute, you can add the Payload rank operator.
 
 ![The add Payload rank button is highlighted within Audience Composition.](/help/segmentation/images/ui/payload-rank-exclude/add-payload-rank.png)
 
@@ -59,7 +63,7 @@ You can also enable the **[!UICONTROL Override with a priority match]** option i
 
 ## Payload Exclude {#payload-exclude}
 
-If you're using the Payload Exclude operator, the composition evaluates in the following order: Targeting criteria, exclusion, followed by ranking.
+If you're using the Payload exclude operator, the composition evaluates in the following order: Targeting criteria, exclusion, followed by ranking.
 
 >[!IMPORTANT]
 >
@@ -67,22 +71,22 @@ If you're using the Payload Exclude operator, the composition evaluates in the f
 
 The targeting criteria is applied to the array attribute. This targeting criteria is your standard segmentation or filtering logic.
 
-After the targeting criteria  is applied, the **Payload Exclude** operator removes any array values that match the disallowed values.
+After the targeting criteria  is applied, the **Payload exclude** operator removes any array values that match the disallowed values.
 
-Once the exclusion is applied, the **Payload Rank** operator selects the top element from what remains.
+Once the exclusion is applied, the **Payload rank** operator selects the top element from what remains.
 
 ### Usage {#exclude-usage}
 
-To use the PayloadExclude operator, you'll need to complete the following prerequisites:
+To use the Payload exclude operator, you'll need to complete the following prerequisites:
 
 - Add an [audience with a payload](./audience-composition.md#audience-payload) to the composition
 - Add a [Payload Rank](#payload-rank) block to the composition
 
-Once you complete these steps, you can add the PayloadExclude operator to your composition. The PayloadExclude operator will automatically be placed between the audience with a payload and the PayloadRank operator.
+Once you complete these steps, you can add the Payload exclude operator to your composition. The Payload exclude operator will automatically be placed between the audience with a payload and the Payload rank operator.
 
 ### Operation {#exclude-operation}
 
-The **PayloadExclude** operator filters array elements by checking membership against a separate exclusion source array on the same profile. This operates at the **array-element** level, so the customer is **never** removed from the audience by this operator. At this time, the **PayloadExclude** operator **must** be injected to the composition using the API.
+The **Payload exclude** operator filters array elements by checking membership against a separate exclusion source array on the same profile. This operates at the **array-element** level, so the customer is **never** removed from the audience by this operator. At this time, the **Payload exclude** operator **must** be injected to the composition using the API.
 
 **API format**
 
@@ -96,34 +100,34 @@ PATCH /journey/audience-orchestration/recipes/{COMPOSITION_ID}/exclusion
 
 **Request**
 
-+++ A sample request to add a payload exclude to a composition, matching the previously mentioned exclude rules.
++++ A sample request to add a payload exclude to a composition
 
 ```shell
 curl -X PATCH https://platform.adobe.io/journey/audience-orchestration/recipes/{COMPOSITION_ID}/exclusion
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H "Content-Type: application/json" \
   -H "If-Match: {_etag}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "x-api-key: {API_KEY}" \
   -d '{
     "qualifyingSource": {
         "array": {
-            "path": "{NAMESPACE}.productExclusionList",
+            "path": "{TENANT_ID}.productExclusionList",
             "xdmType": "ARRAY"
         },
         "localKey": {
-            "path": "{NAMESPACE}.productDetailsList.productUniqueId",
+            "path": "{TENANT_ID}.productDetailsList.productUniqueId",
             "xdmType": "STRING"
         },
         "remoteKey": {
-            "path": "{NAMESPACE}.productExclusionList.productUniqueId",
+            "path": "{TENANT_ID}.productExclusionList.productUniqueId",
             "xdmType": "STRING"
         }
     },
     "excludeIfAnyOf": {
         "field": {
-            "path": "{NAMESPACE}.productExclusionList.exclusionList",
+            "path": "{TENANT_ID}.productExclusionList.exclusionList",
             "xdmType": "ARRAY"
         },
         "values": [
@@ -133,19 +137,23 @@ curl -X PATCH https://platform.adobe.io/journey/audience-orchestration/recipes/{
   }'
 ```
 
+>[!NOTE]
+>
+>The `{TENANT_ID}` value in the request body represents the namespace of your organization. For more information about this value, read the [XDM Schema Registry guide](/help/xdm/api/getting-started.md#know-your-tenant_id).
+
 | Field | Description |
 | ----- | ----------- |
 | `qualifyingSource.array.path` | The location of the array that holds the exclusion codes for each element. |
 | `qualifyingSource.localKey.path` | The location of the join key on the `arrayAttribute`. |
-| `qualifyingSource.remoteKey` | The join key on the `qualifyingSource.array`. |
-| `excludeIfAnyOf.field` | The field on the exclusion source that contains the exclusion codes. |
+| `qualifyingSource.remoteKey.path` | The join key on the `qualifyingSource.array`. |
+| `excludeIfAnyOf.field.path` | The field on the exclusion source that contains the exclusion codes. |
 | `excludeIfAnyOf.values` | The specific exclusion codes to enforce for the composition. |
 
 +++
 
 ## Sample flow {#sample-flow}
 
-Let's say you have a customer that has multiple cards linked to their profile. However, we want to filter out some of these credit cards linked to the profile, since they don't match the qualification criteria we're looking for. This profile contains the following four array elements, with the exclusion codes precomputed from the source array. 
+Let's say you have a customer that has multiple cards linked to their profile. However, you want to filter out some of these credit cards linked to the profile, since they don't match the qualification criteria you're looking for. This profile contains the following four array elements, with the exclusion codes precomputed from the source array. 
 
 | Element | Exclusion codes | Spend |
 | ------- | --------------- | ----- |
@@ -156,7 +164,7 @@ Let's say you have a customer that has multiple cards linked to their profile. H
 
 For the current example, `EXCL0001` and `EXCL0020` are the policies that will be enforced, since those are the policies that make the credit cards not match the qualification criteria.
 
-When this request runs, the **PayloadExclude** operator checks each element's exclusion codes against the exclusion codes that were just injected. An element is excluded if it contains **any** of the exclusion codes that are enforced on the array.  
+When this request runs, the **Payload exclude** operator checks each element's exclusion codes against the exclusion codes that were just injected. An element is excluded if it contains **any** of the exclusion codes that are enforced on the array.  
 
 | Element | Exclusion codes | Contains the specified exclusion code? | Result |
 | --- | --- | --- | --- |
@@ -165,7 +173,7 @@ When this request runs, the **PayloadExclude** operator checks each element's ex
 | Credit card 3 | EXCL0001, EXCL0020 | Yes | Excluded |
 | Credit card 4 | EXCL0001 | Yes | Excluded |
 
-After the exclusion is ran, only two elements remain: Credit card 1 and Credit card 2. You can now rank these remaining elements with the PayloadRank operator.
+After the exclusion runs, only two elements remain: Credit card 1 and Credit card 2. You can now rank these remaining elements with the Payload rank operator.
 
 If you rank the remaining elements by descending order on spend, returning only the top 1 result, the remaining elements would look as follows:
 
@@ -174,14 +182,14 @@ If you rank the remaining elements by descending order on spend, returning only 
 | Credit card 2 | 2000 | 1 (selected) |
 | Credit card 1 | 1000 | 2 |
 
-As a result, Credit card 2 is selected since it has the highest spend of the remaining elements. The rank operator **never** sees Credit cared 3 or Credit card 4, so their spend values do not matter. 
+As a result, Credit card 2 is selected since it has the highest spend of the remaining elements. The rank operator **never** sees Credit card 3 or Credit card 4, so their spend values do not matter. 
 
 For the final audience, the customer **remains** in the audience, since the exclusion only removes the array elements within the profile.
 
 ## Limitation {#limitations}
 
-The following limitations apply when using the PayloadExclude operator:
+The following limitations apply when using the Payload exclude operator:
 
-- PayloadExclude **only** operates on array elements. This operator **cannot** remove an entire profile from an audience.
-- The `excludeIfAnyOf.values` field is scoped **per campaign** and is set by the API caller for each composition. This field is **not** a persistent, audience-wide rule.
-- You can only use a PayloadExclude on a composition that is in the **Draft** state.
+- Payload exclude **only** operates on array elements. This operator **cannot** remove an entire profile from an audience.
+- The `excludeIfAnyOf.values` field is scoped **per composition** and is set by the API caller for each composition. This field is **not** a persistent, audience-wide rule.
+- You can only use a Payload exclude on a composition that is in the **Draft** state.
