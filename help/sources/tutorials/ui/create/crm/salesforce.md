@@ -94,6 +94,31 @@ When finished, select **[!UICONTROL Connect to source]**.
 
 ![The interface in which you can create a new Salesforce account by providing the appropriate authentication credentials.](../../../../images/tutorials/create/salesforce/new.png)
 
+### Connect to Salesforce on AWS {#aws}
+
+Follow the steps below to connect a [!DNL Salesforce] account on Amazon Web Services (AWS) using OAuth 2.0 JWT Bearer authentication.
+
+>[!AVAILABILITY]
+>
+>This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md).
+
+To create a new account, select **[!UICONTROL New account]** and provide a name and a description for your new [!DNL Salesforce] account, then provide values for the following credentials:
+
+* `jwtToken`
+* `instanceUrl`
+* Client ID
+* Client secret
+
+To connect to a Sandbox org instead of a Production org, select **[!UICONTROL SANDBOX]** from the **[!UICONTROL environmentType]** dropdown. If you do not select a value, Experience Platform defaults to `PRODUCTION`. For more information on Sandbox support, read the section on [connecting to a Production or Sandbox org](../../../../connectors/crm/salesforce.md#environment-type).
+
+>[!IMPORTANT]
+>
+>Ensure that the [!DNL Salesforce Connected App] used for this connection is authorized in the same org that `environmentType` and `instanceUrl` point to. For information on setting up a Connected App on AWS, read the [[!DNL Salesforce] AWS setup guide](../../../../connectors/crm/salesforce.md#aws).
+
+When finished, select **[!UICONTROL Connect to source]**.
+
+![The Salesforce AWS authentication step in Experience Platform, showing fields for jwtToken, instanceUrl, Client ID, Client secret, and the environmentType dropdown set to PRODUCTION.](../../../../images/tutorials/create/salesforce/salesforce-aws.png)
+
 ### Skip preview of sample data {#skip-preview-of-sample-data}
 
 During the data selection step, you may encounter a timeout when ingesting large tables or files of data. You can skip data preview to circumvent the timeout and still view your schema, albeit without sample data. To skip data preview, enable the **[!UICONTROL Skip previewing sample data]** toggle.
