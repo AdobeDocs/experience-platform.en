@@ -74,7 +74,7 @@ curl -X POST \
         "name": "connection for HubSpot",
         "description": "connection for HubSpot",
         "auth": {
-            "specName": "Basic Authentication",
+            "specName": "OAuth2 Refresh Code",
             "params": {
                 "clientId": "{CLIENT_ID}",
                 "clientSecret": "{CLIENT_SECRET}",
