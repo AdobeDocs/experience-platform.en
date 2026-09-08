@@ -72,6 +72,12 @@ Health checks currently evaluate checks across eight categories. Select a catego
 
 These checks target the most impactful data modeling, data lifecycle, segmentation, ingestion, and activation issues across the platform.
 
+## Coworker skills {#coworker}
+
+You can also view your latest health check results and remediate select issues through Coworker Chat. Use natural language prompts to check for violations and fix supported issues directly from chat.
+
+For supported skills and sample prompts, see [Health checks skills in Coworker Chat](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/coworker/chat/use-cases/overview).
+
 ## Next steps {#next-steps}
 
 After reviewing your health check results, explore the following resources to deepen your understanding:
