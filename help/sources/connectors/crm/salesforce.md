@@ -307,6 +307,21 @@ To connect your [!DNL Salesforce] account to Experience Platform in an AWS regio
 - A [!DNL Salesforce Connected App] that you can then use to enable JWT_BEARER OAuth flow.
 - The necessary permissions in [!DNL Salesforce] to access data.
 
+### Connect to a Production or Sandbox org {#environment-type}
+
+The [!DNL Salesforce] source on AWS supports both Production and Sandbox (non-Production) orgs. Use the `environmentType` parameter to specify which type of org Experience Platform authenticates against.
+
+| Value | Description |
+| --- | --- |
+| `PRODUCTION` | Connects to a Production or Developer Edition org. This is the default value when `environmentType` is not specified. |
+| `SANDBOX` | Connects to a Sandbox org. |
+
+The instance URL format for a Sandbox org differs from a Production org. Use the following format when you provide the `instanceUrl` value for a Sandbox org: `https://[domain]--[sandbox-name].sandbox.my.salesforce.com`.
+
+>[!NOTE]
+>
+>Scratch orgs and orgs that enforce a strict My Domain login policy are not currently supported.
+
 ### IP address allowlist for connection on AWS
 
 You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform on AWS. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform on AWS](../../ip-address-allow-list.md) for more information.
