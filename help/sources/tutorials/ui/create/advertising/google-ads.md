@@ -48,19 +48,19 @@ In the Experience Platform UI, select **[!UICONTROL Sources]** from the left nav
 
 The **[!UICONTROL Connect Google Ads account]** page appears. On this page, you can either create a new account connection or use an existing account connection.
 
-![](../../../../images/tutorials/create/google-ads/catalog.png)
+![Sources catalog with the Google Ads card selected under the Advertising category, showing the Google Ads details panel with Add data, View account, and View documentation options.](../../../../images/tutorials/create/google-ads/catalog.png)
 
 ### Use an existing account
 
 To use an existing account connection, select **[!UICONTROL Existing account]** and select the [!DNL Google Ads] account that you want to use. When finished, select **[!UICONTROL Next]**.
 
-![](../../../../images/tutorials/create/google-ads/existing.png)
+![Connect Google Ads account page with Existing account selected, showing a table listing an existing Google Ads account with its source, dataflows, creation date, and Enabled status.](../../../../images/tutorials/create/google-ads/existing.png)
 
 ### Create a new account
 
-To create a new [!DNL Google Ads] account connection, select **[!UICONTROL New account]**. Next, enter a name for the connection and an optional description. 
+To create a new [!DNL Google Ads] account connection, select **[!UICONTROL New account]**. Next, enter a name for the connection and an optional description. Under **[!UICONTROL Account authentication]**, provide your [!DNL Google Ads] `developerToken` and, if applicable, your `loginCustomerId`.
 
-![](../../../../images/tutorials/create/google-ads/new.png)
+![Connect Google Ads account page with New account selected, showing fields for account name, description, developer token, and loginCustomerId, and a Connect to source button.](../../../../images/tutorials/create/google-ads/new.png)
 
 When finished, select **[!UICONTROL Connect to source]**. 
 
@@ -76,9 +76,13 @@ After the connection succeeds, **[!UICONTROL Connected]** appears. Select **[!UI
 
 Provide a name and optional description for your dataflow. You can also configure alerts for your dataflow during this step.
 
+![Dataflow details step showing fields for dataflow name and description, and checkboxes to subscribe to Sources Dataflow Run Start, Success, and Failure alerts.](../../../../images/tutorials/create/google-ads/dataflow-detail.png)
+
 ## Review your dataflow
 
 Review your dataflow. Use the [!UICONTROL Connection] panel to review details of your dataflow, including its corresponding account name, source platform, and path to file. Use the [!UICONTROL Assign dataset and map fields] panel to confirm that your dataset is correctly assigned.
+
+![Review step showing the Connection panel with account name, source platform, and path, and the Assign dataset and map fields panel with a Dataset assigned confirmation.](../../../../images/tutorials/create/google-ads/review.png)
 
 ## Finish
 
