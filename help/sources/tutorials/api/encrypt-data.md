@@ -12,10 +12,6 @@ role_v2:
 ---
 # Encrypted data ingestion
 
->[!AVAILABILITY]
->
->Encrypted data ingestion is not available when using the VA6 region and connecting to [Adobe Experience Platform on AWS](../../../landing/multi-cloud.md).
-
 You can ingest encrypted data files to Adobe Experience Platform using cloud storage batch sources. With encrypted data ingestion, you can leverage asymmetric encryption mechanisms to securely transfer batch data into Experience Platform. Currently, the supported asymmetric encryption mechanisms are PGP and GPG. If you use [!DNL Amazon S3] as your source, you can also combine PGP encryption with [!DNL Amazon S3] server-side encryption (SSE). For more information, see [server-side encryption for Amazon S3](#server-side-encryption-for-amazon-s3).
 
 The encrypted data ingestion process is as follows:
@@ -28,7 +24,7 @@ The encrypted data ingestion process is as follows:
 
 >[!IMPORTANT]
 >
->The maximum size of a single encrypted file is 1 GB. For example, you can ingest 2 GBs worth of data in a single dataflow run, however, any individual file in that data cannot exceed 1 GB.
+>The maximum size of a single encrypted file is 1 GB. If you use the VA6 region on [Adobe Experience Platform on AWS](../../../landing/multi-cloud.md), the maximum file size increases to 10 GB. For example, outside of VA6, you can ingest 2 GB of data in a single dataflow run, but no individual file in that data can exceed 1 GB.
 
 This document provides steps on how to generate a encryption key pair to encrypt your data, and ingest that encrypted data to Experience Platform using cloud storage sources.
 
@@ -68,8 +64,6 @@ The list of supported file extensions for encrypted files are:
 >Encrypted file ingestion in Adobe Experience Platform Sources supports openPGP and not any specific proprietary version of PGP.
 
 ## Server-side encryption for Amazon S3 {#server-side-encryption-for-amazon-s3}
-
-<!-- DRAFT (PLAT-297965): Content below is based on an engineering wiki draft and needs SME confirmation before publishing. See open questions in the PR description. -->
 
 If you use [!DNL Amazon S3] as your cloud storage source, you can combine PGP file encryption with [!DNL Amazon S3] server-side encryption (SSE). SSE and PGP file encryption protect different things and work independently of each other.
 
