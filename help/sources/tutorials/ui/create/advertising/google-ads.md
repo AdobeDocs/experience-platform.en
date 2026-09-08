@@ -48,7 +48,7 @@ In the Experience Platform UI, select **[!UICONTROL Sources]** from the left nav
 
 The **[!UICONTROL Connect Google Ads account]** page appears. On this page, you can either create a new account connection or use an existing account connection.
 
-![Sources catalog with the Google Ads card selected under the Advertising category, showing the Google Ads details panel with Add data, View account, and View documentation options.](../../../../images/tutorials/create/google-ads/catalog.png)
+![Sources catalog Advertising category showing a Google Ads (Beta) card, the selected Google Ads card without a Beta label, and a Meta Ads card, with the Google Ads details panel showing Add data, View accounts, and View dataflows options.](../../../../images/tutorials/create/google-ads/catalog.png)
 
 ### Use an existing account
 
