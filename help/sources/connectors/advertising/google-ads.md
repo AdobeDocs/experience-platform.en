@@ -14,10 +14,10 @@ The connector maps [!DNL Google Ads] data to standardized paid media Experience 
 
 | Use case | Goal | How [!DNL Google Ads] (V2) helps |
 | --- | --- | --- |
-| Cross-channel advertising analysis | Compare [!DNL Google Ads] performance with Meta Ads and other paid media channels. | Ingests [!DNL Google Ads] data into common paid media XDM structures with standardized account, campaign, ad group, ad, asset, experience, and metric identifiers. |
+| Cross-channel advertising analysis | Compare [!DNL Google Ads] performance with [!DNL Meta Ads] and other paid media channels. | Ingests [!DNL Google Ads] data into common paid media XDM structures with standardized identifiers across each entity level. |
 | Media mix modeling and attribution | Evaluate the contribution of paid media to business outcomes. | Provides campaign and advertising performance data, including impressions, clicks, spend, conversions, and conversion value for downstream analysis. |
 | Campaign and budget optimization | Understand which campaigns, bidding strategies, and targeting configurations produce the best results. | Ingests campaign metadata, budgets, bidding strategies, channel types, statuses, dates, and selected targeting criteria. |
-| Creative and asset performance | Identify which creative assets, ad formats, and experiences perform best. | Ingests ad-level creative metadata, asset associations, asset types, asset performance labels, and derived experience compositions. |
+| Creative and asset performance | Identify which creative assets, ad formats, and experiences perform best. | Ingests ad-level creative metadata, including asset associations, types, and performance labels. |
 | Performance Max analysis | Analyze Performance Max asset groups and their associated assets. | Uses Performance Max asset-group data to represent asset-group performance and experience relationships where [!DNL Google Ads] does not expose a traditional ad-level structure. |
 | Customer journey analysis | Relate advertising engagement to web, commerce, CRM, and other customer events. | Makes [!DNL Google Ads] data available in Experience Platform for use with downstream analytics and activation workflows. |
 
@@ -79,9 +79,9 @@ The account-discovery workflow includes the following operations:
 
 ## Data selection and ingestion
 
-[!DNL Google Ads] (V2) uses [!DNL Google Ads] Query Language (GAQL) to retrieve account, metadata, and reporting data.
+[!DNL Google Ads] (V2) uses [!DNL Google Ads] Query Language (GAQL) to retrieve account metadata, campaign metadata, and reporting data.
 
-The connector uses resource-specific queries to retrieve the attributes, segments, and metrics required for each entity. SearchStream is used for reporting resources and large result sets where incremental row processing is beneficial.
+The connector uses resource-specific queries to retrieve the attributes, segments, and metrics required for each entity. The connector uses `SearchStream` for reporting resources and large result sets where incremental row processing is beneficial.
 
 The supported query inventory includes resources such as:
 
@@ -101,11 +101,11 @@ The supported query inventory includes resources such as:
 - `asset_group_asset`
 - `change_status`
 
-Performance metrics are generally retrieved using date-based segments such as `segments.date`.
+Performance metrics are retrieved using date-based segments such as `segments.date`.
 
 ## Schema configuration
 
-[!DNL Google Ads] (V2) maps source data to standardized paid media XDM structures. The data is organized by entity level so that metadata and performance metrics can be joined across account, campaign, ad group, ad, asset, and experience records.
+[!DNL Google Ads] (V2) maps source data to standardized paid media XDM structures. The connector organizes the data by entity level so that metadata and performance metrics can be joined across account, campaign, ad group, ad, asset, and experience records.
 
 | Entity | Primary [!DNL Google Ads] resources | Data represented |
 | --- | --- | --- |
@@ -167,11 +167,11 @@ Asset metadata and performance support vary by asset type. For example, image an
 
 ### Google-specific fields
 
-[!DNL Google Ads] concepts that do not have a direct equivalent in the common paid media XDM model are represented using additionalDetails, or left null, according to the approved mapping.
+[!DNL Google Ads] concepts without a direct paid media XDM equivalent are represented using `additionalDetails` or set to null, according to the approved mapping.
 
 ### Enum mappings
 
-[!DNL Google Ads] API enum values are mapped to XDM values using exact matches, close semantic matches, or approved fallback values. Unsupported, unknown, deprecated, or unspecified values may be skipped or set to null.
+The connector maps [!DNL Google Ads] API enum values to XDM values using exact matches, close semantic matches, or approved fallback values. Unsupported, unknown, deprecated, or unspecified values are skipped or set to null.
 
 ## Next steps
 

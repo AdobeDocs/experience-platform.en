@@ -66,11 +66,11 @@ When finished, select **[!UICONTROL Connect to source]**.
 
 ## Authorize your [!DNL Google] account
 
-You are prompted for your Google account credentials to establish the connection to the Google Ads environment associated with the Google account.
+You are prompted to sign in with your [!DNL Google Account] to authorize the connection to the associated [!DNL Google Ads] environment.
 
-Select **[!UICONTROL Continue]** in the dialog that asks for access to your Google Account.
+Select **[!UICONTROL Continue]** in the dialog that asks for access to your [!DNL Google Account].
 
-Upon successful connection, you see **[!UICONTROL Connected]**. Select **[!UICONTROL Next]** to proceed.
+After the connection succeeds, **[!UICONTROL Connected]** appears. Select **[!UICONTROL Next]** to proceed.
 
 ## Provide dataflow details
 
@@ -80,7 +80,6 @@ Provide a name and optional description for your dataflow. You can also configur
 
 Review your dataflow. Use the [!UICONTROL Connection] panel to review details of your dataflow, including its corresponding account name, source platform, and path to file. Use the [!UICONTROL Assign dataset and map fields] panel to confirm that your dataset is correctly assigned.
 
-
 ## Finish
 
-Select **[!UICONTROL Finish]** to finish the setup of your Google Ads source connector.
+Select **[!UICONTROL Finish]** to complete the [!DNL Google Ads] source connection.
