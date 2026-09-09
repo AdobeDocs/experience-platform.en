@@ -377,7 +377,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       "allowMandatoryFieldSelection":true,
       "allowJoinKeyFieldSelection":true,
       "defaultExportMode":"DAILY_FULL_EXPORT",
-      "allowedExportMode":[
+      "allowedExportModes":[
          "DAILY_FULL_EXPORT",
          "FIRST_FULL_THEN_INCREMENTAL"
       ],

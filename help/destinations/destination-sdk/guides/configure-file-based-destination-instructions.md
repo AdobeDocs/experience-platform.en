@@ -232,7 +232,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
         "allowMandatoryFieldSelection": true,
         "allowDedupeKeyFieldSelection": true,
         "defaultExportMode": "DAILY_FULL_EXPORT",
-        "allowedExportMode": [
+        "allowedExportModes": [
             "DAILY_FULL_EXPORT",
             "FIRST_FULL_THEN_INCREMENTAL"
         ],
@@ -375,7 +375,7 @@ If you use an audience metadata configuration, you must connect it to the destin
         "allowMandatoryFieldSelection": true,
         "allowDedupeKeyFieldSelection": true,
         "defaultExportMode": "DAILY_FULL_EXPORT",
-        "allowedExportMode": [
+        "allowedExportModes": [
             "DAILY_FULL_EXPORT",
             "FIRST_FULL_THEN_INCREMENTAL"
         ],

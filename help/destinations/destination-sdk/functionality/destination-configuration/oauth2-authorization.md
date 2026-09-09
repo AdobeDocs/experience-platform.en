@@ -1,5 +1,5 @@
 ---
-description: This page describes the various OAuth 2 authorization flows supported by Destination SDK, and provides instructions to set up OAuth 2 authorization for your destination.
+description: Learn about the OAuth 2 authorization flows supported by Destination SDK and how to set up OAuth 2 authorization for your destination.
 title: OAuth 2 authorization
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
 TQID: https://experienceleague.adobe.com/MjZiP0ebeGYG2Vg-2BBWkJQfm3OKXdFDMkaMTukiBz0
@@ -22,13 +22,13 @@ topic_v2:
 ---
 # OAuth 2 authorization 
 
-Destination SDK supports several authorization methods to your destination. Among these is the option to authenticate to your destination by using the [OAuth 2 authorization framework](https://tools.ietf.org/html/rfc6749).
+[!DNL Destination SDK] supports several authorization methods, including the [OAuth 2 authorization framework](https://tools.ietf.org/html/rfc6749).
 
-This page describes the various OAuth 2 authorization flows supported by Destination SDK, and provides instructions to set up OAuth 2 authorization for your destination.
+This page describes the various OAuth 2 authorization flows supported by [!DNL Destination SDK], and provides instructions to set up OAuth 2 authorization for your destination.
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by [!DNL Destination SDK] are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Supported integration types {#supported-integration-types}
 
@@ -43,7 +43,7 @@ Refer to the table below for details on which types of integrations support the 
 
 ### Prerequisites in your system {#prerequisites}
 
-As a first step, you must create an app in your system for [!DNL Adobe Experience Platform], or otherwise register Experience Platform in your system. The goal is to generate a client ID and client secret, which are needed to authenticate Experience Platform to your destination.
+As a first step, you must create an app in your system for [!DNL Adobe Experience Platform], or otherwise register [!DNL Experience Platform] in your system. The goal is to generate a client ID and client secret, which are needed to authenticate [!DNL Experience Platform] to your destination.
 
 As part of this configuration in your system, you need the [!DNL Adobe Experience Platform] OAuth 2 redirect/callback URLs, which you can get from the list below.
 
@@ -60,17 +60,17 @@ As part of this configuration in your system, you need the [!DNL Adobe Experienc
 
 At the end of this step, you should have:
 
-* A client ID;
-* A client secret;
-* Adobe's callback URL (for the authorization code grant).
+* A client ID
+* A client secret
+* Adobe's callback URL (for the authorization code grant)
 
 ### What you need to do in Destination SDK {#to-do-in-destination-sdk}
 
-To set up OAuth 2 authorization for your destination in Experience Platform, you must add your OAuth 2 details to the [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md), under the `customerAuthenticationConfigurations` parameter. See [customer authentication](../../functionality/destination-configuration/customer-authentication.md) for detailed examples. Specific instructions about which fields you need to add to your configuration template, depending on your OAuth 2 authorization grant type, are further below on this page.
+To set up OAuth 2 authorization for your destination in [!DNL Experience Platform], you must add your OAuth 2 details to the [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md), under the `customerAuthenticationConfigurations` parameter. See [customer authentication](../../functionality/destination-configuration/customer-authentication.md) for detailed examples. Specific instructions about which fields you need to add to your configuration template, depending on your OAuth 2 authorization grant type, are further below on this page.
 
 ## Supported OAuth 2 grant types {#oauth2-grant-types}
 
-Experience Platform supports the three OAuth 2 grant types in the table below. If you have a custom OAuth 2 setup, Adobe is able to support it with the help of custom fields in your integration. Refer to the sections for each grant type for more information.
+[!DNL Experience Platform] supports the three OAuth 2 grant types in the table below. If you have a custom OAuth 2 setup, Adobe is able to support it with the help of custom fields in your integration. Refer to the sections for each grant type for more information.
 
 >[!IMPORTANT]
 >
@@ -85,9 +85,9 @@ Experience Platform supports the three OAuth 2 grant types in the table below. I
 
 {style="table-layout:auto"}
 
-The above table lists the fields that are used in standard OAuth 2 flows. In addition to these standard fields, various partner integrations may require additional inputs and outputs. Adobe has designed a flexible OAuth 2 authorization framework for Destination SDK that can handle variations to the above standard fields pattern while supporting a mechanism to automatically regenerate invalid outputs, such as expired access tokens.
+The above table lists the fields that are used in standard OAuth 2 flows. In addition to these standard fields, various partner integrations may require additional inputs and outputs. Adobe has designed a flexible OAuth 2 authorization framework for [!DNL Destination SDK] that can handle variations to the above standard fields pattern while supporting a mechanism to automatically regenerate invalid outputs, such as expired access tokens.
 
-The output in all cases includes an access token, which is used by Experience Platform to authenticate and maintain authorization to your destination.
+The output in all cases includes an access token, which is used by [!DNL Experience Platform] to authenticate and maintain authorization to your destination.
 
 The system that Adobe has designed for OAuth 2 authorization:
 
@@ -107,7 +107,7 @@ If your destination supports a standard OAuth 2.0 Authorization Code flow (read 
 
 To set up this authorization method for your destination, add the following lines to your configuration, when you [create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md):
 
-``` json
+```json
 {
 //...
   "customerAuthenticationConfigurations": [
@@ -139,14 +139,14 @@ To set up this authorization method for your destination, add the following line
 |`refreshTokenUrl` | String | *Optional.* The URL on your side, which issues refresh tokens. Often, the `refreshTokenUrl` is the same as the `accessTokenUrl`. |
 |`clientId` | String | The client ID that your system assigns to [!DNL Adobe Experience Platform]. |
 |`clientSecret` | String | The client secret that your system assigns to [!DNL Adobe Experience Platform]. |
-|`scope` | List of Strings | *Optional*. Set the scope of what the access token allows Experience Platform to perform on your resources. Example: "read, write". |
+|`scope` | List of Strings | *Optional*. Set the scope of what the access token allows [!DNL Experience Platform] to perform on your resources. Example: "read, write". |
 |`options.useBasicAuth`| Boolean| *Optional*. A boolean value that controls how the client credentials (client ID and client secret) are sent to the OAuth provider's token endpoint when exchanging an authorization code for an access token. <ul><li>If set to `false` or undefined, the credentials are sent as `client_id` and `client_secret` parameters in the POST request body (default behavior).</li><li>If this parameter is set to `true`, then the credentials are sent in the HTTP `Authorization` header using Basic Authentication format: `Authorization: Basic base64(clientID:clientSecret)`.</li></ul> Set `useBasicAuth` to `true` when your OAuth provider requires client credentials to be sent in the `Authorization` header rather than the request body. |
 
 {style="table-layout:auto"}
 
 ## OAuth 2 with Password Grant {#oauth2-password-grant}
 
-For the OAuth 2 Password grant (read the [RFC standards specs](https://tools.ietf.org/html/rfc6749#section-4.3)), Experience Platform requires the user's username and password. In the authorization flow, Experience Platform exchanges these credentials for an access token and, optionally, a refresh token.
+For the OAuth 2 Password grant (read the [RFC standards specs](https://tools.ietf.org/html/rfc6749#section-4.3)), [!DNL Experience Platform] requires the user's username and password. In the authorization flow, [!DNL Experience Platform] exchanges these credentials for an access token and, optionally, a refresh token.
 Adobe makes use of the standard inputs below to simplify destination configuration, with the ability to override values:
 
 |OAuth 2 Grant | Inputs | Outputs |
@@ -157,11 +157,11 @@ Adobe makes use of the standard inputs below to simplify destination configurati
 
 >[!NOTE]
 >
-> You don't need to add any parameters for `username` and `password` in the configuration below. When you add `"grant": "OAUTH2_PASSWORD"` in the destination configuration, the system will request the user to provide a username and password in the Experience Platform UI, when they authenticate to your destination.
+> You don't need to add any parameters for `username` and `password` in the configuration below. When you add `"grant": "OAUTH2_PASSWORD"` in the destination configuration, the system requests the user to provide a username and password in the [!DNL Experience Platform] UI, when they authenticate to your destination.
 
 To set up this authorization method for your destination, add the following lines to your configuration, when you [create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md):
 
-``` json
+```json
 
 {
 //...
@@ -185,7 +185,7 @@ To set up this authorization method for your destination, add the following line
 |`accessTokenUrl` | String | The URL on your side, which issues access tokens and, optionally, refresh tokens.|
 |`clientId` | String | The client ID that your system assigns to [!DNL Adobe Experience Platform].  |
 |`clientSecret` | String | The client secret that your system assigns to [!DNL Adobe Experience Platform]. |
-|`scope` | List of Strings | *Optional*. Set the scope of what the access token allows Experience Platform to perform on your resources. Example: "read, write". |
+|`scope` | List of Strings | *Optional*. Set the scope of what the access token allows [!DNL Experience Platform] to perform on your resources. Example: "read, write". |
 
 {style="table-layout:auto"}
 
@@ -201,7 +201,7 @@ You can configure an OAuth 2 Client Credentials (read the [RFC standards specs](
 
 To set up this authorization method for your destination, add the following lines to your configuration, when you [create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md):
 
-``` json
+```json
 
 {
 //...
@@ -229,7 +229,7 @@ To set up this authorization method for your destination, add the following line
 |`refreshTokenUrl` | String | *Optional.* The URL on your side, which issues refresh tokens. Often, the `refreshTokenUrl` is the same as the `accessTokenUrl`. |
 |`clientId` | String | The client ID that your system assigns to [!DNL Adobe Experience Platform].  |
 |`clientSecret` | String | The client secret that your system assigns to [!DNL Adobe Experience Platform]. |
-|`scope` | List of Strings | *Optional*. Set the scope of what the access token allows Experience Platform to perform on your resources. Example: "read, write". |
+|`scope` | List of Strings | *Optional*. Set the scope of what the access token allows [!DNL Experience Platform] to perform on your resources. Example: "read, write". |
 
 {style="table-layout:auto"}
 
@@ -296,7 +296,7 @@ In this example, a partner sets up their destination to provide a special refres
 
 ### Example 3: The user inputs client ID and client secret when they configure the destination {#example-3}
 
-In this example, instead of creating a global client ID and client secret as shown in the section [Prerequisites in your system](#prerequisites), the customer is required to input client ID, client secret, and account ID (the ID that the customer uses to log into the destination)
+In this example, instead of creating a global client ID and client secret as shown in the section [Prerequisites in your system](#prerequisites), the customer is required to input client ID, client secret, and account ID (the ID that the customer uses to sign in to the destination)
 
 ```json
 
@@ -391,7 +391,7 @@ You can use the following parameters in `authenticationDataFields` to customize 
 |`authenticationDataFields.type` | String | Defines the type of the custom data field. <br> Accepted values: `string`, `boolean`, `integer` |
 |`authenticationDataFields.isRequired` | Boolean | Specifies whether the custom data field is required in the authorization flow. |
 |`authenticationDataFields.format` | String | When you select `"format":"password"`, Adobe encrypts the value of the authorization data field. When used with `"fieldType": "CUSTOMER"`, this also hides the input in the UI when the user types into the field. |
-|`authenticationDataFields.fieldType` | String | Indicates whether the input comes from the partner (you) or from the user, when they set up your destination in Experience Platform.  |
+|`authenticationDataFields.fieldType` | String | Indicates whether the input comes from the partner (you) or from the user, when they set up your destination in [!DNL Experience Platform].  |
 |`authenticationDataFields.value` | String. Boolean. Integer | The value of the custom data field. The value matches the chosen type from `authenticationDataFields.type`.  |
 |`authenticationDataFields.authenticationResponsePath` | String | Indicates which field from the API response path you are referencing. |
 
@@ -399,7 +399,7 @@ You can use the following parameters in `authenticationDataFields` to customize 
 
 ## Access token refresh {#access-token-refresh}
 
-Adobe has designed a system which refreshes expired access tokens without requiring the user to log back into your platform. The system is able to generate a new token so that the activation to your destination will continue seamlessly for the customer.
+Adobe has designed a system which refreshes expired access tokens without requiring the user to sign in to your platform again. The system is able to generate a new token so that the activation to your destination will continue seamlessly for the customer.
 
 To set up access token refresh, you may need to configure a templatized HTTP request that allows Adobe to get a new access token, using a refresh token. If the access token has expired, Adobe takes the templated request provided by you, adding the parameters you supplied. Use the `accessTokenRequest` parameter to configure an access token refresh mechanism.
 
@@ -480,7 +480,7 @@ You can use the following parameters in `accessTokenRequest` to customize your t
 |---------|----------|------|
 |`accessTokenRequest.destinationServerType` | String | Use `URL_BASED`. |
 |`accessTokenRequest.urlBasedDestination.url.templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` if you use templates for the value in `accessTokenRequest.urlBasedDestination.url.value`.</li><li> Use `NONE` if the value in the field `accessTokenRequest.urlBasedDestination.url.value` is a constant. </li></li>  |
-|`accessTokenRequest.urlBasedDestination.url.value` | String | The URL where Experience Platform requests the access token. |
+|`accessTokenRequest.urlBasedDestination.url.value` | String | The URL where [!DNL Experience Platform] requests the access token. |
 |`accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` if you use templates for the values in `accessTokenRequest.httpTemplate.requestBody.value`.</li><li> Use `NONE` if the value in the field `accessTokenRequest.httpTemplate.requestBody.value` is a constant. </li></li> |
 |`accessTokenRequest.httpTemplate.requestBody.value` | String | Use templating language to customize fields in the HTTP request to the access token endpoint. For information on how to use templating to customize fields, see the [templating conventions](#templating-conventions) section. |
 |`accessTokenRequest.httpTemplate.httpMethod` | String | Specifies the HTTP method used to call your access token endpoint. In most cases, this value is `POST`. |
@@ -498,7 +498,7 @@ You can use the following parameters in `accessTokenRequest` to customize your t
 
 ## Templating conventions {#templating-conventions}
 
-Depending on your authorization customization, you might need to access data fields in the authorization response, as shown in the previous section. To do that, please familiarize yourself with the [Pebble templating language](https://pebbletemplates.io/) used by Adobe and refer to the templating conventions below to customize your OAuth 2 implementation.
+Depending on your authorization customization, you might need to access data fields in the authorization response, as shown in the previous section. To do that, familiarize yourself with the [Pebble templating language](https://pebbletemplates.io/) used by Adobe and refer to the templating conventions below to customize your OAuth 2 implementation.
 
 
 |Prefix | Description | Example |
