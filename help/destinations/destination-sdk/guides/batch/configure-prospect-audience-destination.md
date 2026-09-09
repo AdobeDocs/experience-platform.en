@@ -392,7 +392,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       "allowMandatoryFieldSelection":true,
       "allowDedupeKeyFieldSelection":true,
       "defaultExportMode":"DAILY_FULL_EXPORT",
-      "allowedExportMode":[
+      "allowedExportModes":[
          "DAILY_FULL_EXPORT"
       ],
       "allowedScheduleFrequency":[

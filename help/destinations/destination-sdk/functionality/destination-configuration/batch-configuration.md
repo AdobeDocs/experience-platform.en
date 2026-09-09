@@ -22,14 +22,14 @@ topic_v2:
 ---
 # Batch configuration {#batch-configuration}
 
-Use the batch configuration options in Destination SDK to allow users to customize the exported file names and to configure the export schedule according to their preference.
+Use the batch configuration options in [!DNL Destination SDK] to let users customize the exported file names and configure the export schedule according to their preference.
 
-When you create file-based destinations through Destination SDK, you can configure default file naming and export schedules, or you can give users the option to configure these settings from the Experience Platform UI. For instance, you can configure behaviors such as:
+When you create file-based destinations through [!DNL Destination SDK], you can configure default file naming and export schedules, or you can give users the option to configure these settings from the [!DNL Experience Platform] UI. For instance, you can configure behaviors such as:
 
-* Including specific information in the file name, such as audience IDs, destination IDs, or custom information.
-* Allowing users to customize the file naming from the Experience Platform UI.
+* Include specific information in the file name, such as audience IDs, destination IDs, or custom information.
+* Let users customize the file naming from the [!DNL Experience Platform] UI.
 * Configure file exports to occur at set time intervals.
-* Define what file naming and export schedule customization options the users can see in the Experience Platform UI.
+* Define which file naming and export schedule customization options users can see in the [!DNL Experience Platform] UI.
 
 Batch configuration settings are part of the destination configuration for file-based destinations. 
 
@@ -44,7 +44,7 @@ This article describes all the supported batch configuration options that you ca
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by [!DNL Destination SDK] are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Supported integration types {#supported-integration-types}
 
@@ -55,6 +55,14 @@ Refer to the table below for details on which types of integrations support the 
 | Real-time (streaming) integrations | No |
 | File-based (batch) integrations | Yes |
 
+## `batchConfig` vs. `datasetBatchConfig` {#batchconfig-vs-datasetbatchconfig}
+
+This page describes two related but distinct configuration objects:
+
+* **`batchConfig`**: Controls file naming and export schedule settings for destinations that export *audiences* (people, account, or prospect audiences).
+* **`datasetBatchConfig`**: A nested object inside `batchConfig` that controls folder naming and export schedule settings specifically for destinations that export *datasets*. Use this when your destination supports dataset exports (i.e., `"sources": ["DATASETS"]` is set in your destination configuration).
+
+
 ## Supported parameters {#supported-parameters}
 
 The values that you set up here are surfaced in the [Schedule audience export](../../../ui/activate-batch-profile-destinations.md#scheduling) step of the file-based destinations activation workflow. 
@@ -64,7 +72,7 @@ The values that you set up here are surfaced in the [Schedule audience export](.
    "allowMandatoryFieldSelection":true,
    "allowDedupeKeyFieldSelection":true,
    "defaultExportMode":"DAILY_FULL_EXPORT",
-   "allowedExportMode":[
+   "allowedExportModes":[
       "DAILY_FULL_EXPORT",
       "FIRST_FULL_THEN_INCREMENTAL"
    ],
@@ -160,6 +168,77 @@ The configuration example below shows the correspondence between the configurati
 ```
 
 ![UI image showing the file name configuration screen with preselected macros](../../assets/functionality/destination-configuration/file-name-configuration.png)
+
+## Dataset export configuration {#dataset-export-configuration}
+
+Use the `datasetBatchConfig` object, nested inside `batchConfig`, to configure folder naming and export schedules for destinations that support [dataset exports](audience-data-type.md#datasets).
+
+>[!IMPORTANT]
+>
+>This object is only applicable when your destination configuration includes `"sources": ["DATASETS"]`. See [Configure audience data type](audience-data-type.md#datasets) for the full destination configuration example, or follow the step-by-step guide to [configure a dataset export destination](../../guides/batch/configure-dataset-export-destination.md).
+
+```json
+"batchConfig":{
+   "datasetBatchConfig":{
+      "allowedFoldernameAppendOptions":[
+         "DESTINATION",
+         "DATASET_ID",
+         "DATASET_NAME",
+         "EXPORT_TIME",
+         "DESTINATION_INSTANCE_ID",
+         "DESTINATION_INSTANCE_NAME",
+         "ORGANIZATION_NAME",
+         "SANDBOX_NAME",
+         "DATETIME",
+         "CUSTOM_TEXT"
+      ],
+      "defaultFoldernameAppendOptions":[
+         "DATASET_ID",
+         "EXPORT_TIME"
+      ],
+      "allowedExportModes":[
+         "DAILY_FULL_EXPORT",
+         "FIRST_FULL_THEN_INCREMENTAL"
+      ],
+      "allowedScheduleFrequency":[
+         "DAILY",
+         "EVERY_3_HOURS",
+         "EVERY_6_HOURS",
+         "EVERY_8_HOURS",
+         "EVERY_12_HOURS",
+         "ONCE"
+      ]
+   }
+}
+```
+
+|Parameter | Type | Description|
+|---------|----------|------|
+|`datasetBatchConfig.allowedFoldernameAppendOptions`|List|*Required*. List of available folder name macros for users to choose from. These determine which items are appended to the export folder path. If `defaultFoldernameAppendOptions` is empty, at least one macro must be specified here. Supported values: <ul><li>`DESTINATION`</li><li>`DATASET_ID`</li><li>`DATASET_NAME`</li><li>`EXPORT_TIME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>|
+|`datasetBatchConfig.defaultFoldernameAppendOptions`|List|*Required*. Pre-selected default folder name macros. Must be a subset of the values defined in `allowedFoldernameAppendOptions`.|
+|`datasetBatchConfig.allowedExportModes`|List|Defines the export modes available to users for dataset exports. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul>|
+|`datasetBatchConfig.allowedScheduleFrequency`|List|Defines the export frequency options available to users for dataset exports. Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul>|
+
+{style="table-layout:auto"}
+
+### Folder name macros {#folder-name-macros}
+
+The macros in the table below can be used in `allowedFoldernameAppendOptions` and `defaultFoldernameAppendOptions` to define the structure of the dataset export folder path.
+
+|Macro|Description|Example|
+|---|---|---|
+|`DESTINATION`|Destination name in the UI.|Amazon S3|
+|`DATASET_ID`|Unique, Experience Platform-generated ID of the exported dataset.|6966075d-f6b4-4a04-bd35-d438e1ebd1c3|
+|`DATASET_NAME`|Name of the exported dataset.|My Dataset|
+|`EXPORT_TIME`|Export time in the format `exportTime=YYYYMMDDHHMM`.|exportTime=202212091200|
+|`DESTINATION_INSTANCE_ID`|Unique, Experience Platform-generated ID of the destination instance.|7b891e5f-025a-4f0d-9e73-1919e71da3b0|
+|`DESTINATION_INSTANCE_NAME`|User-defined name of the destination instance.|My 2024 Advertising Destination|
+|`ORGANIZATION_NAME`|Name of the customer organization in [!DNL Adobe Experience Platform].|My Organization Name|
+|`SANDBOX_NAME`|Name of the sandbox used by the customer.|prod|
+|`DATETIME`|Date and time in the format `YYYYMMDD_HHMMSS`.|20220509_210543|
+|`CUSTOM_TEXT`|User-defined custom text to be included in the folder name.|My_Custom_Text|
+
+{style="table-layout:auto"}
 
 ## Next steps {#next-steps}
 

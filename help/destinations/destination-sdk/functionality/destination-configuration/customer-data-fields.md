@@ -1,5 +1,5 @@
 ---
-description: Learn how to create input fields in the Experience Platform UI that allow your users to specify various information relevant to how to connect and export data to your destination.
+description: Learn how to create input fields in the Experience Platform UI so your users can specify information relevant to connecting and exporting data to your destination.
 title: Customer data fields
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
 TQID: https://experienceleague.adobe.com/i1TyV3xZw8AZseTj2sBufXe27De7L86qg--msZnPmkM
@@ -24,7 +24,7 @@ topic_v2:
 ---
 # Configure user input through customer data fields
 
-When connecting to your destination in the Experience Platform UI, you might need your users to provide specific configuration details or select specific options that you make available to them. In Destination SDK, these options are called customer data fields.
+When connecting to your destination in the [!DNL Experience Platform] UI, you might need your users to provide specific configuration details or select specific options that you make available to them. In Destination SDK, these options are called customer data fields.
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the following destination configuration overview pages:
 
@@ -33,7 +33,7 @@ To understand where this component fits into an integration created with Destina
 
 ## Use cases for customer data fields {#use-cases}
 
-Use customer data fields for a variety of use cases where you need users to input data into the Experience Platform UI. For example, use customer data fields when users need to provide:
+Use customer data fields for a variety of use cases where you need users to enter data into the [!DNL Experience Platform] UI. For example, use customer data fields when users need to provide:
 
 * Cloud storage bucket names and paths, for file-based destinations.
 * The format accepted by the customer data fields.
@@ -45,11 +45,11 @@ You can configure customer data fields via the `/authoring/destinations` endpoin
 * [Create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Update a destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-This article describes all the supported customer data fields configuration types that you can use for your destination, and shows what customers will see in the Experience Platform UI.
+This article describes all the supported customer data fields configuration types that you can use for your destination, and shows what customers will see in the [!DNL Experience Platform] UI.
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Supported integration types {#supported-integration-types}
 
@@ -66,10 +66,10 @@ When creating your own customer data fields, you can use the parameters describe
 
 |Parameter | Type | Required/Optional |Description|
 |---------|----------|------|---|
-|`name` | String | Required| Provide a name for the custom field you are introducing. This name is not visible in the Experience Platform UI, unless the `title` field is empty or missing.|
+|`name` | String | Required| Provide a name for the custom field you are introducing. This name is not visible in the [!DNL Experience Platform] UI, unless the `title` field is empty or missing.|
 |`type` | String | Required |Indicates the type of the custom field you are introducing. Accepted values: <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
-|`title` | String | Optional |Indicates the name of the field, as it is seen by customers in the Experience Platform UI. If this field is empty or missing, the UI inherits the field name from the `name` value. |
-|`description` | String | Optional | Provide a description for the custom field. This description is not visible in the Experience Platform UI. |
+|`title` | String | Optional |Indicates the name of the field, as it is seen by customers in the [!DNL Experience Platform] UI. If this field is empty or missing, the UI inherits the field name from the `name` value. |
+|`description` | String | Optional | Provide a description for the custom field. This description is not visible in the [!DNL Experience Platform] UI. |
 |`isRequired` | Boolean | Optional |Indicates whether users are required to provide a value for this field in the destination configuration workflow. |
 |`pattern` | String |Optional| Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field.|
 |`enum` | String |Optional| Renders the custom field as a dropdown menu and lists the options available to the user.|
@@ -80,10 +80,10 @@ When creating your own customer data fields, you can use the parameters describe
 
 {style="table-layout:auto"}
 
-In the example below, the `customerDataFields` section defines two fields that users must input in the Experience Platform UI when connecting to the destination:
+In the example below, the `customerDataFields` section defines two fields that users must enter in the [!DNL Experience Platform] UI when connecting to the destination:
 
 * `Account ID`: A user account ID for your destination platform.
-* `Endpoint region`: The regional endpoint of the API they will connect to. The `enum` section creates a drop-down menu with the values defined within available for the users to select.
+* `Endpoint region`: The regional endpoint of the API they will connect to. The `enum` section creates a dropdown menu with the values defined within available for the users to select.
 
 ```json
 "customerDataFields":[
@@ -101,8 +101,8 @@ In the example below, the `customerDataFields` section defines two fields that u
       "type":"string",
       "isRequired":true,
       "enum":[
-         "EU"
-         "US",
+         "EU",
+         "US"
       ],
       "readOnly":false,
       "hidden":false
@@ -112,11 +112,11 @@ In the example below, the `customerDataFields` section defines two fields that u
 
 The resulting UI experience is shown in the image below.
 
-![Ui image showing an example of customer data fields.](../../assets/functionality/destination-configuration/customer-data-fields-example.png)
+![Two customer data fields, User account ID and API endpoint region, shown in the Experience Platform UI when connecting to a destination.](../../assets/functionality/destination-configuration/customer-data-fields-example.png)
 
 ## Destination connection names and descriptions {#names-description}
 
-When creating a new destination, Destination SDK automatically adds **[!UICONTROL Name]** and **[!UICONTROL Description]** fields to the destination connection screen in the Experience Platform UI. As you can see in the example above, the **[!UICONTROL Name]** and **[!UICONTROL Description]** fields are rendered in the UI without being included in the customer data fields configuration.
+When creating a new destination, Destination SDK automatically adds **[!UICONTROL Name]** and **[!UICONTROL Description]** fields to the destination connection screen in the [!DNL Experience Platform] UI. As you can see in the example above, the **[!UICONTROL Name]** and **[!UICONTROL Description]** fields are rendered in the UI without being included in the customer data fields configuration.
 
 >[!IMPORTANT]
 >
@@ -124,7 +124,7 @@ When creating a new destination, Destination SDK automatically adds **[!UICONTRO
 
 ## Order customer data fields {#ordering}
 
-The order in which you add the customer data fields in the destination configuration is reflected in the Experience Platform UI.
+The order in which you add the customer data fields in the destination configuration is reflected in the [!DNL Experience Platform] UI.
 
 For example, the configuration below is reflected accordingly in the UI, with the options showing up in the order **[!UICONTROL Name]**, **[!UICONTROL Description]**, **[!UICONTROL Bucket name]**, **[!UICONTROL Folder path]**, **[!UICONTROL File Type]**, **[!UICONTROL Compression format]**.
 
@@ -182,13 +182,13 @@ For example, the configuration below is reflected accordingly in the UI, with th
 ]
 ```
 
-![Image showing the order of file formatting options in the Experience Platform UI.](../../assets/functionality/destination-configuration/customer-data-fields-order.png)
+![File formatting options displayed in the Experience Platform UI in the same order as they appear in the destination configuration.](../../assets/functionality/destination-configuration/customer-data-fields-order.png)
 
 ## Group customer data fields {#grouping}
 
-You can group several customer data fields within one section. When setting up the connection to the destination in the UI, users can see and benefit from a visual grouping of similar fields. 
+You can group several customer data fields within one section. When setting up the connection to the destination in the UI, users can see and benefit from a visual grouping of similar fields.
 
-To do this, use `"type": "object"` to create the group, and collect the desired customer data fields within a `properties` object, as shown in the image below, where the grouping **[!UICONTROL CSV Options]** is highlighted. 
+To do this, use `"type": "object"` to create the group, and collect the desired customer data fields within a `properties` object, as shown in the following image, where the grouping **[!UICONTROL CSV Options]** is highlighted.
 
 ```json {line-numbers="true" highlight="6-28"}
 "customerDataFields":[
@@ -223,11 +223,11 @@ To do this, use `"type": "object"` to create the group, and collect the desired 
 ]
 ```
 
-![Image showing customer data fields grouping in the UI.](../../assets/functionality/destination-configuration/group-customer-data-fields.png)
+![Customer data fields grouped under a single CSV Options section in the Experience Platform UI.](../../assets/functionality/destination-configuration/group-customer-data-fields.png)
 
 ## Create dropdown selectors for customer data fields {#dropdown-selectors}
 
-For situations where you want to allow users to select between several options, for example which character should be used to delimit the fields in CSV files, you can add dropdown fields to the UI. 
+For situations where you want to allow users to select between several options, for example which character should be used to delimit the fields in CSV files, you can add dropdown fields to the UI.
 
 To do this, use the `namedEnum` object as shown below and configure a `default` value for the options that the user can select.
 
@@ -264,106 +264,105 @@ To do this, use the `namedEnum` object as shown below and configure a `default` 
 ]
 ```
 
-![Screen recording showing an example of dropdown selectors created with the configuration shown above.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
+![Screen recording of a customer selecting a delimiter value from a dropdown selector in the Experience Platform UI.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
 
 ## Create dynamic dropdown selectors for customer data fields {#dynamic-dropdown-selectors}
 
-For situations where you want to dynamically call an API and use the response to dynamically populate the options in a dropdown menu, you can use a dynamic dropdown selector. 
+For situations where you want to dynamically call an API and use the response to dynamically populate the options in a dropdown menu, you can use a dynamic dropdown selector.
 
 The dynamic dropdown selectors look identical to the [regular dropdown selectors](#dropdown-selectors) in the UI. The only difference is the values are dynamically retrieved from an API.
 
 To create a dynamic dropdown selector, you must configure two components:
 
-**Step 1.** [Create a destination server](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) with a `responseFields` template for the dynamic API call, as shown below.
+1. [Create a destination server](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) with a `responseFields` template for the dynamic API call, as shown below.
 
-```json
-{
-   "name":"Server for dynamic dropdown",
-   "destinationServerType":"URL_BASED",
-   "urlBasedDestination":{
-      "url":{
-         "templatingStrategy":"PEBBLE_V1",
-         "value":" <--YOUR-API-ENDPOINT-PATH--> "
-      }
-   },
-   "httpTemplate":{
-      "httpMethod":"GET",
-      "headers":[
-         {
-            "header":"Authorization",
-            "value":{
-               "templatingStrategy":"PEBBLE_V1",
-               "value":"My Bearer Token"
+   ```json
+   {
+      "name":"Server for dynamic dropdown",
+      "destinationServerType":"URL_BASED",
+      "urlBasedDestination":{
+         "url":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":" <--YOUR-API-ENDPOINT-PATH--> "
+         }
+      },
+      "httpTemplate":{
+         "httpMethod":"GET",
+         "headers":[
+            {
+               "header":"Authorization",
+               "value":{
+                  "templatingStrategy":"PEBBLE_V1",
+                  "value":"My Bearer Token"
+               }
+            },
+            {
+               "header":"x-integration",
+               "value":{
+                  "templatingStrategy":"PEBBLE_V1",
+                  "value":"{{customerData.integrationId}}"
+               }
+            },
+            {
+               "header":"Accept",
+               "value":{
+                  "templatingStrategy":"NONE",
+                  "value":"application/json"
+               }
             }
-         },
+         ]
+      },
+      "responseFields":[
          {
-            "header":"x-integration",
-            "value":{
-               "templatingStrategy":"PEBBLE_V1",
-               "value":"{{customerData.integrationId}}"
-            }
-         },
-         {
-            "header":"Accept",
-            "value":{
-               "templatingStrategy":"NONE",
-               "value":"application/json"
-            }
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+            "name":"list"
          }
       ]
-   },
-   "responseFields":[
-      {
-         "templatingStrategy":"PEBBLE_V1",
-         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
-         "name":"list"
-      }
+   }
+   ```
+
+1. Use the `dynamicEnum` object as shown below. In the example below, the `User` dropdown is retrieved using the dynamic server.
+
+   ```json {line-numbers="true" highlight="13-21"}
+   "customerDataFields": [
+     {
+       "name": "integrationId",
+       "title": "Integration ID",
+       "type": "string",
+       "isRequired": true
+     },
+     {
+       "name": "userId",
+       "title": "User",
+       "type": "string",
+       "isRequired": true,
+       "dynamicEnum": {
+         "queryParams": [
+           "integrationId"
+         ],
+         "destinationServerId": "<~dynamic-field-server-id~>",
+         "authenticationRule": "CUSTOMER_AUTHENTICATION",
+         "value": "$.list",
+         "responseFormat": "NAME_VALUE"
+       }
+     }
    ]
-}
-```
+   ```
 
-**Step 2.** Use the `dynamicEnum` object as shown below. In the example below, the `User` dropdown is retrieved using the dynamic server.
-
-
-```json {line-numbers="true" highlight="13-21"}
-"customerDataFields": [
-  {
-    "name": "integrationId",
-    "title": "Integration ID",
-    "type": "string",
-    "isRequired": true
-  },
-  {
-    "name": "userId",
-    "title": "User",
-    "type": "string",
-    "isRequired": true,
-    "dynamicEnum": {
-      "queryParams": [
-        "integrationId"
-      ],
-      "destinationServerId": "<~dynamic-field-server-id~>",
-      "authenticationRule": "CUSTOMER_AUTHENTICATION",
-      "value": "$.list",
-      "responseFormat": "NAME_VALUE"
-    }
-  }
-]
-```
-
-Set the `destinationServerId` parameter to the ID of the destination server that you created at step 1. You can see the destination server ID in the response of the [retrieve a destination server configuration](../../authoring-api/destination-server/retrieve-destination-server.md) API call.
+Set the `destinationServerId` parameter to the ID of the destination server that you created in step 1. You can see the destination server ID in the response of the [retrieve a destination server configuration](../../authoring-api/destination-server/retrieve-destination-server.md) API call.
 
 ## Create nested customer data fields {#nested-fields}
 
-You can create nested customer data fields for complex integration patterns. Use them to chain a series of selections for the customer. 
+You can create nested customer data fields for complex integration patterns. Use them to chain a series of selections for the customer.
 
 For example, you can add nested customer data fields to require customers to select an integration type with your destination, followed immediately by another selection. The second selection is a nested field within the integration type.
 
-To add a nested field, use the `properties` parameter as shown below. In the configuration example below, you can see three separate nested fields within the **Yourdestination - Integration Specific Settings** customer data field.
+To add a nested field, use the `properties` parameter as shown below. In the configuration example below, you can see three separate nested fields within the [!UICONTROL Yourdestination - Integration Specific Settings] customer data field.
 
 >[!TIP]
 >
->Starting with the April 2024 release, you can set an `isRequired` parameter on nested fields. For example, in the configuration snippet below, the first two nested fields are marked as required (highlighted line xxx) and customers cannot proceed unless they select a value for the field. Read more about required fields in the [supported parameters](#supported-parameters) section.
+>Starting with the April 2024 release, you can set an `isRequired` parameter on nested fields. For example, in the configuration snippet below, the first two nested fields are marked as required (highlighted lines) and customers cannot proceed unless they select a value for the field. Read more about required fields in the [supported parameters](#supported-parameters) section.
 
 ```json {line-numbers="true" highlight="11,20"}
 
@@ -411,7 +410,7 @@ You can create conditional customer data fields, which are displayed in the acti
 
 For example, you can create conditional file formatting options to be displayed only when users select a specific file export type.
 
-The configuration below creates a conditional grouping for CSV file formatting options. The CSV file options are displayed only when the user selects CSV as the desired file type for export. 
+The configuration below creates a conditional grouping for CSV file formatting options. The CSV file options are displayed only when the user selects CSV as the desired file type for export.
 
 To set a field as conditional, use the `conditional` parameter as shown below:
 
@@ -570,15 +569,15 @@ In a wider context, you can see the `conditional` field being used in the destin
 
 Below, you can see the resulting UI screen, based on the configuration above. When the user selects the file type CSV, additional file formatting options referring to the CSV file type are displayed in the UI.
 
-![Screen recording showing the conditional file formatting option for CSV files.](../../assets/functionality/destination-configuration/customer-data-fields-conditional.gif)
+![Screen recording of additional CSV file formatting options appearing in the Experience Platform UI after the user selects CSV as the file type.](../../assets/functionality/destination-configuration/customer-data-fields-conditional.gif)
 
 ## Accessing templatized customer data fields {#accessing-templatized-fields}
 
-When your destination requires user input, you must provide a selection of customer data fields to your users, which they can fill in through the Experience Platform UI. Then, you must configure your destination server to correctly read the user input from the customer data fields. This is done through templatized fields.
+When your destination requires user input, you must provide a selection of customer data fields to your users, which they can fill in through the [!DNL Experience Platform] UI. Then, you must configure your destination server to correctly read the user input from the customer data fields. This is done through templatized fields.
 
 Templatized fields use the format `{{customerData.fieldName}}`, where `fieldName` is the name of the customer data field that you are reading information from. All templatized customer data fields are preceded by `customerData.` and enclosed within double braces `{{ }}`.
 
-For example, let's consider the following Amazon S3 destination configuration:
+For example, let's consider the following [!DNL Amazon S3] destination configuration:
 
 ```json
 "customerDataFields":[
@@ -622,13 +621,13 @@ For Experience Platform to correctly connect to [!DNL Amazon S3], your destinati
    }
 ```
 
-The templatized values `{{customerData.bucketName}}` and `{{customerData.path}}` read the user-provided values so that Experience Platform can successfully connect to the destination platform.
+The templatized values `{{customerData.bucketName}}` and `{{customerData.path}}` read the user-provided values so that [!DNL Experience Platform] can successfully connect to the destination platform.
 
 For more information about how to configure your destination server to read templatized fields, see the documentation on [hard-coded versus templatized fields](../destination-server/server-specs.md#templatized-fields).
 
 ## Next steps {#next-steps}
 
-After reading this article, you should have a better understanding of how you can allow your users to input information in the Experience Platform UI through customer data fields. You now also know how to select the right customer data field for your use case, and configure, order, and group customer data fields in the Experience Platform UI.
+You now understand how your users enter information in the [!DNL Experience Platform] UI through customer data fields. You also know how to select the right customer data field for your use case, and configure, order, and group customer data fields in the [!DNL Experience Platform] UI.
 
 To learn more about the other destination components, see the following articles:
 

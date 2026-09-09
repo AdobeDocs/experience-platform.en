@@ -28,11 +28,11 @@ This article describes all the supported mapping configurations that you can use
 >
 >Any mapping configuration that is not described in this article is not supported by Destination SDK.
 
-When building your destination, configure your schema and identity namespaces according to one of the mapping configurations described in this page.
+When building your destination, configure your schema and identity namespaces according to one of the mapping configurations described on this page.
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Supported mappings for streaming destinations {#streaming-mappings}
 
@@ -45,7 +45,7 @@ Real-time (streaming) destinations built with Destination SDK support the mappin
 
 {style="table-layout:auto"}
 
-The configuration example below allows customers to use both mappings in the table above.
+Use the following configuration example to apply both mappings in the preceding table.
 
 ```json
 "schemaConfig":{
@@ -75,7 +75,7 @@ Users can map attributes from their source XDM profile to custom attributes on y
 
 Users must manually enter the name of the target custom attribute when selecting the target field mapping.
 
-![Experience Platform UI screenshot showing customa attribute selection.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
+![The Experience Platform UI where a user enters the name of a target custom attribute for a streaming destination mapping.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
 
 The resulting UI experience is shown in the image below.
 
@@ -83,7 +83,7 @@ The resulting UI experience is shown in the image below.
 
 ### Map identity namespaces to partner identity namespaces {#streaming-identity-to-identity}
 
-Users can map custom or global identity namespaces from Experience Platform to identity namespaces that you defined.
+Users can map custom or global identity namespaces from [!DNL Experience Platform] to identity namespaces that you defined.
 
 The resulting UI experience is shown in the image below.
 
@@ -101,7 +101,7 @@ File-based destinations built with Destination SDK support the mapping configura
 
 {style="table-layout:auto"}
 
-The configuration example below allows customers to use all the mappings from the table above.
+Use the following configuration example to apply all the mappings from the preceding table.
 
 ```json
 "schemaConfig":{
@@ -139,7 +139,7 @@ Users can leave the default name in place or enter a custom attribute name in th
 
 ### Map identity namespaces to custom attributes {#batch-identity-to-custom}
 
-Users can map custom or global identity namespaces from Experience Platform to custom attributes on your destination's side.
+Users can map custom or global identity namespaces from [!DNL Experience Platform] to custom attributes on your destination's side.
 
 When selecting an identity namespace as a source field, the target field is automatically populated with an equivalent identity namespace. To replace the target field with a custom attribute, users must enter a custom attribute name in the target field selection screen.
 
@@ -162,7 +162,7 @@ The resulting UI experience is shown in the image below.
 
 ## Next steps {#next-steps}
 
-After reading this article, you should have a better understanding of what mappings are supported by destinations built with Destination SDK.
+You now understand which mappings are supported by destinations built with Destination SDK.
 
 To learn more about the other destination components, see the following articles:
 
