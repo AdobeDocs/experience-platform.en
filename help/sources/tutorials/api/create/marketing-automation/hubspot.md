@@ -108,9 +108,71 @@ A successful response returns the newly created connection, including its unique
 }
 ```
 
+## Create a source connection
+
+A source connection consists of a connection ID, information required to locate the source data, and a connection spec ID. Source connections are used in tandem with base connections, target connections, and mapping IDs to create a dataflow.
+
+To create a source connection, make a POST request to the `/sourceConnections` endpoint of the [!DNL Flow Service] API, providing your base connection ID and the name of the [!DNL HubSpot] table you want to ingest.
+
+**API format**
+
+```https
+POST /sourceConnections
+```
+
+**Request**
+
+The following request creates a source connection for [!DNL HubSpot]:
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "HubSpot source connection",
+        "baseConnectionId": "b4a738db-8696-4e2a-bf95-08d2927c911e",
+        "description": "HubSpot source connection",
+        "params": {
+            "columns": [],
+            "tableName": "CRM.Objects.Contacts"
+        },
+        "data": {
+            "format": "tabular",
+            "schema": null,
+            "properties": null
+        },
+        "connectionSpec": {
+            "id": "cc6a4487-9e91-433e-a3a3-9cf6626c1806",
+            "version": "1.0"
+        }
+    }'
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `baseConnectionId` | The unique connection ID of the [!DNL HubSpot] base connection you created in the previous step. |
+| `params.columns` | The specific table columns of data that you want to ingest into Experience Platform. Leave this value as an empty array to ingest all columns. |
+| `params.tableName` | The name of the [!DNL HubSpot] table you want to ingest, in the format `<HubSpot Category>.<Sub Category>.<Object Name>`. For example: `CRM.Commerce.Discounts`. |
+| `connectionSpec.id` | The [!DNL HubSpot] connection specification ID: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
+
+**Response**
+
+A successful response returns the newly created source connection, including its unique connection identifier (`id`).
+
+```json
+{
+    "id": "cbfd6fe0-0d1f-4c26-bd06-f00d1f4c26fc",
+    "etag": "\"d403848a-0000-0200-0000-5e978f7b0001\""
+}
+```
+
 ## Next steps
 
-By following this tutorial, you have created a [!DNL HubSpot] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
+By following this tutorial, you have created a [!DNL HubSpot] base connection and source connection using the [!DNL Flow Service] API. You can use these connection IDs in the following tutorials:
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
 * [Create a dataflow to bring marketing automation data to Experience Platform using the [!DNL Flow Service] API](../../collect/marketing-automation.md)
