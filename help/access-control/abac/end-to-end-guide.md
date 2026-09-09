@@ -164,6 +164,28 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 >
 > Assign labels created in the [!UICONTROL Permissions] workspace (such as the audience labels above) to various objects in Adobe Journey Optimizer using [Object Level Access Control](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access)." 
 
+## Apply labels to datasets
+
+>[!IMPORTANT]
+>
+>Dataset access control requires the **[!UICONTROL Default-Label-Based-Access-Control-Policy]** to be active. Without this policy, Adobe Experience Platform does not evaluate dataset access labels.
+
+Use Object-Level Access Control to restrict access to entire datasets that contain sensitive information.
+
+In this healthcare example, you can apply the **[!UICONTROL PHI/ Regulated Health Data]** label to datasets that contain protected health information (PHI). After you apply the label, only users whose roles contain the required label can access the dataset.
+
+Once you have completed labeling your schema fields, you can now label your datasets.
+
+Select **[!UICONTROL Datasets]** from the left navigation under the **[!UICONTROL Data Management]** section. A list of available datasets is displayed.
+
+Select the ellipsis (`...`) next to the dataset, then select **[!UICONTROL Manage access labels]**.
+
+![The dataset UI highlighting the dataset menu](../images/abac-end-to-end-user-guide/abac-dataset-menu.png)
+
+The **[!UICONTROL Apply access labels]** page appears, allowing you to choose the labels that you want to apply to the dataset. For this use case, select the **[!UICONTROL PHI/ Regulated Health Data]** label, then select **[!UICONTROL Save]**.
+
+![Apply access labels with PHI/Regulated health data selected and highlighting Save.](../images/abac-end-to-end-user-guide/abac-dataset-select-labels.png)
+
 ## Activate the access control policy {#policy}
 
 The default access control policy will leverage labels to define which user roles have access to specific Experience Platform resources. In this example, access to schema fields and audiences will be denied in all sandboxes for users who aren't in a role that has the corresponding labels in the schema field.

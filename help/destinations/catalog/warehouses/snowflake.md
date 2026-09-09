@@ -113,7 +113,7 @@ Read the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/collabor
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which types of audiences you can export to this destination. The two tables below indicate which audiences this connector supports, by _audience origin_ and _profile types included in the audience_:
+The two tables below indicate which audiences this connector supports when you activate from [!DNL Real-Time CDP], by _audience origin_ and _profile types included in the audience_:
 
 | Audience origin | Supported | Description |
 |---------|----------|----------|

@@ -201,13 +201,13 @@ The `adwh_fact_profile_by_segment_trendlines` table is an Adobe-managed system d
 | Column | Definition |
 | --- | --- |
 | `count_of_profiles` | The total number of profiles in the audience at the time of the daily record. |
-| `count_of_calculated_realized_profiles` | The number of profiles that had a qualification event yesterday. The number of profiles that had a qualification event yesterday. |
+| `count_of_calculated_realized_profiles` | The number of profiles that had a qualification event yesterday. |
 | `count_of_calculated_existing_profiles` | The number of profiles whose last qualification event occurred before yesterday. These profiles have continued to exist in the audience since their most recent qualification event. |
 | `count_of_calculated_exited_profiles` | The number of profiles that exited the audience yesterday. |
 
 >[!NOTE]
 >
->Prior to a recent calculation update, the following relationship held for this dataset: `count_of_profiles = count_of_calculated_realized_profiles + count_of_calculated_existing_profiles`. Following an update to how `count_of_calculated_existing_profiles` is calculated, this relationship is no longer guaranteed. If you have custom dashboards or reports built on this identity, review and update your queries accordingly.
+>Prior to the June 2026 calculation update, the following relationship held for this dataset: `count_of_profiles = count_of_calculated_realized_profiles + count_of_calculated_existing_profiles`. Following the update to how `count_of_calculated_existing_profiles` is calculated, this relationship is no longer guaranteed. If you have custom dashboards, reports, or queries built on this relationship, review and update them accordingly.
 
 #### Audience size use case {#audience-size}
 

@@ -1,6 +1,7 @@
 ---
-title: Adobe Experience Platform Release Notes June 2026
-description: The June 2026 release notes for Adobe Experience Platform.
+title: Adobe Experience Platform Release Notes August 2026
+description: The August 2026 release notes for Adobe Experience Platform.
+last-update: 2026-08-18
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 TQID: https://experienceleague.adobe.com/RvjQSbQ2NNwBYQJD4G6jsXWdAAg3vzbXKYvRlMwbBW0
 product_v2:
@@ -59,49 +60,80 @@ topic_v2:
 >- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Release date: June 16, 2026**
+**Release date: August 18 2026**
 
 New features and updates to existing features in Adobe Experience Platform:
 
-- [Agent Orchestrator](#agent-orchestrator)
+- [Access control](#access-control)
+- [Data Governance](#data-governance)
+- [Data Ingestion](#data-ingestion)
 - [Destinations](#destinations)
-- [Experience Data Model (XDM)](#xdm)
-- [Query Service](#query-service)
-- [Real-Time Customer Profile](#profile)
 - [Run and Operate](#run-and-operate)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
-## Agent Orchestrator {#agent-orchestrator}
+## Access control {#access-control}
 
-Use Agent Orchestrator to automate workflows and engage customers across multiple channels with AI-powered agents.
+Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Experience Platform capabilities, including data modeling, profile management, and sandbox administration.
 
 **New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| Validate your data in AI Assistant | Identify data quality issues faster and gain greater confidence in your Adobe Experience Platform datasets with data validation in AI Assistant. Powered by Agent Orchestrator, the capability analyzes datasets, identifies data quality issues, and provides actionable insights to help diagnose and resolve problems. For more information, read the guide on [validating your data in AI Assistant](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/data-validation). |
+| Object-Level Access Control for Datasets | You can now apply access labels to entire datasets to control which users and applications can read or write dataset data. Use the same Adobe-defined and custom access labels available throughout Adobe Experience Platform to enforce dataset-level access restrictions. For information about applying and managing dataset labels, see the [end to end guide](/help/access-control/abac/end-to-end-guide.md) |
 
 {style="table-layout:auto"}
 
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+For more information, read the [Access control overview](/help/access-control/home.md). 
+
+## Data Governance {#data-governance}
+
+Use Data Governance to manage data usage policies and enforce compliance with data usage labels across Experience Platform.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| mTLS Certificate Hierarchy Update | Adobe is transitioning outbound mTLS client certificates to a new certificate authority (CA) hierarchy. If your endpoint validates Adobe's mTLS client certificates, add the new root and intermediate CA certificates alongside the existing trusted hierarchy to prevent connection or delivery failures. See [Update your trust store for Adobe's new mTLS certificate hierarchy](/help/landing/governance-privacy-security/mtls-trust-chain-migration.md) for more details. |
+
+{style="table-layout:auto"}
+
+For more information, read the [Data Governance overview](/help/data-governance/home.md).
+
+## Data Ingestion {#data-ingestion}
+
+Use batch and streaming ingestion to bring data into Experience Platform from a variety of sources.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Updated [Batch Ingestion guardrails](/help/ingestion/guardrails.md) | Batch ingestion limits have increased to 25,000 files per batch and up to 1 TB for regular batches. Batches that exceed these limits fail at ingestion time, with updated error messages to help identify the issue. |
+
+{style="table-layout:auto"}
+
+For more information, read the [data ingestion overview](/help/ingestion/home.md).
 
 ## Destinations {#destinations}
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
+**New or updated functionality**
+
+| Feature | Description |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} [Activate audiences on-demand for streaming destinations](/help/destinations/ui/activate-now-streaming.md) | Trigger an immediate, on-demand resend of an audience's full current membership to a streaming destination without waiting for the next audience qualification or disqualification event. This update is rolling out through August 21, 2026. This feature is in private beta and available for a limited number of streaming destinations. Contact your Adobe representative to request access. <br> ![Triggering an on-demand resend of an audience's full membership to a streaming destination using Activate now.](../2026/assets/august/activate-now-streaming.gif){zoomable="yes"} |
+| [Data type filter in the destinations catalog](/help/destinations/catalog/overview.md) | Find the destination you need faster by filtering the **[!UICONTROL Browse]** tab of the destinations catalog by data type. This update is rolling out through the first week of September 2026. <br> ![Filtering destinations by data type in the Browse tab of the destinations catalog.](../2026/assets/august/data-type-filter-browse.gif){zoomable="yes"} |
+
+{style="table-layout:auto"}
+
 **New or updated destinations**
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [When to activate](../../destinations/ui/when-to-activate.md) | Control which profile change types trigger exports to a destination. Enable or disable three trigger types per dataflow: attribute changes, audience qualification and disqualification, and identity changes. All three triggers are enabled by default. During beta, this feature is available on request. Contact your Adobe representative to request access. <br> ![The When to activate panel showing three checkboxes: Attribute changes, Segmentation changes, and Identity changes, all enabled.](../../destinations/assets/ui/when-to-activate/when-to-activate.png){zoomable="yes"} |
-| [Azure Private Link for Azure destinations](../../destinations/catalog/cloud-storage/azure-private-link.md) | Route data exports to [[!DNL Azure Blob Storage]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), and [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md) over private IP addresses on the [!DNL Microsoft Azure] backbone instead of the public internet. This feature is available to customers with **Healthcare Shield** or **Privacy and Security Shield** entitlements. Contact your Adobe representative to request setup. |
-| [[!DNL Snowflake Streaming]](../../destinations/catalog/warehouses/snowflake.md) and [[!DNL Snowflake Batch]](../../destinations/catalog/warehouses/snowflake-batch.md) Private Link support | A new **[!UICONTROL Private Link Enabled]** dropdown selector is now available when configuring [!DNL Snowflake] streaming and batch destination connections. Enable this option only if your [!DNL Snowflake] account is configured for private link-only inbound access. Leaving this set to **[!UICONTROL False]** for private link-only accounts causes data sharing to fail. This update is being rolled out through June 19, 2026. <br> ![The Snowflake destination details page showing the Private Link Enabled dropdown selector set to False.](../2026/assets/june/snowflake-private-link.png){zoomable="yes"} |
-| [!BADGE Beta]{type=Informative} [Export arrays as enrichment attributes](../../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes) | Export array fields as enrichment attributes when activating audiences to cloud storage destinations. Select individual fields from an array of objects, or export the full array. The data is then exported as separate columns in JSON and Parquet output. <br> ![The Select enrichment attributes dialog showing the Export arrays and complex objects enabled banner and the two-column Source and Target mapping interface.](../../destinations/assets/ui/activate-batch-profile-destinations/select-enrichment-attribute-array.png){zoomable="yes"} |
-| [[!DNL Google Ad Manager 360]](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) now generally available | The [!DNL Google Ad Manager 360] destination (formerly in beta) is now generally available. |
-| [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md) now generally available | The [!DNL Google Customer Match + Display & Video 360] destination (formerly in limited availability) is now generally available. |
-| [Audience-level reporting for additional destinations](../../dataflows/ui/monitor-destinations.md#audience-level-view) | Audience-level reporting is now available for several high-usage destinations: [Facebook](../../destinations/catalog/social/facebook.md), [TikTok](../../destinations/catalog/social/tiktok.md), [(Legacy) Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md), [Braze](../../destinations/catalog/mobile-engagement/braze.md), [LinkedIn Matched Audiences](../../destinations/catalog/social/linkedin.md), [(Companies) LinkedIn](../../destinations/catalog/social/linkedin-b2b.md), [Twitter Custom Audiences](../../destinations/catalog/social/twitter.md), [Pinterest Customer List](../../destinations/catalog/advertising/pinterest.md), [Salesforce CRM](../../destinations/catalog/crm/salesforce.md), [Mailchimp Tags](../../destinations/catalog/email-marketing/mailchimp-tags.md), [Gainsight PX](../../destinations/catalog/analytics/gainsight-px.md), and [Demandbase People](../../destinations/catalog/advertising/demandbase-people.md). Previously, these destinations only supported dataflow run-level reporting, making it harder to understand how many profiles were activated for each audience. For more information, read the [audience-level view](../../dataflows/ui/monitor-destinations.md#audience-level-view) documentation. <br> ![The monitoring dashboard showing the Customer Audiences tab with audience-level activation metrics including records activated, excluded, and failed per audience.](../2026/assets/june/audience-level-reporting.png){zoomable="yes"} |
-| [[!DNL Amazon Ads]](../../destinations/catalog/advertising/amazon-ads-v2.md) renamed from [!DNL Amazon Ads v2] | [!DNL Amazon Ads] (formerly [!DNL Amazon Ads v2]) is now the recommended destination for exporting data to [!DNL Amazon Ads]. The [(Legacy) Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md) destination card will be hidden at the end of July 2026. |
+| External ID support for [[!DNL Amazon S3] assumed role authentication](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) | Adobe now includes your Organization ID as the `sts:ExternalId` in every `AssumeRole` call for the [!DNL Amazon S3] destination's assumed role authentication flow. Add an `sts:ExternalId` condition to your IAM role's trust policy in AWS and set it to your Organization ID to strengthen the security of your assumed role connection. View the [documentation](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) for examples of how to use this feature. |
+| [[!DNL ZoomInfo Account Audiences]](/help/destinations/catalog/advertising/zoominfo-account-audiences.md) | Use the [!DNL ZoomInfo Account Audiences] destination to activate account audiences from Experience Platform to [!DNL ZoomInfo] for account-based marketing use cases. |
+| Exclude exited profiles from [[!DNL LiveRamp] - Onboarding](/help/destinations/catalog/advertising/liveramp-onboarding.md) exports | Exports to the [!DNL LiveRamp] - Onboarding destination no longer include profiles that have exited an audience. This helps reduce your [Records Under Management (RUM)](https://docs.liveramp.com/connect/en/records-under-management.html) count in [!DNL LiveRamp]. This update is rolling out through August 21, 2026. |
 
 {style="table-layout:auto"}
 
@@ -109,39 +141,11 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 | Fix | Description |
 | --- | --- |
-| [[!DNL Reddit Custom Audience]](../../destinations/catalog/advertising/reddit-custom-audience.md) activation fix | Fixed an issue that prevented customers from activating data when attempted more than 24 hours after authentication. |
-| [[!DNL Facebook]](../../destinations/catalog/social/facebook.md) restricted audience enforcement | Starting June 8, 2026, [!DNL Facebook] blocks audiences containing restricted or sensitive data (such as health or financial information) under its Terms of Service. See the [restricted audience data](../../destinations/catalog/social/facebook.md#restricted-audiences) section for troubleshooting steps. |
-| [External audiences activation guardrail update](../../destinations/guardrails.md#batch-file-based-activation) | The maximum number of external audiences (such as custom upload, Federated Audience Composition, and Audience Composition) that can be activated per destination instance has been increased to 100. |
-| [Dataset export file splitting](../../destinations/ui/export-datasets.md) | Previously, datasets with fewer than 50,000 records were sometimes split into multiple files. Datasets with 50,000 records or fewer are now always exported as a single file. |
+| B2B audience export fix | When you export B2B audiences to a destination, Experience Platform now sends only the audiences that have actually changed for a profile. Previously, an update to one audience caused every audience that the profile qualified for to be resent, resulting in larger exports than necessary. This aligns with the existing streaming and batch audience export behavior. |
 
 {style="table-layout:auto"}
 
-For more information, read the [Destinations overview](../../destinations/home.md).
-
-## Experience Data Model (XDM) {#xdm}
-
-Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Experience Platform.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| [Schema inventory enhancements](../../xdm/ui/resources/schemas.md) | The schema browse page now includes additional schema metadata, enhanced filtering options, user-defined tags and folders, and inline actions for common schema management tasks. These updates help you find, organize, and manage schemas more efficiently from a single location. <br> ![The Schemas browse page with filtering options, schema metadata columns, schema details, and inline actions for common schema management tasks.](../2026/assets/june/schema-inventory-enhancements.png){zoomable="yes"} |
-
-{style="table-layout:auto"}
-
-For more information, read the [XDM overview](../../xdm/home.md).
-
-## Real-Time Customer Profile {#real-time-customer-profile}
-
-Real-Time Customer Profile gives you a complete view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Use Profile to consolidate your customer data into a unified view offering an actionable, timestamped account of every customer interaction.
-
-**New or updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Batch profile ingestion | Batch profile ingestion now enforces format validation on Experience Event `_id` values. Records containing restricted characters in the `_id` field are rejected at ingestion time in the Profile Store. This validation is applied at the record level - batches continue to process successfully, while only non-compliant records are dropped by Profile Store. Customers can correct invalid `_id` values and resend the affected records, ensuring no permanent data loss. See the [XDM ExperienceEvent class documentation](/help/xdm/classes/experienceevent.md) for more details. |
-| System job API updates | The system jobs API response format has been updated. With this update, field names, date formats, and response structure may differ from previous versions, with some fields added and others removed. Review the updated response schema before integrating or updating existing integrations. For more information, read the [system job API guide](/help/profile/api/profile-system-jobs.md). |
+For more information, read the [Destinations overview](/help/destinations/home.md).
 
 ## Run and Operate {#run-and-operate}
 
@@ -149,8 +153,7 @@ Real-Time Customer Profile gives you a complete view of each individual customer
 
 | Feature | Description |
 | --- | --- |
-| [Anti-pattern detection in Job Schedules](../../run-and-operate/job-schedules-anti-patterns.md) | Three anti-patterns are now automatically detected in the Job Schedules view: exceeding 90 profile ingestion runs per day, profile ingestion scheduled too close to segmentation, and segmentation scheduled too close to destination activation. The last-7-days lookback now includes a calendar view for date selection. This feature is being rolled out through the end of June 2026. |
-| [Health checks for P-TTL and e-TTL](../../run-and-operate/health-checks.md) | Two new health checks are now available: Pseudonymous Profile TTL (P-TTL) checks whether the expiration policy is active for your sandbox and lists relevant unauthenticated namespaces. Experience Event Datasets TTL (e-TTL) scans data lake and profile event datasets to identify where automatic data expiration is not configured. |
+| [Additional health checks](/help/run-and-operate/health-checks/overview.md) | Health checks now include additional checks for the new Query Service, Merge Policies, and Segmentation categories, in addition to the existing Schemas and Identities, Ingestion, Automatic Data Expiration, and Datasets categories. |
 
 {style="table-layout:auto"}
 
@@ -161,12 +164,15 @@ Use Segmentation Service to create audiences from your customer data and manage 
 **New or updated features**
 
 | Feature | Description |
-| ------- | ----------- |
-| Persistent split support | You can now choose between persistent and random percentage splits in Audience Composition. Persistent split keeps the same profile in the same bucket across evaluations, while random split may place a profile in a different bucket across evaluations. When using persistent split, select an identity namespace with low variance to ensure reliable audience membership. Read the [Audience Composition guide](/help/segmentation/ui/audience-composition.md) for more details. |
+| --- | --- |
+| Batch segmentation progress transparency | When a batch segmentation job is processing, you can now see the percentage of the audience that has been evaluated. This lets you better estimate the remaining time needed for the segmentation job, so you can meet your audience's activation timeline. For more information, read the [monitor audiences guide](/help/dataflows/ui/monitor-audiences.md). |
+| [!BADGE Beta]{type=Informative} Run Now | Run Now lets you trigger audience evaluation for a specific audience on demand, without waiting for a system-defined or user-defined schedule. For more information, read the [run now guide](/help/segmentation/methods/run-now.md). |
+| External account audiences (B2B) | You can now upload account audiences using the external audiences endpoint. For more information, read the [external audiences endpoint guide](/help/segmentation/api/external-audiences.md). |
+| Time-series custom objects (B2B) | You can now use time-series relational schemas in custom objects for segmentation use cases in [!DNL Real-Time CDP B2B Edition]. For more information, read the [custom objects guide](/help/rtcdp/segmentation/custom-objects.md). |
 
 {style="table-layout:auto"}
 
-For more information, read the [Audiences overview](../../segmentation/home.md).
+For more information, read the [Segmentation Service overview](/help/segmentation/home.md).
 
 ## Sources {#sources}
 
@@ -176,17 +182,10 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| General availability of the [!DNL LAVA] source | You can now bring loyalty and engagement data from [[!DNL LAVA]](https://www.lava.ai/) into Experience Platform using the [[!DNL LAVA] source](../../sources/connectors/loyalty/lava.md). Stream member profiles, rewards, and events from [!DNL LAVA] and [!DNL LAVA] integrations to enrich Real-Time Customer Profile and support segmentation, personalization, and activation. Create a separate source connection for each data type you need, and map email on member profiles to stitch [!DNL LAVA] records with your existing profiles. For prerequisites, an optional setup package, and step-by-step setup, read the [[!DNL LAVA] source documentation](../../sources/connectors/loyalty/lava.md).|
-
-{style="table-layout:auto"}
-
-**Updates and fixes**
-
-| Source | Description |
-| --- | --- |
-| Automatic dataflow disabling for failed sources dataflows | Sources dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
-| HMAC-based authentication support for [!DNL Shopify Streaming] | HMAC-based authentication is now supported for the [!DNL Shopify Streaming] source connector, available in both the UI and API. See the [[!DNL Shopify Streaming] overview](../../sources/connectors/ecommerce/shopify-streaming.md) for key rotation behavior and setup instructions. |
-| Improved source dataflow inventory management | The Sources dataflow inventory has been modernized with advanced search and filtering, support for tags and folders, resizable columns, and more contextual actions to help users organize and manage dataflows more efficiently. Read the [documentation](../../sources/tutorials/ui/manage.md) for more information. |
+| New sources in GA | The following sources have been promoted from Beta to General Availability (GA): <ul><li>[[!DNL Braze]](/help/sources/connectors/marketing-automation/braze.md)</li><li>[[!DNL Capillary]](/help/sources/connectors/loyalty/capillary.md)</li><li>[[!DNL Didomi]](/help/sources/connectors/consent-and-preferences/didomi.md)</li><li>[[!DNL LAVA]](/help/sources/connectors/loyalty/lava.md)</li><li>[[!DNL Rainfocus]](/help/sources/connectors/analytics/rainfocus.md)</li><li>[[!DNL Relay]](/help/sources/tutorials/ui/create/marketing-automation/relay-connector.md)</li><li>[[!DNL Shopify Streaming]](/help/sources/connectors/ecommerce/shopify-streaming.md)</li><li>[[!DNL Talon.One Batch]](/help/sources/tutorials/ui/create/loyalty/talon-one-batch.md)</li><li>[[!DNL Talon.One Streaming]](/help/sources/tutorials/ui/create/loyalty/talon-one-streaming.md)</li></ul> |
+| Self Serve Sources (Streaming SDK) now in GA | Self-Serve Sources (Streaming SDK) are now generally available. Partners can build and configure streaming sources with secure authentication using either OAuth or HMAC-based authentication. Authentication is required for all Streaming SDK sources. HMAC authentication validates incoming events using SHA-256 signatures, while existing configuration remain compatible with the new authentication options. For more information, read the [Streaming SDK documentation](/help/sources/sources-sdk/streaming/getting-started.md). |
+| Sources compatible with TLS v1.3 | The following source connectors are now compatible with Transport Layer Security (TLS) 1.3: <ul><li>[[!DNL Azure Data Lake Storage Gen2]](/help/sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure Blob Storage]](/help/sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL Azure Event Hubs]](/help/sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL Azure Synapse Analytics]](/help/sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Data Landing Zone]](/help/sources/connectors/cloud-storage/data-landing-zone.md)</li><li>[[!DNL Snowflake] batch connector](/help/sources/connectors/databases/snowflake.md)</li></ul> |
+| Updated IP address allowlist for Sources | The IP address allowlist for Adobe Experience Platform batch sources has been updated. For the current allowlist and configuration guidance, read the guide on [allowlisting IP addresses for sources](/help/sources/ip-address-allow-list.md). |
 
 {style="table-layout:auto"}
 
@@ -194,41 +193,6 @@ For more information, read the [sources overview](../../sources/home.md).
 
 <!--
 
-| [Scheduled queries with no end date](../../query-service/api/scheduled-queries.md) | Create scheduled queries that run indefinitely without specifying an end date. Use this for continuous recurring workflows. The UI may display indefinite schedules using a far-future date such as 31.12.9999. |
-
-## Advanced data lifecycle management {#advanced-data-lifecycle-management}
-
-Experience Platform provides a suite of data hygiene capabilities that let you manage your stored data through programmatic deletions of consumer records and datasets.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| [Multi-dataset and targeted services for work orders](../../hygiene/api/jobs.md) | Two new API-only capabilities are now available for data lifecycle work orders. Use targeted services to scope deletion to specific services (profile, identity, or [!DNL Adobe Journey Optimizer]) without modifying data in the data lake. Use multi-dataset support to target one, many, or all datasets in a single work order submission. |
-
-{style="table-layout:auto"}
-
-For more information, read the [advanced data lifecycle management overview](../../hygiene/home.md).
-
-## Query Service {#query-service}
-
-Use Query Service to query data in Adobe Experience Platform using standard SQL.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Long-Term Personalization with Data Distiller Accelerators | New guidance explains how to use Data Distiller Accelerators and historical data stored in the Data Lake to generate activation-ready insights for personalization and audience activation. This approach helps you support extended lookback windows while optimizing Profile Store usage and Total Data Volume consumption. |
-
-{style="table-layout:auto"}
-
-For more information, read the [Query Service overview](../../query-service/home.md).
-
-SOURCES
-
-| Source | Description |
-| --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Meta Ads] | Use the [!DNL Meta Ads] source to configure the complete [!DNL Meta Ads] ingestion workflow in the Sources UI. Connect your [!DNL Meta Ads] account and bring paid media data directly into Experience Platform for activation and analysis. This source is available to a limited number of customers. Contact your Adobe representative to request access. |
-| [!BADGE Beta]{type=Informative} [!DNL Delta Sharing] | Use the [!DNL Delta Sharing] source to bring live, shared datasets from partners or internal lakehouse environments into Experience Platform without copying or manually uploading files. Connect to a [!DNL Delta Sharing] endpoint, choose the tables you need, and use that governed data alongside your existing profiles and insights. |
+| [!DNL Google Ads] (V2) source connector | You can now use the Google Ads (V2) source connector to ingest advertising account, campaign, ad group, ad, asset, experience, and performance data from the [!DNL Google Ads] API into Experience Platform. |
 
 -->

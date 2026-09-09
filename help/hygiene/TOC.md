@@ -12,6 +12,7 @@ nudge: true
 
 * [Advanced Data Lifecycle Management overview](./home.md)
 * [Choose the right capability](./choose-a-capability.md)
+* [Choose the right long-term personalization approach](./choose-a-personalization-approach.md)
 * [Data Lifecycle processing timelines](./data-lifecycle-processing-timelines.md)
 * Data Lifecycle UI {#ui}
   * [Overview](./ui/overview.md)

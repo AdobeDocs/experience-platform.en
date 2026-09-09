@@ -46,18 +46,6 @@ A [tag extension](../../../tags/home.md#extensions) is a package of code that en
 
 It is important to differentiate between tag and event forwarding extensions. The extensions surfaced in the Experience Platform destinations user interface are *tag extensions*. Refer to the overview on event forwarding for more information on the [differences between tags and event forwarding](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
 
-
-
-<!--
-
-Extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](../personalization/gainsight.md) or the [Confirmit Voice of the Customer extension](../voice/confirmit-digital-feedback.md).
-
-**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export audiences and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
-
-![Tag extensions compared to other destinations](../../assets/common/launch-and-other-destinations.png)
-
--->
-
 ## Benefits of using tag extensions {#extensions-benefits}
 
 Experience Platform's tag capabilities are free for existing Experience Cloud customers. The system simplifies tag deployment on your website via easy-to-use extensions that you can install, configure, update, and delete. Tags leave a small footprint on your website and keep your pages loading quickly.

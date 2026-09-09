@@ -85,6 +85,7 @@ Cloud storage destinations support the following export types:
 
 * **Profile-based export**. This means that you are exporting details about the individuals in the audience. These details are needed for personalization and can include attributes, events, audience memberships, and more.
 * **Dataset export**. Use this functionality to export entire datasets to cloud storage destinations. [Read more](/help/destinations/ui/export-datasets.md) about the functionality.
+* **[!DNL Real-Time CDP Collaboration] audience export**. Export [!DNL Real-Time CDP Collaboration] audiences that contain match keys to cloud storage destinations. These audiences are activated from a [!DNL Real-Time CDP Collaboration] project rather than from the standard Experience Platform audience activation workflow.
 
 ## Next steps {#next-steps}
 

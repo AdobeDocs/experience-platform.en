@@ -68,6 +68,7 @@ topic_v2:
 
 |Release month|Update type|Description|
 |---|---|---|
+|August 2026| Expanded eligibility | The **[!UICONTROL Adobe Target]** destination is now available to organizations with [!DNL Adobe Journey Optimizer], in addition to organizations with [!DNL Real-Time CDP]. No customer action is required for eligible organizations to see the destination card in the catalog. See [Entitlement](#entitlement) for details. |
 |April 2024| Functionality and documentation update | When connecting to the Target destination and using a datastream, you now *do not need* to necessarily enable the datastream for edge segmentation. This means that the Target destination will work with batch and streaming audiences, though the use cases that you can accomplish differ. View the table in the [connection parameters](#parameters) section for more information. |
 |January 2024|Functionality and documentation update| You can now share audiences and profile attributes to the [!DNL Adobe Target] connection for the default production sandbox and other non-default sandboxes.  |
 |June 2023|Functionality and documentation update| As of June 2023, you can select the [!DNL Adobe Target] workspace that you want to share audiences to, when configuring a new [!DNL Adobe Target] destination connection. See the [connection parameters](#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) in [!DNL Adobe Target] for more information about workspaces.|
@@ -97,7 +98,20 @@ The table below displays the supported use cases for the Adobe Target destinatio
 
 ## Prerequisites {#prerequisites}
 
-### Datastream {#datastream}
+### Entitlement {#entitlement}
+
+To see and configure the **[!UICONTROL Adobe Target]** destination card in the destinations catalog, your organization must have one of the following entitlements:
+
+* [!DNL Adobe Real-Time CDP]
+* [!DNL Adobe Journey Optimizer]
+
+>[!IMPORTANT]
+>
+>Having access to this destination card does not mean that [!DNL Adobe Target] itself is provisioned for your organization. To complete setup, you also need [!DNL Adobe Target] and a Target-enabled datastream, meaning a datastream with the [!DNL Adobe Target] service enabled.
+>
+>If no datastream has [!DNL Adobe Target] configured as a service, no datastream is selectable when you configure the destination, other than the **[!UICONTROL None]** option. This option limits you to next-session personalization use cases. See [supported use cases based on implementation type](#supported-use-cases).
+
+### Datastream configuration {#datastream}
 
 When configuring the [!DNL Adobe Target] connection to [use a datastream](#parameters), you must have [Adobe Experience Platform Data Collection](/help/collection/home.md) implemented.
 

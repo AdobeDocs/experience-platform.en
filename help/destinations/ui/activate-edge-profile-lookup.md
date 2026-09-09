@@ -85,15 +85,7 @@ Follow the steps in the [datastream configuration](../../datastreams/configure.m
 * **[!UICONTROL Personalization Destinations]**: Enabled
 * **[!UICONTROL Edge Segmentation]**: If you require edge segmentation, enable this option. If you are only interested in looking up profile attributes on the edge, but do not want to perform any segmentation based on the edge profiles, then leave this option disabled.
 
-
-<!-- 
->[!IMPORTANT]
->
->Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. 
--->
-
 ![Experience Platform UI image showing the datastream configuration screen.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
-
 
 ## Step 2: Configure your audiences for edge evaluation {#audience-edge-evaluation}
 
@@ -139,19 +131,27 @@ After you have created a **[!UICONTROL Custom Personalization With Attributes]**
 
     ![Activate audience control highlighted on a destination card in the catalog.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
+1. (Optional) Use the search box to find a destination connection by name, or select the filter icon to narrow down the results based on your preferred criteria.
+
 1. Select the destination connection that you previously configured, then select **[!UICONTROL Next]**.
 
-    ![Select destination step in the activation workflow.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
+    ![Search box and filter icon highlighted above the list of destination connections in the Select destination step of the activation workflow.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
 1. Select your audiences. Use the checkboxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
+
+    Use the search box to find an audience by name, or select the filter icon to narrow down the results by evaluation type (edge, streaming, or batch), namespace origin, or tags.
+
+    >[!TIP]
+    >
+    >You can filter by the same tags you use on the audience browse screen. Any tags you added to an audience there carry over to this screen.
+
+    ![Expanded filters panel showing the origin and tags filters, alongside the search box and checkboxes for selecting one or multiple audiences to activate.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
     You can select from multiple types of audiences, depending on their origin:
     
     * **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
     * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Experience Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience).
     * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
-
-      ![Select audiences step of the activation workflow with several audiences highlighted.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
 1. Select the profile attributes that you want to be made available for the edge profiles.
 
@@ -188,7 +188,6 @@ In the **[!UICONTROL Review]** step, Experience Platform also checks for any dat
 In the **[!UICONTROL Review]** step you can use the available filters on the page to display only the audiences whose schedule or mapping has been updated as part of this workflow. You can also toggle which table columns you want to see. 
 
 ![Screen recording showing the available audience filters in the review step.](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
-
 
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection.
 

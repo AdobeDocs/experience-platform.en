@@ -2,7 +2,6 @@
 title: Documentation Self-Service Template for Streaming SDK UI
 description: Learn how to bring streaming data from a source to Adobe Experience Platform using the UI.
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
-badge: Beta
 TQID: https://experienceleague.adobe.com/gKKoCn2nqsYRKYfHdcgZMJS67BTvJILS2iDJoDxvKSk
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9

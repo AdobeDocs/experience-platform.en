@@ -129,6 +129,10 @@ See the following [[!DNL Event Hubs] document](https://learn.microsoft.com/en-us
 
 ## Connect [!DNL Event Hubs] to Experience Platform
 
+>[!IMPORTANT]
+>
+>Your [!DNL Event Hub] must have at least one consumer group configured before you connect it to Experience Platform. Without a consumer group, the connection fails with an internal server error. See the [Microsoft documentation on consumer groups](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#consumer-groups) for steps to create one.
+
 >[!NOTE]
 >
 >After you create or update a streaming dataflow, a brief 5-minute pause in data ingestion is required to prevent any potential instances of data loss or data drops.

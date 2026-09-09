@@ -1,7 +1,7 @@
 ---
 title: Zendesk Source Connector Overview
 description: Learn how to connect Zendesk to Adobe Experience Platform using APIs or the user interface.
-last-substantial-update: 2023-06-21T00:00:00.000Z
+last-substantial-update: 2026-08-24T00:00:00.000Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
 TQID: https://experienceleague.adobe.com/9sBpP4FLIF7sSG9Yi9tVuRyhgoVgUE9-e6W6SrMW2TE
 product_v2:
@@ -33,16 +33,13 @@ You must add region-specific IP addresses to your allowlist prior to connecting 
 
 [!DNL Zendesk] uses bearer tokens as an authentication mechanism to communicate with the [!DNL Zendesk] API.
 
-This section outlines prerequisite steps to complete in order to authenticate your [!DNL Zendesk] account.
+This section outlines prerequisite steps to complete to authenticate your [!DNL Zendesk] account.
 
-* The first step in authenticating your [!DNL Zendesk] account is to ensure that you have [!DNL Zendesk] support account. If you do not have one already see the [[!DNL Zendesk] register page](https://www.zendesk.com/register/) to register and create your Zendesk account.
-* Once you have successfully registered, navigate to the [[!DNL Zendesk] website](https://www.zendesk.com/login/) and provide your **subdomain**. 
-* Next, select **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]**.
-* Finally, retrieve your API token from the **[!DNL API token]** section.
+* The first step in authenticating your [!DNL Zendesk] account is to ensure that you have a [!DNL Zendesk] support account. If you do not have one already, see the [[!DNL Zendesk] register page](https://www.zendesk.com/register/) to register and create your Zendesk account.
+* Once you have successfully registered, navigate to the [[!DNL Zendesk] website](https://www.zendesk.com/login/) and provide your **subdomain**. See the [[!DNL Zendesk] documentation on subdomains](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain) for information on how to retrieve your subdomain.
+* Next, generate an API token by following the [[!DNL Zendesk] guide on generating a new API token](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).
 
 ![Zendesk API token](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
-
-See the [[!DNL Zendesk documentation on subdomains]](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) for information on how to retrieve your subdomain. For information on generating your API token, see the [[!DNL Zendesk] guide on generating a new API token](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>).
 
 The documentation below provides information on how to connect [!DNL Zendesk] to Experience Platform using APIs or the user interface:
 

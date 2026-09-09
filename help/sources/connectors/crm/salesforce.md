@@ -29,6 +29,12 @@ topic_v2:
 >
 >You can now use the [!DNL Salesforce] source when running Adobe Experience Platform on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
 
+<!-- Deprecation note for PLAT-302697. Do not remove without confirming with the Sources PM. -->
+
+>[!WARNING]
+>
+>Basic authentication for the [!DNL Salesforce] source is deprecated. You must use OAuth 2 Client Credential authentication to continue ingesting data from your [!DNL Salesforce] account to Experience Platform.
+
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from a third-party CRM system. Support for CRM providers include [!DNL Salesforce].
@@ -300,6 +306,21 @@ To connect your [!DNL Salesforce] account to Experience Platform in an AWS regio
 - A [!DNL Salesforce] account with API access.
 - A [!DNL Salesforce Connected App] that you can then use to enable JWT_BEARER OAuth flow.
 - The necessary permissions in [!DNL Salesforce] to access data.
+
+### Connect to a Production or Sandbox org {#environment-type}
+
+The [!DNL Salesforce] source on AWS supports both Production and Sandbox (non-Production) orgs. Use the `environmentType` parameter to specify which type of org Experience Platform authenticates against.
+
+| Value | Description |
+| --- | --- |
+| `PRODUCTION` | Connects to a Production or Developer Edition org. This is the default value when `environmentType` is not specified. |
+| `SANDBOX` | Connects to a Sandbox org. |
+
+The instance URL format for a Sandbox org differs from a Production org. Use the following format when you provide the `instanceUrl` value for a Sandbox org: `https://[domain]--[sandbox-name].sandbox.my.salesforce.com`.
+
+>[!NOTE]
+>
+>Scratch orgs and orgs that enforce a strict My Domain login policy are not currently supported.
 
 ### IP address allowlist for connection on AWS
 

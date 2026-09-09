@@ -34,11 +34,6 @@ There are several destination types in Experience Platform, as shown in the diag
 >
 >This documentation page only describes the profile export behavior for the connections highlighted at the bottom of the diagram.
 
-<!--
->* Note the export behavior change introduced in September 2025 for [enterprise destinations](#enterprise-behavior)
->* This documentation page only describes the profile export behavior for the connections highlighted at the bottom of the diagram.
--->
-
 ![Types of destinations diagram](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
 ## Message aggregation in streaming destinations {#message-aggregation}
