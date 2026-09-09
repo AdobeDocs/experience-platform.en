@@ -3295,15 +3295,22 @@ In this step, you can also select which audiences you want to export to the dest
 
 ![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step6.png)
 
-After creating your dataflow, you need to set up mapping for the attributes and identities that you would like to export. This consists of three steps, listed below: 
+After creating your dataflow, you need to set up mapping for the attributes and identities that you would like to export. Complete the following steps in order: 
 
-1. Create an input schema
-2. Create an output schema
-3. Set up a mapping set to connect the created schemas
+1. Retrieve the input schema.
+2. Retrieve and inspect the partner schema.
+3. Create the output schema, including every field you want to export as a mapping destination.
+4. Confirm that every mapping destination exists in the output schema.
+5. Create the mapping set.
+6. Update the dataflow with the mapping set.
 
-For example, to obtain the following mapping shown in the UI, you would need to go through the three steps listed above and detailed in the next headings. 
+For example, to obtain the following mapping shown in the UI, you would need to go through the steps listed above and detailed in the next headings. 
 
 ![Example of mapping step](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
+
+>[!IMPORTANT]
+>
+>The connection spec supplies destination metadata and identifiers needed to construct Flow Service resources. It is not automatically the complete output schema for the fields you want to export. Any field you reference as a mapping destination, such as `firstName`, `lastName`, or `Email`, must already exist in the output schema before you create the mapping set. If a mapping destination field is missing from the output schema, the mapping set request fails.
 
 ### Create an input schema {#create-input-schema}
 
@@ -4069,6 +4076,10 @@ Inspect the response you obtain when performing the call above. You need to dril
 
 Next, you need to create an output schema. Copy the JSON response you got above and paste it into the `jsonSchema` object below.
 
+The partner schema only contains generic structures, such as `attributes`, `identityMap`, and `segmentMembership`. Before you create the mapping set in the next step, add a property to the `jsonSchema` object for every field you intend to map to. The mapping API validates each mapping destination against the output schema, so a mapping destination field that doesn't exist in the output schema causes the mapping set request to fail.
+
+The example request and response below show the `firstName`, `lastName`, `Email`, `personalEmail_address`, and `segmentMembership_status` properties already added to the output schema alongside the generic `attributes`, `identityMap`, and `segmentMembership` structures from the partner schema. These properties match the mapping destinations used in the [mapping set example](#create-mapping-set) later in this section.
+
 >[!BEGINSHADEBOX]
 
 **Request**
@@ -4379,6 +4390,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                 "title": "firstName",
                 "type": "string"
             },
+            "lastName": {
+                "title": "lastName",
+                "type": "string"
+            },
             "Email": {
                 "title": "Email",
                 "type": "array",
@@ -4394,6 +4409,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                     "meta:xdmType": "object"
                 },
                 "meta:xdmType": "array"
+            },
+            "personalEmail_address": {
+                "title": "personalEmail_address",
+                "type": "string"
+            },
+            "segmentMembership_status": {
+                "title": "segmentMembership_status",
+                "type": "string"
             }
         }
     }
@@ -4401,7 +4424,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 ```
 
-The ID in the response represents the unique identifier of the input schema that you have created. Copy the ID from the response as you will reuse this in a later step.
+The ID in the response represents the unique identifier of the output schema that you have created. Copy the ID from the response as you will reuse this in a later step.
 
 +++
 
@@ -4420,10 +4443,18 @@ Next, use the [data prep API](https://developer.adobe.com/experience-platform-ap
 >[!IMPORTANT]
 >
 >* In the mappings object shown below, the `destination` parameter does not accept dots `"."`. For example you would need to use personalEmail_address or segmentMembership_status as highlighted in the configuration example.
->* There is one particular case when the source attribute is an identity attribute and contains a dot. In this case, the attribute needs to be escaped with `//`, as highlighted below.
->* Note also that even though the example configuration below includes `Email` and `Phone_E.164`, you are only able to export one identity attribute per dataflow.
+>* There is one particular case when the source attribute is an identity attribute and contains a dot. In this case, the attribute needs to be escaped with `//`. For example, the identity attribute `Phone_E.164` becomes the source path `identityMap.Phone_E//.164`, with a destination field name of `Phone_E_164`, since destination names cannot contain dots.
+>* You are only able to export one identity attribute per dataflow. The example configuration below maps `Email` as the identity attribute. If you want to export a different identity, such as `Phone_E.164`, replace the `Email` mapping with a single mapping for that identity instead of adding both.
 
-```shell {line-numbers="true" start-line="1" highlight="16-38"}
+Before you create the mapping set, verify the following:
+
+* Every mapping destination field, such as `firstName`, `lastName`, and `Email`, already exists in the output schema.
+* Every source path exists in the input schema.
+* Identity mappings use valid identity namespaces.
+* Segment membership fields, such as `segmentMembership_status`, are defined in the output schema if you reference them in a mapping.
+* The input schema, output schema, and mapping set all belong to the same sandbox.
+
+```shell {line-numbers="true" start-line="1" highlight="16-42"}
 
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
 --header 'x-api-key: {API_KEY}' \
@@ -4445,13 +4476,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
             "sourceType": "ATTRIBUTE"
         }, 
         {
-            "destination": "Email",
-            "source": "identityMap.Email",
+            "destination": "lastName",
+            "source": "person.name.lastName",
             "sourceType": "ATTRIBUTE"
         },
         {
-            "destination": "Phone_E_164",
-            "source": "identityMap.Phone_E//.164",
+            "destination": "Email",
+            "source": "identityMap.Email",
             "sourceType": "ATTRIBUTE"
         },
         {
@@ -4492,6 +4523,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 +++
 
 >[!ENDSHADEBOX]
+
+>[!NOTE]
+>
+>If the request returns a `MAPPER-3101-400` error stating that the XDM path is invalid, one or more of your mapping `destination` values don't exist in the output schema. Add the missing fields to the output schema and retry the mapping set request.
 
 Note the ID of the mapping set as you will need it in the next step to update the existing dataflow with the mapping set ID.
 

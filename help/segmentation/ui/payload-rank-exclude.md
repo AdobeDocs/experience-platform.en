@@ -7,6 +7,10 @@ hide: true
 
 # Payload rank and Payload exclude operators
 
+>[!AVAILABILITY]
+>
+>The Payload rank and Payload exclude operators are in **limited availability**. Contact Adobe Customer Care for more information.
+
 Currently, audiences that are built on array-based schemas (such as a customer profile holding multiple product or account records) cannot exclude specific array elements or use a single element within an array to rank the audience.
 
 The Payload rank and Payload Exclude operators help mitigate this, as they can directly act upon the elements within the array that live inside your audience.
@@ -27,6 +31,11 @@ You can use these operators when your audience is built on an **array attribute*
 - Customers can qualify through multiple array elements, but only one of those elements should drive personalization
 
 ## Payload rank {#payload-rank}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_payloadrank"
+>title="Payload rank block"
+>abstract="The Payload rank block lets you rank array elements by a chosen attribute and returns the top number of elements specified."
 
 The **Payload rank** operator ranks array elements by a chosen attribute and returns the top number of elements specified.
 
@@ -61,7 +70,12 @@ You can also enable the **[!UICONTROL Override with a priority match]** option i
 
 ![The override options within the Payload rank operator are highlighted.](/help/segmentation/images/ui/payload-rank-exclude/override-options.png)
 
-## Payload Exclude {#payload-exclude}
+## Payload exclude {#payload-exclude}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_payloadexclude"
+>title="Payload exclude block"
+>abstract="The Payload exclude block filters array elements by checking membership against a separate exclusion source array on the same profile."
 
 If you're using the Payload exclude operator, the composition evaluates in the following order: Targeting criteria, exclusion, followed by ranking.
 
@@ -186,9 +200,9 @@ As a result, Credit card 2 is selected since it has the highest spend of the rem
 
 For the final audience, the customer **remains** in the audience, since the exclusion only removes the array elements within the profile.
 
-## Limitation {#limitations}
+## Guardrails {#guardrails}
 
-The following limitations apply when using the Payload exclude operator:
+The following guardrails apply when using the Payload exclude operator:
 
 - Payload exclude **only** operates on array elements. This operator **cannot** remove an entire profile from an audience.
 - The `excludeIfAnyOf.values` field is scoped **per composition** and is set by the API caller for each composition. This field is **not** a persistent, audience-wide rule.
