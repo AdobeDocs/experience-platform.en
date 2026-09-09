@@ -22,13 +22,13 @@ topic_v2:
 ---
 # Historical profile qualifications
 
-All destinations created through Destination SDK support historical profile qualifications by default. This means that when users first set up an activation dataflow to your destinations, the first export contains all members of the audience that have ever qualified for that segment.
+All destinations created through [!DNL Destination SDK] support historical profile qualifications by default. The first time you set up an activation dataflow to your destination, the first export contains every member of the audience that has ever qualified for that audience.
 
 This behavior is defined by the `"backfillHistoricalProfileData":true` parameter in the destination configuration.
 
 >[!IMPORTANT]
 >
->Historical profile qualifications are enabled for all destinations created through Destination SDK and the `backfillHistoricalProfileData` parameter is not user configurable.
+>Historical profile qualifications are enabled for all destinations created through [!DNL Destination SDK] and the `backfillHistoricalProfileData` parameter is not user configurable.
 
 ## Supported integration types {#supported-integration-types}
 
@@ -41,7 +41,7 @@ Refer to the table below for details on which types of integrations support the 
 
 ## Next steps {#next-steps}
 
-After reading this article, you should know that Experience Platform automatically exports a historical population of all profiles that have ever qualified for an activated audience when the audience is first exported to the destination. This option is not configurable in Destination SDK or in the Experience Platform UI.
+[!DNL Experience Platform] automatically exports every profile that has ever qualified for an activated audience the first time you export that audience to a destination. This behavior is not configurable in [!DNL Destination SDK] or in the [!DNL Experience Platform] UI.
 
 To learn more about the other destination components, see the following articles:
 
