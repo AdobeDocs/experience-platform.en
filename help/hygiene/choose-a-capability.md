@@ -6,7 +6,7 @@ keywords: Experience Platform;data lifecycle;record delete;dataset expiration;da
 ---
 # Choose the right data lifecycle management capability
 
-Manage how long data remains in Adobe Experience Platform based on your operational, retention, and storage requirements. This guide explains the available retention and deletion options and helps you determine which one fits your goal. For step-by-step instructions, follow the implementation links in each section.
+Learn to manage how long data remains in Adobe Experience Platform based on your operational, retention, and storage requirements. This guide explains the available retention and deletion options and helps you determine which one fits your goal, or when to use each, based on your needs. For step-by-step instructions, follow the implementation links in each section.
 
 This guide is for administrators and developers who manage data volumes, retention, and entitlements in Experience Platform. It assumes you are familiar with core Experience Platform concepts, including datasets, [identities](../identity-service/home.md), [profiles](../profile/home.md), and sandboxes. The availability and permissions required for each action are described on the linked UI and API pages.
 
@@ -16,21 +16,21 @@ Adobe Experience Platform ingests data continuously, and the amount of data you 
 
 When data accumulates beyond what your use cases require, you face several risks:
 
-* **Reduced relevance:** Retaining signals beyond the period when they remain useful can reduce the relevance of segmentation, activation, and personalization.
+* **Reduced relevance:** Retaining signals beyond the period when they remain useful can reduce the relevance and actionability of segmentation, activation, and personalization.
 * **Cost pressure:** Growing data volumes can push you toward or beyond your licensing entitlements, which can lead to overages.
 * **Degraded performance:** Excess data increases system load and can slow processing.
 * **Privacy exposure:** Retaining data longer than it is useful increases privacy risk and regulatory exposure.
 
-To avoid these outcomes, retain data only as long as it supports an active use case. Apply the same principle at ingestion by using [ingestion filters](../landing/license-usage-and-guardrails/data-management-best-practices.md#ingestion-filters) to bring in only the data your use cases require. Behavioral data, such as event data, typically consumes far more storage than record data, so unmanaged behavioral data usually has the greatest impact on storage growth.
+To avoid these outcomes, Adobe recommends retaining data only as long as it supports an active use case. Apply the same principle at ingestion by using [ingestion filters](../landing/license-usage-and-guardrails/data-management-best-practices.md#ingestion-filters) to bring in only the data your use cases require. Behavioral data, such as event data, typically consumes far more storage than record data, so unmanaged behavioral data usually has the greatest impact on storage growth. Pseudonymous profiles can also accumulate over time and increase profile counts, so consider using Pseudonymous Profile data expiration to remove inactive pseudonymous profiles when they are no longer required.
 
-A key part of managing your data lifecycle is matching data to the workflow it serves. Experience Platform stores data in two repositories that serve different purposes:
+All ingested data is retained in Experience Platform, and a key part of managing your data lifecycle is matching that data to the workflow it serves. Experience Platform stores data in two repositories that serve different purposes:
 
 | Workflow | Best suited to | Typical use cases |
 | --- | --- | --- |
 | Analytical | Long-term retention with slower access, held in the data lake | Historical analysis, reporting, data science |
 | Engagement | Real-time or near-real-time access, held in the Profile store | Segmentation, activation, personalization |
 
-A dataset can support analytical workflows, engagement workflows, or both. When Experience Event data is available in both the Profile store and the data lake, each repository has its own retention policy. Expiring data from one repository does not automatically remove the same data from the other. Retain data only for as long as the workflows that use it require. 
+A dataset can support analytical workflows, engagement workflows, or both. When Experience Event data is available in both the Profile store and the data lake, each repository has its own retention policy. Expiring data from one repository does not automatically remove the same data from the other. Retain data only as long as it is required by the workflows that use it, and ensure that the appropriate retention policies are configured for both repositories.
 
 >[!NOTE]
 >
@@ -69,7 +69,7 @@ When you need to remove records associated with a primary identity for operation
 
 Record delete acts on the primary identity used by the target service. Before you use it, note the following limitations:
 
-* Only the primary identity is matched. Records cannot be targeted by secondary identities.
+* Only the primary identity is matched, and all records matching the primary identity are deleted. Records cannot be targeted by secondary identities.
 * Records without a populated primary identity are skipped.
 * Data ingested before the primary identity was configured in the dataset's schema cannot be deleted this way.
 * A dataset with a scheduled or in-progress dataset expiration cannot receive a record delete request. Cancel the scheduled expiration or wait until the expiration completes before you submit the record delete request.
