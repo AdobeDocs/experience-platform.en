@@ -119,6 +119,7 @@ For more information about guardrails in Experience Platform, please read the [R
 
 Currently, Capacity supports the following services:
 
+- Batch segmentation
 - Streaming segmentation
 - Streaming ingestion
 - Edge segmentation
@@ -180,6 +181,53 @@ The **[!UICONTROL Alert history]** section displays a list of the most recent ca
 To view a full history of the alerts for your organization, select the ![three dots icon](/help/images/icons/more.png), followed by **[!UICONTROL View all]**. 
 
 ![The full alert history is displayed for an organization.](/help/landing/images/capacity/full-alert-history.png)
+
+### Batch capacities {#batch-capacities}
+
+The Batch capacities section outlines information about your organization's batch capacities. Specifically, this section displays capacity information about the batch audience count, scheduled runs, as well as on-demand runs. You can filter this information ???
+
+IMAGE
+
+#### Batch audience count {#batch-audience-count}
+
+The Batch audience count section displays information about the number of batch audiences within your organization's sandboxes. 
+
+IMAGE
+
+| Column name | Description |
+| ----------- | ----------- |
+| Sandbox | The name of the sandbox. |
+| Services | The service that is used by the sandbox. The only supported value is **Batch**. |
+| Usage | The number of batch audiences that are currently in the sandbox. |
+| Capacity | The maximum number of batch audiences allowed in the sandbox. |
+
+#### Scheduled runs {#scheduled-runs}
+
+The Scheduled runs section displays information about the scheduled runs within your organization's sandboxes.
+
+IMAGE
+
+| Column name | Description |
+| ----------- | ----------- |
+| Sandbox | The name of the sandbox. |
+| Usage | The number of scheduled runs that have been consumed, for the sandbox, within the selected lookback period. |
+| Capacity | Your organization's allotment of scheduled runs. |
+| Violation | If a violation has occurred, the type of violation for the scheduled run. |
+| Recommended actions | If a violation has occurred, the recommendation to alleviate the violation. |
+
+#### On-demand runs {#on-demand-runs}
+
+The On-demand runs section displays information about the on-demand evaluation runs within your organization's sandboxes. For more information, read the [on-demand evaluation guide](/help/segmentation/methods/on-demand-evaluation.md).
+
+IMAGE
+
+| Column name | Description |
+| ----------- | ----------- |
+| Sandbox | The name of the sandbox. |
+| Usage | The number of on-demand evaluation runs that were consumed, for the sandbox, within the selected lookback period. |
+| Capacity | Your organization's allotment of on-demand evaluation runs. |
+| Violation | If a violation has occurred, the type of violation for the on-demand evaluation run. |
+| Recommended actions | If a violation has occurred, the recommendation to alleviate the violation. |
 
 ### Streaming capacities {#streaming-capacities}
 
