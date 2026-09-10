@@ -257,9 +257,9 @@ When you apply bulk actions to audiences, the following conditions apply:
 
 Flexible audience evaluation lets you run a segmentation job on demand. You can select up to a maximum of 20 audiences for flexible audience evaluation. To learn more about flexible audience evaluation, read the [flexible audience evaluation guide](../methods/flexible-audience-evaluation.md).
 
-#### Run now evaluation {#run-now}
+#### On-demand evaluation {#on-demand-evaluation}
 
-Run now evaluation lets you immediately evaluate an audience to a destination. To learn more about run now evaluation, read the [run now evaluation guide](../methods/run-now.md). 
+On-demand evaluation lets you immediately evaluate an audience to a destination. To learn more about on-demand evaluation, read the [on-demand evaluation guide](../methods/on-demand-evaluation.md). 
 
 ## Audience details {#audience-details}
 
@@ -273,9 +273,9 @@ The audience details page appears. On the top, there is a summary of the audienc
 
 The **[!UICONTROL Audience summary]** section provides information such as the ID, name, description, origin, and details of the attributes. 
 
-Additionally, you are given the option to begin a run now evaluation, activate the audience to a destination, apply access labels, or edit/update the audience. 
+Additionally, you are given the option to begin an on-demand evaluation, activate the audience to a destination, apply access labels, or edit/update the audience. 
 
-Selecting **[!UICONTROL Run now]** lets you immediately activate the audience to a destination on demand. For more information on run now evaluation, read the [run now evaluation guide](/help/segmentation/methods/run-now.md).
+Selecting **[!UICONTROL Run now]** lets you immediately activate the audience to a destination as required. For more information about on-demand evaluation, read the [on-demand evaluation guide](/help/segmentation/methods/on-demand-evaluation.md).
 
 Selecting **[!UICONTROL Activate to destination]** lets you activate the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md).
 
