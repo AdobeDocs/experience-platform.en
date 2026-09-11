@@ -8,7 +8,7 @@ keywords: Experience Platform;data lifecycle;record delete;dataset expiration;da
 
 Learn to manage how long data remains in Adobe Experience Platform based on your operational, retention, and storage requirements. This guide explains the available retention and deletion options and helps you determine which one fits your goal and when to use each, based on your needs. For step-by-step instructions, follow the implementation links in each section.
 
-This guide is for administrators and developers who manage data volumes, retention, and entitlements in Experience Platform. It assumes you are familiar with core Experience Platform concepts, including datasets, [identities](../identity-service/home.md), [profiles](../profile/home.md), and sandboxes. The availability and permissions required for each action are described on the linked UI and API pages.
+This guide is for administrators and developers who manage data volumes, retention, and entitlements in Experience Platform. It assumes you are familiar with core Experience Platform concepts, including [datasets](../catalog/datasets/overview.md), [identities](../identity-service/home.md), [profiles](../profile/home.md), and [sandboxes](../sandboxes/home.md). The availability and permissions required for each action are described on the linked UI and API pages.
 
 ## Why manage your data lifecycle {#why-manage}
 
@@ -109,7 +109,7 @@ Experience Event expiration removes Experience Events from the Profile store aft
 
 ### Pseudonymous Profile data expiration {#pseudonymous-profile-ttl}
 
-Pseudonymous Profile data expiration applies at the sandbox level and removes pseudonymous (unknown) profiles after they have been inactive for the period that you set. It removes both events and profile records. You can configure the setting yourself. The default expiration period is 14 days for production sandboxes and 3 days for development sandboxes. Because the removal process runs on a recurring cycle, eligible profiles are not removed immediately. For configuration guidance, see [Pseudonymous profile data expiration](../profile/pseudonymous-profiles.md).
+Pseudonymous Profile data expiration applies at the sandbox level and removes pseudonymous (unknown) profiles after they have been inactive for the period that you set. It removes both events and profile records. You can configure the setting yourself. The default expiration period is 14 days for production sandboxes and 3 days for development sandboxes. Because the removal process runs on a recurring cycle, eligible profiles are not removed immediately. For configuration guidance, see [Pseudonymous Profile data expiration](../profile/pseudonymous-profiles.md).
 
 The two expiration mechanisms differ in scope and in what they remove:
 
