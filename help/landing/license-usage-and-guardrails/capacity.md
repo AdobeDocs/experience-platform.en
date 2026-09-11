@@ -182,53 +182,6 @@ To view a full history of the alerts for your organization, select the ![three d
 
 ![The full alert history is displayed for an organization.](/help/landing/images/capacity/full-alert-history.png)
 
-### Batch capacities {#batch-capacities}
-
-The Batch capacities section outlines information about your organization's batch capacities. Specifically, this section displays capacity information about the batch audience count, scheduled runs, as well as on-demand runs. You can filter this information ???
-
-IMAGE
-
-#### Batch audience count {#batch-audience-count}
-
-The Batch audience count section displays information about the number of batch audiences within your organization's sandboxes. 
-
-IMAGE
-
-| Column name | Description |
-| ----------- | ----------- |
-| Sandbox | The name of the sandbox. |
-| Services | The service that is used by the sandbox. The only supported value is **Batch**. |
-| Usage | The number of batch audiences that are currently in the sandbox. |
-| Capacity | The maximum number of batch audiences allowed in the sandbox. |
-
-#### Scheduled runs {#scheduled-runs}
-
-The Scheduled runs section displays information about the scheduled runs within your organization's sandboxes.
-
-IMAGE
-
-| Column name | Description |
-| ----------- | ----------- |
-| Sandbox | The name of the sandbox. |
-| Usage | The number of scheduled runs that have been consumed, for the sandbox, within the selected lookback period. |
-| Capacity | Your organization's allotment of scheduled runs. |
-| Violation | If a violation has occurred, the type of violation for the scheduled run. |
-| Recommended actions | If a violation has occurred, the recommendation to alleviate the violation. |
-
-#### On-demand runs {#on-demand-runs}
-
-The On-demand runs section displays information about the on-demand evaluation runs within your organization's sandboxes. For more information, read the [on-demand evaluation guide](/help/segmentation/methods/on-demand-evaluation.md).
-
-IMAGE
-
-| Column name | Description |
-| ----------- | ----------- |
-| Sandbox | The name of the sandbox. |
-| Usage | The number of on-demand evaluation runs that were consumed, for the sandbox, within the selected lookback period. |
-| Capacity | Your organization's allotment of on-demand evaluation runs. |
-| Violation | If a violation has occurred, the type of violation for the on-demand evaluation run. |
-| Recommended actions | If a violation has occurred, the recommendation to alleviate the violation. |
-
 ### Streaming capacities {#streaming-capacities}
 
 The Streaming capacities section outlines information about your organization's streaming capacities. Specifically, this section displays capacity information about streaming throughput and streaming audiences. You can filter this information on a per sandbox basis and change the lookback period.
@@ -327,6 +280,93 @@ The **[!UICONTROL Edge audience count]** section displays the number of edge aud
 | Services | The service that is in use for the sandbox. |
 | Usage | The number of audiences of the listed type that are in the sandbox. |
 | Capacity | The maximum number of audiences of the listed type that are allowed in the sandbox. |
+
+### Batch capacities {#batch-capacities}
+
+The **[!UICONTROL Batch capacities]** section outlines information about your organization's batch capacities. Specifically, this section displays capacity information about the on demand runs, scheduled runs, as well as batch audience counts.
+
+IMAGE
+
+You can also allocate the batch capacities by selecting **[!UICONTROL Manage capacity]**.
+
+#### Manage batch capacity {#manage-batch-capacity}
+
+The **Manage batch capacity** page lets you manage the capacities for both on-demand evaluation and scheduled runs. You can select between **On-demand runs** and **Scheduled runs** with the radio selector.
+
+IMAGE
+
+For **On-demand runs**, you can add additional runs to your sandbox. To add additional runs to a sandbox, select **Add runs** for the sandbox you want to increase the capacity for. You can increase run capacity in increments of 100.
+
+IMAGE
+
+Once you add the additional runs, the sandbox row will show the number of credits that will be required to update the capacities.
+
+IMAGE
+
+For **Scheduled runs**, you can add additional runs for the sandbox as well as increase the audience limit for the scheduled run. 
+
+To add additional runs to a sandbox, select **Add runs** for the sandbox you want to increase the capacity for. You can increase run capacity in increments of 100.
+
+IMAGE
+
+>[!IMPORTANT]
+>
+>If you upgrade the audience limit for scheduled runs, this setting is locked for the rest of your contract year.
+
+To increase the audience limit for scheduled runs, select **Upgrade** for the sandbox you want to increase the capacity for. You can select either 1000 or 3000 audiences per scheduled run.
+
+IMAGE
+
+Once you've updated your runs or audience limit, the sandbox row will show the number of credits that will be required for these operations.
+
+IMAGE
+
+After managing your capacity additions, select **Update capacity** to finalize your changes. A popover appears stating the total number of credits that the changes need. Select **Confirm** to finalize your changes.
+
+#### On-demand runs {#on-demand-runs}
+
+The **On-demand runs** section displays information about the on-demand evaluation runs within your organization's sandboxes. For more information, read the [on-demand evaluation guide](/help/segmentation/methods/on-demand-evaluation.md).
+
+IMAGE
+
+| Column name | Description |
+| ----------- | ----------- |
+| Sandbox | The name of the sandbox. |
+| Annual usage/Capacity | The number of on-demand evaluation runs that were consumed compared to the sandbox's allotment of on-demand evaluation runs. |
+| Today's usage/Daily capacity | The number of on-demand evaluation runs that were consumed today compared to the sandbox's daily allotment of on-demand evaluation runs. |
+
+If you select the name of the sandbox, you can see a graph displaying either the cumulative usage or the monthly breakdown of the on-demand evaluation runs over the last six month.
+
+IMAGE
+
+#### Scheduled runs {#scheduled-runs}
+
+The **Scheduled runs** section displays information about the scheduled runs within your organization's sandboxes.
+
+IMAGE
+
+| Column name | Description |
+| ----------- | ----------- |
+| Sandbox | The name of the sandbox. |
+| Annual Usage/Capacity | The number of scheduled runs that were consumed compared to the sandbox's allotment of scheduled runs. |
+| Today's usage/Daily capacity | The number of scheduled runs that were consumed today compared to the sandbox's daily allotment of scheduled runs. |
+| Audience limit per run | The maximum number of audiences you can have as part of a scheduled run. |
+
+If you select the name of the sandbox, you can see a graph displaying either the cumulative usage or the monthly breakdown of the scheduled runs over the last six month.
+
+IMAGE
+
+#### Batch audience {#batch-audience-count}
+
+The **Batch audience** section displays information about the number of batch audiences within your organization's sandboxes. 
+
+IMAGE
+
+| Column name | Description |
+| ----------- | ----------- |
+| Sandbox | The name of the sandbox. |
+| Audience Count Usage/Capacity | The number of batch audiences that are currently in the sandbox compared to the sandbox's allotment of batch audiences. |
+| Enhanced Audience Count Usage/Capacity | The number of enhanced batch audiences that are currently in the sandbox compared to the sandbox's allotment of batch audiences. |
 
 ## Streaming throughput best practices {#streaming-throughput-suggestions}
 
