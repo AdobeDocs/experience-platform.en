@@ -46,13 +46,13 @@ To access [!UICONTROL Job Schedules]:
 
 The [!UICONTROL Job Schedules] page provides an overview of all your scheduled batch processing jobs.
 
-![Run and Operate left navigation](assets/job-schedules/run-and-operate-left-nav.png)
+![Run and Operate left navigation](assets/job-schedules/run-and-operate-left-nav.png){zoomable="yes"}
 
 ### Summary cards {#summary-cards}
 
 At the top of the page, you can see summary cards that provide quick insights into your batch processing jobs.
 
-![Job Schedules summary cards showing insights into batch processing jobs](assets/job-schedules/job-schedules-cards.png)
+![Job Schedules summary cards showing insights into batch processing jobs](assets/job-schedules/job-schedules-cards.png){zoomable="yes"}
 
 * **Lake ingestion runs**: The number of data lake ingestion jobs that have run.
 * **Profile ingestion runs**: The number of profile ingestion jobs that have run.
@@ -73,7 +73,7 @@ Use the time period selectors to choose how far back to look at scheduled jobs.
 
 When you select **[!UICONTROL Last 7 days]**, a calendar date picker becomes available. Select the calendar icon next to the displayed date range to open the picker and choose a specific 7-day window. Only 7-day ranges are supported.
 
-![The Last 7 days date range selector in Job Schedules showing a calendar pop-up for May 2026 with a seven-day range highlighted from May 19 to May 25.](assets/job-schedules/calendar-date-picker.png)
+![The Last 7 days date range selector in Job Schedules showing a calendar pop-up for May 2026 with a seven-day range highlighted from May 19 to May 25.](assets/job-schedules/calendar-date-picker.png){zoomable="yes"}
 
 ### Batch job schedules details {#job-schedules-details}
 

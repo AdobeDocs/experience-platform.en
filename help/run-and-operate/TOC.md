@@ -17,7 +17,7 @@ nudge: true
   * [View job details](job-schedules-details.md)
   * [Identify anti-patterns](job-schedules-anti-patterns.md)
 * Health Checks {#health-checks}
-  * [Overview](health-checks.md)
+  * [Overview](health-checks/overview.md)
   * [Schemas and identities](health-checks/schemas-and-identities.md)
   * [TTL](health-checks/ttl.md)
   * [Segmentation](health-checks/segmentation.md)

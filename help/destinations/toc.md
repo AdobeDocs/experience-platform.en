@@ -23,7 +23,7 @@ debug: true
     * [Activate data to file-based destinations by using the Flow Service API](/help/destinations/api/activate-segments-file-based-destinations.md) 
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to file-based email marketing destinations and activate data using the Flow Service API](./api/connect-activate-batch-destinations.md)
-    * [Activate audiences to batch destinations via the ad-hoc activation API](./api/ad-hoc-activation-api.md)
+    * [Activate audiences via the ad-hoc activation API](./api/ad-hoc-activation-api.md)
     * [Edit destination](./api/edit-destination.md)
     * [Update destination dataflows](./api/update-destination-dataflows.md)
     * [Delete destination accounts](./api/delete-destination-account.md)
@@ -48,6 +48,7 @@ debug: true
         * [Activate prospect audiences to destinations](./ui/activate-prospect-audiences.md)
         * [Activate account audiences to destinations](./ui/activate-account-audiences.md)
         * [Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
+        * [(Beta) Activate now for streaming destinations](./ui/activate-now-streaming.md)
         * [Export datasets using the Experience Platform UI](./ui/export-datasets.md)
         * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
         * [Export arrays, maps, and objects](/help/destinations/ui/export-arrays-maps-objects.md)
@@ -289,6 +290,7 @@ debug: true
             * [Configure an Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
             * [Configure an SFTP destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
             * [Configure a file-based destination to export prospect audiences](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
+            * [Configure a dataset export destination](../destinations/destination-sdk/guides/batch/configure-dataset-export-destination.md)
     * Destination authoring API reference {#authoring-api}
         * [Destination SDK (Destination Authoring) API reference](https://developer.adobe.com/experience-platform-apis/references/destination-authoring)
         * Destination server operations {#server-operations}
