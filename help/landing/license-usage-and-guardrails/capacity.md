@@ -85,12 +85,12 @@ For more information about guardrails in Experience Platform, please read the [R
 >[!CONTEXTUALHELP]
 >id="platform_capacity_ondemandrun"
 >title="On-demand run"
->abstract="Temporary fill in text."
+>abstract="The number of on-demand runs your organization has. Each Run represents each audience that is evaluated with a Run Evaluation trigger. If your audience depends on other audiences, each evaluated audience counts as one Run."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_scheduledruns"
 >title="Scheduled runs"
->abstract="Temporary fill in text."
+>abstract="The number of schedule runs your organization has. A schedule run is consumed every time a custom schedule evaluates. A system schedule evaluation does not consume a schedule run."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_scheduled_run_tiers"
@@ -105,7 +105,7 @@ For more information about guardrails in Experience Platform, please read the [R
 >[!CONTEXTUALHELP]
 >id="platform_capacity_batchaudience"
 >title="Batch audience"
->abstract="Temporary fill in text."
+>abstract="The maximum number of batch audiences per sandbox."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgesegmentationthroughput"
@@ -119,14 +119,20 @@ For more information about guardrails in Experience Platform, please read the [R
 
 Currently, Capacity supports the following services:
 
+- Batch segmentation
 - Streaming segmentation
 - Streaming ingestion
 - Edge segmentation
 
 Within these services, the following guardrails are tracked:
 
+- The maximum number of batch audiences is 4000
+  - An increased maximum number for batch audiences of 10,000 is available under **Limited availability**.
 - The maximum number of streaming audiences is 500
 - The maximum number of edge audiences is 150
+- The maximum number of schedules is 4
+  - This means you can have 3 custom schedules, in addition to the system schedule.
+- The maximum number of audiences in a schedule is 3000
 - The initial combined throughput for streaming ingestion is 1500 records per second (rps)
   - This combined streaming throughput measures the combined peak inbound events per second for streaming ingestion into Real-Time Customer Profile across your production and development sandboxes.
   - You can purchase additional streaming segmentation support of up to 13,500 records per second. More information about purchasing additional entitlements can be found in the [Real-Time CDP product description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
@@ -276,6 +282,107 @@ The **[!UICONTROL Edge audience count]** section displays the number of edge aud
 | Services | The service that is in use for the sandbox. |
 | Usage | The number of audiences of the listed type that are in the sandbox. |
 | Capacity | The maximum number of audiences of the listed type that are allowed in the sandbox. |
+
+### Batch capacities {#batch-capacities}
+
+The **Batch capacities** section outlines information about your organization's batch capacities. Specifically, this section displays capacity information about the on demand runs, scheduled runs, as well as batch audience counts.
+
+![The Batch capacities section is displayed, showing the on-demand runs and the scheduled runs areas.](/help/landing/images/capacity/batch-capacities.png)
+
+You can also allocate the batch capacities by selecting **[!UICONTROL Manage capacity]**.
+
+![The Manage capacity button is highlighted within the Batch capacity section.](/help/landing/images/capacity/select-manage-capacity.png)
+
+#### Manage batch capacity {#manage-batch-capacity}
+
+The **[!UICONTROL Manage batch capacity]** page lets you manage the capacities for both on-demand evaluation and scheduled runs. You can select between **[!UICONTROL On-demand runs]** and **[!UICONTROL Scheduled runs]** with the radio selector.
+
+![The toggle between On-demand runs and Scheduled runs is highlighted within the Manage batch capacity page.](/help/landing/images/capacity/select-on-demand-or-scheduled.png)
+
+For **[!UICONTROL On-demand runs]**, you can see a list of sandboxes, as well as the current usage and annual capacity for each sandbox.
+
+![The manage on-demand runs page is displayed.](/help/landing/images/capacity/manage-on-demand.png)
+
+To add additional runs to a sandbox, select **[!UICONTROL Add runs]** for the sandbox you want to increase the capacity for. You can increase run capacity in increments of 100. Once you add the additional runs, the sandbox row will show the number of credits that will be required to update the capacities.
+
+![The credits that it takes to add on-demand run capacity to a sandbox are displayed.](/help/landing/images/capacity/on-demand-credits.png)
+
+For **[!UICONTROL Scheduled runs]**, you can see a list of sandboxes, the current usage and annual capacity for each sandbox, as well as the maximum number of audiences that can be added to a scheduled run for the sandbox.
+
+![The manage scheduled runs page is displayed.](/help/landing/images/capacity/manage-scheduled-runs.png)
+
+To add additional runs to a sandbox, select **[!UICONTROL Add runs]** for the sandbox you want to increase the capacity for. You can increase run capacity in increments of 100.
+
+>[!IMPORTANT]
+>
+>If you upgrade the audience limit for scheduled runs, this setting is locked for the rest of your contract year.
+
+To increase the audience limit for scheduled runs, select **[!UICONTROL Upgrade]** for the sandbox you want to increase the capacity for. You can select either 1000 or 3000 audiences per scheduled run.
+
+Once you've updated your runs or audience limit, the sandbox row will show the number of credits that will be required for these operations.
+
+![The credits that it takes to add scheduled run capacity are displayed.](/help/landing/images/capacity/scheduled-runs-credits.png)
+
+After managing your capacity additions, select **[!UICONTROL Update capacity]** to finalize your changes. A popover appears stating the total number of credits that the changes need. Select **[!UICONTROL Confirm]** to finalize your changes.
+
+![The popover to confirm your capacity additions.](/help/landing/images/capacity/confirm-update-capacity.png)
+
+#### On-demand runs {#on-demand-runs}
+
+>[!IMPORTANT]
+>
+>If you exceed your on-demand run allotments, further on-demand run evaluations are **blocked** until you purchase additional on-demand run evaluations or your annual allotment resets.
+
+The **[!UICONTROL On-demand runs]** section displays information about the on-demand evaluation runs within your organization's sandboxes. For more information, read the [on-demand evaluation guide](/help/segmentation/methods/on-demand-evaluation.md).
+
+![The on-demand runs section is displayed within the Capacity page.](/help/landing/images/capacity/on-demand-runs.png)
+
+| Column name | Description |
+| ----------- | ----------- |
+| Sandbox | The name of the sandbox. |
+| Annual usage/Capacity | The number of on-demand evaluation runs that were consumed compared to the sandbox's allotment of on-demand evaluation runs. |
+| Today's usage/Daily capacity | The number of on-demand evaluation runs that were consumed today compared to the sandbox's daily allotment of on-demand evaluation runs. |
+
+If you select the name of the sandbox, you can see a graph displaying either the cumulative usage or the monthly breakdown of the on-demand evaluation runs over the last six month.
+
+![The cumulative usage chart for the sandbox's on-demand runs.](/help/landing/images/capacity/cumulative-usage-on-demand.png)
+
+#### Scheduled runs {#scheduled-runs}
+
+>[!IMPORTANT]
+>
+>If you exceed your scheduled run allotments, user-defined schedules will be suspended until additional scheduled run capacity is allocated. However, the system schedule will continue to run, as it is never suspended.
+
+The **[!UICONTROL Scheduled runs]** section displays information about the scheduled runs within your organization's sandboxes.
+
+![The scheduled runs section is displayed within the Capacity page.](/help/landing/images/capacity/scheduled-runs.png)
+
+| Column name | Description |
+| ----------- | ----------- |
+| Sandbox | The name of the sandbox. |
+| Annual Usage/Capacity | The number of scheduled runs that were consumed compared to the sandbox's allotment of scheduled runs. |
+| Today's usage/Daily capacity | The number of scheduled runs that were consumed today compared to the sandbox's daily allotment of scheduled runs. |
+| Audience limit per run | The maximum number of audiences you can have as part of a scheduled run. |
+
+If you select the name of the sandbox, you can see a graph displaying either the cumulative usage or the monthly breakdown of the scheduled runs over the last six month.
+
+![The cumulative usage chart for the sandbox's scheduled runs.](/help/landing/images/capacity/cumulative-usage-scheduled.png)
+
+#### Batch audience {#batch-audience-count}
+
+>[!IMPORTANT]
+>
+>If you exceed your batch audience count, existing audiences will not be affected. However, creating additional audiences or assigning additional audiences to a scheduled will be blocked until capacity is freed up or purchased.
+
+The **[!UICONTROL Batch audience]** section displays information about the number of batch audiences within your organization's sandboxes. 
+
+![The Batch audience section is displayed, showing capacity information about the batch audiences.](/help/landing/images/capacity/batch-audience-counts.png)
+
+| Column name | Description |
+| ----------- | ----------- |
+| Sandbox | The name of the sandbox. |
+| Audience Count Usage/Capacity | The number of batch audiences that are currently in the sandbox compared to the sandbox's allotment of batch audiences. |
+| Enhanced Audience Count Usage/Capacity | The number of enhanced batch audiences that are currently in the sandbox compared to the sandbox's allotment of batch audiences. An enhanced audience is an audience that uses either relational entities or custom objects, or is part of an audience composition. |
 
 ## Streaming throughput best practices {#streaming-throughput-suggestions}
 
@@ -606,6 +713,38 @@ Reservations draw from the included baseline entitlement first and only draw Gro
 +++ Answer
 
 You must have the sandbox-manage permission, access to all sandboxes, and the organization must be provisioned with the "acp_growth_credits" feature.
+
++++
+
+### Can I use my unused scheduled runs credits for on-demand runs? Alternatively, can I use my unused on-demand run credits for scheduled runs?
+
++++ Answer
+
+No, you cannot. Scheduled runs and on-demand runs use two distinct credit pools, and cannot be used interchangeably.
+
++++
+
+### Does purchasing additional batch capacity replace my free allotment, or does it add to it?
+
++++ Answer
+
+Purchasing additional batch capacity **adds** to your allotment, as there's a single combined balance per capacity type. There is **not** a separate free and paid pool.
+
++++
+
+### What happens to my batch audiences if I exceed my batch capacity?
+
++++ Answer
+
+Existing audiences are not affected. However, the ability to create new audiences or assign additional audiences to a schedule may be restricted.
+
++++
+
+### Is batch capacity tracked at the sandbox level or at the organization level?
+
++++ Answer
+
+Batch audience count and schedule limits are tracked at the **sandbox** level, just like streaming and edge audience counts.
 
 +++
 
