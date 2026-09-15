@@ -283,51 +283,53 @@ The **[!UICONTROL Edge audience count]** section displays the number of edge aud
 
 ### Batch capacities {#batch-capacities}
 
-The **[!UICONTROL Batch capacities]** section outlines information about your organization's batch capacities. Specifically, this section displays capacity information about the on demand runs, scheduled runs, as well as batch audience counts.
+The **Batch capacities** section outlines information about your organization's batch capacities. Specifically, this section displays capacity information about the on demand runs, scheduled runs, as well as batch audience counts.
 
-IMAGE
+![The Batch capacities section is displayed, showing the on-demand runs and the scheduled runs areas.](/help/landing/images/capacity/batch-capacities.png)
 
 You can also allocate the batch capacities by selecting **[!UICONTROL Manage capacity]**.
 
+![The Manage capacity button is highlighted within the Batch capacity section.](/help/landing/images/capacity/select-manage-capacity.png)
+
 #### Manage batch capacity {#manage-batch-capacity}
 
-The **Manage batch capacity** page lets you manage the capacities for both on-demand evaluation and scheduled runs. You can select between **On-demand runs** and **Scheduled runs** with the radio selector.
+The **[!UICONTROL Manage batch capacity]** page lets you manage the capacities for both on-demand evaluation and scheduled runs. You can select between **[!UICONTROL On-demand runs]** and **[!UICONTROL Scheduled runs]** with the radio selector.
 
-IMAGE
+![The toggle between On-demand runs and Scheduled runs is highlighted within the Manage batch capacity page.](/help/landing/images/capacity/select-on-demand-or-scheduled.png)
 
-For **On-demand runs**, you can add additional runs to your sandbox. To add additional runs to a sandbox, select **Add runs** for the sandbox you want to increase the capacity for. You can increase run capacity in increments of 100.
+For **[!UICONTROL On-demand runs]**, you can see a list of sandboxes, as well as the current usage and annual capacity for each sandbox.
 
-IMAGE
+![The manage on-demand runs page is displayed.](/help/landing/images/capacity/manage-on-demand.png)
 
-Once you add the additional runs, the sandbox row will show the number of credits that will be required to update the capacities.
+To add additional runs to a sandbox, select **[!UICONTROL Add runs]** for the sandbox you want to increase the capacity for. You can increase run capacity in increments of 100. Once you add the additional runs, the sandbox row will show the number of credits that will be required to update the capacities.
 
-IMAGE
+![The credits that it takes to add on-demand run capacity to a sandbox are displayed.](/help/landing/images/capacity/on-demand-credits.png)
 
-For **Scheduled runs**, you can add additional runs for the sandbox as well as increase the audience limit for the scheduled run. 
+For **[!UICONTROL Scheduled runs]**, you can see a list of sandboxes, the current usage and annual capacity for each sandbox, as well as the maximum number of audiences that can be added to a scheduled run for the sandbox.
 
-To add additional runs to a sandbox, select **Add runs** for the sandbox you want to increase the capacity for. You can increase run capacity in increments of 100.
+![The manage scheduled runs page is displayed.](/help/landing/images/capacity/manage-scheduled-runs.png)
 
-IMAGE
+To add additional runs to a sandbox, select **[!UICONTROL Add runs]** for the sandbox you want to increase the capacity for. You can increase run capacity in increments of 100.
 
 >[!IMPORTANT]
 >
 >If you upgrade the audience limit for scheduled runs, this setting is locked for the rest of your contract year.
 
-To increase the audience limit for scheduled runs, select **Upgrade** for the sandbox you want to increase the capacity for. You can select either 1000 or 3000 audiences per scheduled run.
-
-IMAGE
+To increase the audience limit for scheduled runs, select **[!UICONTROL Upgrade]** for the sandbox you want to increase the capacity for. You can select either 1000 or 3000 audiences per scheduled run.
 
 Once you've updated your runs or audience limit, the sandbox row will show the number of credits that will be required for these operations.
 
-IMAGE
+![The credits that it takes to add scheduled run capacity are displayed.](/help/landing/images/capacity/scheduled-runs-credits.png)
 
-After managing your capacity additions, select **Update capacity** to finalize your changes. A popover appears stating the total number of credits that the changes need. Select **Confirm** to finalize your changes.
+After managing your capacity additions, select **[!UICONTROL Update capacity]** to finalize your changes. A popover appears stating the total number of credits that the changes need. Select **[!UICONTROL Confirm]** to finalize your changes.
+
+![The popover to confirm your capacity additions.](/help/landing/images/capacity/confirm-update-capacity.png)
 
 #### On-demand runs {#on-demand-runs}
 
-The **On-demand runs** section displays information about the on-demand evaluation runs within your organization's sandboxes. For more information, read the [on-demand evaluation guide](/help/segmentation/methods/on-demand-evaluation.md).
+The **[!UICONTROL On-demand runs]** section displays information about the on-demand evaluation runs within your organization's sandboxes. For more information, read the [on-demand evaluation guide](/help/segmentation/methods/on-demand-evaluation.md).
 
-IMAGE
+![The on-demand runs section is displayed within the Capacity page.](/help/landing/images/capacity/on-demand-runs.png)
 
 | Column name | Description |
 | ----------- | ----------- |
@@ -337,13 +339,13 @@ IMAGE
 
 If you select the name of the sandbox, you can see a graph displaying either the cumulative usage or the monthly breakdown of the on-demand evaluation runs over the last six month.
 
-IMAGE
+![The cumulative usage chart for the sandbox's on-demand runs.](/help/landing/images/capacity/cumulative-usage-on-demand.png)
 
 #### Scheduled runs {#scheduled-runs}
 
-The **Scheduled runs** section displays information about the scheduled runs within your organization's sandboxes.
+The **[!UICONTROL Scheduled runs]** section displays information about the scheduled runs within your organization's sandboxes.
 
-IMAGE
+![The scheduled runs section is displayed within the Capacity page.](/help/landing/images/capacity/scheduled-runs.png)
 
 | Column name | Description |
 | ----------- | ----------- |
@@ -354,13 +356,13 @@ IMAGE
 
 If you select the name of the sandbox, you can see a graph displaying either the cumulative usage or the monthly breakdown of the scheduled runs over the last six month.
 
-IMAGE
+![The cumulative usage chart for the sandbox's scheduled runs.](/help/landing/images/capacity/cumulative-usage-scheduled.png)
 
 #### Batch audience {#batch-audience-count}
 
-The **Batch audience** section displays information about the number of batch audiences within your organization's sandboxes. 
+The **[!UICONTROL Batch audience]** section displays information about the number of batch audiences within your organization's sandboxes. 
 
-IMAGE
+![The Batch audience section is displayed, showing capacity information about the batch audiences.](/help/landing/images/capacity/batch-audience-counts.png)
 
 | Column name | Description |
 | ----------- | ----------- |
