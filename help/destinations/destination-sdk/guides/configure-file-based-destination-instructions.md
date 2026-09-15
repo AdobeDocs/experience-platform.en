@@ -453,7 +453,7 @@ After configuring and testing your destination, use the [destination publishing 
 
 If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](../overview.md#productized-custom-integrations), use the [self-service documentation process](../docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).
 
-## Step 8: Submit destination for Adobe's review {#submit-for-review}
+## Step 8: Submit destination for review {#submit-for-review}
 
 >[!NOTE]
 >

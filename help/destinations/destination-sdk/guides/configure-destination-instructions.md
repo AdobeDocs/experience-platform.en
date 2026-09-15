@@ -163,7 +163,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 }
 ```
 
-## Step 3: Create message transformation template - use templating language to specify the message output format {#create-transformation-template}
+## Step 3: Create a message transformation template {#create-transformation-template}
 
 Based on the payloads that your destination supports, you must create a template that transforms the format of the exported data from Adobe XDM format into a format supported by your destination. See template examples in the section [Using a templating language for the identity, attributes, and audience membership transformations](../functionality/destination-server/message-format.md#using-templating) and use the [template authoring tool](../testing-api/streaming-destinations/create-template.md) provided by Adobe.
 
@@ -315,7 +315,7 @@ After configuring and testing your destination, use the [destination publishing 
 
 If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](../overview.md#productized-custom-integrations), use the [self-service documentation process](../docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).
 
-## Step 9: Submit destination for Adobe's review {#submit-for-review}
+## Step 9: Submit destination for review {#submit-for-review}
 
 >[!NOTE]
 >
