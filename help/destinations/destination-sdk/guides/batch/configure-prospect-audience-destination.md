@@ -1,6 +1,6 @@
 ---
 description: Learn how to use Destination SDK to configure a file-based destination to export prospect audiences to a storage location.
-title: Configure a file-based destination to export prospect audiences to a storage location
+title: Configure a Prospect Audience Destination
 exl-id: 052fd185-294a-4c1d-8d82-12b27b661e22
 TQID: https://experienceleague.adobe.com/ySL1NeVXFT7iYwcnUsdanfTZuJtLwv-yM9uFBh8R8s0
 product_v2:
@@ -17,7 +17,7 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
 ---
-# Configure a file-based destination to export prospect audiences to a storage location
+# Configure a file-based destination for prospect audiences
 
 ## Overview {#overview}
 
