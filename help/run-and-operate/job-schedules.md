@@ -9,16 +9,17 @@ exl-id: ce855b19-66ab-4d3d-924e-fb9928676aa2
 
 >[!IMPORTANT]
 >
->[!UICONTROL Job schedules] are currently available only for the following Real-Time CDP jobs:
+>[!UICONTROL Job schedules] are currently available only for the following jobs:
 >
-> * Batch data lake ingestion
-> * Batch profile ingestion
-> * Batch segmentation
-> * Batch destination activation
+> * Batch data lake ingestion (Real-Time CDP)
+> * Batch profile ingestion (Real-Time CDP)
+> * Batch segmentation (Real-Time CDP)
+> * Batch destination activation (Real-Time CDP)
+> * Scheduled batch campaigns ([!DNL Adobe Journey Optimizer])
 
-[!UICONTROL Job Schedules] provides a unified view of all scheduled batch processing jobs across your data pipeline, from ingestion through destination activation. Inspect execution status, identify scheduling conflicts, and diagnose configuration issues before they impact your business operations.
+[!UICONTROL Job Schedules] provides a unified view of all scheduled batch processing jobs across your data pipeline, from ingestion through destination activation and scheduled [!DNL Adobe Journey Optimizer] campaign delivery. Inspect execution status, identify scheduling conflicts, and diagnose configuration issues before they impact your business operations.
 
-Use Job Schedules to investigate failures, optimize job timing, and understand dependencies between data lake ingestion, profile processing, segmentation, and destination activation. For guidance on resolving common configuration problems, see the documentation on [identifying job schedule anti-patterns](job-schedules-anti-patterns.md).
+Use Job Schedules to investigate failures, optimize job timing, and understand dependencies between data lake ingestion, profile processing, segmentation, destination activation, and scheduled campaign delivery. For guidance on resolving common configuration problems, see the documentation on [identifying job schedule anti-patterns](job-schedules-anti-patterns.md).
 
 ## Prerequisites {#prerequisites}
 
@@ -34,6 +35,7 @@ Before using [!UICONTROL Job Schedules], you should be familiar with the followi
 * **[Segmentation](../segmentation/home.md)**: How audiences are evaluated and updated based on profile data and segment definitions.
 * **[Real-Time Customer Profile](../profile/home.md)**: How profile data is unified and made available for segmentation and activation.
 * **[Destinations](../destinations/home.md)**: Where and how data is activated to downstream systems and marketing platforms.
+* **[!DNL Adobe Journey Optimizer] scheduled campaigns**: How batch campaigns depend on upstream data lake ingestion, profile ingestion, and segmentation to run on time.
 
 Understanding these components helps you interpret job execution patterns and diagnose issues when they occur.
 
@@ -88,9 +90,20 @@ The main view shows you when your batch jobs are scheduled to run throughout the
   * **Segmentation** (light blue): Audience evaluation jobs
   * **Profile export** (blue): Export of profile data
   * **Activation** (dark gray): Destination activation jobs
+  * **Campaign delivery**: Scheduled batch campaign jobs in [!DNL Adobe Journey Optimizer]
   * **In progress** (striped): Jobs currently running or queued
 
 This timeline view helps you identify scheduling conflicts, understand dependencies between jobs, and optimize your batch processing schedules.
+
+### Scheduled campaign timing {#campaign-timing}
+
+For scheduled batch campaigns in [!DNL Adobe Journey Optimizer], the timeline shows the campaign send window next to the batch segmentation job it depends on. [!UICONTROL Job Schedules] evaluates the campaign start time against the projected segmentation completion time and flags one of the following timing categories:
+
+* **[!UICONTROL Start before segmentation end]**: The campaign is scheduled to start before the upstream segmentation job is projected to complete. This is the highest risk category. The campaign may send against an incomplete or stale audience.
+* **[!UICONTROL Start near segmentation end]**: The campaign is scheduled to start within a thin buffer of the projected segmentation completion time. The campaign is not yet in conflict, but a small delay in segmentation can push it into a start before conflict.
+* **[!UICONTROL Safe timing]**: The campaign has sufficient lead time after the projected segmentation completion time to allow for segment evaluation, profile export, and delivery preparation.
+
+Job Schedules also tracks **[!UICONTROL Campaign delivery]** as a job type on the timeline, showing the execution and completion status of the campaign send. Use this to confirm whether a scheduled campaign delivered successfully or was delayed.
 
 ## Identifying configuration issues {#identifying-issues}
 
