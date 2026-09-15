@@ -1,15 +1,13 @@
 ---
 title: Audience Builder UI Guide
 description: Learn how to use the Audience Builder so you can create audiences from your Profile data elements.
-hide: true
-hidefromtoc: true
 ---
 
 # Audience Builder UI Guide
 
 >[!AVAILABILITY]
 >
->The updated Audience Builder is currently in **closed beta**. The documentation and the functionality are subject to change.
+>The newly updated Audience Builder is now generally available! For documentation about the previous Segment Builder, read the [Segment Builder UI guide](./segment-builder.md).
 
 Audience Builder provides a rich workspace that lets you interact with Profile data elements. The workspace provides intuitive controls for building and editing your audience's rules.
 
