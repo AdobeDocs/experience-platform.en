@@ -64,7 +64,7 @@ Scans for merge policies within the same schema that share the same display name
 | Detail | Description |
 | --- | --- |
 | **Issue** | Two or more merge policies for the same schema share the same display name. |
-| **Impact** | Merge policy names are the only identifier visible in [!UICONTROL Segment Builder] and destination activation dropdown menus. When two policies share a name, you cannot tell them apart, which can lead to selecting the wrong policy and applying unintended attribute merge or identity graph settings. |
+| **Impact** | Merge policy names are the only identifier visible in [!UICONTROL Audience Builder] and destination activation dropdown menus. When two policies share a name, you cannot tell them apart, which can lead to selecting the wrong policy and applying unintended attribute merge or identity graph settings. |
 | **Remediation** | Rename one or both of the affected merge policies so that each name is unique within the schema. |
 
 When you select the **[!UICONTROL Duplicate Merge Policy Names]** card, a detail panel opens on the right. The panel shows:
