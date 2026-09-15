@@ -2,7 +2,6 @@
 title: Documentation Self-Service Template for Streaming SDK API
 description: Learn how to bring streaming data from a source to Adobe Experience Platform using the Flow Service API.
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
-badge: Beta
 TQID: https://experienceleague.adobe.com/DiXcmlQwz-W6m-GltTOmdkg5lWikTklEzvL0R5Stpfo
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9

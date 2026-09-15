@@ -22,11 +22,11 @@ topic_v2:
 ---
 # Audience metadata configuration
 
-When exporting data from Experience Platform to your destination, you might need specific audience metadata, like audience names or audience IDs, to be shared between Experience Platform and your destination.
+When exporting data from [!DNL Experience Platform] to your destination, you might need specific audience metadata, like audience names or audience IDs, to be shared between [!DNL Experience Platform] and your destination.
 
-Destination SDK offers tools that you can use to programmatically create, update, or delete audiences in your destination platform.
+[!DNL Destination SDK] offers tools that you can use to programmatically create, update, or delete audiences in your destination platform.
 
-To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration).
+To understand where this component fits into an integration created with [!DNL Destination SDK], see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
 You can configure the audience metadata template via the `/authoring/audience-templates` endpoint. After creating your audience metadata configuration, you can use the `/authoring/destinations` endpoint to configure the `segmentMappingConfig` and `audienceMetadataConfig` sections. This section tells your destination what audience metadata it should map to your audience template.
 
@@ -39,7 +39,7 @@ See the following API reference pages for detailed API call examples where you c
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by [!DNL Destination SDK] are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Supported integration types {#supported-integration-types}
 
@@ -67,18 +67,16 @@ When creating your audience metadata configuration, you can use the parameters d
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`mapExperiencePlatformSegmentName` | Boolean | Indicates whether the [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) value in the destination activation workflow should be the Experience Platform audience name. |
-|`mapExperiencePlatformSegmentId` | Boolean | Indicates whether the [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) value in the destination activation workflow should be the Experience Platform audience ID. |
-|`mapUserInput` | Boolean | Enables or disables user input for the [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) value in the destination activation workflow. If set to `true`, `audienceTemplateId` cannot be present. |
+|`mapExperiencePlatformSegmentName` | Boolean | Indicates whether the [Mapping ID](../../../ui/activate-segment-streaming-destinations.md#scheduling) value in the destination activation workflow should be the [!DNL Experience Platform] audience name. |
+|`mapExperiencePlatformSegmentId` | Boolean | Indicates whether the [Mapping ID](../../../ui/activate-segment-streaming-destinations.md#scheduling) value in the destination activation workflow should be the [!DNL Experience Platform] audience ID. |
+|`mapUserInput` | Boolean | Controls whether users can provide input for the [Mapping ID](../../../ui/activate-segment-streaming-destinations.md#scheduling) value in the destination activation workflow. If set to `true`, `audienceTemplateId` cannot be present. |
 |`audienceTemplateId` | String | The `instanceId` of the [audience metadata template](../../metadata-api/create-audience-template.md) used for your destination. |
 
 {style="table-layout:auto"}
 
 ## Next steps {#next-steps}
 
-After reading this article, you should have a better understanding of how you can configure audience metadata for your destination.
-
-To learn more about the other destination components, see the following articles:
+Next, configure the other destination components. To learn more, see the following articles:
 
 * [Customer authentication configuration](customer-authentication.md)
 * [OAuth2 authorization](oauth2-authorization.md)

@@ -149,6 +149,13 @@ For optimal matching accuracy, include the following optional mappings in your a
 |--------------|--------------|-------------|
 | `xdm: person.name.lastName` | `xdm: lastName` | The last name of the person |
 | `xdm: person.name.firstName` | `xdm: firstName` | The first name of the person |
+| `xdm: extendedWorkDetails.jobTitle` | `xdm: title` | The job title of the person |
+| Custom field | `xdm: jobLevel` | The job level of the person |
+| Custom field | `xdm: jobFunction` | The job function of the person |
+
+>[!NOTE]
+>
+>`jobTitle` is available in the standard B2B Person schema. `jobLevel` and `jobFunction` require a custom schema extension or field group on top of the Person schema, and are supported by the destination when present in your source schema.
 
 ### Mapping best practices {#mapping-best-practices}
 
@@ -156,7 +163,7 @@ When mapping fields to [!DNL Demandbase People], consider the following matching
 
 * **Primary matching**: Demandbase uses `externalPersonId` as the primary identifier for person matching.
 * **Fallback matching**: If `externalPersonId` is not available, Demandbase uses the `email` field for identification.
-* **Recommended fields**: While only `email` and `externalPersonId` are required, Adobe recommends mapping all available fields from the recommended mappings table above, to improve matching accuracy and campaign performance.
+* **Recommended fields**: While only `email` and `externalPersonId` are required, Adobe recommends mapping the job title, job function, and job level fields in addition to the recommended mappings above. These fields provide richer person information within Demandbase and support downstream audience segmentation and targeting.
 
 ![Demandbase People mappings](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
 

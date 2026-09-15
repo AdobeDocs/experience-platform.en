@@ -25,11 +25,6 @@ The option to configure various file formatting options for the exported files i
 
 You can configure various file formatting options for exported files by using the Experience Platform UI. You can modify several properties of the exported files to match the requirements of the file reception system on your side, to optimally read and interpret the files received from Experience Platform.
 
-<!--
-* To configure file formatting options for exported files by using the Experience Platform UI, read this document.
-* To configure file formatting options for exported files by using the Experience Platform Flow Service API, read [Flow Service API - Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/).
--->
-
 ## File formatting configuration for CSV files {#file-configuration}
 
 To display the file formatting options, start the [connect to destination](/help/destinations/ui/connect-destination.md) workflow. Select **Data type: Segments** and **File type: CSV** to display the file formatting settings available for the exported `CSV` files. 

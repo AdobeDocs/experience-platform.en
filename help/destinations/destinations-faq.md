@@ -104,33 +104,6 @@ No, there is no dependency between the Experience Platform destination and the c
 
 +++
 
-<!--
-## [!DNL Experience Cloud Audiences] {#eca-faq}
-
-### What are the differences between the Experience Cloud Audiences and Adobe Target destinations?
-
-+++Answer
-
-See the table below for a feature comparison between the Experience Cloud Audiences and Adobe Target destinations.
-
-||Experience Cloud Audiences|Adobe Target|
-|---|---|---|
-| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, [!DNL Adobe Target], [!DNL Adobe Analytics], Adobe Advertising, Marketo, [!DNL Adobe Campaign] | Supports audience activation only to [!DNL Adobe Target] |
-| **Supports audience activation** | ✓ | ✓ |
-| **Supports attribute activation** | X | ✓ |
-| **Latency** | Profiles begin activating in 6 hours. Full population is visible in 48 hours​. |Depends on implementation​ type. <ul><li>Web SDK enables same-page/next-page​ personalization.</li><li>AT.js enables next-session personalization.</li></ul> |
-| **DULE support** | ✓ | ✓ |
-| **Marketing actions support** | ✓ | ✓ |
-| **Supported IDs** | [!DNL ECID], [!DNL GAID], [!DNL IDFA], [!DNL email_lc_sha256] | Any ID type |
-| **Sandbox support** | One sandbox | Multiple sandboxes |
-| **Consent support** | X | Yes. Requires Privacy & Security Shield. |
-| **Edge segmentation support** | Supports activation of edge audiences. Does not support edge segmentation. | Supports edge segmentation and activation of edge audiences. |
-| **Supported audiences** | All types of audiences  | Edge merge policy required for activation.|
-
-+++
-
--->
-
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 ### What do I need to do before I can activate audiences in [!DNL Facebook Custom Audiences]? {#facebook-activate-prerequisites}
@@ -262,12 +235,6 @@ Yes, same-page and next-page personalization use cases support a maximum of 30 a
 Currently, only static, single-value attributes are supported, such as `person.name.firstName`. Array attributes are currently not supported.
 +++
 
-<!-- 
-**Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
-
-Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation). 
--->
-
 ### After I create an audience in Experience Platform, how long will it take for that audience to be available for edge segmentation use cases? {#edge-segmentation-availability}
 
 +++Answer
@@ -320,9 +287,6 @@ For use cases where consent policy management needs to be applied at scale, cust
 This service includes customer-managed keys and elevated thresholds to manage the customer data lifecycle.
 
 The [!DNL Adobe Target] and [!DNL Custom Personalization] destinations are integrated with the [Experience Platform Data Usage Labels](../data-governance/labels/overview.md) and the [Consent Policy Enforcement Service](../data-governance/enforcement/overview.md). These features are available for all customers.
-
-
-
 
 +++
 

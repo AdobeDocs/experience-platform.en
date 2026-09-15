@@ -1,7 +1,6 @@
 ---
 title: Ingest Batch Data From Talon.One Into Experience Platform Using The UI
 description: Learn how to ingest batch data from Talon.One into Adobe Experience Platform using the UI. This guide covers setup, data selection, and dataflow configuration.
-badge: Beta
 last-substantial-update: 2026-04-06T00:00:00.000Z
 exl-id: 65a8ae42-0c0f-4bc5-b99e-52b02ab2130a
 TQID: https://experienceleague.adobe.com/MbxKod59EHKJ-CjuwtuKRkyjQFR4bzp3oAyaKPIKukw
@@ -19,10 +18,6 @@ topic_v2:
     internal-label: Customer experience
 ---
 # Ingest batch data from [!DNL Talon.One] into Experience Platform using the UI
-
->[!AVAILABILITY]
->
->The [!DNL Talon.One] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
 The [!DNL Talon.One] source for batch data receives events recorded for a [!DNL Talon.One] application. A common use-case is to filter for `talon_session_closed` to receive completed transactions, including loyalty points gained or redeemed, coupons redeemed, discounts granted, etc. Read the [[!DNL Talon.One] Management API reference](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount) for more information on the API.
 

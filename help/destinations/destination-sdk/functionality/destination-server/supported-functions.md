@@ -24,11 +24,11 @@ topic_v2:
 
 Experience Platform Destination SDK uses [[!DNL Pebble] templates](https://pebbletemplates.io/), allowing you to transform the data exported from Experience Platform into the format required by your destination.
 
-The Experience Platform [!DNL Pebble] implementation has some changes, compared to the out-of-the box version provided by [!DNL Pebble]. Also, in addition to the out-of-the-box functions provided by [!DNL Pebble], Adobe has created some additional functions that you can use with Destination SDK.
+The Experience Platform [!DNL Pebble] implementation has some changes, compared to the out-of-the-box version provided by [!DNL Pebble]. Also, in addition to the out-of-the-box functions provided by [!DNL Pebble], Adobe has created some additional functions that you can use with Destination SDK.
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Where to use {#where-to-use}
 
@@ -102,7 +102,7 @@ In addition to the out-of-the-box functions provided by [!DNL Pebble], see below
 
 #### Use case {#segments-use-case}
 
-These functions can be used on order to obtain a list of audiences that were added to or removed from a profile.
+These functions can be used to obtain a list of audiences that were added to or removed from a profile.
 
 #### Example {#segments-example}
 
@@ -150,63 +150,6 @@ added: {% for s in addedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %
 ```json
 added: <111111><333333>; removed: <222222>
 ```
-
-<!--
-
-### Added and removed audiences filters {#added-and-removed-segmnts-filters}
-
-#### Use case {#use-case}
-
-These filters are similar to `addedSegments` and `removedSegments`, described above. The only difference is that they are implemented as filters as opposed to functions.
-
-#### Example {#example}
-
-##### Input {#input}
-
-```json
-{
-  "identityMap": {
-    "myIdNamespace": [
-      {
-        "id": "external_id1"
-      },
-      {
-        "id": "external_id2"
-      }
-    ]
-  },
-  "segmentMembership": {
-    "ups": {
-      "111111": {
-        "lastQualificationTime": "2019-11-20T13:15:49Z",
-        "status": "realized"
-      },
-      "222222": {
-        "lastQualificationTime": "2019-11-20T13:15:49Z",
-        "status": "exited"
-      },
-      "333333": {
-        "lastQualificationTime": "2019-11-20T13:15:49Z",
-        "status": "realized"
-      }
-    }
-  }
-}
-```
-
-##### Format {#format}
-
-```java
-added: {% for s in input.profile.segmentMembership.ups | added %}<{{s.key}}>{% endfor %};|removed: {% for s in input.profile.segmentMembership.ups | removed %}<{{s.key}}>{% endfor %};
-```
-
-##### Output {#output}
-
-```json
-added: <111111><333333>;|removed: <222222>;
-```
-
--->
 
 ## Next steps {#next-steps}
 

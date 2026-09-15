@@ -55,7 +55,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ### Validation coverage
 
-[!DNL Streaming Validation Service] covers validation in the following areas:
+For standard XDM event payloads, [!DNL Streaming Validation Service] covers validation in the following areas:
 
 -  Range
 -  Presence
@@ -63,6 +63,10 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 -  Pattern
 -  Type
 -  Format
+
+>[!NOTE]
+>
+>This validation coverage does not apply to Profile update payloads sent through streaming upserts (`xdmEntityUpdates`). For those payloads, [!DNL Data Collection Validation Service] validates only request headers. Schema constraints such as Enum and Type are not enforced. See the [known limitations](/help/data-prep/upserts.md#known-limitations-and-key-considerations) section of the streaming upserts guide for details and workarounds.
 
 ## Synchronous validation
 

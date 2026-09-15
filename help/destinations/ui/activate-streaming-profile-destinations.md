@@ -44,7 +44,7 @@ This article applies to the following three destinations:
 
 * [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
-* [HTTP API destination](/help/destinations/catalog/streaming/http-destination.md).
+* [HTTP API destination](/help/destinations/catalog/streaming/http-destination.md)
 
 ## Prerequisites {#prerequisites}
 
@@ -52,17 +52,15 @@ To activate data to destinations, you must have successfully [connected to a des
 
 ## Select your destination {#select-destination}
 
-1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
-    
-    ![Image showing the destination catalog tab.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
+1. Go to **[!UICONTROL Connections > Destinations]**, select the **[!UICONTROL Catalog]** tab, then select **[!UICONTROL Activate audiences]** on the card corresponding to the destination where you want to activate your audiences.
 
-1. Select **[!UICONTROL Activate audiences]** on the card corresponding to the destination where you want to activate your audiences, as shown in the image below.
+    ![Destination Catalog tab with the Activate audiences control highlighted on a destination card.](../assets/ui/activate-streaming-profile-destinations/select-destination-and-activate.png){zoomable="yes"}
 
-    ![Image highlighting the activate audiences control in the destinations catalog tab.](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
+1. (Optional) Use the search box to find a destination connection by name, or use the filters to narrow down the results based on your preferred criteria. Select **[!UICONTROL Hide filters]** to collapse the filters panel.
 
-1. Select the destination connection that you want to use to activate your audiences, then select **[!UICONTROL Next]**.
+1. Select the checkbox next to the destination connection that you want to use to activate your audiences, then select **[!UICONTROL Next]**.
 
-    ![Image showing a selection of two destinations that you can connect to.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
+    ![Search box and filters panel highlighted above the list of destination connections, with a destination connection selected in the Select destination step.](../assets/ui/activate-streaming-profile-destinations/select-destination.png){zoomable="yes"}
 
 1. Move to the next section to [select your audiences](#select-audiences).
 
@@ -70,35 +68,41 @@ To activate data to destinations, you must have successfully [connected to a des
 
 To select the audiences that you want to activate to the destination, use the checkboxes to the left of the audience names, then select **[!UICONTROL Next]**.
 
+Use the search box to find an audience by name, or use the filters to narrow down the results by evaluation type (edge, streaming, or batch), namespace origin, or tags. Select **[!UICONTROL Hide filters]** to collapse the filters panel.
+
+>[!TIP]
+>
+>You can filter by the same tags you use on the audience browse screen. Any tags you added to an audience there carry over to this screen.
+
+![Search box and filters panel highlighted above the list of audiences, with the checkbox for one audience selected and the Next button highlighted.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png){zoomable="yes"}
+
 You can select from multiple types of audiences, depending on their origin:
 
 * **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [Audience Portal documentation](../../segmentation/ui/audience-portal.md) for more details.
 * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Experience Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience).
 * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
 
-![Image highlighting the checkboxes selection in the Select audiences step of the activation workflow.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
-
 ## Select profile attributes {#select-attributes}
 
 In the **[!UICONTROL Mapping]** step, select the profile attributes that you want to send to the target destination.
 
 1. In the **[!UICONTROL Select attributes]** page, select **[!UICONTROL Add new field]**.
-    
-    ![Image highlighting the Add new field control in the mapping step.](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
+
+    ![Add new field control highlighted above the existing field mappings.](../assets/ui/activate-streaming-profile-destinations/add-new-field.png){zoomable="yes"}
 
 1. Select the arrow to the right of the **[!UICONTROL Schema field]** entry.
 
-    ![Image highlighting the how to select a source field in the mapping step.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
+    ![Select source field arrow highlighted next to an empty schema field entry.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png){zoomable="yes"}
 
-1. In the **[!UICONTROL Select source field]** page, select the XDM attributes that you want to send to the destination, then choose **[!UICONTROL Save]**.
+1. In the **[!UICONTROL Select source field]** page, select the **[!UICONTROL Select attributes]** option, select the [!DNL XDM] attributes that you want to send to the destination, then choose **[!UICONTROL Save]**.
 
-    ![Image showing a selection of XDM fields that you can select as source fields.](../assets/ui/activate-streaming-profile-destinations/select-source-field-modal.png)
+    Use the search box to filter the source fields. Search matches partial, case-insensitive text.
 
     Use the **[!UICONTROL Show only fields with data]** toggle to only display schema fields populated with values. By default, only populated schema fields are shown.
 
     Use the **[!UICONTROL Show display names for fields]** toggle to display the friendly names for fields, instead of the schema field names.
 
-    ![Select source field page showing the toggle for display names.](../assets/ui/activate-batch-profile-destinations/show-display-names.gif)
+    ![Select source field page showing the search box, the display toggles, and a selected source field.](../assets/ui/activate-streaming-profile-destinations/select-source-field-modal.png){zoomable="yes"}
 
 1. To add more fields, repeat steps 1 to 3, then select **[!UICONTROL Next]**.
 
@@ -106,7 +110,7 @@ In the **[!UICONTROL Mapping]** step, select the profile attributes that you wan
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
-![Selection summary in the review step.](../assets/ui/activate-streaming-profile-destinations/review.png)
+![Connection and Setup and audience summary cards in the review step.](../assets/ui/activate-streaming-profile-destinations/review.png){zoomable="yes"}
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
@@ -114,23 +118,17 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 This means that profiles which have not consented to being targeted *are included* in the exports to these three destinations.
 
-<!--
-
-If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**, select **[!UICONTROL View applicable consent policies]** to see which consent policies are applied and how many profiles are included in the activation as a result of them. Read about [consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
-
--->
-
 ### Data usage policy checks {#data-usage-policy-checks}
 
 In the **[!UICONTROL Review]** step, Experience Platform also checks for any data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the audience activation workflow until you have resolved the violation. For information on how to resolve policy violations, read about [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in the data governance documentation section.
- 
-![data policy violation](../assets/common/data-policy-violation.png)
+
+![An example of a data policy violation shown in the activation workflow.](../assets/common/data-policy-violation.png)
 
 ### Filter audiences {#filter-audiences}
 
-Also in this step you can use the available filters on the page to display only the audiences whose schedule or mapping has been updated as part of this workflow. 
+By default, **[!UICONTROL New audiences]** is selected, showing only the audiences you selected in the current activation flow. Select **[!UICONTROL Activated audiences]** to see the audiences already activated to this destination from previous activation flows. Select the **[!UICONTROL Toggle columns]** icon to choose which table columns you want to see.
 
-![Screen recording showing the available audience filters in the review step.](../assets/ui/activate-streaming-profile-destinations/filter-audiences-review-step.gif)
+![New audiences and Activated audiences toggle and the Toggle columns icon highlighted above the audience table in the review step.](../assets/ui/activate-streaming-profile-destinations/filter-audiences-review-step.png){zoomable="yes"}
 
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 

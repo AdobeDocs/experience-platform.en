@@ -2,7 +2,6 @@
 title: Create a new connection specification for Streaming SDK using the Flow Service API
 description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Self-Serve Sources.
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
-badge: Beta
 TQID: https://experienceleague.adobe.com/0IHC3r9y4NeUP1IAQN8C997fNtoOlIHPD2Pfg52JBtE
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
@@ -13,13 +12,17 @@ role_v2:
 ---
 # Create a new connection specification using the [!DNL Flow Service] API
 
->[!NOTE]
->
->Self-Serve Sources Streaming SDK is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
-
 A connection specification represents the structure of a source. It contains information on a source's authentication requirements, defines how source data can be explored and inspected, and provides information on the attributes of a given source. The `/connectionSpecs` endpoint in the [!DNL Flow Service] API allows you to programmatically manage the connection specifications within your organization.
 
 The following document provides steps on how to create a connection specification using the [!DNL Flow Service] API and integrate a new source through Self-Serve Sources (Streaming SDK).
+
+>[!IMPORTANT]
+>
+>When creating a connection specification for **Self-Serve Sources (Streaming SDK)**, you must use `generic-streaming` as the connection specification name.
+>
+>Other `name` values are **unsupported**, even if the source appears to work during initial setup or while sending XDM-compatible streaming data. Using an unsupported value can result in unintended UI behavior, including the mapping step being skipped, and may lead to blocking issues later.
+>
+>To ensure supported behavior, always use `generic-streaming` for the connection specification name and do not rely on alternate values.
 
 ## Getting started
 
@@ -139,6 +142,10 @@ Once you have gathered the required artifacts, copy and paste the connection spe
 Once you have acquired the connection specification template, you can now start authoring a new connection specification by filling in the appropriate values that corresponds to your source. 
 
 A connection specification can be divided into two distinct parts: the source specifications and the explore specifications. 
+
+>[!NOTE]
+>
+>Leave `authSpec` as an empty array. This field does not apply to Self-Serve Sources (Streaming SDK). Streaming SDK connectors authenticate directly with the Streaming Ingestion API using OAuth 2.0 or HMAC-based authentication instead. See [Configure authentication for a Streaming SDK connector](./authentication.md).
 
 See the following documents for more information on the sections of a connection specification:
 

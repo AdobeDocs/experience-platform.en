@@ -54,7 +54,6 @@ There are two types of default limits within this document:
 
 {style="table-layout:auto"}
 
-
 ## Activation limits {#activation-limits}
 
 The following guardrails provide recommended limits when activating Real-Time Customer Profile data to destinations.
@@ -123,16 +122,6 @@ The guardrails below apply to activation through [edge personalization destinati
 
 Dataset exports are currently supported in a **[!UICONTROL First Full and then Incremental]** [pattern](/help/destinations/ui/export-datasets.md#scheduling). The guardrails described in this section *apply to the first full export* that occurs after a dataset export workflow is set up.
 
-<!--
-
-| Guardrail | Limit | Limit Type | Description |
-| --- | --- | --- | --- |
-| Size of exported datasets | 5 billion records | Soft | The limit described here for dataset exports is a *soft guardrail*. For example, while the user interface will not block you from exporting datasets larger than 5 billion records, the behavior is unpredictable and exports might either fail or have very long export latency. |
-
-{style="table-layout:auto"}
-
--->
-
 #### Dataset Types {#dataset-types}
 
 The dataset export guardrails apply to two types of datasets exported from Experience Platform, as described below:
@@ -164,27 +153,7 @@ For scheduled, or recurring dataset exports, the guardrails below are identical 
 
 {style="table-layout:auto"}
 
-<!--
-
-#### Ad-hoc dataset exports
-
-Exporting datasets in an-hoc manner is currently supported via API only. For ad-hoc dataset exports, you must use the backfill parameter in the API to limit the timeframe of exported data. 
-
-The guardrails below are the same whether you are exporting parquet of JSON files ad-hoc. 
-
-**Parquet and JSON output**
-
-|Dataset type | Backfill parameter provided | Guardrail | Guardrail type | Description |
-|---------|---------|-----------|-----------|------------|
-| Datasets based on the **XDM Experience Events schema** | <p><ul><li>Both start and end date provided in `backfill` parameter in API call</li><li>Incomplete `backfill` parameter provided in API call</li></ul></p> | <p><ul><li>Last 30 days</li><li>Last 365 days</li></ul></p> | Hard | <p><ul><li>The export fails if the `startDate - endDate` interval is over 30 days</li><li>Either the `startDate` or `endDate` are missing or incorrectly formatted in the API call. Expected format: `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`</li></ul></p> |
-| Datasets based on the **XDM Individual Profile schema** | - | Ten billion records across all files exported in a destination instance | Hard | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
-
-{style="table-layout:auto"}
-
--->
-
 Read more about [exporting datasets](/help/destinations/ui/export-datasets.md).
-
 
 ### Destination SDK guardrails {#destination-sdk-guardrails}
 

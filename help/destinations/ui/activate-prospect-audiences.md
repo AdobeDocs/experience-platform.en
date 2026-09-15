@@ -92,12 +92,6 @@ For the rest of the activation workflow to export prospect audiences, read the t
 >
 >Note that in the scheduling step, the workflow to activate prospect audiences only lets you [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files). Incremental file exports are not supported.
 
-<!--
-
-Note that we will need to add links to other destination types here as more destinations become supported 
-
--->
-
 ## Other use cases achieved through partner data support {#other-use-cases}
 
 Explore further use cases enabled through partner data support in [!DNL Real-Time CDP]:

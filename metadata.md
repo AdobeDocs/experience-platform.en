@@ -7,6 +7,7 @@ solution: Experience Platform
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: "Experience Platform"
+usetq: true
 type: Documentation
 landing-page-name: experience-platform
 landing-page-breadcrumb-title: Experience Platform
