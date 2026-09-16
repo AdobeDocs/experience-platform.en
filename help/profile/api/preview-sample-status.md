@@ -4,6 +4,21 @@ title: Preview Sample Status (Profile Preview) API Endpoint
 description: The preview sample status endpoint of the Real-Time Customer Profile API allows you to preview the latest successful sample of your Profile data, list profile distribution by dataset and by identity, and generate reports showing dataset overlap, identity overlap, and unstitched profiles.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
+TQID: https://experienceleague.adobe.com/v7BZX-ERQ08jpLPHnryoWKluX2XZGiNFqV3qCdFEnW0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Preview sample status endpoint (Profile preview)
 

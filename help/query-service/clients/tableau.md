@@ -4,6 +4,15 @@ solution: Experience Platform
 title: Connect Tableau to Query Service
 description: This document walks through the steps for connecting Tableau with Adobe Experience Platform Query Service.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
+TQID: https://experienceleague.adobe.com/hlRziQ4Ee0jzh3mUVd6ieY2iat3T8WI5Y20PriY5Pw4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect [!DNL Tableau] to Query Service
 

@@ -1,0 +1,32 @@
+{
+    "type": "reward",
+    "id": "4f8524cf-1463-49f9-8b8e-ec4d13e45321",
+    "timestamp": "2025-01-01T01:01:01.123456789Z",
+    "lavaId": "c1ea2366-6a23-4169-ab45-63f86915a88f",
+    "balances": [
+        {
+            "rewardName": "test-01",
+            "rewardType": "points",
+            "rewardSlug": "Test01",
+            "rewardId": 1,
+            "amount": 100,
+            "expiresAt": "2032-01-27T05:57:08Z"
+        },
+        {
+            "rewardName": "test-01",
+            "rewardType": "points",
+            "rewardSlug": "Test01",
+            "rewardId": 1,
+            "amount": 100,
+            "expiresAt": "2030-01-27T05:57:08Z"
+        },
+        {
+            "rewardName": "test-02",
+            "rewardType": "stored",
+            "rewardSlug": "Test02",
+            "rewardId": 2,
+            "amount": 100,
+            "expiresAt": "2032-01-27T05:57:08Z"
+        }
+    ]
+}

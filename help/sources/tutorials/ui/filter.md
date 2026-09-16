@@ -3,6 +3,16 @@ title: Filter Sources Objects In The UI
 description: Learn how to navigate through your sources objects such as accounts and dataflows in the Experience Platform UI.
 hide: true
 exl-id: 59c200cc-1be7-45a8-9d7a-55e6f11dbcf2
+TQID: https://experienceleague.adobe.com/3FiBm2yGXVE6xK8BI2RSTZeI-O62yIK5LyZdXHETQik
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Filter sources objects in the UI
 

@@ -2,6 +2,18 @@
 title: Identity Service and Real-Time Customer Profile
 description: Learn about the relationship between Identity Service and Real-Time Customer Profile
 exl-id: 09961b8e-f736-4fcc-ac53-88b55cca7d55
+TQID: https://experienceleague.adobe.com/MmIRavLlxLzYEsiNAOS190aKA-ve9CzseNvf-jLbzAg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Understanding the relationship between Identity Service and Real-Time Customer Profile
 
@@ -35,8 +47,8 @@ Read the steps below to gain a better understanding of the process of creating a
 
 * First, Real-Time Customer Profile references an identity graph and retrieves all identities.
 * Next, Profile retrieves profile fragments with primary identities in the identity graph. 
-* Once successful, Profile than merges all existing events and attributes.
-  * If there are conflicting attribute information, attributes will be chosen based on the merge method. For more information, read the [merge policies overview](../profile/merge-policies/overview.md).
+* Once successful, Profile then merges all existing events and attributes.
+  * If there is conflicting attribute information, attributes will be chosen based on the merge method. For more information, read the [merge policies overview](../profile/merge-policies/overview.md).
 
 ![A flow chart detailing how Identity Service and Profile Merging works.](./images/merge-profile-process.png)
 
@@ -53,4 +65,5 @@ Once you mark fields as identities, they can then be defined as either primary o
 * If there are two or more identities, then one will be designated as primary, and the remaining will be designated as secondary.
 
 Identity Service will establish links between identities as long as there are at least two fields marked as identity. Identity Service does not store information on whether an identity is primary or secondary. 
+
 

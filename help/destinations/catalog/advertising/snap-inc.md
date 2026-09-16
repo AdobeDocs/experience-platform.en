@@ -2,6 +2,30 @@
 title: Snap Inc connection
 description: Learn how to connect to the Snapchat Ads Platform and export your audiences from Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
+TQID: https://experienceleague.adobe.com/FuUm-0ZmRajCtirY-hmvhkiYHBDcOi0JgeVPkur1hjM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Snap Inc connection
 
@@ -25,9 +49,9 @@ To use this destination, you must have a Snapchat Ads account. Refer to this doc
 
 ## Limitations {#limitations}
 
-* Snap Inc does not support multiple identities for a given audience segment. Please map only one identity when activating a segment.
-* Snap Inc does not support renaming segments. To rename a segment, you must deactivate, rename it, and then activate it.
-* It is not possible to define a retention period for an audience segment's members. All members have lifetime retention and will be in the audienceuntil they are removed.
+* Snap Inc does not support multiple identities for a given audience. Please map only one identity when activating an audience.
+* Snap Inc does not support renaming audiences. To rename an audience, you must deactivate, rename it, and then activate it.
+* It is not possible to define a retention period for an audience's members. All members have lifetime retention and will be in the audience until they are removed.
 
 ## Supported identities {#supported-identities}
 
@@ -148,7 +172,7 @@ After activating audiences to the *Snap Inc* destination, you will be able to se
 
 ![Audiences](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Note that when an Adobe audience is first activated to Snap Inc, you will initially see it as an empty audience. This is because [!DNL Adobe Experience Platform] does not export member data to Snap Inc until it evaluates the audience. For more information about how audiences are evaluated in Experience Platform, see the [Segmentation Service overview](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
+Note that when an Adobe audience is first activated to Snap Inc, you will initially see it as an empty audience. This is because [!DNL Adobe Experience Platform] does not export member data to Snap Inc until it evaluates the audience. For more information about how audiences are evaluated in Experience Platform, see the [Segmentation Service overview](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-audiences).
 
 ## Data usage and governance {#data-usage-governance}
 

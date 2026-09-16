@@ -2,6 +2,34 @@
 title: Manage Permissions for Privacy Service
 description: Learn how to manage user permissions for Adobe Experience Platform Privacy Service using Adobe Admin Console.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
+TQID: https://experienceleague.adobe.com/9E3jCyD6CRzcfcL8keFyXjTyyat7kXy2VIaiJzckoNQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+    internal-label: Administration
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+    internal-label: Access control
+  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
+    internal-label: Adobe Admin Console
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+    internal-label: Roles
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Manage permissions for Privacy Service
 

@@ -1,0 +1,12 @@
+{
+  "id": "2dfea44b-603d-4769-bcb5-a71aefc19a6c",
+  "lavaId": "82460fc2-afe1-43ab-85b7-1cb96e0a9e47",
+  "amount": -100,
+  "expiresAt": "2027-06-03T15:18:04.266Z",
+  "rewardId": 1196,
+  "rewardName": "LAVA Points",
+  "rewardSlug": "LAVA Points",
+  "rewardType": "points",
+  "timestamp": "2026-06-03T15:18:04.266Z",
+  "type": "ledger"
+}

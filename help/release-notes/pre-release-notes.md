@@ -19,54 +19,83 @@ exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 >- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Release date: May 2026**
+**Release date: September 2026**
 
 New features and updates to existing features in Adobe Experience Platform:
 
-- [Alerts](#alerts)
-- [Computed attributes](#computed-attributes)
+- [CX Enterprise Coworker](#cx-enterprise-coworker)
+- [Capacity](#capacity)
+- [Data Governance](#data-governance)
 - [Destinations](#destinations)
-- [Real-Time Customer Profile](#profile)
+- [Query Service](#query-service)
+- [Run and Operate](#run-and-operate)
+- [Sandboxes](#sandboxes)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
-## Alerts {#alerts}
+## CX Enterprise Coworker {#cx-enterprise-coworker}
 
-Experience Platform allows you to subscribe to event-based alerts for various Experience Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Experience Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+Use CX Enterprise Coworker to access AI-powered conversational skills that help you manage and validate data in Experience Platform, directly within [!DNL Microsoft Copilot], [!DNL ChatGPT], and [!DNL Claude].
 
 **New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| Alert History: Filtering and Discoverability | The Alert History page now shows the associated object name, adds search by alert type and filtering by object name, and includes an improved time range selector, making it easier to correlate alerts and find what you need. |
+| CX Enterprise Coworker in AI platforms | Access CX Enterprise Coworker directly within [!DNL Microsoft Copilot], [!DNL ChatGPT], and [!DNL Claude]. |
+| Data management skills in CX Enterprise Coworker | Use new conversational skills in CX Enterprise Coworker to find the datasets consuming the most storage, preview the impact of a retention limit before applying it, and review a dataset's automatic data expiration configuration, profile and identity enablement, and storage metrics. |
+| Data validation skills in CX Enterprise Coworker | Use a new conversational skill in CX Enterprise Coworker to validate data fields and datasets in Experience Platform. |
 
 {style="table-layout:auto"}
 
-For more information, read the [[!DNL Observability Insights] overview](/help/observability/home.md).
+For more information, read the [CX Enterprise Coworker documentation](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/coworker/overview).
 
-## Computed attributes {#computed-attributes}
+## Capacity {#capacity}
 
-Computed attributes enable capability to easily summarize event data into profile attributes via an intuitive UI for enhanced behavior-based segmentation, personalization, and activation. With this feature, you can create computed attributes in a self serve manner, manage them, and use them in segmentation, Real-Time CDP destinations, or Adobe Journey Optimizer. Additionally, computed attributes simplify segmentation and journey workflows to help you seamlessly deliver relevant experiences. 
+Use Capacity to see your organization's [guardrails](/help/rtcdp/guardrails/overview.md) and get recommendations for resolving capacity violations by reallocating capacity at the sandbox level.
+
+**New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| List function in computed attributes | Use the List function in computed attributes to return an array of values from qualifying events. This function is intended for use when the qualifying events come from a single dataset. If the qualifying events span multiple datasets, results may be incomplete. |
+| [Adobe Experience Platform Growth Credits](/help/landing/license-usage-and-guardrails/capacity.md) | Manage and scale eligible capacity across streaming, edge, and batch segmentation. Monitor credit consumption and capacity utilization, and use self-service workflows to plan, allocate, and scale capacity as your business needs evolve. Built-in monitoring and alerts notify you as usage approaches your capacity limits, so you can respond proactively. |
 
 {style="table-layout:auto"}
 
-To learn more about computed attributes, please read the [computed attributes overview](../profile/computed-attributes/overview.md).
+For more information, read the [capacity overview](/help/landing/license-usage-and-guardrails/capacity.md).
+
+## Data Governance {#data-governance}
+
+Use Data Governance to manage data usage policies and enforce compliance with data usage labels across Experience Platform.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| India added as a supported privacy regulation | Privacy Service now supports the India Digital Personal Data Protection Act. Select India when you configure a privacy request in the Privacy Service UI or API. |
+
+{style="table-layout:auto"}
+
+For more information, read the [Data Governance overview](/help/data-governance/home.md).
 
 ## Destinations {#destinations}
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
+**New or updated functionality**
+
+| Feature | Description |
+| --- | --- |
+| Configurable macro order for file names | Reposition individual macros in the file name editor for file-based destinations. Previously, macros had fixed positions in the file name. Preview the resulting file name before you save. |
+| [Audience-level reporting for additional destinations](/help/dataflows/ui/monitor-destinations.md#audience-level-view) | Audience-level reporting will be available for [[!DNL LiveRamp - Distribution]](/help/destinations/catalog/advertising/liveramp-distribution.md), [[!DNL FreeWheel]](/help/destinations/catalog/advertising/freewheel.md), and [[!DNL Snowflake Batch]](/help/destinations/catalog/warehouses/snowflake-batch.md). Previously, these destinations only supported dataflow run-level reporting, making it harder to understand how many profiles were activated for each audience. For more information, read the [audience-level view](/help/dataflows/ui/monitor-destinations.md#audience-level-view) documentation. |
+
+{style="table-layout:auto"}
+
 **New or updated destinations**
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [Export arrays for enrichment attributes](../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes) | Export array fields as enrichment attributes when activating audiences to cloud storage destinations. Select individual inner fields from an array, and they are exported as separate columns in JSON and Parquet output. This feature is available to a limited number of customers. To request access, contact your Adobe representative. See the [enrichment attributes documentation](../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes) for details. |
-| External audience support for [[!DNL Criteo]](../destinations/catalog/advertising/criteo.md) | Activate audiences from origins beyond Segmentation Service to the [Criteo](../destinations/catalog/advertising/criteo.md) destination, including custom upload audiences (imported from CSV), look-alike audiences, federated audiences, and audiences created in other Experience Platform apps such as [!DNL Adobe Journey Optimizer]. See the [supported audiences](../destinations/catalog/advertising/criteo.md#supported-audiences) section for details. |
-| New supported destinations for [[!DNL Acxiom Audience Connection]](../destinations/catalog/advertising/acxiom-audience-connection.md) and [[!DNL Acxiom Real ID Audience Connection]](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | Five new destinations are now supported: [!DNL Roku], [!DNL Samsung Ads], [!DNL The Trade Desk] (1st Party), [!DNL Warner Bros. Discovery], and [!DNL Yahoo]. See the [Acxiom Audience Connection](../destinations/catalog/advertising/acxiom-audience-connection.md) and [Acxiom Real ID Audience Connection](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) documentation for details. |
+| [!DNL Microsoft Entra ID] authentication for [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md#authentication-information) and [[!DNL Azure Blob Storage]](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) | Authenticate to the [!DNL Azure Event Hubs] and [!DNL Azure Blob Storage] destinations using a [!DNL Microsoft Entra ID] service principal (client ID and client secret), in addition to a shared access key or connection string. Govern access through [!DNL Azure] role-based access control for stronger security. |
+| [[!DNL Salesforce CRM]](/help/destinations/catalog/crm/salesforce.md#authenticate) OAuth 2 Client Credentials authentication | The [!DNL Salesforce CRM] destination now supports a new authentication type. Authenticate using the OAuth 2 Client Credentials flow, in addition to the existing OAuth 2 Password Grant flow. |
 
 {style="table-layout:auto"}
 
@@ -74,29 +103,62 @@ To learn more about computed attributes, please read the [computed attributes ov
 
 | Fix | Description |
 | --- | --- |
-| [[!DNL Google Cloud Storage]](../destinations/catalog/cloud-storage/google-cloud-storage.md) macro support | The [`%SEGMENT_NAME%`](../destinations/catalog/cloud-storage/overview.md#use-macros) and other folder path macros now work correctly for [!DNL Google Cloud Storage] destinations. Previously, macros were not replaced with the audience name in the export path. |
-| [[!DNL Federated Audiences]](https://www.adobe.com/go/destinations-federated-audience-composition) export file now | The **[!UICONTROL Export file now]** option is now supported for [!DNL Federated Audience Composition] destinations. |
-| [[!DNL Snowflake]](../destinations/catalog/warehouses/snowflake.md) scheduling UI fix | Fixed an issue where toggling the export frequency between daily and once in the [!DNL Snowflake] destination configuration caused the UI to crash. |
-| [[!DNL Google Customer Match]](../destinations/catalog/advertising/google-customer-match.md) key type behavior | Updated documentation to clarify how [!DNL Google] handles identity key types in a destination dataflow. You can map multiple key types in the same connection, but if you update mappings, any identity you add must use the same key type as the identity you removed. Removing all fields of a given key type, or switching key types across activation runs, causes [!DNL Google] to delete the corresponding audience list. See the [key type behavior](../destinations/catalog/advertising/google-customer-match.md#key-type-behavior) section for details. |
-| [View datasets in a dataset export dataflow](../destinations/api/export-datasets.md#view-datasets-in-dataflow) | Updated documentation to show how to retrieve the datasets associated with an existing dataset export dataflow using the Flow Service API. See the [export datasets documentation](../destinations/api/export-datasets.md#view-datasets-in-dataflow) for details. |
+| Updated record counting for select destinations | Exported record counts now reflect one record per identity and audience combination for batch destinations with audience grouping enabled (such as [!DNL LiveRamp] and [!DNL FreeWheel]) and for API-based destinations with a best-effort configuration (such as [!DNL Marketo Engage], [!DNL Microsoft Bing], [!DNL Yahoo Data X], and [!DNL The Trade Desk]). Reported counts for these destination types may increase as a result, since a single identity that belongs to multiple audiences is now counted once per audience, rather than once overall. For example, an identity that belongs to three audiences in the same dataflow now counts as three exported records instead of one. |
 
 {style="table-layout:auto"}
 
-For more information, read the [Destinations overview](../destinations/home.md).
+For more information, read the [Destinations overview](/help/destinations/home.md).
 
-## Real-Time Customer Profile {#profile}
+## Query Service {#query-service}
 
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third-party data.
+Use Query Service to query data in Adobe Experience Platform using standard SQL.
 
 **New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| Batch profile ingestion progress | Track batch profile ingestion jobs in real time from the monitoring dashboard. View job initiation, queued time, and critical checkpoint progress, including when data is ready for segmentation and profile lookup. Use these insights to predict downstream data availability and plan campaign launches with confidence. |
+| XDM row-validation error code reference | A new reference maps `INGEST-####-400` error codes returned by Query Service trusted-flow writes to the XDM schema constraint that triggered them, along with remediation guidance. |
 
 {style="table-layout:auto"}
 
-For more information, read the [Real-Time Customer Profile overview](../profile/home.md).
+**Fixes and improvements**
+
+| Fix | Description |
+| --- | --- |
+| Accelerated Queries schema permission enforcement | Starting September 22, 2026, [accelerated queries](/help/query-service/api/accelerated-queries.md) enforce existing schema-level read permissions. Confirm that the roles used to run your accelerated queries have read access to the schemas they reference, so your queries, dashboards, and other dependent tools continue to work without interruption. |
+
+{style="table-layout:auto"}
+
+For more information, read the [Query Service overview](/help/query-service/home.md).
+
+## Run and Operate {#run-and-operate}
+
+Use Run and Operate to monitor job health, troubleshoot failures, and track throughput across your Experience Platform implementation.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| [Job Schedules now shows identity ingestion and campaign runs](/help/run-and-operate/job-schedules-details.md) | The Job Schedules macro-view timeline now includes identity ingestion runs and scheduled batch [!DNL Adobe Journey Optimizer] campaign runs, in addition to existing data lake and profile ingestion runs. |
+| Edge throughput monitor shows requests skipped and clearer graph detail | The edge monitoring dashboard now reports a **[!UICONTROL Requests skipped]** metric, reflecting requests dropped due to Spike Protection when incoming traffic exceeds your allocated capacity. The throughput graph now shows requested throughput with a peak callout and a separate skip throughput series, and both throughput charts display when the data was last updated. |
+
+{style="table-layout:auto"}
+
+For more information, read the [Run and Operate overview](/help/run-and-operate/overview.md).
+
+## Sandboxes {#sandboxes}
+
+Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater to the development, testing, and deployment of these applications while ensuring operational compliance.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Multi-sandbox management | Use [!DNL Sandbox Tooling] to migrate supported objects, including schemas and datasets, from a source sandbox to multiple target sandboxes through a single workflow. Select target sandboxes, validate dependencies, and deploy changes centrally to streamline rollouts across environments. |
+
+{style="table-layout:auto"}
+
+For more information, read the [sandboxes overview](/help/sandboxes/home.md).
 
 ## Segmentation Service {#segmentation-service}
 
@@ -106,13 +168,13 @@ Use Segmentation Service to create audiences from your customer data and manage 
 
 | Feature | Description |
 | --- | --- |
-| Audience Composition enhancements | All customers now have a baseline of 50 compositions. Additional enhancements include chained activation and audience enrichment improvements. |
-| Express mode for external audiences | Use express mode to activate external audiences directly through the API without the full activation workflow. |
-| Account audiences with experience events (B2B) | After the B2B CDP architecture upgrade, account audiences with experience events are no longer directly supported. To create an account audience that uses experience events, first build a people audience with the experience events, then reference that people audience when creating the account audience. |
+| Updated Audience Builder (GA) | The updated Audience Builder is now generally available. Find fields faster with the new **[!UICONTROL Discover Panel]** and semantic search, get AI-suggested fields, preview sample values and descriptions, favorite your most-used fields, and name your rule groups. |
+| Audience validation in Audience Builder | Audience Builder now validates field compatibility with your selected evaluation method as you build an audience. Incompatible fields are flagged with an inline error or warning before you save or publish, and a new filter lets you filter attributes and events by ingestion source. |
+| Flexible Batch Schedules (Limited Availability) | Use Flexible Batch Schedules to evaluate audiences on demand using user-defined schedules, giving you greater control over your audience evaluations. Define the cadence, and evaluate up to 10,000 audiences per schedule. |
 
 {style="table-layout:auto"}
 
-For more information, read the [Audiences overview](../segmentation/home.md).
+For more information, read the [Segmentation Service overview](/help/segmentation/home.md).
 
 ## Sources {#sources}
 
@@ -122,20 +184,9 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| [!DNL Delta Sharing] | You can use the [!DNL Delta Sharing] source to bring Delta tables into Experience Platform through a secure, open data‑sharing protocol. After you configure a [!DNL Delta Sharing] connection and select the shares and tables you want to ingest, Experience Platform automatically brings that data into your datasets so you can use it for analysis, segmentation, and activation. |
-| [!DNL LAVA] | Use the [!DNL LAVA] source connector to ingest data from [!DNL LAVA] into Experience Platform using standardized schemas and governance controls, reducing custom integration effort and improving time-to-value for downstream activation and insights. |
-| [!DNL Meta Ads] (Beta) | You can use the [!DNL Meta Ads] source connector (Beta) in the Sources workspace to authenticate to [!DNL Meta], select your ad accounts, and schedule ingestion of [!DNL Meta Ads] campaign and performance data into Experience Platform datasets. |
+| [[!DNL HubSpot]](/help/sources/connectors/marketing-automation/hubspot.md) V2 connector | Ingest data from [!DNL HubSpot] using the updated V2 connector. |
+| [Server-side encryption for [!DNL Amazon S3]](/help/sources/tutorials/api/encrypt-data.md#server-side-encryption-for-amazon-s3) | Combine [!DNL Amazon S3] server-side encryption (SSE) with PGP file encryption when you ingest encrypted data from [!DNL Amazon S3]. On the VA6 region of [Adobe Experience Platform on AWS](/help/landing/multi-cloud.md), the maximum encrypted file size increases from 1 GB to 10 GB. |
 
 {style="table-layout:auto"}
 
-**Updates and fixes**
-
-| Source | Description |
-| --- | --- |
-| NLD2 region IP allowlist update | Five IP ranges have been added to the NLD2 region allowlist: `20.105.215.28/30`, `20.105.244.48/29`, `57.153.246.72/29`, `57.153.246.80/28`, and `57.153.246.96/30`. Update your network allowlist if you use sources in the NLD2 region. |
-| [!DNL Shopify] batch field limitations | Certain [!DNL Shopify] fields are only supported in preview mode. To ingest these fields, use the API to create your dataflows instead of the UI workflow. See the [!DNL Shopify] source documentation for the list of affected fields. |
-| Automatic dataflow disabling | Source dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
-
-{style="table-layout:auto"}
-
-For more information, read the [sources overview](../sources/home.md).
+For more information, read the [sources overview](/help/sources/home.md).

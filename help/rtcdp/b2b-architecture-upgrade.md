@@ -3,6 +3,23 @@ title: Architecture Upgrades to Real-Time CDP B2B Edition
 description: Read this document to learn about the comprehensive architecture upgrades to Real-Time CDP B2B Edition.
 badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
+TQID: https://experienceleague.adobe.com/YExK9V4S2wvr2jdEAcCNzCfCze5S3QtgwQcJOlNkTfU
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+    internal-label: Use cases
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
+    internal-label: Data quality
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Architecture upgrades to Real-Time CDP B2B Edition
 
@@ -59,7 +76,7 @@ The following features have been updated as part of the B2B architectural upgrad
 
 As part of the new architecture upgrade, Experience Event filters can no longer be used within a single multi-entity audience that includes B2B attributes.
 
-To achieve the same audience logic, you can use the segment builder to [add audiences and reference audiences](../segmentation/ui/segment-builder.md#adding-audiences)
+To achieve the same audience logic, you can use Segment Builder to [add audiences and reference audiences](../segmentation/ui/segment-builder.md#adding-audiences)
 
 For example:
 
@@ -72,7 +89,7 @@ Once the upgrade is complete, any new multi-entity audiences with B2B attributes
 
 >[!TIP]
 >
->A **segment of segments** is any segment definition that contains one or more batch or edge segments. **Note**: if you use a segment of segments, profile disqualification will happen **every 24 hours**.
+>A **segment of segments** is any segment definition that contains one or more batch or edge audiences. **Note**: if you use a segment of segments, profile disqualification will happen **every 24 hours**.
 
 ### Entity resolution and time-precedence merging in B2B audiences
 

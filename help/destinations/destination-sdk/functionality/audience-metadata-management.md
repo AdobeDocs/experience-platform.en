@@ -1,7 +1,24 @@
 ---
-description: Use audience metadata templates to programmatically create, update, or delete audiences in your destination. Adobe provides an extensible audience metadata template, which you can configure based on the specifications of your marketing API. After you define, test, and submit the template, it will be used by Adobe to structure the API calls to your destination.
+description: Learn how to use audience metadata templates to programmatically create, update, or delete audiences in your destination.
 title: Audience metadata management
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
+TQID: https://experienceleague.adobe.com/oe-h9RNQCbuqRZNrzsct8iRXMPk-hjpe0Ms-86yzVtY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
 ---
 # Audience metadata management
 
@@ -19,21 +36,21 @@ Depending on your API configuration, you may or may not need to use the audience
 
 With audience metadata support in Destination SDK, when you configure your Experience Platform destination, you can give Experience Platform users one of several options when they map and activate audiences to your destination. You can control the options available to the user via the parameters in the [Audience metadata configuration](../functionality/destination-configuration/audience-metadata-configuration.md) section of the destination configuration.
 
-### Use case 1 - You have a 3rd party API and users don't need to input mapping IDs {#use-case-1}
+### Use case 1: Automatic sync with a third-party API {#use-case-1}
 
-If you have an API endpoint to create/update/delete audiences or audiences, you can use audience metadata templates to configure Destination SDK to match the specs of your audience create/update/delete endpoint. Experience Platform can programmatically create/update/delete audiences and synchronize metadata back to Experience Platform.
+If you have an API endpoint to create, update, or delete audiences, you can use audience metadata templates to configure Destination SDK to match the specs of your audience create, update, or delete endpoint. Experience Platform can programmatically create, update, or delete audiences and synchronize metadata back to Experience Platform.
 
-When activating audiences to your destination in the Experience Platform user interface (UI), users don't need to manually fill in an audience mapping ID field in the activation workflow.
+When activating audiences to your destination in the Experience Platform user interface (UI), users do not need to manually fill in an audience mapping ID field in the activation workflow.
 
-### Use case 2 - Users need to create an audience in your destination first and are required to manually input mapping ID {#use-case-2}
+### Use case 2: Manual mapping ID required {#use-case-2}
 
-If audiences and other metadata need to be created by partners or users manually in your destination, then users must manually fill in the audience mapping ID field in the activation workflow to sync the audiencemetadata between your destination and Experience Platform.
+If audiences and other metadata need to be created by partners or users manually in your destination, then users must manually fill in the audience mapping ID field in the activation workflow to sync the audience metadata between your destination and Experience Platform.
 
 ![Input mapping ID](../assets/functionality/input-mapping-id.png)
 
-### Use case 3 - Your destination accepts the Experience Platform audience ID, users don't need to manually input mapping ID {#use-case-3}
+### Use case 3: Native audience ID support {#use-case-3}
 
-If your destination system accepts the Experience Platform audience ID, you can configure this in your audience metadata template. Users do not have to populate an audience mapping ID when activating a segment.
+If your destination system accepts the Experience Platform audience ID, you can configure this in your audience metadata template. Users do not have to populate an audience mapping ID when activating an audience.
 
 ## Generic and extensible audience template {#generic-and-extensible}
 
@@ -45,7 +62,7 @@ You can use the generic template to [create a new audience template](../metadata
 * The authentication types: OAuth 1, OAuth 2 with refresh token, OAuth 2 with bearer token
 * The functions: create an audience, update an audience, get an audience, delete an audience, validate credentials
 
-The Adobe engineering team can work with you to expand the generic template with custom fields if your use cases requires it.
+The Adobe engineering team can work with you to expand the generic template with custom fields if your use case requires it.
 
 
 ## Supported template events {#supported-events}
@@ -538,7 +555,7 @@ Find descriptions of all parameters in the template in the [Create an audience t
 
 ## Macros used in audience metadata templates {#macros}
 
-To pass information such as audience IDs, access tokens, error messages, and more between Experience Platform and your API, the audience templates include macros that you can use. Read below a description of the macros that are used in the three configuration examples on this page:
+To pass information such as audience IDs, access tokens, error messages, and more between Experience Platform and your API, the audience templates include macros that you can use. The following table describes the macros used in the three configuration examples on this page:
 
 |Macro | Description |
 |--- |--- |

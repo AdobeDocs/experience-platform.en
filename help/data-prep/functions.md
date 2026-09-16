@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Data Prep Mapping Functions
 description: This document introduces the mapping functions used with Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
+TQID: https://experienceleague.adobe.com/GdQ3BXSXU3Josmr2L0hgyzy1InLAB1O5J3Ytk5YeOUk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Data Prep mapping functions
 
@@ -117,7 +127,7 @@ The following tables list all supported mapping functions, including sample expr
 | timestamp | Retrieves the current Unix time. | | timestamp() | timestamp() | 1571850624571 |
 | format | Formats the input date according to a specified format. | <ul><li>DATE: **Required** The input date, as a ZonedDateTime object, that you want to format.</li><li>FORMAT: **Required** The format that you want the date to be changed to.</li></ul> | format(DATE, FORMAT)  | format(2019-10-23T11:24:00+00:00, "`yyyy-MM-dd HH:mm:ss`") | `2019-10-23 11:24:35` |
 | dformat | Converts a timestamp to a date string according to a specified format. | <ul><li>TIMESTAMP: **Required** The timestamp you want to format. This is written in milliseconds.</li><li>FORMAT: **Required** The format that you want the timestamp to become.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, "`yyyy-MM-dd'T'HH:mm:ss.SSSX`") | `2019-10-23T11:24:35.000Z` |
-| date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the source date.**Note:** This does **not** represent the format you want to convert the date string into. </li><li>DEFAULT_DATE: **Required** The default date returned, if the date provided is null.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date("2019-10-23 11:24", "yyyy-MM-dd HH:mm", now()) | `2019-10-23T11:24:00Z` |
+| date | Converts a date string into a ZonedDateTime object ([ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the source date.**Note:** This does **not** represent the format you want to convert the date string into. </li><li>DEFAULT_DATE: **Required** The default date returned, if the date provided is null.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date("2019-10-23 11:24", "yyyy-MM-dd HH:mm", now()) | `2019-10-23T11:24:00Z` |
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the source date.**Note:** This does **not** represent the format you want to convert the date string into. </li></ul> | date(DATE, FORMAT) | date("2019-10-23 11:24", "yyyy-MM-dd HH:mm") | `2019-10-23T11:24:00Z` |
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li></ul> | date(DATE) | date("2019-10-23 11:24") | "2019-10-23T11:24:00Z" |
 | date_part | Retrieves the parts of the date. The following component values are supported: <br><br>"year"<br>"yyyy"<br>"yy"<br><br>"quarter"<br>"qq"<br>"q"<br><br>"month"<br>"mm"<br>"m"<br><br>"dayofyear"<br>"dy"<br>"y"<br><br>"day"<br>"dd"<br>"d"<br><br>"week"<br>"ww"<br>"w"<br><br>"weekday"<br>"dw"<br>"w"<br><br>"hour"<br>"hh"<br>"hh24"<br>"hh12"<br><br>"minute"<br>"mi"<br>"n"<br><br>"second"<br>"ss"<br>"s"<br><br>"millisecond"<br>"SSS" | <ul><li>COMPONENT: **Required** A string representing the part of the date. </li><li>DATE: **Required** The date, in a standard format.</li></ul> | date_part​(COMPONENT, DATE) | date_part("MM", date("2019-10-17 11:55:12")) | 10 |
@@ -137,7 +147,7 @@ The following tables list all supported mapping functions, including sample expr
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | is_empty | Checks whether or not an object is empty. | <ul><li>INPUT: **Required** The object that you're trying to check is empty.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
-| arrays_to_object | Creates a list of objects. | <ul><li>INPUT: **Required** A grouping of key and array pairs.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
+| arrays_to_object | Creates a list of objects. | <ul><li>INPUT: **Required** A grouping of key and array pairs.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | `[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]` |
 | to_object | Creates an object based on the flat key/value pairs given. | <ul><li>INPUT: **Required** A flat list of key/value pairs.</li></ul> | to_object(INPUT) | to_object​("firstName", "John", "lastName", "Doe") | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Creates an object from the input string. | <ul><li>STRING: **Required** The string that is being parsed to create an object.</li><li>VALUE_DELIMITER: *Optional* The delimiter that separates a field from the value. The default delimiter is `:`.</li><li>FIELD_DELIMITER: *Optional* The delimiter that separates field value pairs. The default delimiter is `,`.</li></ul> | str_to_object​(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Note**: You can use the `get()` function along with `str_to_object()` to retrieve values for the keys in the string. | <ul><li>Example #1: str_to_object("firstName - John ; lastName - ; - 123 345 7890", "-", ";")</li><li>Example #2: str_to_object("firstName - John ; lastName - ; phone - 123 456 7890", "-", ";").get("firstName")</li></ul> | <ul><li>Example #1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Example #2: "John"</li></ul> |
 | contains_key | Checks if the object exists within the source data. **Note:** This function replaces the deprecated `is_set()` function. | <ul><li>INPUT: **Required** The path to be checked if it exists within the source data.</li></ul> | contains_key(INPUT) | contains_key("evars.evar.field1") | true |
@@ -384,7 +394,7 @@ The table below outlines a list of reserved characters and their corresponding e
 | ? | %3F |
 | @ | %40 |
 | &#91; | %5B |
-| &#124; | %5C |
+| `\|` | %5C |
 | &#93; | %5D |
 | ^ | %5E |
 | &#96; | %60 |

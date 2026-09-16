@@ -5,6 +5,34 @@ feature: Customer AI
 title: Getting Started in Customer AI
 description: This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
+TQID: https://experienceleague.adobe.com/nzQw-ni1l1pjMsfpaCkTVovuu2fYSRzy8hjPYjAWTmI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Getting started in Customer AI
 
@@ -23,7 +51,7 @@ The guides for Customer AI require a working understanding of the various Experi
 >
 >If you do not need to download raw scores, you can skip this step and proceed to the [configuration guide](./user-guide/configure.md).
 
-Downloading Customer AI scores is done through a combination of API calls. In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+Downloading Customer AI scores is done through a combination of API calls. In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -44,3 +72,5 @@ This guide provides example API calls to demonstrate how to format your requests
 ## Next steps
 
 Once you have completed the steps outlined in the document above, visit the [Input and Output](./data-requirements.md) documentation. This document give a brief overview of what types of data are used and produced in Customer AI.
+
+

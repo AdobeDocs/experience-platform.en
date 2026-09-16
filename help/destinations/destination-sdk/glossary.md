@@ -3,6 +3,23 @@ solution: Experience Platform
 title: Adobe Experience Platform Destination SDK glossary
 description: Understand important terminology when authoring a destination using Experience Platform Destination SDK.
 exl-id: d65f390a-a980-49b8-9570-840f03534553
+TQID: https://experienceleague.adobe.com/WNp9QltZI8-cZsW2iN7TGQrdAoZtqIDk-wFK9iRSf5s
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # [!DNL Adobe Experience Platform] Destination SDK glossary 
 
@@ -12,7 +29,7 @@ See this glossary for definitions of terms used in Destination SDK. For other [!
 
 **Aggregation policy**: When configuring how data should be exported to your real-time streaming destination, you can define how profile data is aggregated before being sent to your destination platform. This helps optimize data delivery by grouping data records based on specific criteria, reducing the frequency of API calls, and improving overall efficiency. Different policies can be configured to meet various destination requirements, ensuring that data is packaged and delivered in the most effective manner. [Read more](/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md). 
 
-**Audience metadata configuration**: An audience metadata configuration refers to the structured setup and parameters defined within [!DNL Adobe Experience Platform] that enable the programmatic creation, updating, and deletion of audience segments in a specified destination. This configuration utilizes audience metadata templates to align with the specifications of the marketing API of the destination platform. Read more about the [audience metadata configuration](/help/destinations/destination-sdk/functionality/audience-metadata-management.md) and [available macros](/help/destinations/destination-sdk/functionality/audience-metadata-management.md#macros).
+**Audience metadata configuration**: An audience metadata configuration refers to the structured setup and parameters defined within [!DNL Adobe Experience Platform] that enable the programmatic creation, updating, and deletion of audiences in a specified destination. This configuration uses audience metadata templates to align with the specifications of the marketing API of the destination platform. Read more about the [audience metadata configuration](/help/destinations/destination-sdk/functionality/audience-metadata-management.md) and [available macros](/help/destinations/destination-sdk/functionality/audience-metadata-management.md#macros).
 
 ## D {#d}
 
@@ -20,7 +37,7 @@ See this glossary for definitions of terms used in Destination SDK. For other [!
 
 **Destination instance**: A specific setup of a destination configuration in [!DNL Adobe Experience Platform], created and managed through the Experience Platform UI. It includes all necessary parameters and credentials for connecting and sending data to the destination. After establishing the connection to your destination, you can get the destination instance ID when [browsing a connection with your destination](/help/destinations/ui/destination-details-page.md).
 
-![UI image how to get destination instance ID](/help/destinations/destination-sdk/assets/testing-api/get-destination-instance-id.png)
+![UI image showing how to get destination instance ID from the URL.](/help/destinations/destination-sdk/assets/testing-api/get-destination-instance-id.png)
 
 ## P {#p}
 

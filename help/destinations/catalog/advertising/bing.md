@@ -1,8 +1,32 @@
 ---
-keywords: advertising; bing; 
+keywords: advertising; bing;
 title: Microsoft Bing connection
 description: With the Microsoft Bing connection destination, you can execute retargeting and audience targeted digital campaigns across the entire Microsoft Advertising Network, including Display advertising, Search, and Native.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
+TQID: https://experienceleague.adobe.com/IQcwmgkp-vheoz7d2-JzcgSKICIuJFHzS4dsHYLc1hc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # [!DNL Microsoft Bing] connection {#bing-destination}
 
@@ -73,7 +97,7 @@ Refer to the table below for information about the destination export type and f
 
 The [!DNL Microsoft Bing] destination requires the following setup to function correctly:
 
-1. **Enable ID sync functionality**: If this is your first time setting up [!DNL Microsoft Bing] activation and you have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), contact Adobe Consulting or Customer Care to enable ID syncs.
+1. **Enable ID sync functionality**: If this is your first time setting up [!DNL Microsoft Bing] activation and you have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in the Adobe Visitor ID Service in the past (with Adobe Audience Manager or other applications), contact Adobe Consulting or Customer Care to enable ID syncs.
    * If you previously set up [!DNL Microsoft Bing] integrations in Audience Manager, your existing ID syncs automatically carry over to Experience Platform.
 
 2. **Ensure ECID on profiles**: All profiles must have an ECID present to be successfully exported. ECID is **mandatory** for this destination.

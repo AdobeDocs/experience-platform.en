@@ -3,6 +3,22 @@ title: Connect Snowflake to Experience Platform Using The Flow Service API
 description: Learn how to connect Adobe Experience Platform to Snowflake using the Flow Service API.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
+TQID: https://experienceleague.adobe.com/sV6cHRcVjvz7ddujcgIU-zZqqZLc4fHc9yk6GK0C7g4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+    internal-label: Best practices
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 ---
 # Connect [!DNL Snowflake] to Experience Platform using the [!DNL Flow Service] API
 

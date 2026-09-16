@@ -5,6 +5,16 @@ title: Labels API Endpoint
 description: Learn how to manage data usage labels in Experience Platform using the Policy Service API.
 role: Developer
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
+TQID: https://experienceleague.adobe.com/Qy-H-Grw4eQkt4o3pECd1qL7eSnVulXKFRt1glex1yw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Labels endpoint
 
@@ -16,7 +26,7 @@ Data usage labels allow you to categorize data according to usage policies that 
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Policy Service API]](https://developer.adobe.com/experience-platform-apis/references/policy-service). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Retrieve a list of labels {#list}
 
@@ -227,3 +237,5 @@ A successful response returns the details of custom label, with HTTP code 200 (O
 ## Next steps
 
 This guide covered the use of the `/labels` endpoint in the Policy Service API. For steps on how to apply labels to datasets and fields, refer to the [dataset labels API guide](../labels/dataset-api.md).
+
+

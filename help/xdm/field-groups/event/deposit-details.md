@@ -2,6 +2,13 @@
 title: Deposit Details Schema Field Group
 description: Learn about the Deposit Details schema field group.
 exl-id: a40d17b3-cb76-4b63-9328-735fc7c55672
+TQID: https://experienceleague.adobe.com/th7pPsJEEuH5ZzBw89JUgxQ05BeEGTRIN9S1CvqcIPI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Deposit Details] schema field group
 

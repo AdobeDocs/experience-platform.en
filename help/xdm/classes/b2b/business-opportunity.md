@@ -2,6 +2,16 @@
 title: XDM Business Opportunity Class
 description: Learn about the XDM Business Opportunity class in Experience Data Model (XDM).
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
+TQID: https://experienceleague.adobe.com/SYF6sbMhbh56TucygUFbW-dlTB1xJcnlS-fftNHZ-iI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL XDM Business Opportunity] class
 

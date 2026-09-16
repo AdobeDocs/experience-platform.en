@@ -5,12 +5,25 @@ title: Access Control API Guide
 description: Access control in Adobe Experience Platform allows you to manage roles and permissions for various Experience Platform capabilities by using the Adobe Admin Console. The following sections provide additional information that developers will need to know in order to successfully make calls to the Schema Registry API.
 role: Developer
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
+TQID: https://experienceleague.adobe.com/hKLt9hw3SC38NcVW1ug-AL-afkpmaWM6QRpKSz-HZZE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # [!DNL Access Control] API guide
 
 [!DNL Access control] for [!DNL Experience Platform] is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes. See the [access control overview](../home.md) for more information.
 
-This developer guide provides information on how to format your requests to the [[!DNL Access Control API]](https://www.adobe.io/experience-platform-apis/references/access-control/), and covers the following operations:
+This developer guide provides information on how to format your requests to the [[!DNL Access Control API]](https://developer.adobe.com/experience-platform-apis/references/access-control), and covers the following operations:
 
 - [List names of permissions and resource types](./permissions-and-resource-types.md)
 - [View effective access policies for the current user](./effective-policies.md)
@@ -25,7 +38,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -46,3 +59,5 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 ## Next steps
 
 Now that you have gathered the required credentials, you can now continue to read the rest of the developer guide. Each section provides important information regarding their endpoints and demonstrate example API calls for performing CRUD operations. Each call includes the general API format, a sample request showing required headers and properly formatted payloads, and a sample response for a successful call.
+
+

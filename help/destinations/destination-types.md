@@ -3,6 +3,54 @@ keywords: destinations;destination;destination types
 title: Destination types and categories
 description: Learn about the different types and categories of destinations in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
+TQID: https://experienceleague.adobe.com/ASiVeC74mG6OUPqVdq07b1901ZUKixb4zii8yIu2dAY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+    internal-label: Sources
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: d3f95e25-a50e-4fd0-bc23-9a22409a183b
+    internal-label: Profile enrichment
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+    internal-label: Event forwarding
+  - id: e8c2a8db-c24b-44d9-ab8e-a8bc03acf6b1
+    internal-label: Data export
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+    internal-label: Properties
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
+    internal-label: Mobile experience
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+    internal-label: Behavioral data
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # Destination types and categories
 
@@ -10,7 +58,7 @@ Read this page to understand the different types and categories of [!DNL Adobe E
 
 ## Destination types {#destination-types}
 
-In [!DNL Adobe Experience Platform], we distinguish between different destination types - connections, dataset exports, and extensions. There are several types of connection destinations, allowing you to export data to API-based destinations, social destinations, CRM platforms, and many more.
+[!DNL Adobe Experience Platform] supports destination types including connections, dataset exports, and extensions. Connection destinations allow you to export data to API-based destinations, social destinations, CRM platforms, and many more.
 
 Finally, connections can also be distinguished between public destinations available across all organizations in the destinations catalog, and private destinations which [!DNL Real-Time CDP] Ultimate customers can create to satisfy their specific export use cases.
 
@@ -22,11 +70,11 @@ Finally, connections can also be distinguished between public destinations avail
 
 ## Connections {#connections}
 
-**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]**, and **[!DNL Edge Personalization]** destinations in [!DNL Adobe Experience Platform] capture event data, combine it with other data sources to form the [Real-Time Customer Profile](../profile/home.md), apply segmentation, and export audiences and qualified profiles to destinations. 
+**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]**, and **[!UICONTROL Edge Personalization]** destinations in [!DNL Adobe Experience Platform] capture event data, combine it with other data sources to form the [Real-Time Customer Profile](../profile/home.md), apply segmentation, and export audiences and qualified profiles to destinations. 
 
 ## Profile export destinations {#profile-export}
 
-Profile export destinations receive raw data, often with email address as the primary key. Experience Platform currently supports two types of profile export destinations:
+Profile export destinations receive untouched data that typically includes email address as the primary key. Experience Platform currently supports two types of profile export destinations:
 
 * [Batch (file-based) destinations](#file-based)
 * [Advanced enterprise destinations (streaming profile export destinations)](#advanced-enterprise-destinations)
@@ -69,7 +117,7 @@ Read more about how to [configure personalization destinations for same-page and
 
 ## Profile export and audience export destinations - video overview {#video}
 
-The video below runs you through the particularities of the two types of destinations:
+The video below explains the differences between the two types of destinations:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 

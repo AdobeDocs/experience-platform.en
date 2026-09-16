@@ -4,6 +4,23 @@ solution: Experience Platform
 title: Metrics API Endpoint
 description: Learn how to retrieve observability metrics in Experience Platform using the Observability Insights API.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
+TQID: https://experienceleague.adobe.com/vflDr3xjVkgrXnW48LSezGNIVPESrvQx1xAPYLRooQs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Metrics endpoint
 
@@ -11,11 +28,11 @@ Observability metrics provide insights into usage statistics, historical trends,
 
 >[!NOTE]
 >
->The previous version of the metrics endpoint (V1) has been deprecated. This document focuses exclusively on the current version (V2). For details on the V1 endpoint for legacy implementations, please refer to the [API reference](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
+>The previous version of the metrics endpoint (V1) has been deprecated. This document focuses exclusively on the current version (V2). For details on the V1 endpoint for legacy implementations, please refer to the [API reference](https://developer.adobe.com/experience-platform-apis/references/observability-insights#operation/retrieveMetricsV1).
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Observability Insights] API](https://www.adobe.io/experience-platform-apis/references/observability-insights/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Observability Insights] API](https://developer.adobe.com/experience-platform-apis/references/observability-insights). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Retrieve observability metrics
 
@@ -278,3 +295,5 @@ The following table lists the different error codes that can be returned by the 
 | `INSGHT-1003-401` | Sandbox validation error | The request could not be processed due to a sandbox validation error. Ensure that the sandbox name you provided in the `x-sandbox-name` header represents a valid, enabled sandbox for your organization before trying the request again. |
 
 {style="table-layout:auto"}
+
+

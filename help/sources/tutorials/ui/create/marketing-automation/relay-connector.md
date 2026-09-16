@@ -2,12 +2,15 @@
 title: Connect Relay to Experience Platform in the UI
 description: Learn how to create a Relay Connector custom source connection using the Adobe Experience Platform UI.
 exl-id: f80855f5-0769-4253-b737-28c46e4dea6e
+TQID: https://experienceleague.adobe.com/ACRUFLwGLJVM937cdU7rgtCA1r3MBwI7h9IyfQUO-gQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect Relay to Experience Platform in the UI
-
->[!NOTE]
->
->The [!DNL Relay Connector] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 With [!DNL Relay Connector], you can deliver personalized experiences to your customers at the most meaningful moments in their journey, helping you build stronger relationships and drive greater loyalty and value by creating an inbound connection to stream Events from your [!DNL Relay Network] integration into Adobe Experience Platform.
 

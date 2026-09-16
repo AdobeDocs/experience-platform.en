@@ -1,0 +1,49 @@
+{
+    "id": "62b5a071-8fb6-4e10-91cf-a36965f62315",
+    "lavaId": "e78663a0-0754-4836-8b0d-1ee769ae3cbd",
+    "referenceId": "pos-rBkrcJfNRvuN1x72Qr76EQ",
+    "location": "pos-123",
+    "items": [
+        {
+            "sku": "sku-1337",
+            "amount": 2300,
+            "quantity": 2,
+            "adjustedTotal": 4500,
+            "rewardsApplied": [
+                {
+                "amount": 100,
+                "rewardId": "1"
+                }
+            ]
+        }
+    ],
+    "redeemedAmount": 0,
+    "rewardsApplied": [
+        {
+            "amount": 225,
+            "rewardId": "62"
+        }
+    ],
+    "subtotal": 4275,
+    "total": 4275,
+    "transactionId": "93821687-c076-4da8-bca1-0702abc96e3c",
+    "amount": -100,
+    "expiresAt": "2027-06-03T15:18:04.266Z",
+    "rewardId": 1196,
+    "rewardName": "LAVA Points",
+    "rewardSlug": "LAVA Points",
+    "rewardType": "points",
+    "type": "ledger",
+    "timestamp": "2025-11-03T01:41:00Z",
+    "seat": "13",
+    "section": "GA4",
+    "sectionLabel": "GeneralS",
+    "eventId": "1234",
+    "eventLabel": "Green Vs Blue",
+    "eventName": "GRE1234A",
+    "venue": "ABC",
+    "venueLabel": "ABC Stadium",
+    "gate": "TEAM ST1",
+    "gateLabel": "GeneralG",
+    "row": "GA3"
+}

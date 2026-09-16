@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Create a New Product Profile in Adobe Admin Console
 description: This document covers the necessary steps needed to create a new product profile in the Adobe Admin Console. To start creating a new profile, navigate to the Product Profiles tab and click New Profile.
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
+TQID: https://experienceleague.adobe.com/u-cBcaDXyWKH84dTc71zkzcsPgVdcMp-HELJ0htkfZ4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Create a new product profile in Adobe Admin Console
 

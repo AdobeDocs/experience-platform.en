@@ -5,6 +5,19 @@ title: Create an IBM DB2  Source Connection in the UI
 type: Tutorial
 description: Learn how to create an IBM DB2 source connection using the Adobe Experience Platform UI.
 exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
+TQID: https://experienceleague.adobe.com/m0fiUBijn1xtefew4xAJj-dLyLd8gPmGcyPkP0XldBo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create an IBM DB2 source connection in the UI
 

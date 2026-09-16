@@ -3,6 +3,13 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 title: Update a connection specification using the Flow Service API
 description: You can update the properties of a connection specification through a PUT operation.
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
+TQID: https://experienceleague.adobe.com/HCEHRkpghbwByGEIGHkQvcq--iUCF5gxgm-7pUKSzwU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Update a connection specification using the Flow Service API
 

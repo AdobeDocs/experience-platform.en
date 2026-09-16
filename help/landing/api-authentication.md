@@ -6,8 +6,28 @@ description: This document provides a step-by-step tutorial for gaining access t
 role: Developer
 feature: API
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
+TQID: https://experienceleague.adobe.com/smnoNfQjs0DcOO80h2nnX0ve-3wWFqXKkdpRAxWUO6Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
-
 # Authenticate and access Experience Platform APIs
 
 This document provides a step-by-step tutorial for gaining access to an Adobe Experience Platform developer account in order to make calls to Experience Platform APIs. At the end of this tutorial, you will have generated or collected the following credentials that are required as headers in all Experience Platform API calls:
@@ -175,72 +195,6 @@ Next, use the dropdown selector to open the credentials window, generate an acce
 > * [Implementation guide for new and old applications with OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
 > * [Advantages of using the OAuth Server-to-Server credentials method](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
-+++ View deprecated information 
-
-The next step is to generate a JSON Web Token (JWT) based on your account credentials. This value is used to generate your `{ACCESS_TOKEN}` credential for use in Experience Platform API calls, which must be regenerated every 24 hours.
-
->[!IMPORTANT]
->
->For the purposes of this tutorial, the steps below outline how to generate a JWT within Developer Console. However, this generation method should only be used for testing and evaluation purposes.
->
->For regular use, the JWT must be generated automatically. For more information on how to programmatically generate JWTs, see the [service account authentication guide](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) on Adobe Developer.
-
-Select **[!UICONTROL Service Account (JWT)]** in the left navigation, then select **[!UICONTROL Generate JWT]**.
-
-![](././images/api-authentication/generate-jwt.png)
-
-In the textbox provided under **[!UICONTROL Generate custom JWT]**, paste the contents of the private key that you previously generated when adding the Experience Platform API to your service account. Then, select **[!UICONTROL Generate Token]**.
-
-![](././images/api-authentication/paste-key.png)
-
-The page updates to show the generated JWT, along with a sample cURL command that allows you to generate an access token. For the purposes of this tutorial, select **[!UICONTROL Copy]** next to **[!UICONTROL Generated JWT]** to copy the token to your clipboard.
-
-![](././images/api-authentication/copy-jwt.png)
-
-**Generate an access token**
-
-Once you have generated a JWT, you can use it in an API call to generate your `{ACCESS_TOKEN}`. Unlike the values for `{API_KEY}` and `{ORG_ID}`, a new token must be generated every 24 hours to continue using Experience Platform APIs.
-
-**Request**
-
-The following request generates a new `{ACCESS_TOKEN}` based on the credentials provided in the payload. This endpoint only accepts form data as its payload, and therefore it must be given a `Content-Type` header of `multipart/form-data`.
-
-```shell
-curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
-  -H 'Content-Type: multipart/form-data' \
-  -F 'client_id={API_KEY}' \
-  -F 'client_secret={SECRET}' \
-  -F 'jwt_token={JWT}'
-```
-
-| Property | Description |
-| --- | --- |
-| `{API_KEY}` | The `{API_KEY}` ([!UICONTROL Client ID]) that you retrieved in a [previous step](#api-ims-secret). |
-| `{SECRET}` | The client secret that you retrieved in a [previous step](#api-ims-secret). |
-| `{JWT}` | The JWT that you generated in a [previous step](#jwt). |
-
->[!NOTE]
->
->You can use the same API key, client secret, and JWT to generate a new access token for each session. This allows you to automate access token generation in your applications.
-
-**Response**
-
-```json
-{
-  "token_type": "bearer",
-  "access_token": "{ACCESS_TOKEN}",
-  "expires_in": 86399992
-}
-```
-
-| Property | Description |
-| --- | --- |
-| `token_type` | The type of token being returned. For access tokens, this value is always `bearer`. |
-| `access_token` | The generated `{ACCESS_TOKEN}`. This value, prefixed with the word `Bearer`, is required as the `Authentication` header for all Experience Platform API calls. |
-| `expires_in` | The number of milliseconds remaining until the access token expires. Once this value reaches 0, a new access token must be generated to continue using Experience Platform APIs. |
-
-+++
-
 ## Test access credentials {#test-credentials}
 
 Once you have gathered all three required credentials - access token, API key, and Organization ID - , you can try to make the following API call. This call lists all standard [!DNL Experience Data Model] (XDM) classes available to your organization. Import and execute the call in [Postman](#use-postman).
@@ -375,3 +329,5 @@ Refer to the additional resources linked below for further help getting started 
 By reading this document, you have gathered and successfully tested your access credentials for Experience Platform APIs. You can now follow along with the example API calls provided throughout the [documentation](../landing/documentation/overview.md).
 
 In addition to the authentication values you have gathered in this tutorial, many Experience Platform APIs also require a valid `{SANDBOX_NAME}` to be provided as a header. See the [sandboxes overview](../sandboxes/home.md) for more information.
+
+

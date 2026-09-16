@@ -2,6 +2,15 @@
 title: Document your destination in Adobe Experience Platform
 description: Step-by-step instructions for you to create a documentation page for your destination in Adobe Experience Platform
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
+TQID: https://experienceleague.adobe.com/bfOmkpY8eTYmQKIYJQJKIuYPRsuIdWeFSGFGbKWPp94
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Document your destination in [!DNL Adobe Experience Platform]
 
@@ -33,13 +42,6 @@ To create documentation for your destination according to the instructions in th
 ## High-level instructions to create documentation for your destination in [!DNL Adobe Experience Platform] {#high-level-instructions}
 
 At a high level, to create documentation for your destination, you need to [create a fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) of the [!DNL Adobe Experience Platform] documentation repository and edit the [provided documentation template](./self-service-template.md) in a new branch. Use the Adobe-provided template to create a new destination page. Open a pull request (PR) when you are ready. Instructions to do this are further below, in [Steps to create your new destination page](./documentation-instructions.md#steps-to-create-docs-page).
-
-<!--
-
-* In the table of contents (TOC.md) `/help/rtcdp/TOC.md`, add a link to your new destination page. Place it within the category where your destination resides in the Adobe Experience Platform user interface (for example: mobile, social, advertising). 
-* In the overview page for the respective category, add a link to your new destination page. For example, for cloud storage destinations, you would add a link to [this page](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-cat/cloud-storage/cloud-storage-destinations.html). 
-
--->
 
 ## Documentation template {#documentation-template}
 

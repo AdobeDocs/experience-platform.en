@@ -5,10 +5,25 @@ title: Delete a destination dataflow using the Flow Service API
 type: Tutorial
 description: Learn how to delete dataflows to batch and streaming destinations using the Flow Service API.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
+TQID: https://experienceleague.adobe.com/UjNmqWmjr33OaRiWvDt2emCS8dTpuTzMFU6IKxVEWdI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Delete a destination dataflow using the Flow Service API
 
-You can delete dataflows that contain errors or have become obsolete using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+You can delete dataflows that contain errors or have become obsolete using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 This tutorial covers the steps for deleting dataflows to both batch and streaming destinations using [!DNL Flow Service].
 
@@ -29,7 +44,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers {#gather-values-for-required-headers}
 
-To make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+To make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -89,3 +104,5 @@ You have successfully used the [!DNL Flow Service] API to delete an existing dat
 For steps on how to perform these operations using the user interface, refer to the tutorial on [deleting dataflows in the UI](../ui/delete-destinations.md).
 
 You can now go on and [delete destination accounts](/help/destinations/api/delete-destination-account.md) using the [!DNL Flow Service] API.
+
+

@@ -3,6 +3,20 @@ title: Snowflake Source Connector Overview
 description: Learn how to connect Snowflake to Adobe Experience Platform using APIs or the user interface.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
+TQID: https://experienceleague.adobe.com/bjgXiwFqHpLiYU9OpnvbaaZN3ab3Ch0jClm8HB6iaFE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+    internal-label: Data integration
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # [!DNL Snowflake] source
 
@@ -36,7 +50,7 @@ Provide values for the following credentials to connect [!DNL Snowflake] to Expe
 
 | Credential | Description |
 | ---------- | ----------- |
-| `account` | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `myorg-myaccount.snowflakecomputing.com`. Read the section on [retrieving your [!DNL Snowflake] account identifier](#retrieve-your-account-identifier) for additional guidance. For more information, refer to the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization).|
+| `account` | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `myorg-account123`. Read the section on [retrieving your [!DNL Snowflake] account identifier](#retrieve-your-account-identifier) for additional guidance. For more information, refer to the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization).|
 | `warehouse` | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Experience Platform. |
 | `database` | The [!DNL Snowflake] database contains the data you want to bring the Experience Platform. |
 | `username` | The username for the [!DNL Snowflake] account. |
@@ -50,7 +64,7 @@ To use key-pair authentication, first generate a 2048-bit RSA key pair. Next, pr
 
 | Credential | Description |
 | --- | --- |
-| `account` | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `myorg-myaccount.snowflakecomputing.com`. Read the section on [retrieving your [!DNL Snowflake] account identifier](#retrieve-your-account-identifier) for additional guidance. For more information, refer to the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `account` | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `myorg-account123`. Read the section on [retrieving your [!DNL Snowflake] account identifier](#retrieve-your-account-identifier) for additional guidance. For more information, refer to the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | The username of your [!DNL Snowflake] account. |
 | `privateKey` | The [!DNL Base64-]encoded private key of your [!DNL Snowflake] account. You can generate either encrypted or unencrypted private keys. If you are using an encrypted private key, then you must also provide a private key passphrase when authenticating against Experience Platform. Read the section on [retrieving your private key](#retrieve-your-private-key) for more information.  |
 | `privateKeyPassphrase` | The private key passphrase is an additional layer of security that you must use when authenticating with an encrypted private key. You are not required to provide the passphrase if you are using an unencrypted private key. |

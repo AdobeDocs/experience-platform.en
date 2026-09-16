@@ -2,16 +2,33 @@
 description: Experience Platform Destination SDK uses Pebble templates, allowing you to transform the data exported from Experience Platform into the format required by your destination.
 title: Supported transformation functions in Destination SDK
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
+TQID: https://experienceleague.adobe.com/Ffcr9a1289gNnWda79YxgEHcwuJCF9uYq2wEMroMo-A
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 ---
 # Supported transformation functions in Destination SDK
 
 Experience Platform Destination SDK uses [[!DNL Pebble] templates](https://pebbletemplates.io/), allowing you to transform the data exported from Experience Platform into the format required by your destination.
 
-The Experience Platform [!DNL Pebble] implementation has some changes, compared to the out-of-the box version provided by [!DNL Pebble]. Also, in addition to the out-of-the-box functions provided by [!DNL Pebble], Adobe has created some additional functions that you can use with Destination SDK.
+The Experience Platform [!DNL Pebble] implementation has some changes, compared to the out-of-the-box version provided by [!DNL Pebble]. Also, in addition to the out-of-the-box functions provided by [!DNL Pebble], Adobe has created some additional functions that you can use with Destination SDK.
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Where to use {#where-to-use}
 
@@ -51,7 +68,7 @@ To exemplify how [!DNL Pebble] functions are used in Destination SDK, see below 
 
 ### Use case {#date-use-case}
 
-You want to change the `lastQualificationTime` timestamp from the default [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) value that Experience Platform exports to another value preferred by your destination.
+You want to change the `lastQualificationTime` timestamp from the default [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) value that Experience Platform exports to another value preferred by your destination.
 
 ### Example {#date-example}
 
@@ -85,7 +102,7 @@ In addition to the out-of-the-box functions provided by [!DNL Pebble], see below
 
 #### Use case {#segments-use-case}
 
-These functions can be used on order to obtain a list of audiences that were added to or removed from a profile.
+These functions can be used to obtain a list of audiences that were added to or removed from a profile.
 
 #### Example {#segments-example}
 
@@ -133,63 +150,6 @@ added: {% for s in addedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %
 ```json
 added: <111111><333333>; removed: <222222>
 ```
-
-<!--
-
-### Added and removed audiences filters {#added-and-removed-segmnts-filters}
-
-#### Use case {#use-case}
-
-These filters are similar to `addedSegments` and `removedSegments`, described above. The only difference is that they are implemented as filters as opposed to functions.
-
-#### Example {#example}
-
-##### Input {#input}
-
-```json
-{
-  "identityMap": {
-    "myIdNamespace": [
-      {
-        "id": "external_id1"
-      },
-      {
-        "id": "external_id2"
-      }
-    ]
-  },
-  "segmentMembership": {
-    "ups": {
-      "111111": {
-        "lastQualificationTime": "2019-11-20T13:15:49Z",
-        "status": "realized"
-      },
-      "222222": {
-        "lastQualificationTime": "2019-11-20T13:15:49Z",
-        "status": "exited"
-      },
-      "333333": {
-        "lastQualificationTime": "2019-11-20T13:15:49Z",
-        "status": "realized"
-      }
-    }
-  }
-}
-```
-
-##### Format {#format}
-
-```java
-added: {% for s in input.profile.segmentMembership.ups | added %}<{{s.key}}>{% endfor %};|removed: {% for s in input.profile.segmentMembership.ups | removed %}<{{s.key}}>{% endfor %};
-```
-
-##### Output {#output}
-
-```json
-added: <111111><333333>;|removed: <222222>;
-```
-
--->
 
 ## Next steps {#next-steps}
 

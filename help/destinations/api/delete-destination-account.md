@@ -5,12 +5,27 @@ title: Delete a destination account using the Flow Service API
 type: Tutorial
 description: Learn how to delete a destination account using the Flow Service API.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
+TQID: https://experienceleague.adobe.com/xCKyodhDyqpezTLcoGBypwZvx8vr6cpoaUKRhsRhXjU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Delete a destination account using the Flow Service API
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from [!DNL Adobe Experience Platform]. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
-Before activating data, you need to connect to the destination by first setting up a destination account. This tutorial covers the steps to delete destination accounts that are not needed anymore by using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Before activating data, you need to connect to the destination by first setting up a destination account. This tutorial covers the steps to delete destination accounts that are not needed anymore by using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!NOTE]
 >
@@ -33,7 +48,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers {#gather-values-for-required-headers}
 
-To make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+To make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -65,78 +80,6 @@ In the Experience Platform UI, browse to **[!UICONTROL Destinations]** > **[!UIC
 Next, you can retrieve the connection ID of the destination account from the URL in your browser.
 
 ![Retrieve connection ID from URL](/help/destinations/assets/api/delete-destination-account/find-connection-id.png)
-
-<!--
-
-## Look up connection ID {#look-up-connection-id}
-
-The first step in updating your connection information is to retrieve connection details using your connection ID.
-
-**API format**
-
-```http
-GET /connections/{CONNECTION_ID}
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | The unique `id` value for the connection you want to retrieve. |
-
-{style="table-layout:auto"}
-
-**Request**
-
-The following request retrieves information regarding your connection ID.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/c8622ec7-7d94-44a5-a35a-ffcc6bdcc384' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns the current details of your connection including its credentials, unique identifier (`id`), and version.
-
-```json
-{
-    "items": [
-        {
-            "id": "c8622ec7-7d94-44a5-a35a-ffcc6bdcc384",
-            "createdAt": 1640103419202,
-            "updatedAt": 1640104751063,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
-            "sandboxId": "{SANDBOX_ID}",
-            "sandboxName": "{SANDBOX_NAME}",
-            "imsOrgId": "{ORG_ID}",
-            "name": "Airship Attributes",
-            "description": "test account connection to Airship Attributes destination",
-            "connectionSpec": {
-                "id": "34cd3131-b208-474b-b779-b487b5a2bd01",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "auth": {
-                "specName": "Bearer Token",
-                "params": {
-                    "authorizedDate": "2021-12-21",
-                    "token": "xxxx"
-                }
-            },
-            "version": "\"8c01091c-0000-0200-0000-61c2032f0000\"",
-            "etag": "\"8c01091c-0000-0200-0000-61c2032f0000\""
-        }
-    ]
-}
-```
-
--->
 
 ## Delete connection {#delete-connection}
 
@@ -182,3 +125,4 @@ The API endpoints in this tutorial follow the general Experience Platform API er
 ## Next steps {#next-steps}
 
 You have successfully used the [!DNL Flow Service] API to delete existing destination accounts. For more information on using destinations, see the [destinations overview](/help/destinations/home.md).
+

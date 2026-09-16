@@ -4,6 +4,31 @@ description: Learn how audit logs allow you to see who did what actions in Adobe
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
+TQID: https://experienceleague.adobe.com/I5y-Sbsz7sauzkzknWJBPuRwfZ-DD5ToRBwvthv6ZUs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Audit logs {#audit-logs}
 
@@ -27,6 +52,10 @@ In order to increase the transparency and visibility of activities performed in 
 In a basic sense, an audit log tells **who** performed **what** action, and **when**. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
 
 When a user performs an action, two types of audit events are recorded. A core event captures the authorization result of the action, [!UICONTROL allow] or [!UICONTROL deny], while an enhanced event captures the execution result, [!UICONTROL success] or [!UICONTROL failure]. Multiple enhanced events can be linked to the same core event. For example, when activating a destination, the core event records the authorization of the [!UICONTROL Destination Update] action, while the enhanced events record multiple [!UICONTROL Segment Activate] actions.
+
+>[!NOTE]
+>
+>A single event can act on multiple assets (batch operations; currently [!DNL Profile] events). These events return each affected asset and its status in an `assets` array, alongside an overall batch status. In CSV exports this appears as an `assets` column. See [multi-asset events](./api/events.md#multi-asset-events).
 
 >[!NOTE]
 >
@@ -159,7 +188,7 @@ Select the desired alert from the list to subscribe to receive notifications. Fo
 
 ## Managing audit logs in the API
 
-All actions that you can perform in the UI can also be done using API calls. See the [API reference document](https://www.adobe.io/experience-platform-apis/references/audit-query/) for more information.
+All actions that you can perform in the UI can also be done using API calls. See the [API reference document](https://developer.adobe.com/experience-platform-apis/references/audit-query) for more information.
 
 ## Managing audit logs for Adobe Admin Console
 
@@ -172,3 +201,5 @@ This guide covered how to manage audit logs in Experience Platform. For more inf
 To reinforce your understanding of audit logs in Experience Platform, watch the following video:
 
 >[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
+
+

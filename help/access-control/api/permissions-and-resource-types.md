@@ -5,6 +5,16 @@ title: Reference API Endpoint
 description: The reference endpoint in the Access Control API allows you view the names of available permissions and resource types, which can then be used to view effective access control policies for the current user.
 role: Developer
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
+TQID: https://experienceleague.adobe.com/ak2eLdeLnJqU5hy6QxclFGAEnQ-BRnedmMAq-TFXxPU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Reference endpoint
 

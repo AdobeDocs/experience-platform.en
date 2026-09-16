@@ -2,10 +2,17 @@
 title: Create a source connection and dataflow for Oracle NetSuite Entities using the Flow Service API
 description: Learn how to create a source connection and dataflow to bring Oracle NetSuite contacts and customer data to Experience Platform using the Flow Service API.
 exl-id: ddbb413e-a6ca-49df-b68d-37c9d2aab61b
+TQID: https://experienceleague.adobe.com/fqvuH79vrgdbXu4KpuDQgBY9LXLP2GgMC8uei6wB3IY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a source connection and dataflow for [!DNL Oracle NetSuite Entities] using the Flow Service API
 
-Read the following tutorial to learn how to bring contacts and customer data from your [!DNL Oracle NetSuite Activities Entities] account to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read the following tutorial to learn how to bring contacts and customer data from your [!DNL Oracle NetSuite Activities Entities] account to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -811,7 +818,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 ### Create a mapping {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) with data mappings defined within the request payload.
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep) with data mappings defined within the request payload.
 
 **API format**
 
@@ -994,3 +1001,5 @@ Delete your dataflow by performing a DELETE request to the [!DNL Flow Service] A
 ### Delete your account
 
 Delete your account by performing a DELETE request to the [!DNL Flow Service] API while providing the base connection ID of the account you want to delete. For complete API examples, read the guide on [deleting your source account using the API](../../delete.md).
+
+

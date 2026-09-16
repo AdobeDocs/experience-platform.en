@@ -2,6 +2,16 @@
 title: Connect Bombora Intent To Experience Platform Using The UI
 description: Learn how to connect Bombora Intent to Experience Platform
 exl-id: 76a4fed5-b2d5-46d5-9245-b52792a7d323
+TQID: https://experienceleague.adobe.com/IMnXFwoOdYaw3YUehpVoQyaxJZRQB9ZMuKThD7R-sL0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect [!DNL Bombora Intent] to Experience Platform using the UI
 

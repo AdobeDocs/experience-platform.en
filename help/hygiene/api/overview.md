@@ -3,6 +3,16 @@ title: Data Hygiene API Guide
 description: Learn how to programmatically correct or delete your customers' stored personal data in Adobe Experience Platform.
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
+TQID: https://experienceleague.adobe.com/39GR2d-gFP45tkCMfEk1-bkZ30XSdNov-ud4D1fm4wQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Data Hygiene API guide
 

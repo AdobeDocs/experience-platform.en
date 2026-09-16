@@ -5,6 +5,30 @@ title: Send Multiple Messages in a Single HTTP Request
 type: Tutorial
 description: This document provides a tutorial for sending multiple messages to Adobe Experience Platform within a single HTTP request using streaming ingestion.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
+TQID: https://experienceleague.adobe.com/2xJYZLgRjlCRLNbPmn4Fox1YanluEgSMMpdHJRErpiY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+    internal-label: XDM
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+    internal-label: Data ingestion
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+    internal-label: Schemas
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # Send multiple messages in a single HTTP request
 
@@ -19,7 +43,7 @@ This tutorial requires a working understanding of Adobe Experience Platform [!DN
 - [Data Ingestion overview](../home.md): Covers the core concepts of [!DNL Experience Platform Data Ingestion], including ingestion methods and data connectors.
 - [Streaming ingestion overview](../streaming-ingestion/overview.md): The workflow and building blocks of streaming ingestion, such as streaming connections, datasets, [!DNL XDM Individual Profile], and [!DNL XDM ExperienceEvent].
 
-This tutorial also requires you to have completed the [Authentication to Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) tutorial in order to successfully make calls to [!DNL Experience Platform] APIs. Completing the authentication tutorial provides the value for the Authorization header required by all API calls in this tutorial. The header is shown in sample calls as follows:
+This tutorial also requires you to have completed the [Authentication to Adobe Experience Platform](/help/landing/api-authentication.md) tutorial in order to successfully make calls to [!DNL Experience Platform] APIs. Completing the authentication tutorial provides the value for the Authorization header required by all API calls in this tutorial. The header is shown in sample calls as follows:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 
@@ -503,7 +527,7 @@ The second message failed because it lacked a message body. The collection reque
     },
 ```
 
-The third message failed due to an invalid organization ID being used in the header. The organization must match with the {CONNECTION_ID} that you are trying to post to. To determine which organization ID matches the streaming connection you are using, you can perform a `GET inlet` request using the [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/). See [retrieving a streaming connection](./create-streaming-connection.md#get-data-collection-url) for an example of how to retrieve previously created streaming connections. 
+The third message failed due to an invalid organization ID being used in the header. The organization must match with the {CONNECTION_ID} that you are trying to post to. To determine which organization ID matches the streaming connection you are using, you can perform a `GET inlet` request using the [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion). See [retrieving a streaming connection](./create-streaming-connection.md#get-data-collection-url) for an example of how to retrieve previously created streaming connections. 
 
 The fourth message failed because it did not follow the expected XDM schema. The `xdmSchema` included in the header and body of the request do not match the XDM schema of the `{DATASET_ID}`. Correcting the schema in the message header and body allows it to pass DCCS validation and be successfully sent to [!DNL Experience Platform]. The message body must also be updated to match the XDM schema of the `{DATASET_ID}` for it to pass streaming validation on [!DNL Experience Platform]. For more information on what happens to messages that successfully stream to Experience Platform, see the [confirm messages ingested](#confirm-messages-ingested) section of this tutorial.
 
@@ -580,3 +604,5 @@ The following table shows status codes returned by successful and failed respons
 | 429  | Too many requests within specified time duration. |
 | 500  | Error in processing payload. See the response body for a more specific error message (For example, Message payload schema not specified, or did not match the XDM definition in [!DNL Experience Platform]). |
 | 503  | Service is not currently available. Clients should retry at least 3 times using an exponential back-off strategy. |
+
+

@@ -4,6 +4,36 @@ solution: Experience Platform
 title: XDM System Troubleshooting Guide
 description: Find answers to frequently asked questions about Experience Data Model (XDM), including steps to resolve common API errors.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
+TQID: https://experienceleague.adobe.com/O4-612CGo5FKSlxcDjkhMgn0mN-VoTTbQxpo98QTLog
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+    internal-label: Best practices
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+    internal-label: Troubleshooting
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # XDM System troubleshooting guide
 

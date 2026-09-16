@@ -2,6 +2,13 @@
 title: Connect MariaDB To Experience Platform Using The Flow Service API
 description: Learn how to connect your MariaDB account to Experience Platform using APIs.
 exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
+TQID: https://experienceleague.adobe.com/XFk9VS75ukxM7x5MI1hZ1LwoJl-IZN2Y294NR4pjic4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect [!DNL MariaDB] to Experience Platform using the [!DNL Flow Service] API
 

@@ -3,6 +3,18 @@ title: Classification Algorithms
 description: Learn how to configure and optimize various classification algorithms with key parameters, descriptions, and example code to help you implement advanced statistical models.
 role: Developer
 exl-id: 9105ab04-b480-48a0-b8f7-cf0ed5e5399d
+TQID: https://experienceleague.adobe.com/oHjmxfPSwGAPRqt7NhiImRwULvGRr4uY1hbJBFByBqM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Classification algorithms {#classification-algorithms}
 

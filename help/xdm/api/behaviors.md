@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Behaviors API Endpoint
 description: The /behaviors endpoint in the Schema Registry API allows you to retrieve all available behaviors in the global container.
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
+TQID: https://experienceleague.adobe.com/be7cMDKNfX9zbZ5xi0FS085TrG7stuq82Xgu5zPiyXk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Behaviors endpoint
 

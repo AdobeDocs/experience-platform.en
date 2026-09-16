@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Explore a Marketing Automation System Using the Flow Service API
 description: This tutorial uses the Flow Service API to explore marketing automation systems.
 exl-id: 250c1ba0-1baa-444f-ab2b-58b3a025561e
+TQID: https://experienceleague.adobe.com/z7QD-3r3Ja53WRQ-sLBL8awn1c3Ey9LZEL7Dsro02Q8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Explore a marketing automation system using the [!DNL Flow Service] API
 
@@ -30,7 +40,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
@@ -179,3 +189,5 @@ A successful response returns the structure of a table. Details regarding each o
 ## Next steps
 
 By following this tutorial, you have explored your marketing automation system, found the path of the table you wish to bring in to [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your marketing automation system and bring it into Experience Platform](../collect/marketing-automation.md).
+
+

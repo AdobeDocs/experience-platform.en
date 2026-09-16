@@ -3,6 +3,13 @@ title: Create a source connection and dataflow for SAP Commerce using the Flow S
 description: Learn how to create a source connection and dataflow to bring SAP Commerce data to Experience Platform using the Flow Service API.
 badge: Beta
 exl-id: 580731b9-0c04-4f83-a475-c1890ac5b7cd
+TQID: https://experienceleague.adobe.com/B05a7-7L-2DfqhFv6nfuTHHHSu6oaYVLGAwYgIOP5-o
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a source connection and dataflow for [!DNL SAP Commerce] using the Flow Service API
 
@@ -10,7 +17,7 @@ exl-id: 580731b9-0c04-4f83-a475-c1890ac5b7cd
 >
 >The [!DNL SAP Commerce] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-The following tutorial walks you through the steps to create a [!DNL SAP Commerce] source connection and a dataflow to bring [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) contacts and customer data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a [!DNL SAP Commerce] source connection and a dataflow to bring [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) contacts and customer data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -756,7 +763,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 ### Create a mapping {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) with data mappings defined within the request payload.
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep) with data mappings defined within the request payload.
 
 **API format**
 
@@ -1083,3 +1090,5 @@ Delete your dataflow by performing a DELETE request to the [!DNL Flow Service] A
 ### Delete your account
 
 Delete your account by performing a DELETE request to the [!DNL Flow Service] API while providing the base connection ID of the account you want to delete. For complete API examples, read the guide on [deleting your source account using the API](../../delete.md).
+
+

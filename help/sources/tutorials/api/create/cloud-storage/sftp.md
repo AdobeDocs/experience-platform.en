@@ -2,12 +2,19 @@
 title: Create an SFTP Base Connection Using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to an SFTP (Secure File Transfer Protocol) server using the Flow Service API.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
+TQID: https://experienceleague.adobe.com/4uy6b-b8DnjvMbOyLuKjK1tv2CEBvVBLB4LolYFAWiw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create an SFTP base connection using the [!DNL Flow Service] API
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL SFTP] (Secure File Transfer Protocol) using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial walks you through the steps to create a base connection for [!DNL SFTP] (Secure File Transfer Protocol) using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -181,3 +188,5 @@ A successful response returns the unique identifier (`id`) of the newly created 
 ## Next steps
 
 By following this tutorial, you have created an [!DNL SFTP] connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md).
+
+

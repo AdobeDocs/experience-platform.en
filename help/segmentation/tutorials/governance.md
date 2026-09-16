@@ -4,6 +4,28 @@ title: Enforce Data Usage Compliance for an Audience Segment Using APIs
 type: Tutorial
 description: This tutorial covers the steps for enforcing data usage compliance segment definitions using APIs.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
+TQID: https://experienceleague.adobe.com/HBPOkNAQn79tLQvtzccIDiolcoIWUEVGMkz19mCSwss
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Enforce data usage compliance for a segment definition using APIs
 
@@ -30,7 +52,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -179,7 +201,7 @@ A successful response returns the details of the merge policy.
 >
 > This step assumes that you have at least one active data usage policy that prevents specific marketing actions to be performed on data containing certain labels. If you do not have any applicable usage policies for the datasets being evaluated, please follow the [policy creation tutorial](../../data-governance/policies/create.md) to create one before continuing with this step.
 
-Once you have obtained the IDs of the merge policy's source datasets, you can use the [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) to evaluate those datasets against specific marketing actions in order to check for data usage policy violations.
+Once you have obtained the IDs of the merge policy's source datasets, you can use the [Policy Service API](https://developer.adobe.com/experience-platform-apis/references/policy-service) to evaluate those datasets against specific marketing actions in order to check for data usage policy violations.
 
 To evaluate the datasets, you must provide the name of the marketing action in the path of a POST request, while providing the dataset IDs within the request body, as shown in the example below.
 
@@ -376,3 +398,5 @@ See the section on [exporting a segment definition](./evaluate-a-segment.md#expo
 ## Next steps
 
 By following this tutorial, you have looked up the data usage labels associated with a segment definition and tested them for policy violations against specific marketing actions. For more information on Data Governance in [!DNL Experience Platform], please read the overview for [Data Governance](../../data-governance/home.md).
+
+

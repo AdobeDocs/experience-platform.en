@@ -5,6 +5,18 @@ title: Import a Packaged Recipe in the Data Science Workspace UI
 type: Tutorial
 description: This tutorial provides insight on how to configure and import a packaged recipe using the provided Retail Sales example. By the end of this tutorial, you will be ready to create, train, and evaluate a Model in Adobe Experience Platform Data Science Workspace.
 exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
+TQID: https://experienceleague.adobe.com/e1CL3Ujzkapb-A8b38TB9fwJvS--9HazSefikiYWiOg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Import a packaged recipe in the Data Science Workspace UI
 

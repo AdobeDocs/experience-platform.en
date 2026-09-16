@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Oracle Object Storage Source Connector Overview
 description: Learn how to connect Oracle Object Storage to Adobe Experience Platform using APIs or the user interface.
 exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
+TQID: https://experienceleague.adobe.com/oXD-5mmqnWd-dFHwamRr4sJTY90xg9hLZLS3-NbpR7g
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Oracle Object Storage connector
 

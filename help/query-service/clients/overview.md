@@ -4,6 +4,15 @@ solution: Experience Platform
 title: Connect Clients to Query Service
 description: This document explains how to connect to Query Service from a variety of desktop client applications and how to verify those connections.
 exl-id: 2ba20179-5adb-4259-a120-231a40e78054
+TQID: https://experienceleague.adobe.com/GUfJaqfxsqSJ6vNWNYE2hLP0VK8cFV7Q86EtFYmXyX8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect clients to Query Service
 

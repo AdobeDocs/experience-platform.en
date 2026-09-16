@@ -2,6 +2,16 @@
 title: Apply access labels to manage user access to sources dataflows in the UI
 description: Learn how to use the Experience Platform UI to apply access labels and manage user access to your sources dataflows.
 exl-id: 7aab9706-2f43-43c7-9878-1959d5a8a6b0
+TQID: https://experienceleague.adobe.com/cpQ8zAQ2FLqOWJif9azYdBn-fgWPpC-HQZCU2JdcqeU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Apply access labels to manage user access to sources dataflows in the UI
 

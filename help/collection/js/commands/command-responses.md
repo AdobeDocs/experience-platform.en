@@ -2,6 +2,25 @@
 title: Handling command responses
 description: Handle responses from commands using JavaScript promises.
 exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
+TQID: https://experienceleague.adobe.com/72g3zAMfo1eQx--IggYz-xm8k2FnfuKg1SZBD4vRwtE
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # Handling command responses
 

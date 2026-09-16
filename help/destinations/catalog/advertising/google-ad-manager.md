@@ -3,6 +3,42 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager connection
 description: Google Ad Manager, formerly known as DoubleClick for Publishers or DoubleClick AdX, is an ad serving platform from Google that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
+TQID: https://experienceleague.adobe.com/nMwcAbFLTYujcLgpnOgUO3lcGXYvxkdOHO9cDg5IvSs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # [!DNL Google Ad Manager] connection
 
@@ -26,7 +62,7 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 * Activated audiences are created programmatically in the [!DNL Google] platform.
 * [!DNL Experience Platform] does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 * After mapping an audience to a [!DNL Google Ad Manager] destination, the audience name appears immediately in the [!DNL Google Ad Manager] user interface.
-* Segment population needs 24-48 hours to appear in [!DNL Google Ad Manager]. Additionally, audiences must have an audience size of at least 50 profiles to be displayed in [!DNL Google Ad Manager]. Audiences with sizes smaller than 50 profiles will not be populated in [!DNL Google Ad Manager].
+* Audience population needs 24-48 hours to appear in [!DNL Google Ad Manager]. Additionally, audiences must have an audience size of at least 50 profiles to be displayed in [!DNL Google Ad Manager]. Audiences with sizes smaller than 50 profiles will not be populated in [!DNL Google Ad Manager].
 
 ## Supported Identities {#supported-identities}
 
@@ -82,7 +118,7 @@ Refer to the table below for information about the destination export type and f
 
 ## Prerequisites {#prerequisites}
 
-If you are looking to create your first destination with [!DNL Google Ad Manager] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Google] integrations in Audience Manager, the ID syncs you had set up carry over to Experience Platform.
+If you are looking to create your first destination with [!DNL Google Ad Manager] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in the Adobe Visitor ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Google] integrations in Audience Manager, the ID syncs you had set up carry over to Experience Platform.
 
 ### Allow-listing {#allow-listing}
 

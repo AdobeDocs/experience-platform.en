@@ -2,8 +2,25 @@
 keywords: Experience Platform;Tutorial;feature pipeline;Data Science Workspace;popular topics
 title: Create a Feature Pipeline Using the Model Authoring SDK
 type: Tutorial
-description: Adobe Experience Platform allows you to build and create custom feature pipelines to perform feature engineering at scale through the Sensei Machine Learning Framework Runtime. This document describes the various classes found in a feature pipeline, and provides a step-by-step tutorial for creating a custom feature pipeline using the Model Authoring SDK in PySpark.
+description: Adobe Experience Platform allows you to build and create custom feature pipelines to perform feature engineering at scale through the Adobe AI Machine Learning Framework Runtime. This document describes the various classes found in a feature pipeline, and provides a step-by-step tutorial for creating a custom feature pipeline using the Model Authoring SDK in PySpark.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
+TQID: https://experienceleague.adobe.com/HWziPP2Hj-x5e9fgPEVjtaPPLWfBthLSt-FSv0CC0AI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Create a feature pipeline using the Model Authoring SDK
 
@@ -17,7 +34,7 @@ exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 >
 > Feature Pipelines are currently only available via API. 
 
-Adobe Experience Platform allows you to build and create custom feature pipelines to perform feature engineering at scale through the Sensei Machine Learning Framework Runtime (hereinafter referred to as "Runtime").
+Adobe Experience Platform allows you to build and create custom feature pipelines to perform feature engineering at scale through the Adobe AI Machine Learning Framework Runtime (hereinafter referred to as "Runtime").
 
 This document describes the various classes found in a feature pipeline, and provides a step-by-step tutorial for creating a custom feature pipeline using the [Model Authoring SDK](./sdk.md) in PySpark.
 
@@ -388,7 +405,7 @@ scoring.dataSaver: MyDatasetSaver
 
 ## Create your feature pipeline Engine using the API {#create-feature-pipeline-engine-api}
 
-Now that you have authored your feature pipeline, you need to create a Docker image to make a call to the feature pipeline endpoints in the [!DNL Sensei Machine Learning] API. You need a Docker image URL in order to make a call to the feature pipeline endpoints.
+Now that you have authored your feature pipeline, you need to create a Docker image to make a call to the feature pipeline endpoints in the Adobe AI Machine Learning API. You need a Docker image URL in order to make a call to the feature pipeline endpoints.
 
 >[!TIP]
 >
@@ -400,7 +417,7 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Create a feature pipeline engine {#create-engine-api}
 
-Once you have your Docker image location, you can [create a feature pipeline engine](../api/engines.md#feature-pipeline-docker) using the [!DNL Sensei Machine Learning] API by performing a POST to `/engines`. Successfully creating a feature pipeline engine provides you with an Engine unique identifier (`id`). Make sure to save this value before continuing.
+Once you have your Docker image location, you can [create a feature pipeline engine](../api/engines.md#feature-pipeline-docker) using the Adobe AI Machine Learning API by performing a POST to `/engines`. Successfully creating a feature pipeline engine provides you with an Engine unique identifier (`id`). Make sure to save this value before continuing.
 
 ### Create an MLInstance {#create-mlinstance}
 
@@ -438,4 +455,4 @@ Once the scoring has completed, your feature pipeline should be operational.
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-By reading this document, you have authored a feature pipeline using the Model Authoring SDK, created a Docker image, and used the Docker image URL to create a feature pipeline Model by using the [!DNL Sensei Machine Learning] API. You are now ready to continue transforming datasets and extracting data features at scale using the [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
+By reading this document, you have authored a feature pipeline using the Model Authoring SDK, created a Docker image, and used the Docker image URL to create a feature pipeline Model by using the Adobe AI Machine Learning API. You are now ready to continue transforming datasets and extracting data features at scale using the [[Adobe AI Machine Learning API]](../api/getting-started.md).

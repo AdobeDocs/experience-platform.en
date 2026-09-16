@@ -5,6 +5,25 @@ title: Connect to streaming destinations and activate data using the Flow Servic
 description: This document covers the creation of streaming destinations by using the Adobe Experience Platform API
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
+TQID: https://experienceleague.adobe.com/ggi4Jebs6PEwz6T-mWe6sIa9h48krK85CdosyI8DBCg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Connect to streaming destinations and activate data using the Flow Service API
 
@@ -47,7 +66,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values}
 
-To make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+To make calls to Experience Platform APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
@@ -67,7 +86,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ### Swagger documentation {#swagger-docs}
 
-You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). We recommend that you use this tutorial and the Swagger documentation page in parallel.
+You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe I/O](https://developer.adobe.com/experience-platform-apis/references/flow-service). We recommend that you use this tutorial and the Swagger documentation page in parallel.
 
 ## Get the list of available streaming destinations {#get-the-list-of-available-streaming-destinations}
 
@@ -468,7 +487,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 |`{DATAFLOW_ID}`| In the URL, use the ID of the dataflow that you created in the previous step. |
 |`{ETAG}` | Get the `{ETAG}` from the response in the previous step, [Create a dataflow](#create-dataflow). The response format in the previous step has escaped quotes. You must use the unescaped values in the header of the request. See the example below: <br> <ul><li>Response example: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Value to use in your request: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> The etag value updates with every successful update of a dataflow. |
-| `{SEGMENT_ID}`| Provide the audience ID that you want to export to this destination. To retrieve audience IDs for the audiences that you want to activate, see [retrieve a audience definition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in the Experience Platform API reference. |
+| `{SEGMENT_ID}`| Provide the audience ID that you want to export to this destination. To retrieve audience IDs for the audiences that you want to activate, see [retrieve a audience definition](https://developer.adobe.com/experience-platform-apis/references/segmentation#operation/retrieveSegmentDefinitionById) in the Experience Platform API reference. |
 | `{PROFILE_ATTRIBUTE}`| For example, `"person.lastName"` |
 | `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To add an audience to a dataflow, use the `add` operation. |
 | `path` | Defines the part of the flow that is to be updated. When adding an audience to a dataflow, use the path specified in the example. |
@@ -634,3 +653,5 @@ You have successfully connected Experience Platform to one of your preferred str
 
 *   [Destinations overview](../home.md)
 *   [Destinations Catalog overview](../catalog/overview.md)
+
+

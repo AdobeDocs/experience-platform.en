@@ -1,12 +1,24 @@
 ---
 keywords: Experience Platform;publish a model;Data Science Workspace;popular topics;sensei machine learning api
 solution: Experience Platform
-title: Publish a Model as a Service Using the Sensei Machine Learning API
+title: Publish a Model as a Service Using the Adobe AI Machine Learning API
 type: Tutorial
-description: This tutorial covers the process of publishing a model as a service using the Sensei Machine Learning API.
+description: This tutorial covers the process of publishing a model as a service using the Adobe AI Machine Learning API.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
+TQID: https://experienceleague.adobe.com/VhA5sSNIEJCWME0x7BMjswFVYUPGLQof-O8U2-bYfdw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
-# Publish a model as a service using the [!DNL Sensei Machine Learning API]
+# Publish a model as a service using the Adobe AI Machine Learning API
 
 >[!NOTE]
 >
@@ -14,7 +26,7 @@ exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 >
 >This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
-This tutorial covers the process of publishing a model as a service using the [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
+This tutorial covers the process of publishing a model as a service using the [Adobe AI Machine Learning API](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Getting started
 
@@ -22,7 +34,7 @@ This tutorial requires a working understanding of Adobe Experience Platform Data
 
 To follow along with this tutorial, you must have an existing ML Engine, ML Instance, and Experiment. For steps on how to create these in the API, see the tutorial on [importing a packaged recipe](./import-packaged-recipe-api.md).
 
-Finally, before starting this tutorial, please review the [getting started](../api/getting-started.md) section of the developer guide for important information that you need to know in order to successfully make calls to the [!DNL Sensei Machine Learning] API, including the required headers used throughout this tutorial:
+Finally, before starting this tutorial, please review the [getting started](../api/getting-started.md) section of the developer guide for important information that you need to know in order to successfully make calls to the Adobe AI Machine Learning API, including the required headers used throughout this tutorial:
 
 - `{ACCESS_TOKEN}`
 - `{ORG_ID}`
@@ -38,7 +50,7 @@ The following table outlines some common terminology used in this tutorial:
 
 | Term | Definition |
 | --- | --- |
-| **Machine Learning Instance (ML Instance)** | An instance of a [!DNL Sensei] Engine for a particular tenant, containing specific data, parameters, and [!DNL Sensei] code. |
+| **Machine Learning Instance (ML Instance)** | An instance of a Adobe AI Engine for a particular tenant, containing specific data, parameters, and Adobe AI code. |
 | **Experiment** | An umbrella entity for holding training Experiment Runs, scoring Experiment Runs, or both. |
 | **Scheduled Experiment** | A term to describe the automation of training or scoring Experiment Runs, governed by a user defined schedule. |
 | **Experiment Run** | A particular instance of training or scoring Experiments. Multiple Experiment Runs from a particular Experiment may differ in dataset values used for training or scoring. |

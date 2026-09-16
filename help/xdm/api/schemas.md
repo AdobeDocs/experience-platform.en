@@ -4,6 +4,19 @@ solution: Experience Platform
 title: Schemas API Endpoint
 description: The /schemas endpoint in the Schema Registry API allows you to programmatically manage XDM schemas within your experience application.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
+TQID: https://experienceleague.adobe.com/P0NBe5hK8y-qeUimpRpb3PXqwjbxjKmS1l665a5nfj4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Schemas endpoint
 
@@ -11,7 +24,7 @@ A schema can be thought of as the blueprint for the data you wish to ingest into
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The API endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Retrieve a list of schemas {#list}
 
@@ -750,3 +763,4 @@ curl -X DELETE \
 A successful response returns HTTP status 204 (No Content) and a blank body.
 
 You can confirm the deletion by attempting a lookup (GET) request to the schema. You will need to include an `Accept` header in the request, but should receive an HTTP status 404 (Not Found) because the schema has been removed from the Schema Registry.
+

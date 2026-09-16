@@ -5,6 +5,7 @@ breadcrumb-title: Segmentation Service Guide
 user-guide-description: Build audiences from your Real-Time Customer Profile data using Adobe Experience Platform generated segment definitions or external sources.
 feature: Segments
 role: User
+nudge: true
 ---
 
 # Adobe Experience Platform Segmentation Service {#segmentation}
@@ -30,8 +31,11 @@ role: User
     - [Audience dashboard](ui/audience-dashboard.md)
     - [Audience Portal](ui/audience-portal.md)
     - [Audience Composition](ui/audience-composition.md)
+    - {hide-from-toc} [Payload Rank and Payload Exclude operators](ui/payload-rank-exclude.md)
     - {hide-from-toc} [Audience Composition enhancements](ui/composition-enhancements.md)
     - [Segment Builder](ui/segment-builder.md)
+    - {hide-from-toc} [Audience Builder](ui/audience-builder.md)
+    - [Segment Builder (B2B Edition)](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/segmentation/audience-builder)
     - [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
     - {hide-from-toc} [Ignore year time constraint update](ui/ignore-year.md)
     - {hide-from-toc} [Time constraints refactoring](ui/segment-refactoring.md)
@@ -44,6 +48,7 @@ role: User
   - [Streaming segmentation](methods/streaming-segmentation.md)
   - [Edge segmentation](methods/edge-segmentation.md)
   - [Flexible audience evaluation](methods/flexible-audience-evaluation.md)
+  - [On-demand evaluation](methods/on-demand-evaluation.md)
 - Audience types {#types}
   - [Overview](types/overview.md)
   - [People audiences](types/people-audiences.md)
@@ -77,5 +82,5 @@ role: User
   - [Miscellaneous functions](pql/misc-functions.md)
 - {hide-from-toc} [Eligibility criteria update](./eligibility-criteria-update.md)
 - [Frequently asked questions](./faq.md)
-- [API reference](https://www.adobe.io/experience-platform-apis/references/segmentation/)
+- [API reference](https://developer.adobe.com/experience-platform-apis/references/segmentation)
 - [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

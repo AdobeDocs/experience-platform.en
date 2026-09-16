@@ -3,6 +3,16 @@ title: Azure Event Hubs Source Connector Overview
 description: Learn how to connect Azure Event Hubs to Adobe Experience Platform using APIs or the user interface.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
+TQID: https://experienceleague.adobe.com/q3R0uTEeseolaLxThcmTmCcrI-vDFOh3EQvR7ezDZPc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # [!DNL Azure Event Hubs] source
 
@@ -118,6 +128,10 @@ See the list below for different regions of Experience Platform subnets:
 See the following [[!DNL Event Hubs] document](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) for more information on network rule sets.
 
 ## Connect [!DNL Event Hubs] to Experience Platform
+
+>[!IMPORTANT]
+>
+>Your [!DNL Event Hub] must have at least one consumer group configured before you connect it to Experience Platform. Without a consumer group, the connection fails with an internal server error. See the [Microsoft documentation on consumer groups](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#consumer-groups) for steps to create one.
 
 >[!NOTE]
 >

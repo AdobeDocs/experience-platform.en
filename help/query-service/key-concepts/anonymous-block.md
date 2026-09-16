@@ -2,6 +2,15 @@
 title: Anonymous Block in Query Service
 description: The anonymous block is an SQL syntax supported by Adobe Experience Platform Query Service, which allows you to efficiently execute a sequence of queries
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
+TQID: https://experienceleague.adobe.com/YuhEMk5Q-VnFZaynxpXg-9i9Vz-v-iFjun0z5dW0TuM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Anonymous block in Query Service
 

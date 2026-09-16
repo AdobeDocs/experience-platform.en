@@ -4,8 +4,17 @@ solution: Experience Platform
 title: Demographic Details Schema Field Group
 description: Learn about the Demographic Details schema field group.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
+TQID: https://experienceleague.adobe.com/MWviOBEMgrBSyVDBvMtyLUzdfriHML8P1ZZJAzSDQaQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
-
 # [!UICONTROL Demographic Details] schema field group
 
 >[!NOTE]
@@ -19,7 +28,7 @@ exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 | Property | Data type | Description |
 | --- | --- | --- |
 | `person.name` | [Person name](../../data-types/person-name.md)  | An object whose sub-fields describe various elements of a person's name. |
-| `person.birthDate` | Date | The full date a person was born on, in the form of an ISO 8601 timestamp. |
+| `person.birthDate` | Date | The full date a person was born on, in the form of an [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) date (`yyyy-MM-dd`). |
 | `person.birthDayAndMonth` | String | The day and month a person was born, in the format MM-DD. This field should be used when the day and month of a person's birth is known, but not the year. |
 | `person.birthYear` | Integer  | The year a person was born, including the century (such as 1989). This field should be used when only the person's age is known, not the full birth date. |
 | `person.gender` | String | The gender identity of the person. |

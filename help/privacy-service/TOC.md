@@ -5,6 +5,7 @@ breadcrumb-title: Privacy Service Guide
 user-guide-description: Manage customer data requests to comply with legal privacy regulations like GDPR and CCPA.
 feature: Privacy
 role: User,Admin
+nudge: true
 ---
 
 # Adobe Experience Platform Privacy Service {#privacy}
@@ -32,5 +33,5 @@ role: User,Admin
   * [Terminology](./regulations/terminology.md)
 * [Best practices](./best-practices.md)
 * [Troubleshooting guide](./troubleshooting-guide.md)
-* [API reference](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
+* [API reference](https://developer.adobe.com/experience-platform-apis/references/privacy-service)
 * [Release notes](./release-notes.md)

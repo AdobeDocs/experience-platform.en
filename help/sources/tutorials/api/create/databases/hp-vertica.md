@@ -5,6 +5,13 @@ title: Create an HP Vertica Base Connection Using the Flow Service API
 type: Tutorial
 description: Learn how to connect HP Vertica to Adobe Experience Platform using the Flow Service API.
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
+TQID: https://experienceleague.adobe.com/MuRf-AOCtSwqWMY-olaYUXtlgUsyBOPhBR3pxdWBGJU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create an [!DNL HP Vertica] base connection using the [!DNL Flow Service] API
 
@@ -14,7 +21,7 @@ exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL HP Vertica] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial walks you through the steps to create a base connection for [!DNL HP Vertica] using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -103,3 +110,5 @@ By following this tutorial, you have created an [!DNL HP Vertica] base connectio
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
 * [Create a dataflow to bring database data to Experience Platform using the [!DNL Flow Service] API](../../collect/database-nosql.md)
+
+

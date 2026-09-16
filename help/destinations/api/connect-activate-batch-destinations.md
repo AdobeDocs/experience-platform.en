@@ -5,6 +5,36 @@ title: Connect to batch destinations and activate data using the Flow Service AP
 description: Step-by-step instructions to use the Flow Service API to create a batch cloud storage or email marketing destination in Experience Platform and activate data
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
+TQID: https://experienceleague.adobe.com/Y49HlAMbsTxBwGRmCEBzeaD35cKBLrdYF1mZF6p0w3o
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Connect to file-based email marketing destinations and activate data using the Flow Service API
 
@@ -59,7 +89,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values-headers}
 
-To make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+To make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -79,7 +109,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ### API reference documentation {#api-reference-documentation}
 
-You can find accompanying reference documentation for all the API operations in this tutorial. See the [Flow Service API documentation on Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). We recommend that you use this tutorial and the API reference documentation in parallel.
+You can find accompanying reference documentation for all the API operations in this tutorial. See the [Flow Service API documentation on Adobe I/O](https://developer.adobe.com/experience-platform-apis/references/flow-service). We recommend that you use this tutorial and the API reference documentation in parallel.
 
 ## Get the list of available destinations {#get-the-list-of-available-destinations}
 
@@ -928,7 +958,7 @@ curl -X POST \
 | --------- | ----------- |
 |`name`| Provide a name for the dataflow you are creating. |
 |`description` | Optionally, you can provide a description for the dataflow. |
-| `flowSpec.Id`| Use the flow spec ID for the batch destination that you want to connect to. To retrieve the flow spec ID, perform a GET operation on the `flowspecs` endpoint, as shown in the [flow specs API reference documentation](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). In the response, look for `upsTo` and copy the corresponding ID of the batch destination that you want to connect to. For example, for [!DNL Adobe Campaign], look for `upsToCampaign` and copy the `id` parameter.|
+| `flowSpec.Id`| Use the flow spec ID for the batch destination that you want to connect to. To retrieve the flow spec ID, perform a GET operation on the `flowspecs` endpoint, as shown in the [flow specs API reference documentation](https://developer.adobe.com/experience-platform-apis/references/flow-service#operation/retrieveFlowSpec). In the response, look for `upsTo` and copy the corresponding ID of the batch destination that you want to connect to. For example, for [!DNL Adobe Campaign], look for `upsToCampaign` and copy the `id` parameter.|
 | `sourceConnectionIds`| Use the source connection ID you obtained in the step [Connect to your Experience Platform data](#connect-to-your-experience-platform-data).|
 | `targetConnectionIds`| Use the target connection ID you obtained in the step [Connect to batch destination](#connect-to-batch-destination).|
 | `transformations`| In the next step, you will populate this section with the audiences and profile attributes to be activated. |
@@ -959,7 +989,7 @@ A successful response returns the ID (`id`) of the newly created dataflow and an
 
 Having created all the connections and the dataflow, you now can activate your profile data to the destination platform. In this step, you select which audiences and which profile attributes to export to the destination.
 
-You can also determine the file naming format of the exported files and which attributes should be used as [deduplication keys](../ui/activate-batch-profile-destinations.md#mandatory-attributes) or [mandatory attributes](../ui/activate-batch-profile-destinations.md#mandatory-attributes). In this step, you can also determine the schedule to send data to the destination.
+You can also determine the file naming format of the exported files and which attributes should be used as [deduplication keys](../ui/batch-destinations-mapping-reference.md#deduplication-keys) or [mandatory attributes](../ui/batch-destinations-mapping-reference.md#mandatory-attributes). In this step, you can also determine the schedule to send data to the destination.
 
 To activate audiences to your new destination, you must perform a JSON PATCH operation, similar to the example below. You can activate mutiple audiences and profile attributes in one call. To learn more about JSON PATCH, see the [RFC specification](https://tools.ietf.org/html/rfc6902). 
 
@@ -1037,7 +1067,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 |`{DATAFLOW_ID}`| In the URL, use the ID of the dataflow that you created in the previous step. |
 |`{ETAG}` | Get the `{ETAG}` from the response in the previous step, [Create a dataflow](#create-dataflow). The response format in the previous step has escaped quotes. You must use the unescaped values in the header of the request. See the example below: <br> <ul><li>Response example: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Value to use in your request: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> The etag value updates with every successful update of a dataflow. |
-| `{SEGMENT_ID}`| Provide the audience ID that you want to export to this destination. To retrieve audience IDs for the audiences that you want to activate, see [retrieve an audience definition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in the Experience Platform API reference. |
+| `{SEGMENT_ID}`| Provide the audience ID that you want to export to this destination. To retrieve audience IDs for the audiences that you want to activate, see [retrieve an audience definition](https://developer.adobe.com/experience-platform-apis/references/segmentation#operation/retrieveSegmentDefinitionById) in the Experience Platform API reference. |
 | `{PROFILE_ATTRIBUTE}`| For example, `"person.lastName"` |
 | `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To add an audience to a dataflow, use the `add` operation. |
 | `path` | Defines the part of the flow that is to be updated. When adding an audience to a dataflow, use the path specified in the example. |
@@ -1257,3 +1287,5 @@ You have successfully connected Experience Platform to one of your preferred fil
 * [Destinations overview](../home.md)
 * [Destinations Catalog overview](../catalog/overview.md)
 * [Update destination dataflows using the Flow Service API](../api/update-destination-dataflows.md)
+
+

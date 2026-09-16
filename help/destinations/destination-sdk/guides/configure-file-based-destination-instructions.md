@@ -2,6 +2,25 @@
 description: This page lists and describes the steps to configure a file-based destination using Destination SDK.
 title: Use Destination SDK to configure a file-based destination
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
+TQID: https://experienceleague.adobe.com/p5yz1joupGEhkXid-yznXDgvyLUK8fIg2D3u6J0uzpE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
 ---
 # Use Destination SDK to configure a file-based destination
 
@@ -213,7 +232,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
         "allowMandatoryFieldSelection": true,
         "allowDedupeKeyFieldSelection": true,
         "defaultExportMode": "DAILY_FULL_EXPORT",
-        "allowedExportMode": [
+        "allowedExportModes": [
             "DAILY_FULL_EXPORT",
             "FIRST_FULL_THEN_INCREMENTAL"
         ],
@@ -356,7 +375,7 @@ If you use an audience metadata configuration, you must connect it to the destin
         "allowMandatoryFieldSelection": true,
         "allowDedupeKeyFieldSelection": true,
         "defaultExportMode": "DAILY_FULL_EXPORT",
-        "allowedExportMode": [
+        "allowedExportModes": [
             "DAILY_FULL_EXPORT",
             "FIRST_FULL_THEN_INCREMENTAL"
         ],
@@ -434,7 +453,7 @@ After configuring and testing your destination, use the [destination publishing 
 
 If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](../overview.md#productized-custom-integrations), use the [self-service documentation process](../docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).
 
-## Step 8: Submit destination for Adobe's review {#submit-for-review}
+## Step 8: Submit destination for review {#submit-for-review}
 
 >[!NOTE]
 >

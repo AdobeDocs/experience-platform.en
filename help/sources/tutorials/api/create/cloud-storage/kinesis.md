@@ -3,6 +3,13 @@ title: Create an Amazon Kinesis Source Connection Using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to an Amazon Kinesis source using the Flow Service API.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
+TQID: https://experienceleague.adobe.com/JC-ype8Fv0SVK-WoA1XEANp5Z60cy-O0mxZ0A8u4-bc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create an [!DNL Amazon Kinesis] source connection using the Flow Service API
 
@@ -10,7 +17,7 @@ exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 >
 >The [!DNL Amazon Kinesis] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-This tutorial walks you through the steps to connect [!DNL Amazon Kinesis] (hereinafter referred to as "[!DNL Kinesis]") to Experience Platform, using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial walks you through the steps to connect [!DNL Amazon Kinesis] (hereinafter referred to as "[!DNL Kinesis]") to Experience Platform, using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -167,3 +174,5 @@ A successful response returns the unique identifier (`id`) of the newly created 
 ## Next steps
 
 By following this tutorial, you have created a [!DNL Kinesis] source connection using the [!DNL Flow Service] API. You can use this source connection ID in the next tutorial to [create a streaming dataflow using the [!DNL Flow Service] API](../../collect/streaming.md).
+
+

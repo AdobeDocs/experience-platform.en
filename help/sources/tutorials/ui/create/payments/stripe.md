@@ -3,6 +3,19 @@ title: Ingest payments data from your Stripe account to Experience Platform usin
 description: Learn how to ingest payments data from your Stripe account to Experience Platform using the user interface.
 badge: Beta
 exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
+TQID: https://experienceleague.adobe.com/yaRjIjFxrIkCmXY-VliTCeuKsINVpi7z0umWiZ-0OI8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Ingest payments data from your [!DNL Stripe] account to Experience Platform using the user interface
 

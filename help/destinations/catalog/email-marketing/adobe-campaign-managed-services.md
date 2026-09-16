@@ -2,6 +2,48 @@
 title: Adobe Campaign Managed Cloud Services connection
 description: Adobe Campaign Managed Cloud Services provides a platform for designing cross-channel customer experiences and an environment for visual campaign orchestration, real-time interaction management and cross channel execution.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
+TQID: https://experienceleague.adobe.com/-0MbMDp5SX-upRs6G7IzG9tO6HXPq4VpbQbZdIsasyw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+    internal-label: Administration
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+    internal-label: Access control
+  - id: a7150a74-b8a9-4042-b066-147c5f0ca505
+    internal-label: Alerts
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+    internal-label: Behavioral data
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 # [!DNL Adobe Campaign Managed Cloud Services] connection {#adobe-campaign-managed-services}
 
@@ -103,7 +145,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of an audience, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of an audience, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the mapping step of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).|
 | Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
@@ -170,8 +212,8 @@ Select XDM fields to export with the profiles and map them to the corresponding 
 
 1. Identify mandatory attributes and deduplication keys. Note that values in attributes marked as "Mandatory" or "Deduplication key" cannot be null.
 
-    * [Mandatory attributes](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) ensure that all profile records contain the selected attribute(s). For example: all exported profiles contain an email address. Recommendation is to set to mandatory both the identity field and the field used as deduplication key.
-    * [A deduplication key](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) is a primary key which determines the identity by which users want their profiles to be deduplicated.
+    * [Mandatory attributes](../../ui/batch-destinations-mapping-reference.md#mandatory-attributes) ensure that all profile records contain the selected attribute(s). For example: all exported profiles contain an email address. Recommendation is to set to mandatory both the identity field and the field used as deduplication key.
+    * [A deduplication key](../../ui/batch-destinations-mapping-reference.md#deduplication-keys) is a primary key which determines the identity by which users want their profiles to be deduplicated.
 
       >[!IMPORTANT]
       >

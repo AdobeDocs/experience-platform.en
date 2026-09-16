@@ -5,6 +5,56 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
+TQID: https://experienceleague.adobe.com/EKDdp3hjLuAo17WGURXgyo0vXxKw56-xbvHqoxEhT1I
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: a230274e-7e6e-49eb-b817-514495a710ac
+    internal-label: query service
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+    internal-label: XDM
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+    internal-label: Data ingestion
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+  - id: f5efb499-54f9-432b-ac5c-599dbac103af
+    internal-label: Data management
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+    internal-label: Data integration
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
 ---
 # Adobe Experience Platform release notes 
 
@@ -42,7 +92,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] is a fully managed servi
 
 **Known issues**
 
-*   There is currently no accessible way in the [!DNL Service Gallery] to delete an existing Service. In the meantime, please refer to the [Sensei Machine Learning API reference](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) to delete an existing Service through API calls.
+*   There is currently no accessible way in the [!DNL Service Gallery] to delete an existing Service. In the meantime, please refer to the [Adobe AI Machine Learning API reference](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) to delete an existing Service through API calls.
 *   The [!DNL Service Gallery] does not have pagination support to filter a Service's training and scoring runs.
 *   When configuring scheduled training or scoring runs through the [!DNL Service Gallery], setting the frequency to hourly prevents the schedule from being applied.
 

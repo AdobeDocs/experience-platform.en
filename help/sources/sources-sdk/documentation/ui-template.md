@@ -3,6 +3,16 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 title: Self-service documentation template for the UI
 description: Learn how to create a YOURSOURCE source connection using the Adobe Experience Platform UI.
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
+TQID: https://experienceleague.adobe.com/hSXWW3zrjAmU-PFV-1iLKbCZgetd--dFHA0ZXEFPQuM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Create a *YOURSOURCE* source connection in the UI
 

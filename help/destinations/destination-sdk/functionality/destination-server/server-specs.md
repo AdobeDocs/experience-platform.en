@@ -2,6 +2,18 @@
 description: Learn how to configure destination server specs in Adobe Experience Platform Destination SDK via the `/authoring/destination-servers` endpoint.
 title: Server specs for destinations created with Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
+TQID: https://experienceleague.adobe.com/b5tA04VgOSrzrzn-WfVgCP8ayZXPv9wMQbpMH7JUbHw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Server specs for destinations created with Destination SDK
 
@@ -25,7 +37,7 @@ This page shows all the destination server types supported by Destination SDK, w
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Supported integration types {#supported-integration-types}
 
@@ -79,7 +91,7 @@ In the example below, a partner creates a Data Landing Zone destination server w
 
 As a result, when users go through the [destination connection tutorial](../../../ui/connect-destination.md), they will not see an [authentication step](../../../ui/connect-destination.md#authenticate). Instead, the authentication is handled by Experience Platform, as shown in the image below.
 
-![Ui image showing the authentication screen between Experience Platform and a DLZ destination.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
+![UI image showing the authentication screen between Experience Platform and a DLZ destination.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
 
 **Connecting to your destination with user input**
 
@@ -120,7 +132,7 @@ To give users the option of selecting a value from the Experience Platform UI, t
 
 As a result, when users go through the [destination connection tutorial](../../../ui/connect-destination.md), they must select a region before they can connect to the destination platform. When they connect to the destination, the templatized field `{{customerData.region}}` is replaced with the value that the user has selected in the UI, as shown in the image below.
 
-![Ui image showing the destination connection screen with a region selector.](../../assets/functionality/destination-server/server-spec-template-region.png)
+![UI image showing the destination connection screen with a region selector.](../../assets/functionality/destination-server/server-spec-template-region.png)
 
 ## Real-time (streaming) destination server {#streaming-example}
 

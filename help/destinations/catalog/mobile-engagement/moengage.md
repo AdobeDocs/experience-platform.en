@@ -1,14 +1,33 @@
 ---
 title: Moengage connection
 description: Moengage is a customer engagement platform that powers customer-centric interactions between consumers and brands in real time.
-last-substantial-update: 2023-10-11
+last-substantial-update: 2023-10-11T00:00:00.000Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
+TQID: https://experienceleague.adobe.com/eKdUOuVZfDcHjXk-egiNwVLIUZBVqx4P7urYuZCMAIg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+    internal-label: Customer engagement
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # [!DNL Moengage] connection
 
 ## Overview {#overview}
 
-Use the [!DNL Moengage] destination to connect and map your Adobe data (user attributes, segments and events) to MoEngage in real-time. Customers can then act on this data, delivering personalized, targeted experiences.
+Use the [!DNL Moengage] destination to connect and map your Adobe data (user attributes, audiences and events) to MoEngage in real-time. Customers can then act on this data, delivering personalized, targeted experiences.
 
 With Adobe, the integration is very simple and intuitive. Take any Adobe user profile, and map it to a MoEngage user attribute.
 
@@ -18,7 +37,7 @@ With Adobe, the integration is very simple and intuitive. Take any Adobe user pr
 
 ## Use cases {#use-cases}
 
-A marketer wants to target a user segment (built in [!DNL Adobe Experience Platform]) via [!DNL Moengage] campaigns. Also, they want to personalize campaign content based on attributes from [!DNL Adobe Experience Platform] profiles. With this integration, users and attributes are updated in MoEngage as soon as segments and profiles are updated in [!DNL Adobe Experience Platform].
+A marketer wants to target a user audience (built in [!DNL Adobe Experience Platform]) via [!DNL Moengage] campaigns. Also, they want to personalize campaign content based on attributes from [!DNL Adobe Experience Platform] profiles. With this integration, users and attributes are updated in MoEngage as soon as audiences and profiles are updated in [!DNL Adobe Experience Platform].
 
 ## Prerequisites {#prerequisites}
 
@@ -69,8 +88,8 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 |---------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment (audience) with the identifiers (user_id, anonymous_id) along with custom attributes defined by you exported to [!DNL Moengage]. |
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of an audience with the identifiers (user_id, anonymous_id) along with custom attributes defined by you exported to [!DNL Moengage]. |
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -114,7 +133,7 @@ When you are finished providing details for your destination connection, select 
 >
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ### Map attributes and identities {#map}
 

@@ -2,8 +2,42 @@
 title: Configure bot detection for datastreams
 description: Learn how to configure bot detection for datastreams, to differentiate human and nonhuman traffic.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
+TQID: https://experienceleague.adobe.com/ISjGdLgu5D3dK-B82aBqEbbs4VTT3M-OHlLfCwqBn8M
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+    internal-label: Acrobat Sign
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: b3f03848-ae12-48b2-8aab-cad18567eb32
+    internal-label: Metrics
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+    internal-label: API
+subfeature_v2:
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: Datastreams
+  - id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
+    internal-label: Events
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
-# Configure bot detection for datastreams
+# Configure bot detection for datastreams {#bot-detection}
 
 Nonhuman traffic from automated programs, web scrapers, spiders, and scripted scanners can make it difficult to identify events from human visitors. This type of traffic can negatively affect important business metrics, leading to incorrect traffic reporting.
 
@@ -47,6 +81,13 @@ For bot detection to work on your datastream, you must add the **[Bot Detection 
 
 ## Configure bot detection for datastreams {#configure}
 
+<!-- Contextual help for the signal-based detection toggle. With no additional-url, it links to the section it is authored under (Configure bot detection for datastreams). Once the signal-based detection section is authored, move this block beneath that section heading. -->
+
+>[!CONTEXTUALHELP]
+>id="platform_datastreams_bots_signal"
+>title="Signal-based detection"
+>abstract="Signal-based detection flags automated traffic that doesn't identify itself as a bot. It evaluates a range of technical characteristics in each request, such as browser and network fingerprints, and applies a weighted scoring model to flag traffic that behaves like a bot. Unlike the IAB/ABC list, which matches known bots by their user agent, signal-based detection can catch bots that disguise themselves as ordinary visitors."
+
 You can configure bot detection after creating a datastream configuration. See the documentation on how to [create and configure a datastream](/help/datastreams/configure.md), then follow the instructions below to add bot detection capabilities to your datastream.
 
 Go to the datastreams list and select the datastream to which you want to add bot detection.
@@ -67,6 +108,12 @@ From the Bot Detection Rules page, you can configure bot detection by using the 
 * Creating your own bot detection rules.
 
 ### Use the IAB/ABC International Spiders and Bots List {#iab-list}
+
+>[!CONTEXTUALHELP]
+>id="platform_datastreams_bots_iab"
+>title="IAB/ABC list"
+>abstract="The IAB/ABC International Spiders and Bots List is a third-party, industry-standard list of internet spiders and bots. It helps you identify automated traffic such as search engine crawlers, monitoring tools, and other nonhuman traffic that you might want to omit from reporting."
+>additional-url="https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/" text="IAB/ABC International Spiders and Bots List"
 
 The [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) is a third-party, industry-standard list of internet spiders and bots. This list helps you identify automated traffic such as search engine crawlers, monitoring tools, and other nonhuman traffic that you may not want to include in your analytics counts.
 

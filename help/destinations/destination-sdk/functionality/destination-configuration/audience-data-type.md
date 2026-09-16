@@ -2,10 +2,34 @@
 description: Learn how to configure the audience type for your destinations built with Destination SDK.
 title: Configure audience data type
 exl-id: c56fb0f9-adb2-4fb2-ab06-c0398d828600
+TQID: https://experienceleague.adobe.com/ivMQeexxxmp600XqandWD-Pu8muXUqSGZsPjAVYnZ3c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+    internal-label: Monitoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Configure audience data type
 
-When you build a destination connector with Destination SDK, you can define the type of audience that will be exported to your destination. Configuring the correct audience data type ensures that your destination receives the right data for its intended use case, whether it's for marketing campaigns, account-based strategies, or data analysis.
+When you build a destination connector with Destination SDK, you can define the type of audience that will be exported to your destination. Configuring the correct audience data type ensures that your destination receives the right data for its intended use case, whether it is for marketing campaigns, account-based strategies, or data analysis.
 
 Review the audience data types below to learn about the differences between them and identify the type that you need for your integration. Then, read the sections further below on the page to learn how to configure your destination to export different audience types.
 
@@ -50,7 +74,7 @@ People audiences are supported by default for all destination types and do not n
 
 +++ Streaming destination configuration example with people audiences support
 
-This is an example of a streaming destination that exports people audiences. Notice how there is no `sources` array in the configuration."
+This is an example of a streaming destination that exports people audiences. Notice how there is no `sources` array in the configuration.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -147,7 +171,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 Consider adding account audience support to your destination when you want to configure a [!DNL B2B] destination for account-based marketing. For example, you can use account-based audiences to retrieve records of all the accounts that do not have contact information for any people with the title [!DNL Chief Operating Officer (COO)] or [!DNL Chief Marketing Officer (CMO)].
 
-To build a destination which supports the export of account audiences, add the configuration snippet below to your [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md).
+To build a destination that supports the export of account audiences, add the configuration snippet below to your [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md).
 
 ```json
 "sources":[
@@ -255,7 +279,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 Consider adding prospect audience support to your destination when you want to target individuals who are not yet customers but share characteristics with your target audience. With prospect profiles, you can supplement your customer profiles with attributes from trusted third-party partners. See this [prospecting use case](../../../../rtcdp/partner-data/prospecting.md) for more information.
 
-To build a destination which supports the export of prospect audiences, add the configuration snippet below to your [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md).
+To build a destination that supports the export of prospect audiences, add the configuration snippet below to your [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md).
 
 
 ```json
@@ -387,9 +411,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## Export datasets {#datasets}
 
-Consider adding dataset export support to your destination when you are looking to export raw datasets, which are not grouped or structured by audience interests or qualifications. You could use this data for reporting, data science workflows, and many other use cases. For example, as an administrator, data engineer, or analyst, you can export data from Experience Platform to synchronize with your data warehouse, use in [!DNL BI] analysis tools, external cloud [!DNL ML] tools, or store in your system for long-term storage needs.
+Consider adding dataset export support to your destination when you are looking to export raw datasets, which are not grouped or structured by audience interests or qualifications. You could use this data for reporting, data science workflows, and many other use cases. For example, as an administrator, data engineer, or analyst, you can export data from [!DNL Experience Platform] to synchronize with your data warehouse, use in [!DNL BI] analysis tools, external cloud [!DNL ML] tools, or store in your system for long-term storage needs.
 
-To build a destination which supports the export of datasets , add the configuration snippet below to your [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md).
+To build a destination that supports the export of datasets, add the configuration snippet below to your [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md).
 
 ```json
 "sources":[

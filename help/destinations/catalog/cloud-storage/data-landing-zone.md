@@ -1,10 +1,51 @@
 ---
 title: Data Landing Zone destination
 description: Learn how to connect to Data Landing Zone to activate audiences and export datasets.
-last-substantial-update: 2023-07-26
+last-substantial-update: 2023-07-26T00:00:00.000Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
+TQID: https://experienceleague.adobe.com/e64tDoP8iBdZgF-79Gp-tbF8VM0PlPx7daxey0JWMaI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # Data Landing Zone destination
+
+Export data files from [!DNL Adobe CX Enterprise] applications to your [!DNL Data Landing Zone] cloud storage location.
+
+If you arrived to this page from [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), see [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
+
+## Supported [!DNL Adobe CX Enterprise] applications {#supported-applications}
+
+This destination is available in the following [!DNL Adobe CX Enterprise] applications:
+
+* [[!DNL Real-Time CDP]](../../../rtcdp/home.md)
+* [[!DNL Real-Time CDP Collaboration]](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)
 
 >[!IMPORTANT]
 >
@@ -28,7 +69,11 @@ The [!DNL Data Landing Zone] destination connector is available to customers usi
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which types of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination. The supported audiences differ depending on the [!DNL Adobe CX Enterprise] application from which you activate them to this destination.
+
+### [!DNL Real-Time CDP] {#supported-audiences-rtcdp}
+
+The following audiences are supported when you activate from [!DNL Real-Time CDP]:
 
 | Audience origin | Supported | Description |
 |---------|----------|----------|
@@ -51,13 +96,17 @@ Supported audiences by audience data type:
 {style="table-layout:auto"}
 
 
+### [!DNL Real-Time CDP Collaboration] {#supported-audiences-collaboration}
+
+In [!DNL Real-Time CDP Collaboration], you can [source audiences](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/setup/source-audiences/onboard-audiences) from [!DNL Adobe Experience Platform] or other cloud sources. Audiences in [!DNL Real-Time CDP Collaboration] are made up of [match keys](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections#match-keys). You can use these audiences within a Collaboration for data collaboration or paid media activities.
+
 ## Export type and frequency {#export-type-frequency}
 
 See the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the applicable schema fields (for example your PPID), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the applicable schema fields (for example your PPID), as chosen in the mapping step of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).|
 | Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
@@ -322,6 +371,10 @@ When you are finished providing details for your destination connection, select 
 
 ## Activate audiences to this destination {#activate}
 
+You can activate audiences to this destination from [!DNL Real-Time CDP] or from a [!DNL Real-Time CDP Collaboration] project.
+
+### Activate audiences from [!DNL Real-Time CDP] {#activate-rtcdp}
+
 >[!IMPORTANT]
 >
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
@@ -329,13 +382,17 @@ When you are finished providing details for your destination connection, select 
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
-### Scheduling {#scheduling}
+#### Scheduling {#scheduling}
 
 In the **[!UICONTROL Scheduling]** step, you can [set up the export schedule](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) for your [!DNL Data Landing Zone] destination and you can also [configure the name of your exported files](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names). 
 
-### Map attributes and identities {#map}
+#### Map attributes and identities {#map}
 
 In the **[!UICONTROL Mapping]** step, you can select which attribute and identity fields to export for your profiles. You can also select to change the headers in the exported file to any friendly name that you wish. For more information, view the [mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate batch destinations UI tutorial.
+
+### Activate audiences from [!DNL Real-Time CDP Collaboration] {#activate-collaboration}
+
+For instructions on activating audiences to this destination from a [!DNL Real-Time CDP Collaboration] project, see the [Real-Time CDP Collaboration destinations overview](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/overview).
 
 ## Validate successful data export {#exported-data}
 

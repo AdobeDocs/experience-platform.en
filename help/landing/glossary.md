@@ -4,6 +4,70 @@ solution: Experience Platform
 title: Adobe Experience Platform Glossary
 description: A glossary of important terminology in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
+TQID: https://experienceleague.adobe.com/BamtoDSzzhu0E1flZK7kaWvPXgD-xq9Qv2iQfBdaTt4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: addf009e-030a-4310-8534-776a3e62ed48
+    internal-label: Customer lifecycle
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+    internal-label: Data modeling
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+    internal-label: Artificial intelligence
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+    internal-label: Behavioral data
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+    internal-label: Data integration
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Adobe Experience Platform glossary {#adobe-experience-platform-glossary}
 
@@ -15,7 +79,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Action**: In the context of tags, an action is a specific type of rule component that defines what should happen after an event occurs and conditions are evaluated and passed.
 
-**Activate**: Activate is the action taken by a user to map a segment or profiles to a destination such as [!DNL Oracle Eloqua], [!DNL Google], or [!DNL Salesforce Marketing Cloud].
+**Activate**: Activate is the action taken by a user to map an audience or profiles to a destination such as [!DNL Oracle Eloqua], [!DNL Google], or [!DNL Salesforce Marketing Cloud].
 
 **Activity**: In [!DNL Offer Decisioning], an activity contains the logic that informs the selection of an offer.
 
@@ -23,17 +87,19 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Adobe Admin Console**: Adobe Admin Console provides a central location for managing Adobe product entitlements and access for your organization. Through the console, administrators can grant groups of users access permissions for various Experience Platform capabilities, such as "Manage Datasets", "View Datasets", or "Manage Profiles".
 
+**Adobe AI ML Framework**: Adobe AI ML Framework is a unified machine-learning (ML) framework that leverages Experience Platform data to empower data scientists to development of ML-driven intelligence services in a faster, scalable, and reusable manner.
+
 **Adobe Experience Platform**: Adobe Experience Platform standardizes data and content across the enterprise, powering real-time consumer profiles, enabling data science, and accelerating content velocity to drive experience personalization across the customer journey.
 
 **Adobe Experience Platform Query Service**: Enables data analysts to query events and profiles for use in analytics and machine learning. With Query Service, data scientists and analysts can pull all of their datasets stored in Experience Platform (including behavioral data as well as point-of-sale (POS), customer relationship management (CRM), and more) and query those datasets to answer specific questions about the data.
 
-**Adobe Experience Platform Segmentation Service**: Enables building segments and generating audiences from your Real-Time Customer Profile data. These audiences can then be exported to their own datasets within the Data Lake.
+**Adobe Experience Platform Segmentation Service**: Enables building and generating audiences from your Real-Time Customer Profile data. These audiences can then be exported to their own datasets within the data lake.
 
 **Adobe Intelligent Services**: Intelligent Services such as Attribution AI and Customer AI are machine-learning, artificial-intelligence-based models that are purpose-built and require Experience Platform to run and operate.
 
 **Adobe I/O**: Adobe I/O is part of Experience Platform and provides access to everything developers need to integrate, extend, and customize Experience Platform including APIs, events, developer console, and helpful tooling.
 
-**Adobe Sensei**: Adobe Sensei is the intelligence framework that powers Experience Platform. It also provides a set of AI services that empowers brands to enhance their ability to deliver real-time, personalized customer experiences.
+**Adobe AI**: Adobe AI is the intelligence framework that powers Experience Platform. It also provides a set of AI services that empowers brands to enhance their ability to deliver real-time, personalized customer experiences.
 
 **Amazon S3 bucket**: [!DNL Amazon S3] buckets are the foundational containers for data stored in the [!DNL Amazon] ecosystem. Buckets contain objects, each object is stored and retrieved using a unique developer-assigned key.
 
@@ -51,13 +117,23 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Attribute merge**: When defining a merge policy using the Real-Time Customer Profile API, the `attributeMerge` object indicates the manner by which the merge policy will prioritize profile attributes in the case of data conflicts. It is equivalent to selecting a [!UICONTROL Merge method] when defining a merge policy in the Experience Platform UI.
 
-**Attribution AI**: [!DNL Attribution AI] is an Intelligent Service powered by Adobe Sensei that delivers algorithmic multi-channel attribution capabilities across the entire customer lifecycle.
+**Attribution AI**: [!DNL Attribution AI] is an Intelligent Service powered by Adobe AI that delivers algorithmic multi-channel attribution capabilities across the entire customer lifecycle.
 
-**Audience**: An audience is the resulting set of profiles that meet the criteria of a segment definition.
+**Audience**: An audience is a collection of people who share similar behaviors and/or characteristics. This collection of people can either be generated by Adobe Experience Platform using segment definitions (Experience-Platform-generated audience) or from external sources (externally generated audience).
 
-**Audience size**: An audience size is the total number of profiles that meet the criteria of a segment definition and qualify for audience membership.
+**Audience evaluation method**: There are three audience evaluation methods: batch, streaming, and edge. Batch segmentation lets you move profile data all at once to create a corresponding audience. Streaming segmentation lets you evaluate audiences in near real-time to segment streaming data as soon as it arrives in Experience Platform. Edge segmentation lets you evaluate audiences in near real-time for same-page and personalization use cases.
 
-**Audience snapshot**: An audience snapshot captures all profiles who qualify for the segment criteria at the time of segmentation.
+**Audience export**: Audience export is one of the two types of destinations in Experience Platform. With audience export, you can send the profiles that qualify and have been mapped to the destination. Uses audience and user IDs and pseudonymous data and typically integrates with social networks and other digital media target platforms.
+
+**Audience ID**: An audience ID is an auto-generated identifier associated with an audience.
+
+**Audience membership**: Audiences membership displays which audience(s) a profile is currently part of.
+
+**Audience rules**: Audience rules define the conditions that determine whether a profile qualifies for an audience.
+
+**Audience size**: An audience size is the total number of profiles that meet the criteria of an audience and qualify for audience membership.
+
+**Audience snapshot**: An audience snapshot captures all profiles who qualify for the audience criteria at the time of segmentation.
 
 ## B
 
@@ -71,7 +147,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Batch ingestion**: Batch ingestion allows you to ingest data into Experience Platform as batch files. Batches are units of data that consist of one or more files to be ingested as a single unit.
 
-**Batch segmentation**: Batch segmentation is an alternative to an ongoing data selection process and moves all profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so it can be exported for use.
+**Batch segmentation**: Batch segmentation is an alternative to an ongoing data selection process and moves all profile data at once through segment definitions to produce corresponding audiences. Once created, this audience is saved and stored so it can be exported for use.
 
 **Build**: In the context of tags, a build is a file or set of files that contain all the configurations and code needed to execute the business logic contained inside of a library, allowing you to deploy that library on your website or mobile app.
 
@@ -139,7 +215,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Custom labels**: Custom data usage labels allow you to create and apply specific labels to data fields that meet specific business needs.
 
-**Customer AI**: Customer AI is an Intelligent Service powered by Adobe Sensei that enriches customer profiles with AI-based propensities and empowers customer segmentation and targeting efforts.
+**Customer AI**: Customer AI is an Intelligent Service powered by Adobe AI that enriches customer profiles with AI-based propensities and empowers customer segmentation and targeting efforts.
 
 ## D
 
@@ -159,7 +235,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Dataset labels**: Data usage labels can be added to datasets. All fields within that dataset will inherit the dataset's labels.
 
-**Data Science Workspace**: [!DNL Data Science Workspace] within Experience Platform enables customers to create machine-learning models utilizing data across Experience Platform and Adobe applications to create intelligent segments, generate insights, and provide predictions, allowing you to greatly enhance end-user digital experiences.
+**Data Science Workspace**: [!DNL Data Science Workspace] within Experience Platform enables customers to create machine-learning models utilizing data across Experience Platform and Adobe applications to create intelligent audiences, generate insights, and provide predictions, allowing you to greatly enhance end-user digital experiences.
 
 **Data source**: A data source is a user designated origin of data. Examples of a data source are a mobile app, profile and/or experience events, website profile events, or a CRM.
 
@@ -229,9 +305,9 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Experience Event**: An Experience Event represents a snapshot of the system when an interaction or event related to a customer experience takes place. Experience Events are immutable fact records of what occurred and represent what happened without aggregation or interpretation. In Experience Data Model (XDM), this concept is captured by the [!DNL XDM ExperienceEvent] class.
 
-**Export full file**: An export file containing a full snapshot of all profile qualifications for the selected segment.
+**Export full file**: An export file containing a full snapshot of all profile qualifications for the selected audience.
 
-**Export incremental files**: A series of exported files where the first file is a full snapshot of all profile qualifications for the selected segment, and subsequent files are incremental profile qualifications since the previous export.
+**Export incremental files**: A series of exported files where the first file is a full snapshot of all profile qualifications for the selected audience, and subsequent files are incremental profile qualifications since the previous export.
 
 **Extension**: In the context of tags, an extension is a package of functionality added to a tag property. An extension is usually focused around a particular marketing or analytics solution and provides the tools needed to deploy that technology into a client environment.
 
@@ -459,7 +535,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Sandbox**: A sandbox is a virtual construct that partitions a single Experience Platform instance into a separate virtual environment, in order to help develop and evolve digital experience applications.
 
-**Sandbox reset**: A sandbox reset deletes all data including data, profiles, and segments within a sandbox. Sandbox resets can affect data that is connected to internal or external destinations.
+**Sandbox reset**: A sandbox reset deletes all data including data, profiles, and audiences within a sandbox. Sandbox resets can affect data that is connected to internal or external destinations.
 
 **Sandbox switcher**: The sandbox switcher control in Experience Platform allows users to navigate between sandboxes they have access to. Switching a sandbox will change all content and may alter feature access based on permissions.
 
@@ -477,25 +553,11 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Secret access key**: A secret access key is an [!DNL Amazon] S3 key that is used in conjunction with the access key ID to sign AWS requests.
 
-**Segment**: A segment is a set of rules that include attributes and event data that qualify a number of profiles to become an audience.
+**Segment Builder**: The [!DNL Segment Builder] is a visual development environment used to build audiences. It serves as a common component of all applications using Experience Platform Segmentation Service.
 
-**Segment Builder**: The [!DNL Segment Builder] is a visual development environment used to build segment definitions. It serves as a common component of all applications using Experience Platform Segmentation Service.
-
-**Segment definition**: A segment definition is the rule set used to describe the key characteristics or behavior of a target audience. Once conceptualized, the rules outlined in a segment definition are used to determine qualifying audience members for a segment.
-
-**Segment evaluation method**: There are two segment evaluation methods: scheduled and on-demand. Scheduled evaluation enables a recurring schedule for running an export job at a specific time, whereas on-demand evaluation involves creating a segment job to build the audience immediately. 
-
-**Segment export**: Segment export is one of the two types of destinations in Experience Platform. With segment export, you can send the profiles that qualify and have been mapped to the destination. Uses segment and user IDs and pseudonymous data and typically integrates with social networks and other digital media target platforms.
-
-**Segment ID**: A segment ID is an auto-generated identifier associated with a segment.
-
-**Segment membership**: Segment membership displays which segment(s) a profile is currently part of.
-
-**Segment rules**: Segment rules define the conditions that determine whether a profile qualifies for a segment.
+**Segment definition**: A segment definition is the rule set used to describe the key characteristics or behavior of a target audience. Once conceptualized, the rules outlined in a segment definition are used to determine qualifying members for an audience.
 
 **Segmentation**: Segmentation is the process of dividing a large group of customers, prospects, or consumers into smaller groups that share similar attributes and will respond similarly to specific marketing strategies.
-
-**Sensei ML Framework**: Sensei ML Framework is a unified machine-learning (ML) framework that leverages Experience Platform data to empower data scientists to development of ML-driven intelligence services in a faster, scalable, and reusable manner.
 
 **Sensitive ("S") labels**: Sensitive ("S") labels are used to categorize data deemed sensitive, such as different types of behavioral or geographic data that you want marked as sensitive.
 
@@ -523,7 +585,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Streaming ingestion**: Streaming ingestion allows you to send data from client- and server-side devices to Experience Platform in real time.
 
-**Streaming segmentation**: Streaming segmentation is an ongoing data selection process that updates segments in response to user activity. Once a segment has been built and saved, the segment definition is applied against incoming data to [!DNL Real-Time Customer Profile]. Segment additions and removals are processed regularly, ensuring your target audience remains relevant.
+**Streaming segmentation**: Streaming segmentation is an ongoing data selection process that updates audiences in response to user activity. Once an audience has been built and saved, the segment definition is applied against incoming data to [!DNL Real-Time Customer Profile]. Additions and removals are processed regularly, ensuring your audience remains relevant.
 
 **System View**: System View is a visual representation of source datasets that flow through [!DNL Real-Time Customer Profile] to destinations. 
 

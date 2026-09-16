@@ -3,6 +3,30 @@ keywords: email;Email;e-mail;email destinations;oracle responsys destination
 title: Oracle Responsys connection
 description: Responsys is an enterprise email marketing tool for cross-channel marketing campaigns offered by Oracle to personalize interactions across email, mobile, display, and social.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
+TQID: https://experienceleague.adobe.com/YwHdrUfx2x4yg047LdibCBtoE3OyxZ2yyzM9-fiVBwM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
 ---
 # [!DNL Oracle Responsys] connection
 
@@ -23,8 +47,6 @@ This section describes which types of audiences you can export to this destinati
 
 {style="table-layout:auto"}
 
-
-
 Supported audiences by audience data type:
 
 | Audience data type | Supported | Description | Use cases |
@@ -36,14 +58,13 @@ Supported audiences by audience data type:
 
 {style="table-layout:auto"}
 
-
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/select-profile-attributes-legacy.md).|
 | Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
@@ -86,14 +107,6 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * **[!UICONTROL Description]**: Enter a description for your destination.
 * **[!UICONTROL Folder Path]**: Provide the path in your storage location where Experience Platform will deposit your export data as CSV files.
 * **[!UICONTROL File Format]**: Select **CSV** to export CSV files to your storage location.
-
-<!--
-
-Commenting out Amazon S3 bucket part for now until support is clarified
-
-- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Experience Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
-
--->
 
 ### Enable alerts {#enable-alerts}
 

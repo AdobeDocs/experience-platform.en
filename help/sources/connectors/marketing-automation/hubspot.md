@@ -4,6 +4,13 @@ solution: Experience Platform
 title: HubSpot Source Connector Overview
 description: Learn how to connect HubSpot to Adobe Experience Platform using APIs or the user interface.
 exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
+TQID: https://experienceleague.adobe.com/yhn2mW5voHgjeYhrA-AVcm0GZP-myLDb2xKhji8bis4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL HubSpot] connector
 

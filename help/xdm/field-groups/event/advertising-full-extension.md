@@ -3,6 +3,26 @@ title: Adobe Advertising ExperienceEvent Full Extension Schema Field Group
 description: Learn about the Adobe Advertising ExperienceEvent Full Extension schema field group.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a9f6bff-6098-424a-b8f4-0f14ec52d906
+TQID: https://experienceleague.adobe.com/2AiVFNU2M6zDkiRJWx1qNwj6YcqnTNHLgvHpZBgexOw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
 ---
 # [!UICONTROL Adobe Advertising ExperienceEvent Full Extension] schema field group
 
@@ -66,7 +86,7 @@ The advertisement object describes details about the digital advert, such as its
 | `keywordID` | String | The identifier for the keyword entered by the user in a search query that triggered this event. |
 | `keyword` | String | The listing keyword that the customer bid on. |
 | `isDynamicSearchAd` | Boolean | Indicates whether the event comes from a dynamic search advertisement. |
-| `audienceID` | String | The identifier for the audience segment targeted by the ad. |
+| `audienceID` | String | The identifier for the audience targeted by the ad. |
 | `adGroupID` | String | The identifier for the ad group associated with the ad that triggered this event. |
 | `campaignID` | String | The identifier for the campaign associated with the ad that triggered this event. |
 | `networkType` | String | The network type where the event occurred. Possible values include: <ul><li>`search`: The advertisement was displayed on the Search Network.</li><li>`content`: The advertisement was displayed on the Content Network.</li></ul> |

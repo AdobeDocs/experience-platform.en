@@ -3,6 +3,23 @@ keywords: Experience Platform;user interface;UI;dashboards;dashboard;profiles;se
 title: Creating Custom Widgets for Dashboards
 description: This guide provides step-by-step instructions for creating custom widgets for use in Adobe Experience Platform dashboards.
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
+TQID: https://experienceleague.adobe.com/yyJ31lzM10-q9Vko--fh5ckwz3Y7HQzcBMjEUjWvJi8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+    internal-label: Destinations dashboard
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+    internal-label: Artificial intelligence
 ---
 # Creating custom widgets for dashboards
 

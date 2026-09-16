@@ -5,6 +5,16 @@ title: Policy Service API Guide
 description: The Policy Service API allows developers to manage data usage labels and policies in Experience Platform. Follow this guide to learn how to perform key operations using the API.
 role: Developer
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
+TQID: https://experienceleague.adobe.com/q-dQMKjMUo4POyFpH7ZYr505wTEKhpbYAcE02o6--sE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # [!DNL Policy Service] API guide
 
@@ -12,7 +22,7 @@ Adobe Experience Platform Data Governance allows you to manage customer data and
 
 The [!DNL Policy Service] API provides several endpoints that allow you to programmatically manage data usage labels and policies, as well as evaluate marketing actions for policy violations. These endpoints are outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 
-To view all available endpoints and CRUD operations, visit the [[!DNL Policy Service] API swagger](https://www.adobe.io/experience-platform-apis/references/policy-service/).
+To view all available endpoints and CRUD operations, visit the [[!DNL Policy Service] API swagger](https://developer.adobe.com/experience-platform-apis/references/policy-service).
 
 ## Labels
 
@@ -46,3 +56,5 @@ The [!DNL Policy Service] API provides endpoints that allow you to test marketin
 ## Next steps
 
 To begin making calls using the [!DNL Policy Service] API, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints. To work with labels and policies using the [!DNL Experience Platform] UI, please refer to the [labels user guide](../labels/user-guide.md) and [policies user guide](../policies/user-guide.md), respectively.
+
+

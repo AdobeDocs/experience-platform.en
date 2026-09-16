@@ -2,6 +2,13 @@
 title: Connect Data Landing Zone to Experience Platform using the UI
 description: Learn how to create a Data Landing Zone source connector using the Experience Platform user interface.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
+TQID: https://experienceleague.adobe.com/DHic7EnABj-yy4JDFkcpNZX7q2et-47R-FW6On4wgIE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect [!DNL Data Landing Zone] to Experience Platform using the UI
 

@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Authenticate your Marketo source connector
 description: This document provides information on how to generate your Marketo authentication credentials.
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
+TQID: https://experienceleague.adobe.com/c-AxjTz5POknRHzCnT58-GxY-rZfRoTNX4eX0ULbw2s
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Authenticate your [!DNL Marketo Engage] source connector
 

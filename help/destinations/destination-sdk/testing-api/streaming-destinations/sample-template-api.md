@@ -2,8 +2,22 @@
 description: Learn how to use the destination testing API to generate a test message transformation template for your destination.
 title: Generate a sample message transformation template
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
+TQID: https://experienceleague.adobe.com/xodA-ag0DqHYcdzsIq4awGRkEhU-ss-XSC1iDsQ-lM0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
-
 # Generate a sample message transformation template {#get-sample-template-api-operations}
 
 >[!IMPORTANT]
@@ -14,7 +28,7 @@ This page lists and describes all the API operations that you can perform using 
 
 ## Getting started with sample template API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Get sample template {#generate-sample-template}
 
@@ -73,19 +87,22 @@ If the destination ID you provide corresponds to a destination configuration wit
         {%- endfor -%}{%- if not loop.last -%},{%- endif -%}
     {% endfor %}
     ],
-    "AdobeExperiencePlatformSegments": {
-        "add": [
-        {%- for segment in input.profile.segmentMembership.ups | added %}
-            "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
-        {% endfor %}
-        ],
-        "remove": [
-        {#- Alternative syntax for filtering audiences by status: -#}
-        {% for segment in removedSegments(input.profile.segmentMembership.ups) %}
-            "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
-        {% endfor %}
-        ]
-    }
+    "segments": [
+    {%- set first = true %}
+    {%- for namespace in input.profile.segmentMembership %}
+    {%- for segment in input.profile.segmentMembership[namespace.key] %}
+    {%- if destination.namespaceSegmentAliases[namespace.key][segment.key] is defined %}
+    {%- if not first %},{% endif %}
+        {
+            "id": "{{ segment.key }}",
+            "status": "{{ segment.value.status }}",
+            "qualificationTime": "{{ segment.value.lastQualificationTime }}"
+        }
+    {%- set first = false %}
+    {%- endif %}
+    {% endfor %}
+    {% endfor %}
+    ]
 }
 ```
 
@@ -109,19 +126,22 @@ If the destination ID you provide corresponds to a destination server template w
                 {%- endfor -%}{%- if not loop.last -%},{%- endif -%}
             {% endfor %}
             ],
-            "AdobeExperiencePlatformSegments": {
-                "add": [
-                {%- for segment in profile.segmentMembership.ups | added %}
-                    "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
-                {% endfor %}
-                ],
-                "remove": [
-                {#- Alternative syntax for filtering audiences by status: -#}
-                {% for segment in removedSegments(profile.segmentMembership.ups) %}
-                    "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
-                {% endfor %}
-                ]
-            }
+            "segments": [
+            {%- set first = true %}
+            {%- for namespace in profile.segmentMembership %}
+            {%- for segment in profile.segmentMembership[namespace.key] %}
+            {%- if destination.namespaceSegmentAliases[namespace.key][segment.key] is defined %}
+            {%- if not first %},{% endif %}
+                {
+                    "id": "{{ segment.key }}",
+                    "status": "{{ segment.value.status }}",
+                    "qualificationTime": "{{ segment.value.lastQualificationTime }}"
+                }
+            {%- set first = false %}
+            {%- endif %}
+            {% endfor %}
+            {% endfor %}
+            ]
         }{%- if not loop.last -%},{%- endif -%}
     {% endfor %}
     ]

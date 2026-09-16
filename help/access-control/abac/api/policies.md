@@ -5,6 +5,28 @@ title: Access Control Policies API Endpoint
 description: The /policies endpoint in the Attribute-Based Access Control API allows you to  programmatically manage policies in Adobe Experience Platform.
 role: Developer
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
+TQID: https://experienceleague.adobe.com/nM8mWpFl4mf07cg2FwAoN6sdoNC--PSgN29TtRT0knA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+    internal-label: Administration
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+    internal-label: Access control
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+    internal-label: Roles
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 # Access control policies endpoint
 

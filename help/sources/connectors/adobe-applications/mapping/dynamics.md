@@ -2,6 +2,13 @@
 title: Microsoft Dynamics Mapping Fields
 description: The tables below contain the mappings between Microsoft Dynamics source fields and their corresponding XDM fields.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
+TQID: https://experienceleague.adobe.com/rXcxLFz-YlY-DE5t7NhfLv7cABYFb7W9pKEv6Xh8LAY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL Microsoft Dynamics] field mappings
 

@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Apache Hive on Azure HDInsights Source Connector Overview
 description: Learn how to connect Apache Hive on Azure HDInsights to Adobe Experience Platform using APIs or the user interface.
 exl-id: f55f9e9a-779e-426a-bca6-7567ea843698
+TQID: https://experienceleague.adobe.com/HmAp8FWhvvgk8bHYBLxD7b6L6D-iFo9I93g9lk37Oxs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # (Beta) [!DNL Apache Hive] on [!DNL Azure HDInsights] connector
 

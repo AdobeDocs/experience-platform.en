@@ -5,10 +5,23 @@ title: Create a Dataflow for Advertising Sources Using the Flow Service API
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Experience Platform using source connectors and the Flow Service API.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
+TQID: https://experienceleague.adobe.com/252Izmu2BYp2a-Bnrer4YBhZOPlz-QhfYfaCFgQ2gvQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a dataflow for advertising sources using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Adobe Experience Platform through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API.
+This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Adobe Experience Platform through source connectors and the [[!DNL Flow Service]](https://developer.adobe.com/experience-platform-apis/references/flow-service) API.
 
 >[!NOTE]
 >
@@ -134,7 +147,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../xdm/api/schemas.md).
 
@@ -688,3 +701,5 @@ By following this tutorial, you have created a source connector to collect data 
 
 * [Real-Time Customer Profile overview](../../../../profile/home.md)
 * [Data Science Workspace overview](../../../../data-science-workspace/home.md)
+
+

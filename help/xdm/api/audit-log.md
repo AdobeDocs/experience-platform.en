@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Audit Log API Endpoint
 description: The /auditlog endpoint in the Schema Registry API allows you to retrieve a chronological list of changes that have been made to an existing XDM resource.
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
+TQID: https://experienceleague.adobe.com/AfEinzGCnILUsnkIdlbFyKB70HIIwF9zjLdQCB-UEag
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Audit log endpoint
 
@@ -11,7 +18,7 @@ For each Experience Data Model (XDM) resource, the [!DNL Schema Registry] mainta
 
 ## Getting started
 
-The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 The `/auditlog` endpoint is part of the remote procedure calls (RPCs) that are supported by the [!DNL Schema Registry]. Unlike other endpoints in the [!DNL Schema Registry] API, RPC endpoints do not require additional headers like `Accept` or `Content-Type`, and do not use a `CONTAINER_ID`. Instead, they must use the `/rpc` namespace, as demonstrated in the API call below.
 
@@ -120,3 +127,5 @@ A successful response returns a chronological list of changes made to the resour
 | `value` | The value that was assigned to the new or updated field. |
 
 {style="table-layout:auto"}
+
+

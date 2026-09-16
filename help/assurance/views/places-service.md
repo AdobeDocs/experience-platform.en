@@ -2,6 +2,13 @@
 title: Places View
 description: This guide details information about the Places view in Adobe Experience Platform Assurance.
 exl-id: 23086aae-8894-4350-aa02-7e2faabe000d
+TQID: https://experienceleague.adobe.com/BpEoecuIBv04cGwxurgAa8YMExojpjFpLajACIOYwbk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Places Service view in Assurance
 

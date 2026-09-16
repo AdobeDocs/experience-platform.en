@@ -5,6 +5,7 @@ user-guide-description: Learn how to use AI Assistant to expedite your workflow 
 description: This document lists the table of contents for AI Assistant in Adobe Experience Platform.
 feature: AI Assistant
 role: Admin,User,Developer,Leader
+nudge: true
 ---
 
 # AI Assistant in Adobe Experience Platform {#ai-assistant}
@@ -28,4 +29,3 @@ role: Admin,User,Developer,Leader
   * [AI Assistant (Legacy) Natural Operational Insights Language to SQL](./model-details/natural-language-to-sql.md)
   * {hide-from-toc} [Send-Time Optimization](./model-details/send-time-optimization.md)
 * [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
-

@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Monitoring Data Ingestion
 description: This user guide provides a steps on how to monitor your data within Adobe Experience Platform user interface. This guide requires you to have an Adobe ID and access to Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
+TQID: https://experienceleague.adobe.com/yySNL-hCm0567jmzBVZCB-2NrN2Z5nOOnNYeQraU5rE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Monitoring data ingestion
 

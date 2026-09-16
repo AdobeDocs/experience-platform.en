@@ -1,14 +1,50 @@
 ---
 title: Google Customer Match + Display & Video 360 connection
 description: With the Google Customer Match + Display & Video 360 destination connector, you can use your online and offline data from Experience Platform to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, Gmail, and YouTube.
-badge: label="Limited Availability" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
+nudge: yes
+TQID: https://experienceleague.adobe.com/EQw7wxAqZYEha2OjNkfiyITaeVgx-hz5eHHeJPb41Uc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+    internal-label: Troubleshooting
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # [!DNL Google Customer Match + Display & Video 360] connection
-
->[!NOTE]
->
->**Limited availability of the Google Customer Match + Display & Video 360 connector**<br>As we're going through the full lifecycle of maturity on this integration with Google, we're seeing data that points to weaknesses in implementation that need to be corrected before wider adoption can happen. Given these concerns, Adobe has reduced the visibility of this destination to a limited number of customers. We are in active conversations with Google to improve the product experience. We understand this may be disappointing news, but we believe it's the responsible approach to ensure a high-quality, reliable experience for our customers.</br>
 
 Use this destination to activate your first-party PII-based [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) lists directly to [!DNL Google Display & Video 360] properties such as [!DNL Search], [!DNL YouTube], [!DNL Gmail], and the [!DNL Google Display Network].
 
@@ -36,7 +72,7 @@ Several integrations with Google are available in the destinations catalog and i
 
 | [Google Customer Match](/help/destinations/catalog/advertising/google-customer-match.md) | [Google Display & Video 360](/help/destinations/catalog/advertising/google-dv360.md) | [!DNL Google Customer Match] + [!DNL Display & Video 360] (this connector) |
 |---------|----------|---------|
-| Export your PII-based audiences and reach them on inventory available in [!DNL Google Customer Match].| Reach cookie-based audiences across inventory available via [!DNL Google Display & Video 360], on Google owned-and-operated properties like Youtube and [!DNL Search], and beyond. | Create PII-based audiences in [!DNL Google Customer Match] and reach them on the inventory available in [!DNL Google Display & Video 360], on Google owned-and-operated properties only. |
+| Export your PII-based audiences via [!DNL Google Customer Match] lists and reach them on inventory available in [!DNL Google Ads].| Reach cookie-based audiences across inventory available via [!DNL Google Display & Video 360], on Google owned-and-operated properties like Youtube and [!DNL Search], and beyond. | Create PII-based audiences in [!DNL Google Customer Match] and reach them on the inventory available in [!DNL Google Display & Video 360], on Google owned-and-operated properties only. |
 
 ## Use cases {#use-cases}
 
@@ -76,8 +112,6 @@ This section describes which types of audiences you can export to this destinati
 
 {style="table-layout:auto"}
 
-
-
 Supported audiences by audience data type:
 
 | Audience data type | Supported | Description | Use cases |
@@ -89,7 +123,6 @@ Supported audiences by audience data type:
 
 {style="table-layout:auto"}
 
-
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
@@ -97,7 +130,7 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes |
 |---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, and others) used in the [!DNL Google Customer Match] destination.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
 
@@ -171,27 +204,6 @@ To learn about ingesting email addresses in Experience Platform, see the [batch 
 
 If you select to hash the email addresses yourself, make sure to comply with Google's requirements, outlined in the links above.
 
-<!-- 
-### Using custom namespaces {#custom-namespaces}
-
-Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information. 
--->
-
-<!-- 
-Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
-
-Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
-![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) 
--->
-
-<!-- 
-## Configure destination - video walkthrough {#video}
-
-The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
-
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) 
--->
-
 ## Connect to the destination {#connect}
 
 >[!CONTEXTUALHELP]
@@ -231,14 +243,6 @@ When you are finished providing details for your destination connection, select 
 
 See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
-<!-- 
-In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] audiences to [!DNL Google Customer Match].
-
-![Google Customer Match App ID field highlighted in the Segment schedule step of the activation workflow.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
-
-For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative. 
--->
-
 ### Mapping example: activating audience data in [!DNL Google Customer Match + Display & Video 360] {#example-gcm}
 
 This is an example of correct identity mapping when activating audience data in [!DNL Google Customer Match + Display & Video 360].
@@ -265,9 +269,13 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ## Monitor destination {#monitor-destination}
 
-After connecting to the destination and establishing a destination dataflow, you can use the [monitoring functionality](/help/dataflows/ui/monitor-destinations.md) in [!DNL Real-Time CDP] to get extensive information about the profile records activated to your destination in each dataflow run. 
+After connecting to the destination and establishing a destination dataflow, you can use the [monitoring functionality](/help/dataflows/ui/monitor-destinations.md) in [!DNL Real-Time CDP] to get extensive information about the profile records activated to your destination in each dataflow run.
 
-The monitoring information for the [!DNL Google Customer Match + Display & Video 360] connection includes audience-level information related to activated, excluded, and failed identities in each dataflow and dataflow run. [Read more](/help/dataflows/ui/monitor-destinations.md#segment-level-view) about the functionality. 
+The monitoring information for the [!DNL Google Customer Match + Display & Video 360] connection includes audience-level information related to activated, excluded, and failed identities in each dataflow and dataflow run. [Read more](/help/dataflows/ui/monitor-destinations.md#segment-level-view) about the functionality.
+
+>[!NOTE]
+>
+>For this destination, you will see one dataflow run per day, regardless of how many audiences are activated or how many identity namespaces are mapped in the dataflow.
 
 ## Verify that audience activation was successful {#verify-activation}
 

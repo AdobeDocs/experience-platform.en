@@ -2,6 +2,23 @@
 title: MediaAnalytics Interaction Details Schema Field Group
 description: Learn about the MediaAnalytics Interaction Details schema field group.
 exl-id: 1096d28a-5796-49cc-bd45-b3f5188f699e
+TQID: https://experienceleague.adobe.com/ECKOksuGOS19fDY9UZmBvgJ8eFTyW15RcvuZZ5Dy80c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 ---
 # [!UICONTROL MediaAnalytics Interaction Details] schema field group
 

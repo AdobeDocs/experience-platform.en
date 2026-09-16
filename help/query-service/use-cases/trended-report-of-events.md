@@ -3,6 +3,20 @@ keywords: Experience Platform;home;popular topics;query service;Query service;ex
 title: Create a Trended Report of Events
 description: Learn how to write queries that use Experience Events to create a trended report of events over a specified date range, grouped by date.
 exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
+TQID: https://experienceleague.adobe.com/uBuVuVr2fhEoM60hchBnvpbB3hp91on6nTqQR-erPgQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Create a trended report of events
 

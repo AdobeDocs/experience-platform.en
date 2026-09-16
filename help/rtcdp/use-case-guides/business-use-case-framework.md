@@ -11,7 +11,7 @@ Move from one-off use cases to scalable, repeatable customer experiences. Use th
 ## Use case framework: Why → Who / What / Where → How
 
 - **Why:** The business objective and north star KPI. *The why grounds everything else.*  
-- **Who:** Defined audience or segment  
+- **Who:** Defined audience  
 - **What:** Message, offer, or call to action  
 - **Where:** Channel or touchpoint  
 - **How:** Execution across five pillars, data, audience, journey, measurement, and content *(e.g., data inputs, segmentation logic, orchestration, test/control, content assets)*  

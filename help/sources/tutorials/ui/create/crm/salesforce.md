@@ -2,6 +2,21 @@
 title: Connect Your Salesforce Account Using the Experience Platform User Interface
 description: Learn how to connect your Salesforce account and bring your CRM data to Experience Platform using the user interface.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
+TQID: https://experienceleague.adobe.com/WAzj5-ww-k4xmFa2uOMHyQ0xCZdrhniOP7elENeahy8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # Connect your [!DNL Salesforce] account to Experience Platform using the UI
 
@@ -17,6 +32,13 @@ This tutorial requires a working understanding of the following components of Ex
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 If you already have an authenticated [!DNL Salesforce] account, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow for CRM data](../../dataflow/crm.md).
+
+### Configure your [!DNL Salesforce] connected app
+
+Before connecting [!DNL Salesforce] to Adobe Experience Platform, ensure that the [!DNL Salesforce] connected app you use for authentication includes the OAuth scope **Manage user data via APIs** (`api`). This scope is required for Experience Platform to access data from [!DNL Salesforce]. If this scope is missing, authentication may fail. 
+
+* For more information on authentication, read  the [[!DNL Salesforce] authentication guide](../../../../connectors/crm/salesforce.md#prerequisites).
+* For more information on available OAuth scopes, read the [[!DNL Salesforce] OAuth scope documentation](https://help.salesforce.com/s/articleView?id=xcloud.remoteaccess_oauth_tokens_scopes.htm&type=5).
 
 ### Gather required credentials {#gather-required-credentials}
 
@@ -64,10 +86,38 @@ For OAuth 2 Client Credential, select **[!UICONTROL OAuth2 Client Credential]** 
 * API version
 * Include delete objects
 
+>[!IMPORTANT]
+>
+>Ensure that the [!DNL Salesforce] connected app used for this connection includes the OAuth scope **Manage user data via APIs** (`api`). If this scope is missing, authentication can fail when Experience Platform attempts to read data from [!DNL Salesforce].
+
 When finished, select **[!UICONTROL Connect to source]**.
 
-
 ![The interface in which you can create a new Salesforce account by providing the appropriate authentication credentials.](../../../../images/tutorials/create/salesforce/new.png)
+
+### Connect to Salesforce on AWS {#aws}
+
+Follow the steps below to connect a [!DNL Salesforce] account on Amazon Web Services (AWS) using OAuth 2.0 JWT Bearer authentication.
+
+>[!AVAILABILITY]
+>
+>This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md).
+
+To create a new account, select **[!UICONTROL New account]** and provide a name and a description for your new [!DNL Salesforce] account, then provide values for the following credentials:
+
+* `jwtToken`
+* `instanceUrl`
+* Client ID
+* Client secret
+
+To connect to a Sandbox org instead of a Production org, select **[!UICONTROL SANDBOX]** from the **[!UICONTROL environmentType]** dropdown. If you do not select a value, Experience Platform defaults to `PRODUCTION`. For more information on Sandbox support, read the section on [connecting to a Production or Sandbox org](../../../../connectors/crm/salesforce.md#environment-type).
+
+>[!IMPORTANT]
+>
+>Ensure that the [!DNL Salesforce Connected App] used for this connection is authorized in the same org that `environmentType` and `instanceUrl` point to. For information on setting up a Connected App on AWS, read the [[!DNL Salesforce] AWS setup guide](../../../../connectors/crm/salesforce.md#aws).
+
+When finished, select **[!UICONTROL Connect to source]**.
+
+![The Salesforce AWS authentication step in Experience Platform, showing fields for jwtToken, instanceUrl, Client ID, Client secret, and the environmentType dropdown set to PRODUCTION.](../../../../images/tutorials/create/salesforce/salesforce-aws.png)
 
 ### Skip preview of sample data {#skip-preview-of-sample-data}
 

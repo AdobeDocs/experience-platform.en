@@ -5,6 +5,19 @@ title: MLInstances API Endpoint
 description: An MLInstance is a pairing of an existing Engine with an appropriate set of configurations that defines any training parameters, scoring parameters, or hardware resource configurations.
 role: Developer
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
+TQID: https://experienceleague.adobe.com/IBd3KGq1-npoHeHZCk7G-uBG7cjqPd3YxZTcuFfxz6g
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # MLInstances endpoint
 

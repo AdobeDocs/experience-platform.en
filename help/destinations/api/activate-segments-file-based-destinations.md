@@ -4,6 +4,36 @@ title: Activate audiences to file-based destinations by using the Flow Service A
 description: Learn how to use the Flow Service API to export files with qualified profiles to cloud storage destinations.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
+TQID: https://experienceleague.adobe.com/aWGM9NXWk4RQKehhzDckd8o1-kEuokmWy9lj5qEHPhQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Activate audiences to file-based destinations by using the Flow Service API
 
@@ -29,14 +59,6 @@ This article explains the workflow required to use the [Flow Service API](https:
 >
 >You can also use the Experience Platform user interface to export profiles to cloud storage destinations. Read the [activate file-based destinations tutorial](/help/destinations/ui/activate-batch-profile-destinations.md) for more information.
 
-<!--
-
-## API users migration {#api-migration}
-
-If you were already using the Flow Service API to export profiles to the Amazon S3, Azure Blob, or SFTP cloud storage destinations, read the [API migration guide](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) for necessary migration steps as Adobe transitions users from the legacy destinations to the new destinations. 
-
--->
-
 ## Getting started {#get-started}
 
 ![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
@@ -61,7 +83,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values-headers}
 
-To make calls to [!DNL Experience Platform] APIs, you must first complete the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+To make calls to [!DNL Experience Platform] APIs, you must first complete the [Experience Platform authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -481,7 +503,6 @@ Note the highlighted line with inline comments in the [!DNL connection spec] exa
 
 +++
 
-
 >[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] showing [!DNL auth spec]
@@ -536,7 +557,6 @@ Note the highlighted line with inline comments in the [!DNL connection spec] exa
 ```
 
 +++
-
 
 >[!TAB Data Landing Zone(DLZ)]
 
@@ -1092,7 +1112,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Optionally, you can add encryption to your exported files. To do this, you need to add items from the `encryption` object. See the request example below with the mandatory parameters highlighted:
 
-
 >[!BEGINSHADEBOX]
 
 +++ View encryption specs for cloud storage destinations
@@ -1611,7 +1630,6 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
 ```
 
 +++
-
 
 >[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
@@ -3273,20 +3291,26 @@ Note the Dataflow ID from the response. This ID will be required in later steps.
 
 In this step, you can also select which audiences you want to export to the destination. For extensive information about this step and the request format to add an audience to the dataflow, view the examples in the [Update a destination dataflow](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) section of the API reference documentation.
 
-
 ## Set up attribute and identity mapping {#attribute-and-identity-mapping}
 
 ![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step6.png)
 
-After creating your dataflow, you need to set up mapping for the attributes and identities that you would like to export. This consists of three steps, listed below: 
+After creating your dataflow, you need to set up mapping for the attributes and identities that you would like to export. Complete the following steps in order: 
 
-1. Create an input schema
-2. Create an output schema
-3. Set up a mapping set to connect the created schemas
+1. Retrieve the input schema.
+2. Retrieve and inspect the partner schema.
+3. Create the output schema, including every field you want to export as a mapping destination.
+4. Confirm that every mapping destination exists in the output schema.
+5. Create the mapping set.
+6. Update the dataflow with the mapping set.
 
-For example, to obtain the following mapping shown in the UI, you would need to go through the three steps listed above and detailed in the next headings. 
+For example, to obtain the following mapping shown in the UI, you would need to go through the steps listed above and detailed in the next headings. 
 
 ![Example of mapping step](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
+
+>[!IMPORTANT]
+>
+>The connection spec supplies destination metadata and identifiers needed to construct Flow Service resources. It is not automatically the complete output schema for the fields you want to export. Any field you reference as a mapping destination, such as `firstName`, `lastName`, or `Email`, must already exist in the output schema before you create the mapping set. If a mapping destination field is missing from the output schema, the mapping set request fails.
 
 ### Create an input schema {#create-input-schema}
 
@@ -3461,14 +3485,11 @@ The response below has been shortened for brevity.
             }
         }
 
-
 ```
 
 +++
 
 >[!ENDSHADEBOX]
-
-
 
 >[!BEGINSHADEBOX]
 
@@ -4055,6 +4076,10 @@ Inspect the response you obtain when performing the call above. You need to dril
 
 Next, you need to create an output schema. Copy the JSON response you got above and paste it into the `jsonSchema` object below.
 
+The partner schema only contains generic structures, such as `attributes`, `identityMap`, and `segmentMembership`. Before you create the mapping set in the next step, add a property to the `jsonSchema` object for every field you intend to map to. The mapping API validates each mapping destination against the output schema, so a mapping destination field that doesn't exist in the output schema causes the mapping set request to fail.
+
+The example request and response below show the `firstName`, `lastName`, `Email`, `personalEmail_address`, and `segmentMembership_status` properties already added to the output schema alongside the generic `attributes`, `identityMap`, and `segmentMembership` structures from the partner schema. These properties match the mapping destinations used in the [mapping set example](#create-mapping-set) later in this section.
+
 >[!BEGINSHADEBOX]
 
 **Request**
@@ -4365,6 +4390,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                 "title": "firstName",
                 "type": "string"
             },
+            "lastName": {
+                "title": "lastName",
+                "type": "string"
+            },
             "Email": {
                 "title": "Email",
                 "type": "array",
@@ -4380,15 +4409,22 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                     "meta:xdmType": "object"
                 },
                 "meta:xdmType": "array"
+            },
+            "personalEmail_address": {
+                "title": "personalEmail_address",
+                "type": "string"
+            },
+            "segmentMembership_status": {
+                "title": "segmentMembership_status",
+                "type": "string"
             }
         }
     }
 }
 
-
 ```
 
-The ID in the response represents the unique identifier of the input schema that you have created. Copy the ID from the response as you will reuse this in a later step.
+The ID in the response represents the unique identifier of the output schema that you have created. Copy the ID from the response as you will reuse this in a later step.
 
 +++
 
@@ -4407,10 +4443,18 @@ Next, use the [data prep API](https://developer.adobe.com/experience-platform-ap
 >[!IMPORTANT]
 >
 >* In the mappings object shown below, the `destination` parameter does not accept dots `"."`. For example you would need to use personalEmail_address or segmentMembership_status as highlighted in the configuration example.
->* There is one particular case when the source attribute is an identity attribute and contains a dot. In this case, the attribute needs to be escaped with `//`, as highlighted below.
->* Note also that even though the example configuration below includes `Email` and `Phone_E.164`, you are only able to export one identity attribute per dataflow.
+>* There is one particular case when the source attribute is an identity attribute and contains a dot. In this case, the attribute needs to be escaped with `//`. For example, the identity attribute `Phone_E.164` becomes the source path `identityMap.Phone_E//.164`, with a destination field name of `Phone_E_164`, since destination names cannot contain dots.
+>* You are only able to export one identity attribute per dataflow. The example configuration below maps `Email` as the identity attribute. If you want to export a different identity, such as `Phone_E.164`, replace the `Email` mapping with a single mapping for that identity instead of adding both.
 
-```shell {line-numbers="true" start-line="1" highlight="16-38"}
+Before you create the mapping set, verify the following:
+
+* Every mapping destination field, such as `firstName`, `lastName`, and `Email`, already exists in the output schema.
+* Every source path exists in the input schema.
+* Identity mappings use valid identity namespaces.
+* Segment membership fields, such as `segmentMembership_status`, are defined in the output schema if you reference them in a mapping.
+* The input schema, output schema, and mapping set all belong to the same sandbox.
+
+```shell {line-numbers="true" start-line="1" highlight="16-42"}
 
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
 --header 'x-api-key: {API_KEY}' \
@@ -4432,13 +4476,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
             "sourceType": "ATTRIBUTE"
         }, 
         {
-            "destination": "Email",
-            "source": "identityMap.Email",
+            "destination": "lastName",
+            "source": "person.name.lastName",
             "sourceType": "ATTRIBUTE"
         },
         {
-            "destination": "Phone_E_164",
-            "source": "identityMap.Phone_E//.164",
+            "destination": "Email",
+            "source": "identityMap.Email",
             "sourceType": "ATTRIBUTE"
         },
         {
@@ -4479,6 +4523,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 +++
 
 >[!ENDSHADEBOX]
+
+>[!NOTE]
+>
+>If the request returns a `MAPPER-3101-400` error stating that the XDM path is invalid, one or more of your mapping `destination` values don't exist in the output schema. Add the missing fields to the output schema and retry the mapping set request.
 
 Note the ID of the mapping set as you will need it in the next step to update the existing dataflow with the mapping set ID.
 
@@ -4544,7 +4592,7 @@ The response from the Flow Service API returns the ID of the updated dataflow.
 
 ![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-To make any updates to your dataflow, use the `PATCH` operation. For example, you can add a marketing action to your dataflows, update your dataflows to select fields as mandatory keys or deduplication keys, or add file manifest generation to existing destinations.
+To make any updates to your dataflow, use the `PATCH` operation. For example, you can add a marketing action to your dataflows, update your dataflows to select fields as mandatory keys or deduplication keys, add enrichment attributes for custom upload audiences, or add file manifest generation to existing destinations.
 
 ### Add a marketing action {#add-marketing-action}
 
@@ -4597,7 +4645,6 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 +++
 
-
 **Response**
 
 +++Add a marketing action - Response
@@ -4617,7 +4664,7 @@ A successful response returns response code `200` along with the ID of the updat
 
 ### Add a mandatory key {#add-mandatory-key}
 
-To add a [mandatory key](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes), see the request and response examples below.
+To add a [mandatory key](/help/destinations/ui/batch-destinations-mapping-reference.md#mandatory-attributes), see the request and response examples below.
 
 >[!IMPORTANT]
 >
@@ -4696,7 +4743,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ### Add a deduplication key {#add-deduplication-key}
 
-To add a [deduplication key](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys), see the request and response examples below
+To add a [deduplication key](/help/destinations/ui/batch-destinations-mapping-reference.md#deduplication-keys), see the request and response examples below
 
 >[!IMPORTANT]
 >
@@ -4827,6 +4874,426 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!ENDSHADEBOX]
 
+### Add enrichment attributes {#add-enrichment-attributes}
+
+Enrichment attributes apply when you activate [**[!UICONTROL Custom upload]**](/help/destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes) audiences, which are audiences ingested into Experience Platform as CSV files. Use this workflow to select which attributes from those audiences to include in the exported file.
+
+The workflow requires two stages: first, create a mapping set that defines which attributes to export (Steps 1-2), then reference that mapping set when adding the audience to your dataflow (Step 3).
+
+>[!IMPORTANT]
+>
+>When any audience in the dataflow has enrichment enabled, you must also specify exactly one [deduplication key](#add-deduplication-key). If the deduplication key is missing or more than one is specified, the API returns the following error: `InvalidParameterException: "One deduplication key (i.e. primary field) must be specified when activating audiences with enrichment info"`.
+
+#### Step 1: Retrieve the payload dataset and schema {#enrichment-step1}
+
+For each audience that has enrichment enabled, retrieve its associated payload dataset and XDM schema. The schema properties are used as the input and output schema when creating mapping sets.
+
+**Step 1a: Bulk-fetch audiences with payload dataset metadata**
+
+Send the audience IDs you want to enrich to the Segmentation Service bulk-get endpoint.
+
+>[!BEGINSHADEBOX]
+
+**Request**
+
++++Bulk-fetch audience metadata - Request
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/core/ups/audiences/bulk-get' \
+  --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+  --header 'x-gw-ims-org-id: {ORG_ID}' \
+  --header 'x-api-key: {API_KEY}' \
+  --header 'x-sandbox-name: {SANDBOX_NAME}' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{
+    "ids": [
+      { "id": "{AUDIENCE_ID_1}" },
+      { "id": "{AUDIENCE_ID_2}" }
+    ]
+  }'
+```
+
++++
+
+**Response**
+
++++Bulk-fetch audience metadata - Response
+
+```json
+{
+  "results": {
+    "{AUDIENCE_ID_1}": {
+      "id": "{AUDIENCE_ID_1}",
+      "name": "My Audience",
+      "originName": "CustomerAudienceUpload",
+      "profileCount": 12345,
+      "payloadDatasetId": "{PAYLOAD_DATASET_ID}"
+    }
+  }
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
+
+Note the `originName` field and the `payloadDatasetId` from the response. You need both in the following steps.
+
+**Step 1b: Fetch the payload dataset**
+
+Use the `payloadDatasetId` from the previous response to fetch the dataset from the Catalog Service.
+
+>[!BEGINSHADEBOX]
+
+**Request**
+
++++Fetch payload dataset - Request
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/catalog/datasets/{PAYLOAD_DATASET_ID}' \
+  --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+  --header 'x-gw-ims-org-id: {ORG_ID}' \
+  --header 'x-api-key: {API_KEY}' \
+  --header 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**Response**
+
++++Fetch payload dataset - Response
+
+```json
+{
+  "{PAYLOAD_DATASET_ID}": {
+    "id": "{PAYLOAD_DATASET_ID}",
+    "name": "250.0K-adv-aud-10-profiles",
+    "schemaRef": {
+      "id": "https://ns.adobe.com/acme/schemas/88d84a32a53affb2ca9f63b12da6eb4f8eb721ea31db176",
+      "contentType": "application/vnd.adobe.xdm+json; version=1"
+    }
+  }
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
+
+Extract the `schemaRef.id` value. You need it in the next step.
+
+**Step 1c: Fetch the XDM schema from the Schema Registry**
+
+Use the `schemaRef.id` from the dataset response to retrieve the full XDM schema. URL-encode the schema ID when using it as a path parameter.
+
+For example, `https://ns.adobe.com/acme/schemas/88d84a32a53affb2ca9f63b12da6eb4f8eb721ea31db176` becomes `https%3A%2F%2Fns.adobe.com%2Facme%2Fschemas%2F88d84a32a53affb2ca9f63b12da6eb4f8eb721ea31db176`.
+
+>[!BEGINSHADEBOX]
+
+**Request**
+
++++Fetch XDM schema - Request
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/{ENCODED_SCHEMA_ID}' \
+  --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+  --header 'x-gw-ims-org-id: {ORG_ID}' \
+  --header 'x-api-key: {API_KEY}' \
+  --header 'x-sandbox-name: {SANDBOX_NAME}' \
+  --header 'Accept: application/vnd.adobe.xed+json;version=1'
+```
+
++++
+
+**Response**
+
++++Fetch XDM schema - Response
+
+```json
+{
+  "$id": "https://ns.adobe.com/acme/schemas/88d84a32a53affb2ca9f63b12da6eb4f8eb721ea31db176",
+  "title": "My Payload Schema",
+  "meta:tenantNamespace": "_acme",
+  "properties": {
+    "_acme": {
+      "type": "object",
+      "properties": {
+        "attributeA": { "type": "string" },
+        "attributeB": { "type": "integer" }
+      },
+      "required": ["attributeA"]
+    },
+    "_id": { "type": "string" },
+    "timestamp": { "type": "string", "format": "date-time" }
+  }
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
+
+**Step 1d: Extract the JSON schema**
+
+The JSON schema you use in Step 2a depends on the audience type, identified by `originName` from Step 1a.
+
+>[!BEGINTABS]
+
+>[!TAB Standard audiences]
+
+For audiences where `originName` is not `AUDIENCE_ORCHESTRATION`, extract only the tenant-namespaced sub-object at `properties[meta:tenantNamespace]` and combine it with the top-level `title`. Discard system fields such as `_id` and `timestamp`.
+
+Example extracted JSON schema:
+
+```json
+{
+  "type": "object",
+  "title": "Loyalty Upload Schema",
+  "properties": {
+    "loyaltyTier": { "type": "string" },
+    "pointsBalance": { "type": "integer" }
+  }
+}
+```
+
+>[!TAB Audience Orchestration / Composition audiences]
+
+For audiences where `originName` is `AUDIENCE_ORCHESTRATION`, use the full set of top-level properties from the Schema Registry response. Add `meta:xdmType: "object"` and `type: "object"` explicitly. The `title` is always taken from the top-level Schema Registry response.
+
+Example extracted JSON schema:
+
+```json
+{
+  "meta:xdmType": "object",
+  "type": "object",
+  "title": "Composed Audience Schema",
+  "properties": {
+    "_acme": {
+      "type": "object",
+      "properties": {
+        "segment": { "type": "string" }
+      }
+    },
+    "emailAddress": { "type": "string" },
+    "age": { "type": "integer" }
+  }
+}
+```
+
+>[!ENDTABS]
+
+The following table summarizes which schema source and fields to use for each audience type.
+
+| Audience type | How to identify | Schema source | Fields included |
+| --- | --- | --- | --- |
+| Standard (custom upload) | `originName` is not `AUDIENCE_ORCHESTRATION` | `properties[meta:tenantNamespace]` | Tenant-namespaced attributes only |
+| Audience Orchestration / Composition | `originName` is `AUDIENCE_ORCHESTRATION` | All of `properties` | All top-level schema properties |
+
+{style="table-layout:auto"}
+
+#### Step 2: Create the mapping set {#enrichment-step2}
+
+Creating a mapping set is a two-call sequence: register the JSON schema from Step 1d as a conversion schema to obtain a schema ID, then create the mapping set referencing that schema ID.
+
+**Step 2a: Create the conversion schema**
+
+>[!BEGINSHADEBOX]
+
+**Request**
+
++++Create conversion schema - Request
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/conversion/schemas' \
+  --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+  --header 'x-gw-ims-org-id: {ORG_ID}' \
+  --header 'x-api-key: {API_KEY}' \
+  --header 'x-sandbox-name: {SANDBOX_NAME}' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{
+    "name": "Loyalty Upload Schema",
+    "jsonSchema": {
+      "type": "object",
+      "title": "Loyalty Upload Schema",
+      "properties": {
+        "loyaltyTier": { "type": "string" },
+        "pointsBalance": { "type": "integer" }
+      }
+    }
+  }'
+```
+
++++
+
+**Response**
+
++++Create conversion schema - Response
+
+```json
+{
+  "id": "{CONVERSION_SCHEMA_ID}",
+  "version": 0,
+  "name": "Loyalty Upload Schema"
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
+
+**Step 2b: Create the mapping set**
+
+Use the `{CONVERSION_SCHEMA_ID}` from the previous response as both `inputSchema.id` and `outputSchema.id`. Each property key from the schema is both the `source` and `destination`. The `sourceType` must always be `text/x.schema-path`.
+
+>[!BEGINSHADEBOX]
+
+**Request**
+
++++Create mapping set - Request
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
+  --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+  --header 'x-gw-ims-org-id: {ORG_ID}' \
+  --header 'x-api-key: {API_KEY}' \
+  --header 'x-sandbox-name: {SANDBOX_NAME}' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{
+    "inputSchema": {
+      "id": "{CONVERSION_SCHEMA_ID}"
+    },
+    "outputSchema": {
+      "id": "{CONVERSION_SCHEMA_ID}"
+    },
+    "mappings": [
+      {
+        "sourceType": "text/x.schema-path",
+        "source": "loyaltyTier",
+        "destination": "loyaltyTier"
+      },
+      {
+        "sourceType": "text/x.schema-path",
+        "source": "pointsBalance",
+        "destination": "pointsBalance"
+      }
+    ]
+  }'
+```
+
++++
+
+**Response**
+
++++Create mapping set - Response
+
+```json
+{
+  "id": "{MAPPING_SET_ID}",
+  "version": 0,
+  "mappings": [
+    {
+      "id": "{MAPPING_ID_1}",
+      "sourceType": "text/x.schema-path",
+      "source": "loyaltyTier",
+      "destination": "loyaltyTier"
+    },
+    {
+      "id": "{MAPPING_ID_2}",
+      "sourceType": "text/x.schema-path",
+      "source": "pointsBalance",
+      "destination": "pointsBalance"
+    }
+  ]
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
+
+Store the returned `id` and `version` values. These are the `mappingSet.id` and `mappingSet.version` you reference in the next step.
+
+#### Step 3: Add enrichment attributes to the dataflow {#enrichment-step3}
+
+With the mapping set created, use a `PATCH` request to add the audience with its enrichment configuration to your dataflow.
+
+>[!IMPORTANT]
+>
+>The `If-Match` header is required when making a `PATCH` request. The value for this header is the unique version of the dataflow you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
+>
+> To get the latest version of the etag value, perform a GET request to the `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` endpoint, where `{ID}` is the dataflow ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the examples below when making `PATCH` requests.
+
+>[!BEGINSHADEBOX]
+
+**Request**
+
++++Add enrichment attributes to a dataflow - Request
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '[
+  {
+    "op": "add",
+    "path": "/transformationSpecs/0/params/segmentSelectors/segmentSelectors/-",
+    "value": {
+      "type": "PLATFORM_SEGMENT",
+      "value": {
+        "id": "{SEGMENT_ID}",
+        "name": "{SEGMENT_NAME}",
+        "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
+      },
+      "enrichmentInfo": {
+        "enabled": true,
+        "sourceType": "AUDIENCE_DATASET",
+        "mappingSet": {
+          "id": "{MAPPING_SET_ID}",
+          "version": 0
+        }
+      }
+    }
+  }
+]'
+```
+
++++
+
+>[!ENDSHADEBOX]
+
+The `enrichmentInfo` object has the following properties:
+
+| Property | Type | Required | Description |
+| --- | --- | --- | --- |
+| `enabled` | boolean | Yes | Activates enrichment for this segment. |
+| `sourceType` | enum | Yes | The source type for enrichment, for example `AUDIENCE_DATASET`. |
+| `mappingSet.id` | string | Yes | The ID of the mapping set created in Step 2b. |
+| `mappingSet.version` | integer | Yes | The version of the mapping set created in Step 2b. |
+
+{style="table-layout:auto"}
+
+Once the flow runs, the resolved enrichment attributes are available in the export template at:
+
+```
+destination.enrichmentAttributes.{namespace}.{segmentId}
+```
+
+>[!NOTE]
+>
+>If you want to activate audiences to your destination without exporting any enrichment attributes, set `enrichmentInfo.enabled` to `false` for all audiences. No mapping sets are required in this case.
+
 ## Validate dataflow (Get the dataflow runs) {#get-dataflow-runs}
 
 ![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step8.png)
@@ -4914,3 +5381,4 @@ You have successfully connected Experience Platform to one of your preferred clo
 * [Destinations overview](../home.md)
 * [Destinations Catalog overview](../catalog/overview.md)
 * [Update destination dataflows using the Flow Service API](../api/update-destination-dataflows.md)
+

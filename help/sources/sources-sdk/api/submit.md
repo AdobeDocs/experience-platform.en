@@ -3,12 +3,19 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 title: Submit Your Source
 description: The following document provides steps on how to test and verify a new source using the Flow Service API and integrate a new source through Self-Serve Sources (Batch SDK).
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
+TQID: https://experienceleague.adobe.com/IsP-D4nIT4tayfQukgV38M7kn3tIq2I3UyDeOgx0mb8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Submit your source
 
 The final step to integrating your new source to Adobe Experience Platform using Self-Serve Sources (Batch SDK) is to test your source for verification. Once successful, you can then submit your new source by contacting your Adobe representative.
 
-The following document provides steps on how to test and debug your source using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following document provides steps on how to test and debug your source using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -83,3 +90,5 @@ The [!DNL Runner] interface appears, allowing you to configure the run order of 
 ## Submit your source
 
 Once your source is able to complete the entire workflow you can proceed to contact your Adobe representative and submit your source for integration.
+
+

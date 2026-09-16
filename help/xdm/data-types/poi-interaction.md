@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Point of Interest Interaction Data Type
 description: Learn about the Point Of Interest Interaction XDM data type.
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
+TQID: https://experienceleague.adobe.com/95b6EcI-H5-Js0aj8GAvV2XguCGUqv-TgCLZwasEeao
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Point of interest interaction] data type
 

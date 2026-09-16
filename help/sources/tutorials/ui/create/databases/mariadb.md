@@ -2,6 +2,19 @@
 title: Connect MariaDB To Experience Platform Using The UI
 description: Learn how to connect your MariaDB account to Experience Platform using the sources workspace in the Experience Platform user interface.
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
+TQID: https://experienceleague.adobe.com/QGKJa3l83Qkiae9hPIeqimHhsaIHnIt5QZ3uBTWMgFo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Connect [!DNL MariaDB] to Experience Platform using the UI
 

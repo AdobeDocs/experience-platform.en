@@ -28,7 +28,7 @@ To create a datastream, start by selecting **[!UICONTROL New Datastream]**.
 
 The datastream creation workflow appears, starting at the configuration step. From here, you must provide a name and optional description for the datastream.
 
-If you configure a datastream for use in Experience Platform and you also use the Web SDK, you must also select an [event-based Experience Data Model (XDM) schema](/help/xdm/classes/experienceevent.md) to represent the data you plan on ingesting.
+If you configure a datastream for use in Experience Platform and you also use the Web SDK, you must also select a **[!UICONTROL Mapping Schema]**. Use an [event-based Experience Data Model (XDM) schema](/help/xdm/classes/experienceevent.md) to represent the data you plan on ingesting.
 
 ![Basic configuration for a datastream.](assets/configure/configure.png)
 
@@ -157,8 +157,8 @@ Enable this service to send data to [!DNL Adobe Audience Manager]. The other set
 
 | Setting | Description |
 | --- | --- |
-| [!UICONTROL Cookie Destinations Enabled] | Enables the SDK to share segment information via [cookie destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) from [!DNL Audience Manager]. |
-| [!UICONTROL URL Destinations Enabled] | Enables the SDK to share segment information via [URL destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) from [!DNL Audience Manager]. |
+| [!UICONTROL Cookie Destinations Enabled] | Enables the SDK to share audience information via [cookie destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) from [!DNL Audience Manager]. |
+| [!UICONTROL URL Destinations Enabled] | Enables the SDK to share audience information via [URL destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) from [!DNL Audience Manager]. |
 
 ### Adobe Experience Platform settings {#aep}
 

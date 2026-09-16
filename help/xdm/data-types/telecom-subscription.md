@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Telecom Subscription Data Type
 description: Learn about the Telecom Subscription Experience Data Model (XDM) data type.
 exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
+TQID: https://experienceleague.adobe.com/Uq0AcydyH9L8YhSGcJ4ymUajAg3-Fp5ocevOGNVg31g
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Telecom Subscription] data type
 
@@ -23,18 +33,18 @@ exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
 | `subscriber` | [[!UICONTROL Person]](./person.md) | Describes the owner of the subscription. |
 | `ID` | String | A unique identifier for the subscription instance. |
 | `billingPeriod` | String | The duration between billings. |
-| `billingStartDate` | Date | The date when the billing period begins. The date format (without time) should follow the [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standard. |
+| `billingStartDate` | Date | The date when the billing period begins. The date format (without time) should follow the [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) standard (`yyyy-MM-dd`). |
 | `chargeMethod` | String | The way the billing is set up to charge the customer. |
 | `contractID` | String | The unique ID for the contract that governs this subscription. |
 | `country` | String | The country that the subscription contractual and agreement terms are rooted in. |
-| `endDate` | Date | The date the current subscription term ends. The date format (without time) should follow the [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standard. |
-| `paymentDueDate` | Date | The date when the subscription payment is due. The date format (without time) should follow the [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standard. |
+| `endDate` | Date | The date the current subscription term ends. The date format (without time) should follow the [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) standard (`yyyy-MM-dd`). |
+| `paymentDueDate` | Date | The date when the subscription payment is due. The date format (without time) should follow the [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) standard (`yyyy-MM-dd`). |
 | `paymentMethod` | String | The payment method for recurring payments. |
 | `paymentStatus` | String | The payment standing of the account. |
 | `planName` | String | The human-readable name for the subscription. |
 | `reason` | String | The general intent the member has for the use of the subscription. |
 | `renew` | String | The agreed way that the subscription may continue after the end date. |
-| `startDate` | Date | The date the subscription begins. The date format (without time) should follow the [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standard. |
+| `startDate` | Date | The date the subscription begins. The date format (without time) should follow the [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) standard (`yyyy-MM-dd`). |
 | `status` | String | The current status of the subscription. |
 | `subscriptionCategory` | String | The main, top-level categorization of this type of subscription. |
 | `subscriptionSKU` | String | The stock keeping unit (SKU) for the subscription. |

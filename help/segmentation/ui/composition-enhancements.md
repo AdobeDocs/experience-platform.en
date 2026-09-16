@@ -3,6 +3,25 @@ title: Audience Composition Enhancements
 description: Learn about the enhancements made to Audience Composition with audience enrichment and faster activation.
 hide: true
 exl-id: 068a178e-ef50-45f1-bcce-c207ebcd5ef1
+TQID: https://experienceleague.adobe.com/CFx-1ILZzkvy91XX8ohinUcnwg4y3YQ52pz2h-BG1Lo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 # Audience Composition enhancements
 
@@ -55,6 +74,6 @@ Please keep the following details and guardrails in mind while using audience en
 
 ## Faster activation {#faster-activation}
 
-Faster activation lets you activate your audience to a downstream destination immediately after the composition has evaluated. As a result, if your destination is set to activate after segment evaluation, you no longer need to wait for 24 hours for the evaluation job to finish.
+Faster activation lets you activate your audience to a downstream destination immediately after the composition has evaluated. If you set your destination to activate after segment evaluation, you **no longer** need to wait for 24 hours after the evaluation job has run.
 
 For more information, read the [activate audiences to batch profile destinations guide](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files).

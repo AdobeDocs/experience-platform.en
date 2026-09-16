@@ -4,6 +4,7 @@ user-guide-title: Observability Insights Guide
 user-guide-description: Find out how you can monitor Experience Platform activities, using statistical metrics and event notifications from Adobe Experience Platform Observability Insights.
 feature: Observability
 role: Developer
+nudge: true
 ---
 
 # Observability Insights {#observability}
@@ -19,5 +20,5 @@ role: Developer
   * [UI guide](./alerts/ui.md)
   * [Subscribe to I/O Event notifications](./alerts/subscribe.md)
   * [Slack integration](./alerts/slack-integration.md)
-* [API reference](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
+* [API reference](https://developer.adobe.com/experience-platform-apis/references/observability-insights)
 * [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

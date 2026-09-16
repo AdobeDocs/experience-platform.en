@@ -4,6 +4,19 @@ solution: Experience Platform
 title: Update a Catalog Object
 description: You can update part of a Catalog object by including its ID in the path of a PATCH request. This document covers using fields and using JSON Patch notation for performing PATCH operations on Catalog objects.
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
+TQID: https://experienceleague.adobe.com/JwwAe9V-v0nHlBooAG4XvPzbq4h6adYhq3Omv1PcgxY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Update a Catalog object
 
@@ -151,6 +164,75 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3
 **Response**
 
 A successful response returns an array containing the ID of the updated dataset, which should match the ID sent in the PATCH request. Performing a GET request for this object now shows that the `extensions.adobe_lakeHouse.rowExpiration` object has been created without requiring prior manual creation steps.
+
+```json
+[
+    "@/dataSets/67b3077efa10d92ab7a71858"
+]
+```
+
+### Update array fields {#array-fields}
+
+The `accessLabels` field is used by Object-Level Access Control to restrict access to an entire dataset. For information on how dataset access is evaluated, see [Attribute-based access control end-to-end guide](../../access-control/abac/end-to-end-guide.md).
+
+To replace or clear an array-valued field such as `accessLabels`, include its full desired value in a PATCH request to `/v2/dataSets/{DATASET_ID}`.
+
+>[!IMPORTANT]
+>
+>The endpoint replaces the entire array instead of merging it with the existing values, so include every value that you want to retain. For `accessLabels`, the endpoint validates each value against your organization's label catalog before saving the array. If a label does not exist in the catalog, the request fails.
+
+To set access labels on a dataset, include all core and custom labels that you want the dataset to contain.
+
+**Request**
+
+The following request sets the `core/C1` and `custom/L1` access labels on a dataset.
+
+```shell
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3077efa10d92ab7a71858 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "accessLabels": [
+          "core/C1",
+          "custom/L1"
+        ]
+      }'
+```
+
+**Response**
+
+A successful response returns an array containing the ID of the updated dataset. Performing a GET request for this dataset now shows the updated values in the `accessLabels` field.
+
+```json
+[
+    "@/dataSets/67b3077efa10d92ab7a71858"
+]
+```
+
+To remove all values from an array field, send an empty array.
+
+**Request**
+
+The following request clears the `accessLabels` field of a dataset.
+
+```shell
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3077efa10d92ab7a71858 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "accessLabels": []
+      }'
+```
+
+**Response**
+
+A successful response returns an array containing the ID of the updated dataset. Performing a GET request for this dataset now shows that the `accessLabels` field is empty.
 
 ```json
 [

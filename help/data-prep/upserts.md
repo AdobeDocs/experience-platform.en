@@ -3,6 +3,19 @@ keywords: Experience Platform;home;popular topics;data prep;Data Prep;streaming;
 title: Send Partial Row Updates To Real-Time Customer Profile Using Data Prep
 description: Learn how to send partial row updates to Real-Time Customer Profile using Data Prep.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
+TQID: https://experienceleague.adobe.com/HKhuYcYpE--wPMnTDFOg-He9i9nIh-xXmi5idYUzwzY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Send partial row updates to [!DNL Real-Time Customer Profile] using [!DNL Data Prep]
 
@@ -46,7 +59,7 @@ This overview requires a working understanding of the following components of Ad
 Streaming upserts in [!DNL Data Prep] works as follows:
 
 * You must first create and enable a dataset for [!DNL Profile] consumption. See the guide on [enabling a dataset for [!DNL Profile]](../catalog/datasets/enable-for-profile.md) for more information.
-* If new identities must be linked, then you must also create an additional dataset **with the same schema** as your [!DNL Profile] dataset.
+* If new identities must be linked, then you must also create an additional dataset with a minimal, identity-only schema containing only identity-relevant fields, such as `identityMap` and identity descriptors. Do not reuse the schema of your [!DNL Profile] dataset.
 * Once your dataset(s) are prepared, you must create a dataflow to map your incoming request to the [!DNL Profile] dataset;
 * Next, you must update the incoming request to include the necessary headers. These headers define:
     * The data operation that is needed to be performed with [!DNL Profile]: `create`, `merge`, and `delete`.
@@ -56,39 +69,13 @@ Streaming upserts in [!DNL Data Prep] works as follows:
 
 If new identities must be linked, then you must create and pass an additional dataset in the incoming payload. When creating an identity dataset, you must ensure that the following requirements are met:
 
-* The identity dataset must have its associated schema as the [!DNL Profile] dataset. A mismatch of schemas may lead to inconsistent system behavior.
+* Create a separate, minimal schema for the identity dataset that contains only identity-relevant fields, such as `identityMap` and any required identity descriptors. Do not reuse the [!DNL Profile] dataset schema. It introduces required non-identity fields that [!DNL Identity Service] does not need, which causes schema validation failures on ingestion.
 * However, you must ensure that the identity dataset is different from the [!DNL Profile] dataset. If the datasets are the same, then data will be overwritten instead of updated.
 * While the initial dataset must be enabled for [!DNL Profile], the identity dataset **should not be enabled** for [!DNL Profile]. Otherwise, data will also be overwritten instead of updated. However, the identity dataset **should be enabled** for [!DNL Identity Service].
 
-#### Required fields in the schemas associated with the identity dataset {#identity-dataset-required-fileds}
-
-If your schema contains required fields, validation of the dataset must be suppressed in order to enable [!DNL Identity Service] to only receive the identities. You can suppress validation by applying the `disabled` value to the `acp_validationContext` parameter. See the example below:
-
-```shell
-curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257bef7a75461948ebcaaa' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-    "tags": {
-        "acp_validationContext": [
-            "disabled"
-        ],
-        "unifiedProfile": [
-            "enabled:false"
-        ],
-        "unifiedIdentity": [
-            "enabled:true"
-        ]
-    }
-}'
-```
-
 >[!TIP]
 >
->You do not need to do any additional configuration if the schema associated with the identity dataset does not have any required fields.
+>If the identity dataset schema contains only identity-relevant fields, such as `identityMap` and identity descriptors, no validation suppression is needed. [!DNL Identity Service] does not require or validate non-identity fields. A minimal schema avoids required-field validation failures without any additional configuration.
 
 ## Incoming payload structure 
 
@@ -267,6 +254,7 @@ The following outlines a list of known limitations to consider when streaming up
 * The streaming upserts method should only be used when sending partial row updates to [!DNL Real-Time Customer Profile]. Partial row updates are **not** consumed by data lake.
 * The streaming upserts method does not support updating, replacing, and removing identities. New identities are created if they do not exist. Hence the `identity` operation must always be set to create. If an identity already exists, the operation is a no-op.
 * The streaming upserts method currently does not support the [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) or the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* The streaming upserts method does not validate the request body. [!DNL Data Collection Validation Service] validates only request headers for `xdmEntityUpdates` payloads. **Impact:** Schema constraints such as required fields, data types, patterns, and enum values are not enforced on these payloads. Values that batch ingestion would reject can be accepted without error. **Workaround:** Validate and normalize values upstream before you send them. For example, use a [!DNL Data Prep] mapping function such as [`lower`](./functions.md#string) to normalize the case of a value before it reaches an enum field. See the [validation coverage note](/help/ingestion/quality/streaming-validation.md#validation-coverage) in the streaming ingestion validation guide for more information.
 
 ## Next steps
 

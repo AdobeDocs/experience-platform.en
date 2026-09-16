@@ -2,8 +2,19 @@
 description: Learn how to use the destination testing API to test your streaming destination message transformation template before publishing the destination.
 title: Create and test a message transformation template
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
+TQID: https://experienceleague.adobe.com/HqZTztpNer2jNAWih6MqzOtcsULT0ThFRCVH8xs3PcA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
-
 # Create and test a message transformation template {#create-template}
 
 ## Overview {#overview}
@@ -90,19 +101,22 @@ If the destination ID you provide corresponds to a destination configuration wit
         {%- endfor -%}{%- if not loop.last -%},{%- endif -%}
     {% endfor %}
     ],
-    "AdobeExperiencePlatformSegments": {
-        "add": [
-        {%- for segment in input.profile.segmentMembership.ups | added %}
-            "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
-        {% endfor %}
-        ],
-        "remove": [
-        {#- Alternative syntax for filtering audiences by status: -#}
-        {% for segment in removedSegments(input.profile.segmentMembership.ups) %}
-            "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
-        {% endfor %}
-        ]
-    }
+    "segments": [
+    {%- set first = true %}
+    {%- for namespace in input.profile.segmentMembership %}
+    {%- for segment in input.profile.segmentMembership[namespace.key] %}
+    {%- if destination.namespaceSegmentAliases[namespace.key][segment.key] is defined %}
+    {%- if not first %},{% endif %}
+        {
+            "id": "{{ segment.key }}",
+            "status": "{{ segment.value.status }}",
+            "qualificationTime": "{{ segment.value.lastQualificationTime }}"
+        }
+    {%- set first = false %}
+    {%- endif %}
+    {% endfor %}
+    {% endfor %}
+    ]
 }
 
 
@@ -130,19 +144,22 @@ If the destination ID you provide corresponds to a destination server template w
                 {%- endfor -%}{%- if not loop.last -%},{%- endif -%}
             {% endfor %}
             ],
-            "AdobeExperiencePlatformSegments": {
-                "add": [
-                {%- for segment in profile.segmentMembership.ups | added %}
-                    "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
-                {% endfor %}
-                ],
-                "remove": [
-                {#- Alternative syntax for filtering audiences by status: -#}
-                {% for segment in removedSegments(profile.segmentMembership.ups) %}
-                    "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
-                {% endfor %}
-                ]
-            }
+            "segments": [
+            {%- set first = true %}
+            {%- for namespace in profile.segmentMembership %}
+            {%- for segment in profile.segmentMembership[namespace.key] %}
+            {%- if destination.namespaceSegmentAliases[namespace.key][segment.key] is defined %}
+            {%- if not first %},{% endif %}
+                {
+                    "id": "{{ segment.key }}",
+                    "status": "{{ segment.value.status }}",
+                    "qualificationTime": "{{ segment.value.lastQualificationTime }}"
+                }
+            {%- set first = false %}
+            {%- endif %}
+            {% endfor %}
+            {% endfor %}
+            ]
         }{%- if not loop.last -%},{%- endif -%}
     {% endfor %}
     ]

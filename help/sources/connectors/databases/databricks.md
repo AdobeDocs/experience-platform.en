@@ -2,8 +2,20 @@
 title: Databricks
 description: Learn about the prerequisite steps needed in order to connect Databricks to Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
-last-substantial-update: 2026-03-14
+last-substantial-update: 2026-03-14T00:00:00.000Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
+TQID: https://experienceleague.adobe.com/VptaHDuBe-Nrreb-kb73ajDcAzEPmV-eERjCpCsyRI0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # [!DNL Databricks]
 
@@ -156,6 +168,47 @@ If unprovided, the copy activity in the flow run fails and returns the following
 
 ```shell
 Unable to access container '{CONTAINER_NAME}' in account '{STORAGE_ACCOUNT}.blob.core.windows.net' using anonymous credentials. No credentials found in the configuration. Public access is not permitted on this storage account.
+```
+
+### Unity Catalog governance and cluster access mode
+
+The Databricks source connector performs read and write (I/O) operations on your Databricks cluster during ingestion. These operations require Unity Catalog object permissions and, depending on your cluster's access mode, additional cluster-level permissions. Configure both before connecting.
+
+**Grant Unity Catalog permissions**
+
+Grant the following Unity Catalog permissions on the source objects to the identity used by the connection (a service principal):
+
+| Privilege | Object |
+| --- | --- |
+| `USE CATALOG` | The catalog |
+| `USE SCHEMA` | The schema |
+| `SELECT` | The source table |
+
+**Configure your cluster's access mode**
+
+Select the access mode used by your Databricks cluster and complete the corresponding configuration.
+
+>[!TIP]
+>
+>**Dedicated (Single-user) access mode is recommended**. Assign the cluster's single user to the connector's service principal. The connector's I/O operations complete using your Unity Catalog grants alone, so no additional cluster-level permissions are required, and all access remains governed by Unity Catalog.
+
+**Standard (Shared) access mode**
+
+Standard (Shared) access mode enforces Table Access Control. In addition to the Unity Catalog grants above, the connector's I/O operations require the ANY FILE privilege. Grant it to the connector's service principal:
+
+```sql
+GRANT SELECT ON ANY FILE TO `{SERVICE_PRINCIPAL}`;
+GRANT MODIFY ON ANY FILE TO `{SERVICE_PRINCIPAL}`;
+```
+
+>[!IMPORTANT]
+>
+>`ANY FILE` is a legacy privilege for direct file access and is not governed by Unity Catalog — it has a broader scope than Unity Catalog object permissions, and does not itself grant or bypass access to Unity Catalog objects (Unity Catalog tables still require their own UC grants). Review it with your security team; to avoid granting it, use Dedicated access mode instead.
+
+If the permissions required for your cluster's access mode are not in place, ingestion fails during execution with the following error:
+
+```json
+[INSUFFICIENT_PERMISSIONS] ... on any file. SQLSTATE: 42501.
 ```
 
 ## Connect [!DNL Databricks] to Experience Platform 

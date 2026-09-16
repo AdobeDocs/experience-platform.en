@@ -2,6 +2,18 @@
 description: Learn how to configure file formatting options when activating data to file-based destinations
 title: Configure file formatting options for file-based destinations
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
+TQID: https://experienceleague.adobe.com/a6WB6vdDfaZSEBzvNv18-tJorIL6JJMRgfBRwuNnqnc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Configure file formatting options for file-based destinations
 
@@ -12,11 +24,6 @@ exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 The option to configure various file formatting options for the exported files is available to you when you [connect](/help/destinations/ui/connect-destination.md) to a file-based destination, such as [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect), or [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect). 
 
 You can configure various file formatting options for exported files by using the Experience Platform UI. You can modify several properties of the exported files to match the requirements of the file reception system on your side, to optimally read and interpret the files received from Experience Platform.
-
-<!--
-* To configure file formatting options for exported files by using the Experience Platform UI, read this document.
-* To configure file formatting options for exported files by using the Experience Platform Flow Service API, read [Flow Service API - Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/).
--->
 
 ## File formatting configuration for CSV files {#file-configuration}
 

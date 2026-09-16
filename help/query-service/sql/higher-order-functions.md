@@ -2,6 +2,15 @@
 title: Manage array and map data types with higher-order functions
 description: Learn how to manage array and map data types with higher-order functions in Query Service. Examples are provided with common use cases.
 exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
+TQID: https://experienceleague.adobe.com/P311rfJfVDuFSdXB0D2vAhmplJxHCIJy7E9oaHSkMDg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Manage array and map data types with higher-order functions
 

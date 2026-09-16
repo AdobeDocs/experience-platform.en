@@ -5,6 +5,25 @@ title: Optimize a Model Using the Model Insights Framework
 type: Tutorial
 description: The Model Insights Framework provides the data scientist with tools in Data Science Workspace to make quick and informed choices for optimal machine learning models based on experiments.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
+TQID: https://experienceleague.adobe.com/un5HcJ2-cfwNJiSi1mjUfjKBS-MEdXpubxOS3Pu2-EY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Optimize a model using the Model Insights framework
 
@@ -159,7 +178,7 @@ Data is first loaded to a dataset from a source as defined in [retail.config.jso
 
 ## Using pre-built metrics and visualization charts
 
-The [!DNL Sensei Model Insights Framework] will support one default template for each type of machine learning algorithm. The table below shows common high-level machine learning algorithm classes and corresponding evaluation metrics and visualizations. 
+The Adobe AI Model Insights Framework will support one default template for each type of machine learning algorithm. The table below shows common high-level machine learning algorithm classes and corresponding evaluation metrics and visualizations. 
 
 | ML Algorithm Type | Evaluation Metrics | Visualizations |
 | --- | --- | --- |

@@ -2,12 +2,24 @@
 title: Create a Salesforce Service Cloud Source Connection Using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Salesforce Service Cloud using the Flow Service API.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
+TQID: https://experienceleague.adobe.com/wQObLlPjITd2k-cm6CzSmFX-IQDxhfG0q5I1OmffcQo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # Create a [!DNL Salesforce Service Cloud] source connection using the [!DNL Flow Service] API
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-Read this tutorial to learn how to create a base connection for [!DNL Salesforce Service Cloud] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this tutorial to learn how to create a base connection for [!DNL Salesforce Service Cloud] using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -94,3 +106,5 @@ By following this tutorial, you have created a [!DNL Salesforce Service Cloud] b
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
 * [Create a dataflow to bring customer success data to Experience Platform using the [!DNL Flow Service] API](../../collect/customer-success.md)
+
+

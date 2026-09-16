@@ -1,8 +1,30 @@
 ---
 title: LiveRamp - Onboarding connection
 description: Learn how to use the LiveRamp connector to onboard audiences from Adobe Real-Time Customer Data Platform to LiveRamp Connect.
-last-substantial-update: 2023-07-26
+last-substantial-update: 2023-07-26T00:00:00.000Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
+TQID: https://experienceleague.adobe.com/RUBZFtEtOLCleMXxUxnVTffU-AdyyeU2EcTcmX68wXM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # [!DNL LiveRamp - Onboarding] connection {#liveramp-onboarding}
 
@@ -58,7 +80,7 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes |
 |---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL LiveRamp - Onboarding] destination.|
-| Export frequency | **[!UICONTROL Batch]** | As profiles are updated in Experience Platform based on audience evaluation, the profiles (identities) are updated and can be delivered downstream to the destination platform on a daily, weekly, or monthly cadence. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
+| Export frequency | **[!UICONTROL Batch]** | As profiles are updated in Experience Platform based on audience evaluation, the profiles (identities) are updated and can be delivered downstream to the destination platform on a one-time, daily, weekly, or monthly cadence. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
 
@@ -140,7 +162,7 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 In the [!UICONTROL Scheduling] step, create an export schedule for each audience, with the settings shown below.
 
 * **[!UICONTROL File export options]**: [!UICONTROL Export full files]. [Incremental file exports](../../ui/activate-batch-profile-destinations.md#export-incremental-files) are currently not supported for the [!DNL LiveRamp] destination.
-* **[!UICONTROL Frequency]**: [!UICONTROL Daily], [!UICONTROL Weekly], or [!UICONTROL Monthly]
+* **[!UICONTROL Frequency]**: [!UICONTROL Once], [!UICONTROL Daily], [!UICONTROL Weekly], or [!UICONTROL Monthly]
 * **[!UICONTROL Date]**: Select the export start and end times as you wish.
 
 ![Experience Platform UI screenshot showing the audience scheduling step.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
@@ -193,7 +215,7 @@ Once you've added all your desired mappings, select **[!UICONTROL Next]** and fi
 
 Your data is exported to the [!DNL LiveRamp - Onboarding] storage location that you configured, as CSV files.
 
-Exported files have a maximum size of 10 million rows. Experience Platform generates multiple files per delivery if the selected audiences exceed 10 million rows. If you expect to exceed the single file limit, contact your [!DNL LiveRamp] representative and ask them to configure batch ingestion for you.
+Exported files have a maximum size of 100 million rows. Experience Platform generates multiple files per delivery if the selected audiences exceed 100 million rows. If you expect to exceed the single file limit, contact your [!DNL LiveRamp] representative and ask them to configure batch ingestion for you.
 
 When exporting files to the [!DNL LiveRamp - Onboarding] destination, Experience Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md).
 
@@ -216,8 +238,11 @@ Exported CSV files contain profiles with the selected attributes and the corresp
 The profiles included in the exported files can match one the following audience qualification statuses:
 
 * `Active`: The profile is currently qualified for the audience.
-* `Expired`: The profile is no longer qualified for the audience, but has qualified in the past.
 * `""`(empty string): The profile never qualfied for the audience.
+
+>[!NOTE]
+>
+>As of August 2026, Adobe no longer sends the `Expired` status to [!DNL LiveRamp]. In [!DNL LiveRamp], use the full file refresh import method to keep your audience membership current. See [Ways to update an existing audience](https://docs.liveramp.com/connect/en/ways-to-update-an-existing-audience.html#ways-to-update-an-existing-audience-136998) in the [!DNL LiveRamp] documentation.
 
 For instance, an exported CSV file with one `email` attribute, two audiences originating from the Experience Platform [Segmentation Service](../../../segmentation/home.md), and one [imported](../../../segmentation/ui/audience-portal.md#import-audience) external audience, could look like this:
 
@@ -227,7 +252,7 @@ abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
 abc116@testemailabc.com,active,,
-abc107@testemailabc.com,active,expired,active
+abc107@testemailabc.com,active,,active
 abc101@testemailabc.com,active,active,
 ```
 
@@ -263,6 +288,8 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
+|August 2026| Functionality and documentation update|<ul><li> The `Expired` audience qualification status is no longer sent to [!DNL LiveRamp].</li></ul>|
+|July 2026| Functionality and documentation update|<ul><li> Added support for one-time delivery cadence.</li><li> Increased maximum file size to 100 million rows (from 10 million, previously).|
 |February 2025| Functionality and documentation update|<ul><li> Added support for weekly and monthly delivery cadences.|
 |March 2024|Functionality and documentation update|<ul><li>Added support for deliveries to Europe and Australia [!DNL LiveRamp] [!DNL SFTP] instances.</li><li>Updated documentation to describe specific configurations for newly supported regions.</li><li>Increased maximum file size to 10 million rows (from 5 million, previously).</li><li>Updated documentation to reflect increased file sizes.</li></ul>|
 |July 2023|Initial release|Initial destination release and documentation published.|

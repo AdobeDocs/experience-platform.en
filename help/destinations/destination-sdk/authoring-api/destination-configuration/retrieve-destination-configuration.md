@@ -2,6 +2,21 @@
 description: This page exemplifies the API call used to retrieve a destination configuration through Adobe Experience Platform Destination SDK.
 title: Retrieve a destination configuration
 exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
+TQID: https://experienceleague.adobe.com/CYufnxbl7OuOVX3WqKZo7B9Ms1f17q0xZkrSjh-Y-iE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Retrieve a destination configuration
 
@@ -9,11 +24,11 @@ This page exemplifies the API request and payload that you can use to retrieve i
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Getting started with destination configuration API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Retrieve a destination configuration {#retrieve}
 

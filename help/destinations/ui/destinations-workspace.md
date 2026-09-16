@@ -3,6 +3,21 @@ keywords: platform;destinations;destinations workspace;workspace;ui;destinations
 title: Destinations workspace
 description: The Destinations workspace consists of five sections, Overview, Catalog, Browse, Accounts, and System View. They are described in the sections below.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
+TQID: https://experienceleague.adobe.com/dchgYSCdxGfTwsmiNPKEY7Ae6TLUUrkDarT4FLzYA3Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+    internal-label: Destinations dashboard
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
 ---
 # Destinations workspace {#destinations-workspace}
 
@@ -126,13 +141,18 @@ Use the filters in the left sidebar to narrow down your search.
 
 ![Destination filters in the Browse tab](../assets/ui/workspace/destination-filters.png)
 
+* **[!UICONTROL Data type]**: Filter dataflows by the type of data activated to the destination:
+    * **[!UICONTROL Audiences]**: Shows only dataflows that activate [audiences](../../segmentation/types/overview.md)
+    * **[!UICONTROL Datasets]**: Shows only dataflows that export [datasets](../../catalog/datasets/overview.md)
+    * **[!UICONTROL Accounts]**: Shows only dataflows that activate [account audiences](../../segmentation/types/account-audiences.md)
+    * **[!UICONTROL Prospects]**: Shows only dataflows that activate [prospect audiences](../../segmentation/types/prospect-audiences.md)
 * **[!UICONTROL Destination platform]**: Filter dataflows by specific destination platforms (for example, [!DNL Amazon S3], [!DNL Facebook Custom Audience], [!DNL LinkedIn Matched Audience], etc.). You can select multiple platforms simultaneously.
 * **[!UICONTROL Has any tag]**: Filter dataflows that have specific tags assigned to them. This helps you organize and find dataflows based on your custom tagging.
 * **[!UICONTROL Status]**: Filter dataflows by their operational status:
     * **[!UICONTROL Enabled]**: Shows only active dataflows
     * **[!UICONTROL Disabled]**: Shows only inactive dataflows
 * **[!UICONTROL Account name]**: Filter dataflows by the associated account name. This helps you find all dataflows connected to a specific destination account.
-* **[!UICONTROL Created]**: Filter dataflows by the user who created them. Use this filter to find dataflows created by specific team members.
+* **[!UICONTROL Created by]**: Filter dataflows by the user who created them. Use this filter to find dataflows created by specific team members.
 * **[!UICONTROL Modified by]**: Filter dataflows by the user who last modified them. Use this filter to identify recent changes made by specific users.
 * **[!UICONTROL Creation date]**: Filter dataflows by their creation date using a date range:
     * **[!UICONTROL Start date]**: Set the beginning of the date range

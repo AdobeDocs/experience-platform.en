@@ -2,22 +2,36 @@
 title: Marketo Engage Destination
 description: Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. Use it to automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
+TQID: https://experienceleague.adobe.com/DEKJUAkJx4w5Cwehy5zaSu-n26-ZRZwy0BTQdJOMndQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+    internal-label: Customer engagement
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # (Legacy) (V2) Marketo Engage destination {#beta-marketo-engage-destination}
 
 ## Destination changelog {#changelog}
-
-<!--
->[!IMPORTANT]
->
->The **[!UICONTROL (Legacy) (V2) Marketo Engage]** will be deprecated in **March 2026**.
->
->To ensure a smooth transition to the new **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** destination, review the following key points and required actions:
->
->* All users of the existing **[!UICONTROL (Legacy) (V2) Marketo Engage]** must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.
->* **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there.
-
--->
 
 ![Image of the two Marketo destination cards in a side-by-side view.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
@@ -62,8 +76,6 @@ This section describes which types of audiences you can export to this destinati
 
 {style="table-layout:auto"}
 
-
-
 Supported audiences by audience data type:
 
 | Audience data type | Supported | Description | Use cases |
@@ -74,7 +86,6 @@ Supported audiences by audience data type:
 | [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
-
 
 ## Export type and frequency {#export-type-frequency}
 

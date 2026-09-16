@@ -4,6 +4,32 @@ title: Azure Event Hubs connection
 description: Create a real-time outbound connection to your [!DNL Azure Event Hubs] storage to stream data from Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
+TQID: https://experienceleague.adobe.com/gurO8h-YnM2LLpyXm5X0-sdfUaXP11cORwTiJYqczKA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # [!DNL Azure Event Hubs] connection
 
@@ -60,7 +86,7 @@ See the table below for information about the destination export type and freque
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-streaming-profile-destinations.md#select-attributes).|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
@@ -68,6 +94,10 @@ See the table below for information about the destination export type and freque
 ## IP address allowlist {#ip-address-allowlist}
 
 To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the [!DNL Azure Event Hubs] destination. See [IP address allowlist for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
+
+## Connect using Azure Private Link {#private-link}
+
+If your organization has strict network security requirements, you can configure this destination to route data exports over the [!DNL Microsoft Azure] private backbone instead of the public internet. See [Azure Private Link for destinations](./azure-private-link.md) for prerequisites, guardrails, and setup steps.
 
 ## Connect to the destination {#connect}
 
@@ -103,14 +133,20 @@ If you select the **[!UICONTROL Standard authentication]** type to connect to yo
 ### Fill in destination details {#destination-details}
 
 >[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
+>title="Include audience timestamps"
+>abstract="Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. View the documentation for a data export example with this option selected."
+
+>[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"
->title="Include Segment Names"
+>title="Include audience names"
 >abstract="Toggle if you want the data export to include the names of the audiences you are exporting. View the documentation for a data export example with this option selected."
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
->title="Include Segment Timestamps"
->abstract="Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. View the documentation for a data export example with this option selected."
+>id="platform_destinations_connect_eventhubs_includemappedaudiencesonly"
+>title="Include mapped audiences only"
+>abstract="Toggle this option to have the segmentMembership object in the export include only the audiences mapped in this dataflow. Keep the toggle off to include audiences that share the same merge policy as the mapped audiences, even if they are not mapped in this dataflow."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/azure-event-hubs.html#exported-data" text="View an example"
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
@@ -118,9 +154,10 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: Fill in a name for the connection to [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Provide a description of the connection. Examples: "Premium tier customers", "Customers interested in kitesurfing".
-* **[!UICONTROL eventHubName]**: Provide a name for the stream to your [!DNL Azure Event Hubs] destination.
-* **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the audiences you are exporting. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
-* **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Event hub name]**: Provide a name for the stream to your [!DNL Azure Event Hubs] destination.
+* **[!UICONTROL Include audience timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Include audience names]**: Toggle if you want the data export to include the names of the audiences you are exporting. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Include mapped audiences only]**: Toggle this option to have the `segmentMembership` object in the export include only the audiences mapped in this dataflow. Keep the toggle off to include audiences that share the same [merge policy](/help/profile/merge-policies/overview.md) as the mapped audiences, even if they are not mapped in this dataflow. This option is turned on by default for new destination connections. Dataflows created before this option was introduced do not display this option and continue to export all audiences that share the same merge policy. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
 
 ### Enable alerts {#enable-alerts}
 
@@ -155,7 +192,7 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 |What determines a destination export | What is included in the destination export |
 |---------|----------|
-|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>Since identities cannot currently be mapped to [!DNL Azure Event Hubs] destinations, changes in any identity on a given profile also determine destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>The `segmentMembership` object includes the segment mapped in the activation dataflow, for which the status of the profile has changed following a qualification or segment exit event. Note that other unmapped segments for which the profile qualified for can be part of the destination export, if these segments belong to the same [merge policy](/help/profile/merge-policies/overview.md) as the segment mapped in the activation dataflow. </li><li>All identities in the `identityMap` object are included as well (Experience Platform currently does not support identity mapping in the [!DNL Azure Event Hubs] destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
+|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>Since identities cannot currently be mapped to [!DNL Azure Event Hubs] destinations, changes in any identity on a given profile also determine destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>The `segmentMembership` object includes the audience mapped in the activation dataflow, for which the status of the profile has changed following a qualification or audience exit event. When the **[!UICONTROL Include mapped audiences only]** option is turned on, the export includes only the audiences mapped in the activation dataflow. When this option is turned off, other unmapped audiences for which the profile qualified can also be part of the destination export, if these audiences belong to the same [merge policy](/help/profile/merge-policies/overview.md) as the audience mapped in the activation dataflow. Dataflows created before this option was introduced do not have it turned on and continue to export all audiences that share the same merge policy. </li><li>All identities in the `identityMap` object are included as well (Experience Platform currently does not support identity mapping in the [!DNL Azure Event Hubs] destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -165,7 +202,7 @@ For example, consider this dataflow to an [!DNL Azure Event Hubs] destination wh
 
 ![Amazon Kinesis destination dataflow](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-A profile export to the destination can be determined by a profile qualifying for or exiting one of the *three mapped segments*. In the data export, in the `segmentMembership` object (see [Exported Data](#exported-data) section below), other mapped audiences might appear, if that particular profile is a member of them and if these share the same merge policy as the audience that triggered the export. If a profile qualifies for the **Customer with DeLorean Cars** segment and is also a member of the **Basic Site Active and City - Dallas** segments, then these other two audiences will also be present in the `segmentMembership` object of the data export, because these are mapped in the dataflow, if these share the same merge policy with the **Customer with DeLorean Cars** segment.
+A profile export to the destination can be determined by a profile qualifying for or exiting one of the *three mapped audiences*. When the **[!UICONTROL Include mapped audiences only]** option is turned on, the `segmentMembership` object (see [Exported Data](#exported-data) section below) includes only the three mapped audiences. When this option is turned off, other unmapped audiences might also appear in the `segmentMembership` object, if that particular profile is a member of them and if these share the same merge policy as the audience that triggered the export. For example, if a profile qualifies for the **Customer with DeLorean Cars** audience and is also a member of the **Basic Site Active and City - Dallas** audiences, then these other two audiences also appear in the `segmentMembership` object when **[!UICONTROL Include mapped audiences only]** is turned off, provided they share the same merge policy with the **Customer with DeLorean Cars** audience.
 
 From a profile attributes point of view, any changes to the four attributes mapped above will determine a destination export and any of the four mapped attributes present on the profile will be present in the data export.
 
@@ -233,7 +270,7 @@ Your exported [!DNL Experience Platform] data lands in your [!DNL Azure Event Hu
 
 ```
 
-Below are further examples of exported data, depending on the UI settings you select in the connect destination flow for the **[!UICONTROL Include Segment Names]** and **[!UICONTROL Include Segment Timestamps]** options:
+Below are further examples of exported data, depending on the UI settings you select in the connect destination flow for the **[!UICONTROL Include audience names]** and **[!UICONTROL Include audience timestamps]** options:
 
 +++ The data export sample below includes audience names in the `segmentMembership` section
 

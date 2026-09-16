@@ -5,6 +5,19 @@ title: Create an FTP  Source Connection in the UI
 type: Tutorial
 description: Learn how to create an FTP source connection using the Adobe Experience Platform UI.
 exl-id: 8e505ead-4bae-43fe-830b-75620e8fba28
+TQID: https://experienceleague.adobe.com/g-wsVsqYlQfRDils97fIGf9OlPGsppVd-f-9WLR-DYA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create an FTP source connection in the UI
 

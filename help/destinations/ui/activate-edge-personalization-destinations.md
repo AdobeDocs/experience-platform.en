@@ -3,8 +3,51 @@ title: Activate audiences to edge personalization destinations
 description: Learn how to activate audiences from Adobe Experience Platform to edge personalization destinations for same-page and next-page personalization use-cases.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
+TQID: https://experienceleague.adobe.com/-W-vvtL2Lcg5ntwUs3h2fJUaYu1-LDqHCZeeo0aMGek
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+    internal-label: XDM
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+    internal-label: Data collection UI
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: Datastreams
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+    internal-label: Properties
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
-
 # Activate audiences to edge personalization destinations
 
 ## Overview {#overview}
@@ -120,9 +163,11 @@ After you completed the prerequisites, you can now select the edge personalizati
 
     ![Activate audience control highlighted on a destination card in the catalog.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
+1. (Optional) Use the search box to find a destination connection by name, or select the filter icon to narrow down the results based on your preferred criteria.
+
 1. Select the destination connection that you want to use to activate your audiences, then select **[!UICONTROL Next]**.
 
-    ![Select destination step in the activation workflow.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
+    ![Search box and filter icon highlighted above the list of destination connections in the Select destination step of the activation workflow.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
 1. Move to the next section to [select your audiences](#select-audiences).
 
@@ -130,15 +175,19 @@ After you completed the prerequisites, you can now select the edge personalizati
 
 Use the checkboxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
 
-To select the audiences that you want to activate to the destination, use the checkboxes to the left of the audience names, then select **[!UICONTROL Next]**.
+Use the search box to find an audience by name, or select the filter icon to narrow down the results by evaluation type (edge, streaming, or batch), namespace origin, or tags.
+
+>[!TIP]
+>
+>You can filter by the same tags you use on the audience browse screen. Any tags you added to an audience there carry over to this screen.
+
+![Expanded filters panel showing the origin and tags filters, alongside the search box and checkboxes for selecting one or multiple audiences to activate.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
 You can select from multiple types of audiences, depending on their origin:
 
 * **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
 * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Experience Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience).
 * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
-
-![Select audiences step of the activation workflow with several audiences highlighted.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
 ## Map attributes {#mapping}
 
@@ -210,12 +259,3 @@ In this step you can use the available filters on the page to display only the a
 
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
-<!--
-
-Commenting out this part since destination monitoring is not available currently for the Adobe Target and Custom Personalization destinations.
-
-## Verify audience activation {#verify}
-
-Check the [destination monitoring documentation](../../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
-
--->

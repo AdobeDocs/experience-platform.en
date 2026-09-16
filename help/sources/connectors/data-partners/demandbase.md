@@ -1,8 +1,23 @@
 ---
 title: Demandbase Intent
 description: Learn about the Demandbase Intent source on Experience Platform.
-last-substantial-update: 2025-03-26
+last-substantial-update: 2025-03-26T00:00:00.000Z
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
+TQID: https://experienceleague.adobe.com/i5AlT6BN48FCr6g8xNYyxVNxjSfRrCRk98aGMV86c9Q
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # [!DNL Demandbase Intent]
 

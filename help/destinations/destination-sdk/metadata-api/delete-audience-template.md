@@ -2,6 +2,22 @@
 description: This page exemplifies the API call used to delete an existing audience template through Adobe Experience Platform Destination SDK.
 title: Delete an audience template
 exl-id: 6eb07e3c-3269-4368-9b11-04bd993cc4ab
+TQID: https://experienceleague.adobe.com/21vqU20Eb2eVv-6qFWc5BiAZX7ap0W6aErl4uEGvGhY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
 ---
 # Delete an audience template
 
@@ -15,11 +31,11 @@ For a detailed description of the capabilities that you can configure through th
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Getting started with audience template API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, review the [getting started guide](../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Delete an audience template {#delete}
 

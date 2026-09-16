@@ -32,6 +32,8 @@ role: Developer
       - [ECID mapping migration guide](connectors/adobe-applications/marketo/migration.md)
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
+    - {hide-from-toc} [Google Ads (V2) connector](connectors/advertising/google-ads.md)
+    - [Meta Ads connector](connectors/advertising/meta-ads.md)
     - {hide-from-toc} [Pinterest Ads](connectors/advertising/pinterest-ads.md)
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
@@ -92,7 +94,7 @@ role: Developer
     - [Demandbase Intent](connectors/data-partners/demandbase.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - Data sharing {#data-sharing}
-    - {hide-from-toc} [Deltashare](connectors/data-sharing/deltashare.md)
+    - [Delta Sharing](connectors/data-sharing/delta-sharing.md)
   - eCommerce {#ecommerce}
     - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
     - [Shopify](connectors/ecommerce/shopify.md)
@@ -101,6 +103,8 @@ role: Developer
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Loyalty {#loyalty}
     - [Capillary Streaming Events](connectors/loyalty/capillary.md)
+    - [Kobie Streaming Events](connectors/loyalty/kobie-streaming.md)
+    - [LAVA](connectors/loyalty/lava.md)
     - [Talon.One](connectors/loyalty/talon-one.md)
   - Marketing automation {#marketing-automation}
     - [Braze Currents](connectors/marketing-automation/braze.md)
@@ -114,9 +118,10 @@ role: Developer
     - [PathFactory](connectors/marketing-automation/pathfactory.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
     - [Salesforce Marketing Cloud (V2)](connectors/marketing-automation/sfmc.md)
+    - {hide-from-toc} [WhatsApp](connectors/marketing-automation/whatsapp.md)
   - Payments {#payments}
-    - [Square connector](connectors/payments/square.md)
-    - [Stripe connector](connectors/payments/stripe.md)
+    - [Square](connectors/payments/square.md)
+    - [Stripe](connectors/payments/stripe.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
     - [Generic REST API connector](connectors/protocols/generic-rest.md)
@@ -180,6 +185,8 @@ role: Developer
       - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
+    - Loyalty {#loyalty}
+      - [LAVA](tutorials/api/create/loyalty/lava.md)
     - Marketing automation {#marketing-automation}
       - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
       - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -246,6 +253,8 @@ role: Developer
       - [Marketo Custom Activities](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
+      - {hide-from-toc} [Google Ads (V2)](tutorials/ui/create/advertising/google-ads.md)
+      - [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
       - {hide-from-toc} [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
@@ -307,7 +316,7 @@ role: Developer
       - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
     - Data sharing {#data-sharing}
-      - {hide-from-toc} [Deltashare](tutorials/ui/create/data-sharing/deltashare.md)
+      - [Delta Sharing](tutorials/ui/create/data-sharing/delta-sharing.md)
     - eCommerce {#ecommerce}
       - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -316,7 +325,8 @@ role: Developer
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Loyalty {#loyalty}
       - [Capillary Streaming Events](tutorials/ui/create/loyalty/capillary.md)
-      - {hide-from-toc} [Kobie Streaming Events](tutorials/ui/create/loyalty/kobie-streaming.md)
+      - [Kobie Streaming Events](tutorials/ui/create/loyalty/kobie-streaming.md)
+      - [LAVA](tutorials/ui/create/loyalty/lava.md)
       - [Talon.One Streaming Events](tutorials/ui/create/loyalty/talon-one-streaming.md)
       - [Talon.One Batch source connector](tutorials/ui/create/loyalty/talon-one-batch.md)
     - Marketing automation {#marketing-automation}
@@ -334,6 +344,7 @@ role: Developer
       - [Relay Connector](tutorials/ui/create/marketing-automation/relay-connector.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - [Salesforce Marketing Cloud (V2)](tutorials/ui/create/marketing-automation/sfmc.md)
+      - {hide-from-toc} [WhatsApp](tutorials/ui/create/marketing-automation/whatsapp.md)
     - Payments {#payments}
       - [Square](tutorials/ui/create/payments/square.md)
       - [Stripe](tutorials/ui/create/payments/stripe.md)
@@ -354,6 +365,7 @@ role: Developer
     - [Marketing automation connection dataflow](tutorials/ui/dataflow/marketing-automation.md)
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
+  - [Manage dataflows in the UI](tutorials/ui/manage.md)
   - [Create a sources dataflow using templates in the UI](tutorials/ui/templates.md)
   - {hide-from-toc} [Filter sources objects](tutorials/ui/filter.md)
   - [Ingest encrypted data](tutorials/ui/encryped-ingestion.md)
@@ -393,6 +405,7 @@ role: Developer
     - [Create a connection specification for a streaming source](sources-sdk/streaming/create.md)
     - [Update a connection specification for a streaming source](sources-sdk/streaming/update-connection-specs.md)
     - [Update the streaming flow specification](sources-sdk/streaming/update-flow-specs.md)
+    - [Configure authentication for a Streaming SDK connector](sources-sdk/streaming/authentication.md)
     - [Test and submit your connection specification for verification](sources-sdk/streaming/submit.md)
     - [Document your source (Streaming SDK)](sources-sdk/streaming/document-streaming.md)
     - [Documentation self-service API streaming template](sources-sdk/streaming/streaming-template-api.md)
@@ -403,5 +416,5 @@ role: Developer
 - [Flow run notifications](notifications.md)
 - [IP address allowlist](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)
-- [API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [API reference](https://developer.adobe.com/experience-platform-apis/references/flow-service)
 - [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

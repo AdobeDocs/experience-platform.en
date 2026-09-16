@@ -1,12 +1,40 @@
 ---
 keywords: Experience Platform;destination api;ad-hoc activation;activate audiences ad-hoc
 solution: Experience Platform
-title: Activate audiences to batch destinations via the ad-hoc activation API
+title: Activate audiences via the ad-hoc activation API
 description: This article illustrates the end-to-end workflow for activating audiences via the ad-hoc activation API, including the segmentation jobs that take place before activation.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
+TQID: https://experienceleague.adobe.com/qsC2rkW9zkzewzUls3FVlivqVHQyXUpkOoEA0T-OU8Q
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
-# Activate audiences on-demand to batch destinations via the ad-hoc activation API
+# Activate audiences on-demand via the ad-hoc activation API
 
 >[!IMPORTANT]
 >
@@ -16,9 +44,9 @@ exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
 
 ## Overview {#overview}
 
-The ad-hoc activation API allows marketers to programmatically activate audience audiences to destinations, in a fast and efficient manner, for situations where immediate activation is required.
+The ad-hoc activation API allows marketers to programmatically activate audiences to destinations, in a fast and efficient manner, for situations where immediate activation is required.
 
-Use the ad-hoc activation API to export full files to your desired file reception system. Ad-hoc audience activation is only supported by [batch file-based destinations](../destination-types.md#file-based).
+Use the ad-hoc activation API to activate audiences on-demand to [batch file-based destinations](../destination-types.md#file-based) and, starting with v4, to streaming and API-based destinations. See [Trigger an ad-hoc activation run](#streaming-destinations) further below in this tutorial.
 
 The diagram below illustrates the end-to-end workflow for activating audiences via the ad-hoc activation API, including the segmentation jobs that take place in Experience Platform every 24 hours.
 
@@ -37,6 +65,10 @@ A hotel expects inclement weather over the following days, and the team wants to
 ### Integration testing {#integration-testing}
 
 IT managers can use the Experience Platform ad-hoc activation API to export audiences on-demand, so they can test their custom integration with [!DNL Adobe Experience Platform], and ensure everything is working correctly.
+
+### Audience refresh for streaming destinations {#audience-refresh-streaming}
+
+A streaming or API-based destination applies a time-to-live (TTL) to the audience membership it receives from [!DNL Adobe Experience Platform]. When that TTL expires on the destination side, previously qualified profiles are treated as inactive, even though they remain qualified in Experience Platform. The marketing team can use v4 of the ad-hoc activation API to resend an audience's full current membership on-demand, without waiting for the next scheduled refresh. See [Trigger an ad-hoc activation run](#streaming-destinations) further below in this tutorial.
 
 ## Guardrails {#guardrails}
 
@@ -60,7 +92,7 @@ Before you can make calls to the [!DNL Adobe Experience Platform] APIs, make sur
 
 ## Step 2: Gather credentials {#credentials}
 
-To make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+To make calls to Experience Platform APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
@@ -114,7 +146,6 @@ In the response, look for the first record that includes the schema property bel
 The audience export job ID is in the `id` property, as shown below.
 
 ![audience export job ID](../assets/api/ad-hoc-activation/segment-export-job-id.png)
-
 
 ## Step 5: Run the ad-hoc activation job {#activation-job}
 
@@ -174,14 +205,6 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 {style="table-layout:auto"}
 
 ### Request with export IDs {#request-export-ids}
-
-<!--
-
->[!IMPORTANT]
->
->**Deprecated request type**. This example type describes the request type for the API version 1. In the v2 of the ad-hoc activation API, you do not need to include the latest audience export job ID.
-
--->
 
 ```shell
 
@@ -253,7 +276,90 @@ When using the ad-hoc activation API, you can come across error messages that ar
 | Run already going on for audience `segment ID` for order `dataflow ID` with run id `flow run ID` | This error message indicates that an ad-hoc activation flow is currently ongoing for an audience. Wait for the job to finish before triggering the activation job again.|
 | Segments `<segment name>` are not part of this dataflow or out of schedule range! | This error message indicates that the audiences you selected to activate are not mapped to the dataflow or that the activation schedule set up for the audiences has either expired or not yet started. Check if the audience is indeed mapped to the dataflow and verify that the audience activation schedule overlaps with the present date.|
 
+## (Beta) Trigger an ad-hoc activation run {#streaming-destinations}
+
+>[!IMPORTANT]
+>
+>Ad-hoc activation to streaming and API-based destinations is currently in beta. This functionality is being rolled out in phases and is feature-flag gated.
+
+Use v4 of the ad-hoc activation API to trigger **[!UICONTROL Activate now]**, an on-demand, full-membership refresh of an audience to a streaming or API-based destination.
+
+Many streaming and API-based destinations apply a time-to-live (TTL) to the audience membership they receive from [!DNL Adobe Experience Platform]. When that TTL expires on the destination side, previously qualified profiles are treated as inactive, even though they remain qualified in Experience Platform. Trigger a v4 ad-hoc activation run to resend every currently qualified profile through the existing streaming activation pipeline, without waiting for the next scheduled refresh.
+
+You can also trigger this refresh from the Experience Platform UI. Read [Activate now for streaming destinations](/help/destinations/ui/activate-now-streaming.md).
+
+### Streaming guardrails {#streaming-guardrails}
+
+Ad-hoc activation to streaming destinations enforces the following limit:
+
+* One on-demand run per dataflow, per audience, within a rolling 24-hour window (not a calendar-day reset).
+
+### Streaming request {#streaming-request}
+
+>[!IMPORTANT]
+>
+>It is mandatory to include the `Accept: application/vnd.adobe.adhoc.streaming.activation+json; version=1` header in your request to use v4 of the ad-hoc activation API.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -H 'Accept: application/vnd.adobe.adhoc.streaming.activation+json; version=1' \
+ -d '
+{
+   "activationInfo":{
+      "destinationId1":[
+         "segmentId1",
+         "segmentId2"
+      ]
+   }
+}'
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `destinationId1` | The ID of the streaming or API-based destination instance to which you want to deliver audiences. You can get this ID from the Experience Platform UI, by navigating to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** tab, and selecting the desired destination row to bring up the destination ID in the right rail. For more information, read the [destinations workspace documentation](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li></ul> | The IDs of the audiences that you want to deliver to the selected destination. |
+
+{style="table-layout:auto"}
+
+### Streaming response {#streaming-response}
+
+A successful response returns HTTP status 202 (Accepted) and creates one streaming job per requested audience.
+
+```shell
+{
+   "jobs":[
+      {
+         "jobId":"88d6da63-dc97-460e-b781-fc795a7386d9",
+         "flowId":"ef2dcbd6-36fc-49a3-afed-d7b8e8f724eb",
+         "audienceId":"db8961e9-d52f-45bc-b3fb-76d0382a6851",
+         "imsOrgId":"{ORG_ID}",
+         "status":"QUEUED",
+         "createdAt":"2026-08-17T14:00:00Z"
+      }
+   ]
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `jobId` | A unique identifier for this streaming job. |
+| `flowId` | The ID of the dataflow the job was triggered against. |
+| `audienceId` | The ID of the audience being delivered. |
+| `status` | Always `QUEUED` in this release. There is currently no mechanism to track progress past this state. See [Known limitations](/help/destinations/ui/activate-now-streaming.md#known-limitations). |
+| `createdAt` | Timestamp the job was created. |
+
+{style="table-layout:auto"}
+
+If the same audience was already triggered for this dataflow within the last 24 hours, the request is rejected with HTTP 409 and a `Retry-After` header indicating how many seconds until you can try again.
+
 ## Related information {#related-information}
 
 * [Connect to batch destinations and activate data using the Flow Service API](/help/destinations/api/connect-activate-batch-destinations.md)
 * [Export files on-demand to batch destinations using the Experience Platform UI](/help/destinations/ui/export-file-now.md)
+* [Activate now for streaming destinations](/help/destinations/ui/activate-now-streaming.md)
+

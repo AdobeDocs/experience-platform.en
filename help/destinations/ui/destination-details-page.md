@@ -1,8 +1,25 @@
 ---
 keywords: destinations;destination;destinations detail page;destinations details page
 title: View destination details
-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, audiences mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 
+description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, audiences mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
+TQID: https://experienceleague.adobe.com/RS1gkf-nDO6wwBE-0-Rnfnq1BVqxavl2XhiTK-R1r4Q
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # View destination details
 

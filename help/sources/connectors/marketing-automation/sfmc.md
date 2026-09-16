@@ -1,8 +1,30 @@
 ---
 title: Salesforce Marketing Cloud (V2) Source Overview
 description: Learn how to connect Salesforce Marketing Cloud (V2) to Adobe Experience Platform using APIs or the user interface.
-last-substantial-update: 2025-02-02
+last-substantial-update: 2025-02-02T00:00:00.000Z
 exl-id: 116d9e72-c0f8-4442-bca9-61d6cac0b7b6
+TQID: https://experienceleague.adobe.com/tmZ-7Lucdl3MR6K14KvAY6yZc-EfkNVTLc2F8BIu5SY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: addf009e-030a-4310-8534-776a3e62ed48
+    internal-label: Customer lifecycle
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+    internal-label: Customer engagement
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # [!DNL Salesforce Marketing Cloud] (V2) source overview
 

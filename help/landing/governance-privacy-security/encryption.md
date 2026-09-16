@@ -2,6 +2,40 @@
 title: Data Encryption in Adobe Experience Platform
 description: Learn how data is encrypted in transit and at rest in Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
+TQID: https://experienceleague.adobe.com/4fF4k-dokC8fdvvj7G6jgBfx4GVtrtkrnonZjb3WFco
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+    internal-label: Sources
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Data encryption in Adobe Experience Platform
 
@@ -58,6 +92,25 @@ Adobe now automates the certificate lifecycle for mTLS integrations to improve r
 These intervals will continue to shorten in line with [evolving CA/B Forum guidelines](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days) which aim to reduce certificate lifetimes to a maximum of 47 days.
 
 If you previously used links on this page to download certificates, update your process to retrieve them exclusively through the API.
+
+### Updating the mTLS certificate authority hierarchy {#certificate-hierarchy-update}
+
+Adobe is updating the certificate authority (CA) hierarchy used to issue client certificates for outbound mTLS connections. Industry standards require separate CA hierarchies for server and client authentication. To meet these requirements, Adobe is moving from a hierarchy that supports both server and client authentication to one dedicated to client authentication.
+
+The following table compares the current and new certificate hierarchies.
+
+| Certificate authority | Current hierarchy | New hierarchy |
+| --- | --- | --- |
+| Root CA | [!DNL DigiCert Global Root G2] | [!DNL DigiCert Assured ID Root G2] |
+| Intermediate CA | [!DNL DigiCert Global G2 TLS RSA SHA256 2020 CA1] | [!DNL DigiCert Assured ID Client CA G2] |
+
+{style="table-layout:auto"}
+
+>[!IMPORTANT]
+>
+>If your endpoint validates Adobe's mTLS client certificate, add the new root and intermediate CA certificates to your trust store. Adobe began transitioning certificates to the new hierarchy in mid-2026, with the migration expected to continue through spring 2027. This one-time trust store update is separate from the automated certificate lifecycle. You do not need to request, download, or replace Adobe's client certificate.
+
+Update your trust store as soon as possible rather than waiting for a specific connection to be affected. A trust store can hold both hierarchies at the same time, so adding the new root and intermediate does not disrupt your current connections. For certificate downloads, platform-specific instructions, verification steps, and migration details, see the [mTLS certificate hierarchy migration guide](./mtls-trust-chain-migration.md).
 
 ## Data at rest {#at-rest}
 

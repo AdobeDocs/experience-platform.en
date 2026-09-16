@@ -4,6 +4,22 @@ solution: Experience Platform
 title: Workflows UI guide
 description: Learn how to follow multi-step workflows for performing common operations within the Adobe Experience Platform user interface.
 exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
+TQID: https://experienceleague.adobe.com/WHTE626D9Cl9BLNgH7Uj2mvpNWm1MkdBsA-9eiq0j9U
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # [!UICONTROL Workflows] UI guide
 

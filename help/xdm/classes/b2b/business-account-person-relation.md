@@ -2,6 +2,16 @@
 title: XDM Business Account Person Relation Class
 description: Learn about the XDM Business Account Person Relation class in Experience Data Model (XDM).
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
+TQID: https://experienceleague.adobe.com/JnodIGPzp54dRLvxvbMSAqyK8u1Msjzd4IUvFYQJlHg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL XDM Business Account Person Relation] class
 

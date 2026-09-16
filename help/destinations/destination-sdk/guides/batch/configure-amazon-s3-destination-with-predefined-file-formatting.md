@@ -1,9 +1,23 @@
 ---
 description: Learn how to use Destination SDK to configure an Amazon S3 destination with predefined file formatting options and custom file name configuration.
-title: Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration.
+title: Configure Amazon S3 with Predefined File Formatting
 exl-id: 0ecd3575-dcda-4e5c-af5c-247d4ea13fa1
+TQID: https://experienceleague.adobe.com/-BawCO6DvnMNoQGYhsybdHAZdze2NNoVv2odGACfMvc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
-# Configure an [!DNL Amazon S3] destination with predefined file formatting options and custom file name configuration
+# Configure an [!DNL Amazon S3] destination with predefined file formatting
 
 ## Overview {#overview}
 
@@ -237,7 +251,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       "allowMandatoryFieldSelection":true,
       "allowDedupeKeyFieldSelection":true,
       "defaultExportMode":"DAILY_FULL_EXPORT",
-      "allowedExportMode":[
+      "allowedExportModes":[
          "DAILY_FULL_EXPORT",
          "FIRST_FULL_THEN_INCREMENTAL"
       ],

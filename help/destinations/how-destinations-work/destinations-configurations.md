@@ -2,6 +2,23 @@
 title: Configurable and common export settings in destinations
 description: Learn which export settings in destinations are configurable on a destination level and which are fixed and cannot be edited.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
+TQID: https://experienceleague.adobe.com/St5Z3kQLM75rHdgWvxzrqe-sz0HRsujAU863XSQc9gY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Configurable and common export settings in destinations
 

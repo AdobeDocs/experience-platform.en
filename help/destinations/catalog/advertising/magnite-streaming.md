@@ -1,8 +1,30 @@
 ---
 title: Magnite Real-Time destination connection
 description: Use this destination to deliver Adobe CDP audiences to the Magnite Streaming platform in real-time.
-last-substantial-update: 2024-11-18
+last-substantial-update: 2024-11-18T00:00:00.000Z
 exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
+TQID: https://experienceleague.adobe.com/y6-AjTkjrUj1gm4mIAWt30eenxTcpagugU29UW0iP40
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Magnite: Real-Time destination connection
 
@@ -59,8 +81,6 @@ This section describes which type of audiences you can export to this destinatio
 
 {style="table-layout:auto"}
 
-
-
 Supported audiences by audience data type:
 
 | Audience data type | Supported | Description | Use cases |
@@ -71,7 +91,6 @@ Supported audiences by audience data type:
 | [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
-
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -165,12 +184,6 @@ Select **[!UICONTROL Next]** and finalize the activation flow.
 ## Exported data / Validate data export {#exported-data}
 
 Once your audiences have been uploaded, you may validate your audiences have been created and uploaded correctly using the following steps:
-
-<!--
-
-* In 95% of cases, audiences will be delivered to Magnite Streaming in under 10 minutes. The actual receipt and processing of the events within Magnite Streaming depends on the shared data volume.
-
--->
 
 * Post-ingest, audiences are expected to appear in [!DNL Magnite Streaming] within a few minutes and can be applied to a deal. You can confirm this by looking up the segment ID that was shared during the activation steps in the [!DNL Adobe Experience Platform].
 

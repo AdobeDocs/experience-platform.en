@@ -2,6 +2,13 @@
 title: Connect Azure Blob Storage to Experience Platform Using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Azure Blob using the Flow Service API.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
+TQID: https://experienceleague.adobe.com/E7vbvVIqyMNgo9j7rVt0FmxnieNAofxo4yg1fucDEpE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect [!DNL Azure Blob Storage] to Experience Platform using the API
 

@@ -4,6 +4,23 @@ solution: Experience Platform
 title: Create a Dataflow Using an Analytics Source in the UI
 description: This tutorial provides steps on how to create a dataflow for an analytics source using Experience Platform UI.
 exl-id: 108a69e5-d7d9-4ca1-a364-38ea54aa74ff
+TQID: https://experienceleague.adobe.com/3r7CS6TVvQuMNYQOZA9x77ysvjiN12c5AvKSoTSczTs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+    internal-label: Data integration
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Create a dataflow using an analytics source in the UI
 

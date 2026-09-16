@@ -4,6 +4,19 @@ feature: Attribution AI
 title: Attribution AI UI Guide
 description: This document serves as a guide for interacting with Attribution AI in the Intelligent Services user interface.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
+TQID: https://experienceleague.adobe.com/HUpxGf8n7OOx0YkwHlKZ16WHrNiGiXS0e6DDuK6EV6w
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Attribution AI UI guide
 
@@ -65,7 +78,7 @@ The dataset preview contains data such as the last update time, source schema, a
 
 Select **[!UICONTROL Save]** to save your drafts as you move along the workflow. You can also save draft model configurations and move to the next step in the workflow. Use **[!UICONTROL Save and continue]** to create and save drafts during model configurations. The feature enables you to create and save drafts of the model configuration and is particularly useful when you have to define many fields in the configuration workflow.
 
-![The Create workflow of the Data Science Services Attribution AI tab with Save and Save and continue highlighted.](./images/user-guide/aai-save-save-&-exit.png)
+![The Create workflow of the Data Science Services Attribution AI tab with Save and Save and continue highlighted.](./images/user-guide/aai-save-save-and-exit.png)
 
 ### Dataset completeness {#dataset-completeness}
 
@@ -105,7 +118,7 @@ In the event that more than one identity is available within a namespace, make s
 
 After you have finished selecting and adding datasets, the **Map** configuration step appears. Attribution AI requires that you map the Media channel field for each dataset you selected in the previous step. This is because without the Media channel mapping between datasets, insights derived from Attribution AI may not show up properly making the insights page difficult to interpret. Although only the Media channel is required, it is highly recommended that you map some of the optional fields such as Media action, Campaign name, Campaign group, and Campaign tag. Doing so allows Attribution AI to provide clearer insights and optimal results.
 
-![mapping](./images/user-guide/mapping-save-&-exit.png)
+![mapping](./images/user-guide/mapping-save-and-exit.png)
 
 ## Defining events {#define-events}
 

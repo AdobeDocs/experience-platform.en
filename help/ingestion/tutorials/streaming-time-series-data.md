@@ -5,6 +5,21 @@ title: Stream Time-Series Data Using Streaming Ingestion APIs
 type: Tutorial
 description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
+TQID: https://experienceleague.adobe.com/UwVdABaHdm-lYSAYXPvw98FS3x47hxh7KgKhv62VjAw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Stream time-series data using Streaming Ingestion APIs
 

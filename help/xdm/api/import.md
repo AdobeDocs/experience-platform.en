@@ -2,6 +2,16 @@
 title: Import API Endpoint
 description: The /import endpoint in the Schema Registry API allows you to share XDM resources between organizations and sandboxes.
 exl-id: 30613535-4770-4f9c-9061-8e3efaf4de48
+TQID: https://experienceleague.adobe.com/qBBI2G06HrUXj-JOCg3ZmUUbRiEP9mLZqUMDfXi5ezw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Import endpoint
 
@@ -14,7 +24,7 @@ Once you create an export payload, you can use the `/rpc/import` endpoint to gen
 
 ## Getting started
 
-The `/rpc/import` endpoint is part of the [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The `/rpc/import` endpoint is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 The `/rpc/import` endpoint is part of the remote procedure calls (RPCs) that are supported by the [!DNL Schema Registry]. Unlike other endpoints in the [!DNL Schema Registry] API, RPC endpoints do not require additional headers like `Accept` or `Content-Type`, and do not use a `CONTAINER_ID`. Instead, they must use the `/rpc` namespace, as demonstrated in the API calls below.
 
@@ -350,3 +360,5 @@ A successful response returns a list of the imported resources, with the appropr
     }
 ]
 ```
+
+

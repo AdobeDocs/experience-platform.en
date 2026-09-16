@@ -3,6 +3,13 @@ title: Create a Google PubSub Source Connection in the UI
 description: Learn how to create a Google PubSub source connector using the Experience Platform user interface.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
+TQID: https://experienceleague.adobe.com/RQNY56BBk6pPWLz4gw4ZreRWiHamj3W00A-vfJ8yqko
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a [!DNL Google PubSub] source connection in the UI
 

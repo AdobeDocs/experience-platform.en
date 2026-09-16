@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Generic OData Source Overview
 description: Learn how to connect Generic OData to Adobe Experience Platform using APIs or the user interface.
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
+TQID: https://experienceleague.adobe.com/uPguNuLRYevEUHwE7TUV3wUne1lyAkKXRFpvazX2AW4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL Generic OData] source
 

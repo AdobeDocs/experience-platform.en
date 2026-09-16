@@ -1,8 +1,23 @@
 ---
 title: Algolia User Profiles Source Overview
 description: Learn about the Algolia User Profiles source in the Adobe Experience Platform
-last-substantial-update: 2025-04-29
+last-substantial-update: 2025-04-29T00:00:00.000Z
 exl-id: b35d4753-4c33-4074-9ed5-50f94dedd8a4
+TQID: https://experienceleague.adobe.com/P5CZ9emzhyC2fT1XJNZLjO3gQWTXlGA1GVH47kSrIOw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # [!DNL Algolia User Profiles]
 

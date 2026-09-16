@@ -5,6 +5,13 @@ title: List All Identities in a Cluster
 description: Identities that are related in an identity graph, regardless of namespace, are considered to be part of the same "cluster" in that identity graph. The options below provide the means to access all cluster members.
 role: Developer
 exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
+TQID: https://experienceleague.adobe.com/3KLwxoUg2eJ3A44UJkkBmVBHcIvw3MnEtkc6tjCyKew
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # List all identities in a cluster
 

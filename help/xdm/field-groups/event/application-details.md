@@ -2,6 +2,13 @@
 title: Application Details Schema Field Group
 description: Learn about the Application Details schema field group.
 exl-id: 5df99f9a-b36a-4c2b-a4a4-d3cf054f09b8
+TQID: https://experienceleague.adobe.com/LRyLsquiVHsY8HDAUGoOimEhs1lTJ9pYLdOm7-sgptM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Application Details] schema field group
 

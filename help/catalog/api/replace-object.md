@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Replace a Catalog Object
 description: You can overwrite the contents of a Catalog object using a PUT request, wherein the entire resource is replaced with the request payload.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
+TQID: https://experienceleague.adobe.com/k8uNttR1HUTL1rZmnL7FFUybqw4qLMcYuMk10eSSRuE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Replace a Catalog object
 

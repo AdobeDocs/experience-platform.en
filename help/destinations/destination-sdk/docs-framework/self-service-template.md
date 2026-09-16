@@ -2,6 +2,36 @@
 title: Documentation self-service template // Replace with the name of your destination
 description: Use this template to create public documentation for your destination in the Adobe Experience Platform catalog. // Replace with the paragraph in the Overview section
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
+TQID: https://experienceleague.adobe.com/a-LAwzazLfYXfU7py54dEPN3EEGctXh0L3k-ZLl4twM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c13ff12d-60f1-49cd-833a-d43359628223
+    internal-label: Mobile messaging
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # YourDestination connection {#your-destination}
 
@@ -99,7 +129,8 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes |
 |---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the *YourDestination* destination.|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of an audience, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export type | **[!UICONTROL Profile-based]** | For batch destinations: you are exporting all members of an audience, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the mapping step of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).|
+| Export type | **[!UICONTROL Profile-based]** | For streaming destinations: you are exporting all members of an audience, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the mapping step of the [destination activation workflow](/help/destinations/ui/activate-streaming-profile-destinations.md#select-attributes).|
 | Export type | **[!UICONTROL Dataset export]** | You are exporting raw datasets, which are not grouped or structured by audience interests or qualifications.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 | Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|

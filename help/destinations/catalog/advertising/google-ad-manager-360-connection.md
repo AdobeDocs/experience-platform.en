@@ -1,9 +1,43 @@
 ---
-title: (Beta) [!DNL Google Ad Manager 360] connection
+title: Google Ad Manager 360 connection
 description: Google Ad Manager 360 is an ad serving platform from Google that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
+TQID: https://experienceleague.adobe.com/6pREBXUQNz-oRZCyyPcZq4zgAjqErxYaZo98mOL6F5k
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
-# (Beta) [!DNL Google Ad Manager 360] connection
+# [!DNL Google Ad Manager 360] connection
 
 >[!IMPORTANT]
 >
@@ -18,10 +52,6 @@ exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 The [!DNL Google Ad Manager 360] connection enables batch upload for [!DNL publisher provided identifiers] (PPID) into [!DNL Google Ad Manager 360], via [!DNL Google Cloud Storage].
 
 For more details on how publisher provided identifiers work in Google Ad Manager 360, see the [official Google documentation](https://support.google.com/admanager/answer/2880055?hl=en).
-
->[!IMPORTANT]
->
->This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Google Ad Manager 360] connection, contact your Adobe representative and provide your [!DNL organization ID].
 
 The [!DNL Google Ad Manager 360] destination exports [!DNL CSV] files to your [!DNL Google Cloud Storage] bucket. Once you've exported the [!DNL CSV] files, you must import them into your [!DNL Google Ad Manager 360] account.
 
@@ -73,7 +103,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the applicable schema fields (for example your PPID), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the applicable schema fields (for example your PPID), as chosen in the mapping step of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).|
 | Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
@@ -118,15 +148,15 @@ For more information about these values, see the [Google Cloud Storage HMAC keys
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-*  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
-*  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
+* **[!UICONTROL Name]**: Fill in the preferred name for this destination.
+* **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
 * **[!UICONTROL Folder path]**: Enter the path to the destination folder that will host the exported files.
 * **[!UICONTROL Bucket name]**: Enter the name of the [!DNL Google Cloud Storage] bucket to be used by this destination.
-*  **[!UICONTROL Account ID]**: Enter your [!DNL Audience Link ID] from your [!DNL Google] account. This is a specific identifier associated with your [!DNL Google Ad Manager] network (not your [!DNL Network code]). You can find this under **[!UICONTROL Admin > Global settings]** in the [!DNL Google Ad Manager] interface.
-*  **[!UICONTROL Account Type]**: Select an option, depending on your [!DNL Google] account:
+* **[!UICONTROL Account ID]**: Enter your [!DNL Audience Link ID] from your [!DNL Google] account. This is a specific identifier associated with your [!DNL Google Ad Manager] network (not your [!DNL Network code]). You can find this under **[!UICONTROL Admin > Global settings]** in the [!DNL Google Ad Manager] interface.
+* **[!UICONTROL Account Type]**: Select an option, depending on your [!DNL Google] account:
    * Use `AdX buyer` for [!DNL Google AdX]
    * Use `DFP by Google` for [!DNL DoubleClick] for Publishers
-*  **[!UICONTROL Append audience ID to audience name]**: Select this option to have the audience name in Google Ad Manager 360 include the audience ID from Experience Platform, like this: `Audience Name (Audience ID)`.
+* **[!UICONTROL Append audience ID to audience name]**: Select this option to have the audience name in Google Ad Manager 360 include the audience ID from Experience Platform, like this: `Audience Name (Audience ID)`.
 
 ### Enable alerts {#enable-alerts}
 

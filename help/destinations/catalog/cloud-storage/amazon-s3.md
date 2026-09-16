@@ -2,8 +2,40 @@
 title: Amazon S3 connection
 description: Create a live outbound connection to your Amazon Web Services (AWS) S3 storage to periodically export CSV data files from Adobe Experience Platform into your own S3 buckets.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
+TQID: https://experienceleague.adobe.com/-h6BFd9aG7cQhkkWhrfuUD249bNLrCyur4XGoMrVDSI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # [!DNL Amazon S3] connection {#s3-connection}
+
+Connect to your [!DNL Amazon S3] storage to export data files from [!DNL Adobe CX Enterprise] applications into your own buckets.
+
+If you arrived to this page from [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), see [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
+
+## Supported [!DNL Adobe CX Enterprise] applications {#supported-applications}
+
+This destination is available in the following [!DNL Adobe CX Enterprise] applications:
+
+* [[!DNL Real-Time CDP]](../../../rtcdp/home.md)
+* [[!DNL Real-Time CDP Collaboration]](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)
 
 ## Destination changelog {#changelog}
 
@@ -12,6 +44,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
  
 |Release month|Update type|Description|
 |---|---|---|
+|August 2026| Functionality and documentation update | Adobe now includes your Organization ID as the `sts:ExternalId` on every `AssumeRole` call for assumed role authentication. Read more about it in the [authentication section](#assumed-role-authentication). |
 |January 2024| Functionality and documentation update | The Amazon S3 destination connector now supports a new assumed role authentication type. Read more about it in the [authentication section](#assumed-role-authentication). |
 |July 2023|Functionality and documentation update| With the July 2023 Experience Platform release, the [!DNL Amazon S3] destination provides new functionality, as listed below: <br><ul><li>[Dataset export support](/help/destinations/ui/export-datasets.md)</li><li>Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
 
@@ -26,7 +59,11 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which types of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination. The supported audiences differ depending on the [!DNL Adobe CX Enterprise] application from which you activate them to this destination.
+
+### [!DNL Real-Time CDP] {#supported-audiences-rtcdp}
+
+The following audiences are supported when you activate from [!DNL Real-Time CDP]:
 
 | Audience origin | Supported | Description |
 |---------|----------|----------|
@@ -34,8 +71,6 @@ This section describes which types of audiences you can export to this destinati
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
-
-
 
 Supported audiences by audience data type:
 
@@ -48,6 +83,9 @@ Supported audiences by audience data type:
 
 {style="table-layout:auto"}
 
+### [!DNL Real-Time CDP Collaboration] {#supported-audiences-collaboration}
+
+In [!DNL Real-Time CDP Collaboration], you can [source audiences](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/setup/source-audiences/onboard-audiences) from [!DNL Adobe Experience Platform] or other cloud sources. Audiences in [!DNL Real-Time CDP Collaboration] are made up of [match keys](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections#match-keys). You can use these audiences within a Collaboration for data collaboration or paid media activities.
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -55,7 +93,7 @@ See the table below for information about the destination export type and freque
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the mapping step of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#mapping).|
 | Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
@@ -181,6 +219,41 @@ Ensure that your role has the following configuration:
 * **Permissions**: The role should have permissions to access S3 (either full access or the minimal permissions provided in the **Create a policy with the required permissions** step above)
 * **Trust relationships**: The role should have the root Adobe account (`670664943635`) in its trust relationships
 
+**Secure your role with an external ID (Recommended)**
+
+Add an `sts:ExternalId` condition to your IAM role's trust policy to ensure that only calls made on behalf of your organization can assume the role.
+
+Adobe automatically includes your Adobe IMS Organization ID as the `sts:ExternalId` value on every `AssumeRole` call. No setup is required on the Adobe side.
+
+In AWS, set the `sts:ExternalId` condition in your trust policy to your Adobe IMS Organization ID:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::670664943635:root"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {
+                "StringEquals": {
+                    "sts:ExternalId": "your-organization-id"
+                }
+            }
+        }
+    ]
+}
+```
+
+Replace `your-organization-id` with your Adobe IMS Organization ID. Once you add the condition, AWS checks it on every `AssumeRole` call:
+
+* If the incoming `sts:ExternalId` matches the value in your trust policy, AWS allows the role to be assumed.
+* If it does not match, or if the call has no `sts:ExternalId` at all, AWS denies the request.
+
+Adding this condition is optional and does not break existing assumed role connections, since Adobe already sends the correct value on every call. Adobe recommends adding it to all assumed role connections. For more information, see the [AWS documentation on using an external ID](https://aws.amazon.com/blogs/security/how-to-use-external-id-when-granting-access-to-your-aws-resources/).
+
 **Alternative: Restrict to specific Adobe user (Optional)**
 
 If you prefer not to allow the entire Adobe account, you can restrict access to only the specific Adobe user. To do this, edit the trust policy with the following configuration:
@@ -202,8 +275,6 @@ If you prefer not to allow the entire Adobe account, you can restrict access to 
 ```
 
 For more information, see the [AWS documentation on creating roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
-
-
 
 ### Fill in destination details {#destination-details}
 
@@ -288,17 +359,11 @@ When configuring the IAM role as a customer, make sure that the permission polic
 
 ```
 
-<!--
-
-Commenting out this note, as write permissions are assigned through the s3:PutObject permission.
-
->[!IMPORTANT]
->
->Experience Platform needs `write` permissions on the bucket object where the export files will be delivered.
-
--->
-
 ## Activate audiences to this destination {#activate}
+
+You can activate audiences to this destination from [!DNL Real-Time CDP] or from a [!DNL Real-Time CDP Collaboration] project.
+
+### Activate audiences from [!DNL Real-Time CDP] {#activate-rtcdp}
 
 >[!IMPORTANT]
 >
@@ -306,6 +371,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
+
+### Activate audiences from [!DNL Real-Time CDP Collaboration] {#activate-collaboration}
+
+For instructions on activating audiences to this destination from a [!DNL Real-Time CDP Collaboration] project, see the [Configure and manage cloud storage destinations in [!DNL Real-Time CDP Collaboration]](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/manage-destinations).
 
 ## Validate successful data export {#exported-data}
 

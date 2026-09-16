@@ -2,6 +2,18 @@
 title: Parameterized Queries
 description: Learn how to use parameterized queries in the Adobe Experience Platform UI.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
+TQID: https://experienceleague.adobe.com/cdcCnCiSjfjxf2Tp2deahQbgevGLJDAhGFLMxd0S3z8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Parameterized queries {#parameterized-queries}
 

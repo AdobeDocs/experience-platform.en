@@ -4,6 +4,21 @@ description: An overview of the role of Experience Data Model (XDM) schemas in A
 feature: Get Started, Data Management, Schemas
 badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
+TQID: https://experienceleague.adobe.com/GS8FH9-f6GE6Y-TjUOGRaNVG4lL3tUkIwdy13rbRtPM
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+    internal-label: Use cases
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Schemas in Real-Time Customer Data Platform B2B Edition
 

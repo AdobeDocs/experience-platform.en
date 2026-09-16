@@ -2,6 +2,13 @@
 title: Connect Data Landing Zone to Adobe Experience Platform using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Data Landing Zone using the Flow Service API.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
+TQID: https://experienceleague.adobe.com/X0dgc1KobP6xMAWX7CEWjWDTOpXpsKn64U4mL3HoLUY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect [!DNL Data Landing Zone] to Adobe Experience Platform using the Flow Service API
 
@@ -11,7 +18,7 @@ exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
 
 [!DNL Data Landing Zone] is a secure, cloud-based file storage facility to bring files into Adobe Experience Platform. Data is automatically deleted from the [!DNL Data Landing Zone] after seven days.
 
-This tutorial walks you through the steps on how to create a [!DNL Data Landing Zone] source connection using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). This tutorial also provides instructions on how to retrieve your [!DNL Data Landing Zone], as well as view and refresh your credentials.
+This tutorial walks you through the steps on how to create a [!DNL Data Landing Zone] source connection using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service). This tutorial also provides instructions on how to retrieve your [!DNL Data Landing Zone], as well as view and refresh your credentials.
 
 ## Getting started
 
@@ -668,3 +675,5 @@ A successful response returns the unique identifier (`id`) of the newly created 
 ## Next steps
 
 By following this tutorial, you have retrieved your [!DNL Data Landing Zone] credentials, explored its file structure to find the file you wish to bring to Experience Platform, and created a source connection to begin bringing your data to Experience Platform. You can now proceed to the next tutorial, where you will learn how to [create a dataflow to bring cloud storage data to Experience Platform using the [!DNL Flow Service] API](../../collect/cloud-storage.md).
+
+

@@ -5,12 +5,19 @@ title: Create an Azure Azure Data Explorer Base Connection Using the Flow Servic
 type: Tutorial
 description: Learn how to connect Azure Azure Data Explorer to Adobe Experience Platform using the Flow Service API.
 exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
+TQID: https://experienceleague.adobe.com/vSlYpeskCBLZTecnIAULq1QvfWXjWR0NYDqxInA00I0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create an [!DNL Azure Azure Data Explorer] base connection using the [!DNL Flow Service] API
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL Azure Data Explorer] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial walks you through the steps to create a base connection for [!DNL Azure Data Explorer] using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 
 ## Getting started
@@ -111,3 +118,5 @@ By following this tutorial, you have created an [!DNL Azure Data Explorer] base 
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
 * [Create a dataflow to bring database data to Experience Platform using the [!DNL Flow Service] API](../../collect/database-nosql.md)
+
+

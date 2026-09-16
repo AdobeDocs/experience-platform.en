@@ -1,7 +1,22 @@
 ---
-description: This page explains how to use the /testing/destinationInstance API endpoint to view the complete details of your testing results. This API endpoint returns the same result as you would obtain when using the Flow Service API to monitor dataflows.
+description: Learn how to use the testing endpoint to view complete test results, matching what the Flow Service API returns for dataflow monitoring.
 title: View detailed activation results
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
+TQID: https://experienceleague.adobe.com/6AAD-f--vG4KgZT6kkiobbp1lx9wU-IJ5xyub9F6bAU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # View detailed activation results {#view-test-results}
 
@@ -19,7 +34,7 @@ If you want to see more detailed information about your activation flow, you can
 
 ## Getting started {#getting-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Prerequisites {#prerequisites}
 

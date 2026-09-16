@@ -3,6 +3,23 @@ solution: Experience Platform
 title: People Audiences
 description: Learn how to target people using people audiences.
 exl-id: 922d1051-c93b-4213-bfae-579fe0ab67d3
+TQID: https://experienceleague.adobe.com/q0VQFIbScsruYKPn0F5gQ6-Rd-Zqlx2jrGq4dvumz30
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 # People audiences guide
 

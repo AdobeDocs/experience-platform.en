@@ -2,6 +2,19 @@
 title: Profile Partner Enrichment (Sample) Field Group
 description: Learn about the Profile Partner Enrichment (Sample) schema field group.
 exl-id: 02f7c358-3cf9-45cb-a5c5-e2cb1f140d93
+TQID: https://experienceleague.adobe.com/s8gEz35cvyxrhdjGRM7pGLq-v7jwbjr-2Ew7D7Gh-v4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # [!UICONTROL Profile Partner Enrichment (Sample)] schema field group
 

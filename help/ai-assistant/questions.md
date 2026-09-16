@@ -2,6 +2,32 @@
 title: Question guide for AI Assistant (Legacy)
 description: Read this document to learn example questions that you can use when querying AI Assistant (Legacy).
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
+TQID: https://experienceleague.adobe.com/Igs2ofwb4D2-RwmdJID7e59ElJ6aL4tqEgNZ4F-Z-ko
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+    internal-label: AI Assistant
+subfeature_v2:
+  - id: af7d4edc-6e6b-4176-bf14-907faf40ebd4
+    internal-label: Customer AI
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Question guide for AI Assistant (Legacy)
 
@@ -188,15 +214,15 @@ The following is a list of examples of questions that are currently not supporte
 ### Operational insights
 
 * How many profiles in this sandbox live in California? (**Note**: for similar questions, you must provide a specific criteria to give enough context for your request, in this case, the specific criteria is "live in California").
-* What are the segments this profile {PROFILE_INFO/ATTRIBUTE_VALUE} is in?
+* What are the audiences this profile {PROFILE_INFO/ATTRIBUTE_VALUE} is in?
 * How many profiles in the dataset have an email?
 * Which dataset constitutes to maximum number of profiles in this sandbox?
-* How many segments have been deleted in {RELATIVE_DATE}?
+* How many audiences have been deleted in {RELATIVE_DATE}?
 * Give me a profile in the {AUDIENCE_NAME}. 
 * What is the total number of profiles in my sandbox?
 * How many identity namespaces are associated with the audience {AUDIENCE_NAME}?
-* Show me a report of all the audience segments that were evaluated today
-* How many segments have overlapping profiles?
+* Show me a report of all the audiences that were evaluated today
+* How many audiences have overlapping profiles?
 * How many batches are being loaded into {DATASET_NAME}
 * How many active offers do I have?
 * How many active campaigns do I have?

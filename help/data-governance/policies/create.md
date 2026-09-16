@@ -5,10 +5,29 @@ title: Create a Data Governance Policy in the API
 type: Tutorial
 description: Learn how to create a data governance policy using the Policy Service API.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
+TQID: https://experienceleague.adobe.com/RQVZTt8LCceVQMyUVMgbMShIx9ReQp6xtT2mSIQCFxk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Create a data governance policy in the API
 
-The [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) allows you to create and manage data governance policies to determine what marketing actions can be taken against data that contains certain data usage labels.
+The [Policy Service API](https://developer.adobe.com/experience-platform-apis/references/policy-service) allows you to create and manage data governance policies to determine what marketing actions can be taken against data that contains certain data usage labels.
 
 This document provides a step-by-step tutorial for creating a governance policy using the [!DNL Policy Service] API.
 
@@ -416,6 +435,8 @@ A successful response returns HTTP status 200 (OK) and the details of the update
 
 By following this tutorial, you have successfully created a data usage policy for a marketing action. You can now continue to the tutorial on [enforcing data usage policies](../enforcement/api-enforcement.md) to learn how to check for policy violations and handle them in your experience application.
 
-For more information on the different available operations in the [!DNL Policy Service] API,  see the [Policy Service developer guide](../api/getting-started.md). For information on how to enforce policies for [!DNL Real-Time Customer Profile] data, see the tutorial on [enforcing data usage compliance for audience segments](../../segmentation/tutorials/governance.md).
+For more information on the different available operations in the [!DNL Policy Service] API,  see the [Policy Service developer guide](../api/getting-started.md). For information on how to enforce policies for [!DNL Real-Time Customer Profile] data, see the tutorial on [enforcing data usage compliance for audiences](../../segmentation/tutorials/governance.md).
 
 To learn how to manage usage policies in the [!DNL Experience Platform] user interface, see the [policy user guide](user-guide.md).
+
+

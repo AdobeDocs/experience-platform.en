@@ -5,6 +5,8 @@ user-guide-description: Activate your known and unknown data for cross-channel m
 description: This document lists the table of contents for Adobe Experience Platform destinations
 feature: Destinations
 role: Admin,User
+nudge: true
+debug: true
 ---
 
 # Destinations {#destinations}
@@ -21,7 +23,7 @@ role: Admin,User
     * [Activate data to file-based destinations by using the Flow Service API](/help/destinations/api/activate-segments-file-based-destinations.md) 
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to file-based email marketing destinations and activate data using the Flow Service API](./api/connect-activate-batch-destinations.md)
-    * [Activate audiences to batch destinations via the ad-hoc activation API](./api/ad-hoc-activation-api.md)
+    * [Activate audiences via the ad-hoc activation API](./api/ad-hoc-activation-api.md)
     * [Edit destination](./api/edit-destination.md)
     * [Update destination dataflows](./api/update-destination-dataflows.md)
     * [Delete destination accounts](./api/delete-destination-account.md)
@@ -33,17 +35,21 @@ role: Admin,User
     * [Create a new destination connection](./ui/connect-destination.md)
     * Activate data to destinations{#activate}
         * [Activation overview](./ui/activation-overview.md)
+        * [(Beta) When to activate](./ui/when-to-activate.md)
         * [Activate audiences to streaming audience export destinations](./ui/activate-segment-streaming-destinations.md)
         * [Activate audiences to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
-        * [Activate audiences to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
+        * Batch profile export destinations{#activate-batch-profile}
+            * [Activate audiences to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
+            * [Batch destinations mapping reference](./ui/batch-destinations-mapping-reference.md)
+            * [Select profile attributes (legacy)](./ui/select-profile-attributes-legacy.md)
         * [Activate audiences to edge personalization destinations](./ui/activate-edge-personalization-destinations.md)
         * [Look up profile attributes on the edge in real-time](./ui/activate-edge-profile-lookup.md)
         * [Activate audiences to curated destinations based on LiveRamp identifiers](./ui/activate-curated-destinations.md)
         * [Activate prospect audiences to destinations](./ui/activate-prospect-audiences.md)
         * [Activate account audiences to destinations](./ui/activate-account-audiences.md)
         * [Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
+        * [(Beta) Activate now for streaming destinations](./ui/activate-now-streaming.md)
         * [Export datasets using the Experience Platform UI](./ui/export-datasets.md)
-        * [Extend dataset export schedules for dataflows created prior to November 2024](./ui/dataset-expiration-update.md)
         * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
         * [Export arrays, maps, and objects](/help/destinations/ui/export-arrays-maps-objects.md)
         * [Perform transformations on data exported to cloud storage destinations](/help/destinations/ui/data-transformations-calculated-fields.md)
@@ -69,8 +75,9 @@ role: Admin,User
         * [Federated Audience Composition connection](https://www.adobe.com/go/destinations-federated-audience-composition)
     * Advertising destinations{#advertising}
         * [Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
-        * [Acxiom Real ID™ Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
+        * [Acxiom Real ID&trade; Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
         * [Advertising destinations overview](./catalog/advertising/overview.md)
+        * [Adhese connection](./catalog/advertising/adhese.md)
         * [Adobe Advertising DSP connection](./catalog/advertising/adobe-advertising-dsp-connection.md)
         * [Legacy Adobe Advertising DSP connection](./catalog/advertising/adobe-advertising-cloud-dsp-connection-legacy.md)
         * [Adobe Advertising extension](./catalog/advertising/adobe-advertising-cloud.md)
@@ -88,12 +95,12 @@ role: Admin,User
         * [DoubleClick Floodlight (Beta) extension](./catalog/advertising/doubleclick-floodlight.md)
         * [Facebook Pixel extension](./catalog/advertising/facebook-pixel.md)
         * [Flashtalking OneTag extension](./catalog/advertising/flashtalking.md)
-        * {hide-from-toc} [(Beta) FreeWheel connection](./catalog/advertising/freewheel.md)
+        * [(Beta) FreeWheel connection](./catalog/advertising/freewheel.md)
         * [Google Ads connection](./catalog/advertising/google-ads-destination.md)
         * [Google Ad Manager connection](./catalog/advertising/google-ad-manager.md)
-        * [(Beta) Google Ad Manager 360 connection](./catalog/advertising/google-ad-manager-360-connection.md)
+        * [Google Ad Manager 360 connection](./catalog/advertising/google-ad-manager-360-connection.md)
         * [Google Customer Match connection](./catalog/advertising/google-customer-match.md)
-        * [(Limited Availability) Google Customer Match + DV360 connection](./catalog/advertising/google-customer-match-dv360.md)
+        * [Google Customer Match + DV360 connection](./catalog/advertising/google-customer-match-dv360.md)
         * [Google Display & Video 360 connection](./catalog/advertising/google-dv360.md)
         * [Google gtag extension](./catalog/advertising/gtag-advertising.md)
         * [Index Exchange connection](./catalog/advertising/index-exchange.md)
@@ -116,6 +123,7 @@ role: Admin,User
         * [The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
         * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)
+        * [ZoomInfo Account Audiences connection](./catalog/advertising/zoominfo-account-audiences.md)
     * Analytics destinations {#analytics}
         * [Analytics destinations overview](./catalog/analytics/overview.md)
         * [Adform Website Tracking extension](./catalog/analytics/adform.md)
@@ -148,6 +156,7 @@ role: Admin,User
         * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
         * [IP address allowlist for file-based cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
+        * [Private Link for Azure destinations](./catalog/cloud-storage/azure-private-link.md)
     * Customer Relationship Management (CRM) destinations {#crm}
         * [Hubspot connection](./catalog/crm/hubspot.md)
         * [Salesforce CRM connection](./catalog/crm/salesforce.md)
@@ -281,8 +290,9 @@ role: Admin,User
             * [Configure an Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
             * [Configure an SFTP destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
             * [Configure a file-based destination to export prospect audiences](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
+            * [Configure a dataset export destination](../destinations/destination-sdk/guides/batch/configure-dataset-export-destination.md)
     * Destination authoring API reference {#authoring-api}
-        * [Destination SDK (Destination Authoring) API reference](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+        * [Destination SDK (Destination Authoring) API reference](https://developer.adobe.com/experience-platform-apis/references/destination-authoring)
         * Destination server operations {#server-operations}
             * [Create a destination server configuration](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
             * [Retrieve a destination server configuration](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)

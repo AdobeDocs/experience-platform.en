@@ -4,6 +4,37 @@ title: Getting Started with Real-Time Customer Data Platform
 description: Use this sample scenario as an example when setting up your implementation of Adobe Real-Time Customer Data Platform.
 feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
+TQID: https://experienceleague.adobe.com/RtySnnyc6HIrxIOLSi4nTtmHpxpwYH2P5uHFO4ZVq2Q
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+    internal-label: Use cases
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+    internal-label: Behavioral data
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+    internal-label: Data integration
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Getting started with Real-Time Customer Data Platform
 
@@ -103,7 +134,7 @@ She navigates to the home page to browse some more.
 
 Sarah receives a personalized home page experience that is dynamically delivered, based on her [!DNL Real-Time Customer Profile] in Adobe Experience Platform.  
 
-She sees relevant content, thanks to Adobe Sensei-powered personalization in Adobe Target, which takes into account her past purchases and affinity toward running apparel and gear. Luma also tailors the men's catalog content toward running gear for men based on her most recent browse.
+She sees relevant content, thanks to Adobe AI-powered personalization in Adobe Target, which takes into account her past purchases and affinity toward running apparel and gear. Luma also tailors the men's catalog content toward running gear for men based on her most recent browse.
 
 Further down the page, Sarah is shown featured products, as well as a new recommendations tray based on her most recently viewed items.  
 

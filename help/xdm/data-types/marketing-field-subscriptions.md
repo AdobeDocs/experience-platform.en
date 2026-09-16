@@ -3,6 +3,19 @@ solution: Experience Platform
 title: Generic Marketing Preference Field With Subscriptions Data Type
 description: Learn about the Generic Marketing Preference Field with Subscriptions XDM data type.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
+TQID: https://experienceleague.adobe.com/oUaU1EIHqOc47hVGosT2jelr7-vurd2K83zuDBtdH4I
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # [!UICONTROL Generic Marketing Preference Field with Subscriptions] data type
 
@@ -20,7 +33,7 @@ exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 | --- | --- | --- |
 | `reason` | String | When a customer opts out of a marketing use case, this string field represents the reason why the customer opted out. |
 | `subscriptions` | Map | A map of customer marketing preferences for specific subscriptions. See the section on [subscriptions](#subscriptions) for more information. |
-| `time` | DateTime | An ISO 8601 timestamp of when the marketing preference changed, if applicable. |
+| `time` | DateTime | An [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) timestamp (`yyyy-MM-dd'T'HH:mm:ssXXX`) of when the marketing preference changed, if applicable. |
 | `val` | String | The customer-provided preference choice for this marketing use case. See the [next section](#val) for accepted values and definitions. |
 
 {style="table-layout:auto"}
@@ -91,7 +104,7 @@ The following JSON represents an example marketing field for a phone call market
 | `val` | The [consent value](#val) for the subscription. |
 | `type` | The subscription type. This can be any descriptive string, provided it is 15 characters or less. |
 | `topics` | An array of strings that represent the areas of interest a customer as subscribed to, which can be used to send them relevant content. |
-| `subscribers` | An optional map-type field that represents a set of identifiers (such as email addresses or phone numbers) that have subscribed to a particular subscription. Each key in this object represents the identifier in question, and contains two sub-properties: <ul><li>`time`: An ISO 8601 timestamp of when the identity subscribed, if applicable.</li><li>`source`: The source that the subscriber originated from. This can be any descriptive string, provided it is 15 characters or less.</li></ul> |
+| `subscribers` | An optional map-type field that represents a set of identifiers (such as email addresses or phone numbers) that have subscribed to a particular subscription. Each key in this object represents the identifier in question, and contains two sub-properties: <ul><li>`time`: An ISO 8601 timestamp (`yyyy-MM-dd'T'HH:mm:ssXXX`) of when the identity subscribed, if applicable.</li><li>`source`: The source that the subscriber originated from. This can be any descriptive string, provided it is 15 characters or less.</li></ul> |
 
 {style="table-layout:auto"}
 

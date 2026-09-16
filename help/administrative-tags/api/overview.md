@@ -3,6 +3,16 @@ title: Unified Tags API Overview
 description: Learn how to use the Unified Tags API to manage unified tags and folders in Adobe Experience Platform.
 role: Developer
 exl-id: f4da5850-d5b0-4746-9f28-88ce836db800
+TQID: https://experienceleague.adobe.com/ul4xWRB47kRrQSGKTF-hbiHJzoOdUYwtNQ66yeLp640
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Unified Tags API overview
 

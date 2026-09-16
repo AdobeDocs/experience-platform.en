@@ -1,8 +1,32 @@
 ---
 title: RainFocus Attendee Profiles
 description: Learn how to use the RainFocus Attendee Profiles destination connector to synchronize audience profiles with the RainFocus Global Attendee Profile.
-last-substantial-update: 2024-12-17
+last-substantial-update: 2024-12-17T00:00:00.000Z
 exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
+TQID: https://experienceleague.adobe.com/9nYrNTW3Dz9nx9WmO3iQHtNAG55ImajAQzI-f-2tMZo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # RainFocus Attendee Profiles {#rainfocus-destination}
 
@@ -24,7 +48,7 @@ A large enterprise technology company is due to open registration for its upcomi
 
 ### Use case #2 {#use-case-2}
 
-A financial services brand is due to host a series of roadshows targeting new and existing customers. They have a series of audience segments with target customers in [!DNL Adobe Experience Platform]. Using the [!DNL RainFocus] Destination Connector, they are able to easily send those profiles to [!DNL RainFocus] for activation.
+A financial services brand is due to host a series of roadshows targeting new and existing customers. They have a series of audiences with target customers in [!DNL Adobe Experience Platform]. Using the [!DNL RainFocus] Destination Connector, they are able to easily send those profiles to [!DNL RainFocus] for activation.
 
 ## Prerequisites {#prerequisites}
 
@@ -77,8 +101,8 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of an audience, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-streaming-profile-destinations.md#select-attributes).|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 

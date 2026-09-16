@@ -4,6 +4,27 @@ title: Generate the Dataset Overlap Report
 type: Tutorial
 description: This tutorial outlines the steps necessary to generate the dataset overlap report using the Real-Time Customer Profile API.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
+TQID: https://experienceleague.adobe.com/G65tQIdmuEqNSc-Dbs4nGZXgDYGbhKm3dmGyslY-H-k
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Generate the dataset overlap report
 
@@ -15,7 +36,7 @@ This tutorial outlines the steps necessary to generate the dataset overlap repor
 
 ## Getting started
 
-In order to use Adobe Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) to gather the values that you need for the required headers. To learn more about Experience Platform APIs, please refer to the [getting started with Experience Platform APIs documentation](../../landing/api-guide.md). 
+In order to use Adobe Experience Platform APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md) to gather the values that you need for the required headers. To learn more about Experience Platform APIs, please refer to the [getting started with Experience Platform APIs documentation](../../landing/api-guide.md). 
 
 The required headers for all of the API calls in this tutorial are:
 
@@ -127,3 +148,5 @@ This report provides the following information:
 ## Next steps
 
 After completing this tutorial, you are now able to generate the dataset overlap report using the Real-Time Customer Profile API. To learn more about working with Profile data in both the API and the Experience Platform UI, please begin by reading the [Profile overview documentation](../home.md).
+
+

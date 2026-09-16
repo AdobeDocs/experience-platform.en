@@ -2,6 +2,22 @@
 title: Getting Started with the Sandbox Tooling API
 description: Use the Sandbox tooling API to examine artifacts and export and import a snapshot of sandbox configurations between sandboxes. Follow this guide to learn how to perform key operations using the API.
 exl-id: 0b34d153-a603-4397-a375-9cc846efe23a
+TQID: https://experienceleague.adobe.com/VKRQcGBs4APKpgOVXmLil-IKxCc-c9pEFg05pltyAvI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Getting started with the sandbox tooling API {#getting-started}
 
@@ -13,7 +29,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ## Gather values for required headers {#headers}
 
-This guide requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to Experience Platform APIs. Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+This guide requires you to have completed the [authentication tutorial](/help/landing/api-authentication.md) in order to successfully make calls to Experience Platform APIs. Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -35,3 +51,5 @@ See the following API tutorials to start making calls to the sandbox tooling API
 
 * [Packages endpoint](./packages.md)
 * [Tools endpoint](./tools.md)
+
+

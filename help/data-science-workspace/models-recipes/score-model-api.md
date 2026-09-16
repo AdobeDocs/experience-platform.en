@@ -1,12 +1,27 @@
 ---
 keywords: Experience Platform;Score a model;Data Science Workspace;popular topics;sensei machine learning api
 solution: Experience Platform
-title: Score a Model Using the Sensei Machine Learning API
+title: Score a Model Using the Adobe AI Machine Learning API
 type: Tutorial
-description: This tutorial will show you how to leverage the Sensei Machine Learning APIs to create an Experiment and an Experiment Run.
+description: This tutorial will show you how to leverage the Adobe AI Machine Learning APIs to create an Experiment and an Experiment Run.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
+TQID: https://experienceleague.adobe.com/5bu-W9ypp2xDunBHXRk6UPX9eCCW4JlE2yF1bIWe4-A
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
-# Score a model using the [!DNL Sensei Machine Learning API]
+# Score a model using the Adobe AI Machine Learning API
 
 >[!NOTE]
 >
@@ -14,7 +29,7 @@ exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
 >
 >This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
-This tutorial will show you how to leverage the APIs to create an Experiment and an Experiment Run. For a list of all the endpoints in the Sensei Machine Learning API, please refer to [this document](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
+This tutorial will show you how to leverage the APIs to create an Experiment and an Experiment Run. For a list of all the endpoints in the Adobe AI Machine Learning API, please refer to [this document](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Create a scheduled Experiment for scoring
 

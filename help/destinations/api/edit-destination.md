@@ -4,10 +4,27 @@ title: Edit destination connections using the Flow Service API
 type: Tutorial
 description: Learn how to how to edit various components of a destination connection using the Flow Service API.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
+TQID: https://experienceleague.adobe.com/te1OT80nWznZAkM5m7bnOpPcnAgS0my4GdjE3rs99oc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Edit destination connections using the Flow Service API
 
-This tutorial covers the steps for editing various components of a destination connection. Learn how to update authentication credentials, export location, and more by using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for editing various components of a destination connection. Learn how to update authentication credentials, export location, and more by using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!NOTE]
 >
@@ -34,7 +51,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers {#gather-values-for-required-headers}
 
-To make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+To make calls to Experience Platform APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -462,3 +479,5 @@ The API endpoints in this tutorial follow the general Experience Platform API er
 ## Next steps {#next-steps}
 
 You have learned how to update various components of a destination connection using the [!DNL Flow Service] API. For more information on destinations, see the [destinations overview](../home.md).
+
+

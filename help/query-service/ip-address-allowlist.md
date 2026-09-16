@@ -3,6 +3,20 @@ keywords: IP address, IP range, allow list, allowlist, Query Service, network ac
 title: IP Address Allowlist for Query Service
 description: This page provides updated IP ranges that you can add to your allowlist for secure access to the Query Service.
 exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
+TQID: https://experienceleague.adobe.com/29vuxFP4lB-AJy1I68P2Cxtt6HzMgE8Azz0F-gUXgI4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # IP address allowlist {#ip-address-allow-list}
 

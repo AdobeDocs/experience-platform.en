@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Mapping Sets API Endpoint
 description: You can use the `/mappingSets` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, update, and validate mapping sets.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
+TQID: https://experienceleague.adobe.com/JgejVj4OcLCzdqBOrY9XOOrHsQk0KyvuZGUD2-ZgW7c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Mapping sets endpoint
 

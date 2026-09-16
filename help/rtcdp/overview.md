@@ -4,6 +4,31 @@ title: Real-Time Customer Data Platform Overview
 description: Learn how Adobe Real-Time Customer Data Platform can help you bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time.
 feature: Get Started
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
+TQID: https://experienceleague.adobe.com/XkOgNDNpPpMtdTx1rJJMhDHFXVxoE3r4TUM-X6jbZLs
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+feature_v2:
+  - id: ebefeaba-efa6-45e2-ae01-f6171cdb8d1e
+    internal-label: Tier
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Real-Time Customer Data Platform overview
 
@@ -23,7 +48,7 @@ With Real-Time CDP, you can:
 
 * Achieve a single view of your customer by combining data from across the enterprise.
 * Responsibly manage profiles with trusted governance and privacy controls for known and anonymous identifiers.
-* Generate actionable insights and scale audiences with AI and machine learning powered by Adobe Sensei and built for marketers.
+* Generate actionable insights and scale audiences with AI and machine learning powered by Adobe AI and built for marketers.
 * Deliver personalized experiences in real-time across all channels and destinations.
 
 ## Real-Time Customer Data Platform editions (Business-to-Consumer, Business-to-Business, Business-to-Person) {#rtcdp-editions}

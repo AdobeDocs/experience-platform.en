@@ -4,6 +4,19 @@ solution: Experience Platform
 title: Classes API Endpoint
 description: The /classes endpoint in the Schema Registry API allows you to programmatically manage XDM classes within your experience application.
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
+TQID: https://experienceleague.adobe.com/4nnZ3Opf259QCj1n-1VfZmOifXUzEB5SPyDvIUHRhCA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Classes endpoint
 

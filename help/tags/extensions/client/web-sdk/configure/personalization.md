@@ -12,7 +12,7 @@ exl-id: 24009a40-92ad-49d6-b768-49d64dccf4e0
 
 This configuration section allows you to determine how you want to hide certain parts of the page while personalized content is loaded. When configured correctly, these settings ensure that your visitors see the right personalized content.
 
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Log in to [CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
 1. Navigate to **[!UICONTROL Extensions]**, then select **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.

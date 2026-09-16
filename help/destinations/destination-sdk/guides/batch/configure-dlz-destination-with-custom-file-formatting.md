@@ -1,9 +1,23 @@
 ---
 description: Learn how to use Destination SDK to configure a Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration.
-title: Configure a Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration.
+title: Configure Data Landing Zone with Custom File Formatting
 exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
+TQID: https://experienceleague.adobe.com/Pu094HXFGjuP9dX1AC-zqlaefivMIgNDA81SgCqqlYY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
-# Configure a [!DNL Data Landing Zone (DLZ)] destination with custom file formatting options and custom file name configuration
+# Configure a [!DNL Data Landing Zone] destination with custom file formatting
 
 ## Overview {#overview}
 
@@ -321,7 +335,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       }
    ],
    "uiAttributes":{
-      "documentationLink":"https://www.adobe.io/apis/experienceplatform.html",
+      "documentationLink":"https://developer.adobe.com/experience-platform-apis/",
       "category":"DLZ",
       "connectionType":"Server-to-server",
       "frequency":"Batch",
@@ -448,3 +462,5 @@ If you are an Independent Software Vendor (ISV) or System Integrator (SI) creati
 ## Next steps {#next-steps}
 
 You now know how to author a custom [!DNL Data Landing Zone] destination by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) to export data to the destination.
+
+

@@ -1,7 +1,19 @@
 ---
 title: Authoring best practices
-description: Learn which rules and tips you should follow when authoring your destination documentation page, to ensure that it meets the Adobe Experience Platform documentation quality standards.
+description: Learn which rules to follow when authoring your destination documentation page to meet Adobe Experience Platform quality standards.
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
+TQID: https://experienceleague.adobe.com/SJ38avlncjFbrK-gAbCTh1CykXtri-HwXYhwMQdes8U
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Authoring best practices
 
@@ -23,16 +35,16 @@ This page describes rules that you should follow when [authoring your destinatio
 >Read [Writing guidance for Adobe Documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) before you start authoring the destination documentation page.
 
 * Keep your sentences short and get to the point fast. If your sentence is over 20 words long or uses multiple commas, consider breaking it up into separate sentences. Sentences over 20 words in length can be especially challenging for readers.
-* Don't be excessively polite. Avoid using "please" or "kindly do ..." in technical documentation.
+* Avoid being excessively polite. Avoid using "please" or "kindly do ..." in technical documentation.
 
 ## Linking {#linking}
 
-Follow the provided documentation template and don't edit the existing links in the template. When including new links, read [using links in documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html) in the contributor guide.
+Follow the provided documentation template and do not edit the existing links in the template. When including new links, read [using links in documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html) in the contributor guide.
 
 ## Branding guidelines {#branding}
 
-* AEP is not an approved public-facing term. Please use [!DNL Adobe Experience Platform] on first use, then Experience Platform, then Experience Platform.
-  * **Don't use**: Before you can export data from AEP to YourDestination, make sure you read and complete these prerequisites. 
+* AEP is not an approved public-facing term. Use [!DNL Adobe Experience Platform] on first use, then Experience Platform for subsequent references.
+  * **Do not use**: Before you can export data from AEP to YourDestination, make sure you read and complete these prerequisites. 
   * **Use**: Before you can export data from [!DNL Adobe Experience Platform] to YourDestination, make sure you read and complete these prerequisites.
 
 ## Images and screenshots {#images-and-screenshots}
@@ -40,12 +52,12 @@ Follow the provided documentation template and don't edit the existing links in 
 * For information on [how to link to images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#images), refer to the contributor guide.
 * When using screenshots, ensure that your screenshot captures the entire Experience Platform UI screen.
 * When marking up images to highlight a certain control or label on the page, try to follow the markup style used by the Experience Platform documentation team. Notice how Profile-based is highlighted in [this screenshot](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency).
-* Please use `png` format images.
-* Please don't use numbered screenshots as filenames. Image filenames should be descriptive.
-  * **Don't use**: `1.png`, `2.png`, `3.png`
+* Use `png` format images.
+* Do not use numbered screenshots as filenames. Image filenames should be descriptive.
+  * **Do not use**: `1.png`, `2.png`, `3.png`
   * **Use**: `yourdestination-authentication-details.png`, `yourdestination-destination-details.png`
-* Please use alt text for any images that you add to the documentation and use proper grammar in the alt text.
-  * **Don't use**: Destination connection details
+* Use alt text for any images that you add to the documentation and use proper grammar in the alt text.
+  * **Do not use**: Destination connection details
   * **Use**: Image of the Experience Platform UI, showing destination connection details filled in.
 
 ## Process {#process}

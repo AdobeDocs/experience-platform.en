@@ -4,6 +4,13 @@ title: Alert Subscriptions Endpoint
 description: This guide provides sample HTTP requests and responses for the various API calls you can make to the alert subscriptions endpoint with the Query Service API.
 role: Developer
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
+TQID: https://experienceleague.adobe.com/LqobknUBqbI1PIV2lsAGwy9okdxN28IZmwinuhEQxuM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Alert Subscriptions endpoint
 

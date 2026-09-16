@@ -3,10 +3,20 @@ title: Ingest payments data from your [!DNL Stripe] account to Experience Platfo
 description: Learn how to ingest payments data from your Stripe account to Experience Platform using the Flow Service API
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
+TQID: https://experienceleague.adobe.com/JoKGfLa3Fwqfo4TKo6TSqbQKmLYkIl-5X50iq2R839g
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Ingest payments data from your [!DNL Stripe] account to Experience Platform using APIs
 
-Read the following tutorial to learn how to ingest your payments data from [!DNL Stripe] to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read the following tutorial to learn how to ingest your payments data from [!DNL Stripe] to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Get started
 
@@ -530,7 +540,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 ### Create a mapping {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to the [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) with data mappings defined within the request payload.
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to the [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep) with data mappings defined within the request payload.
 
 **API format**
 
@@ -907,3 +917,5 @@ Delete your dataflow by performing a DELETE request to the [!DNL Flow Service] A
 ### Delete your account
 
 Delete your account by performing a DELETE request to the [!DNL Flow Service] API while providing the base connection ID of the account you want to delete. For complete API examples, read the guide on [deleting your source account using the API](../../delete.md).
+
+

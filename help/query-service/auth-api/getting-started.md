@@ -4,6 +4,20 @@ title: Data Distiller Authorization API Guide
 description: Learn how to get started for authorization and IP range restrictions for secure data access within Adobe Experience Platform's Query Service.
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
+TQID: https://experienceleague.adobe.com/QeyJ3SRH-PLtzaMN4jqu2z-Bl1AhahQz3IkpUXF-t2w
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Get started with the Data Distiller Authorization API
 

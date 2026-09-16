@@ -1,0 +1,32 @@
+{
+  "id": "62b5a071-8fb6-4e10-91cf-a36965f62315",
+  "lavaId": "e78663a0-0754-4836-8b0d-1ee769ae3cbd",
+  "referenceId": "pos-rBkrcJfNRvuN1x72Qr76EQ",
+  "location": "pos-123",
+  "items": [
+    {
+        "sku": "sku-1337",
+        "amount": 2300,
+        "quantity": 2,
+        "adjustedTotal": 4500,
+        "rewardsApplied": [
+            {
+            "amount": 100,
+            "rewardId": "1"
+            }
+        ]
+    }
+  ],
+  "redeemedAmount": 0,
+  "rewardsApplied": [
+    {
+      "amount": 225,
+      "rewardId": "62"
+    }
+  ],
+  "subtotal": 4275,
+  "timestamp": "2026-06-03T22:27:37.515Z",
+  "total": 4275,
+  "transactionId": "93821687-c076-4da8-bca1-0702abc96e3c",
+  "type": "transaction"
+}

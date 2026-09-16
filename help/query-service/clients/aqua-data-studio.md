@@ -4,6 +4,15 @@ solution: Experience Platform
 title: Connect Aqua Data Studio to Query Service
 description: This document walks through the steps for connecting Aqua Data Studio with Adobe Experience Platform Query Service.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
+TQID: https://experienceleague.adobe.com/kHT-1T-Qheq-C4onQHUii-4LBLzzgUGBGtc8PckjdF8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect [!DNL Aqua Data Studio] to Query Service
 

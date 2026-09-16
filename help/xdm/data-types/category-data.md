@@ -2,6 +2,13 @@
 title: Category Data Data Type
 description: Learn about the Category data Experience Data Model (XDM) data type.
 exl-id: f8d52f2d-5fb0-4999-8b31-ddc14225b0ab
+TQID: https://experienceleague.adobe.com/t9bTcHkqHpahlcb75NFoYHzTtdpC8n4yZEDxu4d1l-A
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Category data] data type
 

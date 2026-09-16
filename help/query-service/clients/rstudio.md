@@ -4,6 +4,15 @@ solution: Experience Platform
 title: Connect RStudio to Query Service
 description: This document walks through the steps for connecting R Studio with Adobe Experience Platform Query Service.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
+TQID: https://experienceleague.adobe.com/bWzAleGJ-a76H1AEJFhowIsUMPKnuSyvdmzwlvKpzgk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect [!DNL RStudio] to Query Service
 

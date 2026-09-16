@@ -2,6 +2,50 @@
 title: Adobe Experience Platform Release Notes January 2026
 description: The January 2026 release notes for Adobe Experience Platform.
 exl-id: becc62ba-b21b-4bbb-9f20-8281a3a6e009
+TQID: https://experienceleague.adobe.com/Q6LSfZHtVu--3AKmjSKt7Vum5zkOkag7hGBnmbwTbrw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+    internal-label: AI Assistant
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+    internal-label: B2B
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+    internal-label: Get started
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Adobe Experience Platform release notes
 
@@ -49,7 +93,7 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 | Destination | Description |
 | --- | --- |
 | [Kevel destination](/help/destinations/catalog/advertising/kevel.md) connector now available | The [!DNL Kevel] streaming destination for Adobe Experience Platform enables customers to activate Adobe audiences directly into [!DNL Kevel]'s UserDB and Segment Management APIs to support real-time targeting at ad decision time. [[!DNL Kevel]](https://www.kevel.com/) provides the AI-enabled technology and expert guidance that help innovative commerce leaders launch, scale, and succeed in retail media. [!DNL Kevel]'s Retail Media Cloud powers targeted, attributable, customizable ad formats for on-site and off-site advertising. |
-| [Index Exchange](/help/destinations/catalog/advertising/index-exchange.md) destination connector now available | Use this destination connector to export audience segments from Adobe Experience Platform directly to [!DNL Index Exchange]'s programmatic advertising platform. [!DNL Index] is a global advertising supply-side platform that helps media owners maximize the value of their content across every screen. With over 20 years of industry leadership, [!DNL Index] connects the world's largest brands with premium experience makers to deliver high-quality consumer experiences. |
+| [Index Exchange](/help/destinations/catalog/advertising/index-exchange.md) destination connector now available | Use this destination connector to export audiences from Adobe Experience Platform directly to [!DNL Index Exchange]'s programmatic advertising platform. [!DNL Index] is a global advertising supply-side platform that helps media owners maximize the value of their content across every screen. With over 20 years of industry leadership, [!DNL Index] connects the world's largest brands with premium experience makers to deliver high-quality consumer experiences. |
 | Regional endpoints support for Braze connections | All [region-specific endpoints](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) supported by [!DNL Braze] are now available for selection during the destination configuration flow. Ask your [!DNL Braze] representative which endpoint instance you should use. |
 | Weekly and monthly scheduling support for [Liveramp Onboarding](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling) | You can now configure weekly and monthly export schedules for the Liveramp Onboarding destination. <br> This release is being rolled out gradually and will be complete by January 30th. |
 | Enhanced activation experience for [The Trade Desk](../../destinations/catalog/advertising/tradedesk.md) and [Microsoft Bing](../../destinations/catalog/advertising/bing.md) destinations | The Trade Desk and Microsoft Bing destinations now include predefined mandatory mappings for an optimized activation experience.  <br> This release is being rolled out gradually and will be complete by January 30th. ![Image showing predefined mappings for The Trade Desk](assets/january/mandatory-mappings-ttd.png) {width="150" align="center" zoomable="yes"} <br> ![Image showing predefined mappings for Microsoft Bing](assets/january/mandatory-mappings-bing.png) {width="150" align="center" zoomable="yes"} |

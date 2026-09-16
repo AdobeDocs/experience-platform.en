@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Getting Started with Self-Serve Sources (Batch SDK)
 description: This document provides an introduction to the prerequisite information you need to know before attempting to create a new source using Self-Serve Sources (Batch SDK).
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
+TQID: https://experienceleague.adobe.com/jG8-cM2uupkzf7H-YWHeLqtAbnLWW9eLnO1qQAur9yc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Getting Started with Self-Serve Sources (Batch SDK)
 
@@ -24,7 +34,7 @@ The Self-Serve Sources (Batch SDK) and [!DNL Flow Service] API documentation pro
 
 ## Gather values for required headers
 
-In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -45,3 +55,5 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 ## Next steps
 
 To begin creating a new source with Self-Serve Sources (Batch SDK), see the tutorial on [creating a new source](./create.md).
+
+

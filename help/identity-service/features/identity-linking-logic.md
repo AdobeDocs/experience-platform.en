@@ -2,6 +2,23 @@
 title: Identity Service Linking Logic
 description: Learn about how Identity Service links disparate identities to create a comprehensive view of a customer.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
+TQID: https://experienceleague.adobe.com/kFE7UtfCAHdWqCAFb7xp-d87Pn6O204K3QUtbYOeAHs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 ---
 # Identity Service linking logic {#identity-service-linking-logic}
 

@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Microsoft Dynamics Source Connector Overview
 description: Learn how to connect Microsoft Dynamics to Adobe Experience Platform using APIs or the user interface.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
+TQID: https://experienceleague.adobe.com/AC5LUjlrsqvoJHPGBoUNHgOiG83DnrEo9xj80RhnQfE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL Microsoft Dynamics] source
 

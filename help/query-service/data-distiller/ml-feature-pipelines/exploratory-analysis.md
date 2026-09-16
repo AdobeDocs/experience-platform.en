@@ -2,6 +2,23 @@
 title: Exploratory Data Analysis
 description: Learn how to use Data Distiller to explore and analyze data from a Python notebook.
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
+TQID: https://experienceleague.adobe.com/Sk-1y-qbaPLWaUmkjXN-LmaJ-gLqByBXXK77JvG2T74
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Exploratory data analysis
 

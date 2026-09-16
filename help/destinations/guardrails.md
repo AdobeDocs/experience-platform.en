@@ -6,6 +6,28 @@ product: experience platform
 type: Documentation
 description: Learn more about the data activation default usage and rate limits.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
+TQID: https://experienceleague.adobe.com/1MtJnkHPrFEHtlYHIKZL1rbj6SfsHsUJuqSwn1TovcA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # Guardrails for data activation
 
@@ -31,7 +53,6 @@ There are two types of default limits within this document:
 | **System-enforced guardrails (Hard limit)** | System-enforced guardrails are enforced by the [!DNL Real-Time CDP] UI or API. These are limits that you cannot exceed as the UI and API will block you from doing so or will return an error.|
 
 {style="table-layout:auto"}
-
 
 ## Activation limits {#activation-limits}
 
@@ -71,7 +92,7 @@ The guardrails below apply to activation through [batch (file-based) destination
 |Activation frequency | One daily full export or more frequent incremental exports every 3, 6, 8, or 12 hours. | System-enforced guardrail| Read the [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) documentation sections for more information about the frequency increments for batch exports.|
 |Maximum number of audiences that can pe exported at a given hour | 100 | Performance guardrail | The recommendation is to add a maximum of 100 audiences to batch destination instances. |
 |Maximum number of rows (records) per file to activate | 5 million | System-enforced guardrail| Adobe Experience Platform automatically splits the exported files at 5 million records (rows) per file. Each row represents one profile. Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`. For more information, read the [scheduling section](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) of the activate batch destinations tutorial.|
-|Maximum number of external audiences (for example: FAC, custom upload, Audience Composition) that can be activated in a destination instance | 20 | System-enforced guardrail| When activating external audiences (e.g. [Federated Audience Composition](/help/segmentation/ui/audience-portal.md#fac), [custom upload](/help/segmentation/ui/audience-portal.md#import-audience), [Audience Composition](/help/segmentation/ui/audience-portal.md#audience-composition)) to batch file-based destinations, there is a limit of 20 such audiences that you can activate in a destination instance. See [Audience types and customization](/help/segmentation/ui/audience-portal.md#customize) for more on these audience types. Read more about the workflow to [activate external audiences to batch file-based destinations](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences).|
+|Maximum number of external audiences (for example: FAC, custom upload, Audience Composition) that can be activated in a destination instance | 100 | System-enforced guardrail| When activating external audiences (e.g. [Federated Audience Composition](/help/segmentation/ui/audience-portal.md#fac), [custom upload](/help/segmentation/ui/audience-portal.md#import-audience), [Audience Composition](/help/segmentation/ui/audience-portal.md#audience-composition)) to batch file-based destinations, there is a limit of 100 such audiences that you can activate in a destination instance. See [Audience types and customization](/help/segmentation/ui/audience-portal.md#customize) for more on these audience types. Read more about the workflow to [activate external audiences to batch file-based destinations](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences).|
 
 {style="table-layout:auto"}
 
@@ -100,16 +121,6 @@ The guardrails below apply to activation through [edge personalization destinati
 ### Dataset exports {#dataset-exports}
 
 Dataset exports are currently supported in a **[!UICONTROL First Full and then Incremental]** [pattern](/help/destinations/ui/export-datasets.md#scheduling). The guardrails described in this section *apply to the first full export* that occurs after a dataset export workflow is set up.
-
-<!--
-
-| Guardrail | Limit | Limit Type | Description |
-| --- | --- | --- | --- |
-| Size of exported datasets | 5 billion records | Soft | The limit described here for dataset exports is a *soft guardrail*. For example, while the user interface will not block you from exporting datasets larger than 5 billion records, the behavior is unpredictable and exports might either fail or have very long export latency. |
-
-{style="table-layout:auto"}
-
--->
 
 #### Dataset Types {#dataset-types}
 
@@ -142,27 +153,7 @@ For scheduled, or recurring dataset exports, the guardrails below are identical 
 
 {style="table-layout:auto"}
 
-<!--
-
-#### Ad-hoc dataset exports
-
-Exporting datasets in an-hoc manner is currently supported via API only. For ad-hoc dataset exports, you must use the backfill parameter in the API to limit the timeframe of exported data. 
-
-The guardrails below are the same whether you are exporting parquet of JSON files ad-hoc. 
-
-**Parquet and JSON output**
-
-|Dataset type | Backfill parameter provided | Guardrail | Guardrail type | Description |
-|---------|---------|-----------|-----------|------------|
-| Datasets based on the **XDM Experience Events schema** | <p><ul><li>Both start and end date provided in `backfill` parameter in API call</li><li>Incomplete `backfill` parameter provided in API call</li></ul></p> | <p><ul><li>Last 30 days</li><li>Last 365 days</li></ul></p> | Hard | <p><ul><li>The export fails if the `startDate - endDate` interval is over 30 days</li><li>Either the `startDate` or `endDate` are missing or incorrectly formatted in the API call. Expected format: `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`</li></ul></p> |
-| Datasets based on the **XDM Individual Profile schema** | - | Ten billion records across all files exported in a destination instance | Hard | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
-
-{style="table-layout:auto"}
-
--->
-
 Read more about [exporting datasets](/help/destinations/ui/export-datasets.md).
-
 
 ### Destination SDK guardrails {#destination-sdk-guardrails}
 

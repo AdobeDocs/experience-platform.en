@@ -2,6 +2,21 @@
 title: Identity Graph Viewer
 description: An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
+TQID: https://experienceleague.adobe.com/Ff1Vhejys1zP3BSlICUfDC0exPT1EG3kGuZ26pm8TMk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
+    internal-label: Data quality
 ---
 # Identity graph viewer
 

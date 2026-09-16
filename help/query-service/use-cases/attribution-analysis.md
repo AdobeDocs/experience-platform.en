@@ -2,6 +2,20 @@
 title: Attribution Analysis
 description: This document explains how you can use Query Service to create a marketing effectiveness measurement technique based on the marketing attribution model of first and last touch.
 exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
+TQID: https://experienceleague.adobe.com/-vZzgJOGcRztjyImp-CkBw2c-Fnhfg4tWYLKq-XsnQ8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
 ---
 # Attribution analysis
 

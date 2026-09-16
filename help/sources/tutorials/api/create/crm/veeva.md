@@ -5,12 +5,22 @@ title: Create a Veeva CRM Base Connection Using the Flow Service API
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Veeva CRM using the Flow Service API.
 exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
+TQID: https://experienceleague.adobe.com/ukiuIttbb5hH5qebywZo8cUoNBsnaTWbvfQLjfHEvVE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # Create a [!DNL Veeva CRM] base connection using the [!DNL Flow Service] API
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL Veeva CRM] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial walks you through the steps to create a base connection for [!DNL Veeva CRM] using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting Started
 
@@ -112,3 +122,5 @@ By following this tutorial, you have created a [!DNL Veeva CRM] base connection 
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
 * [Create a dataflow to bring CRM data to Experience Platform using the [!DNL Flow Service] API](../../collect/crm.md)
+
+

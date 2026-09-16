@@ -2,6 +2,21 @@
 title: Map a CSV File to an XDM Schema using AI-Generated Recommendations
 description: This tutorial covers how to map a CSV file to an XDM schema using AI-generated recommendations.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
+TQID: https://experienceleague.adobe.com/LrWtcEQT-v7l83D4AEIIq-3brvdx9RBRQqKCb5mPeq0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Map a CSV file to an XDM schema using AI-generated recommendations
 

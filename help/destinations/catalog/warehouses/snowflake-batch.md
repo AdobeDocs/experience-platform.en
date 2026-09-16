@@ -1,15 +1,62 @@
 ---
 title: Snowflake Batch connection
 description: Create a live Snowflake data share to receive daily audience updates directly as shared tables into your account.
-last-substantial-update: 2026-02-17
+last-substantial-update: 2026-05-29
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
+TQID: https://experienceleague.adobe.com/9rHuZjQpD9FAjKdktXxBEUjhc5ZGeKlqFFl2K-Y-9HE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Snowflake Batch connection {#snowflake-destination}
 
 >[!AVAILABILITY]
 >
 > This destination is available only to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
+
+If you arrived to this page from [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), see [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
+
+## Supported [!DNL Adobe CX Enterprise] applications {#supported-applications}
+
+This destination is available in the following [!DNL Adobe CX Enterprise] applications:
+
+* [[!DNL Real-Time CDP]](../../../rtcdp/home.md)
+* [[!DNL Real-Time CDP Collaboration]](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)
+
+In [!DNL Real-Time CDP Collaboration], you can [source audiences](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/setup/source-audiences/onboard-audiences) from [!DNL Adobe Experience Platform] or other cloud sources. Audiences in [!DNL Real-Time CDP Collaboration] are made up of [match keys](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections#match-keys). You can use these audiences within a Collaboration for data collaboration or paid media activities.
 
 ## Overview {#overview}
 
@@ -81,10 +128,6 @@ Before configuring your Snowflake connection, make sure you meet the following p
 
 Read the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) for more information on the necessary permissions.
 
->[!IMPORTANT]
->
->This destination does not support Snowflake accounts that are behind a firewall or that use [[!DNL Azure Private Link]](https://docs.snowflake.com/en/user-guide/privatelink-azure).
-
 ## Supported audiences {#supported-audiences}
 
 This section describes which types of audiences you can export to this destination. The two tables below indicate which audiences this connector supports, by _audience origin_ and _profile types included in the audience_:
@@ -139,6 +182,11 @@ To authenticate to the destination, select **[!UICONTROL Connect to destination]
 >title="Enter your Snowflake Data Sharing Account Identifier"
 >abstract="If your account is linked to an organization use this format: `OrganizationName.AccountName`<br><br> If your account is not linked to an organization use this format:`AccountName`"
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_snowflake_batch_privatelink"
+>title="Private Link Enabled"
+>abstract="Select True if your Snowflake account has Private Link enabled and public access to Snowflake service endpoints is disabled.<br>Selecting True on an account that does not use Private Link bypasses account validation and can cause connection or data sharing failures. If your account requires Private Link and you select False, Adobe cannot resolve your account or share audience data."
+
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
 ![Sample screenshot showing how to fill in details for your destination](../../assets/catalog/cloud-storage/snowflake-batch/configure-destination-details.png)
@@ -148,6 +196,12 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Snowflake Account ID]**: Your [Snowflake Data Sharing Account Identifier](https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name-data-sharing). Use the following format depending on whether your account is linked to an organization:
     * If your account is linked to an organization: enter the organization name and account name separated by a **period** (`.`). For example, if your organization name is ACME and your account name is AsiaRegion, enter `ACME.AsiaRegion`.
     * If your account is not linked to an organization: `AccountName`.
+* **[!UICONTROL Private Link Enabled]**: Select **[!UICONTROL True]** if your [!DNL Snowflake] account has Private Link enabled and public access to [!DNL Snowflake] service endpoints is disabled. If your account uses privatelink-only access and you select **[!UICONTROL False]**, [!DNL Adobe] cannot resolve your [!DNL Snowflake] account or share audience data. See the [!DNL Snowflake] documentation on [enforcement of privatelink-only access](https://docs.snowflake.com/en/user-guide/security-disable-public-access-privatelink).
+
+  >[!IMPORTANT]
+  >
+  >Select **[!UICONTROL True]** for **[!UICONTROL Private Link Enabled]** only if your [!DNL Snowflake] account enforces privatelink-only access. Selecting **[!UICONTROL True]** on an account that does not use Private Link bypasses account validation and can cause connection or data sharing failures. See the [!DNL Snowflake] documentation on [enforcement of privatelink-only access](https://docs.snowflake.com/en/user-guide/security-disable-public-access-privatelink).
+
 * **[!UICONTROL Snowflake Region]**: Select the region where your Snowflake instance is provisioned. See the Snowflake [documentation](https://docs.snowflake.com/en/user-guide/intro-regions) for detailed information on supported cloud regions.
 * **[!UICONTROL Account acknowledgment]**: After entering your **[!UICONTROL Snowflake Account ID]**, select **[!UICONTROL Yes]** in this dropdown to confirm that your **[!UICONTROL Snowflake Account ID]** is correct and it belongs to you.
 
@@ -167,12 +221,20 @@ When you are finished providing details for your destination connection, select 
 
 ## Activate audiences to this destination {#activate}
 
+You can activate audiences to this destination from [!DNL Real-Time CDP] or from a [!DNL Real-Time CDP Collaboration] project.
+
+### Activate audiences from [!DNL Real-Time CDP] {#activate-rtcdp}
+
 >[!IMPORTANT]
 >
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
+
+### Activate audiences from [!DNL Real-Time CDP Collaboration] {#activate-collaboration}
+
+For instructions on activating audiences to this destination from a [!DNL Real-Time CDP Collaboration] project, see [Configure and manage cloud storage destinations in [!DNL Real-Time CDP Collaboration]](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/manage-destinations).
 
 ### Map attributes {#map}
 

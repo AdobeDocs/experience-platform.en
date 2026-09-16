@@ -3,13 +3,22 @@ keywords: Experience Platform;home;popular topics;streaming connection;create st
 title: Create an HTTP API Streaming Connection Using The Flow Service API
 description: This tutorial provides steps on how to create a streaming connection using the HTTP API source for both raw and XDM data using the Flow Service API
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
+TQID: https://experienceleague.adobe.com/ZbdJ2H8j5XRcJTtz0WOyX-SWsd7u-d98XrgsIZ0bJhM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
-
 # Create an HTTP API streaming connection using the [!DNL Flow Service] API
 
 Flow Service is used to collect and centralize customer data from different sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) to walk you through the steps to create a streaming connection using the [!DNL Flow Service] API.
+This tutorial uses the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service) to walk you through the steps to create a streaming connection using the [!DNL Flow Service] API.
 
 ## Getting started
 
@@ -328,7 +337,7 @@ A successful response returns HTTP status 201 with detailed of the newly created
 
 In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../../xdm/api/schemas.md).
 
@@ -716,4 +725,6 @@ If the `Authorization` header is not present, or an invalid/expired access token
     }
 }
 ```
+
+
 

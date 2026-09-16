@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Create a dataflow for a OneTrust Integration source using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to OneTrust Integration using the Flow Service API.
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
+TQID: https://experienceleague.adobe.com/tAfeK4m6cuZkjewjWaBc3qHu9B7tAxtOe7nK0xU-FZ0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a dataflow for a [!DNL OneTrust Integration] source using the [!DNL Flow Service] API
 
@@ -11,7 +18,7 @@ exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
 >
 >The [!DNL OneTrust Integration] source only supports ingestion of consent and preferences data and not cookies.
 
-The following tutorial walks you through the steps to create a source connection and a dataflow to bring both historic and scheduled consent data from [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a source connection and a dataflow to bring both historic and scheduled consent data from [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Prerequisites
 
@@ -29,7 +36,7 @@ The access token does not refresh automatically after it expires because system-
 >
 >The [!DNL OneTrust Integration] API specifications are being shared with Adobe for data ingestion.
 
-The following tutorial walks you through the steps to create a [!DNL OneTrust Integration] source connection and create a dataflow to bring [!DNL OneTrust Integration] data to Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a [!DNL OneTrust Integration] source connection and create a dataflow to bring [!DNL OneTrust Integration] data to Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ### Create a base connection {#base-connection}
 
@@ -689,7 +696,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 ### Create a mapping {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) with data mappings defined within the request payload.
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep) with data mappings defined within the request payload.
 
 **API format**
 
@@ -890,3 +897,5 @@ Delete your dataflow by performing a DELETE request to the [!DNL Flow Service] A
 ### Delete your account
 
 Delete your account by performing a DELETE request to the [!DNL Flow Service] API while providing the base connection ID of the account you want to delete. For complete API examples, read the guide on [deleting your source account using the API](../../delete.md).
+
+

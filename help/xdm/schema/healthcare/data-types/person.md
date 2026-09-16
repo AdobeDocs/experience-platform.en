@@ -4,6 +4,13 @@ description: Learn about the Person Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: a19823f2-25d0-45cb-86f4-7816041b27f9
+TQID: https://experienceleague.adobe.com/wcxyQEbKoCu5uM2FoR-adYKojGg5bG-R83IkMUJA4Os
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Person] data type
 

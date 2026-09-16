@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Phone Number Data Type
 description: Learn about the Phone Number XDM data type.
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
+TQID: https://experienceleague.adobe.com/6HBKe4hxVBLAELodREhTOKUE0zTf0BIlwL7Va9x7WCg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Phone number] data type
 

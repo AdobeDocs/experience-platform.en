@@ -5,6 +5,18 @@ title: Query Service API Guide
 description: The Query Service API allows developers to query their Adobe Experience Platform data using standard SQL. Follow this guide to learn how to perform key operations using the API.
 role: Developer
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
+TQID: https://experienceleague.adobe.com/DFpRizSbGg57vcneMvN-dgiuWVOanbofBLHakEUjAG4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # [!DNL Query Service] API guide
 
@@ -26,7 +38,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -55,3 +67,5 @@ Now that you understand what headers to use, you are ready to begin making calls
 ## Next steps
 
 Now that you have learned how to make calls using the [!DNL Query Service] API, you can create your own non-interactive queries. For more information on how to create queries, please read the [SQL reference guide](../sql/overview.md).
+
+

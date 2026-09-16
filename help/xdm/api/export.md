@@ -2,6 +2,13 @@
 title: Export API Endpoint
 description: The /export endpoint in the Schema Registry API allows you to share XDM resources between sandboxes.
 exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
+TQID: https://experienceleague.adobe.com/ctz7CjWQdaNJbTjxOCxpYS6KCO2vJJCV9Qz3AKI9cFI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Export endpoint
 
@@ -9,7 +16,7 @@ All resources within the [!DNL Schema Library] are contained in a specific sandb
 
 ## Getting started
 
-The `/rpc/export` endpoint is part of the [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The `/rpc/export` endpoint is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 The `/rpc/export` endpoint is part of the remote procedure calls (RPCs) that are supported by the [!DNL Schema Registry]. Unlike other endpoints in the [!DNL Schema Registry] API, RPC endpoints do not require additional headers like `Accept` or `Content-Type`, and do not use a `CONTAINER_ID`. Instead, they must use the `/rpc` namespace, as demonstrated in the API calls below.
 
@@ -192,3 +199,5 @@ Note that all instances of the resource's tenant ID are replaced with `<XDM_TENA
 After generating the export payload from the CSV file, you can send that payload to the `/rpc/import` endpoint to generate the schema.
 
 See the [import endpoint guide](./import.md) for details on how to generate schemas from export payloads.
+
+

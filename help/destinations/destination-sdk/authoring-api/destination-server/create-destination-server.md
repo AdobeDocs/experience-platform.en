@@ -2,6 +2,21 @@
 description: This page exemplifies the API call used to create a destination server through Adobe Experience Platform Destination SDK.
 title: Create a destination server configuration
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
+TQID: https://experienceleague.adobe.com/PlaM8hfKOc6uZ31YigUb-QWhrQBd22Jw4zS7fQpOgic
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Create a destination server configuration
 
@@ -18,11 +33,11 @@ For a detailed description of the capabilities that you can configure through th
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Getting started with destination server API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Create a destination server configuration {#create}
 
@@ -79,7 +94,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       "httpMethod":"POST",
       "requestBody":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"{ \"attributes\": [ {% for ns in [\"external_id\", \"yourdestination_id\"] %} {% if input.profile.identityMap[ns] is not empty and first_namespace_encountered %} , {% endif %} {% set first_namespace_encountered = true %} {% for identity in input.profile.identityMap[ns]%} { \"{{ ns }}\": \"{{ identity.id }}\" {% if input.profile.segmentMembership.ups is not empty %} , \"AEPSegments\": { \"add\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"realized\" or segment.value.status == \"existing\" %} {% if added_segment_found %} , {% endif %} {% set added_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ], \"remove\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"exited\" %} {% if removed_segment_found %} , {% endif %} {% set removed_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ] } {% set removed_segment_found = false %} {% set added_segment_found = false %} {% endif %} {% if input.profile.attributes is not empty %} , {% endif %} {% for attribute in input.profile.attributes %} \"{{ attribute.key }}\": {% if attribute.value is empty %} null {% else %} \"{{ attribute.value.value }}\" {% endif %} {% if not loop.last%} , {% endif %} {% endfor %} } {% if not loop.last %} , {% endif %} {% endfor %} {% endfor %} ] }"
+         "value":"{ \"attributes\": [ {% for ns in [\"external_id\", \"yourdestination_id\"] %} {% if input.profile.identityMap[ns] is not empty and first_namespace_encountered %} , {% endif %} {% set first_namespace_encountered = true %} {% for identity in input.profile.identityMap[ns]%} { \"{{ ns }}\": \"{{ identity.id }}\" {% if hasSegments(input.profile.segmentMembership) %} , \"AEPSegments\": { \"add\": [ {% for namespace in input.profile.segmentMembership %} {% for segment in input.profile.segmentMembership[namespace.key] %} {% if (segment.value.status == \"realized\" or segment.value.status == \"existing\") and destination.namespaceSegmentAliases[namespace.key][segment.key] is defined %} {% if added_segment_found %} , {% endif %} {% set added_segment_found = true %} \"{{ destination.namespaceSegmentAliases[namespace.key][segment.key] }}\" {% endif %} {% endfor %} {% endfor %} ], \"remove\": [ {% for namespace in input.profile.segmentMembership %} {% for segment in input.profile.segmentMembership[namespace.key] %} {% if segment.value.status == \"exited\" and destination.namespaceSegmentAliases[namespace.key][segment.key] is defined %} {% if removed_segment_found %} , {% endif %} {% set removed_segment_found = true %} \"{{ destination.namespaceSegmentAliases[namespace.key][segment.key] }}\" {% endif %} {% endfor %} {% endfor %} ] } {% set removed_segment_found = false %} {% set added_segment_found = false %} {% endif %} {% if input.profile.attributes is not empty %} , {% endif %} {% for attribute in input.profile.attributes %} \"{{ attribute.key }}\": {% if attribute.value is empty %} null {% else %} \"{{ attribute.value.value }}\" {% endif %} {% if not loop.last%} , {% endif %} {% endfor %} } {% if not loop.last %} , {% endif %} {% endfor %} {% endfor %} ] }"
       },
       "contentType":"application/json"
    }

@@ -5,6 +5,7 @@ breadcrumb-title: Access Control Guide
 user-guide-description: Use product profiles in Adobe Admin Console to manage user permissions. Learn how to assign users to products and sandboxes.
 feature: Access Control
 role: Admin
+nudge: true
 ---
 
 # Access control {#access-control}
@@ -43,5 +44,5 @@ role: Admin
   * [List names of permissions and resource types](api/permissions-and-resource-types.md)
   * [View effective policies](api/effective-policies.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
-* [API reference](https://www.adobe.io/experience-platform-apis/references/access-control/)
+* [API reference](https://developer.adobe.com/experience-platform-apis/references/access-control)
 * [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

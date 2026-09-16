@@ -2,6 +2,19 @@
 title: Connect Your PathFactory Account To Experience Platform Through the UI
 description: Learn how to connect your PathFactory account to Experience Platform through the UI.
 exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
+TQID: https://experienceleague.adobe.com/VZZcmtNtWuQKfjdbnsXqkjbFSLYr0MCsZSe1LxX6hu8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Connect your [!DNL PathFactory] account to Experience Platform through the UI
 

@@ -4,6 +4,13 @@ description: Learn about the Money Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 8b910a45-01d5-404b-9710-a2fad9885452
+TQID: https://experienceleague.adobe.com/O7o4ZZ6hTKN7xtOwkMLXiYrsqoO-X1-iFdefmPXL3rA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Money] data type
 

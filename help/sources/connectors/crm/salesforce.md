@@ -2,6 +2,26 @@
 title: Salesforce Source Connector Overview
 description: Learn how to connect Salesforce to Adobe Experience Platform using APIs or the user interface.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
+TQID: https://experienceleague.adobe.com/WLjE4nEG-EVBlqpx4VBmvHed6uprWNmhZJuGqFZ3I0g
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+    internal-label: B2B
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # [!DNL Salesforce]
 
@@ -9,9 +29,19 @@ exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
 >
 >You can now use the [!DNL Salesforce] source when running Adobe Experience Platform on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
 
+<!-- Deprecation note for PLAT-302697. Do not remove without confirming with the Sources PM. -->
+
+>[!WARNING]
+>
+>Basic authentication for the [!DNL Salesforce] source is deprecated. You must use OAuth 2 Client Credential authentication to continue ingesting data from your [!DNL Salesforce] account to Experience Platform.
+
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from a third-party CRM system. Support for CRM providers include [!DNL Salesforce].
+
+>[!IMPORTANT]
+>
+>The [!DNL Salesforce] source connector detects only soft-deleted records. It does not support hard deletes. When you hard delete a record in [!DNL Salesforce], the record is permanently removed and [!DNL Salesforce] does not expose it through its APIs. Experience Platform cannot detect or propagate hard-deleted records as a result. To ensure deletions reach Experience Platform, delete records in [!DNL Salesforce] using soft delete, which moves them to the [!DNL Recycle Bin] and keeps them retrievable through the [!DNL Salesforce] API.
 
 ## Set up your [!DNL Salesforce] source for Experience Platform on Azure {#azure}
 
@@ -280,6 +310,21 @@ To connect your [!DNL Salesforce] account to Experience Platform in an AWS regio
 - A [!DNL Salesforce] account with API access.
 - A [!DNL Salesforce Connected App] that you can then use to enable JWT_BEARER OAuth flow.
 - The necessary permissions in [!DNL Salesforce] to access data.
+
+### Connect to a Production or Sandbox org {#environment-type}
+
+The [!DNL Salesforce] source on AWS supports both Production and Sandbox (non-Production) orgs. Use the `environmentType` parameter to specify which type of org Experience Platform authenticates against.
+
+| Value | Description |
+| --- | --- |
+| `PRODUCTION` | Connects to a Production or Developer Edition org. This is the default value when `environmentType` is not specified. |
+| `SANDBOX` | Connects to a Sandbox org. |
+
+The instance URL format for a Sandbox org differs from a Production org. Use the following format when you provide the `instanceUrl` value for a Sandbox org: `https://[domain]--[sandbox-name].sandbox.my.salesforce.com`.
+
+>[!NOTE]
+>
+>Scratch orgs and orgs that enforce a strict My Domain login policy are not currently supported.
 
 ### IP address allowlist for connection on AWS
 

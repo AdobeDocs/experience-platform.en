@@ -3,6 +3,27 @@ keywords: tag extensions;tag extension;launch destinations; platform tag extensi
 title: Tag Extensions in Adobe Experience Platform
 description: Adobe Experience Platform provides the next generation of tag-management capabilities from Adobe. Experience Platform gives you a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
+TQID: https://experienceleague.adobe.com/tFy2sNkSxq88Rga5OlFMJmvYYQilW2ZFtnGrD6wcfFc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
 ---
 # Tag extensions in [!DNL Adobe Experience Platform]
 
@@ -24,18 +45,6 @@ To find the extensions in the Experience Platform interface, browse to **[!UICON
 A [tag extension](../../../tags/home.md#extensions) is a package of code that enhances the functionality of a website or mobile app. This could include sending raw event data to a destination like [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md) but they can also serve other functions.
 
 It is important to differentiate between tag and event forwarding extensions. The extensions surfaced in the Experience Platform destinations user interface are *tag extensions*. Refer to the overview on event forwarding for more information on the [differences between tags and event forwarding](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
-
-
-
-<!--
-
-Extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](../personalization/gainsight.md) or the [Confirmit Voice of the Customer extension](../voice/confirmit-digital-feedback.md).
-
-**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export audiences and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
-
-![Tag extensions compared to other destinations](../../assets/common/launch-and-other-destinations.png)
-
--->
 
 ## Benefits of using tag extensions {#extensions-benefits}
 

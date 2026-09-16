@@ -5,6 +5,7 @@ user-guide-description: Activate audiences from Audience Manager to social and a
 description: This document lists the table of contents for Adobe Audience Manager Expanded Activation
 feature: Destinations
 role: Admin,User
+nudge: true
 ---
 
 # Audience Manager Expanded Activation {#expanded-activation}

@@ -1,14 +1,16 @@
 ---
 title: Braze Currents Source Overview
 description: Learn how to stream data from Braze Currents to Experience Platform.
-badge: Beta
 exl-id: dd304e10-26e5-4586-ab39-8fe3294b19c9
+TQID: https://experienceleague.adobe.com/eHgj1J2Q5SlB6w7GuOu35AJ00fo6341zMRCmU2yW9u8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL Braze Currents]
-
->[!NOTE]
->
->The [!DNL Braze Currents] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 

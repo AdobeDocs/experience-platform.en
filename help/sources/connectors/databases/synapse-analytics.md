@@ -2,8 +2,15 @@
 title: Azure Synapse Analytics Source Connector Overview
 description: Learn how to connect Azure Synapse Analytics to Adobe Experience Platform using APIs or the user interface.
 badgeUltimate: label="Ultimate" type="Positive"
-last-substantial-update: 2025-06-17
+last-substantial-update: 2025-06-17T00:00:00.000Z
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
+TQID: https://experienceleague.adobe.com/E--oG0sLXIUHRzwsxUMCpuK9wVA4ORBQYfNHJzsMkQk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL Azure Synapse Analytics]
 

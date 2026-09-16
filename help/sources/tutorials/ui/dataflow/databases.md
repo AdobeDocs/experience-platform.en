@@ -5,6 +5,19 @@ title: Create a Dataflow Using a Database Source in the UI
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Experience Platform dataset. This tutorial provides steps on how to create a dataflow for a database source using Experience Platform UI.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
+TQID: https://experienceleague.adobe.com/SL14XetVwgNU204PXAvdOy6G-Mmut47Jqg-SvIdBm3Q
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a dataflow using a database source in the UI
 

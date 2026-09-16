@@ -3,6 +3,58 @@ keywords: destinations; questions; frequently asked questions; faq; destinations
 title: Frequently asked questions
 description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
+TQID: https://experienceleague.adobe.com/vdkLsZ5DNVWagPQZo2Z-XJm9ovbtDPFRtGb0Yw0M9CA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+    internal-label: Troubleshooting
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: e2caa907-399e-441d-a026-6f449b9a4286
+    internal-label: Data lifecycle
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Frequently asked questions {#faq}
 
@@ -51,33 +103,6 @@ To ensure all the profiles are sent to your destination, you must create a new a
 No, there is no dependency between the Experience Platform destination and the customer instance of the target system. On the receiving side, the only indication that the target system would see is that it stopped receiving that audience data.
 
 +++
-
-<!--
-## [!DNL Experience Cloud Audiences] {#eca-faq}
-
-### What are the differences between the Experience Cloud Audiences and Adobe Target destinations?
-
-+++Answer
-
-See the table below for a feature comparison between the Experience Cloud Audiences and Adobe Target destinations.
-
-||Experience Cloud Audiences|Adobe Target|
-|---|---|---|
-| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, [!DNL Adobe Target], [!DNL Adobe Analytics], Adobe Advertising, Marketo, [!DNL Adobe Campaign] | Supports audience activation only to [!DNL Adobe Target] |
-| **Supports audience activation** | ✓ | ✓ |
-| **Supports attribute activation** | X | ✓ |
-| **Latency** | Profiles begin activating in 6 hours. Full population is visible in 48 hours​. |Depends on implementation​ type. <ul><li>Web SDK enables same-page/next-page​ personalization.</li><li>AT.js enables next-session personalization.</li></ul> |
-| **DULE support** | ✓ | ✓ |
-| **Marketing actions support** | ✓ | ✓ |
-| **Supported IDs** | [!DNL ECID], [!DNL GAID], [!DNL IDFA], [!DNL email_lc_sha256] | Any ID type |
-| **Sandbox support** | One sandbox | Multiple sandboxes |
-| **Consent support** | X | Yes. Requires Privacy & Security Shield. |
-| **Edge segmentation support** | Supports activation of edge audiences. Does not support edge segmentation. | Supports edge segmentation and activation of edge audiences. |
-| **Supported audiences** | All types of audiences  | Edge merge policy required for activation.|
-
-+++
-
--->
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
@@ -210,12 +235,6 @@ Yes, same-page and next-page personalization use cases support a maximum of 30 a
 Currently, only static, single-value attributes are supported, such as `person.name.firstName`. Array attributes are currently not supported.
 +++
 
-<!-- 
-**Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
-
-Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation). 
--->
-
 ### After I create an audience in Experience Platform, how long will it take for that audience to be available for edge segmentation use cases? {#edge-segmentation-availability}
 
 +++Answer
@@ -268,9 +287,6 @@ For use cases where consent policy management needs to be applied at scale, cust
 This service includes customer-managed keys and elevated thresholds to manage the customer data lifecycle.
 
 The [!DNL Adobe Target] and [!DNL Custom Personalization] destinations are integrated with the [Experience Platform Data Usage Labels](../data-governance/labels/overview.md) and the [Consent Policy Enforcement Service](../data-governance/enforcement/overview.md). These features are available for all customers.
-
-
-
 
 +++
 

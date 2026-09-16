@@ -4,6 +4,20 @@ solution: Experience Platform
 title: Adobe-Defined SQL Functions in Query Service
 description: This document provides information for Adobe-defined functions available in Adobe Experience Platform Query Service.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
+TQID: https://experienceleague.adobe.com/8mQhVGkLhusCqnDaNdxty8E3brC45RyGE0vYLjY4Os0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Adobe-defined SQL functions in Query Service
 

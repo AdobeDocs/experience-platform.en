@@ -2,6 +2,18 @@
 description: Learn how to configure file formatting options for file-based destinations built with Adobe Experience Platform Destination SDK, via the `/destination-servers` endpoint.
 title: File formatting configuration
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
+TQID: https://experienceleague.adobe.com/VJ-jI3-0aBbZ96AvHuGMHsS6VuvrZmniwefj9gplnoI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # File formatting configuration
 
@@ -9,8 +21,8 @@ Destination SDK supports a flexible set of features which you can configure acco
 
 When you create file-based destinations through Destination SDK, you can define how the exported CSV files should be formatted. You can customize many formatting options, such as, but not limited to:
 
-* Whether the CSV file should include a header;
-* What character to use for quoting values;
+* Whether the CSV file should include a header.
+* What character to use for quoting values.
 * What empty values should look like.
 
 Depending on your destination configuration, users will see certain options in the UI when connecting to a file-based destination. You can see what these options look like in the [file formatting options for file-based destinations](../../../ui/batch-destinations-file-formatting-options.md) documentation.
@@ -18,7 +30,7 @@ Depending on your destination configuration, users will see certain options in t
 
 File formatting settings are part of the destination server configuration for file-based destinations. 
 
-To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or seethe guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 You can configure the file formatting options via the `/authoring/destination-servers` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
 
@@ -29,7 +41,7 @@ This page describes all the supported file formatting settings for exported `CSV
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Supported integration types {#supported-integration-types}
 
@@ -46,7 +58,7 @@ You can modify several properties of the exported files to match the requirement
 
 >[!NOTE]
 >
->CSV options are only supported when exporting CSV files. The `fileConfigurations` section is not mandatory when setting up a new destination server. If you don't pass any values in the API call for the CSV options, the default ones from the [reference table further below](#file-formatting-reference-and-example) will be used.
+>CSV options are only supported when exporting CSV files. The `fileConfigurations` section is not mandatory when setting up a new destination server. If you do not pass any values in the API call for the CSV options, the default ones from the [reference table further below](#file-formatting-reference-and-example) will be used.
 
 
 ## CSV options where users cannot select configuration options {#file-configuration-templating-none}

@@ -4,6 +4,18 @@ solution: Experience Platform
 title: Partial Batch Ingestion Overview
 description: This document provides a tutorial for managing partial batch ingestion.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
+TQID: https://experienceleague.adobe.com/6-IqkSaGjRlvaIB5Ju1b7lmpGTSlRqBn8-SRQrpS23M
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Partial batch ingestion
 
@@ -26,7 +38,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -220,3 +232,5 @@ A successful response returns your dataflow details, confirming that partial ing
 This tutorial covered how to create or modify a dataset to enable partial batch ingestion. For more information on batch ingestion, please read the [batch ingestion developer guide](./api-overview.md).
 
 For information on monitoring partial ingestion errors, please read the [batch ingestion error diagnostics guide](../quality/error-diagnostics.md).
+
+

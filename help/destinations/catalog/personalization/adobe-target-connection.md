@@ -3,6 +3,64 @@ keywords: target personalization; destination; experience platform target destin
 title: Adobe Target connection
 description: Adobe Target is an application that provides real-time, AI-powered personalization and experimentation capabilities in all inbound customer interactions across websites, mobile apps, and more.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
+TQID: https://experienceleague.adobe.com/-fU-zvoxIhZ2PBnGpr5j7Kh0SOWRIN-7Hx1ESH3juuE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+    internal-label: Administration
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+    internal-label: Access control
+  - id: a7150a74-b8a9-4042-b066-147c5f0ca505
+    internal-label: Alerts
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: Datastreams
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+    internal-label: Roles
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+    internal-label: Sandboxes
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+    internal-label: Properties
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 # [!DNL Adobe Target] connection {#adobe-target-connection}
 
@@ -10,6 +68,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 
 |Release month|Update type|Description|
 |---|---|---|
+|August 2026| Expanded eligibility | The **[!UICONTROL Adobe Target]** destination is now available to organizations with [!DNL Adobe Journey Optimizer], in addition to organizations with [!DNL Real-Time CDP]. No customer action is required for eligible organizations to see the destination card in the catalog. See [Entitlement](#entitlement) for details. |
 |April 2024| Functionality and documentation update | When connecting to the Target destination and using a datastream, you now *do not need* to necessarily enable the datastream for edge segmentation. This means that the Target destination will work with batch and streaming audiences, though the use cases that you can accomplish differ. View the table in the [connection parameters](#parameters) section for more information. |
 |January 2024|Functionality and documentation update| You can now share audiences and profile attributes to the [!DNL Adobe Target] connection for the default production sandbox and other non-default sandboxes.  |
 |June 2023|Functionality and documentation update| As of June 2023, you can select the [!DNL Adobe Target] workspace that you want to share audiences to, when configuring a new [!DNL Adobe Target] destination connection. See the [connection parameters](#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) in [!DNL Adobe Target] for more information about workspaces.|
@@ -39,7 +98,20 @@ The table below displays the supported use cases for the Adobe Target destinatio
 
 ## Prerequisites {#prerequisites}
 
-### Datastream {#datastream}
+### Entitlement {#entitlement}
+
+To see and configure the **[!UICONTROL Adobe Target]** destination card in the destinations catalog, your organization must have one of the following entitlements:
+
+* [!DNL Adobe Real-Time CDP]
+* [!DNL Adobe Journey Optimizer]
+
+>[!IMPORTANT]
+>
+>Having access to this destination card does not mean that [!DNL Adobe Target] itself is provisioned for your organization. To complete setup, you also need [!DNL Adobe Target] and a Target-enabled datastream, meaning a datastream with the [!DNL Adobe Target] service enabled.
+>
+>If no datastream has [!DNL Adobe Target] configured as a service, no datastream is selectable when you configure the destination, other than the **[!UICONTROL None]** option. This option limits you to next-session personalization use cases. See [supported use cases based on implementation type](#supported-use-cases).
+
+### Datastream configuration {#datastream}
 
 When configuring the [!DNL Adobe Target] connection to [use a datastream](#parameters), you must have [Adobe Experience Platform Data Collection](/help/collection/home.md) implemented.
 

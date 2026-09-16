@@ -4,8 +4,20 @@ title: Add Data to Real-Time Customer Profile
 type: Tutorial
 description: This tutorial outlines the steps necessary to add data to Real-Time Customer Profile.
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
+TQID: https://experienceleague.adobe.com/XxbJb0VuQnnbB2mifj35Sw00Ya02jEZS69dUUDvZnzI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
-
 # Add data to [!DNL Real-Time Customer Profile]
 
 This tutorial outlines the steps necessary to add data to [!DNL Real-Time Customer Profile].

@@ -1,8 +1,21 @@
 ---
 title: MySQL Source Connector Overview
 description: Learn how to connect MySQL to Adobe Experience Platform using APIs or the user interface.
-last-substantial-update: 2025-05-20
+last-substantial-update: 2025-05-20T00:00:00.000Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
+TQID: https://experienceleague.adobe.com/X-O3gLjBhTMue8yWLdLOey-oqI-RGxwCdvkLT8imXEk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 ---
 # [!DNL MySQL]
 

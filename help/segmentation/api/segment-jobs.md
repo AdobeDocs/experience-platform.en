@@ -4,10 +4,27 @@ title: Segment Jobs API Endpoint
 description: The segment jobs endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage segment jobs for your organization.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
+TQID: https://experienceleague.adobe.com/aiV12LUaPOFR9WdyQRTd7bFUr5-lURoORMbAnG-uAoQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Segment jobs endpoint
 
-A segment job is an asynchronous process that creates an audience segment on demand. It references a [segment definition](./segment-definitions.md), as well as any [merge policies](../../profile/api/merge-policies.md) controlling how [!DNL Real-Time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.
+A segment job is an asynchronous process that creates an audience on demand. It references a [segment definition](./segment-definitions.md), as well as any [merge policies](../../profile/api/merge-policies.md) controlling how [!DNL Real-Time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment definition, such as any errors that may have occurred during processing and the ultimate size of your audience.
 
 This guide provides information to help you better understand segment jobs and includes sample API calls for performing basic actions using the API.
 
@@ -176,7 +193,7 @@ A successful response returns HTTP status 200 with a list of segment jobs for th
 | `metrics` | An object that contains diagnostic information about the segment job. |
 | `metrics.totalTime` | An object that contains information on the times the segmentation job started and ended, as well as the total time taken. |
 | `metrics.profileSegmentationTime` | An object that contains information on the times the segmentation evaluation started and ended, as well as the total time taken. |
-| `metrics.segmentProfileCounter` | The number of profiles qualified on a per segment basis. |
+| `metrics.segmentProfileCounter` | The number of profiles qualified on a per segment definition basis. |
 | `metrics.segmentedProfileByNamespaceCounter` | The number of profiles qualified for each identity namespace on a per segment definition basis. |
 | `metrics.segmentProfileByStatusCounter` | The count of profiles for each statuses. The following three statuses are supported: <ul><li>"realized" - The number of profiles that qualify for the segment definition.</li><li>"exited" - The number of profiles  that no longer exist in the segment definition.</li></ul>|
 | `metrics.totalProfilesByMergePolicy` | The total number of merged profiles on a per merge policy basis. |

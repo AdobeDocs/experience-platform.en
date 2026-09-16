@@ -3,6 +3,19 @@ title: Create an Amazon Kinesis  Source Connection in the UI
 description: Learn how to create an Amazon Kinesis source connection using the Adobe Experience Platform UI.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
+TQID: https://experienceleague.adobe.com/OJr0c1x1lgm1Mg8aQ-VEkN2--CDx1LMqJ4FAgyBNTco
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create an [!DNL Amazon Kinesis] source connection in the UI
 

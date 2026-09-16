@@ -1,9 +1,20 @@
 ---
-description: This page explains how to use the /authoring/testing/template/render endpoint to visualize how the templatized customer data fields defined in your destination configuration would look like.
+description: Learn how to use the template render endpoint to preview how your templatized customer data fields will look.
 title: Validate templatized customer fields
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
+TQID: https://experienceleague.adobe.com/MseDqPbeFaRQVcbAYBcbGi-JHdTYMvinQAGWUSEsF34
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
-
 # Validate templatized customer fields
 
 ## Overview {#overview}
@@ -14,7 +25,7 @@ The endpoint generates random values for your customer data fields, and returns 
 
 ## Getting started {#getting-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Prerequisites {#prerequisites}
 
@@ -33,7 +44,7 @@ Before you can use the `/template/render` endpoint, make sure you meet the follo
 POST /authoring/testing/template/render/destination
 ```
 
-To illustrate the behavior of this API endpoint, let's consider a file-based destination with the following customer data fields configuration:
+To illustrate the behavior of this API endpoint, consider a file-based destination with the following customer data fields configuration:
 
 ```json
 "fileBasedS3Destination":{

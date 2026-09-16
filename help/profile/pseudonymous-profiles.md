@@ -4,6 +4,22 @@ solution: Experience Platform
 title: Pseudonymous Profile data expiration
 description: This document provides general guidance on configuring data expiration for Pseudonymous Profiles within Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
+TQID: https://experienceleague.adobe.com/IDGOl6dFgAVG9jucar8oarbg6nokOlXZwnR0bAtddmU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
 ---
 # Pseudonymous profiles data expiration
 

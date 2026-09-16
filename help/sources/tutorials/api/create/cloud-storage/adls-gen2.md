@@ -5,12 +5,19 @@ title: Create an Azure Data Lake Storage Gen2 Base Connection Using the Flow Ser
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Azure Data Lake Storage Gen2 using the Flow Service API.
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
+TQID: https://experienceleague.adobe.com/wbYohKTMJzPJdAJ7g9Q5F3xcLF97WCwdtBR9wYZ-9oQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create an [!DNL Azure Data Lake Storage Gen2] base connection using the [!DNL Flow Service] API
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL Azure Data Lake Storage Gen2] (hereinafter referred to as "ADLS Gen2") using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial walks you through the steps to create a base connection for [!DNL Azure Data Lake Storage Gen2] (hereinafter referred to as "ADLS Gen2") using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
@@ -104,3 +111,5 @@ A successful response returns details of the newly created base connection, incl
 ## Next steps
 
 By following this tutorial, you have created an ADLS Gen2 connection using APIs and a unique ID was obtained as part of the response body. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md).
+
+

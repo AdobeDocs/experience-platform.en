@@ -5,6 +5,13 @@ title: Get Cluster History of an Identity
 description: Identities can move clusters over the course of various device graph runs. Identity Service provides visibility into the cluster associations of a given identity over time.
 role: Developer
 exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
+TQID: https://experienceleague.adobe.com/YSJJWD-MOV55DBRSNWdffPDBpiNKCBcJ4DgTl39-fyI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Get the cluster history of an identity
 

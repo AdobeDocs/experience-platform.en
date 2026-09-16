@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Manage Details and Additional Services for a Product Profile
 description: This document covers the necessary steps needed to manage details and additional services for a product profile in the Adobe Admin Console. You can configure a profile's details and access to additional services from within the Profile Settings menu.
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
+TQID: https://experienceleague.adobe.com/cd5Su-Bo-e4yNu4mhX-8MrD2Jw0dFLm-HYHJGb01MR4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Manage details and additional services for a product profile
 

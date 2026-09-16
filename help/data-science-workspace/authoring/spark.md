@@ -5,6 +5,20 @@ title: Accessing Data Using Spark in Data Science Workspace
 type: Tutorial
 description: The following document contains examples on how to access data using Spark for use in Data Science Workspace.
 exl-id: 9bffb52d-1c16-4899-b455-ce570d76d3b4
+TQID: https://experienceleague.adobe.com/RUes5Ao3MYLFy-O-qY7OC-iGcrQ4odGdOkkXGKHhGFM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Accessing data using Spark in Data Science Workspace
 

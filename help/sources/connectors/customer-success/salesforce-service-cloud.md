@@ -2,8 +2,24 @@
 title: Salesforce Service Cloud Source Connector Overview
 description: Learn how to connect Salesforce Service Cloud to Adobe Experience Platform using APIs or the user interface.
 exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
+TQID: https://experienceleague.adobe.com/okn6tenVmPStEfXwnOAo-Pz9fUey03dqUs1xWd-7UaM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # [!DNL Salesforce Service Cloud]
+
+<!-- Deprecation note for PLAT-302697. Do not remove without confirming with the Sources PM. -->
+
+>[!WARNING]
+>
+>Basic authentication for the [!DNL Salesforce Service Cloud] source is deprecated. You must use OAuth 2 Client Credential authentication to continue ingesting data from your [!DNL Salesforce Service Cloud] account to Experience Platform.
 
 [!DNL Salesforce Service Cloud] is a customer success platform designed to automate service workflows and streamline communication between companies and their customers. It consolidates requests from various channels—such as email, phone, social media, and live chat into a unified agent console. This allows support teams to manage "cases" with a 360-degree view of the customer's history, ensuring that responses are personalized and efficient regardless of how the customer reaches out.
 

@@ -5,6 +5,7 @@ breadcrumb-title: Data Ingestion Guide
 user-guide-description: Bring your data into Experience Platform through batch or streaming ingestion.
 feature: Data Ingestion
 role: Developer
+nudge: true
 ---
 
 # Adobe Experience Platform Data Ingestion {#ingestion}
@@ -41,6 +42,6 @@ role: Developer
   - [Streaming ingestion validation](quality/streaming-validation.md)
 - [Guardrails for data ingestion](guardrails.md)
 - [Source connectors](source-connectors.md)
-- [Batch Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
-- [Streaming Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
+- [Batch Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion)
+- [Streaming Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion)
 - [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -5,6 +5,20 @@ description: An overview and more information about the related accounts feature
 feature: Get Started, Profiles, B2B
 badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
+TQID: https://experienceleague.adobe.com/t4n4oSLERtXg2vhh6r3x8ufZUTjYK8lFikhHBxsxc3Y
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Related accounts in Real-Time CDP B2B Edition
 

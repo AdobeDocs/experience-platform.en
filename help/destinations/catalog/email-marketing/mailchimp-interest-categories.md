@@ -1,18 +1,36 @@
 ---
 title: Mailchimp Interest Categories
 description: Mailchimp (also known as Intuit Mailchimp) is a popular marketing automation platform and email marketing service used by businesses to manage and talk to contacts (clients, customers, or other interested parties) using mailing lists and email marketing campaigns. Use this connector to sort your contacts based on their interests and preferences.
-last-substantial-update: 2023-05-24
+last-substantial-update: 2023-05-24T00:00:00.000Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
+TQID: https://experienceleague.adobe.com/W1EPUBE136XxoQbdHELMCqvEIlQ2jqqqowTti-PBOBw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # [!DNL Mailchimp Interest Categories] connection
 
 [[!DNL Mailchimp]](https://mailchimp.com) is a popular marketing automation platform and email marketing service used by businesses to manage and talk to contacts *(clients, customers, or other interested parties)* using mailing lists and email marketing campaigns. Use this connector to sort your contacts based on their interests and preferences.
 
 [!DNL Mailchimp Interest Categories] uses [audiences](https://mailchimp.com/help/getting-started-audience/), [groups](https://mailchimp.com/help/getting-started-with-groups/), and interest categories *(also known as group names or group titles)*. Each [!DNL Mailchimp] group is a list of interest categories. Contacts are associated with an interest category when they subscribe to one or more interest categories through a signup form on your website. Within an audience, you can also organize the contacts into groups and associate them with interest categories, and these can then be used to create segments. You can use these audiences to broadcast targeted campaign emails to the subscribed contacts.
-
-<!--
-Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
--->
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) uses the [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API to create [interest categories](https://mailchimp.com/developer/marketing/api/interest-categories/) and then add contacts from each of the selected Experience Platform audiences into a corresponding interest category. You can **add new contacts** or **update the information of existing [!DNL Mailchimp] contacts**, then **add or remove them from their desired groups** within an existing [!DNL Mailchimp] audience after activating them within a new segment. [!DNL Mailchimp Interest Groups] uses the selected audience names from Experience Platform as interest categories within [!DNL Mailchimp].
 

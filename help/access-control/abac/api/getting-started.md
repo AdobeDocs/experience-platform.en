@@ -4,6 +4,19 @@ title: Getting Started with the Attribute-Based Access Control API
 description: The Attribute-Based Access Control API allows you to programmatically manage roles and access policies within Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
 role: Developer
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
+TQID: https://experienceleague.adobe.com/4QKLSzq1qyOXjrYJqx0lsk8SjC3r-6GTQE5WkmjTEFg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Getting started with the attribute-based access control API
 
@@ -15,7 +28,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ## Gather values for required headers
 
-This guide requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to Experience Platform APIs. Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+This guide requires you to have completed the [authentication tutorial](/help/landing/api-authentication.md) in order to successfully make calls to Experience Platform APIs. Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -37,3 +50,5 @@ See the following API tutorials to start making calls to the attribute-based acc
 
 * [Roles endpoint](./roles.md)
 * [Products endpoint](./products.md)
+
+
