@@ -86,6 +86,7 @@ For more information, read the [Data Governance overview](/help/data-governance/
 | Feature | Description |
 | --- | --- |
 | Configurable macro order for file names | Reposition individual macros in the file name editor for file-based destinations. Previously, macros had fixed positions in the file name. Preview the resulting file name before you save. |
+| [Audience-level reporting for additional destinations](/help/dataflows/ui/monitor-destinations.md#audience-level-view) | Audience-level reporting will be available for [[!DNL LiveRamp - Distribution]](/help/destinations/catalog/advertising/liveramp-distribution.md), [[!DNL FreeWheel]](/help/destinations/catalog/advertising/freewheel.md), and [[!DNL Snowflake Batch]](/help/destinations/catalog/warehouses/snowflake-batch.md). Previously, these destinations only supported dataflow run-level reporting, making it harder to understand how many profiles were activated for each audience. For more information, read the [audience-level view](/help/dataflows/ui/monitor-destinations.md#audience-level-view) documentation. |
 
 {style="table-layout:auto"}
 
