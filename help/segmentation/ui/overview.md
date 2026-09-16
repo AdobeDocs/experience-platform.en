@@ -144,8 +144,8 @@ The **[!UICONTROL Evaluation]** tab displays a list of schedules available for s
 
 ![](/help/segmentation/images/ui/overview/evaluation.png)
 
-- **System-created schedule**: The daily schedule for batch segmentation that is created by the Experience Platform system. Every sandbox has only **one** system created schedule.
-- **User-created schedule**: A schedule for batch segmentation that you created. The user-crated lets you evaluate your specified audiences on a daily, weekly, or monthly cadence.
+- **System schedule**: The daily schedule for batch segmentation that is created by the Experience Platform system. Every sandbox has only **one** system created schedule.
+- **Custom schedule**: A schedule for batch segmentation that you created. The custom schedule lets you evaluate your specified audiences on a daily, weekly, or monthly cadence.
 
 On the **[!UICONTROL Evaluation]** screen, you can see a list of schedules that are available to use in your organization, including details such as the schedule's title, state, type, scheduled run time, next run, and assigned audiences.
 
@@ -173,10 +173,11 @@ Within the **[!UICONTROL Create schedule]** popover, you can add details for you
 
 | Field | Description |
 | ----- | ----------- |
-| Schedule name | The name for your schedule. |
-| Cadence | How often the schedule will run. This can be **Daily**, **Weekly**, **Monthly**, or **Advanced**. |
-| Repeat every day(s) | This field **only** shows up if your cadence is set to daily. This determines after how many days you want your schedule to repeat. |
-| Time | This field determines what time the schedule will run. |
+| [!UICONTROL Schedule name] | The name for your schedule. |
+| [!UICONTROL Cadence] | How often the schedule will run. This can be **Daily**, **Weekly**, **Monthly**, or **Advanced**. |
+| [!UICONTROL Repeat every (days)] | This field **only** shows up if your cadence is set to daily. This determines after how many days you want your schedule to repeat. |
+| [!UICONTROL Time] | This field determines what time the schedule will run. |
+| [!UICONTROL Enable schedule] | A boolean that determines if the schedule is automatically enabled when created. |
 
 ### Schedule audiences {#schedule-audiences}
 
@@ -184,7 +185,9 @@ If you select **[!UICONTROL Schedule audiences]**, the **[!UICONTROL Schedule au
 
 ![The Schedule audiences popover is displayed.](/help/segmentation/images/ui/overview/schedule-audiences.png)
 
-On this page, you can select which audiences you want to be activated by the schedule.
+On this page, you can select which audiences you want to be activated by the schedule. Choose the audiences you want to be activated by the schedule, and select **[!UICONTROL Schedule]** to add them to the schedule.
+
+![The Schedule button is highlighted within the Schedule audiences popover.](/help/segmentation/images/ui/overview/select-schedule.png)
 
 ## Policy violations
 
