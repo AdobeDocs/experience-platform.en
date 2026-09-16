@@ -71,7 +71,7 @@ When creating your own customer data fields, you can use the parameters describe
 |`title` | String | Optional |Indicates the name of the field, as it is seen by customers in the [!DNL Experience Platform] UI. If this field is empty or missing, the UI inherits the field name from the `name` value. |
 |`description` | String | Optional | Provide a description for the custom field. This description is not visible in the [!DNL Experience Platform] UI. |
 |`isRequired` | Boolean | Optional |Indicates whether users are required to provide a value for this field in the destination configuration workflow. |
-|`pattern` | String |Optional| Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field.|
+|`pattern` | String |Optional| Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs do not include numbers or underscores, enter `^[A-Za-z]+$` in this field.|
 |`enum` | String |Optional| Renders the custom field as a dropdown menu and lists the options available to the user.|
 |`default`|String|Optional|Defines the default value from an `enum` list.|
 |`hidden`|Boolean|Optional|Indicates whether the customer data field is shown in the UI or not.|
@@ -577,7 +577,7 @@ When your destination requires user input, you must provide a selection of custo
 
 Templatized fields use the format `{{customerData.fieldName}}`, where `fieldName` is the name of the customer data field that you are reading information from. All templatized customer data fields are preceded by `customerData.` and enclosed within double braces `{{ }}`.
 
-For example, let's consider the following [!DNL Amazon S3] destination configuration:
+For example, consider the following [!DNL Amazon S3] destination configuration:
 
 ```json
 "customerDataFields":[
