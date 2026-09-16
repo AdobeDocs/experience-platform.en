@@ -103,13 +103,13 @@ Within the rule view, you can use the undo and redo buttons to revert changes yo
 
 You can also adjust the settings of the visible fields by selecting ![the settings icon](/help/images/icons/settings.png).
 
-The **[!UICONTROL Show full XDM schema]** setting determines if you see **all** fields, or only fields that contain data.
+The **[!UICONTROL Show fields only with data]** setting determines if you see **all** fields, or only fields that contain data.
+
+For **[!UICONTROL Data sources]**, you can filter to show attributes that come from the specified ingestion types. Supported values include **[!UICONTROL Batch and streaming/edge]**, **[!UICONTROL Batch only]**, and **[!UICONTROL Streaming/edge only]**.
 
 The **[!UICONTROL Show relation selectors]** setting determines if you use the standard relations for your organization or if the relation selectors are shown.
 
-The **[!UICONTROL Use AI search suggestions]** setting determines if the AI-enabled search will be used for searching fields.
-
-For **[!UICONTROL Data sources]**, you can filter to show attributes that come from the specified ingestion types. Supported values include **[!UICONTROL Show batch data]**, **[!UICONTROL Show streaming/edge data]**, and **[!UICONTROL Show fields with no ingested data]**.
+The **[!UICONTROL Use AI search suggestions]** setting determines if the AI will be used to suggest relevant fields and audiences based on your query.
 
 For **[!UICONTROL Merge policy]**, you can choose which merge policy the fields belong to.
 
@@ -125,7 +125,7 @@ You can select **[!UICONTROL Add field]** to add an attribute or audience to the
 
 ![The Add field and Add group buttons are highlighted.](/help/segmentation/images/ui/audience-builder/add-attributes.png){width="750" zoomable="yes"}
 
-If you select **[!UICONTROL Add field]**, the Discovery Panel appears. This panel lets you search for the field you want to add. Type in the name of the field you're looking for and press enter.
+If you select **[!UICONTROL Add field]**, the Discovery Panel appears. This panel lets you search for the field you want to add, and will automatically search as you type.
 
 ![The Discovery Panel is displayed, showing what happens when you select Add field.](/help/segmentation/images/ui/audience-builder/view-browse-fields.png){width="500" zoomable="yes"}
 
@@ -142,8 +142,6 @@ You can select ![the star icon](/help/images/icons/star.png) to add the searched
 ![The Favorited fields section is displayed.](/help/segmentation/images/ui/audience-builder/favorited-fields.png){width="500" zoomable="yes"}
 
 You can select ![the filter icon](/help/images/icons/filter-unfilled.png) to adjust the settings for the displayed fields.
-
-For the **[!UICONTROL Field settings]**, you can either show only the fields that contain data or the full XDM schema.
 
 For the **[!UICONTROL Field types]**, you can show **[!UICONTROL Attributes]** or **[!UICONTROL Audiences]**.
 
@@ -201,8 +199,8 @@ You can use the following condition types for your attributes:
 | -------------- | ----------- |
 | Compare to input | Compares the attribute value to the specified input value. This is the default option when choosing an attribute. |
 | Compare to another attribute | Compares the attribute value to the value of another attribute. You can choose the attribute you want to compare using the Discovery Panel. |
-| Has any value | Checks to see if the attribute has any value. This is equivalent to seeing if the attribute "exists". |
-| Has no value | Checks to see if the attribute has no value. This is equivalent to seeing if the attribute "does not exist". |
+| Exists | Checks to see if the attribute exists. This is equivalent to seeing if the attribute has a value. |
+| Does not exist | Checks to see if the attribute does not exist. This is equivalent to seeing if the attribute doesn't have a value. |
 
 If you select **[!UICONTROL Compare to input]**, you can choose one of the additional options:
 
@@ -239,9 +237,15 @@ For more information on computed attributes, including how to create them, what 
 
 The **[!UICONTROL Events]** section lets you add ExperienceEvents to your audience's rules. 
 
-Select **[!UICONTROL Add event]** to choose from a list of ExperienceEvents that you can add to your audience.
+Select **[!UICONTROL Add event]** to add an ExperienceEvent that you can add to your audience.
 
 ![The Add event button is highlighted within the Events section of the Rule view.](/help/segmentation/images/ui/audience-builder/select-add-event.png){width="750" zoomable="yes"}
+
+The Discover Panel appears. This panel displays both **Events** and **Event types**. 
+
+IMAGE
+
+If you select **Events**, you can choose 
 
 After adding an event to your canvas, you can add additional events to the timeline. These events can be added before, after, above, or below the already selected event.
 
@@ -282,7 +286,7 @@ If you select **[!UICONTROL Aggregate]**, you can add an aggregation function to
 
 You can add groups of either attributes or events within Audience Builder. Groups let you control the order of execution through the use of nested queries.
 
-When you add a group, it automatically appears as a child of the the first group. You can adjust the hierarchy by dragging and moving the containers.
+When you add a group, it automatically appears as a child of the the first group. You can adjust the hierarchy by dragging and moving the rules within the container.
 
 By default, the group will **include** all the attributes, events, or audiences within the group. You can change this by selecting the dropdown at the top of the group.
 
