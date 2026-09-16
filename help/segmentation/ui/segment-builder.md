@@ -36,7 +36,7 @@ topic_v2:
 
 [!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
 
-![The Segment Builder UI is displayed.](../images/ui/segment-builder/segment-builder.png)
+![The Segment Builder UI is displayed.](/help/segmentation/images/ui/segment-builder/segment-builder.png)
 
 ## Segment definition building blocks {#building-blocks}
 
@@ -72,7 +72,7 @@ The basic building blocks of segment definitions are attributes and events. In a
 
 You can see these building blocks in the **[!UICONTROL Fields]** section on the left side of the [!DNL Segment Builder] workspace. **[!UICONTROL Fields]** contains a tab for each of the main building blocks: "[!UICONTROL Attributes]", "[!UICONTROL Events]", and "[!UICONTROL Audiences]".
 
-![The fields section of Segment Builder is highlighted.](../images/ui/segment-builder/segment-fields.png)
+![The fields section of Segment Builder is highlighted.](/help/segmentation/images/ui/segment-builder/segment-fields.png)
 
 You can select the ![settings icon](/help/images/icons/settings.png) to adjust the settings for the displayed fields.
 
@@ -80,13 +80,13 @@ For the **[!UICONTROL Available fields]**, you can either show only the fields t
 
 For the **[!UICONTROL Merge policy]**, you can choose which merge policy the fields belong to.
 
-![The settings area is displayed within Segment Builder.](../images/ui/segment-builder/settings.png)
+![The settings area is displayed within Segment Builder.](/help/segmentation/images/ui/segment-builder/settings.png)
 
 ### Attributes
 
 The **[!UICONTROL Attributes]** tab allows you to browse [!DNL Profile] attributes belonging to the [!DNL XDM Individual Profile] class. Each folder can be expanded to reveal additional attributes, where each attribute is a tile that can be dragged onto the rule builder canvas in the center of the workspace. The [rule builder canvas](#rule-builder-canvas) is discussed in more detail later in this guide.
 
-![The attributes section of the Segment Builder fields is highlighted.](../images/ui/segment-builder/attributes.png)
+![The attributes section of the Segment Builder fields is highlighted.](/help/segmentation/images/ui/segment-builder/attributes.png)
 
 The attributes you add can be one of the following data types:
 
@@ -221,11 +221,11 @@ Any type of component can be searched for by typing its name in the search bar, 
 
 You can then easily drag and drop [!DNL ExperienceEvents] and "[!UICONTROL Event Types]" into your segment definition.
   
-![The events section of the Segment Builder UI is highlighted.](../images/ui/segment-builder/events.png)  
+![The events section of the Segment Builder UI is highlighted.](/help/segmentation/images/ui/segment-builder/events.png)  
 
 By default, only populated schema fields from your data store are shown. This includes "[!UICONTROL Event Types]". If the "[!UICONTROL Event Types]" list is not visible, or you are only able to select "[!UICONTROL Any]" as an "[!UICONTROL Event Type]", select the **gear icon** next to **[!UICONTROL Fields]**, then select **[!UICONTROL Show full XDM schema]** under **[!UICONTROL Available Fields]**. Select the **gear icon** again to return to the **[!UICONTROL Fields]** tab and you should now be able to view multiple "[!UICONTROL Event Types]" and schema fields, regardless of whether they contain data or not.
 
-![Radio buttons that let you choose between only showing fields with data or showing all XDM fields are highlighted.](../images/ui/segment-builder/show-populated.png)
+![Radio buttons that let you choose between only showing fields with data or showing all XDM fields are highlighted.](/help/segmentation/images/ui/segment-builder/show-populated.png)
 
 #### Adobe Analytics report suite datasets
 
@@ -233,7 +233,7 @@ You can use data from either a single or multiple Adobe Analytics report suites 
 
 When using data from a single Analytics report suite, Experience Platform will automatically add descriptors and friendly names to eVars, making it easier to find those fields within [!DNL Segment Builder].
 
-![An image showing how generic variables (eVars) are mapped with a user friendly name.](../images/ui/segment-builder/single-report-suite.png)
+![An image showing how generic variables (eVars) are mapped with a user friendly name.](/help/segmentation/images/ui/segment-builder/single-report-suite.png)
 
 When using data from multiple Analytics report suites, Experience Platform **cannot** automatically add descriptors or friendly names to eVars. As a result, before using the data from Analytics report suites, you must map to XDM fields. More information about mapping Analytics variables to XDM can be found in the [Adobe Analytics source connection guide](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
 
@@ -252,7 +252,7 @@ For example, consider a situation where you had two report suites with the follo
 
 In this case, you could map the two report suites with the following schema:
 
-![An image showing how two report suites can be mapped into one union schema.](../images/ui/segment-builder/union-schema.png)
+![An image showing how two report suites can be mapped into one union schema.](/help/segmentation/images/ui/segment-builder/union-schema.png)
 
 >[!NOTE]
 >
@@ -288,7 +288,7 @@ On the **[!UICONTROL Audiences]** tab, you can see all of the available sources 
 
 You can hover over the &#9432; next to an audience to view information about the audience including its ID, description, and the folder hierarchy to locate the audience.
 
-![An image demonstrating how the folder hierarchy works for audiences.](../images/ui/segment-builder/audience-folder-structure.png)
+![An image demonstrating how the folder hierarchy works for audiences.](/help/segmentation/images/ui/segment-builder/audience-folder-structure.png)
 
 ## Rule builder canvas {#rule-builder-canvas}
 
@@ -304,7 +304,7 @@ A segment definition is a collection of rules used to describe key characteristi
 
 To add a new rule to your segment definition, drag a tile from the **[!UICONTROL Fields]** tab and drop it onto the rule builder canvas. You will then be presented with context-specific options according to the type of data being added. Available data types include: strings, dates, [!DNL ExperienceEvents], "[!UICONTROL Event Types]", and audiences. 
 
-![The blank rule builder canvas.](../images/ui/segment-builder/rule-builder-canvas.png)
+![The blank rule builder canvas.](/help/segmentation/images/ui/segment-builder/rule-builder-canvas.png)
 
 >[!IMPORTANT]
 >
@@ -312,27 +312,27 @@ To add a new rule to your segment definition, drag a tile from the **[!UICONTROL
 
 When selecting a value for the attribute, you will see a list of enum values that the attribute can be.
 
-![An image that shows the list of enum values that an attribute can be.](../images/ui/segment-builder/enum-list.png)
+![An image that shows the list of enum values that an attribute can be.](/help/segmentation/images/ui/segment-builder/enum-list.png)
 
 If selecting a value from this list of enums, the value will be outlined with a solid border. However, for fields that use `meta:enum` (soft) enums, you can also select a value which is **not** from the list of enums. If you create your own value, it will be outlined with a dotted border, along with a warning that this value is not in the enum list.
 
-![A warning that is displayed if you are inserting a value that is not part of the enum list.](../images/ui/segment-builder/enum-warning.png)
+![A warning that is displayed if you are inserting a value that is not part of the enum list.](/help/segmentation/images/ui/segment-builder/enum-warning.png)
 
 If you are creating multiple values, you can add all of them at once by using the bulk upload. Select the ![plus icon](/help/images/icons/add-circle.png) to show the **[!UICONTROL Add values in bulk]** popover.
 
-![The plus icon is highlighted, showing the button that you can select to access the bulk upload popover.](../images/ui/segment-builder/add-bulk-values.png)
+![The plus icon is highlighted, showing the button that you can select to access the bulk upload popover.](/help/segmentation/images/ui/segment-builder/add-bulk-values.png)
 
 On the **[!UICONTROL Add values in bulk]** popover, you can upload a CSV or TSV file.
 
-![The Add values in bulk popover is displayed. The dialog you can select to upload a CSV or TSV file is highlighted.](../images/ui/segment-builder/bulk-values-popover.png)
+![The Add values in bulk popover is displayed. The dialog you can select to upload a CSV or TSV file is highlighted.](/help/segmentation/images/ui/segment-builder/bulk-values-popover.png)
 
 Alternatively, you can manually add comma separated values.
 
-![The Add values in bulk popover is displayed. Both the dialog you can use to insert values and the added values are highlighted.](../images/ui/segment-builder/bulk-values-comma-separated.png)
+![The Add values in bulk popover is displayed. Both the dialog you can use to insert values and the added values are highlighted.](/help/segmentation/images/ui/segment-builder/bulk-values-comma-separated.png)
 
 Please note that there is a maximum of 250 values allowed. If you exceed this amount, you will need to remove some values before adding more.
 
-![A warning that shows that you have reached the maximum number of values is displayed.](../images/ui/segment-builder/maximum-values.png)
+![A warning that shows that you have reached the maximum number of values is displayed.](/help/segmentation/images/ui/segment-builder/maximum-values.png)
 
 ### Audience validation {#audience-validation}
 
@@ -365,7 +365,7 @@ For [!DNL Experience Platform] audiences created using [!DNL Segment Builder], y
 >
 >When adding an audience from an external source, only the audience membership is referenced. You cannot convert the audience to rules, and therefore the rules used to create the original audience cannot be modified in the new segment definition.
 
-![This image shows how to convert an audience attribute to rules.](../images/ui/segment-builder/add-audience-to-segment.png)
+![This image shows how to convert an audience attribute to rules.](/help/segmentation/images/ui/segment-builder/add-audience-to-segment.png)
 
 If any conflicts arise when convert audiences to rules, [!DNL Segment Builder] will attempt to preserve the existing options to the best of its ability.  
 
@@ -373,11 +373,11 @@ If any conflicts arise when convert audiences to rules, [!DNL Segment Builder] w
 
 Alternatively, you can view a code-based version of a rule created in the [!DNL Segment Builder]. Once you have created your rule within the rule builder canvas, you can select **[!UICONTROL Code view]** to see your segment definition as PQL.
 
-![The code view button is highlighted, which allows you to see the segment definition as PQL.](../images/ui/segment-builder/code-view.png)
+![The code view button is highlighted, which allows you to see the segment definition as PQL.](/help/segmentation/images/ui/segment-builder/code-view.png)
 
 Code view provides a button that allows you to copy the value of the segment definition to use in API calls. To get the latest version of the segment definition, make sure you have saved your latest changes to the segment definition.
 
-![The copy code button is highlighted, which allows you to](../images/ui/segment-builder/copy-code.png)
+![The copy code button is highlighted, which allows you to](/help/segmentation/images/ui/segment-builder/copy-code.png)
 
 ### Aggregation functions
 
@@ -385,15 +385,15 @@ An aggregation in [!DNL Segment Builder] is a calculation on a group of XDM attr
 
 To create an aggregation function, select an event from the left rail, and insert it into the [!UICONTROL Events] container.
 
-![The events section is highlighted.](../images/ui/segment-builder/events.png)
+![The events section is highlighted.](/help/segmentation/images/ui/segment-builder/events.png)
 
 After placing the event within the Events container, select the ellipses icon (...), followed by **[!UICONTROL Aggregate]**.
 
-![The aggregate text is highlighted. Selecting this lets you select aggregation functions.](../images/ui/segment-builder/add-aggregation.png)
+![The aggregate text is highlighted. Selecting this lets you select aggregation functions.](/help/segmentation/images/ui/segment-builder/add-aggregation.png)
 
 The aggregation is now added. You can now select the aggregation function, choose what attribute to aggregate, the equality function, as well as the value. For the example below, this segment definition would qualify any profile that has a sum of purchased values that is greater than $100, even if each individual purchase is less than $100.
 
-![The event rules, which displays an aggregation function.](../images/ui/segment-builder/filled-aggregation.png)
+![The event rules, which displays an aggregation function.](/help/segmentation/images/ui/segment-builder/filled-aggregation.png)
 
 ### Count functions {#count-functions}
 
@@ -401,15 +401,15 @@ Count functions in Segment Builder are used to look for specified events and cou
 
 To create a count function, select an event from the left rail and insert it into the [!UICONTROL Events] container.
 
-![The events fields are highlighted.](../images/ui/segment-builder/events.png)
+![The events fields are highlighted.](/help/segmentation/images/ui/segment-builder/events.png)
 
 After placing the event within the Events container, select the [!UICONTROL At least 1] button. 
 
-![The At least is highlighted, showing the area to select to see a full list of count functions.](../images/ui/segment-builder/add-count.png)
+![The At least is highlighted, showing the area to select to see a full list of count functions.](/help/segmentation/images/ui/segment-builder/add-count.png)
 
 The count function is now added. You can now select the count function and the value of the function. The example below would be to include any event that has at least one click.
 
-![A list of the count functions is displayed and highlighted.](../images/ui/segment-builder/select-count.png)
+![A list of the count functions is displayed and highlighted.](/help/segmentation/images/ui/segment-builder/select-count.png)
 
 ### Time constraints {#time-constraints}
 
@@ -435,22 +435,22 @@ The list of available time constraints are as follows:
 
 | Time constraint | Description | Can enable ignore year | Example |
 | --------------- | ----------- | ------------------- | ------- |
-| Today | The attribute or event being compared **must** occur today. This is the default time constraint selected. | Yes | ![An example of the "Today" time constraint being used.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
-| Yesterday | The attribute or event being compared **must** occur yesterday. | Yes | ![An example of the "Yesterday" time constraint being used.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
-| This month | The attribute or event being compared **must** occur this calendar month. | Yes | ![An example of the "This month" time constraint being used.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
-| This year | The attribute or event being compared **must** occur this calendar year. | No | ![An example of the "This year" time constraint being used.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
-| Custom date | The attribute or event being compared **must** occur on the date given. | Yes | ![An example of the "Custom date" time constraint being used.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
-| In last | The attribute or event being compared **must** occur within the last period of time chosen. This period of time is **inclusive** until the evaluation time. | No | ![An example of the "In last" time constraint being used.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
-| From (to) | The attribute or event being compared **must** occur within the two calendar dates chosen. This period of time is **inclusive** of both dates. | Yes, if custom date | ![An example of the "From to" being used.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
-| During | The attribute or event being compared **must** occur within the selected month or year. If a month is selected, you need to choose both the month and a year that the attribute or event took place in.  If a year is selected, you need to just choose the year that the attribute or event took place in. If you select a month, you can also enable the [!UICONTROL Ignore year] checkbox. | Yes | ![An example of the "During" time constraint being used.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
-| Within (+/-) | The attribute or event being compared **must** occur within days, weeks, months, or years of the selected date. This period of time is **inclusive** of both dates. The selected date can be today, yesterday, or another custom date of your choosing. | Yes | ![An example of the "Within" time constraint being used.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
-| Before | The attribute or event being compared **must** occur before the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | Yes | ![An example of the "Before" time constraint being used.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
-| After | The attribute or event being compared **must** occur after the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | Yes | ![An example of the "After" time constraint being used.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
-| Rolling range | The attribute or event being compared must occur between the two relative dates. The dates can be represented in seconds, minutes, hours, days, weeks, months, or years. | No | ![An example of the "Rolling range" time constraint being used.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
-| In next | The attribute or event being compared must occur within the next period of time selected. The selected periods of time include minutes, hours, days, weeks, months, and years. | No | ![An example of the "In next" time constraint being used.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
-| Exists | The attribute exists. | No | ![An example of the "Exists" time constraint being used.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
-| Does not exist | The attribute does not exist. | No | ![An example of the "Does not exist" time constraint being used.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
-| Now | The attribute or event being compared **must** occur right when the audience is evaluated. This time constraint can only be used as a secondary-level option, within time constraints such as "Before" or "After". | Yes | ![An example of the "Now" time constraint being used.](../images/ui/segment-builder/time-constraints/now.png){width="100" zoomable="yes"} |
+| Today | The attribute or event being compared **must** occur today. This is the default time constraint selected. | Yes | ![An example of the "Today" time constraint being used.](/help/segmentation/images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Yesterday | The attribute or event being compared **must** occur yesterday. | Yes | ![An example of the "Yesterday" time constraint being used.](/help/segmentation/images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| This month | The attribute or event being compared **must** occur this calendar month. | Yes | ![An example of the "This month" time constraint being used.](/help/segmentation/images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| This year | The attribute or event being compared **must** occur this calendar year. | No | ![An example of the "This year" time constraint being used.](/help/segmentation/images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| Custom date | The attribute or event being compared **must** occur on the date given. | Yes | ![An example of the "Custom date" time constraint being used.](/help/segmentation/images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| In last | The attribute or event being compared **must** occur within the last period of time chosen. This period of time is **inclusive** until the evaluation time. | No | ![An example of the "In last" time constraint being used.](/help/segmentation/images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| From (to) | The attribute or event being compared **must** occur within the two calendar dates chosen. This period of time is **inclusive** of both dates. | Yes, if custom date | ![An example of the "From to" being used.](/help/segmentation/images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| During | The attribute or event being compared **must** occur within the selected month or year. If a month is selected, you need to choose both the month and a year that the attribute or event took place in.  If a year is selected, you need to just choose the year that the attribute or event took place in. If you select a month, you can also enable the [!UICONTROL Ignore year] checkbox. | Yes | ![An example of the "During" time constraint being used.](/help/segmentation/images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| Within (+/-) | The attribute or event being compared **must** occur within days, weeks, months, or years of the selected date. This period of time is **inclusive** of both dates. The selected date can be today, yesterday, or another custom date of your choosing. | Yes | ![An example of the "Within" time constraint being used.](/help/segmentation/images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| Before | The attribute or event being compared **must** occur before the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | Yes | ![An example of the "Before" time constraint being used.](/help/segmentation/images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| After | The attribute or event being compared **must** occur after the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | Yes | ![An example of the "After" time constraint being used.](/help/segmentation/images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| Rolling range | The attribute or event being compared must occur between the two relative dates. The dates can be represented in seconds, minutes, hours, days, weeks, months, or years. | No | ![An example of the "Rolling range" time constraint being used.](/help/segmentation/images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| In next | The attribute or event being compared must occur within the next period of time selected. The selected periods of time include minutes, hours, days, weeks, months, and years. | No | ![An example of the "In next" time constraint being used.](/help/segmentation/images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| Exists | The attribute exists. | No | ![An example of the "Exists" time constraint being used.](/help/segmentation/images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| Does not exist | The attribute does not exist. | No | ![An example of the "Does not exist" time constraint being used.](/help/segmentation/images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| Now | The attribute or event being compared **must** occur right when the audience is evaluated. This time constraint can only be used as a secondary-level option, within time constraints such as "Before" or "After". | Yes | ![An example of the "Now" time constraint being used.](/help/segmentation/images/ui/segment-builder/time-constraints/now.png){width="100" zoomable="yes"} |
 
 >[!TIP]
 >
@@ -469,7 +469,7 @@ When you're applying a time constraint on an event, you can either apply it on t
 
 To apply a canvas-level time constraint, select the clock icon that appears above the timeline of events.
 
-![The canvas-level time constraint selector is highlighted.](../images/ui/segment-builder/time-constraints/canvas-level.png)
+![The canvas-level time constraint selector is highlighted.](/help/segmentation/images/ui/segment-builder/time-constraints/canvas-level.png)
 
 When you apply a time constraint on the canvas-level, this applies the time constraint to **all** events in the audience.
 
@@ -477,7 +477,7 @@ When you apply a time constraint on the canvas-level, this applies the time cons
 
 To apply a card-level constraint, select the card you want to apply the time constraint on, followed by the ellipses icon, and **[!UICONTROL Apply time rule]**. This lets you select a time constraint within the **[!UICONTROL Event Rules]** container.
 
-![The card-level time constraint selector is highlighted.](../images/ui/segment-builder/time-constraints/card-level.png)
+![The card-level time constraint selector is highlighted.](/help/segmentation/images/ui/segment-builder/time-constraints/card-level.png)
 
 When you apply a time constraint on the card-level, this applies the time constraint on the **specified** event in the audience.
 
@@ -485,7 +485,7 @@ When you apply a time constraint on the card-level, this applies the time constr
 
 To apply a time constraint between events, select the clock icon between the two events you want to apply the time constraint on.
 
-![The between events time constraint selector is highlighted.](../images/ui/segment-builder/time-constraints/between-event.png)
+![The between events time constraint selector is highlighted.](/help/segmentation/images/ui/segment-builder/time-constraints/between-event.png)
 
 When you apply a time constraint between the event, this applies the time constraint to the time **between** the events. 
 
@@ -515,13 +515,13 @@ Audiences are evaluated in the order they are listed. Containers allow control o
 
 Once you have added at least one tile to the rule builder canvas, you can begin to add containers. To create a new container, select the ellipses (...) in the top-right corner of the tile, then select **[!UICONTROL Add container]**. 
 
-![The add container button is highlighted, which lets you add a container as a child of the first container.](../images/ui/segment-builder/add-container.png)
+![The add container button is highlighted, which lets you add a container as a child of the first container.](/help/segmentation/images/ui/segment-builder/add-container.png)
 
 A new container appears as the child of the first container, but you can adjust the hierarchy by dragging and moving the containers. The default behavior of a container is to "[!UICONTROL Include]" the attribute, event, or audience provided. You can set the rule to "[!UICONTROL Exclude]" profiles that match the container criteria by selecting **[!UICONTROL Include]** in the top-left corner of the tile and selecting "[!UICONTROL Exclude]".
 
 A child container can also be extracted and added inline to the parent container by selecting "unwrap container" on the child container. Select the ellipses (...) in the top-right corner of the child container to access this option.
 
-![Options that let you unwrap or delete the container are highlighted.](../images/ui/segment-builder/include-exclude.png)
+![Options that let you unwrap or delete the container are highlighted.](/help/segmentation/images/ui/segment-builder/include-exclude.png)
 
 Once you select **[!UICONTROL Unwrap container]** the child container is removed and the criteria appear inline. 
 
@@ -529,7 +529,7 @@ Once you select **[!UICONTROL Unwrap container]** the child container is removed
 >
 >When unwrapping containers, be careful that the logic continues to meet the desired segment definition.
 
-![The container is shown after being unwrapped.](../images/ui/segment-builder/unwrapped-container.png)
+![The container is shown after being unwrapped.](/help/segmentation/images/ui/segment-builder/unwrapped-container.png)
 
 ### Examples {#container-examples}
 
@@ -574,7 +574,7 @@ You can select a merge policy that matches your marketing purpose for this audie
 
 To select a merge policy for your segment definition, select the gear icon on the **[!UICONTROL Fields]** tab, then use the **[!UICONTROL Merge Policy]** dropdown menu to select the merge policy that you wish to use.
 
-![The merge policy selector is highlighted. This lets you choose which merge policy to select for your segment definition.](../images/ui/segment-builder/merge-policy-selector.png)
+![The merge policy selector is highlighted. This lets you choose which merge policy to select for your segment definition.](/help/segmentation/images/ui/segment-builder/merge-policy-selector.png)
 
 ## Audience properties {#audience-properties}
 
@@ -611,13 +611,21 @@ When you make changes to the audience's rules, you can select the **[!UICONTROL 
 
 Selecting the information bubble gives the date and time the last sample job was run.
 
-![Qualified Profiles and Estimated Profiles are highlighted within the Audience properties section.](../images/ui/segment-builder/audience-estimates.png)
+![Qualified Profiles and Estimated Profiles are highlighted within the Audience properties section.](/help/segmentation/images/ui/segment-builder/audience-estimates.png)
 
 The **[!UICONTROL Audience properties]** section is also where you can specify important information about your audience, including its name, description, and evaluation type. Names are used to identify your segment definition among those defined by your organization and should therefore be descriptive, concise, and unique. 
 
+![The audience properties section is highlighted. The audience properties include, but are not limited to, the name, description, and evaluation method.](/help/segmentation/images/ui/segment-builder/audience-properties.png)
+
 As you continue to build your audience, you can view a paginated preview of the audience by selecting **[!UICONTROL View Profiles]**.
 
-![The audience properties section is highlighted. The audience properties include, but are not limited to, the name, description, and evaluation method.](../images/ui/segment-builder/segment-properties.png)
+Additionally, once you add an attribute to the rule building canvas, you can select **[!UICONTROL Show full field path]** to display that attribute's path within the rule building canvas.
+
+![A sample attribute where the field path is displayed.](/help/segmentation/images/ui/segment-builder/show-full-field-path.png){zoomable="yes" width="500"}
+
+If you select the information icon, you can see further details of the attribute's full path.
+
+![The full field path is displayed after selecting the information icon.](/help/segmentation/images/ui/segment-builder/full-path-info.png){zoomable="yes" width="500"}
 
 >[!NOTE]
 >
@@ -633,11 +641,11 @@ The [!UICONTROL Evaluation method eligibility] popover appears. This popover dis
 
 You can also change the evaluation method of the segment definition after you've finished creating it. If you change the evaluation method from Edge or Streaming to Batch, you will **not** be able to change it back to Edge or Streaming. The change to the evaluation method will **only** take effect once you select **[!UICONTROL Save]** in the popover. Cancelling the dialog will **maintain** the original evaluation method.
 
-![The evaluation method eligibility pop up appears. This displays which methods of evaluation are eligible and ineligible for the segment definition.](../images/ui/segment-builder/select-evaluation-method.png)
+![The evaluation method eligibility pop up appears. This displays which methods of evaluation are eligible and ineligible for the segment definition.](/help/segmentation/images/ui/segment-builder/select-evaluation-method.png)
 
 If you select an invalid evaluation method, you will be prompted to either change your segment definition rules or change the evaluation method. 
 
-![The evaluation method pop up. If an ineligible evaluation method is selected, the pop up explains why it is ineligible.](../images/ui/segment-builder/ineligible-evaluation-method.png)
+![The evaluation method pop up. If an ineligible evaluation method is selected, the pop up explains why it is ineligible.](/help/segmentation/images/ui/segment-builder/ineligible-evaluation-method.png)
 
 More information about the different segment definition evaluation methods can be found in the [segmentation overview](../home.md#evaluate-audiences).
 
