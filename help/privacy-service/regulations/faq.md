@@ -93,6 +93,7 @@ Many privacy regulations stipulate that if a data subject is below a certain age
 | GDPR (European Union) | 16 | <ul><li>Some member states of the EU may provide a law for a lower age for this purpose, but no lower than 13.</li><li>Parental consent must be provided for all data subjects below the age limit.</li></ul> |
 | LGPD (Brazil) | 13 | <ul><li>Parental consent must be provided for all data subjects below the age limit.</li><li>Consent may be given by a 13 to 18 year old natural person, as long as the processing of their personal data is undergone in their best interest.</li></ul> |
 | PDPA (Thailand) | 10 | <ul><li>Parental consent must be provided for all data subjects below the age limit.</li></ul> |
+| DPDPA (India) | 18 | <ul><li>A "child" is defined as any individual who has not completed 18 years of age.</li><li>Verifiable consent from a parent or lawful guardian must be provided before processing the personal data of a child.</li></ul> |
 
 <!-- | New Zealand [!DNL Privacy Act] | 16 | <ul><li>Parental consent must be provided for all data subjects below the age limit in cases where consent is required.</li></ul> | -->
 
@@ -110,6 +111,7 @@ Assuming that the business has collected personal information and that it can au
 | GDPR (European Union) | 30 days | |
 | LGPD (Brazil) | 15 days | |
 | PDPA (Thailand) | 30 days | If a company cannot respond to a data subject's request within the compliance window, the company will have an additional 30 days from the date they were unable to fulfill the request to respond in writing to the data subject. |
+| DPDPA (India) | 30 days | |
 
 <!-- | New Zealand [!DNL Privacy Act] | 20 working days | | -->
 
