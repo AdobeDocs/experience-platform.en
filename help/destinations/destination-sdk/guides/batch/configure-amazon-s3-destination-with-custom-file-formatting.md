@@ -1,6 +1,6 @@
 ---
 description: Learn how to use Destination SDK to configure an Amazon S3 destination with custom file name and formatting options.
-title: Configure an Amazon S3 destination with custom file name and formatting options.
+title: Configure Amazon S3 with Custom File Formatting
 exl-id: eed73572-5050-44fa-ba16-90729c65495e
 TQID: https://experienceleague.adobe.com/XsGk9jcmt49cmXYkYlp5-KC6LW9ew2XdbjVmm3WHrzY
 product_v2:
@@ -17,7 +17,7 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
 ---
-# Configure an Amazon S3 destination with custom file name and formatting options
+# Configure an [!DNL Amazon S3] destination with custom file formatting
 
 ## Overview {#overview}
 
