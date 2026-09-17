@@ -1,6 +1,6 @@
 ---
 description: Learn how to use Destination SDK to configure an SFTP destination with predefined file formatting options and custom file name configuration.
-title: Configure an SFTP destination with predefined file formatting options and custom file name configuration.
+title: Configure SFTP with Predefined File Formatting
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
 TQID: https://experienceleague.adobe.com/7V5yaoZxo7rnZrfVD1tTojDxfdo-C42TU4-FHzDO4aI
 product_v2:
@@ -17,7 +17,7 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
 ---
-# Configure an SFTP destination with predefined file formatting options and custom file name configuration
+# Configure an SFTP destination with predefined file formatting
 
 ## Overview {#overview}
 
