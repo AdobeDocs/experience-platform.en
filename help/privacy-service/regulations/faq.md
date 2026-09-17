@@ -107,13 +107,34 @@ Assuming that the business has collected personal information and that it can au
 
 | Regulation | Timeframe to respond | Notes |
 | --- | --- | --- |
+| APA (Australia) | 30 days | |
 | CCPA (California) | 45 days | |
-| GDPR (European Union) | 30 days | |
-| LGPD (Brazil) | 15 days | |
-| PDPA (Thailand) | 30 days | If a company cannot respond to a data subject's request within the compliance window, the company will have an additional 30 days from the date they were unable to fulfill the request to respond in writing to the data subject. |
+| CPA (Colorado) | 45 days | |
+| CPRA (California) | 45 days | |
+| CTDPA (Connecticut) | 45 days | |
+| DPDPA (Delaware) | 45 days | |
 | DPDPA (India) | 30 days | |
-
-<!-- | New Zealand [!DNL Privacy Act] | 20 working days | | -->
+| FDBR (Florida) | 45 days | |
+| GDPR (European Union) | 30 days | |
+| HIPAA (United States) | 30 days | HIPAA provides an access right only; it does not provide a deletion right. |
+| ICDPA (Iowa) | 90 days | |
+| LGPD (Brazil) | 15 days (access), 30 days (delete) | |
+| MCDPA (Minnesota) | 45 days | |
+| MCDPA (Montana) | 45 days | |
+| MHMDA (Washington) | 45 days | |
+| MODPA (Maryland) | 45 days | |
+| NDPA (Nebraska) | 45 days | |
+| New Zealand [!DNL Privacy Act] | 20 working days (access), 180 days (delete) | Under the New Zealand Privacy Act, deletion is treated as a secondary right. |
+| NHDPA (New Hampshire) | 45 days | |
+| NJDPA (New Jersey) | 45 days | |
+| OCPA (Oregon) | 45 days | |
+| PDPA (Thailand) | 30 days | If a company cannot respond to a data subject's request within the compliance window, the company will have an additional 30 days from the date they were unable to fulfill the request to respond in writing to the data subject. |
+| PIPA (South Korea) | 10 days | |
+| QL25 (Quebec) | 20 days | |
+| TDPSA (Texas) | 45 days | |
+| TIPA (Tennessee) | 45 days | |
+| UCPA (Utah) | 45 days | |
+| VCDPA (Virginia) | 45 days | |
 
 ### Does my business need to appoint a data protection officer?
 
