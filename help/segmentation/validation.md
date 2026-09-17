@@ -43,6 +43,8 @@ Currently, the following validations are supported:
 
 The logical complexity validation analyzes the structure of your logical statements (AND, OR, NOT) within your audience definition. Specifically, it looks for audience definitions that will force the system to perform an excessive number of comparisons per profile.
 
+![The Logical complexity check failing is shown within the Audience validation UI.](/help/segmentation/images/validation/logical-complexity.png)
+
 If your audience definition has an excessive number of comparisons per profile, this increased complexity leads to slower evaluation on a per profile basis. As a result, this increases the overall time taken for audience evaluation.
 
 To avoid triggering this validation, keep your audience definition simple. If you can't understand your own audience definition, it's too complicated and Experience Platform may take longer to evaluate the audience.
@@ -108,6 +110,8 @@ plan.equals("trial") AND region.equals("canada")
 
 The sequential event complexity validation limits the number of sequential events in a sequence to 3 events.
 
+![The Sequential events check failing is shown within Audience validation.](/help/segmentation/images/validation/sequential-events.png)
+
 Sequential segmentation is one of the most computationally complicated operations within Experience Platform, since the system needs to scan a customer's entire history of Experience Events, sort them by timestamp, and verify if the specified order matches your query. As a result, when the chain grows, the number of permutations the system needs to calculate drastically increases.
 
 To avoid triggering this validation, focus on the basics of your sequential chain by defining the beginning, middle, and end of the journey. Immediate steps are often implied within the final conversion.
@@ -155,6 +159,8 @@ To avoid triggering this validation, only use specific counts when it's strictly
 >abstract="Your audience has too many nested data layers. You should use a maximum of 2 layers of data within your audience. To avoid performance issues, you should flatten your audience definition."
 
 The nested data complexity validation limits the number of nested data within an audience definition to 2 layers. 
+
+![The Nested data check failing is shown within the Audience validation UI.](/help/segmentation/images/validation/nested-data.png)
 
 While Experience Platform supports the use of array and map objects to store complex data types, unpacking nested structures to find a value requires more complex traversal logic. The deeper data is nested in an array, the longer it takes to retrieve for validation.
 
