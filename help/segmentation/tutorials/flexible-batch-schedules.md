@@ -430,7 +430,7 @@ A successful response returns HTTP status 204 with no content.
 
 ## Next steps
 
-After reading this guide, you now know how to use Flexible Batch Schedules either using the Experience Platform API or UI. For more information on the Flexible Batch Schedules UI, read the [evaluation overview](/help/segmentation/ui/evaluation.md). For more information on the schedules API, read the [schedules endpoint guide](/help/segmentation/api/schedules.md). To learn how Flexible Batch Schedules works with your capacity and credits, read the [license usage and capacities overview](/help/landing/license-usage-and-guardrails/capacity.md).
+After reading this guide, you now know how to use Flexible Batch Schedules either using the Experience Platform API or UI. For more information on the Flexible Batch Schedules UI, read the [segmentation service UI overview](/help/segmentation/ui/overview.md#evaluation). For more information on the schedules API, read the [schedules endpoint guide](/help/segmentation/api/schedules.md). To learn how Flexible Batch Schedules works with your capacity and credits, read the [license usage and capacities overview](/help/landing/license-usage-and-guardrails/capacity.md).
 
 ## Appendix {#appendix}
 
