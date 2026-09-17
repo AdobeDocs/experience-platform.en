@@ -123,7 +123,7 @@ For more information, read the [data ingestion overview](/help/ingestion/home.md
 | Feature | Description |
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [Activate audiences on-demand for streaming destinations](/help/destinations/ui/activate-now-streaming.md) | Trigger an immediate, on-demand resend of an audience's full current membership to a streaming destination without waiting for the next audience qualification or disqualification event. This update is rolling out through August 21, 2026. This feature is in private beta and available for a limited number of streaming destinations. Contact your Adobe representative to request access. <br> ![Triggering an on-demand resend of an audience's full membership to a streaming destination using Activate now.](../2026/assets/august/activate-now-streaming.gif){zoomable="yes"} |
-| [Data type filter in the destinations catalog](/help/destinations/catalog/overview.md) | Find the destination you need faster by filtering the **[!UICONTROL Browse]** tab of the destinations catalog by data type. This update is rolling out through the first week of September 2026. <br> ![Filtering destinations by data type in the Browse tab of the destinations catalog.](../2026/assets/august/data-type-filter-browse.gif){zoomable="yes"} |
+| [!BADGE Postponed]{type=Negative} [Data type filter in the destinations catalog](/help/destinations/catalog/overview.md) | Find the destination you need faster by filtering the **[!UICONTROL Browse]** tab of the destinations catalog by data type. **This update has been postponed to the September 2026 release.** <br> ![Filtering destinations by data type in the Browse tab of the destinations catalog.](../2026/assets/august/data-type-filter-browse.gif){zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -166,7 +166,7 @@ Use Segmentation Service to create audiences from your customer data and manage 
 | Feature | Description |
 | --- | --- |
 | Batch segmentation progress transparency | When a batch segmentation job is processing, you can now see the percentage of the audience that has been evaluated. This lets you better estimate the remaining time needed for the segmentation job, so you can meet your audience's activation timeline. For more information, read the [monitor audiences guide](/help/dataflows/ui/monitor-audiences.md). |
-| [!BADGE Beta]{type=Informative} Run Now | Run Now lets you trigger audience evaluation for a specific audience on demand, without waiting for a system-defined or user-defined schedule. For more information, read the [run now guide](/help/segmentation/methods/run-now.md). |
+| [!BADGE Beta]{type=Informative} On-demand evaluation | On-demand evaluation lets you trigger audience evaluation for a specific audience when needed, without waiting for a system-defined or user-defined schedule. For more information, read the [on-demand evaluation guide](/help/segmentation/methods/on-demand-evaluation.md). |
 | External account audiences (B2B) | You can now upload account audiences using the external audiences endpoint. For more information, read the [external audiences endpoint guide](/help/segmentation/api/external-audiences.md). |
 | Time-series custom objects (B2B) | You can now use time-series relational schemas in custom objects for segmentation use cases in [!DNL Real-Time CDP B2B Edition]. For more information, read the [custom objects guide](/help/rtcdp/segmentation/custom-objects.md). |
 

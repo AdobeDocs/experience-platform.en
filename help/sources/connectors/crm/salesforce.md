@@ -39,6 +39,10 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 Experience Platform provides support for ingesting data from a third-party CRM system. Support for CRM providers include [!DNL Salesforce].
 
+>[!IMPORTANT]
+>
+>The [!DNL Salesforce] source connector detects only soft-deleted records. It does not support hard deletes. When you hard delete a record in [!DNL Salesforce], the record is permanently removed and [!DNL Salesforce] does not expose it through its APIs. Experience Platform cannot detect or propagate hard-deleted records as a result. To ensure deletions reach Experience Platform, delete records in [!DNL Salesforce] using soft delete, which moves them to the [!DNL Recycle Bin] and keeps them retrievable through the [!DNL Salesforce] API.
+
 ## Set up your [!DNL Salesforce] source for Experience Platform on Azure {#azure}
 
 Follow the steps below to learn how you can set up your [!DNL Salesforce] account for Experience Platform on Azure.
@@ -306,6 +310,21 @@ To connect your [!DNL Salesforce] account to Experience Platform in an AWS regio
 - A [!DNL Salesforce] account with API access.
 - A [!DNL Salesforce Connected App] that you can then use to enable JWT_BEARER OAuth flow.
 - The necessary permissions in [!DNL Salesforce] to access data.
+
+### Connect to a Production or Sandbox org {#environment-type}
+
+The [!DNL Salesforce] source on AWS supports both Production and Sandbox (non-Production) orgs. Use the `environmentType` parameter to specify which type of org Experience Platform authenticates against.
+
+| Value | Description |
+| --- | --- |
+| `PRODUCTION` | Connects to a Production or Developer Edition org. This is the default value when `environmentType` is not specified. |
+| `SANDBOX` | Connects to a Sandbox org. |
+
+The instance URL format for a Sandbox org differs from a Production org. Use the following format when you provide the `instanceUrl` value for a Sandbox org: `https://[domain]--[sandbox-name].sandbox.my.salesforce.com`.
+
+>[!NOTE]
+>
+>Scratch orgs and orgs that enforce a strict My Domain login policy are not currently supported.
 
 ### IP address allowlist for connection on AWS
 

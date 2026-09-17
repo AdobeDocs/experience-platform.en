@@ -42,6 +42,10 @@ Use the `/workorder` endpoint in the Data Hygiene API to create, view, and manag
 
 Before you begin, see the [overview](./overview.md) to learn about required headers, how to read sample API calls, and where to find related documentation.
 
+>[!NOTE]
+>
+>To create, update, or delete record delete work orders, your user account must have the **[!UICONTROL Manage Data Lifecycle]** permission for the applicable sandbox. Read-only operations require **[!UICONTROL View Data Lifecycle]**. For more information about assigning Experience Platform permissions, see the [access control overview](../../access-control/home.md).
+
 ## Quotas and processing timelines {#quotas}
 
 Record delete work orders are subject to daily and monthly identifier submission limits, determined by your organization's license entitlement. These limits apply to both UI- and API-based record delete requests.
@@ -193,6 +197,10 @@ The following table describes the properties in the response.
 ## Create a record delete work order {#create}
 
 To delete records associated with one or more identities from a single dataset, multiple datasets, or all datasets, make a POST request to the `/workorder` endpoint.
+
+>[!NOTE]
+>
+>Creating record delete work orders requires the **[!UICONTROL Manage Data Lifecycle]** permission. For more information, see the [access control overview](../../access-control/home.md).
 
 Work orders are processed asynchronously and appear in the work order list after submission. Multi-dataset and profile-only (targeted services) options are generally available for all customers as of the March 2026 Experience Platform release.
 

@@ -1,41 +1,41 @@
 ---
-title: Run Now Evaluation Guide
-description: Learn how to immediately evaluate an audience, using run now evaluation, so you can activate it to a destination.
+title: On-Demand Evaluation Guide
+description: Learn how to immediately evaluate an audience, using on-demand evaluation, so you can activate it to a destination.
 ---
 
-# Run now evaluation guide
+# On-demand evaluation guide
 
 >[!AVAILABILITY]
 >
->Run now evaluation is currently in **Beta**. For more information, contact Adobe Customer Care.
+>On-demand evaluation is currently in **Beta**. For more information, contact Adobe Customer Care.
 
-Run now evaluation lets you **immediately** activate an audience to a destination on demand. With run now evaluation, you don't need to wait for your system schedule to activate your audience and you can move immediately from building your audience to evaluating your audience. 
+On-demand evaluation lets you **immediately** activate an audience to a destination right away. With on-demand evaluation, you don't need to wait for your system schedule to activate your audience and you can move immediately from building your audience to evaluating your audience. 
 
 As a result, you can iterate through the process of audience creation - building, validating, iterating, and activating - in a manner of minutes, since you can move straight from building an audience to activating an audience.
 
 ## Guardrails {#guardrails}
 
-With run now evaluation, please keep the following conditions in mind:
+With on-demand evaluation, please keep the following conditions in mind:
 
-- You receive 1,000 included run now evaluation runs per contract year. The allowance resets on your contract anniversary. Additional runs can be purchased in packs of 100.
-  - A year is defined as one year starting on the date of your Experience Platform contract for run now evaluations. For example, if you contract started on May 18th, your number of run now evaluation runs will reset every May 18th.
+- You receive 1,000 included on-demand evaluation runs per contract year. The allowance resets on your contract anniversary. Additional runs can be purchased in packs of 100.
+  - A year is defined as one year starting on the date of your Experience Platform contract for on-demand evaluations. For example, if you contract started on May 18th, your number of on-demand evaluation runs will reset every May 18th.
 - Run Evaluation results can **only** be sent to the following locations:
   - File-based destinations configured with **After segment evaluation** schedule
   - The **Audience Orchestration Run Now Profile Dataset**
 
 >[!NOTE]
 >
->You can purchase additional Run now evaluation runs. For more information, contact Adobe Customer Care.
+>You can purchase additional on-demand evaluation runs. For more information, contact Adobe Customer Care.
 
-## Running run now evaluation {#run}
+## Running on-demand evaluation {#run}
 
-To begin a run now evaluation within the Experience Platform UI, open Audience Portal by selecting **[!UICONTROL Audiences]** in the **[!UICONTROL Customers]** section.
+To begin an on-demand evaluation within the Experience Platform UI, open Audience Portal by selecting **[!UICONTROL Audiences]** in the **[!UICONTROL Customers]** section.
 
 The Audience Portal is displayed, showing a list of all the people audiences for the organization. In Audience Portal, select the audience you want to have evaluated, and select **[!UICONTROL Run now]**.
 
 ![The Run now button is highlighted within the more actions.](/help/segmentation/images/methods/run-now/select-run-now.png)
 
-The following table displays the types of audiences that support run now evaluation:
+The following table displays the types of audiences that support on-demand evaluation:
 
 | Audience definition | Supported |
 | ------------------- | --------- |
@@ -68,21 +68,21 @@ If you select **[!UICONTROL Top 20 results]**, you can see a preview of qualifie
 
 ## Frequently asked questions {#faq}
 
-The following section lists frequently asked questions related to run now evaluation.
+The following section lists frequently asked questions related to on-demand evaluation.
 
 ### If my audience depends on other audiences, does triggering it use more than one run?
 
-Yes. Each audience evaluated using a run now evaluation consumes 1 Run. If your audience depends on other audiences, using a run now evaluation evaluates each of the other audiences and each audience evaluation consumes 1 Run. For example, if your audience depends on three other audiences, 4 Runs will be used. The total number of Runs a given evaluation will consume is displayed within the Run Now popover.
+Yes. Each audience evaluated using on-demand evaluation consumes 1 Run. If your audience depends on other audiences, using on-demand evaluation evaluates each of the other audiences and each audience evaluation consumes 1 Run. For example, if your audience depends on three other audiences, 4 Runs will be used. The total number of Runs a given evaluation will consume is displayed within the On-Demand Evaluation popover.
 
-### Can I send my run now evaluation results to my regular scheduled destination?
+### Can I send my on-demand evaluation results to my regular scheduled destination?
 
-No. Run now evaluation results can only be sent to file-based destinations configured with the **After segment evaluation** frequency or to the **Audience Orchestration Run Now Profile Dataset**. Scheduled-only destinations, such as daily or weekly batch destinations, cannot receive on-demand run now results.
+No. On-demand evaluation results can only be sent to file-based destinations configured with the **After segment evaluation** frequency or to the **Audience Orchestration Run Now Profile Dataset**. Scheduled-only destinations, such as daily or weekly batch destinations, cannot receive on-demand evaluation results.
 
-### Does run now evaluation permanently update my customer profiles?
+### Does on-demand evaluation permanently update my customer profiles?
 
-By default, run now evaluation does **not** permanently update your customer profiles.
+By default, on-demand evaluation does **not** permanently update your customer profiles.
 
-### Can I trigger run now evaluation on the same audience twice at the same time?
+### Can I trigger on-demand evaluation on the same audience twice at the same time?
 
 No. You cannot concurrently run evaluation on the same audience.
 
