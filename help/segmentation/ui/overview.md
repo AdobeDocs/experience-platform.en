@@ -142,7 +142,7 @@ More information about edge segmentation can be found in the [edge segmentation 
 
 The **[!UICONTROL Evaluation]** tab displays a list of schedules available for segmentation in your organization. This page displays both the system-created schedule and user-created schedules for your organization.
 
-![](/help/segmentation/images/ui/overview/evaluation.png)
+![The Evaluation tab is highlighted within the Segmentation Service UI.](/help/segmentation/images/ui/overview/evaluation.png)
 
 - **System schedule**: The daily schedule for batch segmentation that is created by the Experience Platform system. Every sandbox has only **one** system created schedule.
 - **Custom schedule**: A schedule for batch segmentation that you created. The custom schedule lets you evaluate your specified audiences on a daily, weekly, or monthly cadence.
@@ -188,6 +188,19 @@ If you select **[!UICONTROL Schedule audiences]**, the **[!UICONTROL Schedule au
 On this page, you can select which audiences you want to be activated by the schedule. Choose the audiences you want to be activated by the schedule, and select **[!UICONTROL Schedule]** to add them to the schedule.
 
 ![The Schedule button is highlighted within the Schedule audiences popover.](/help/segmentation/images/ui/overview/select-schedule.png)
+
+For more detailed information on using schedules, read the [flexible batch schedules guide](/help/segmentation/tutorials/flexible-batch-schedules.md).
+
+### Profile snapshot {#profile-snapshot}
+
+A profile snapshot contains profiles and audience membership data for an audience. There are two different types of profile snapshots: point-in-time snapshot and partial snapshot.
+
+| &npsp; | Point-in-time snapshot | Partial snapshot |
+| ------ | ---------------------- | ---------------- |
+| Generated | Generated when a **system schedule** is run. | Generated when a **custom schedule** is run. |
+| Content | Contains **all** profiles and audience memberships. | Contains profiles whose membership changed (for example from realized to exited) for the audiences on that schedule. |
+| Freshness | Varies depending on the audience's last evaluation time. | Fresh for audiences on that specific schedule. |
+| Size | The full dataset. | Only the delta - so the difference between the last snapshot. |
 
 ## Policy violations
 

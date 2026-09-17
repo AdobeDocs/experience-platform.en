@@ -140,6 +140,10 @@ The following guardrails refer to data size and provide recommended limits for d
 
 The guardrails outlined in this section refer to the number and nature of audiences an organization can create within Experience Platform, as well as mapping and activating audiences to destinations.
 
+>[!NOTE]
+>
+>An increase of 10,000 audiences per sandbox is in **limited availability**. In order to make use of this new guardrail, you **must** have access to Flexible Batch Schedules. For more information on Flexible Batch Schedules, read the [Flexible Batch Schedules guide](/help/segmentation/tutorials/flexible-batch-schedules.md).
+
 | Guardrail | Limit | Limit Type | Description |
 | --------- | ----- | ---------- | ----------- |
 | Audiences per sandbox | 4000 | Performance guardrail | You can have up to 4000 **active** audiences per sandbox. You can have more than 4000 audiences per organization, as long as there are less than 4000 audiences in each **individual** sandbox. This is inclusive of batch, streaming, and edge audiences. Attempting to create additional audiences may affect system performance. Read more about [creating audiences](/help/segmentation/ui/segment-builder.md) through Segment Builder. |

@@ -430,4 +430,99 @@ A successful response returns HTTP status 204 with no content.
 
 ## Next steps
 
-After reading this guide, you now know how to use Flexible Batch Schedules either using the Experience Platform API or UI. For more information on the Flexible Batch Schedules UI, read the [evaluation overview](/help/segmentation/ui/evaluation.md). For more information on the schedules API, read the [schedules endpoint guide](/help/segmentation/api/schedules.md).
+After reading this guide, you now know how to use Flexible Batch Schedules either using the Experience Platform API or UI. For more information on the Flexible Batch Schedules UI, read the [evaluation overview](/help/segmentation/ui/evaluation.md). For more information on the schedules API, read the [schedules endpoint guide](/help/segmentation/api/schedules.md). To learn how Flexible Batch Schedules works with your capacity and credits, read the [license usage and capacities overview](/help/landing/license-usage-and-guardrails/capacity.md).
+
+## Appendix {#appendix}
+
+The following appendix lists how cross-schedule dependencies work and frequently asked questions about flexible batch schedules.
+
+### Cross-schedule dependencies {#cross-schedule-dependencies}
+
+If one audience refers to another audience as a dependency, that dependency can pull that audience into a schedule it doesn't belong to.
+
+Consider the following four audiences and two schedules:
+
+Schedule A: Audience 1, Audience 4
+Schedule B: Audience 2, Audience 3
+
+Audience 1 refers to Audience 2 through a dependency, so Audience 1 **needs** Audience 2's evaluated membership to compute its own.
+
+When Schedule A runs, Audience 1 and Audience 4 evaluate, as expected. However, Audience 2 *also* runs, since it's a dependency of Audience 1. 
+
+When Schedule B runs, Audience 2 and Audience 3 evaluate, as expected. In this scenario, Audience 1 does **not** get evaluated, since Audience 2 does not depend on Audience 1.
+
+As a result, this means audiences that are dependents of other audiences (such as Audience 2 in the above scenario) *may* evaluate more than once a day - once as part of its own scheduled evaluation, and once as part of the schedule of the audience that depends on the other audience.
+
+### Frequently asked questions {#faq}
+
+**Do I need to do anything to keep using the daily evaluation I currently have?**
+
++++ Answer
+
+No. The system schedule continues to run automatically. Nothing changes unless you create a custom schedule.
+
++++
+
+**Can an audience be in both the system schedule and a custom schedule at the same time?**
+
++++ Answer
+
+No. An audience evaluation can **only** be on either the system schedule or a custom schedule.
+
++++
+
+**Can an audience be assigned to more than one custom schedule?**
+
++++ Answer
+
+Yes! An audience can be assigned to more than one custom schedule.
+
++++
+
+**Can streaming or edge audiences use custom schedules?**
+
++++ Answer
+
+No. Streaming and edge audiences always evaluate on the system schedule.
+
++++
+
+**Can I assign an audience composition to a custom schedule?**
+
++++ Answer
+
+No. Audience compositions are automatically evaluated as part of the system schedule. This includes any internal audiences that are part of the composition.
+
++++
+
+**How many schedules can I run?**
+
++++ Answer
+
+You can run up to 4 schedules per day. This **includes** the system schedule. 
+
++++
+
+**Do I need Flexible Batch Schedules to have more than 4,000 batch audiences?**
+
++++ Answer
+
+Yes. Flexible Batch Schedules is required for you to have 10,000 batch audiences.
+
++++
+
+**Does creating a custom schedule cost anything?**
+
++++ Answer
+
+You get one weekly custom schedule (52 scheduled runs) included with Experience Platform. Additionally, the system schedule is always free. If you want to create additional custom schedules, the additional scheduled runs will consume credits. For more information, read the [license usage and capacities overview](/help/landing/license-usage-and-guardrails/capacity.md).
+
++++
+
+**How can I see if my schedule ran?**
+
++++ Answer
+
+You can see if your schedule ran within the segmentation job monitoring view. Select **[!UICONTROL Monitoring]** followed by **[!UICONTROL Dashboard]**, **[!UICONTROL Audiences]**, and **[!UICONTROL Segmentation job]**. From here, select the ![filter icon](/help/images/icons/filter.png) next to the time the schedule ran to see the list of audiences evaluated by the schedule.
+
++++
