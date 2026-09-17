@@ -407,6 +407,29 @@ Once you have identified the target objects that you want to update, select **[!
 
 ![The target objects selected.](../images/ui/sandbox-tooling/add-updated-objects.png)
 
+## Multi-sandbox management {#multi-sandbox-management}
+
+Use multi-sandbox management to centrally promote supported objects from a source sandbox, such as a headquarters or authoring sandbox, to multiple target sandboxes in a single workflow. This capability reduces the manual, package-by-package effort of keeping several sandboxes in sync.
+
+Use multi-sandbox management when you maintain a canonical set of objects in one source sandbox and need to roll the same configuration out to several target sandboxes at once. For example, use this workflow to keep brand-specific or region-specific sandboxes aligned with a shared headquarters sandbox.
+
+### Supported objects for multi-sandbox management {#multi-sandbox-supported-objects}
+
+The initial release of multi-sandbox management supports the following object types:
+
+- Schemas
+- Datasets
+
+Other object types, such as audiences and journeys, are not yet supported for multi-sandbox management. Use the package-based sandbox tooling workflow described earlier on this page to move those object types between sandboxes.
+
+### Select source objects and target sandboxes {#select-source-objects-and-target-sandboxes}
+
+To start a multi-sandbox promotion, navigate to **[!UICONTROL Sandboxes]**, select the **[!UICONTROL Packages]** tab, and select **[!UICONTROL Promote to sandboxes]**. Select the objects that you want to promote from your source sandbox, then select the target sandboxes that you want to receive them.
+
+### How this differs from package-based sandbox tooling {#multi-sandbox-vs-package-based}
+
+The package-based sandbox tooling workflow described earlier on this page requires you to create, publish, and import a package into each target sandbox individually. Multi-sandbox management lets you select multiple target sandboxes in a single workflow, so you do not need to repeat the export and import steps for each destination.
+
 ## Video tutorial
 
 The following video is intended to support your understanding of sandbox tooling, and outlines how to create a new package, publish a package, and import a package.
