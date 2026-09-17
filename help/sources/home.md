@@ -255,6 +255,7 @@ You can use the following sources to ingest loyalty data to Experience Platform.
 | Source | Ingestion type | Cloud |
 | --- | --- | --- |
 | [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
+| [[!DNL Kobie Streaming Events]](connectors/loyalty/kobie-streaming.md) | Streaming | Azure |
 | [[!DNL LAVA]](connectors/loyalty/lava.md) | Streaming | Azure |
 | [[!DNL Talon.One]](connectors/loyalty/talon-one.md) | Batch, Streaming | Azure |
 
@@ -310,6 +311,21 @@ You can use the following sources to ingest protocol data to Experience Platform
 | [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) | Batch | Azure |
 
 {style="table-layout:auto"}
+
+## TLS v1.3 compatibility
+
+Transport Layer Security (TLS) is a security protocol that protects data exchanged between a client and a server. It encrypts data in transit, helps authenticate the communicating parties, and protects the data from being modified during transmission. TLS 1.3 is a newer version that provides stronger security and a more efficient connection setup than earlier versions.
+
+TLS version support can vary by source connector. The following Experience Platform source connectors are compatible with TLS v1.3 connections:
+
+- [[!DNL Azure Blob Storage]](connectors/cloud-storage/blob.md) 
+- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md)
+- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md)
+- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md)
+- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md)
+- [[!DNL Snowflake] batch connector](connectors/databases/snowflake.md)
+
+For authentication, network configuration, and connector-specific setup requirements, see the documentation for the individual source connector.
 
 ## Access control for sources in data ingestion
 

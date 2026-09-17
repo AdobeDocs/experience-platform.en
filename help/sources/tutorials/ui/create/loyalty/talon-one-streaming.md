@@ -1,7 +1,6 @@
 ---
 title: Stream Data From Talon.One To Experience Platform Using The UI
 description: Learn how to stream data from Talon.One into Adobe Experience Platform using the UI. This guide covers setup, data selection, and dataflow configuration.
-badge: Beta
 last-substantial-update: 2026-04-06T00:00:00.000Z
 exl-id: a92e17dd-123c-4e83-a851-3cf2861751e5
 TQID: https://experienceleague.adobe.com/TdUmXGZhf8e9Zmz3poKNQhkxa4JBbTDk1fIw-AKdVR8
@@ -19,10 +18,6 @@ topic_v2:
     internal-label: Customer experience
 ---
 # Stream [!DNL Talon.One] data to Experience Platform using the UI
-
->[!AVAILABILITY]
->
->The [!DNL Talon.One] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
 Read this guide to learn how to connect and stream your data from [!DNL Talon.One] to Adobe Experience Platform using the sources workspace in the UI.
 

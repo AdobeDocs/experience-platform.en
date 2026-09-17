@@ -5,6 +5,10 @@ description: Learn how to author an audience that is evaluated using streaming s
 
 # Multi-entity streaming segmentation
 
+>[!AVAILABILITY]
+>
+>In order to perform streaming segmentation with B2B, you **must** be using the upgraded streaming segmentation infrastructure. For more information, read the [streaming segmentation overview](/help/segmentation/methods/streaming-segmentation.md#may-20th-2025-eligibility-update).
+
 Multi-entity segmentation lets you refer to B2B entities within your audience definition. Previously, you could combine both B2B entities with streaming events in a single audience.
 
 For example, creating an audience such as the following, which has **both** a B2B attribute and a streaming event in a single audience is **not supported**.

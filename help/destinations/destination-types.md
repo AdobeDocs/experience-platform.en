@@ -58,7 +58,7 @@ Read this page to understand the different types and categories of [!DNL Adobe E
 
 ## Destination types {#destination-types}
 
-In [!DNL Adobe Experience Platform], we distinguish between different destination types - connections, dataset exports, and extensions. There are several types of connection destinations, allowing you to export data to API-based destinations, social destinations, CRM platforms, and many more.
+[!DNL Adobe Experience Platform] supports destination types including connections, dataset exports, and extensions. Connection destinations allow you to export data to API-based destinations, social destinations, CRM platforms, and many more.
 
 Finally, connections can also be distinguished between public destinations available across all organizations in the destinations catalog, and private destinations which [!DNL Real-Time CDP] Ultimate customers can create to satisfy their specific export use cases.
 
@@ -70,11 +70,11 @@ Finally, connections can also be distinguished between public destinations avail
 
 ## Connections {#connections}
 
-**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]**, and **[!DNL Edge Personalization]** destinations in [!DNL Adobe Experience Platform] capture event data, combine it with other data sources to form the [Real-Time Customer Profile](../profile/home.md), apply segmentation, and export audiences and qualified profiles to destinations. 
+**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]**, and **[!UICONTROL Edge Personalization]** destinations in [!DNL Adobe Experience Platform] capture event data, combine it with other data sources to form the [Real-Time Customer Profile](../profile/home.md), apply segmentation, and export audiences and qualified profiles to destinations. 
 
 ## Profile export destinations {#profile-export}
 
-Profile export destinations receive raw data, often with email address as the primary key. Experience Platform currently supports two types of profile export destinations:
+Profile export destinations receive untouched data that typically includes email address as the primary key. Experience Platform currently supports two types of profile export destinations:
 
 * [Batch (file-based) destinations](#file-based)
 * [Advanced enterprise destinations (streaming profile export destinations)](#advanced-enterprise-destinations)
@@ -117,7 +117,7 @@ Read more about how to [configure personalization destinations for same-page and
 
 ## Profile export and audience export destinations - video overview {#video}
 
-The video below runs you through the particularities of the two types of destinations:
+The video below explains the differences between the two types of destinations:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 

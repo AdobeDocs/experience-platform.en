@@ -32,6 +32,7 @@ role: Developer
       - [ECID mapping migration guide](connectors/adobe-applications/marketo/migration.md)
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
+    - {hide-from-toc} [Google Ads (V2) connector](connectors/advertising/google-ads.md)
     - [Meta Ads connector](connectors/advertising/meta-ads.md)
     - {hide-from-toc} [Pinterest Ads](connectors/advertising/pinterest-ads.md)
   - Analytics {#analytics}
@@ -102,6 +103,7 @@ role: Developer
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Loyalty {#loyalty}
     - [Capillary Streaming Events](connectors/loyalty/capillary.md)
+    - [Kobie Streaming Events](connectors/loyalty/kobie-streaming.md)
     - [LAVA](connectors/loyalty/lava.md)
     - [Talon.One](connectors/loyalty/talon-one.md)
   - Marketing automation {#marketing-automation}
@@ -116,6 +118,7 @@ role: Developer
     - [PathFactory](connectors/marketing-automation/pathfactory.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
     - [Salesforce Marketing Cloud (V2)](connectors/marketing-automation/sfmc.md)
+    - {hide-from-toc} [WhatsApp](connectors/marketing-automation/whatsapp.md)
   - Payments {#payments}
     - [Square](connectors/payments/square.md)
     - [Stripe](connectors/payments/stripe.md)
@@ -250,6 +253,7 @@ role: Developer
       - [Marketo Custom Activities](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
+      - {hide-from-toc} [Google Ads (V2)](tutorials/ui/create/advertising/google-ads.md)
       - [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
       - {hide-from-toc} [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
     - Analytics {#analytics}
@@ -321,7 +325,7 @@ role: Developer
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Loyalty {#loyalty}
       - [Capillary Streaming Events](tutorials/ui/create/loyalty/capillary.md)
-      - {hide-from-toc} [Kobie Streaming Events](tutorials/ui/create/loyalty/kobie-streaming.md)
+      - [Kobie Streaming Events](tutorials/ui/create/loyalty/kobie-streaming.md)
       - [LAVA](tutorials/ui/create/loyalty/lava.md)
       - [Talon.One Streaming Events](tutorials/ui/create/loyalty/talon-one-streaming.md)
       - [Talon.One Batch source connector](tutorials/ui/create/loyalty/talon-one-batch.md)
@@ -340,6 +344,7 @@ role: Developer
       - [Relay Connector](tutorials/ui/create/marketing-automation/relay-connector.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - [Salesforce Marketing Cloud (V2)](tutorials/ui/create/marketing-automation/sfmc.md)
+      - {hide-from-toc} [WhatsApp](tutorials/ui/create/marketing-automation/whatsapp.md)
     - Payments {#payments}
       - [Square](tutorials/ui/create/payments/square.md)
       - [Stripe](tutorials/ui/create/payments/stripe.md)
@@ -400,6 +405,7 @@ role: Developer
     - [Create a connection specification for a streaming source](sources-sdk/streaming/create.md)
     - [Update a connection specification for a streaming source](sources-sdk/streaming/update-connection-specs.md)
     - [Update the streaming flow specification](sources-sdk/streaming/update-flow-specs.md)
+    - [Configure authentication for a Streaming SDK connector](sources-sdk/streaming/authentication.md)
     - [Test and submit your connection specification for verification](sources-sdk/streaming/submit.md)
     - [Document your source (Streaming SDK)](sources-sdk/streaming/document-streaming.md)
     - [Documentation self-service API streaming template](sources-sdk/streaming/streaming-template-api.md)

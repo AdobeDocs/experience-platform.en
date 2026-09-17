@@ -1,7 +1,6 @@
 ---
 title: Connect Capillary to Experience Platform using the UI
 description: Learn how to connect Capillary to Experience Platform using the the UI
-badge: Beta
 exl-id: c90e6500-b92c-44ba-8de6-84e772bd9db1
 TQID: https://experienceleague.adobe.com/IIPpBRfeJSFkdOM9A0KbVbs9oCfThBlm8yMnph5sT4Q
 product_v2:
@@ -18,10 +17,6 @@ topic_v2:
     internal-label: Customer experience
 ---
 # Connect [!DNL Capillary Streaming Events] to Experience Platform using the UI
-
->[!AVAILABILITY]
->
->The [!DNL Capillary Streaming Events] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
 Read this guide to learn how to connect your [!DNL Capillary] database to Adobe Experience Platform using the sources workspace in the Experience Platform user interface.
 

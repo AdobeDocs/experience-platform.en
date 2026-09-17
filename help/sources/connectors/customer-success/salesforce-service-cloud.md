@@ -15,6 +15,12 @@ topic_v2:
 ---
 # [!DNL Salesforce Service Cloud]
 
+<!-- Deprecation note for PLAT-302697. Do not remove without confirming with the Sources PM. -->
+
+>[!WARNING]
+>
+>Basic authentication for the [!DNL Salesforce Service Cloud] source is deprecated. You must use OAuth 2 Client Credential authentication to continue ingesting data from your [!DNL Salesforce Service Cloud] account to Experience Platform.
+
 [!DNL Salesforce Service Cloud] is a customer success platform designed to automate service workflows and streamline communication between companies and their customers. It consolidates requests from various channels—such as email, phone, social media, and live chat into a unified agent console. This allows support teams to manage "cases" with a 360-degree view of the customer's history, ensuring that responses are personalized and efficient regardless of how the customer reaches out.
 
 You can use the [!DNL Salesforce Service Cloud] source connector in Adobe Experience Platform Sources to connect your [!DNL Salesforce Service Cloud] account and bring your data for use in Experience Platform Services.

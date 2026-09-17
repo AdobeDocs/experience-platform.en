@@ -54,6 +54,10 @@ Data usage labels allow you to categorize datasets and fields according to [gove
 
 This document outlines the core data usage labels currently provided by Experience Platform.
 
+>[!NOTE]
+>
+>These same labels are also used as `core/` labels when restricting access to an entire dataset using `accessLabels`. See [Update array fields](../../catalog/api/update-object.md#array-fields) for more information on setting `accessLabels`.
+
 ## Contract labels {#contract}
 
 Contract "C" labels are used to categorize data that has contractual obligations or is related to your organization's data governance policies.
