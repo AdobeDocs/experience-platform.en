@@ -463,14 +463,6 @@ No. The system schedule continues to run automatically. Nothing changes unless y
 
 +++
 
-**Can an audience be in both the system schedule and a custom schedule at the same time?**
-
-+++ Answer
-
-No. An audience evaluation can **only** be on either the system schedule or a custom schedule.
-
-+++
-
 **Can an audience be assigned to more than one custom schedule?**
 
 +++ Answer
