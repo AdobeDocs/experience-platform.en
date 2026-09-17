@@ -157,7 +157,7 @@ Adobe makes use of the standard inputs below to simplify destination configurati
 
 >[!NOTE]
 >
-> You don't need to add any parameters for `username` and `password` in the configuration below. When you add `"grant": "OAUTH2_PASSWORD"` in the destination configuration, the system requests the user to provide a username and password in the [!DNL Experience Platform] UI, when they authenticate to your destination.
+> You do not need to add any parameters for `username` and `password` in the configuration below. When you add `"grant": "OAUTH2_PASSWORD"` in the destination configuration, the system requests the user to provide a username and password in the [!DNL Experience Platform] UI, when they authenticate to your destination.
 
 To set up this authorization method for your destination, add the following lines to your configuration, when you [create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md):
 
@@ -296,7 +296,7 @@ In this example, a partner sets up their destination to provide a special refres
 
 ### Example 3: The user inputs client ID and client secret when they configure the destination {#example-3}
 
-In this example, instead of creating a global client ID and client secret as shown in the section [Prerequisites in your system](#prerequisites), the customer is required to input client ID, client secret, and account ID (the ID that the customer uses to sign in to the destination)
+In this example, instead of creating a global client ID and client secret as shown in the section [Prerequisites in your system](#prerequisites), the customer is required to input client ID, client secret, and account ID (the ID that the customer uses to sign in to the destination).
 
 ```json
 

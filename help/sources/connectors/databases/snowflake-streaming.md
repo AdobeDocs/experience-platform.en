@@ -52,7 +52,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Snowflake], you must prov
 
 | Credential | Description |
 | --- | --- |
-| `account` | The full account identifier (account name or account locator) of your [!DNL Snowflake] account appended with the suffix `snowflakecomputing.com`. The account identifier can be of different formats: <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com (e.g. `acme-abc12345.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.snowflakecomputing.com (e.g. `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD}.snowflakecomputing.com (e.g. `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> For more information, read the [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
+| `account` | The full account identifier (account name or account locator) of your [!DNL Snowflake] account appended with the suffix `snowflakecomputing.com`. The account identifier can be of different formats: <ul><li><code>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com</code> (e.g. `acme-abc12345.snowflakecomputing.com`)</li><li><code>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.snowflakecomputing.com</code> (e.g. `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li><code>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD}.snowflakecomputing.com</code> (e.g. `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> For more information, read the [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
 | `warehouse` | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Experience Platform. |
 | `database` | The [!DNL Snowflake] database contains the data you want to bring the Experience Platform. |
 | `username` | The username for the [!DNL Snowflake] account. |
@@ -160,7 +160,7 @@ You must configure privileges to a role, even if the default public role is assi
 >
 >Auto-resume and auto-suspend must be enabled in the advanced settings configuration of your warehouse.
 
-For more information on role and privilege management, refer to the [[!DNL Snowflake] API reference](<https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>).
+For more information on role and privilege management, refer to the [[!DNL Snowflake] API reference](https://docs.snowflake.com/en/sql-reference/sql/grant-privilege).
 
 ## Convert Unix time to date fields
 
