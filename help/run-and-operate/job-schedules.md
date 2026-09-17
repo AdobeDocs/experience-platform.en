@@ -105,10 +105,6 @@ The timeline groups scheduled batch campaigns in [!DNL Adobe Journey Optimizer] 
 
 The **[!UICONTROL Campaigns]** summary card shows the number of campaign executions currently at risk. Select a campaign in the timeline to see its [campaign details](job-schedules-details.md#campaign-details), including its audience, recurrence, channel, and audience export and delivery counts.
 
->[!NOTE]
->
->Additional campaign timing categories may appear in the interface. This documentation will be updated to cover the full set of categories once confirmed.
-
 ### Filter campaigns {#filter-campaigns}
 
 Use the **[!UICONTROL Filter campaigns]** dialog to narrow down which scheduled batch campaigns appear in the timeline:

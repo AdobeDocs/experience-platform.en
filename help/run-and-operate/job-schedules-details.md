@@ -220,10 +220,6 @@ The dataflow run details panel displays information about the specific job run, 
 
 For scheduled batch campaigns in [!DNL Adobe Journey Optimizer], select the campaign name in the left column to open the [campaign details panel](#campaign-details), which shows total and in-progress counts for the campaign audience export and campaign delivery jobs.
 
->[!NOTE]
->
->Whether an individual campaign audience export or campaign delivery job run has its own detailed panel (with per-run status, start and completion times) is not yet confirmed against the shipped interface. This section will be updated once verified.
-
 ### Understanding job execution flow {#job-execution-flow}
 
 When viewing a specific job run, you can see the relationship between lake ingestion, profile ingestion, segmentation, and scheduled campaign delivery:
