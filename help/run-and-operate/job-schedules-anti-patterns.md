@@ -21,14 +21,14 @@ The [!UICONTROL Job Schedules] timeline view helps you identify common configura
 
 ## Automatically detected anti-patterns {#auto-detection}
 
-[!UICONTROL Job Schedules] automatically detects four common anti-patterns and surfaces warning indicators in the interface. For the batch pipeline anti-patterns, indicators appear on the relevant [summary cards](job-schedules.md#summary-cards). For the campaign timing anti-pattern, the indicator appears directly on the campaign row in the timeline. Select a warning indicator to open a details panel with a description of the issue, recommended actions, and a list of affected datasets, destinations, or campaigns.
+[!UICONTROL Job Schedules] automatically detects four common anti-patterns and surfaces warning indicators in the interface. For the batch pipeline anti-patterns, indicators appear on the relevant [summary cards](job-schedules.md#summary-cards) and open a details panel with a description of the issue, recommended actions, and a list of affected datasets or destinations. For the campaign timing anti-pattern, affected campaigns are grouped under a **[!UICONTROL start before segmentation end]** label directly in the timeline.
 
 | Auto-detected anti-pattern | Warning indicator location | More information |
 |---|---|---|
 | Profile ingestion daily limit | **[!UICONTROL Profile ingestion]** card | [Profile ingestion daily limit](#profile-ingestion-daily-limit) |
 | Profile ingestion too close to segmentation | **[!UICONTROL Segmentation]** card | [Scheduled job density](#scheduled-density) |
 | Segmentation too close to scheduled destination activation | **[!UICONTROL Destination activation]** card | [Schedule overlap](#schedule-overlap-pattern) |
-| Campaign scheduled to start before segmentation completes | **[!UICONTROL Start before segmentation end]** indicator on the campaign row | [Campaign start before segmentation end](#campaign-start-before-segmentation-end) |
+| Campaign scheduled to start before segmentation completes | **[!UICONTROL start before segmentation end]** grouping under the **[!UICONTROL Campaigns]** row | [Campaign start before segmentation end](#campaign-start-before-segmentation-end) |
 
 ## Prerequisites {#prerequisites}
 
@@ -90,7 +90,7 @@ When [!UICONTROL Job Schedules] detects segmentation running too close to a sche
 * **Add buffer time**: Reschedule the campaign to start after segmentation is projected to complete, with enough margin to absorb normal variation in segmentation duration.
 * **Review the dependency chain**: Confirm which segmentation job the campaign audience depends on, and adjust either schedule to remove the conflict.
 
-[!UICONTROL Job Schedules] flags this conflict directly on the campaign row in the timeline with the **[!UICONTROL Start before segmentation end]** timing category. A related **[!UICONTROL Start near segmentation end]** category flags campaigns with only a thin buffer before segmentation completion, giving you an early warning before the schedules conflict. For more information, see [scheduled campaign timing](job-schedules.md#campaign-timing).
+[!UICONTROL Job Schedules] flags this conflict directly on the timeline by grouping affected campaigns under a **[!UICONTROL start before segmentation end]** label beneath the **[!UICONTROL Campaigns]** row. For more information, see [scheduled campaign timing](job-schedules.md#campaign-timing).
 
 ## Scheduled job density {#scheduled-density}
 

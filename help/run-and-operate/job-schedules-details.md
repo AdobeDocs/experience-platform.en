@@ -33,7 +33,7 @@ Before viewing job details, you should:
 
 * Have access to **[!UICONTROL Job Schedules]** with the **[!UICONTROL View Job Schedules]** and **[!UICONTROL View Profile Management]** [access control permissions](/help/access-control/home.md#permissions).
 * Be familiar with the [Job Schedules interface](job-schedules.md#understanding-interface) and timeline view.
-* Understand the different [job types](job-schedules.md#job-schedules-details) (lake ingestion, profile ingestion, segmentation, activation, campaign delivery).
+* Understand the different [job types](job-schedules.md#job-schedules-details) (lake ingestion, profile ingestion, segmentation, activation, campaign audience export, campaign delivery).
 
 ## Understanding the details hierarchy {#details-hierarchy}
 
@@ -76,8 +76,8 @@ Use the table below to choose the right view for your task. Match what you need 
 | Check exact timing of a particular job execution | [Job run details](#view-job-details) |
 | Verify records processed in a single run | [Job run details](#view-job-details) |
 | Access detailed error messages | [Job run details](#view-job-details) → Select dataflow run ID |
-| Check whether a scheduled campaign is at risk of a timing conflict | [Campaign delivery metrics](#campaign-delivery-metrics) |
-| Confirm a scheduled campaign delivered successfully | [Job run details](#view-job-details) |
+| Check whether a scheduled campaign is at risk of a timing conflict | [Campaign details](#campaign-details) |
+| Confirm a scheduled campaign delivered successfully | [Campaign details](#campaign-details) |
 
 ## View dataset details {#view-dataset-details}
 
@@ -124,15 +124,33 @@ For datasets with profile ingestion jobs, the panel shows the following metrics:
 >
 > These metrics show cumulative totals across all job runs for this dataset. To see details for a specific run, select a job directly from the timeline.
 
-### Campaign delivery metrics {#campaign-delivery-metrics}
+### Campaign details {#campaign-details}
 
-For scheduled batch campaigns in [!DNL Adobe Journey Optimizer], the panel shows the following metrics:
+For scheduled batch campaigns in [!DNL Adobe Journey Optimizer], the timeline groups campaigns with a start time before the projected segmentation completion time under a **[!UICONTROL start before segmentation end]** label, so you can identify at-risk executions without opening a details panel.
 
-| Metric | Description | Use for |
-|--------|-------------|---------|
-| **[!UICONTROL Timing category]** | Whether the campaign send window is **[!UICONTROL Start before segmentation end]**, **[!UICONTROL Start near segmentation end]**, or **[!UICONTROL Safe timing]** relative to the upstream segmentation job | Timing risk assessment |
-| **[!UICONTROL Segmentation dependency]** | The upstream segmentation job that the campaign audience depends on | Dependency mapping |
-| **[!UICONTROL Delivery status]** | The outcome of the campaign delivery job (Success, Failed, In Progress, Queued) | Delivery confirmation |
+To view details for a specific campaign, select the campaign name from the left column. The campaign details panel opens in a right-side panel.
+
+![The campaign details panel showing campaign identifiers, audience, recurrence, channel, and audience export and campaign delivery metrics for a selected campaign.](assets/job-schedules/campaign-details.png){zoomable="yes"}
+
+The campaign details panel displays the following information:
+
+| Field | Description |
+|-------|-------------|
+| **[!UICONTROL Campaign ID]** | The unique identifier for the campaign. |
+| **[!UICONTROL Version ID]** | The unique identifier for the campaign version. |
+| **[!UICONTROL Audience]** | The audience the campaign sends to, shown as a link to the segment definition. |
+| **[!UICONTROL Recurrence type]** | Whether the campaign is **[!UICONTROL Recurring]**, **[!UICONTROL Once]**, or **[!UICONTROL Now]**. |
+| **[!UICONTROL Category]** | The campaign category, for example **[!UICONTROL Marketing]**. |
+| **[!UICONTROL Channel]** | The delivery channel for the campaign, for example **[!UICONTROL Email]**, **[!UICONTROL Push]**, or **[!UICONTROL SMS]**. |
+
+The panel also shows metrics for the two job types associated with the campaign:
+
+| Metric | Description |
+|--------|-------------|
+| **[!UICONTROL Total exports]** | The total number of campaign audience export jobs that have completed. |
+| **[!UICONTROL In progress exports]** | How many campaign audience export jobs are currently running. |
+| **[!UICONTROL Total deliveries]** | The total number of campaign delivery jobs that have completed. |
+| **[!UICONTROL In progress deliveries]** | How many campaign delivery jobs are currently running. |
 
 ## Filter datasets in the timeline {#filter-datasets}
 
@@ -200,13 +218,11 @@ The dataflow run details panel displays information about the specific job run, 
 
 #### Campaign delivery job details {#campaign-delivery-job-details}
 
-| Field | Description |
-|-------|-------------|
-| **[!UICONTROL Run status]** | The outcome of the campaign delivery job (Success, Failed, In Progress, Queued). |
-| **[!UICONTROL Started at]** | The date and time when the campaign delivery job began execution. |
-| **[!UICONTROL Completed at]** | The date and time when the campaign delivery job finished execution. |
-| **[!UICONTROL Timing category]** | The timing risk category evaluated for this run: **[!UICONTROL Start before segmentation end]**, **[!UICONTROL Start near segmentation end]**, or **[!UICONTROL Safe timing]**. |
-| **[!UICONTROL Segmentation dependency]** | The upstream segmentation job this campaign run depended on. |
+For scheduled batch campaigns in [!DNL Adobe Journey Optimizer], select the campaign name in the left column to open the [campaign details panel](#campaign-details), which shows total and in-progress counts for the campaign audience export and campaign delivery jobs.
+
+>[!NOTE]
+>
+>Whether an individual campaign audience export or campaign delivery job run has its own detailed panel (with per-run status, start and completion times) is not yet confirmed against the shipped interface. This section will be updated once verified.
 
 ### Understanding job execution flow {#job-execution-flow}
 
@@ -215,7 +231,8 @@ When viewing a specific job run, you can see the relationship between lake inges
 * **Lake ingestion runs first**: Data is loaded into the data lake and validated.
 * **Profile ingestion follows**: After lake ingestion completes, eligible records are processed into the profile store.
 * **Segmentation depends on profile ingestion**: Audiences are evaluated after profile data is available.
-* **Campaign delivery depends on segmentation**: For scheduled batch campaigns in [!DNL Adobe Journey Optimizer], the campaign audience export depends on the upstream segmentation job completing.
+* **Campaign audience export depends on segmentation**: For scheduled batch campaigns in [!DNL Adobe Journey Optimizer], the campaign audience export runs after the upstream segmentation job completes.
+* **Campaign delivery follows the audience export**: The campaign send executes after its audience export completes.
 * **Timing matters**: Note the time difference between when upstream jobs complete and when the next dependent job starts. Gaps here can impact downstream processes like segmentation and campaign delivery.
 
 **Use job run details to**:

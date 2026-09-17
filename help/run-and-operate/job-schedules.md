@@ -60,6 +60,9 @@ At the top of the page, you can see summary cards that provide quick insights in
 * **Profile ingestion runs**: The number of profile ingestion jobs that have run.
 * **Next segmentation**: When the next scheduled segmentation job will run.
 * **Next destination activation**: When the next scheduled destination activation job will run.
+* **[!UICONTROL Campaigns]**: The number of scheduled batch campaign executions in [!DNL Adobe Journey Optimizer] currently at risk of a timing conflict with segmentation.
+
+![The Campaigns summary card in Job Schedules, showing the number of campaign executions at risk.](assets/job-schedules/job-schedules-campaigns-card.png){zoomable="yes"}
 
 These cards help you understand the activity and upcoming schedules across your data pipeline. The values for **Lake ingestion runs** and **Profile ingestion runs** change based on the selected time interval (Today, Yesterday, or Last 7 days); the next-run cards (**Next segmentation** and **Next destination activation**) are not affected by the time selector.
 
@@ -90,20 +93,33 @@ The main view shows you when your batch jobs are scheduled to run throughout the
   * **Segmentation** (light blue): Audience evaluation jobs
   * **Profile export** (blue): Export of profile data
   * **Activation** (dark gray): Destination activation jobs
-  * **Campaign delivery**: Scheduled batch campaign jobs in [!DNL Adobe Journey Optimizer]
+  * **Campaign audience export**: Export of the audience a scheduled batch campaign in [!DNL Adobe Journey Optimizer] depends on
+  * **Campaign delivery**: The send execution of a scheduled batch campaign in [!DNL Adobe Journey Optimizer]
   * **In progress** (striped): Jobs currently running or queued
 
 This timeline view helps you identify scheduling conflicts, understand dependencies between jobs, and optimize your batch processing schedules.
 
 ### Scheduled campaign timing {#campaign-timing}
 
-For scheduled batch campaigns in [!DNL Adobe Journey Optimizer], the timeline shows the campaign send window next to the batch segmentation job it depends on. [!UICONTROL Job Schedules] evaluates the campaign start time against the projected segmentation completion time and flags one of the following timing categories:
+The timeline groups scheduled batch campaigns in [!DNL Adobe Journey Optimizer] under a **[!UICONTROL Campaigns]** row, next to the batch segmentation job they depend on. Campaigns with a start time before the projected segmentation completion time are grouped under a **[!UICONTROL start before segmentation end]** label, so you can identify at-risk executions at a glance.
 
-* **[!UICONTROL Start before segmentation end]**: The campaign is scheduled to start before the upstream segmentation job is projected to complete. This is the highest risk category. The campaign may send against an incomplete or stale audience.
-* **[!UICONTROL Start near segmentation end]**: The campaign is scheduled to start within a thin buffer of the projected segmentation completion time. The campaign is not yet in conflict, but a small delay in segmentation can push it into a start before conflict.
-* **[!UICONTROL Safe timing]**: The campaign has sufficient lead time after the projected segmentation completion time to allow for segment evaluation, profile export, and delivery preparation.
+The **[!UICONTROL Campaigns]** summary card shows the number of campaign executions currently at risk. Select a campaign in the timeline to see its [campaign details](job-schedules-details.md#campaign-details), including its audience, recurrence, channel, and audience export and delivery counts.
 
-Job Schedules also tracks **[!UICONTROL Campaign delivery]** as a job type on the timeline, showing the execution and completion status of the campaign send. Use this to confirm whether a scheduled campaign delivered successfully or was delayed.
+>[!NOTE]
+>
+>Additional campaign timing categories may appear in the interface. This documentation will be updated to cover the full set of categories once confirmed.
+
+### Filter campaigns {#filter-campaigns}
+
+Use the **[!UICONTROL Filter campaigns]** dialog to narrow down which scheduled batch campaigns appear in the timeline:
+
+1. Select the filter icon next to the **[!UICONTROL Campaigns]** row in the timeline.
+2. In the **[!UICONTROL Filter campaigns]** dialog, filter by **[!UICONTROL Recurrence]** (**[!UICONTROL Recurring]**, **[!UICONTROL Once]**, or **[!UICONTROL Now]**) or by **[!UICONTROL Channel]** (**[!UICONTROL Email]**, **[!UICONTROL Push]**, or **[!UICONTROL SMS]**).
+3. Use the type dropdown or search field to narrow the campaign list further.
+4. Select the checkbox next to one or more campaigns in the list.
+5. Select **[!UICONTROL Apply]**.
+
+![The Filter campaigns dialog in Job Schedules, showing Recurrence and Channel filter options and a searchable list of campaigns with their type and execution count.](assets/job-schedules/filter-campaigns.png){zoomable="yes"}
 
 ## Identifying configuration issues {#identifying-issues}
 
