@@ -426,6 +426,12 @@ Other object types, such as audiences and journeys, are not yet supported for mu
 
 To start a multi-sandbox promotion, navigate to **[!UICONTROL Sandboxes]**, select the **[!UICONTROL Packages]** tab, and select **[!UICONTROL Promote to sandboxes]**. Select the objects that you want to promote from your source sandbox, then select the target sandboxes that you want to receive them.
 
+### Object dependencies and validation {#multi-sandbox-dependencies-and-validation}
+
+For each object and each target sandbox, multi-sandbox management automatically resolves the dependencies that the object requires and recommends whether to create a new object or update an existing one.
+
+Before any object is promoted, review a diff preview that summarizes the changes for each target sandbox. Promotion only runs after you approve the preview. All promotion activity is recorded in the audit logs.
+
 ### How this differs from package-based sandbox tooling {#multi-sandbox-vs-package-based}
 
 The package-based sandbox tooling workflow described earlier on this page requires you to create, publish, and import a package into each target sandbox individually. Multi-sandbox management lets you select multiple target sandboxes in a single workflow, so you do not need to repeat the export and import steps for each destination.
