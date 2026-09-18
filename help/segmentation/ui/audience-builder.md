@@ -135,7 +135,7 @@ You can select **[!UICONTROL Add field]** to add an attribute or audience to the
 
 If you select **[!UICONTROL Add field]**, the Discovery Panel appears. This panel lets you search for the field you want to add, and will automatically search as you type.
 
-![The Discovery Panel is displayed, showing what happens when you select Add field.](/help/segmentation/images/ui/audience-builder/view-browse-fields.png){width="500" zoomable="yes"} TO REMOVE THE WORD FIELDS
+![The Discovery Panel is displayed, showing what happens when you select Add field.](/help/segmentation/images/ui/audience-builder/view-browse-fields.png){width="500" zoomable="yes"}
 
 If you have **[!UICONTROL Use AI search suggestions]** enabled, the Discovery Panel will intelligently display AI-powered suggestions based on the searched field.
 
@@ -147,7 +147,7 @@ If you do not have **[!UICONTROL Use AI search suggestions]** enabled, the Disco
 
 You can select ![the star icon](/help/images/icons/star.png) to add the searched field to your list of favorites, which lets you add that field to your audience more quickly for future references.
 
-![The Favorited fields section is displayed.](/help/segmentation/images/ui/audience-builder/favorited-fields.png){width="500" zoomable="yes"} TO REMOVE THE WORD FIELDS
+![The Favorited fields section is displayed.](/help/segmentation/images/ui/audience-builder/favorited-fields.png){width="500" zoomable="yes"}
 
 You can select ![the filter icon](/help/images/icons/filter-unfilled.png) to adjust the settings for the displayed fields.
 
@@ -155,13 +155,13 @@ For the **[!UICONTROL Field types]**, you can show **[!UICONTROL Attributes]** o
 
 ![The filter settings for the fields are displayed.](/help/segmentation/images/ui/audience-builder/filter-settings.png){width="250" zoomable="yes"}
 
-Alternatively, you can view all the available fields for your audience by selecting **[!UICONTROL View All]** in the **[!UICONTROL Browse fields]** area.
+Alternatively, you can view all the available fields for your audience by selecting **[!UICONTROL View All]** in the **[!UICONTROL Browse]** area.
 
 ![The View all button is highlighted within the Discover Panel.](/help/segmentation/images/ui/audience-builder/select-view-all-browse-fields.png){width="400" zoomable="yes"}
 
-In the **[!UICONTROL Browse fields]** area, you can select between **[!UICONTROL Attributes]** or **[!UICONTROL Audiences]**.
+In the **[!UICONTROL Browse]** area, you can select between **[!UICONTROL Attributes]** or **[!UICONTROL Audiences]**.
 
-![The Browse fields section, with the choice between attributes and audiences, is displayed.](/help/segmentation/images/ui/audience-builder/view-browse-fields.png){width="400" zoomable="yes"}
+![The Browse section, with the choice between attributes and audiences, is displayed.](/help/segmentation/images/ui/audience-builder/view-browse-fields.png){width="400" zoomable="yes"}
 
 >[!BEGINTABS]
 
@@ -169,7 +169,7 @@ In the **[!UICONTROL Browse fields]** area, you can select between **[!UICONTROL
 
 If you select **[!UICONTROL Attributes]**, a full list of the available XDM Individual Profile attributes appears. Additionally, you can see custom added attributes that belong to your sandbox.
 
-![The attributes are displayed within the Browse section.](/help/segmentation/images/ui/audience-builder/browse-fields-attributes.png){width="400" zoomable="yes"} TO REMOVE THE WORD FIELDS
+![The attributes are displayed within the Browse section.](/help/segmentation/images/ui/audience-builder/browse-fields-attributes.png){width="400" zoomable="yes"}
 
 To add an attribute to the rule-building canvas, select the name of the attribute you want to add. You may need to navigate through the folder structure of the XDM schema in order to find the attribute.
 
