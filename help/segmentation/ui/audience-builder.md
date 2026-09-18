@@ -49,11 +49,11 @@ Selecting the information bubble gives the date and time the last sample job was
 
 You can also specify important information about your audience within the **[!UICONTROL Audience Properties]** panel. This includes your audience's name, description, access labels, tags, evaluation type, and schedule.
 
-![The audience information section is highlighted within the entire properties panel.](/help/segmentation/images/ui/audience-builder/properties.png){width="400" zoomable="yes"} UPDATE IMAGE
+![The audience information section is highlighted within the entire properties panel.](/help/segmentation/images/ui/audience-builder/properties.png){width="400" zoomable="yes"}
 
 To apply access labels to your audience, select **[!UICONTROL Apply access labels]**. 
 
-![The Apply access labels button is highlighted.](/help/segmentation/images/ui/audience-builder/select-apply-access-labels.png){width="400" zoomable="yes"} UPDATE IMAGE
+![The Apply access labels button is highlighted.](/help/segmentation/images/ui/audience-builder/select-apply-access-labels.png){width="400" zoomable="yes"}
 
 The **[!UICONTROL Apply access and data governance labels]** popover appears. This popover displays a list of available labels for your audience. For more detailed information about applying access and data governance labels, read the [permissions guide](/help/access-control/abac/ui/permissions.md). To learn more about the available access and data governance labels, read the [data usage labels glossary](/help/data-governance/labels/reference.md).
 
@@ -61,7 +61,7 @@ The **[!UICONTROL Apply access and data governance labels]** popover appears. Th
 
 To apply tags to your audience, select the dropdown. A list of the available tags for your audience appears. You can select as many tags as you want to apply to the audience.
 
-![The tags dropdown is highlighted.](/help/segmentation/images/ui/audience-builder/select-tags.png){width="400" zoomable="yes"} UPDATE IMAGE
+![The tags dropdown is highlighted.](/help/segmentation/images/ui/audience-builder/select-tags.png){width="400" zoomable="yes"}
 
 To choose your evaluation method, select the the browse icon ![folder icon with a magnifying glass](/help/images/icons/folder-search.png). 
 
@@ -83,13 +83,13 @@ If you select an invalid evaluation method, you will be prompted to either chang
 
 More information about the different audience evaluation methods can be found in the [segmentation overview](/help/segmentation/home.md#evaluate-audiences).
 
-If your audience is evaluated using batch evaluation, you can choose a schedule for the audience to be evaluated with. Select the ICON to choose the schedule that the audience will be evaluated with.
+If your audience is evaluated using batch evaluation, you can choose a schedule for the audience to be evaluated with. Select the ![calendar icon](/help/images/icons/calendar.png) to choose the schedule that the audience will be evaluated with.
 
-IMAGE
+![The calendar icon is highlighted within the audience properties section.](/help/segmentation/images/ui/audience-builder/select-schedule.png)
 
-The **Audience schedules** popover appears. On this popover, you can select the schedules you want the audience to be evaluated using.
+The **[!UICONTROL Audience schedules]** popover appears. On this popover, you can select the schedules you want the audience to be evaluated using.
 
-IMAGE
+![The Audience schedules popover is displayed, showing a list of schedules you can add the audience to.](/help/segmentation/images/ui/audience-builder/audience-schedules.png)
 
 ## Audience canvas {#audience-canvas}
 
@@ -121,7 +121,7 @@ The **[!UICONTROL Use AI search suggestions]** setting determines if the AI will
 
 For **[!UICONTROL Merge policy]**, you can choose which merge policy the fields belong to.
 
-![The available settings for Audience Builder are highlighted.](/help/segmentation/images/ui/audience-builder/settings.png){width="400" zoomable="yes"} UPDATE IMAGE
+![The available settings for Audience Builder are highlighted.](/help/segmentation/images/ui/audience-builder/settings.png){width="400" zoomable="yes"}
 
 ### Attributes {#attributes}
 
@@ -135,11 +135,11 @@ You can select **[!UICONTROL Add field]** to add an attribute or audience to the
 
 If you select **[!UICONTROL Add field]**, the Discovery Panel appears. This panel lets you search for the field you want to add, and will automatically search as you type.
 
-![The Discovery Panel is displayed, showing what happens when you select Add field.](/help/segmentation/images/ui/audience-builder/view-browse-fields.png){width="500" zoomable="yes"} UPDATE IMAGE TO REMOVE THE WORD FIELDS
+![The Discovery Panel is displayed, showing what happens when you select Add field.](/help/segmentation/images/ui/audience-builder/view-browse-fields.png){width="500" zoomable="yes"} TO REMOVE THE WORD FIELDS
 
 If you have **[!UICONTROL Use AI search suggestions]** enabled, the Discovery Panel will intelligently display AI-powered suggestions based on the searched field.
 
-![The Discovery Panel search if the AI search suggestions are enabled.](/help/segmentation/images/ui/audience-builder/smart-discovery-panel.png){width="500" zoomable="yes"} UPDATE IMAGE
+![The Discovery Panel search if the AI search suggestions are enabled.](/help/segmentation/images/ui/audience-builder/smart-discovery-panel.png){width="500" zoomable="yes"}
 
 If you do not have **[!UICONTROL Use AI search suggestions]** enabled, the Discovery Panel will display fields based off of the searched criterion.
 
@@ -147,7 +147,7 @@ If you do not have **[!UICONTROL Use AI search suggestions]** enabled, the Disco
 
 You can select ![the star icon](/help/images/icons/star.png) to add the searched field to your list of favorites, which lets you add that field to your audience more quickly for future references.
 
-![The Favorited fields section is displayed.](/help/segmentation/images/ui/audience-builder/favorited-fields.png){width="500" zoomable="yes"} UPDATE IMAGE TO REMOVE THE WORD FIELDS
+![The Favorited fields section is displayed.](/help/segmentation/images/ui/audience-builder/favorited-fields.png){width="500" zoomable="yes"} TO REMOVE THE WORD FIELDS
 
 You can select ![the filter icon](/help/images/icons/filter-unfilled.png) to adjust the settings for the displayed fields.
 
@@ -169,13 +169,13 @@ In the **[!UICONTROL Browse fields]** area, you can select between **[!UICONTROL
 
 If you select **[!UICONTROL Attributes]**, a full list of the available XDM Individual Profile attributes appears. Additionally, you can see custom added attributes that belong to your sandbox.
 
-![The attributes are displayed within the Browse section.](/help/segmentation/images/ui/audience-builder/browse-fields-attributes.png){width="400" zoomable="yes"} UPDATE IMAGE TO REMOVE THE WORD FIELDS
+![The attributes are displayed within the Browse section.](/help/segmentation/images/ui/audience-builder/browse-fields-attributes.png){width="400" zoomable="yes"} TO REMOVE THE WORD FIELDS
 
 To add an attribute to the rule-building canvas, select the name of the attribute you want to add. You may need to navigate through the folder structure of the XDM schema in order to find the attribute.
 
 After selecting the attribute, details of the attribute appear. This includes information such as the path of the attribute, sample values, description, type, and ingestion type. You can select [the star icon](/help/images/icons/star.png) to favorite the attribute or **[!UICONTROL Add field]** to add the attribute to your audience's rules.
 
-![The Add field button is highlighted and is shown along with details of the attribute.](/help/segmentation/images/ui/audience-builder/add-attribute-field.png){width="400" zoomable="yes"} UPDATE IMAGE
+![The Add field button is highlighted and is shown along with details of the attribute.](/help/segmentation/images/ui/audience-builder/add-attribute-field.png){width="400" zoomable="yes"}
 
 >[!NOTE]
 >
@@ -217,15 +217,15 @@ If you select **[!UICONTROL Compare to input]**, you can choose one of the addit
 
 If you select **[!UICONTROL Allow multiple inputs]**, the **[!UICONTROL Multiple inputs]** popover is displayed. On this popover, you can add the values to compare the attribute to.
 
-![The Multiple inputs popover is displayed.](/help/segmentation/images/ui/audience-builder/multiple-inputs.png){width="750" zoomable="yes"} UPDATE IMAGE
+![The Multiple inputs popover is displayed.](/help/segmentation/images/ui/audience-builder/multiple-inputs.png){width="750" zoomable="yes"}
 
 You can either add the values on a line-by-line basis in the **[!UICONTROL Values]** box, or choose the values from the **[!UICONTROL Suggested values]** section.
 
 The popover also provides the following available actions. If you select **![reset icon](/help/images/icons/reset.png) Reset**, the inputs revert to the initial state. If you select **![sort icon](/help/images/icons/sort-down.png) Sort**, the values are sorted to alphabetical order. If you select **![upload file icon](/help/images/icons/upload.png) Upload**, you can upload a CSV or TSV file that contain the values you want to compare against.
 
-Alternatively, you can select ICON to open the same **[!UICONTROL Multiple inputs]** popover.
+Alternatively, you can select ![multiple values icon](/help/images/icons/multiple-values-icon.png) to open the same **[!UICONTROL Multiple inputs]** popover.
 
-IMAGE
+![The select multiple values icon is highlighted when the attribute is selected.](/help/segmentation/images/ui/audience-builder/select-multiple-values-icon.png)
 
 If you select **[!UICONTROL Case sensitive]**, the attribute's value **must** match the exact casing of specified input value.
 
@@ -253,11 +253,11 @@ Select **[!UICONTROL Add event]** to add an ExperienceEvent that you can add to 
 
 ![The Add event button is highlighted within the Events section of the Rule view.](/help/segmentation/images/ui/audience-builder/select-add-event.png){width="750" zoomable="yes"}
 
-The Discover Panel appears. This panel displays both **Events** and **Event types**. 
+The Discover Panel appears. This panel displays both **[!UICONTROL Events]** and **[!UICONTROL Event types]**. 
 
-IMAGE
+![The Discovery Panel for events is displayed.](/help/segmentation/images/ui/audience-builder/discovery-panel-events.png)
 
-If you select **Events**, you can choose 
+If you select **[!UICONTROL Events]**, you can choose events that belong to your organization. If you select **[!UICONTROL Event types]**, you can choose from a collection of commonly used events in Experience Platform.
 
 After adding an event to your canvas, you can add additional events to the timeline. These events can be added before, after, above, or below the already selected event.
 
@@ -411,7 +411,7 @@ Code view displays a code-based version of the audience created in Audience Buil
 
 Code view provides a button that allows you to copy the value of the audience to use in API calls. To get the latest version of the audience, make sure you have saved your latest changes to the audience.
 
-![The Code view within Audience Builder is displayed.](/help/segmentation/images/ui/audience-builder/code-view.png){width="750" zoomable="yes"} UPDATE IMAGE
+![The Code view within Audience Builder is displayed.](/help/segmentation/images/ui/audience-builder/code-view.png){width="750" zoomable="yes"}
 
 ## Profile view {#profile-view}
 
