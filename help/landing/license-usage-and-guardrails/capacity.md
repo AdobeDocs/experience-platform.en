@@ -304,9 +304,9 @@ You can resolve your edge segmentation throughput violations by adopting one of 
 
 >[!AVAILABILITY]
 >
->The [!DNL Experience Platform Growth Credits] dashboard is currently in **Limited availability**.
+>The [!DNL Adobe Experience Platform Growth Credits] dashboard is currently in **Limited availability**.
 
-The [!DNL Experience Platform Growth Credits] dashboard gives you a single place to view your credit balance, plan capacity, and monitor usage across Experience Platform. You can use it to:
+The [!DNL Adobe Experience Platform Growth Credits] dashboard gives you a single place to view your credit balance, plan capacity, and monitor usage across Experience Platform. You can use it to:
 
 - **View your available credits** and understand how much headroom remains.
 - **Schedule capacity changes** for planned increases in demand.

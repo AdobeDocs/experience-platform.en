@@ -1,6 +1,6 @@
 ---
-title: "[!DNL Adobe Experience Platform Growth Credits] Usage"
-description: Use [!DNL Adobe Experience Platform Growth Credits] to increase capacity for eligible Adobe Experience Platform services beyond your included entitlement. 
+title: "Adobe Experience Platform Growth Credits Usage"
+description: Use Adobe Experience Platform Growth Credits to increase capacity for eligible Adobe Experience Platform services beyond your included entitlement. 
 ---
 
 # [!DNL Adobe Experience Platform Growth Credits] usage {#usage}
@@ -9,7 +9,7 @@ Use [!DNL Adobe Experience Platform Growth Credits] to increase Adobe Experience
 
 ## Monitor [!DNL Experience Platform Growth Credits] usage {#monitor-usage}
 
-Use the [Experience Platform Growth Credits dashboard](/help/landing/license-usage-and-guardrails/capacity.md#growth-credits-dashboard) to monitor credit usage and plan future capacity needs.
+Use the [[!DNL Experience Platform Growth Credits] dashboard](/help/landing/license-usage-and-guardrails/capacity.md#growth-credits-dashboard) to monitor credit usage and plan future capacity needs.
 
 Review dashboard metrics to:
 
