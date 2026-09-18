@@ -19,6 +19,11 @@ If a critical validation construct is violated, the system will prevent you from
 
 ## Validation checks {#validation-checks}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_audiencevalidation"
+>title="Audience validation"
+>abstract="Audience Validation provides built-in validations and guardrails that run in real-time to ensure your audiences are not only accurate, but stable and scalable. This ensures your audiences evaluate faster, remain logically efficient, and reduces the risk of evaluation failures. Audience Validation checks include logical complexity, sequential events, aggregated count, nested data, and audience size."
+
 Currently, the following validations are supported:
 
 | Validation check | Type | Threshold |
