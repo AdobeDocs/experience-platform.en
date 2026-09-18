@@ -14,6 +14,7 @@ exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 >Refer to the following documentation for release notes of other Adobe Experience Platform applications:
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer (pre-release)](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/e-release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
 >- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
