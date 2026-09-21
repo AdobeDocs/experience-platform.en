@@ -407,13 +407,13 @@ You can resolve your edge segmentation throughput violations by adopting one of 
 2. Optimize your ingestion by using batch ingestion for lower latency use cases.
 3. Contact your Adobe Customer Care representative if issues still persist.
 
-## Growth credits dashboard
+## [!DNL Adobe Experience Platform Growth Credits] dashboard {#growth-credits-dashboard}
 
 >[!AVAILABILITY]
 >
->The [!DNL Growth credits] dashboard is currently in **Limited availability**.
+>The [!DNL Adobe Experience Platform Growth Credits] dashboard is currently in **Limited availability**.
 
-The [!DNL Growth credits] dashboard gives you a single place to view your credit balance, plan capacity, and monitor usage across Experience Platform. You can use it to:
+The [!DNL Adobe Experience Platform Growth Credits] dashboard gives you a single place to view your credit balance, plan capacity, and monitor usage across Experience Platform. You can use it to:
 
 - **View your available credits** and understand how much headroom remains.
 - **Schedule capacity changes** for planned increases in demand.
@@ -421,11 +421,11 @@ The [!DNL Growth credits] dashboard gives you a single place to view your credit
 
 >[!NOTE]
 >
->The **[!DNL Growth credits] dashboard** is automatically available when your organization has purchased **Growth credits**. Once credits are provisioned, you can access the dashboard from the **License Usage** tab in Experience Platform.
+>The **[!DNL Experience Platform Growth Credits] dashboard** is automatically available when your organization has purchased **[!DNL Experience Platform Growth Credits]**. Once credits are provisioned, you can access the dashboard from the **License Usage** tab in Experience Platform.
 
 ### Access requirements
 
-Access to the [!DNL Growth credits] dashboard is controlled through **role-based access control**. You must have the **Platform Administrator** role, or an equivalent administrator role, to:
+Access to the [!DNL Experience Platform Growth Credits] dashboard is controlled through **role-based access control**. You must have the **Platform Administrator** role, or an equivalent administrator role, to:
 
 - View your organization's credit position.
 - View credit and capacity usage.
@@ -436,7 +436,7 @@ Your sandbox-level views are limited to the sandboxes you have permission to acc
 
 >[!NOTE]
 >
->If you don't see the [!DNL Growth credits] dashboard or expected sandbox data, verify that you have the required administrator role and access to the relevant sandboxes.
+>If you don't see the [!DNL Experience Platform Growth Credits] dashboard or expected sandbox data, verify that you have the required administrator role and access to the relevant sandboxes.
 
 ### Access the Capacity overview
 
@@ -456,7 +456,7 @@ The table shows the **[!UICONTROL Current Capacity]** allocation for each sandbo
 
 ## Understand your credit utilization
 
-Use the [!DNL Growth credits] dashboard to see how your credits are being used and identify available headroom or potential overages.
+Use the [!DNL Experience Platform Growth Credits] dashboard to see how your credits are being used and identify available headroom or potential overages.
 
 ### Review your credit summary
 
@@ -652,7 +652,7 @@ If real-time processing is not required, you should use batch ingestion instead 
 
 +++ Answer
 
-No. [!DNL Growth credits] for streaming and edge support only one active or pending schedule per sandbox. A new schedule can only be created after the current one has fully completed.
+No. [!DNL Experience Platform Growth Credits] for streaming and edge support only one active or pending schedule per sandbox. A new schedule can only be created after the current one has fully completed.
 
 +++
 
@@ -664,7 +664,7 @@ Baseline redistribution at or below 1,500 RPS can normally be done at any time f
 
 +++
 
-### Will [!DNL Growth credits] expire after the contract period?
+### Will [!DNL Experience Platform Growth Credits] expire after the contract period?
 
 +++ Answer
 
@@ -704,7 +704,7 @@ Credits are reserved upfront for the scheduled window and then consumed daily du
 
 **Available = Licensed − Used − Reserved***
 
-Reservations draw from the included baseline entitlement first and only draw Growth Credits for capacity above the baseline.
+Reservations draw from the included baseline entitlement first and only draw [!DNL Experience Platform Growth Credits] for capacity above the baseline.
 
 +++
 
