@@ -432,6 +432,12 @@ A successful response returns HTTP status 204 with no content.
 
 After reading this guide, you now know how to use Flexible Batch Schedules either using the Experience Platform API or UI. For more information on the Flexible Batch Schedules UI, read the [segmentation service UI overview](/help/segmentation/ui/overview.md#evaluation). For more information on the schedules API, read the [schedules endpoint guide](/help/segmentation/api/schedules.md). To learn how Flexible Batch Schedules works with your capacity and credits, read the [license usage and capacities overview](/help/landing/license-usage-and-guardrails/capacity.md).
 
+## Video {#video}
+
+The following video shows how to use flexible batch schedules, outlining how to create custom schedules, monitor segmentation jobs, and manage credits within the [!UICONTROL Evaluation] tab.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3497106)
+
 ## Appendix {#appendix}
 
 The following appendix lists how cross-schedule dependencies work and frequently asked questions about flexible batch schedules.
