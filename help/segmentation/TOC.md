@@ -31,6 +31,7 @@ nudge: true
     - [Audience dashboard](ui/audience-dashboard.md)
     - [Audience Portal](ui/audience-portal.md)
     - [Audience Composition](ui/audience-composition.md)
+    - {hide-from-toc} [Payload Rank and Payload Exclude operators](ui/payload-rank-exclude.md)
     - {hide-from-toc} [Audience Composition enhancements](ui/composition-enhancements.md)
     - [Segment Builder](ui/segment-builder.md)
     - {hide-from-toc} [Audience Builder](ui/audience-builder.md)
@@ -47,7 +48,7 @@ nudge: true
   - [Streaming segmentation](methods/streaming-segmentation.md)
   - [Edge segmentation](methods/edge-segmentation.md)
   - [Flexible audience evaluation](methods/flexible-audience-evaluation.md)
-  - [Run now evaluation](methods/run-now.md)
+  - [On-demand evaluation](methods/on-demand-evaluation.md)
 - Audience types {#types}
   - [Overview](types/overview.md)
   - [People audiences](types/people-audiences.md)

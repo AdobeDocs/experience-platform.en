@@ -32,6 +32,7 @@ role: Developer
       - [ECID mapping migration guide](connectors/adobe-applications/marketo/migration.md)
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
+    - {hide-from-toc} [Google Ads (V2) connector](connectors/advertising/google-ads.md)
     - [Meta Ads connector](connectors/advertising/meta-ads.md)
     - {hide-from-toc} [Pinterest Ads](connectors/advertising/pinterest-ads.md)
   - Analytics {#analytics}
@@ -117,6 +118,7 @@ role: Developer
     - [PathFactory](connectors/marketing-automation/pathfactory.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
     - [Salesforce Marketing Cloud (V2)](connectors/marketing-automation/sfmc.md)
+    - {hide-from-toc} [WhatsApp](connectors/marketing-automation/whatsapp.md)
   - Payments {#payments}
     - [Square](connectors/payments/square.md)
     - [Stripe](connectors/payments/stripe.md)
@@ -251,6 +253,7 @@ role: Developer
       - [Marketo Custom Activities](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
+      - {hide-from-toc} [Google Ads (V2)](tutorials/ui/create/advertising/google-ads.md)
       - [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
       - {hide-from-toc} [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
     - Analytics {#analytics}
@@ -341,6 +344,7 @@ role: Developer
       - [Relay Connector](tutorials/ui/create/marketing-automation/relay-connector.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - [Salesforce Marketing Cloud (V2)](tutorials/ui/create/marketing-automation/sfmc.md)
+      - {hide-from-toc} [WhatsApp](tutorials/ui/create/marketing-automation/whatsapp.md)
     - Payments {#payments}
       - [Square](tutorials/ui/create/payments/square.md)
       - [Stripe](tutorials/ui/create/payments/stripe.md)

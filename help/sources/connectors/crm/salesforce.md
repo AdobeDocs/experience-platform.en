@@ -39,6 +39,10 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 Experience Platform provides support for ingesting data from a third-party CRM system. Support for CRM providers include [!DNL Salesforce].
 
+>[!IMPORTANT]
+>
+>The [!DNL Salesforce] source connector detects only soft-deleted records. It does not support hard deletes. When you hard delete a record in [!DNL Salesforce], the record is permanently removed and [!DNL Salesforce] does not expose it through its APIs. Experience Platform cannot detect or propagate hard-deleted records as a result. To ensure deletions reach Experience Platform, delete records in [!DNL Salesforce] using soft delete, which moves them to the [!DNL Recycle Bin] and keeps them retrievable through the [!DNL Salesforce] API.
+
 ## Set up your [!DNL Salesforce] source for Experience Platform on Azure {#azure}
 
 Follow the steps below to learn how you can set up your [!DNL Salesforce] account for Experience Platform on Azure.
