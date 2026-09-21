@@ -311,7 +311,7 @@ For **[!UICONTROL Scheduled runs]**, you can see a list of sandboxes, the curren
 
 ![The manage scheduled runs page is displayed.](/help/landing/images/capacity/manage-scheduled-runs.png)
 
-To add additional runs to a sandbox, select **[!UICONTROL Add runs]** for the sandbox you want to increase the capacity for. You can increase run capacity in increments of 100.
+To add additional runs to a sandbox, select **[!UICONTROL Add runs]** for the sandbox you want to increase the capacity for. You can increase run capacity in increments of 1.
 
 >[!IMPORTANT]
 >
@@ -372,7 +372,7 @@ If you select the name of the sandbox, you can see a graph displaying either the
 
 >[!IMPORTANT]
 >
->If you exceed your batch audience count, existing audiences will not be affected. However, creating additional audiences or assigning additional audiences to a scheduled will be blocked until capacity is freed up or purchased.
+>If you exceed your batch audience count, existing audiences will not be affected. However, creating additional audiences or assigning additional audiences to a scheduled will be blocked until capacity is freed up.
 
 The **[!UICONTROL Batch audience]** section displays information about the number of batch audiences within your organization's sandboxes. 
 
