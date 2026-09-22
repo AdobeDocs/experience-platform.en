@@ -5,10 +5,6 @@ description: Learn how to use the Audience Builder so you can create audiences f
 
 # Audience Builder UI Guide
 
->[!AVAILABILITY]
->
->The newly updated Audience Builder is now generally available! You can switch back to the previous Segment Builder experience during this transition period by disabling the **[!UICONTROL New Audience Builder]** toggle. The old Segment Builder experience and the toggle will be deprecated in early 2027. For documentation about the previous Segment Builder, read the [Segment Builder UI guide](./segment-builder.md).
-
 Audience Builder provides a rich workspace that lets you interact with Profile data elements. The workspace provides intuitive controls for building and editing your audience's rules.
 
 ![The Audience Builder UI is displayed.](/help/segmentation/images/ui/audience-builder/audience-builder.png){width="750" zoomable="yes"}
