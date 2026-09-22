@@ -14,6 +14,7 @@ The merge policies health checks scan your sandbox for merge policy naming and d
 | [Default merge policy naming](#default-merge-policy-naming) | Sandbox |
 | [Duplicate merge policy definitions](#duplicate-merge-policy-definitions) | Sandbox |
 | [Duplicate merge policy names](#duplicate-merge-policy-names) | Sandbox |
+| [Merge policy count](#merge-policy-count) | Sandbox |
 
 ## Default merge policy naming {#default-merge-policy-naming}
 
@@ -77,6 +78,27 @@ When you select the **[!UICONTROL Duplicate Merge Policy Names]** card, a detail
 ![Duplicate Merge Policy Names detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/duplicate-merge-policy-names-detail.png){zoomable="yes"}
 
 For more information, see the [merge policies overview](/help/profile/merge-policies/overview.md).
+
+## Merge policy count {#merge-policy-count}
+
+Monitors the number of merge policies of schema type XDM Individual Profile against the platform limit.
+
+| Detail | Description |
+| --- | --- |
+| **Issue** | The number of XDM Individual Profile merge policies is approaching the recommended limit of 3 per sandbox. |
+| **Impact** | Exceeding the 3 merge policy limit violates the product license and increases the elapsed time required for overall batch segmentation. |
+| **Remediation** | Review existing merge policies and delete any that are no longer needed before creating new ones. |
+
+When you select the **[!UICONTROL Merge Policy Count]** card, a detail panel opens on the right. The panel shows:
+
+* **[!UICONTROL Description]**: Explains that [!DNL Experience Platform] limits merge policies to 3 per sandbox for schema type "xdm.context.profile," as defined in the [!DNL Experience Platform] product description documentation. This check monitors the merge policy count.
+* **[!UICONTROL Impact]**: Exceeding the 3 merge policy limit violates the product license and increases the elapsed time required for overall batch segmentation.
+* **[!UICONTROL General areas of impact]**: Batch segmentation and activation.
+* **[!UICONTROL Experience League Documentation]**: Links to the [!DNL Adobe Experience Platform] product description, and the B2B and B2P product description variants.
+
+![Merge Policy Count detail panel showing description, impact, and general areas of impact](../assets/health-checks/merge-policy-count-detail.png){zoomable="yes"}
+
+For more information, see the [Adobe Experience Platform product description](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html){target="_blank"}.
 
 ## Next steps {#next-steps}
 
