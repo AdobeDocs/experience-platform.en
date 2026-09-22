@@ -710,6 +710,38 @@ You must have the sandbox-manage permission, access to all sandboxes, and the or
 
 +++
 
+### Can I use my unused scheduled runs credits for on-demand runs? Alternatively, can I use my unused on-demand run credits for scheduled runs?
+
++++ Answer
+
+No, you cannot. Scheduled runs and on-demand runs use two distinct credit pools, and cannot be used interchangeably.
+
++++
+
+### Does purchasing additional batch capacity replace my free allotment, or does it add to it?
+
++++ Answer
+
+Purchasing additional batch capacity **adds** to your allotment, as there's a single combined balance per capacity type. There is **not** a separate free and paid pool.
+
++++
+
+### What happens to my batch audiences if I exceed my batch capacity?
+
++++ Answer
+
+Existing audiences are not affected. However, the ability to create new audiences or assign additional audiences to a schedule may be restricted.
+
++++
+
+### Is batch capacity tracked at the sandbox level or at the organization level?
+
++++ Answer
+
+Batch audience count and schedule limits are tracked at the **sandbox** level, just like streaming and edge audience counts.
+
++++
+
 <!--
 ## Manage batch capacity
 
