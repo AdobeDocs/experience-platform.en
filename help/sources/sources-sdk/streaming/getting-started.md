@@ -15,6 +15,19 @@ topic_v2:
 ---
 # Getting Started with Self-Serve Sources (Streaming SDK)
 
+>[!IMPORTANT]
+>
+>You can now use Self-Serve Sources (Streaming SDK) to build connectors for Adobe Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
+
+<!--
+
+Publishing note: Confirm the following with Druti Chandra before publishing this note:
+1. Whether Streaming SDK has full feature parity on AWS, or has limitations similar to the AWS-specific prerequisites documented for the Amazon S3 source (see help/sources/connectors/cloud-storage/s3.md).
+2. Whether the Flow Service API base URL or the Streaming Ingestion API endpoint differs for AWS-hosted sandboxes. If so, create.md and submit.md need AWS-specific endpoint callouts.
+3. Whether OAuth 2.0 or HMAC-based authentication setup differs on AWS. If so, authentication.md needs an update (also see the open HMAC questions already flagged in that file from PLAT-242518).
+
+-->
+
 Self-Serve Sources (Streaming SDK) allows you to integrate your own source to bring streaming data to Adobe Experience Platform. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## High-level process
