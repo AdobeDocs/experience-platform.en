@@ -84,8 +84,7 @@ For more information, read the [Data Governance overview](/help/data-governance/
 
 | Feature | Description |
 | --- | --- |
-| [Configurable macro order for file names](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) | Reposition individual macros in the file name editor for file-based destinations. Previously, macros had fixed positions in the file name. Preview the resulting file name before you save. |
-| [Audience-level reporting for additional destinations](/help/dataflows/ui/monitor-destinations.md#audience-level-view) | Audience-level reporting is now available for [[!DNL LiveRamp - Distribution]](/help/destinations/catalog/advertising/liveramp-distribution.md), [[!DNL FreeWheel]](/help/destinations/catalog/advertising/freewheel.md), and [[!DNL Snowflake Batch]](/help/destinations/catalog/warehouses/snowflake-batch.md). Previously, these destinations only supported dataflow run-level reporting, making it harder to understand how many profiles were activated for each audience. For more information, read the [audience-level view](/help/dataflows/ui/monitor-destinations.md#audience-level-view) documentation. |
+| [Data type filter in the destinations catalog](/help/destinations/catalog/overview.md) | Find the destination you need faster by filtering the **[!UICONTROL Browse]** tab of the destinations catalog by data type. **This update has been postponed to the September 2026 release.** <br> ![Filtering destinations by data type in the Browse tab of the destinations catalog.](assets/august/data-type-filter-browse.gif){zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -94,7 +93,7 @@ For more information, read the [Data Governance overview](/help/data-governance/
 | Feature | Description |
 | --- | --- |
 | [!DNL Microsoft Entra ID] authentication for [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md#authentication-information) and [[!DNL Azure Blob Storage]](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) | Authenticate to the [!DNL Azure Event Hubs] and [!DNL Azure Blob Storage] destinations using a [!DNL Microsoft Entra ID] service principal (client ID and client secret), in addition to a shared access key or connection string. To update an existing connection to use this authentication method, see [migrate an existing base connection to Entra ID Service Principal authentication](/help/destinations/api/streaming-destinations.md#azure-eventhubs-migrate-service-principal) for [!DNL Azure Event Hubs], or [create a base connection](/help/destinations/api/activate-segments-file-based-destinations.md#create-base-connection) for [!DNL Azure Blob Storage]. |
-| [[!DNL Salesforce CRM]](/help/destinations/catalog/crm/salesforce.md#authenticate) OAuth 2 Client Credentials authentication | The [!DNL Salesforce CRM] destination now supports a new authentication type. Authenticate using the OAuth 2 Client Credentials flow, in addition to the existing OAuth 2 Password Grant flow. |
+| [[!DNL Salesforce CRM]](/help/destinations/catalog/crm/salesforce.md#authenticate) OAuth 2 Client Credentials authentication | The [!DNL Salesforce CRM] destination now supports a new authentication type. Authenticate using the OAuth 2 Client Credentials flow, in addition to the existing OAuth 2 Password Grant flow. This update is rolling out this week. |
 
 {style="table-layout:auto"}
 
@@ -103,6 +102,7 @@ For more information, read the [Data Governance overview](/help/data-governance/
 | Fix | Description |
 | --- | --- |
 | [[!DNL Facebook] credentials no longer expire](/help/destinations/catalog/social/facebook.md#refresh-authentication-credentials) | [!DNL Facebook] authentication credentials no longer expire after 60 days. [!DNL Experience Platform] now automatically refreshes the OAuth token, so data exports to the destination continue without interruption. Manual reauthentication is no longer required. |
+| [[!DNL Amazon Ads]](/help/destinations/catalog/advertising/amazon-ads-v2.md) no longer requires marketing actions | The connector was updated to remove the requirement to have marketing actions by default. Customers can now set up connections to [!DNL Amazon Ads] without using marketing actions. |
 
 {style="table-layout:auto"}
 
