@@ -43,4 +43,4 @@ For information about accessing and using the dashboard, see the [Experience Pla
 | Streaming Segmentation | Incremental throughput capacity may be licensed in increments of 100 RPS, up to a maximum of 15,000 RPS total. | 7,500 [!DNL Experience Platform Growth Credits] per year for each increment of 100 RPS that is deployed. |
 | Edge Segmentation | Incremental throughput capacity may be licensed in increments of 100 RPS. | 12,000 [!DNL Experience Platform Growth Credits] per year for each increment of 100 RPS that is deployed. |
 | Batch Segmentation (Scheduled Runs) | Incremental scheduled-run capacity may be licensed per additional scheduled run beyond the included limit of four runs per day per sandbox. | 200 to 800 [!DNL Experience Platform Growth Credits] for each scheduled run. |
-| Batch Segmentation (On-Demand Runs) | Incremental on-demand run capacity may be licensed in packs of 100 RPS. | 200 [!DNL Experience Platform Growth Credits] per 100 RPS on-demand runs. |
+| Batch Segmentation (On-Demand Runs) | Incremental on-demand run capacity may be licensed in packs of 100 RPS. | 200 [!DNL Experience Platform Growth Credits] per 100. |
