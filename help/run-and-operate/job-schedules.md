@@ -9,17 +9,18 @@ exl-id: ce855b19-66ab-4d3d-924e-fb9928676aa2
 
 >[!IMPORTANT]
 >
->[!UICONTROL Job schedules] are currently available only for the following Real-Time CDP jobs:
+>[!UICONTROL Job schedules] are currently available only for the following jobs:
 >
-> * Batch data lake ingestion
-> * Batch profile ingestion
-> * Batch identity ingestion
-> * Batch segmentation
-> * Batch destination activation
+> * Batch data lake ingestion (Real-Time CDP)
+> * Batch profile ingestion (Real-Time CDP)
+> * Batch identity ingestion (Real-Time CDP)
+> * Batch segmentation (Real-Time CDP)
+> * Batch destination activation (Real-Time CDP)
+> * Scheduled batch campaigns ([!DNL Adobe Journey Optimizer])
 
-[!UICONTROL Job Schedules] provides a unified view of all scheduled batch processing jobs across your data pipeline, from ingestion through destination activation. Inspect execution status, identify scheduling conflicts, and diagnose configuration issues before they impact your business operations.
+[!UICONTROL Job Schedules] provides a unified view of all scheduled batch processing jobs across your data pipeline, from ingestion through destination activation and scheduled [!DNL Adobe Journey Optimizer] campaign delivery. Inspect execution status, identify scheduling conflicts, and diagnose configuration issues before they impact your business operations.
 
-Use Job Schedules to investigate failures, optimize job timing, and understand dependencies between data lake ingestion, profile processing, segmentation, and destination activation. For guidance on resolving common configuration problems, see the documentation on [identifying job schedule anti-patterns](job-schedules-anti-patterns.md).
+Use Job Schedules to investigate failures, optimize job timing, and understand dependencies between data lake ingestion, profile processing, segmentation, destination activation, and scheduled campaign delivery. For guidance on resolving common configuration problems, see the documentation on [identifying job schedule anti-patterns](job-schedules-anti-patterns.md).
 
 ## Prerequisites {#prerequisites}
 
@@ -35,6 +36,7 @@ Before using [!UICONTROL Job Schedules], you should be familiar with the followi
 * **[Segmentation](../segmentation/home.md)**: How audiences are evaluated and updated based on profile data and segment definitions.
 * **[Real-Time Customer Profile](../profile/home.md)**: How profile data is unified and made available for segmentation and activation.
 * **[Destinations](../destinations/home.md)**: Where and how data is activated to downstream systems and marketing platforms.
+* **[!DNL Adobe Journey Optimizer] scheduled campaigns**: How batch campaigns depend on upstream data lake ingestion, profile ingestion, and segmentation to run on time.
 
 Understanding these components helps you interpret job execution patterns and diagnose issues when they occur.
 
@@ -60,6 +62,9 @@ At the top of the page, you can see summary cards that provide quick insights in
 * **Identity ingestion runs**: The number of identity ingestion jobs that have run.
 * **Next segmentation**: When the next scheduled segmentation job will run.
 * **Next destination activation**: When the next scheduled destination activation job will run.
+* **[!UICONTROL Campaigns]**: The number of scheduled batch campaign executions in [!DNL Adobe Journey Optimizer] currently at risk of a timing conflict with segmentation.
+
+![The Campaigns summary card in Job Schedules, showing the number of campaign executions at risk.](assets/job-schedules/job-schedules-campaigns-card.png){zoomable="yes"}
 
 These cards help you understand the activity and upcoming schedules across your data pipeline. The values for **Lake ingestion runs**, **Profile ingestion runs**, and **Identity ingestion runs** change based on the selected time interval (Today, Yesterday, or Last 7 days); the next-run cards (**Next segmentation** and **Next destination activation**) are not affected by the time selector.
 
@@ -91,9 +96,29 @@ The main view shows you when your batch jobs are scheduled to run throughout the
   * **Segmentation** (light blue): Audience evaluation jobs
   * **Profile export** (blue): Export of profile data
   * **Activation** (dark gray): Destination activation jobs
+  * **Campaign audience export**: Export of the audience a scheduled batch campaign in [!DNL Adobe Journey Optimizer] depends on
+  * **Campaign delivery**: The send execution of a scheduled batch campaign in [!DNL Adobe Journey Optimizer]
   * **In progress** (striped): Jobs currently running or queued
 
 This timeline view helps you identify scheduling conflicts, understand dependencies between jobs, and optimize your batch processing schedules.
+
+### Scheduled campaign timing {#campaign-timing}
+
+The timeline groups scheduled batch campaigns in [!DNL Adobe Journey Optimizer] under a **[!UICONTROL Campaigns]** row, next to the batch segmentation job they depend on. Campaigns with a start time before the projected segmentation completion time are grouped under a **[!UICONTROL start before segmentation end]** label, so you can identify at-risk executions at a glance.
+
+The **[!UICONTROL Campaigns]** summary card shows the number of campaign executions currently at risk. Select a campaign in the timeline to see its [campaign details](job-schedules-details.md#campaign-details), including its audience, recurrence, channel, and audience export and delivery counts.
+
+### Filter campaigns {#filter-campaigns}
+
+Use the **[!UICONTROL Filter campaigns]** dialog to narrow down which scheduled batch campaigns appear in the timeline:
+
+1. Select the filter icon next to the **[!UICONTROL Campaigns]** row in the timeline.
+2. In the **[!UICONTROL Filter campaigns]** dialog, filter by **[!UICONTROL Recurrence]** (**[!UICONTROL Recurring]**, **[!UICONTROL Once]**, or **[!UICONTROL Now]**) or by **[!UICONTROL Channel]** (**[!UICONTROL Email]**, **[!UICONTROL Push]**, or **[!UICONTROL SMS]**).
+3. Use the type dropdown or search field to narrow the campaign list further.
+4. Select the checkbox next to one or more campaigns in the list.
+5. Select **[!UICONTROL Apply]**.
+
+![The Filter campaigns dialog in Job Schedules, showing Recurrence and Channel filter options and a searchable list of campaigns with their type and execution count.](assets/job-schedules/filter-campaigns.png){zoomable="yes"}
 
 ## Identifying configuration issues {#identifying-issues}
 
