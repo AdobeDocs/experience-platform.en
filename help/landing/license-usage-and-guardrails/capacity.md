@@ -411,7 +411,7 @@ You can resolve your edge segmentation throughput violations by adopting one of 
 
 >[!AVAILABILITY]
 >
->The [!DNL Adobe Experience Platform Growth Credits] dashboard is currently in **Limited availability**.
+>Growth credits are applicable only to customers of Real-Time CDP and/or Adobe Journey Optimizer who license Experience Platform growth credits.
 
 The [!DNL Adobe Experience Platform Growth Credits] dashboard gives you a single place to view your credit balance, plan capacity, and monitor usage across Experience Platform. You can use it to:
 
