@@ -64,9 +64,9 @@ When directly composing an audience on Experience Platform, you can use Audience
 
 ### Segment definitions
 
-Whether created using the API or using the [!DNL Segment Builder], segment definitions are ultimately defined using [!DNL Profile Query Language] (PQL). This is where the conceptual segment definition gets described in the language built to retrieve profiles meeting the criteria. For more information, see the [PQL overview](./pql/overview.md).  
+Whether created using the API or using the [!DNL Audience Builder], segment definitions are ultimately defined using [!DNL Profile Query Language] (PQL). This is where the conceptual segment definition gets described in the language built to retrieve profiles meeting the criteria. For more information, see the [PQL overview](./pql/overview.md).  
 
-To learn how to create and use segments in the [!DNL Segment Builder] (the UI implementation of [!DNL Segmentation Service]), see the [Segment Builder guide](./ui/segment-builder.md). 
+To learn how to create and use segments in the [!DNL Audience Builder] (the UI implementation of [!DNL Segmentation Service]), see the [Audience Builder guide](./ui/audience-builder.md). 
 
 For information on building segment definitions using the API, see the tutorial on [creating segment definitions using the API](./tutorials/create-a-segment.md).
 
@@ -132,7 +132,7 @@ To learn how to access an exported audience, see the [segment definition evaluat
 
 Segment definition metadata facilitates indexing in the event any of your audiences are to be reused and/or combined. 
 
-Composing a segment definition (through either the API or [!DNL Segment Builder]) requires that you to define a name and merge policy.
+Composing a segment definition (through either the API or [!DNL Audience Builder]) requires that you to define a name and merge policy.
 
 ### Segment definition names
 
@@ -156,7 +156,7 @@ More information about merge policies can be found in the [merge policies guide]
 
 ### Other segment definition metadata
 
-In addition to name and merge policy, [!DNL Segment Builder] offers you an additional description metadata field where you can summarize your segment definition's purpose.
+In addition to name and merge policy, [!DNL Audience Builder] offers you an additional description metadata field where you can summarize your segment definition's purpose.
 
 ## Advanced segmentation features
 
@@ -170,7 +170,7 @@ These advanced features are discussed in more detail in the following sections.
 
 ### Sequential segmentation {#sequential}
 
-A standard user journey is sequential in nature. Adobe Experience Platform allows you to define an ordered series of audiences to reflect this journey therefore capturing sequences of events as they occur. You can arrange events into their desired order by using the visual event timeline in the [!DNL Segment Builder].
+A standard user journey is sequential in nature. Adobe Experience Platform allows you to define an ordered series of audiences to reflect this journey therefore capturing sequences of events as they occur. You can arrange events into their desired order by using the visual event timeline in the [!DNL Audience Builder].
 
 An example of a customer journey that would require sequential segmentation would be product view > product add > checkout > No purchase. 
 
@@ -202,4 +202,4 @@ With the advanced multi-entity segmentation feature, you can extend [!DNL Real-T
   
 For more information on using the Segmentation Service UI, please read the [Segmentation Service UI overview](./ui/overview.md).
 
-To learn how to compose audiences in the UI, please read the [Audience Composition guide](./ui/audience-composition.md). To learn how to define segments definitions in the UI, see the [Segment Builder guide](./ui/overview.md). For information on building segment definitions using the API, see the tutorial on [creating segment definitions using the API](./tutorials/create-a-segment.md).
+To learn how to compose audiences in the UI, please read the [Audience Composition guide](./ui/audience-composition.md). To learn how to define segments definitions in the UI, see the [Audience Builder guide](./ui/overview.md). For information on building segment definitions using the API, see the tutorial on [creating segment definitions using the API](./tutorials/create-a-segment.md).

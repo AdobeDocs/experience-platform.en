@@ -13,6 +13,7 @@ exl-id: ce855b19-66ab-4d3d-924e-fb9928676aa2
 >
 > * Batch data lake ingestion (Real-Time CDP)
 > * Batch profile ingestion (Real-Time CDP)
+> * Batch identity ingestion (Real-Time CDP)
 > * Batch segmentation (Real-Time CDP)
 > * Batch destination activation (Real-Time CDP)
 > * Scheduled batch campaigns ([!DNL Adobe Journey Optimizer])
@@ -58,13 +59,14 @@ At the top of the page, you can see summary cards that provide quick insights in
 
 * **Lake ingestion runs**: The number of data lake ingestion jobs that have run.
 * **Profile ingestion runs**: The number of profile ingestion jobs that have run.
+* **Identity ingestion runs**: The number of identity ingestion jobs that have run.
 * **Next segmentation**: When the next scheduled segmentation job will run.
 * **Next destination activation**: When the next scheduled destination activation job will run.
 * **[!UICONTROL Campaigns]**: The number of scheduled batch campaign executions in [!DNL Adobe Journey Optimizer] currently at risk of a timing conflict with segmentation.
 
 ![The Campaigns summary card in Job Schedules, showing the number of campaign executions at risk.](assets/job-schedules/job-schedules-campaigns-card.png){zoomable="yes"}
 
-These cards help you understand the activity and upcoming schedules across your data pipeline. The values for **Lake ingestion runs** and **Profile ingestion runs** change based on the selected time interval (Today, Yesterday, or Last 7 days); the next-run cards (**Next segmentation** and **Next destination activation**) are not affected by the time selector.
+These cards help you understand the activity and upcoming schedules across your data pipeline. The values for **Lake ingestion runs**, **Profile ingestion runs**, and **Identity ingestion runs** change based on the selected time interval (Today, Yesterday, or Last 7 days); the next-run cards (**Next segmentation** and **Next destination activation**) are not affected by the time selector.
 
 ### Time period selector {#time-period}
 
@@ -90,6 +92,7 @@ The main view shows you when your batch jobs are scheduled to run throughout the
 * **Understand job types**: The color-coded legend at the bottom helps you identify different job types:
   * **Lake ingestion** (green): Data ingestion into the data lake
   * **Profile ingestion** (pink): Data ingestion into the profile store
+  * **Identity ingestion** (orange): Data ingestion into the identity service
   * **Segmentation** (light blue): Audience evaluation jobs
   * **Profile export** (blue): Export of profile data
   * **Activation** (dark gray): Destination activation jobs

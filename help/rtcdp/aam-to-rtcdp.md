@@ -29,7 +29,7 @@ Furthermore, think about the data sources that you currently use in Audience Man
 
 Adobe recommends that you categorize your segments as follows: 
 
-* Segments that can be sent to Experience Platform via the [[!UICONTROL Audience Manager Source Connector]](/help/sources/connectors/adobe-applications/audience-manager.md), as they have no data dependencies, no destination or activation challenges, and their segmentation rules can be created through the Real-Time CDP [Segment Builder](/help/segmentation/ui/segment-builder.md) later. 
+* Segments that can be sent to Experience Platform via the [[!UICONTROL Audience Manager Source Connector]](/help/sources/connectors/adobe-applications/audience-manager.md), as they have no data dependencies, no destination or activation challenges, and their segmentation rules can be created through the Real-Time CDP [Audience Builder](/help/segmentation/ui/audience-builder.md) later. 
 * Segments that have rules that can be supported but may have contain data that won't be available in Real-Time CDP.
 * Segments that cannot be created in Real-Time CDP and are missing functionality.
 

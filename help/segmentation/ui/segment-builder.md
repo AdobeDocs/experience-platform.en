@@ -30,9 +30,9 @@ topic_v2:
 ---
 # [!DNL Segment Builder] UI guide
 
->[!NOTE]
+>[!AVAILABILITY]
 >
->This guide explains how to create audiences through **segment definitions** using Segment Builder. To learn how to create audiences using Audience Composition, please read the [Audience Composition UI guide](./audience-composition.md).
+>The newly updated Audience Builder is now generally available! For documentation about the updated Audience Builder, read the [Audience Builder UI guide](./audience-builder.md).
 
 [!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
 

@@ -13,6 +13,7 @@ exl-id: e568bfc3-f0e1-4305-94e7-070928459a87
 >
 > * Batch data lake ingestion (Real-Time CDP)
 > * Batch profile ingestion (Real-Time CDP)
+> * Batch identity ingestion (Real-Time CDP)
 > * Batch segmentation (Real-Time CDP)
 > * Batch destination activation (Real-Time CDP)
 > * Scheduled batch campaigns ([!DNL Adobe Journey Optimizer])
@@ -33,7 +34,7 @@ Before viewing job details, you should:
 
 * Have access to **[!UICONTROL Job Schedules]** with the **[!UICONTROL View Job Schedules]** and **[!UICONTROL View Profile Management]** [access control permissions](/help/access-control/home.md#permissions).
 * Be familiar with the [Job Schedules interface](job-schedules.md#understanding-interface) and timeline view.
-* Understand the different [job types](job-schedules.md#job-schedules-details) (lake ingestion, profile ingestion, segmentation, activation, campaign audience export, campaign delivery).
+* Understand the different [job types](job-schedules.md#job-schedules-details) (lake ingestion, profile ingestion, identity ingestion, segmentation, activation, campaign audience export, campaign delivery).
 
 ## Understanding the details hierarchy {#details-hierarchy}
 
@@ -119,6 +120,21 @@ For datasets with profile ingestion jobs, the panel shows the following metrics:
 | **[!UICONTROL Total profile ingestion time]** | The combined duration of all profile ingestion jobs | Timing issue identification |
 | **[!UICONTROL Total profiles updated]** | The cumulative number of existing profiles that were updated with data from this dataset | Update frequency tracking |
 | **[!UICONTROL Avg. profile ingestion speed (profiles/second)]** | The average throughput rate for profile ingestion jobs | Performance monitoring |
+
+### Identity ingestion metrics {#identity-ingestion-metrics}
+
+For datasets with identity ingestion jobs, the panel shows the following metrics:
+
+| Metric | Description | Use for |
+|--------|-------------|---------|
+| **[!UICONTROL Total runs]** | The total number of identity ingestion jobs that have completed for this dataset | Activity tracking |
+| **[!UICONTROL Runs in progress]** | How many identity ingestion jobs are currently running | Bottleneck detection |
+| **[!UICONTROL Total identities added]** | The cumulative number of new identities added to the identity service across all job runs | Volume monitoring |
+| **[!UICONTROL Total run duration]** | The combined duration of all identity ingestion jobs | Processing time assessment |
+| **[!UICONTROL Total identities updated]** | The cumulative number of existing identities that were updated during ingestion | Refresh pattern analysis |
+| **[!UICONTROL Avg. identity ingestion speed (identities/sec)]** | The average throughput rate for identity ingestion jobs | Performance comparison |
+
+![The Job Schedules page with the Identity ingestion summary card and the Identity ingestion section of the dataset details panel highlighted.](assets/job-schedules/identity-ingestion-details.png){zoomable="yes"}
 
 >[!NOTE]
 >

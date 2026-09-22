@@ -13,6 +13,7 @@ exl-id: f94e3ef3-2252-46f5-8075-45b5483d9d83
 >
 > * Batch data lake ingestion (Real-Time CDP)
 > * Batch profile ingestion (Real-Time CDP)
+> * Batch identity ingestion (Real-Time CDP)
 > * Batch segmentation (Real-Time CDP)
 > * Batch destination activation (Real-Time CDP)
 > * Scheduled batch campaigns ([!DNL Adobe Journey Optimizer])
