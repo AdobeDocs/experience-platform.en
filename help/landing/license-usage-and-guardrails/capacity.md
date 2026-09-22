@@ -95,7 +95,7 @@ For more information about guardrails in Experience Platform, please read the [R
 >[!CONTEXTUALHELP]
 >id="platform_capacity_scheduled_run_tiers"
 >title="Scheduled runs tiers"
->abstract="Scheduled Runs are available in three tiers based on the maximum number of audiences supported per run:<ul><li>T1: Up to 500 audiences/run</li><li>T2: Up to 1,000 audiences/run</li><li>T3: Up to 5,000 audiences/run</li></ul>**Note:** Once you upgrade to T2 or T3, the selected tier is locked until the next contract year.
+>abstract="The number of schedule runs your organization has. A scheduled run is consumed every time a custom schedule evaluates. A system schedule evaluation does not consume a schedule run.<br><br>Scheduled runs are available in three tiers based on the maximum number of audiences supported per run:<ul><li>T1: Up to 500 audiences/run</li><li>T2: Up to 1,000 audiences/run</li><li>T3: Up to 5,000 audiences/run</li></ul>**Note:** Once you upgrade to T2 or T3, the selected tier is locked until the next contract year."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_systemjob"

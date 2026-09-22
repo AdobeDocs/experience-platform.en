@@ -66,6 +66,7 @@ nudge: true
   - [Creating an external audience](tutorials/create-external-audience.md)
   - [Create a dataset to export data](tutorials/create-dataset-export-segment.md)
   - [Enforce data usage compliance for audiences](tutorials/governance.md)
+  - [Using Flexible Batch Schedules](tutorials/flexible-batch-schedules.md)
 - Profile Query Language {#pql}
   - [Overview](pql/overview.md)
   - [Boolean functions](pql/boolean-functions.md)
