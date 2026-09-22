@@ -27,7 +27,7 @@ To use traits, you **must** meet the following prerequisites:
 - At least **one** Experience Event dataset that's ingested using Adobe Data Collection on Edge Network
   - You must have the **Manage datasets** permission to enable a dataset for traits.
 - The **View traits** permission
-  - This lets you see your traits and use traits in Segment Builder
+  - This lets you see your traits and use traits in Audience Builder
 - The **Manage traits** permission
   - This lets you create, edit, and delete your traits
   - Manage traits **includes** all the **View traits** permissions
@@ -110,11 +110,11 @@ Once you have your trait details set, you can either **[!UICONTROL Save as draft
 >
 >You can **only** use traits in audiences that are evaluated using either batch segmentation or edge segmentation. Streaming segmentation is **not** supported at this time.
 
-Once you've created your trait, you can use them within your audience definitions. To open Segment Builder, select **[!UICONTROL Audiences]** followed by **[!UICONTROL Create audience]**, **[!UICONTROL Build rule]**, and **[!UICONTROL Create]**. 
+Once you've created your trait, you can use them within your audience definitions. To open Audience Builder, select **[!UICONTROL Audiences]** followed by **[!UICONTROL Create audience]**, **[!UICONTROL Build rule]**, and **[!UICONTROL Create]**. 
 
 ![The path to access Audience Builder is displayed and highlighted.](/help/profile/images/traits/create-audience.png)
 
-Segment Builder appears. In Segment Builder, you can see all the published traits that belong to your sandbox.
+Audience Builder appears. In Audience Builder, you can see all the published traits that belong to your sandbox.
 
 ![The Traits tab is displayed within Audience Builder, showing all the Traits you can use during audience creation.](/help/profile/images/traits/traits-in-audience-builder.png)
 
