@@ -23,6 +23,7 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Capacity](#capacity)
 - [Data Governance](#data-governance)
 - [Destinations](#destinations)
+- [Privacy Service](#privacy)
 - [Query Service](#query-service)
 - [Run and Operate](#run-and-operate)
 - [Sandboxes](#sandboxes)
@@ -37,7 +38,7 @@ Use CX Enterprise Coworker to access AI-powered conversational skills that help 
 
 | Feature | Description |
 | --- | --- |
-| Data management skills in CX Enterprise Coworker | Use new conversational skills in CX Enterprise Coworker to find the datasets consuming the most storage, preview the impact of a retention limit before applying it, and review a dataset's automatic data expiration configuration, profile and identity enablement, and storage metrics. |
+| [Data management agentic skills in CX Enterprise Coworker](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/coworker/chat/use-cases/data-management/manage-data-lake-retention) | You can now use conversational data management skills in CX Enterprise Coworker to identify high-storage datasets, assess retention changes before applying them, and review dataset configuration and storage metrics. These skills help you investigate data usage and retention without manually checking each dataset. |
 
 {style="table-layout:auto"}
 
@@ -70,7 +71,7 @@ Use Data Governance to manage data usage policies and enforce compliance with da
 
 | Feature | Description |
 | --- | --- |
-| India added as a supported privacy regulation | Privacy Service now supports the India Digital Personal Data Protection Act. Select India when you configure a privacy request in the Privacy Service UI or API. |
+| Updated label application workflows | You can now apply data governance labels through inline actions in the Datasets workspace or directly in the Schema Editor, reducing the steps required to label datasets and schema fields. |
 
 {style="table-layout:auto"}
 
@@ -108,23 +109,29 @@ For more information, read the [Data Governance overview](/help/data-governance/
 
 For more information, read the [Destinations overview](/help/destinations/home.md).
 
-## Query Service {#query-service}
+## [!DNL Privacy Service] {#privacy}
 
-Use Query Service to query data in Adobe Experience Platform using standard SQL.
+Several legal and organizational regulations give users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
 
-**New or updated features**
+**New features**
 
 | Feature | Description |
 | --- | --- |
-| XDM row-validation error code reference | A new reference maps `INGEST-####-400` error codes returned by Query Service trusted-flow writes to the XDM schema constraint that triggered them, along with remediation guidance. |
+| India Digital Personal Data Protection Act support | [!DNL Privacy Service] now supports requests under the India Digital Personal Data Protection Act. You can select India when you create a privacy request in the [!DNL Privacy Service] UI or API. |
 
 {style="table-layout:auto"}
+
+For more information, read the [Privacy Service overview](/help/privacy-service/home.md).
+
+## Query Service {#query-service}
+
+Use Query Service to query data in Adobe Experience Platform [!DNL Data Lake] with standard SQL. Join any datasets from the [!DNL Data Lake] and capture query results as a new dataset for use in reporting, Data Science Workspace, or ingestion into Real-Time Customer Profile.
 
 **Fixes and improvements**
 
 | Fix | Description |
 | --- | --- |
-| Accelerated Queries schema permission enforcement | Starting September 22, 2026, [accelerated queries](/help/query-service/api/accelerated-queries.md) enforce existing schema-level read permissions. Confirm that the roles used to run your accelerated queries have read access to the schemas they reference, so your queries, dashboards, and other dependent tools continue to work without interruption. |
+| Accelerated Queries schema permission enforcement | [Accelerated queries](/help/query-service/api/accelerated-queries.md) now enforce existing schema-level read permissions. Ensure that the roles running accelerated queries have read access to referenced schemas to prevent failures in queries, dashboards, and other dependent tools. |
 
 {style="table-layout:auto"}
 
