@@ -31,17 +31,19 @@ New features and updates to existing features in Adobe Experience Platform:
 
 ## CX Enterprise Coworker {#cx-enterprise-coworker}
 
-Use CX Enterprise Coworker to access AI-powered conversational skills that help you manage and validate data in Experience Platform, directly within [!DNL Microsoft Copilot], [!DNL ChatGPT], and [!DNL Claude].
+Use CX Enterprise Coworker to access AI-powered conversational skills that help you manage and validate data in Experience Platform.
 
 **New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| CX Enterprise Coworker in AI platforms | Access CX Enterprise Coworker directly within [!DNL Microsoft Copilot], [!DNL ChatGPT], and [!DNL Claude]. |
 | Data management skills in CX Enterprise Coworker | Use new conversational skills in CX Enterprise Coworker to find the datasets consuming the most storage, preview the impact of a retention limit before applying it, and review a dataset's automatic data expiration configuration, profile and identity enablement, and storage metrics. |
-| Data validation skills in CX Enterprise Coworker | Use a new conversational skill in CX Enterprise Coworker to validate data fields and datasets in Experience Platform. |
 
 {style="table-layout:auto"}
+
+<!--
+| Data validation skills in CX Enterprise Coworker | Use a new conversational skill in CX Enterprise Coworker to validate data fields and datasets in Experience Platform. |
+-->
 
 For more information, read the [CX Enterprise Coworker documentation](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/coworker/overview).
 
