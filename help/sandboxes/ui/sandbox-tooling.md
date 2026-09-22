@@ -421,7 +421,7 @@ The package-based sandbox tooling workflow described earlier on this page requir
 
 For each object and target sandbox, multi-sandbox management automatically resolves required dependencies and recommends whether to create a new object or update an existing one. Before any object is promoted, review a diff preview that summarizes the proposed changes for each target sandbox. Promotion begins only after you approve the preview. All promotion activity is recorded in the audit logs.
 
-To start a multi-sandbox promotion, navigate to **[!UICONTROL Sandboxes]** and select the **[!UICONTROL Packages]** tab. From the list of available packages, select the ellipsis (...) next to the package that you want to promote, and then select **[!UICONTROL Promote to sandboxes]**.
+To start a multi-sandbox promotion, navigate to **[!UICONTROL Sandboxes]** and select the **[!UICONTROL Packages]** tab. From the list of available packages, select the ellipsis (...) next to the package that you want to promote, then select **[!UICONTROL Promote to sandboxes]**. Alternatively, select **[!UICONTROL Promote to sandboxes]** at the top of the page.
 
 ![Sandboxes UI showing the Promote to sandboxes option.](../images/ui/sandbox-tooling/promote-to-sandboxes.png)
 
@@ -433,7 +433,7 @@ Select the target sandboxes that should receive the package, and then select **[
 
 ![Target sandboxes selected from available list.](../images/ui/sandbox-tooling/promote-to-sandboxes-target.png)
 
-Review the proposed changes for each target sandbox. Use the sandbox tabs to switch between target sandboxes and review the objects included in the promotion. Verify whether each object will be created, updated, remain unchanged, or be removed. When you finish reviewing the changes, select **[!UICONTROL Confirm]**.
+Review the proposed changes for each target sandbox. Use the sandbox tabs to switch between target sandboxes and review the objects included in the promotion. Verify whether each object will be created, updated, remain unchanged, or be removed. For objects marked as changed, select **[!UICONTROL Preview]** to review a detailed comparison of the changes between the source and target sandboxes. When you finish reviewing the changes, select **[!UICONTROL Confirm]**.
 
 ![Review and confirm objects for the target sandboxes.](../images/ui/sandbox-tooling/promote-to-sandboxes-confirm.png)
 
