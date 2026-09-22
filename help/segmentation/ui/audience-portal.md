@@ -47,7 +47,7 @@ Within Audience Portal, you can accomplish the following tasks:
   - [View a summary about your audience](#audience-summary)
 - [Enable your audiences for scheduled segmentation](#scheduled-segmentation)
 - [Create an audience](#create-audience)
-  - [Use Segment Builder to create an audience](#segment-builder)
+  - [Use Audience Builder to create an audience](#segment-builder)
   - [Use Audience Composition to create an audience](#audience-composition)
   - [Use Federated Audience Composition to create an audience using data from your existing data warehouse](#fac)
   - [Use Data Distiller to create an audience](#data-distiller)
@@ -81,7 +81,7 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 
 | Action | Origins | Description |
 | ------ | ------- | ----------- |
-| [!UICONTROL Edit] | Segmentation Service | Opens Segment Builder to edit your audience. Please note that if your audience was created through the API, you will **not** be able to edit it using Segment Builder. For more information on using Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md). |
+| [!UICONTROL Edit] | Segmentation Service | Opens Audience Builder to edit your audience. Please note that if your audience was created through the API, you will **not** be able to edit it using Audience Builder. For more information on using Audience Builder, please read the [Audience Builder UI guide](./audience-builder.md). |
 | [!UICONTROL Open composition] | Audience composition | Opens the Audience composition to see your audience. For more information on Audience composition, please read the [audience composition UI guide](./audience-composition.md). |
 | [!UICONTROL Activate to destination] | Segmentation Service | Activates the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md). |
 | [!UICONTROL Share with partners] | Audience composition, Custom upload, Segmentation Service | Shares your audience with other Experience Platform users. For more information on this feature, please read the [Segment Match overview](./segment-match/overview.md). |
@@ -316,7 +316,7 @@ This button will **not** be selectable in the following situations:
 
 ![The audience details page is shown, with the [!UICONTROL Edit audience] button highlighted.](/help/segmentation/images/ui/audience-portal/audience-details-edit-audience.png)
 
-Selecting **[!UICONTROL Edit audience]** lets you edit your audience in Segment Builder. For more detailed information about using the [!DNL Segment Builder] workspace, please read the [[!DNL Segment Builder] user guide](./segment-builder.md).
+Selecting **[!UICONTROL Edit audience]** lets you edit your audience in Audience Builder. For more detailed information about using the [!DNL Audience Builder] workspace, please read the [[!DNL Audience Builder] user guide](./audience-builder.md).
 
 >[!ENDTABS]
 
@@ -429,11 +429,11 @@ Selecting **[!UICONTROL Compose audiences]** takes you to Audience Composition. 
 
 ![The Audience Composition workspace is displayed.](/help/segmentation/images/ui/audience-portal/audience-composition.png)
 
-### Segment Builder {#segment-builder}
+### Audience Builder {#segment-builder}
 
-Selecting **[!UICONTROL Build rule]** takes you to Segment Builder. This workspace provides intuitive controls for building and editing segment definitions, such as drag-and-drop tiles used to represent data properties. To learn more about creating segment definitions, please read the [Segment Builder guide](./segment-builder.md)
+Selecting **[!UICONTROL Build rule]** takes you to Audience Builder. This workspace provides intuitive controls for building and editing segment definitions, such as drag-and-drop tiles used to represent data properties. To learn more about creating segment definitions, please read the [Audience Builder guide](./audience-builder.md)
 
-![The Segment Builder workspace is displayed.](/help/segmentation/images/ui/audience-portal/segment-builder.png)
+![The Audience Builder workspace is displayed.](/help/segmentation/images/ui/audience-portal/segment-builder.png)
 
 ### Federated Audience Composition {#fac}
 

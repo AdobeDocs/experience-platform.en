@@ -29,6 +29,8 @@ topic_v2:
 
 The Push Debug View inside Adobe Experience Platform Assurance provides the ability to validate the Push setup for your app and send a test message to your device.
 
+If you are debugging iOS Live Activities, use the [Live Activities view](./live-activities-view.md) together with this view. This view validates the app's general push setup, including client, profile, and channel configuration. The Live Activities view adds Live Activity-specific validation and lets you inspect activity events and, when supported, start, update, or end activities from Assurance.
+
 ## Clients
 
 ![Push Clients](./images/push-debug-view/clients.png)

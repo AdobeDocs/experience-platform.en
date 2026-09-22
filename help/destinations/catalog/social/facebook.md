@@ -226,27 +226,7 @@ The video below also demonstrates the steps to configure a [!DNL Facebook] desti
 
 ### Refresh authentication credentials {#refresh-authentication-credentials}
 
-Facebook authentication tokens expire every 60 days. Once the token is expired, data exports to the destination stop working.
-
-You can monitor your token expiration dates from the **[!UICONTROL Account expiration date]** column in either the **[[!UICONTROL Accounts]](../../ui/destinations-workspace.md#accounts)** or the **[[!UICONTROL Browse]](../../ui/destinations-workspace.md#browse)** tabs. 
-
-![Facebook account token expiration date column in the Browse tab](../../assets/catalog/social/facebook/account-expiration-browse.png)
-
-![Facebook account token expiration date column in the Accounts tab](../../assets/catalog/social/facebook/account-expiration-accounts.png)
-
-To prevent token expiration causing interruptions in your activation dataflows, reauthenticate by performing the following steps:
-
-1. Navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
-2. (Optional) Use the available filters on the page to display Facebook accounts only.
-    ![Filter to show Facebook accounts only](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
-3. Select the account that you want to refresh, select the ellipsis and select **[!UICONTROL Edit details]**. 
-    ![Select Edit details control](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. In the modal window, select **[!UICONTROL Reconnect OAuth]** and reauthenticate with your Facebook credentials.
-    ![Modal window with Reconnect OAuth option](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
-
->[!SUCCESS]
->
->Your authentication credentials are refreshed and their expiration time is reset to 60 days.
+Facebook authentication credentials do not expire. [!DNL Experience Platform] automatically refreshes the OAuth token, so data exports to the destination continue without interruption.
 
 ### Fill in destination details {#destination-details}
 

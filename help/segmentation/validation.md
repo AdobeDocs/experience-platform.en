@@ -9,7 +9,7 @@ When you write an audience definition in Adobe Experience Platform, audience val
 
 By adhering to audience definition best practices, you ensure your audiences can evaluate faster, ensure your logic remains efficient even when your audience size grows, and reduce the risk of evaluation failures during high-traffic periods. Optimized audiences also improve activation speed to destinations, reduce real-time personalization latency, and maintain overall sandbox stability.
 
-Experience Platform runs these validations in real-time as you build your audience in Segment Builder. When you add events or attributes that exceed validation thresholds, you receive immediate feedback within the Segment Builder interface.
+Experience Platform runs these validations in real-time as you build your audience in Audience Builder. When you add events or attributes that exceed validation thresholds, you receive immediate feedback within the Audience Builder interface.
 
 ## Validation types {#validation-types}
 
@@ -18,6 +18,11 @@ When audience validation runs on your audiences, there are two different types o
 If a critical validation construct is violated, the system will prevent you from saving your audience to protect the stability of your sandbox. If a performance optimization construct is violated, you will be able to save your audience, but it is *highly recommended* you update your audience definition to avoid performance issues.
 
 ## Validation checks {#validation-checks}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_audiencevalidation"
+>title="Audience validation"
+>abstract="Audience Validation provides built-in validations and guardrails that run in real-time to ensure your audiences are not only accurate, but stable and scalable. This ensures your audiences evaluate faster, remain logically efficient, and reduces the risk of evaluation failures. Audience Validation checks include logical complexity, sequential events, aggregated count, nested data, and audience size."
 
 Currently, the following validations are supported:
 
@@ -175,7 +180,7 @@ If you need to create an audience that qualifies more than 30% of your profile s
 
 ## Next steps
 
-After reading this guide, you have a better understanding of how Experience Platform runs automatic validations to improve evaluation, stability, and scalability. For more information on creating audiences using the UI, read the [Segment Builder documentation](./ui/segment-builder.md).
+After reading this guide, you have a better understanding of how Experience Platform runs automatic validations to improve evaluation, stability, and scalability. For more information on creating audiences using the UI, read the [Audience Builder documentation](./ui/audience-builder.md).
 
 ## Appendix
 

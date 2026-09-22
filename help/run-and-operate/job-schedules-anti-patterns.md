@@ -13,6 +13,7 @@ exl-id: f94e3ef3-2252-46f5-8075-45b5483d9d83
 >
 > * Batch data lake ingestion
 > * Batch profile ingestion
+> * Batch identity ingestion
 > * Batch segmentation
 > * Batch destination activation
 
