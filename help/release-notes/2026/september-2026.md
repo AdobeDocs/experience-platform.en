@@ -186,6 +186,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | --- | --- |
 | [[!DNL HubSpot]](/help/sources/connectors/marketing-automation/hubspot.md) V2 connector | Ingest data from [!DNL HubSpot] using the updated V2 connector. |
 | [Server-side encryption for [!DNL Amazon S3]](/help/sources/tutorials/api/encrypt-data.md#server-side-encryption-for-amazon-s3) | Combine [!DNL Amazon S3] server-side encryption (SSE) with PGP file encryption when you ingest encrypted data from [!DNL Amazon S3]. On the VA6 region of [Adobe Experience Platform on AWS](/help/landing/multi-cloud.md), the maximum encrypted file size increases from 1 GB to 10 GB. |
+| [Self-Serve Sources (Streaming SDK) on AWS](/help/sources/sources-sdk/streaming/getting-started.md) | Use Self-Serve Sources (Streaming SDK) to build connectors for [Adobe Experience Platform running on AWS](/help/landing/multi-cloud.md). Experience Platform running on AWS is currently available to a limited number of customers. |
 
 {style="table-layout:auto"}
 
