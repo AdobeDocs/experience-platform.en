@@ -171,6 +171,10 @@ See the table below for more information on scheduling configurations.
 | Start Time | The timestamp for the projected run, presented in UTC time zone. |
 | Backfill | Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to the start time will not be ingested. |
 
+>[!IMPORTANT]
+>
+>Select the root folder in the [[!UICONTROL Add data] step](#add-data) when you enable backfill. Selecting a subfolder can cause files outside that subfolder to be skipped during the first scheduled ingestion.
+
 >[!NOTE]
 >
 >For batch ingestion, every ensuing dataflow selects files to be ingested from your source based on their **last modified** timestamp. This means that batch dataflows select files from the source that are either new or have been modified since the last flow run. Furthermore, you must ensure that there's a sufficient time span between file upload and a scheduled flow run because files that are not entirely uploaded to your cloud storage account before the scheduled flow run time may not be picked up for ingestion.
