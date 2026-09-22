@@ -90,7 +90,7 @@ For more information about guardrails in Experience Platform, please read the [R
 >[!CONTEXTUALHELP]
 >id="platform_capacity_scheduledruns"
 >title="Scheduled runs"
->abstract="The number of schedule runs your organization has. A schedule run is consumed every time a custom schedule evaluates. A system schedule evaluation does not consume a schedule run."
+>abstract="The number of schedule runs your organization has. A scheduled run is consumed every time a custom schedule evaluates. A system schedule evaluation does not consume a schedule run."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_scheduled_run_tiers"
@@ -285,7 +285,7 @@ The **[!UICONTROL Edge audience count]** section displays the number of edge aud
 
 ### Batch capacities {#batch-capacities}
 
-The **Batch capacities** section outlines information about your organization's batch capacities. Specifically, this section displays capacity information about the on demand runs, scheduled runs, as well as batch audience counts.
+The **Batch capacities** section shows your organization's on demand runs, scheduled runs, as well as batch audience counts.
 
 ![The Batch capacities section is displayed, showing the on-demand runs and the scheduled runs areas.](/help/landing/images/capacity/batch-capacities.png)
 
