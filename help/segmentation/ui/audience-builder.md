@@ -1,15 +1,13 @@
 ---
 title: Audience Builder UI Guide
 description: Learn how to use the Audience Builder so you can create audiences from your Profile data elements.
-hide: true
-hidefromtoc: true
 ---
 
 # Audience Builder UI Guide
 
 >[!AVAILABILITY]
 >
->The updated Audience Builder is currently in **closed beta**. The documentation and the functionality are subject to change.
+>The newly updated Audience Builder is now generally available! You can switch back to the previous Segment Builder experience during this transition period by disabling the **[!UICONTROL New Audience Builder]** toggle. The old Segment Builder experience and the toggle will be deprecated in early 2027. For documentation about the previous Segment Builder, read the [Segment Builder UI guide](./segment-builder.md).
 
 Audience Builder provides a rich workspace that lets you interact with Profile data elements. The workspace provides intuitive controls for building and editing your audience's rules.
 
@@ -49,7 +47,7 @@ Selecting the information bubble gives the date and time the last sample job was
 
 ### Properties {#properties}
 
-You can also specify important information about your audience within the **[!UICONTROL Audience Properties]** panel. This includes your audience's name, description, access labels, tags, and evaluation type.
+You can also specify important information about your audience within the **[!UICONTROL Audience Properties]** panel. This includes your audience's name, description, access labels, tags, evaluation type, and schedule.
 
 ![The audience information section is highlighted within the entire properties panel.](/help/segmentation/images/ui/audience-builder/properties.png){width="400" zoomable="yes"}
 
@@ -85,6 +83,14 @@ If you select an invalid evaluation method, you will be prompted to either chang
 
 More information about the different audience evaluation methods can be found in the [segmentation overview](/help/segmentation/home.md#evaluate-audiences).
 
+If your audience is evaluated using batch evaluation, you can choose a schedule for the audience to be evaluated with. Select the ![calendar icon](/help/images/icons/calendar.png) to choose the schedule that the audience will be evaluated with.
+
+![The calendar icon is highlighted within the audience properties section.](/help/segmentation/images/ui/audience-builder/select-schedule.png)
+
+The **[!UICONTROL Audience schedules]** popover appears. On this popover, you can select the schedules you want the audience to be evaluated using.
+
+![The Audience schedules popover is displayed, showing a list of schedules you can add the audience to.](/help/segmentation/images/ui/audience-builder/audience-schedules.png)
+
 ## Audience canvas {#audience-canvas}
 
 The Audience Builder canvas provides three different types of views: **[!UICONTROL Rule view]**, **[!UICONTROL Code view]**, and **[!UICONTROL Profile view]**. 
@@ -105,13 +111,13 @@ Within the rule view, you can use the undo and redo buttons to revert changes yo
 
 You can also adjust the settings of the visible fields by selecting ![the settings icon](/help/images/icons/settings.png).
 
-The **[!UICONTROL Show full XDM schema]** setting determines if you see **all** fields, or only fields that contain data.
+The **[!UICONTROL Show fields only with data]** setting determines if you see **all** fields, or only fields that contain data.
+
+For **[!UICONTROL Data sources]**, you can filter to show attributes that come from the specified ingestion types. Supported values include **[!UICONTROL Batch and streaming/edge]**, **[!UICONTROL Batch only]**, and **[!UICONTROL Streaming/edge only]**.
 
 The **[!UICONTROL Show relation selectors]** setting determines if you use the standard relations for your organization or if the relation selectors are shown.
 
-The **[!UICONTROL Use AI search suggestions]** setting determines if the AI-enabled search will be used for searching fields.
-
-For **[!UICONTROL Data sources]**, you can filter to show attributes that come from the specified ingestion types. Supported values include **[!UICONTROL Show batch data]**, **[!UICONTROL Show streaming/edge data]**, and **[!UICONTROL Show fields with no ingested data]**.
+The **[!UICONTROL Use AI search suggestions]** setting determines if the AI will be used to suggest relevant fields and audiences based on your query.
 
 For **[!UICONTROL Merge policy]**, you can choose which merge policy the fields belong to.
 
@@ -127,7 +133,7 @@ You can select **[!UICONTROL Add field]** to add an attribute or audience to the
 
 ![The Add field and Add group buttons are highlighted.](/help/segmentation/images/ui/audience-builder/add-attributes.png){width="750" zoomable="yes"}
 
-If you select **[!UICONTROL Add field]**, the Discovery Panel appears. This panel lets you search for the field you want to add. Type in the name of the field you're looking for and press enter.
+If you select **[!UICONTROL Add field]**, the Discovery Panel appears. This panel lets you search for the field you want to add, and will automatically search as you type.
 
 ![The Discovery Panel is displayed, showing what happens when you select Add field.](/help/segmentation/images/ui/audience-builder/view-browse-fields.png){width="500" zoomable="yes"}
 
@@ -145,19 +151,17 @@ You can select ![the star icon](/help/images/icons/star.png) to add the searched
 
 You can select ![the filter icon](/help/images/icons/filter-unfilled.png) to adjust the settings for the displayed fields.
 
-For the **[!UICONTROL Field settings]**, you can either show only the fields that contain data or the full XDM schema.
-
 For the **[!UICONTROL Field types]**, you can show **[!UICONTROL Attributes]** or **[!UICONTROL Audiences]**.
 
 ![The filter settings for the fields are displayed.](/help/segmentation/images/ui/audience-builder/filter-settings.png){width="250" zoomable="yes"}
 
-Alternatively, you can view all the available fields for your audience by selecting **[!UICONTROL View All]** in the **[!UICONTROL Browse fields]** area.
+Alternatively, you can view all the available fields for your audience by selecting **[!UICONTROL View All]** in the **[!UICONTROL Browse]** area.
 
-![The View all button is highlighted within the Discover Panel.](/help/segmentation/images/ui/audience-builder/select-view-all-browse-fields.png){width="400" zoomable="yes"}
+![The View all button is highlighted within the Discovery Panel.](/help/segmentation/images/ui/audience-builder/select-view-all-browse-fields.png){width="400" zoomable="yes"}
 
-In the **[!UICONTROL Browse fields]** area, you can select between **[!UICONTROL Attributes]** or **[!UICONTROL Audiences]**.
+In the **[!UICONTROL Browse]** area, you can select between **[!UICONTROL Attributes]** or **[!UICONTROL Audiences]**.
 
-![The Browse fields section, with the choice between attributes and audiences, is displayed.](/help/segmentation/images/ui/audience-builder/view-browse-fields.png){width="400" zoomable="yes"}
+![The Browse section, with the choice between attributes and audiences, is displayed.](/help/segmentation/images/ui/audience-builder/view-browse-fields.png){width="400" zoomable="yes"}
 
 >[!BEGINTABS]
 
@@ -165,11 +169,11 @@ In the **[!UICONTROL Browse fields]** area, you can select between **[!UICONTROL
 
 If you select **[!UICONTROL Attributes]**, a full list of the available XDM Individual Profile attributes appears. Additionally, you can see custom added attributes that belong to your sandbox.
 
-![The attributes are displayed within the Browse Fields section.](/help/segmentation/images/ui/audience-builder/browse-fields-attributes.png){width="400" zoomable="yes"}
+![The attributes are displayed within the Browse section.](/help/segmentation/images/ui/audience-builder/browse-fields-attributes.png){width="400" zoomable="yes"}
 
 To add an attribute to the rule-building canvas, select the name of the attribute you want to add. You may need to navigate through the folder structure of the XDM schema in order to find the attribute.
 
-After selecting the attribute, details of the attribute appear. This includes information such as the path of the attribute, sample values, description, and type. You can select [the star icon](/help/images/icons/star.png) to favorite the attribute or **[!UICONTROL Add field]** to add the attribute to your audience's rules.
+After selecting the attribute, details of the attribute appear. This includes information such as the path of the attribute, sample values, description, type, and ingestion type. You can select [the star icon](/help/images/icons/star.png) to favorite the attribute or **[!UICONTROL Add field]** to add the attribute to your audience's rules.
 
 ![The Add field button is highlighted and is shown along with details of the attribute.](/help/segmentation/images/ui/audience-builder/add-attribute-field.png){width="400" zoomable="yes"}
 
@@ -203,21 +207,25 @@ You can use the following condition types for your attributes:
 | -------------- | ----------- |
 | Compare to input | Compares the attribute value to the specified input value. This is the default option when choosing an attribute. |
 | Compare to another attribute | Compares the attribute value to the value of another attribute. You can choose the attribute you want to compare using the Discovery Panel. |
-| Has any value | Checks to see if the attribute has any value. This is equivalent to seeing if the attribute "exists". |
-| Has no value | Checks to see if the attribute has no value. This is equivalent to seeing if the attribute "does not exist". |
+| Exists | Checks to see if the attribute exists. This is equivalent to seeing if the attribute has a value. |
+| Does not exist | Checks to see if the attribute does not exist. This is equivalent to seeing if the attribute doesn't have a value. |
 
 If you select **[!UICONTROL Compare to input]**, you can choose one of the additional options:
 
 - Allow multiple inputs
 - Case sensitive
 
-If you select **[!UICONTROL Allow multiple inputs]**, the **[!UICONTROL Multiple Inputs]** popover is displayed. On this popover, you can add the values to compare the attribute to.
+If you select **[!UICONTROL Allow multiple inputs]**, the **[!UICONTROL Multiple inputs]** popover is displayed. On this popover, you can add the values to compare the attribute to.
 
-![The Multiple Inputs popover is displayed.](/help/segmentation/images/ui/audience-builder/multiple-inputs.png){width="750" zoomable="yes"}
+![The Multiple inputs popover is displayed.](/help/segmentation/images/ui/audience-builder/multiple-inputs.png){width="750" zoomable="yes"}
 
 You can either add the values on a line-by-line basis in the **[!UICONTROL Values]** box, or choose the values from the **[!UICONTROL Suggested values]** section.
 
-The popover also provides the following available actions. If you select the ![undo icon](/help/images/icons/reset.png), the inputs revert to the initial state. If you select the ![move down icon](/help/images/icons/sort-down.png), the selected value moves down one line. If you select the ![upload file icon](/help/images/icons/upload.png), you can upload a CSV or TSV file that contain the values you want to compare against.
+The popover also provides the following available actions. If you select **![reset icon](/help/images/icons/reset.png) Reset**, the inputs revert to the initial state. If you select **![sort icon](/help/images/icons/sort-down.png) Sort**, the values are sorted to alphabetical order. If you select **![upload file icon](/help/images/icons/upload.png) Upload**, you can upload a CSV or TSV file that contain the values you want to compare against.
+
+Alternatively, you can select ![multiple values icon](/help/images/icons/multiple-values-icon.png) to open the same **[!UICONTROL Multiple inputs]** popover.
+
+![The select multiple values icon is highlighted when the attribute is selected.](/help/segmentation/images/ui/audience-builder/select-multiple-values-icon.png)
 
 If you select **[!UICONTROL Case sensitive]**, the attribute's value **must** match the exact casing of specified input value.
 
@@ -241,9 +249,15 @@ For more information on computed attributes, including how to create them, what 
 
 The **[!UICONTROL Events]** section lets you add ExperienceEvents to your audience's rules. 
 
-Select **[!UICONTROL Add event]** to choose from a list of ExperienceEvents that you can add to your audience.
+Select **[!UICONTROL Add event]** to add an ExperienceEvent that you can add to your audience.
 
 ![The Add event button is highlighted within the Events section of the Rule view.](/help/segmentation/images/ui/audience-builder/select-add-event.png){width="750" zoomable="yes"}
+
+The Discovery Panel appears. This panel displays both **[!UICONTROL Events]** and **[!UICONTROL Event types]**. 
+
+![The Discovery Panel for events is displayed.](/help/segmentation/images/ui/audience-builder/discovery-panel-events.png)
+
+If you select **[!UICONTROL Events]**, you can choose events that belong to your organization. If you select **[!UICONTROL Event types]**, you can choose from a collection of commonly used events in Experience Platform.
 
 After adding an event to your canvas, you can add additional events to the timeline. These events can be added before, after, above, or below the already selected event.
 
@@ -284,7 +298,7 @@ If you select **[!UICONTROL Aggregate]**, you can add an aggregation function to
 
 You can add groups of either attributes or events within Audience Builder. Groups let you control the order of execution through the use of nested queries.
 
-When you add a group, it automatically appears as a child of the the first group. You can adjust the hierarchy by dragging and moving the containers.
+When you add a group, it automatically appears as a child of the the first group. You can adjust the hierarchy by dragging and moving the rules within the container.
 
 By default, the group will **include** all the attributes, events, or audiences within the group. You can change this by selecting the dropdown at the top of the group.
 
@@ -417,7 +431,7 @@ A selection of profiles is displayed. This includes information such as ID, firs
 
 ## Audience validation {#audience-validation}
 
-Audience Builder automatically analyzes and validates your audience definition to ensure you adhere to audience definition best practices. These best practices can be set into two categories: critical validation and performance optimization.
+Audience Builder automatically analyzes and validates your audience definition to ensure you adhere to audience definition best practices. The validations run inline within the Audience Builder and appear as you build your audience. These best practices can be set into two categories: critical validation and performance optimization.
 
 If an audience definition breaks a critical validation best practice, you will **not** be able to save your changes in order to keep your sandbox stable. If an audience definition breaks a performance optimization best practice, you will be able to save your changes, but it is *highly recommended* to update your audience definition to avoid performance issues.
 

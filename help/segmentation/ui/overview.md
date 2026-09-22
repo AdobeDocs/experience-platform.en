@@ -75,7 +75,7 @@ To learn more, visit the [audiences dashboard guide](../../dashboards/guides/aud
 
 Select the **[!UICONTROL Browse]** tab to see the Audience Portal. Audience Portal provides a list of all the audiences that belong to your organization and sandbox, and includes details such as the profile count, origin, created date, last modified date, tags, and breakdown. 
 
-In addition, Audience Portal lets you create new audiences using Segment Builder or Audience Composition, as well as import externally generated audiences into Experience Platform.
+In addition, Audience Portal lets you create new audiences using Audience Builder or Audience Composition, as well as import externally generated audiences into Experience Platform.
 
 For more information about Audience Portal, please read the [Audience Portal overview](./audience-portal.md).
 

@@ -96,7 +96,7 @@ Additionally, the attribute has an **[!UICONTROL Ingestion Type]**. The ingestio
 
 ![The ingestion type for the attribute is displayed.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png){width="300"}
 
-For a more detailed guide on attributes within Audience Builder, read the [Audience Builder user guide](../../segmentation/ui/segment-builder.md){target="_blank"}.
+For a more detailed guide on attributes within Audience Builder, read the [Audience Builder user guide](../../segmentation/ui/audience-builder.md){target="_blank"}.
 
 ### Audiences {#audiences}
 
@@ -114,13 +114,13 @@ To add a new rule to your segment definition, drag a tile from the **[!UICONTROL
 
 ![The rule builder canvas with an added field.](../assets/segmentation/audience-builder/added-field.png){zoomable="yes"}
 
-For more information on using the rule builder canvas, read the [Segment Builder documentation](../../segmentation/ui/segment-builder.md#rule-builder-canvas){target="_blank"}.
+For more information on using the rule builder canvas, read the [Audience Builder documentation](../../segmentation/ui/audience-builder.md#rule-builder-canvas){target="_blank"}.
 
 ### Containers {#containers}
 
 Audience rules are evaluated in the order they are listed. You can use containers to allow greater control over the order of execution, through the usage of nested queries.
 
-For more information on containers, read the [Segment Builder documentation](../../segmentation/ui/segment-builder.md#containers){target="_blank"}.
+For more information on containers, read the [Audience Builder documentation](../../segmentation/ui/audience-builder.md#containers){target="_blank"}.
 
 ## Audience properties {#properties}
 

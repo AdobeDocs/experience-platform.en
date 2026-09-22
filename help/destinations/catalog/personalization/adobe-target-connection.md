@@ -136,7 +136,7 @@ This section describes which types of audiences you can export to this destinati
 
 >[!IMPORTANT]
 >
->When activating *edge audiences for same-page and next-page personalization use cases*, the audiences *must* use an [active-on-edge merge policy](../../../segmentation/ui/segment-builder.md#merge-policies). The [!DNL active-on-edge] merge policy ensures that audiences are constantly evaluated [on the edge](../../../segmentation/methods/edge-segmentation.md) and are available for real-time and next-page personalization use cases.  Read about [all available use cases](#parameter),based on implementation type.
+>When activating *edge audiences for same-page and next-page personalization use cases*, the audiences *must* use an [active-on-edge merge policy](../../../segmentation/ui/audience-builder.md#merge-policies). The [!DNL active-on-edge] merge policy ensures that audiences are constantly evaluated [on the edge](../../../segmentation/methods/edge-segmentation.md) and are available for real-time and next-page personalization use cases.  Read about [all available use cases](#parameter),based on implementation type.
 >If you map edge audiences which use a different merge policy to [!DNL Adobe Target] destinations, those audiences will not be evaluated for real-time and next-page use cases.
 >Follow the instructions on [creating a merge policy](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy), and make sure to enable the **[!UICONTROL Active-On-Edge Merge Policy]** toggle.
 
