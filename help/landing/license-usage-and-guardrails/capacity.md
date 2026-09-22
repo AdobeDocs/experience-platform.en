@@ -119,14 +119,20 @@ For more information about guardrails in Experience Platform, please read the [R
 
 Currently, Capacity supports the following services:
 
+- Batch segmentation
 - Streaming segmentation
 - Streaming ingestion
 - Edge segmentation
 
 Within these services, the following guardrails are tracked:
 
+- The maximum number of batch audiences is 4000
+  - An increased maximum number for batch audiences of 10,000 is available under **Limited availability**.
 - The maximum number of streaming audiences is 500
 - The maximum number of edge audiences is 150
+- The maximum number of schedules is 4
+  - This means you can have 3 custom schedules, in addition to the system schedule.
+- The maximum number of audiences in a schedule is 3000
 - The initial combined throughput for streaming ingestion is 1500 records per second (rps)
   - This combined streaming throughput measures the combined peak inbound events per second for streaming ingestion into Real-Time Customer Profile across your production and development sandboxes.
   - You can purchase additional streaming segmentation support of up to 13,500 records per second. More information about purchasing additional entitlements can be found in the [Real-Time CDP product description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
