@@ -61,9 +61,7 @@ To create a new schema, select **[!UICONTROL Create schema]** in the top-right c
 
 ### Add data usage labels to a schema {#add-labels-to-schema}
 
-After creating a new schema, or selecting an existing schema from the list in the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, select a field from your schema in the Schema Editor. In the [!UICONTROL Field properties] sidebar, select **[!UICONTROL Apply Access and Data Governance Labels]**. 
-
-![The Schemas workspace Structure tab displaying the visualization of your schema with Apply Access and Data Governance Labels highlighted.](../images/labels/schema-label-governance.png)
+After creating a new schema, or selecting an existing schema from the list in the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, select a field from your schema in the Schema Editor. In the [!UICONTROL Field properties] rail, select **[!UICONTROL Apply labels]**.
 
 A dialog appears that allows you to apply and manage data usage labels at the schema level and field level. See the XDM tutorial for complete instructions on [how to add or edit data usage labels for XDM schemas](../../xdm/tutorials/labels.md#select-schema-field).
 

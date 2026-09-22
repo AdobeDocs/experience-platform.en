@@ -44,13 +44,11 @@ This guide requires a working understanding of the following components of Adobe
 
 To start adding labels, you must first [select an existing schema to edit](../ui/resources/schemas.md#edit) or [create a new schema](../ui/resources/schemas.md#create) to view its structure in the Schema Editor.
 
-To edit the labels for an individual field, you can select the field in the canvas and then select **[!UICONTROL Manage access]** in the right rail.
+To edit the labels for an individual field, select the field in the canvas, then select **[!UICONTROL Apply labels]** in the **[!UICONTROL Field properties]** rail.
 
 >[!IMPORTANT]
 >
 >A maximum of 300 labels can be applied to any schema.
-
-![Select a field from the Schema Editor canvas](../images/tutorials/labels/manage-access.png)
 
 You can also select the **[!UICONTROL Labels]** tab, choose the desired field from the list, and select **[!UICONTROL Apply Access and Data Governance Labels]** in the right rail.
 
@@ -91,6 +89,16 @@ Once you are satisfied with your chosen labels, select **[!UICONTROL Save]** to 
 The **[!UICONTROL Labels]** tab reappears, showing the applied labels for the schema.
 
 ![The Labels tab of the schemas workspace with the applied field labels highlighted.](../images/tutorials/labels/field-labels-added.png)
+
+## View labels in the schema tree {#view-labels-schema-tree}
+
+You can display label information directly in the schema tree. In the **[!UICONTROL Structure]** tab, select the settings icon in the upper-right of the canvas to open the tree display options.
+
+Select **[!UICONTROL Show directly applied labels]** to display a label icon and code next to fields with directly applied labels. Select **[!UICONTROL Show inherited labels]** to display inherited label icons and codes. Inherited label information appears in italics.
+
+If you select **[!UICONTROL Show inherited labels]** while **[!UICONTROL Show directly applied labels]** is cleared, Experience Platform automatically selects **[!UICONTROL Show directly applied labels]**. You cannot display only inherited labels.
+
+In the **[!UICONTROL Field properties]** rail, label details are organized into **[!UICONTROL Directly applied labels]** and **[!UICONTROL Inherited labels]** sections. These details remain available in the rail even when the tree display options are cleared. Use **[!UICONTROL Apply labels]** to add or edit labels for the selected field.
 
 ## Next steps
 
