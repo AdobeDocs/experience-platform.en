@@ -3,7 +3,7 @@ keywords: Experience Platform;insights;customer ai;popular topics;customer ai se
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Create Audiences with Predicted Scores
-description: When a prediction run completes, predicted propensity scores are automatically consumed by Profiles. Enriching Profiles with Customer AI scores allows for the creation of audiences to find audiences based on their propensity scores. This section provides steps for creating audiences using Segment Builder.
+description: When a prediction run completes, predicted propensity scores are automatically consumed by Profiles. Enriching Profiles with Customer AI scores allows for the creation of audiences to find audiences based on their propensity scores. This section provides steps for creating audiences using Audience Builder.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
 TQID: https://experienceleague.adobe.com/PxH6ueD8AhgcHy8Jy6a-itezQ-p543PLPInSBp205Xo
 product_v2:
@@ -23,7 +23,7 @@ topic_v2:
 ---
 # Create audiences with predicted scores
 
-When a prediction run completes, predicted propensity scores are automatically consumed by Profiles. Enriching Profiles with Customer AI scores allows for the creation of audiences to find audiences based on their propensity scores. This section provides steps for creating audiences using Audience Builder. For a more robust tutorial on creating audiences, please see the [Audience Builder user guide](../../../segmentation/ui/segment-builder.md).
+When a prediction run completes, predicted propensity scores are automatically consumed by Profiles. Enriching Profiles with Customer AI scores allows for the creation of audiences to find audiences based on their propensity scores. This section provides steps for creating audiences using Audience Builder. For a more robust tutorial on creating audiences, please see the [Audience Builder user guide](../../../segmentation/ui/audience-builder.md).
 
 >[!IMPORTANT]
 >
