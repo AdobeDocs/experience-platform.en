@@ -57,6 +57,7 @@ Use Capacity to see your organization's [guardrails](/help/rtcdp/guardrails/over
 | Feature | Description |
 | --- | --- |
 | [Adobe Experience Platform Growth Credits](/help/landing/license-usage-and-guardrails/capacity.md) | Manage and scale eligible capacity across streaming, edge, and batch segmentation. Monitor credit consumption and capacity utilization, and use self-service workflows to plan, allocate, and scale capacity as your business needs evolve. Built-in monitoring and alerts notify you as usage approaches your capacity limits, so you can respond proactively. |
+| Batch capacity | Batch capacity lets you monitor and manage your organization's on demand runs, scheduled runs, as well as batch audience counts. For more information, read the [license usage and capacities guide](/help/landing/license-usage-and-guardrails/capacity.md). |
 | Edge throughput monitor shows requests skipped and clearer graph detail | The edge monitoring dashboard now reports a **[!UICONTROL Requests skipped]** metric, reflecting requests dropped due to Spike Protection when incoming traffic exceeds your allocated capacity. The throughput graph now shows requested throughput with a peak callout and a separate skip throughput series, and both throughput charts display when the data was last updated. |
 
 {style="table-layout:auto"}
@@ -175,9 +176,9 @@ Use Segmentation Service to create audiences from your customer data and manage 
 
 | Feature | Description |
 | --- | --- |
-| Updated Audience Builder (GA) | The updated Audience Builder is now generally available. Find fields faster with the new **[!UICONTROL Discover Panel]** and semantic search, get AI-suggested fields, preview sample values and descriptions, favorite your most-used fields, and name your rule groups. |
 | Audience validation in Audience Builder | Audience Builder now validates field compatibility with your selected evaluation method as you build an audience. Incompatible fields are flagged with an inline error or warning before you save or publish, and a new filter lets you filter attributes and events by ingestion source. |
-| [!BADGE Limited Availability]{type=Informative} Flexible Batch Schedules | Use Flexible Batch Schedules to evaluate audiences on demand using user-defined schedules, giving you greater control over your audience evaluations. Define the cadence, and evaluate up to 10,000 audiences per schedule. |
+| [!BADGE Limited Availability]{type=Informative} Flexible Batch Schedules | Use Flexible Batch Schedules to evaluate audiences on demand using user-defined schedules, giving you greater control over your audience evaluations. For more information, read the [Flexible Batch Schedules guide](/help/segmentation/tutorials/flexible-batch-schedules.md). |
+| [!BADGE Limited Availability]{type=Informative} Large Scale Audiences | You can now have up to 10,000 audiences in your sandbox. In order to use this feature, you must have access to Flexible Batch Schedules. For more information, read the [Flexible Batch Schedules guide](/help/segmentation/tutorials/flexible-batch-schedules.md). |
 
 {style="table-layout:auto"}
 
