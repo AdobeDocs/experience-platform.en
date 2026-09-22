@@ -169,7 +169,7 @@ Use Segmentation Service to create audiences from your customer data and manage 
 
 | Feature | Description |
 | --- | --- |
-| Updated Audience Builder (GA) | The updated Audience Builder is now generally available. Find fields faster with the new **[!UICONTROL Discover Panel]** and semantic search, get AI-suggested fields, preview sample values and descriptions, favorite your most-used fields, and name your rule groups. |
+| Updated Audience Builder (GA) | The updated Audience Builder is now generally available. Find fields faster with the new **[!UICONTROL Discovery Panel]** and semantic search, get AI-suggested fields, preview sample values and descriptions, favorite your most-used fields, and name your rule groups. |
 | Audience validation in Audience Builder | Audience Builder now validates field compatibility with your selected evaluation method as you build an audience. Incompatible fields are flagged with an inline error or warning before you save or publish, and a new filter lets you filter attributes and events by ingestion source. |
 | Flexible Batch Schedules (Limited Availability) | Use Flexible Batch Schedules to evaluate audiences on demand using user-defined schedules, giving you greater control over your audience evaluations. Define the cadence, and evaluate up to 10,000 audiences per schedule. |
 

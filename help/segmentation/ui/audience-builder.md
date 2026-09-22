@@ -7,7 +7,7 @@ description: Learn how to use the Audience Builder so you can create audiences f
 
 >[!AVAILABILITY]
 >
->The newly updated Audience Builder is now generally available! For documentation about the previous Segment Builder, read the [Segment Builder UI guide](./segment-builder.md).
+>The newly updated Audience Builder is now generally available! You can switch back to the previous Segment Builder experience during this transition period by disabling the **[!UICONTROL New Audience Builder]** toggle. The old Segment Builder experience and the toggle will be deprecated in early 2027. For documentation about the previous Segment Builder, read the [Segment Builder UI guide](./segment-builder.md).
 
 Audience Builder provides a rich workspace that lets you interact with Profile data elements. The workspace provides intuitive controls for building and editing your audience's rules.
 
@@ -157,7 +157,7 @@ For the **[!UICONTROL Field types]**, you can show **[!UICONTROL Attributes]** o
 
 Alternatively, you can view all the available fields for your audience by selecting **[!UICONTROL View All]** in the **[!UICONTROL Browse]** area.
 
-![The View all button is highlighted within the Discover Panel.](/help/segmentation/images/ui/audience-builder/select-view-all-browse-fields.png){width="400" zoomable="yes"}
+![The View all button is highlighted within the Discovery Panel.](/help/segmentation/images/ui/audience-builder/select-view-all-browse-fields.png){width="400" zoomable="yes"}
 
 In the **[!UICONTROL Browse]** area, you can select between **[!UICONTROL Attributes]** or **[!UICONTROL Audiences]**.
 
@@ -253,7 +253,7 @@ Select **[!UICONTROL Add event]** to add an ExperienceEvent that you can add to 
 
 ![The Add event button is highlighted within the Events section of the Rule view.](/help/segmentation/images/ui/audience-builder/select-add-event.png){width="750" zoomable="yes"}
 
-The Discover Panel appears. This panel displays both **[!UICONTROL Events]** and **[!UICONTROL Event types]**. 
+The Discovery Panel appears. This panel displays both **[!UICONTROL Events]** and **[!UICONTROL Event types]**. 
 
 ![The Discovery Panel for events is displayed.](/help/segmentation/images/ui/audience-builder/discovery-panel-events.png)
 
