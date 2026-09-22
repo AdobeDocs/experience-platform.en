@@ -15,7 +15,7 @@ last-update: 2026-09-22
 >- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Release date: September 2026**
+**Release date: September 22, 2026**
 
 New features and updates to existing features in Adobe Experience Platform:
 
