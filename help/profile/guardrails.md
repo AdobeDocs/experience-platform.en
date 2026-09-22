@@ -142,7 +142,7 @@ The guardrails outlined in this section refer to the number and nature of audien
 
 >[!NOTE]
 >
->An increase of 10,000 audiences per sandbox is in **limited availability**. In order to make use of this new guardrail, you **must** have access to Flexible Batch Schedules. For more information on Flexible Batch Schedules, read the [Flexible Batch Schedules guide](/help/segmentation/tutorials/flexible-batch-schedules.md).
+>An increase to 10,000 audiences per sandbox is in **limited availability**. This limited availability guardrail lets you have up to 10,000 audiences in a single sandbox. In order to make use of this new guardrail, you **must** have access to Flexible Batch Schedules. For more information on Flexible Batch Schedules, read the [Flexible Batch Schedules guide](/help/segmentation/tutorials/flexible-batch-schedules.md).
 
 | Guardrail | Limit | Limit Type | Description |
 | --------- | ----- | ---------- | ----------- |

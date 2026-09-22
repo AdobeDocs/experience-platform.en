@@ -1,19 +1,19 @@
 ---
 title: Using Flexible Batch Schedules
-description: Learn how to use Flexible Batch Schedules to 
+description: Learn how to use Flexible Batch Schedules to evaluate your batch audiences on demand.
 ---
 
-# Control your batch audience evaluation using Flexible Batch Schedules
+# Control batch audience evaluation with Flexible Batch Schedules
 
 >[!AVAILABILITY]
 >
->Flexible Batch Schedules are currently in **limited availability**. For more information, contact Adobe Customer Care.
+>Flexible Batch Schedules are currently available under **Limited Availability**. For more information, contact Adobe Customer Care.
 
 Batch segmentation is an evaluation method that lets you move profile data all at once to create a corresponding audience. Previously, these batch audiences relied on a single, fixed segmentation job that ran once a day.
 
 With Flexible Batch Schedules, you control when your audiences are evaluated, giving you more flexibility to prioritize your evaluation timings so you can better scale to larger audience volumes.
 
-## Create a schedule
+## Create a schedule {#create-schedule}
 
 To use Flexible Batch Schedules, you'll first need to create a schedule for the audiences. You can create a schedule using either the Experience Platform UI or API.
 
@@ -99,7 +99,7 @@ A successful response returns HTTP status 200 with information about your newly 
 
 >[!ENDTABS]
 
-## Assigning audiences to a schedule
+## Assign audiences to a schedule {#assign-audience}
 
 After you create a schedule, you can assign additional audiences to the previously schedule. You can assign audiences using either the Experience Platform UI or API.
 
@@ -178,7 +178,7 @@ The **[!UICONTROL Audience schedules]** popover appears. On this popover, you ca
 
 ![The Assign schedules popover is displayed, showing which schedules an audience belongs to.](/help/segmentation/images/tutorials/flexible-batch-segmentation/assign-schedules.png)
 
-## Checking which schedules an audience belongs to
+## View an audience's schedule {#view-audience-schedule}
 
 You can see which schedules an audience belongs to either using the Experience Platform UI or API.
 
@@ -255,7 +255,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 >[!ENDTABS]
 
-## Removing audiences from a schedule
+## Remove audiences from a schedule {#remove-audience}
 
 If you want to remove audiences from an already created schedule, you can use either the Experience Platform UI or API.
 
@@ -324,7 +324,7 @@ When you remove audiences from a schedule, you need to provide the schedule ID a
 
 >[!ENDTABS]
 
-## Manually run a schedule
+## Run a schedule manually {#run-manually}
 
 Instead of waiting for the schedule to run, you can manually trigger an existing schedule to run using either the Experience Platform UI or API.
 
