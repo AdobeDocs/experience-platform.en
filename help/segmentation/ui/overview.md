@@ -122,6 +122,12 @@ In addition to audience compositions and segment definitions, you can use Adobe 
 
 ![A list of audiences created in Federated Audience Composition for your organization.](../images/ui/overview/federated-audience-composition.png)
 
+## Batch segmentation {#batch-segmentation}
+
+Batch segmentation is a segmentation evaluation method that you can use to move profile data all at once to create your corresponding audiences. You can use batch segmentation to create detailed and rich audiences to target large groups of profiles.
+
+For more information on batch segmentation, read the [batch segmentation overview](/help/segmentation/methods/batch-segmentation.md).
+
 ## Streaming segmentation {#streaming-segmentation}
 
 Streaming segmentation is the ability to do segmentation on [!DNL Experience Platform] in near real-time, while focusing on data richness. With streaming segmentation, qualification for segmentation now happens as data lands into [!DNL Experience Platform], alleviating the need to schedule and run segmentation jobs.
