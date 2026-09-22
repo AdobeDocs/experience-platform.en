@@ -59,6 +59,7 @@ Use Capacity to see your organization's [guardrails](/help/rtcdp/guardrails/over
 | Feature | Description |
 | --- | --- |
 | [Adobe Experience Platform Growth Credits](/help/landing/license-usage-and-guardrails/capacity.md) | Manage and scale eligible capacity across streaming, edge, and batch segmentation. Monitor credit consumption and capacity utilization, and use self-service workflows to plan, allocate, and scale capacity as your business needs evolve. Built-in monitoring and alerts notify you as usage approaches your capacity limits, so you can respond proactively. |
+| Edge throughput monitor shows requests skipped and clearer graph detail | The edge monitoring dashboard now reports a **[!UICONTROL Requests skipped]** metric, reflecting requests dropped due to Spike Protection when incoming traffic exceeds your allocated capacity. The throughput graph now shows requested throughput with a peak callout and a separate skip throughput series, and both throughput charts display when the data was last updated. |
 
 {style="table-layout:auto"}
 
@@ -141,7 +142,6 @@ Use Run and Operate to monitor job health, troubleshoot failures, and track thro
 | Feature | Description |
 | --- | --- |
 | [Job Schedules now shows identity ingestion and campaign runs](/help/run-and-operate/job-schedules-details.md) | The Job Schedules macro-view timeline now includes identity ingestion runs and scheduled batch [!DNL Adobe Journey Optimizer] campaign runs, in addition to existing data lake and profile ingestion runs. |
-| Edge throughput monitor shows requests skipped and clearer graph detail | The edge monitoring dashboard now reports a **[!UICONTROL Requests skipped]** metric, reflecting requests dropped due to Spike Protection when incoming traffic exceeds your allocated capacity. The throughput graph now shows requested throughput with a peak callout and a separate skip throughput series, and both throughput charts display when the data was last updated. |
 
 {style="table-layout:auto"}
 
