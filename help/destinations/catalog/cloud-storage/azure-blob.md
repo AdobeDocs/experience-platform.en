@@ -1,6 +1,6 @@
 ---
 title: Azure Blob connection
-description: Create a live outbound connection to your Azure Blob storage to periodically export CSV data files from Adobe Experience Platform.
+description: Create a live outbound connection to your Azure Blob storage to export audience and dataset files, using connection string or Entra ID Service Principal authentication.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
 TQID: https://experienceleague.adobe.com/KQqGst2R2OcqUzigDgk6-KgAwq3D8vwzhV1gUbco-8o
 product_v2:
@@ -31,7 +31,7 @@ topic_v2:
 
 Connect to your [!DNL Azure Blob] storage to export data files from [!DNL Adobe CX Enterprise] applications.
 
-If you arrived to this page from [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), see [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
+If you arrived at this page from [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), see [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
 
 ## Supported [!DNL Adobe CX Enterprise] applications {#supported-applications}
 
@@ -145,10 +145,48 @@ To connect to this destination, follow the steps described in the [destination c
 >title="RSA public key"
 >abstract="Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted key in the documentation link below."
 
-To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_blob_tenantid"
+>title="Tenant ID"
+>abstract="The unique identifier for your organization's Microsoft Entra ID directory."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_blob_clientid"
+>title="Client ID"
+>abstract="A unique identifier for your registered app. You can retrieve this ID from the Microsoft Entra ID portal where you registered your application."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_blob_clientsecret"
+>title="Client secret"
+>abstract="The client secret that is used alongside the client ID to authenticate your app. You can retrieve your client secret from the Microsoft Entra ID portal where you registered your application."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_blob_storageaccountname"
+>title="Storage account name"
+>abstract="The name of the Azure storage account that hosts your Blob container."
+
+To authenticate to the destination, select an authentication type, fill in the required fields, and select **[!UICONTROL Connect to destination]**.
+
+#### Account key authentication {#account-key-authentication}
+
+![Image of the UI screen showing completed fields for the Azure Blob account key authentication details](../../assets/catalog/cloud-storage/blob/blob-account-key-authentication.png)
 
 * **[!UICONTROL Connection string]**: the connection string is required to access data in your Blob storage. The [!DNL Blob] connection string pattern starts with: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. 
     * For more information about configuring your [!DNL Blob] connection string, see [Configure a connection string for an Azure storage account](https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) in the Microsoft documentation.
+* **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
+
+  ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+
+#### Service principal authentication {#service-principal-authentication}
+
+![Image of the UI screen showing completed fields for the Azure Blob service principal authentication details](../../assets/catalog/cloud-storage/blob/blob-service-principal-authentication.png)
+
+Use **[!UICONTROL Service principal authentication]** if your organization prohibits shared access keys or connection strings. [!DNL Microsoft Entra ID] Service Principal authentication uses a client ID, client secret, and tenant ID instead.
+
+* **[!UICONTROL Tenant ID]**: The unique identifier for your organization's Microsoft Entra ID directory.
+* **[!UICONTROL Client ID]**: A unique identifier for your registered app. You can retrieve this ID from the Microsoft Entra ID portal where you registered your application.
+* **[!UICONTROL Client secret]**: The client secret that is used alongside the client ID to authenticate your app. You can retrieve your client secret from the Microsoft Entra ID portal where you registered your application.
+* **[!UICONTROL Storage account name]**: The name of the Azure storage account that hosts your Blob container.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
   ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)

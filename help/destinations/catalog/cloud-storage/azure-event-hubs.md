@@ -47,9 +47,9 @@ You can create a real-time outbound connection to your [!DNL Azure Event Hubs] s
 * To connect to [!DNL Azure Event Hubs] programmatically, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
 * To connect to [!DNL Azure Event Hubs] using the Experience Platform user interface, see the sections below.
 
-![AWS Kinesis in the UI](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
+![Azure Event Hubs destination card in the Experience Platform catalog](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 
-## Use Cases {#use-cases}
+## Use cases {#use-cases}
 
 By using streaming destinations such as [!DNL Azure Event Hubs], you can easily feed high-value segmentation events and associated profile attributes into your systems of choice.
 
@@ -109,6 +109,11 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authentication information {#authentication-information}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_namespace"
+>title="Namespace"
+>abstract="The container in your Azure account that contains the event hub you are connecting to."
+
 #### Standard authentication {#standard-authentication}
 
 ![Image of the UI screen showing completed fields for the Azure Event Hubs standard authentication details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
@@ -116,19 +121,47 @@ To connect to this destination, follow the steps described in the [destination c
 If you select the **[!UICONTROL Standard authentication]** type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
 
 * **[!UICONTROL SAS Key Name]**: The name of the authorization rule, which is also known as the SAS key name.
-* **[!UICONTROL SAS Key]**: The primary key of the Event Hubs namespace. The `sasPolicy` that the `sasKey` corresponds to must have **manage** rights configured in order for the Event Hubs list to be populated. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL SAS Key]**: The primary key of the Event Hubs namespace. The authorization rule that the **[!UICONTROL SAS Key]** corresponds to must have **manage** rights configured in order for the Event Hubs list to be populated. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Fill in your [!DNL Azure Event Hubs] namespace. Learn about [!DNL Azure Event Hubs] namespaces in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
-#### Shared Access Signature (SAS) authentication {#sas-authentication}
+#### SAS authentication {#sas-authentication}
 
-![Image of the UI screen showing completed fields for the Azure Event Hubs standard authentication details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
+![Image of the UI screen showing completed fields for the Azure Event Hubs SAS authentication details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
 
-If you select the **[!UICONTROL Standard authentication]** type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
+If you select the **[!UICONTROL SAS authentication]** type to connect to your HTTP endpoint, [!DNL Azure Event Hubs] uses a Shared Access Signature (SAS) to authenticate the connection. Input the fields below and select **[!UICONTROL Connect to destination]**:
 
 * **[!UICONTROL SAS Key Name]**: The name of the authorization rule, which is also known as the SAS key name.
-* **[!UICONTROL SAS Key]**: The primary key of the Event Hubs namespace. The `sasPolicy` that the `sasKey` corresponds to must have **manage** rights configured in order for the Event Hubs list to be populated. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL SAS Key]**: The primary key of the Event Hubs namespace. The authorization rule that the **[!UICONTROL SAS Key]** corresponds to must have **manage** rights configured in order for the Event Hubs list to be populated. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Fill in your [!DNL Azure Event Hubs] namespace. Learn about [!DNL Azure Event Hubs] namespaces in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 * **[!UICONTROL Event Hub Name]**: Fill in your [!DNL Azure Event Hub] name . Learn about [!DNL Azure Event Hubs] names in the [Microsoft documentation](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub).
+
+#### Service principal authentication {#service-principal-authentication}
+
+![Image of the UI screen showing completed fields for the Azure Event Hubs service principal authentication details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-service-principal-authentication.png)
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_tenantid"
+>title="Tenant ID"
+>abstract="The unique identifier for your organization's Microsoft Entra ID directory."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_clientid"
+>title="Client ID"
+>abstract="A unique identifier for your registered app. You can retrieve this ID from the Microsoft Entra ID portal where you registered your application."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_clientsecret"
+>title="Client secret"
+>abstract="The client secret that is used alongside the client ID to authenticate your app. You can retrieve your client secret from the Microsoft Entra ID portal where you registered your application."
+
+Use **[!UICONTROL Service principal authentication]** if your organization prohibits shared access keys or connection strings. [!DNL Microsoft Entra ID] Service Principal authentication uses a client ID, client secret, and tenant ID instead.
+
+If you select the **[!UICONTROL Service principal authentication]** type to connect to your [!DNL Azure Event Hubs] namespace, input the fields below and select **[!UICONTROL Connect to destination]**:
+
+* **[!UICONTROL Tenant ID]**: The unique identifier for your organization's Microsoft Entra ID directory.
+* **[!UICONTROL Client ID]**: A unique identifier for your registered app. You can retrieve this ID from the Microsoft Entra ID portal where you registered your application.
+* **[!UICONTROL Client secret]**: The client secret that is used alongside the client ID to authenticate your app. You can retrieve your client secret from the Microsoft Entra ID portal where you registered your application.
+* **[!UICONTROL Namespace]**: Fill in your [!DNL Azure Event Hubs] namespace. Learn about [!DNL Azure Event Hubs] namespaces in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
 ### Fill in destination details {#destination-details}
 
