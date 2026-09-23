@@ -84,12 +84,9 @@ Use CX Enterprise Coworker to access AI-powered conversational skills that help 
 | Feature | Description |
 | --- | --- |
 | [Data management agentic skills in CX Enterprise Coworker](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/coworker/chat/use-cases/data-management/manage-data-lake-retention) | You can now use conversational data management skills in CX Enterprise Coworker to identify high-storage datasets, assess retention changes before applying them, and review dataset configuration and storage metrics. These skills help you investigate data usage and retention without manually checking each dataset. |
+| [Data validation skills in CX Enterprise Coworker](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/coworker/chat/use-cases/data-insights/data-validation-aep) | Use a new conversational skill in CX Enterprise Coworker to run statistical and semantic validations on your Experience Platform datasets and fields, and identify data quality issues, all through chat. |
 
 {style="table-layout:auto"}
-
-<!--
-| Data validation skills in CX Enterprise Coworker | Use a new conversational skill in CX Enterprise Coworker to validate data fields and datasets in Experience Platform. |
--->
 
 For more information, read the [CX Enterprise Coworker documentation](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/coworker/overview).
 
