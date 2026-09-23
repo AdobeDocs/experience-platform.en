@@ -156,6 +156,10 @@ If you select the **[!UICONTROL SAS authentication]** type to connect to your HT
 
 Use **[!UICONTROL Service principal authentication]** if your organization prohibits shared access keys or connection strings. [!DNL Microsoft Entra ID] Service Principal authentication uses a client ID, client secret, and tenant ID instead.
 
+>[!NOTE]
+>
+>You can select service principal authentication for a new destination connection in the UI. However, to change an existing connection from standard or SAS authentication to service principal authentication, you must use the API. See [migrate an existing base connection to Entra ID Service Principal authentication](/help/destinations/api/streaming-destinations.md#azure-eventhubs-migrate-service-principal).
+
 If you select the **[!UICONTROL Service principal authentication]** type to connect to your [!DNL Azure Event Hubs] namespace, input the fields below and select **[!UICONTROL Connect to destination]**:
 
 * **[!UICONTROL Tenant ID]**: The unique identifier for your organization's Microsoft Entra ID directory.

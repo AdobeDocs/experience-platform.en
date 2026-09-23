@@ -183,6 +183,10 @@ To authenticate to the destination, select an authentication type, fill in the r
 
 Use **[!UICONTROL Service principal authentication]** if your organization prohibits shared access keys or connection strings. [!DNL Microsoft Entra ID] Service Principal authentication uses a client ID, client secret, and tenant ID instead.
 
+>[!NOTE]
+>
+>You can select service principal authentication for a new destination connection in the UI. However, to change an existing connection from account key authentication to service principal authentication, you must use the API. See the [Azure Blob Storage base connection tab](/help/destinations/api/activate-segments-file-based-destinations.md#create-base-connection), then expand the migrate an existing base connection to Entra ID Service Principal authentication section.
+
 * **[!UICONTROL Tenant ID]**: The unique identifier for your organization's Microsoft Entra ID directory.
 * **[!UICONTROL Client ID]**: A unique identifier for your registered app. You can retrieve this ID from the Microsoft Entra ID portal where you registered your application.
 * **[!UICONTROL Client secret]**: The client secret that is used alongside the client ID to authenticate your app. You can retrieve your client secret from the Microsoft Entra ID portal where you registered your application.
