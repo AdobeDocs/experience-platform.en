@@ -300,6 +300,84 @@ A successful response contains the base connection's unique identifier (`id`). S
 }
 ```
 
+### Connect using Entra ID Service Principal authentication (Azure Event Hubs) {#azure-eventhubs-service-principal}
+
+[!DNL Azure Event Hubs] supports an additional authentication method using [!DNL Microsoft Entra ID] Service Principal credentials (tenant ID, client ID, and client secret) instead of a SAS key. Use this method if your organization prohibits shared access keys or connection strings.
+
+**Request**
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Connection for Azure Event Hubs",
+    "description": "summer advertising campaign",
+    "connectionSpec": {
+        "id": "{CONNECTION_SPEC_ID}",
+        "version": "1.0"
+    },
+    "auth": {
+        "specName": "Service principal authentication",
+        "params": {
+            "tenantId": "{TENANT_ID}",
+            "clientId": "{CLIENT_ID}",
+            "clientSecret": "{CLIENT_SECRET}",
+            "namespace": "{EVENT_HUB_NAMESPACE}"
+        }
+    }
+}'
+```
+
+*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID you obtained in the step [Get the list of available destinations](#get-the-list-of-available-destinations).
+*   `{TENANT_ID}`: The unique identifier for your organization's Microsoft Entra ID directory.
+*   `{CLIENT_ID}`: A unique identifier for your registered app. You can retrieve this ID from the Microsoft Entra ID portal where you registered your application.
+*   `{CLIENT_SECRET}`: The client secret that is used alongside the client ID to authenticate your app. You can retrieve your client secret from the Microsoft Entra ID portal where you registered your application.
+*   `{EVENT_HUB_NAMESPACE}`: Fill in the [!DNL Azure Event Hubs] namespace where Experience Platform will stream your data. For more information, see [Create an Event Hubs namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in the [!DNL Microsoft] documentation.
+
+#### Migrate an existing base connection to Entra ID Service Principal authentication {#azure-eventhubs-migrate-service-principal}
+
+To update an existing [!DNL Azure Event Hubs] base connection from Standard or SAS authentication to Entra ID Service Principal authentication, use the `PATCH` operation on the base connection.
+
+>[!IMPORTANT]
+>
+>The `If-Match` header is required when making a `PATCH` request. The value for this header is the unique version of the base connection you want to update. The etag value updates with every successful update of a flow entity such as base connection, dataflow, target connection, and others.
+>
+> To get the latest version of the etag value, perform a GET request to the `https://platform.adobe.io/data/foundation/flowservice/connections/{ID}` endpoint, where `{ID}` is the base connection ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the example below when making `PATCH` requests.
+
+**Request**
+
+```shell
+curl --request PATCH \
+  --url 'https://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}' \
+  --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+  --header 'Content-Type: application/json' \
+  --header 'If-Match: "{ETAG_HERE}"' \
+  --header 'x-api-key: {API_KEY}' \
+  --header 'x-gw-ims-org-id: {ORG_ID}' \
+  --header 'x-sandbox-name: {SANDBOX_NAME}' \
+  --data '[
+  {
+    "op": "replace",
+    "path": "/auth",
+    "value": {
+      "specName": "Service principal authentication",
+      "params": {
+        "tenantId": "{TENANT_ID}",
+        "clientId": "{CLIENT_ID}",
+        "clientSecret": "{CLIENT_SECRET}",
+        "namespace": "{EVENT_HUB_NAMESPACE}"
+      }
+    }
+  }
+]'
+```
+
 ### Specify storage location and data format {#specify-storage-location-data-format}
 
 **API format**
