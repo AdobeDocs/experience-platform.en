@@ -56,7 +56,7 @@ Creating and qualifying users into segment definitions targeting cart abandonmen
 
 ## Creating multi-entity segment definitions
 
-Creating a multi-entity segment definition first requires defining relationships between schemas before using the [!DNL Segmentation] API or Segment Builder UI to build the segment definition.
+Creating a multi-entity segment definition first requires defining relationships between schemas before using the [!DNL Segmentation] API or Audience Builder UI to build the segment definition.
 
 ### Define relationships
 
@@ -69,10 +69,10 @@ Defining relationships can be done either using the Schema Registry API or the S
 
 ### Build a multi-entity segment definition
 
-Once you have defined the necessary XDM relationships, you can begin to build a multi-entity segment definition. This can be done using either the Segmentation API or the Segment Builder UI. For more information, please choose from the following guides:
+Once you have defined the necessary XDM relationships, you can begin to build a multi-entity segment definition. This can be done using either the Segmentation API or the Audience Builder UI. For more information, please choose from the following guides:
 
 * [Creating a segment definition using the Segmentation API](./create-a-segment.md)
-* [Creating a segment definition using the Segment Builder UI](../ui/overview.md)
+* [Creating a segment definition using the Audience Builder UI](../ui/overview.md)
 
 ## Evaluate and access multi-entity segment definitions
 

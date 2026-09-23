@@ -47,6 +47,8 @@ In order to access your [!DNL HubSpot] account on [!DNL Experience Platform], yo
 
 For more information about getting started, refer to this [[!DNL HubSpot] document](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
 
+Ensure that the [!DNL HubSpot] app used to generate these credentials is granted the OAuth scopes required to read the data you want to bring into [!DNL Experience Platform]. For a list of available scopes, read the [[!DNL HubSpot] OAuth scopes documentation](https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/scopes).
+
 ## Connect your [!DNL HubSpot] account
 
 Once you have gathered your required credentials, you can follow the steps below to link your [!DNL HubSpot] account to [!DNL Experience Platform].

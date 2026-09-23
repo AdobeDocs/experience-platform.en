@@ -323,7 +323,7 @@ This use case requires that you create two audiences to define specific attribut
 
 * For information on how to create an audience, read the [Audience service UI guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 * For information on how to compose [audiences](/help/segmentation/home.md), read the [Audience Composition UI guide](/help/segmentation/ui/audience-composition.md).
-* For information on how to build audiences through Experience Platform-derived segment definitions, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
+* For information on how to build audiences through Experience Platform-derived segment definitions, read the [Audience Builder UI guide](/help/segmentation/ui/audience-builder.md).
 
 Specifically, you must create and use two audiences at different steps of the use case, as shown in the image below.
 

@@ -9,7 +9,7 @@ When you write an audience definition in Adobe Experience Platform, audience val
 
 By adhering to audience definition best practices, you ensure your audiences can evaluate faster, ensure your logic remains efficient even when your audience size grows, and reduce the risk of evaluation failures during high-traffic periods. Optimized audiences also improve activation speed to destinations, reduce real-time personalization latency, and maintain overall sandbox stability.
 
-Experience Platform runs these validations in real-time as you build your audience in Segment Builder. When you add events or attributes that exceed validation thresholds, you receive immediate feedback within the Segment Builder interface.
+Experience Platform runs these validations in real-time as you build your audience in Audience Builder. When you add events or attributes that exceed validation thresholds, you receive immediate feedback within the Audience Builder interface.
 
 ## Validation types {#validation-types}
 
@@ -186,7 +186,7 @@ If you need to create an audience that qualifies more than 30% of your profile s
 
 ## Next steps
 
-After reading this guide, you have a better understanding of how Experience Platform runs automatic validations to improve evaluation, stability, and scalability. For more information on creating audiences using the UI, read the [Segment Builder documentation](./ui/segment-builder.md).
+After reading this guide, you have a better understanding of how Experience Platform runs automatic validations to improve evaluation, stability, and scalability. For more information on creating audiences using the UI, read the [Audience Builder documentation](./ui/audience-builder.md).
 
 ## Appendix
 

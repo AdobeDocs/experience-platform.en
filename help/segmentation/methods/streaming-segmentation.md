@@ -232,15 +232,15 @@ In Audience Portal, select **[!UICONTROL Create audience]**.
 
 ![The Create audience button is highlighted in Audience Portal.](../images/methods/streaming/select-create-audience.png)
 
-A popover appears. Select **[!UICONTROL Build rules]** to enter Segment Builder.
+A popover appears. Select **[!UICONTROL Build rules]** to enter Audience Builder.
 
 ![The Build rules button is highlighted in the create audience popover.](../images/methods/streaming/select-build-rules.png)
 
-Within Segment Builder, create a segment definition that matches one of the [eligible rulesets](#eligible-rulesets). If the segment definition qualifies for streaming segmentation, you'll be able to select **[!UICONTROL Streaming]** as the **[!UICONTROL Evaluation method]**.
+Within Audience Builder, create a segment definition that matches one of the [eligible rulesets](#eligible-rulesets). If the segment definition qualifies for streaming segmentation, you'll be able to select **[!UICONTROL Streaming]** as the **[!UICONTROL Evaluation method]**.
 
 ![The segment definition is displayed. The evaluation type is highlighted, showing the segment definition can be evaluated using streaming segmentation.](../images/methods/streaming/streaming-evaluation-method.png)
 
-To learn more about creating segment definitions, please read the [Segment Builder guide](../ui/segment-builder.md)
+To learn more about creating segment definitions, please read the [Audience Builder guide](../ui/audience-builder.md)
 
 >[!ENDTABS]
 
