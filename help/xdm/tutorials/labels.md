@@ -52,7 +52,7 @@ To edit the labels for an individual field, select the field in the canvas, then
 
 You can also select the **[!UICONTROL Labels]** tab, choose the desired field from the list, and select **[!UICONTROL Apply Access and Data Governance Labels]** in the right rail.
 
-![Select a field from the [!UICONTROL Labels] tab](../images/tutorials/labels/select-field-on-labels-tab.png)
+![The [!UICONTROL Labels] tab of the Schemas workspace with Apply access and data governance labels highlighted.](../images/tutorials/labels/schema-labels-tab-apply-governance.png)
 
 To edit the labels for the entire schema, in the **[!UICONTROL Labels]** tab, select the checkbox under the filter icon. This selects every available field in the schema. Next, select **[!UICONTROL Apply Access and Data Governance Labels]** in the right rail.
 
@@ -92,7 +92,11 @@ The **[!UICONTROL Labels]** tab reappears, showing the applied labels for the sc
 
 ## View labels in the schema tree {#view-labels-schema-tree}
 
-You can display label information directly in the schema tree. In the **[!UICONTROL Structure]** tab, select the settings icon in the upper-right of the canvas to open the tree display options.
+You can display label information directly in the schema tree. In the **[!UICONTROL Structure]** tab, select the settings icon in the upper-right of the canvas to open the tree display options. 
+
+![The Structure tab with the settings icon and dilaog highloighted]()
+
+A dialog appears with the following options.
 
 Select **[!UICONTROL Show directly applied labels]** to display a label icon and code next to fields with directly applied labels. Select **[!UICONTROL Show inherited labels]** to display inherited label icons and codes. Inherited label information appears in italics.
 

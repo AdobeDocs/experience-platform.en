@@ -51,7 +51,7 @@ You can add labels directly to a schema or fields within that schema. Any fields
 
 In order to manage data usage labels at the schema level, you must select an existing schema or create a new one. After logging into Adobe Experience Platform, select **[!UICONTROL Schemas]** on the left-navigation to open the **[!UICONTROL Schemas]** workspace. This page lists all created schemas belonging to your organization, along with useful details related to each schema. 
 
-![The Adobe Experience Platform UI with the Schema tab highlighted.](../images/labels/schema-tab.png)
+![The Adobe Experience Platform UI with the Schema tab highlighted in the left navigation.](../images/labels/schema-tab.png)
 
 The next section provides steps for creating a new schema to apply labels to. If you wish to edit labels for an existing schema, select the schema from the list and skip ahead to [adding data usage labels to the schema](#add-labels).
 
@@ -62,6 +62,8 @@ To create a new schema, select **[!UICONTROL Create schema]** in the top-right c
 ### Add data usage labels to a schema {#add-labels-to-schema}
 
 After creating a new schema, or selecting an existing schema from the list in the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, select a field from your schema in the Schema Editor. In the [!UICONTROL Field properties] rail, select **[!UICONTROL Apply labels]**.
+
+![The Schemas workspace Structure tab displaying the visualization of your schema with Apply labels highlighted.](../images/labels/appply-labels-to-object.png) 
 
 A dialog appears that allows you to apply and manage data usage labels at the schema level and field level. See the XDM tutorial for complete instructions on [how to add or edit data usage labels for XDM schemas](../../xdm/tutorials/labels.md#select-schema-field).
 
@@ -76,15 +78,14 @@ A dialog appears that allows you to apply and manage data usage labels at the sc
 >
 >Labels can no longer be applied to fields at the dataset level. This workflow has been deprecated in favour of applying labels at the schema level. Any labels previously applied at the dataset object level will still be supported through the Experience Platform UI until 31st May 2024. To ensure that your labels are consistent across all schemas, any labels previously attached to fields at the dataset level must be migrated to the schema level by you over the coming year. See the documentation for instructions on [how to migrate previously applied labels from the dataset to the schema level](../e2e.md#migrate-labels).
 
-Labels can be applied to the entire dataset from the **[!UICONTROL Data Governance]** tab of the **[!UICONTROL Datasets]** workspace. The workspace allows you to manage data usage labels at the dataset level.
+To apply data usage labels to the entire dataset or manage lables at the dataset level, select **[!UICONTROL Datasets]** in the left navigation followed by the dataset name. Then select the **[!UICONTROL Data Governance]** tab and the pencil icon (![A pencil icon.](/help/images/icons/edit.png)) to open the [!UICONTROL Apply access and data governance labels] dialog.
 
 ![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with Data Governance highlighted.](../images/labels/dataset-governance.png)
 
-To edit data usage labels at the dataset level, start by selecting the pencil icon (![A pencil icon.](/help/images/icons/edit.png)) in the row of the dataset name.
 
 ![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with the edit pencil icon highlighted.](../images/labels/dataset-level-edit.png)
 
-The **[!UICONTROL Edit Governance Labels]** dialog opens. Within the dialog, check the boxes next to the labels you wish to apply to the dataset. Remember that these labels will be inherited by all fields within the dataset. The **[!UICONTROL Applied Labels]** header updates as you check each box, showing the labels you have chosen. Once you have selected the desired labels, select **[!UICONTROL Save Changes]**.
+The **[!UICONTROL Apply access and data governance labels]** dialog opens. Within the dialog, check the boxes next to the labels you wish to apply to the dataset. Remember that these labels will be inherited by all fields within the dataset. The [!UICONTROL Applied Labels] section of the [!UICONTROL Summary] panel updates as you check each box, showing the labels you have chosen. Once you have selected the desired labels, select **[!UICONTROL Save]**.
 
 ![The Edit Governance Labels dialog with label checkboxes and Save changes highlighted.](../images/labels/apply-labels-dataset.png)
 
@@ -137,7 +138,7 @@ Labels applied to the dataset appear in read-only form within the **[!UICONTROL 
 
 You can create your own custom usage labels within the **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI. Select **[!UICONTROL Policies]** in the left-navigation, then select **[!UICONTROL Labels]** to view a list of existing labels. From here, select **[!UICONTROL Create label]**.
 
-![The Policies workspace with create policy highlighted.](../images/labels/create-label-btn.png)
+![The Labels tab in the Policies workspace with Create label highlighted.](../images/labels/create-custom-label.png)
 
 The **[!UICONTROL Create label]** dialog appears. From here, provide the following information for the new label:
 
