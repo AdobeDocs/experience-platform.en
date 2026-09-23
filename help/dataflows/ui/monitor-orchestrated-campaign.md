@@ -1,7 +1,7 @@
 ---
-description: Learn how to monitor dataflows that move data from data lake to the relational store used by Orchestrated Campaigns in Adobe Experience Platform.
+description: Learn how to monitor dataflows that move data from data lake to the relational store used by Campaign Orchestration in Adobe Experience Platform.
 solution: Experience Platform
-title: Monitor Orchestrated Campaign Ingestion in the UI
+title: Monitor Campaign Orchestration Ingestion in the UI
 type: Tutorial
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
@@ -19,13 +19,13 @@ role_v2:
     internal-label: Developer
 ---
 
-# Monitor Orchestrated Campaign ingestion in the UI
+# Monitor Campaign Orchestration ingestion in the UI
 
-<!-- DRAFT: PLAT-307189. Screenshots pending capture from the bug bash environment (do not use the XD mocks; QA confirmed the shipped UI differs from them). Several bug bash test cases were still unresolved as of 2026-09-18 (summary card data, metrics tiles, Records failed trend graph, detail table columns, search, failed dataflow runs, cross-stage reconciliation) - reverify against the live UI before publishing. -->
+<!-- DRAFT: PLAT-307189. The ticket and bug bash test plan refer to this feature as "Orchestrated Campaign," but bug bash screenshots (2026-09-23) show the shipped tab, cards, and page header labeled "Campaign Orchestration" instead. This draft follows the screenshots. Note: inside the lineage popup itself, the stage column headers read "Datalake" (no space) and "Orchestrated Campaign," which is inconsistent with the "Data lake" / "Campaign Orchestration" labels used everywhere else in the UI - worth a bug bash note to engineering. Several other bug bash test cases were still unresolved as of 2026-09-18 (metrics tiles, Records failed trend graph, detail table columns, search, failed dataflow runs, cross-stage reconciliation) - reverify against the live UI before publishing. -->
 
-Orchestrated Campaigns use a relational store to power Adobe Journey Optimizer Brand Journeys. Use the **[!UICONTROL Orchestrated Campaign]** dashboard to monitor the dataflows that move data from data lake into that relational store, and to troubleshoot dropped or failed records without contacting support.
+Campaign Orchestration ingestion moves data from data lake into the relational store that powers Adobe Journey Optimizer Brand Journeys. Use the **[!UICONTROL Campaign Orchestration]** dashboard to monitor these dataflows and troubleshoot dropped or failed records without contacting support.
 
-This guide is for data stewards and marketing or campaign operations users who manage batch and Orchestrated Campaign ingestion in [!DNL Experience Platform].
+This guide is for data stewards and marketing or campaign operations users who manage batch and Campaign Orchestration ingestion in [!DNL Experience Platform].
 
 ## Getting started {#getting-started}
 
@@ -36,30 +36,38 @@ This guide requires a working understanding of the following components of Adobe
 - [Real-Time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Access the Orchestrated Campaign dashboard {#access-dashboard}
+## Access the Campaign Orchestration dashboard {#access-dashboard}
 
-In the [!DNL Experience Platform] UI, select **[!UICONTROL Monitoring]** in the left navigation. On the **[!UICONTROL Monitoring]** page, select the **[!UICONTROL Orchestrated Campaign]** tab.
+In the [!DNL Experience Platform] UI, select **[!UICONTROL Monitoring]** in the left navigation. On the **[!UICONTROL Monitoring]** page, select the **[!UICONTROL Campaign Orchestration]** tab.
 
-<!-- TODO screenshot: Orchestrated Campaign tab next to Batch end-to-end and Streaming end-to-end -->
+![The Monitoring page with the Campaign Orchestration tab selected, showing the Data lake and Campaign Orchestration summary cards, trend graphs, and a dataflow detail table.](../assets/ui/monitor-orchestrated-campaigns/campaign-orchestration.png)
 
-The **[!UICONTROL Orchestrated Campaign]** dashboard shows two ingestion summary cards, a metrics panel with trend graphs, and a dataflow and dataset detail table.
+The **[!UICONTROL Campaign Orchestration]** dashboard shows two ingestion summary cards, a metrics panel with trend graphs, and a dataflow and dataset detail table. Select either card to filter the metrics panel, trend graphs, and detail table to that stage.
 
 ## View the ingestion summary cards {#summary-cards}
 
-The dashboard displays two summary cards side by side:
+The dashboard displays two summary cards side by side, one for each stage of the pipeline:
 
-- **[!UICONTROL Data Lake]**: Shows record counts for data moving from source dataflows into [!DNL Data Lake].
-- **[!UICONTROL Orchestrated Campaign]**: Shows record counts for data moving from [!DNL Data Lake] into the relational store.
+- **[!UICONTROL Data lake]**: Records moving from source dataflows into [!DNL Data Lake].
+- **[!UICONTROL Campaign Orchestration]**: Records moving from [!DNL Data Lake] into the relational store.
 
-<!-- TODO screenshot: Data Lake and Orchestrated Campaign summary cards -->
+![The Data lake summary card selected, filtering the metrics panel, trend graphs, and detail table below to Data lake dataflows.](../assets/ui/monitor-orchestrated-campaigns/data-lake.png)
 
-Each card reports the same five metrics for its stage:
+Each card reports metrics for its own stage. The **[!UICONTROL Data lake]** card does not report records deleted, and the **[!UICONTROL Campaign Orchestration]** card does not report records received, since deletion only applies once data reaches the relational store:
+
+| Card | Metrics shown |
+| --- | --- |
+| **[!UICONTROL Data lake]** | [!UICONTROL Records received], [!UICONTROL Records ingested], [!UICONTROL Records failed], [!UICONTROL Records updated], [!UICONTROL Records skipped] |
+| **[!UICONTROL Campaign Orchestration]** | [!UICONTROL Records ingested], [!UICONTROL Records updated], [!UICONTROL Records deleted], [!UICONTROL Records failed], [!UICONTROL Records skipped] |
+
+{style="table-layout:auto"}
 
 | Metric | Description |
 | --- | --- |
+| **[!UICONTROL Records received]** | The total number of records received from source dataflows into [!DNL Data Lake]. Reported only on the [!UICONTROL Data lake] card. |
 | **[!UICONTROL Records ingested]** | The total number of net new records ingested into the stage. |
 | **[!UICONTROL Records updated]** | The total number of existing records updated in the stage. |
-| **[!UICONTROL Records deleted]** | The total number of records deleted from the stage. |
+| **[!UICONTROL Records deleted]** | The total number of records deleted from the stage. Reported only on the [!UICONTROL Campaign Orchestration] card. |
 | **[!UICONTROL Records failed]** | The total number of records that were not processed due to errors. |
 | **[!UICONTROL Records skipped]** | The total number of records skipped during processing. |
 
@@ -67,9 +75,9 @@ Each card reports the same five metrics for its stage:
 
 ## View metrics and trend graphs {#metrics-panel}
 
-Below the summary cards, the metrics panel displays the same five metrics as tiles, aggregated for the selected time range. Two trend graphs plot **[!UICONTROL Records ingested]** and **[!UICONTROL Records failed]** over time.
+Below the summary cards, the metrics panel displays a **[!UICONTROL Records ingested]** trend graph and a **[!UICONTROL Records failed]** trend graph for the selected card's stage.
 
-<!-- TODO screenshot: metrics panel tiles and trend graphs -->
+![The metrics panel showing the Records ingested and Records failed trend graphs for the Campaign Orchestration stage.](../assets/ui/monitor-orchestrated-campaigns/metrics-panel.png)
 
 By default, the dashboard shows data for the last 24 hours. To change the range, select the time-range selector and choose a different window. For steps, read [Configure monitoring time frame](./monitor.md#configure-monitoring-time-frame).
 
@@ -77,37 +85,40 @@ To hide the metrics panel and graphs, select **[!UICONTROL Metrics and graphs]**
 
 ## View the detail table {#detail-table}
 
-The lower part of the dashboard lists the dataflows or datasets that contribute to Orchestrated Campaign ingestion.
+The lower part of the dashboard lists the dataflows or datasets that contribute to Campaign Orchestration ingestion.
 
-<!-- TODO screenshot: detail table with Dataflows/Datasets toggle -->
+![The dataflow detail table, showing per-dataflow record counts across the pipeline.](../assets/ui/monitor-orchestrated-campaigns/detail-table.png)
 
-Select **[!UICONTROL Dataflows]** or **[!UICONTROL Datasets]** to change how the table groups rows. Use **[!UICONTROL Search sources]** to filter the table to a specific dataflow or dataset.
+Select **[!UICONTROL Dataflows]** or **[!UICONTROL Datasets]** to change how the table groups rows. Use **[!UICONTROL All dataflows]** to filter the table to a specific dataflow, or use **[!UICONTROL Search sources]** to search by name.
 
 Each row displays the following columns:
 
 | Column | Description |
 | --- | --- |
-| **[!UICONTROL Target dataset]** | The name of the dataset that the dataflow writes to. Select the dataset name to go to its dataset page. |
-| **[!UICONTROL Lineage]** | Opens the lineage reconciliation view for this dataflow. |
+| **[!UICONTROL Dataflow]** | The name of the dataflow. |
+| **[!UICONTROL Dataset]** | The ID of the dataset that the dataflow writes to. |
+| **[!UICONTROL Lineage]** | Select **[!UICONTROL View]** to open the lineage reconciliation popup for this dataflow. |
 | **[!UICONTROL Records received]** | The total number of records received by the dataflow. |
 | **[!UICONTROL Records ingested]** | The total number of net new records ingested. |
 | **[!UICONTROL Records updated]** | The total number of existing records updated. |
 | **[!UICONTROL Records deleted]** | The total number of records deleted. |
 | **[!UICONTROL Records failed]** | The total number of records that were not processed due to errors. |
 | **[!UICONTROL Records skipped]** | The total number of records skipped during processing. |
-| **[!UICONTROL Failed dataflow runs]** | The total number of dataflow runs that failed. |
+| **[!UICONTROL Total failed flow runs]** | The total number of dataflow runs that failed. |
 
 {style="table-layout:auto"}
 
+To customize which columns are shown, select the column display icon in the top right of the table.
+
 ## View the lineage reconciliation popup {#lineage-reconciliation}
 
-Use the lineage reconciliation view to compare how a dataflow's records moved through the [!DNL Data Lake] and [!UICONTROL Orchestrated Campaign] stages, and to diagnose discrepancies between them.
+Use the lineage popup to compare how a dataflow's records moved through the [!DNL Data Lake] and Campaign Orchestration stages, and to diagnose discrepancies between them.
 
-Select **[!UICONTROL Lineage]** for a dataflow in the detail table.
+Select **[!UICONTROL View]** in the **[!UICONTROL Lineage]** column for a dataflow.
 
-<!-- TODO screenshot: lineage reconciliation popup -->
+![The lineage popup for a dataflow, showing record counts and percent success rate for the Datalake and Orchestrated Campaign stages side by side.](../assets/ui/monitor-orchestrated-campaigns/lineage.png)
 
-The popup shows the following values for both the [!DNL Data Lake] and [!UICONTROL Orchestrated Campaign] stages:
+A popup titled **[!UICONTROL Campaign Orchestration flow for datasetId =]** followed by the dataset ID appears, showing the following values side by side for each stage:
 
 | Field | Description |
 | --- | --- |
@@ -122,11 +133,11 @@ The popup shows the following values for both the [!DNL Data Lake] and [!UICONTR
 
 {style="table-layout:auto"}
 
-Compare the **[!UICONTROL % Success rate]** for each stage to identify where records are being dropped. For example, a lower success rate in the **[!UICONTROL Orchestrated Campaign]** stage than in the **[!UICONTROL Data Lake]** stage indicates that records are failing or being skipped after they reach data lake, rather than during the initial source ingestion.
+Compare the **[!UICONTROL % Success rate]** for each stage to identify where records are being dropped. For example, a lower success rate in the [!DNL Data Lake] stage than in the Campaign Orchestration stage indicates that records are failing or being skipped during initial source ingestion, rather than after they reach data lake.
 
 ## Next steps {#next-steps}
 
-By reading this document, you learned how to use the **[!UICONTROL Orchestrated Campaign]** dashboard to monitor ingestion from data lake into the relational store, and how to use the lineage reconciliation view to diagnose discrepancies. For information on monitoring other stages, read the following documents:
+By reading this document, you learned how to use the **[!UICONTROL Campaign Orchestration]** dashboard to monitor ingestion from data lake into the relational store, and how to use the lineage reconciliation popup to diagnose discrepancies. For information on monitoring other stages, read the following documents:
 
 - [Monitor data lake ingestion](monitor-sources.md)
 - [Monitor dataflows for Profiles in the UI](monitor-profiles.md)
