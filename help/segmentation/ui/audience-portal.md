@@ -360,13 +360,45 @@ For audiences with an origin of **[!UICONTROL Custom upload]**, the **[!UICONTRO
 >
 >Applying data usage labels to the schema is the best practice. You **cannot** apply a data usage label directly to the audience.
 
-### Activated destinations {#activated-destinations}
+### Destinations {#destinations}
 
-The **[!UICONTROL Activated destinations]** section shows the destinations that this audience is activated for.
+The **[!UICONTROL Destinations]** section shows the last five destinations that this audience is activated for.
 
 >[!NOTE]
 >
-> Destinations are a feature available with [!DNL Adobe Real-Time Customer Data Platform], and allow you to export data to external platforms. For more information on destinations, please read the [destinations overview](../../destinations/home.md). To learn how to activate a segment to a destination, see [activation overview](../../destinations/ui/activation-overview.md).
+> Destinations are a feature available with [!DNL Adobe Experience Platform], and allow you to export data to external platforms. For more information on destinations, please read the [destinations overview](../../destinations/home.md). To learn how to activate a segment to a destination, see [activation overview](../../destinations/ui/activation-overview.md).
+
+## Activated destinations {#activated-destinations}
+
+>[!AVAILABILITY]
+>
+>The activated destinations feature is currently in **beta** and is available upon request. To get this view enabled, contact Adobe Customer Care or your account manager.
+
+To view all the destinations the audience is activated to, select **[!UICONTROL Activated destinations]** within the audience details page.
+
+![The Activated destinations tab is highlighted.](/help/segmentation/images/ui/audience-portal/select-activated-destinations.png)
+
+The activated destinations tab shows a read-only list of the activated destinations for the specified audience, with details including the destination name, destination type, schedule, last dataflow run date, and last dataflow run status. Use this view to see each destination's schedule, recent flow-run history, and status for the audience.
+
+![The Activated destinations page is displayed, showing a list of destinations that the audience has been activated to.](/help/segmentation/images/ui/audience-portal/activated-destinations.png)
+
+| Field | Description |
+| ----- | ----------- |
+| Destination name | The name of the destination. If you select the name of the destination, you can view the activation data for the destination. For more information, read the [destinations details guide](/help/destinations/ui/destination-details-page.md). |
+| Destination | The type of destination. A full list of destination types can be found in the [destinations catalog overview](/help/destinations/catalog/overview.md). |
+| Schedule | The schedule which the audience activates to the destination. |
+| Last Dataflow Run Date | The date that the last dataflow run ran. |
+| Last Dataflow Run Status | The status of the last dataflow run. For more information, read the [destination details guide](/help/destinations/ui/destination-details-page.md). |
+
+Additionally, if you select the ![three dots](/help/images/icons/more.png) next to the destination name, you can see additional details about the recent flow runs and the destination itself.
+
+If you select **[!UICONTROL View Recent Flow Runs]**, the **[!UICONTROL Recent Flow Runs]** popover appears. This popover displays detailed information about recent flow runs for the destination.
+
+![The Recent Flow Runs popover is displayed, showing detailed information about the recent flow runs for the specified destination.](/help/segmentation/images/ui/audience-portal/recent-flow-runs.png)
+
+If you select **[!UICONTROL View Destination Details]**, the destination details popover appears. This popover displays detailed information about the destination.
+
+![The destination details popover is displayed, showing more detailed information about the destination.](/help/segmentation/images/ui/audience-portal/destination-details.png)
 
 ### Profile samples {#profile-samples}
 
