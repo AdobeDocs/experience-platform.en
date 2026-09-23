@@ -362,23 +362,23 @@ For audiences with an origin of **[!UICONTROL Custom upload]**, the **[!UICONTRO
 
 ### Destinations {#destinations}
 
-The **[!UICONTROL Destinations]** section shows the destinations that this audience is activated for.
+The **[!UICONTROL Destinations]** section shows the last five destinations that this audience is activated for.
 
 >[!NOTE]
 >
-> Destinations are a feature available with [!DNL Adobe Real-Time Customer Data Platform], and allow you to export data to external platforms. For more information on destinations, please read the [destinations overview](../../destinations/home.md). To learn how to activate a segment to a destination, see [activation overview](../../destinations/ui/activation-overview.md).
+> Destinations are a feature available with [!DNL Adobe Experience Platform], and allow you to export data to external platforms. For more information on destinations, please read the [destinations overview](../../destinations/home.md). To learn how to activate a segment to a destination, see [activation overview](../../destinations/ui/activation-overview.md).
 
 ## Activated destinations {#activated-destinations}
 
 >[!AVAILABILITY]
 >
->Activated destinations is in **closed beta**. For more information on enablement, contact Adobe Customer Care.
+>The activated destinations feature is currently in **beta** and is available upon request. To get this view enabled, contact Adobe Customer Care or your account manager.
 
-To access activated destinations, select **[!UICONTROL Activated destinations]** within the audience details page.
+To view all the destinations the audience is activated to, select **[!UICONTROL Activated destinations]** within the audience details page.
 
 ![The Activated destinations tab is highlighted.](/help/segmentation/images/ui/audience-portal/select-activated-destinations.png)
 
-The activated destinations tab shows a read-only list of the activated destinations for the specified audience, with details including the destination name, destination type, schedule, last dataflow run date, and last dataflow run status. This helps you consolidate, in an audience-centric manner, per-destination details such as schedule, recent flow-run history, and destination status.
+The activated destinations tab shows a read-only list of the activated destinations for the specified audience, with details including the destination name, destination type, schedule, last dataflow run date, and last dataflow run status. Use this view to see each destination's schedule, recent flow-run history, and status for the audience.
 
 ![The Activated destinations page is displayed, showing a list of destinations that the audience has been activated to.](/help/segmentation/images/ui/audience-portal/activated-destinations.png)
 
