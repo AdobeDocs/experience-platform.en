@@ -9,25 +9,27 @@ exl-id: f94e3ef3-2252-46f5-8075-45b5483d9d83
 
 >[!IMPORTANT]
 >
->[!UICONTROL Job schedules] are currently available only for the following Real-Time CDP jobs:
+>[!UICONTROL Job schedules] are currently available only for the following jobs:
 >
-> * Batch data lake ingestion
-> * Batch profile ingestion
-> * Batch identity ingestion
-> * Batch segmentation
-> * Batch destination activation
+> * Batch data lake ingestion (Real-Time CDP)
+> * Batch profile ingestion (Real-Time CDP)
+> * Batch identity ingestion (Real-Time CDP)
+> * Batch segmentation (Real-Time CDP)
+> * Batch destination activation (Real-Time CDP)
+> * Scheduled batch campaigns ([!DNL Adobe Journey Optimizer])
 
-The [!UICONTROL Job Schedules] timeline view helps you identify common configuration issues that can negatively impact your data pipeline performance and reliability. These anti-patterns often lead to job failures, data inconsistencies, or degraded system performance. Three of the most common anti-patterns are automatically detected and surfaced through warning indicators in the interface. By spotting these patterns early, you can reconfigure your jobs to avoid problems before they affect your business operations.
+The [!UICONTROL Job Schedules] timeline view helps you identify common configuration issues that can negatively impact your data pipeline performance and reliability. These anti-patterns often lead to job failures, data inconsistencies, or degraded system performance. Four of the most common anti-patterns are automatically detected and surfaced through warning indicators in the interface. By spotting these patterns early, you can reconfigure your jobs to avoid problems before they affect your business operations.
 
 ## Automatically detected anti-patterns {#auto-detection}
 
-[!UICONTROL Job Schedules] automatically detects three common anti-patterns and surfaces warning indicators on the relevant [summary cards](job-schedules.md#summary-cards). Select a warning indicator to open a details panel with a description of the issue, recommended actions, and a list of affected datasets or destinations.
+[!UICONTROL Job Schedules] automatically detects four common anti-patterns and surfaces warning indicators in the interface. For the batch pipeline anti-patterns, indicators appear on the relevant [summary cards](job-schedules.md#summary-cards) and open a details panel with a description of the issue, recommended actions, and a list of affected datasets or destinations. For the campaign timing anti-pattern, affected campaigns are grouped under a **[!UICONTROL start before segmentation end]** label directly in the timeline.
 
 | Auto-detected anti-pattern | Warning indicator location | More information |
 |---|---|---|
 | Profile ingestion daily limit | **[!UICONTROL Profile ingestion]** card | [Profile ingestion daily limit](#profile-ingestion-daily-limit) |
 | Profile ingestion too close to segmentation | **[!UICONTROL Segmentation]** card | [Scheduled job density](#scheduled-density) |
 | Segmentation too close to scheduled destination activation | **[!UICONTROL Destination activation]** card | [Schedule overlap](#schedule-overlap-pattern) |
+| Campaign scheduled to start before segmentation completes | **[!UICONTROL start before segmentation end]** grouping under the **[!UICONTROL Campaigns]** row | [Campaign start before segmentation end](#campaign-start-before-segmentation-end) |
 
 ## Prerequisites {#prerequisites}
 
@@ -44,6 +46,7 @@ Before identifying anti-patterns, you should:
 | [Schedule overlap](#schedule-overlap-pattern) | Multiple jobs running simultaneously | Resource contention and job failures | High |
 | [Scheduled job density](#scheduled-density) | Many datasets with batches clustered in same hour | Pipeline bottlenecks and incomplete segmentation | High |
 | [Profile ingestion daily limit](#profile-ingestion-daily-limit) | Warning indicator on the Profile ingestion summary card | System guardrail exceeded | High |
+| [Campaign start before segmentation end](#campaign-start-before-segmentation-end) | Campaign scheduled to start before upstream segmentation completes | Campaign sends against an incomplete or stale audience | High |
 | [Excessive batches per dataset](#excessive-batches-per-dataset) | Single dataset with dozens of daily batches | Inefficient processing and operational complexity | Medium |
 
 ## Schedule overlap {#schedule-overlap-pattern}
@@ -70,6 +73,25 @@ A common example is batch ingestion jobs running at the same time as a scheduled
 When [!UICONTROL Job Schedules] detects segmentation running too close to a scheduled destination activation, a warning indicator appears on the **[!UICONTROL Destination activation]** summary card. Select the warning indicator to open a panel showing the number of detected occurrences, a description of the timing conflict, recommendations, and a table of affected destinations.
 
 ![The Segmentation too close to scheduled destination activation panel in Job Schedules, showing a description of the timing conflict, recommendations, and a table of affected destinations.](assets/job-schedules/segmentation-too-close-to-activation.png){zoomable="yes"}
+
+## Campaign start before segmentation end {#campaign-start-before-segmentation-end}
+
+**Impact severity**: High | **Primary issue**: Campaign sends against an incomplete audience
+
+**What to look for**: A scheduled batch campaign in [!DNL Adobe Journey Optimizer] with a start time set before the upstream segmentation job is projected to complete.
+
+**Why this is problematic**:
+
+* **Stale or partial audience**: A campaign that starts before segmentation finishes sends against an incomplete evaluation of the audience.
+* **Silent failure**: The campaign does not necessarily error. It sends on schedule, but against the wrong data, or it misses its window entirely.
+* **Hidden dependency**: Without a unified view, the timing conflict between segmentation and campaign delivery is not visible until customers investigate a support ticket.
+
+**How to fix it**:
+
+* **Add buffer time**: Reschedule the campaign to start after segmentation is projected to complete, with enough margin to absorb normal variation in segmentation duration.
+* **Review the dependency chain**: Confirm which segmentation job the campaign audience depends on, and adjust either schedule to remove the conflict.
+
+[!UICONTROL Job Schedules] flags this conflict directly on the timeline by grouping affected campaigns under a **[!UICONTROL start before segmentation end]** label beneath the **[!UICONTROL Campaigns]** row. For more information, see [scheduled campaign timing](job-schedules.md#campaign-timing).
 
 ## Scheduled job density {#scheduled-density}
 

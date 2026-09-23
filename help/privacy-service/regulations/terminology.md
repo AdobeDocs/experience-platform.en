@@ -117,6 +117,8 @@ This document provides definitions for key terms related to privacy regulations 
 
 **IMS Org ID**: Refers to an Adobe authorization token for service-to-service authentication, which does not require user login. It is issued to an IMS client, and has no associated user. An IMS client needs a service token to authorize back-channel requests between services. (The term "system token" is occasionally used to mean service token.)
 
+**[!DNL India Digital Personal Data Protection Act]**: The [!DNL India Digital Personal Data Protection Act] (DPDPA) regulates the processing of digital personal data of individuals in India. It grants individuals (known as Data Principals) several rights relating to their personal data. These include the right to access information about their data and to correct, complete, update, or erase it. Data Principals also have the right to seek grievance redressal and to nominate another individual to exercise their rights in the event of death or incapacity. The Act applies to the processing of digital personal data within India, and to processing outside India that relates to offering goods or services to individuals in India.
+
 **[!DNL Iowa Consumer Data Protection Act]**: A state privacy law that grants Iowa residents the right to access, delete, and opt out of the sale of their personal data. The ICDPA applies to businesses processing data for more than 100,000 Iowa residents or deriving over 50% of revenue from data sales. Notable exemptions include nonprofits and educational institutions. The law provides a 90-day cure period for businesses to correct violations before penalties are imposed.
 
 ## J
