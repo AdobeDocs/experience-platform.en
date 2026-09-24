@@ -140,6 +140,13 @@ In addition to the request body, you can add custom HTTP headers to the calls Ex
       }
     },
     {
+      "header": "Amazon-Advertising-API-ClientId",
+      "value": {
+        "templatingStrategy": "PEBBLE_V1",
+        "value": "{{authData.clientId}}"
+      }
+    },
+    {
       "header": "Accept",
       "value": {
         "templatingStrategy": "NONE",
@@ -154,9 +161,11 @@ In addition to the request body, you can add custom HTTP headers to the calls Ex
 |---|---|---|
 | `header` | String | *Required.* The header name, such as `Authorization`, `Content-Type`, or a custom header. |
 | `value.templatingStrategy` | String | *Required.* Use `PEBBLE_V1` when the header value is dynamic or uses Pebble expressions. Use `NONE` for static values. |
-| `value.value` | String | *Required.* The header value. Supports Pebble expressions such as `{{customerData.integrationId}}` or `{{ (authData.username + ':' + authData.password) \| base64encode }}`. |
+| `value.value` | String | *Required.* The header value. Supports Pebble expressions that reference customer data or authentication data fields, such as `{{customerData.integrationId}}`, `{{authData.clientId}}`, or `{{ (authData.username + ':' + authData.password) \| base64encode }}`. |
 
 {style="table-layout:auto"}
+
+Some partner APIs require a custom header populated with a value from the authentication credentials that customers provide, rather than the standard `Authorization` header. The `Amazon-Advertising-API-ClientId` header shown above is an example of this pattern, where the header value comes directly from an `authData` field.
 
 >[!NOTE]
 >
