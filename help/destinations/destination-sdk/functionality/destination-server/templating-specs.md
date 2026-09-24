@@ -85,6 +85,53 @@ See below an example of an HTTP request template, together with descriptions of 
 
 {style="table-layout:auto"}
 
+## Configure request headers {#headers}
+
+In addition to the request body, you can add custom HTTP headers to the calls Experience Platform makes to your destination. Each header entry uses the same `templatingStrategy` and `value` fields as other templatized fields in the destination server.
+
+```json
+"httpTemplate": {
+  "httpMethod": "POST",
+  "headers": [
+    {
+      "header": "Authorization",
+      "value": {
+        "templatingStrategy": "PEBBLE_V1",
+        "value": "Basic {{ (authData.username + ':' + authData.password) | base64encode }}"
+      }
+    },
+    {
+      "header": "x-integration",
+      "value": {
+        "templatingStrategy": "PEBBLE_V1",
+        "value": "{{customerData.integrationId}}"
+      }
+    },
+    {
+      "header": "Accept",
+      "value": {
+        "templatingStrategy": "NONE",
+        "value": "application/json"
+      }
+    }
+  ]
+}
+```
+
+| Parameter | Type | Description |
+|---|---|---|
+| `header` | String | *Required.* The header name, such as `Authorization`, `Content-Type`, or a custom header. |
+| `value.templatingStrategy` | String | *Required.* Use `PEBBLE_V1` when the header value is dynamic or uses Pebble expressions. Use `NONE` for static values. |
+| `value.value` | String | *Required.* The header value. Supports Pebble expressions such as `{{customerData.integrationId}}` or `{{ (authData.username + ':' + authData.password) \| base64encode }}`. |
+
+{style="table-layout:auto"}
+
+>[!NOTE]
+>
+>This structure applies to destination server headers only. Audience metadata template headers use a simpler form, where `value` is a flat string instead of an object with `templatingStrategy` and `value` fields. For an example, see [audience metadata management](/help/destinations/destination-sdk/functionality/audience-metadata-management.md#configuration-examples).
+
+For destinations using Basic authentication that require a custom Base64-encoded header, see [Customize the Basic authentication header](/help/destinations/destination-sdk/functionality/destination-configuration/customer-authentication.md#basic-override).
+
 ## Next steps {#next-steps}
 
 After reading this article, you should have a better understanding of what a template spec is, and how you can configure it.
