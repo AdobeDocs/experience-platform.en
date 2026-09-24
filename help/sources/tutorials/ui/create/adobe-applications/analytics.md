@@ -345,7 +345,7 @@ To delete your Analytics dataflow, select **[!UICONTROL Dataflows]** from the to
 
 ## Next steps and additional resources
 
-Once the connection is created, the dataflow is automatically created to contain the incoming data and populate a dataset with your selected schema. Furthermore, data back-filling occurs and ingests up to 13 months of historical data. When the initial ingestion completes, Analytics data and be used by downstream Experience Platform services such as [!DNL Real-Time Customer Profile] and Segmentation Service. See the following documents for more details:
+Once the connection is created, the dataflow is automatically created to contain the incoming data and populate a dataset with your selected schema. Furthermore, data back-filling occurs and ingests up to 13 months of historical data. When the initial ingestion completes, Analytics data can be used by downstream Experience Platform services such as [!DNL Real-Time Customer Profile] and Segmentation Service. See the following documents for more details:
 
 * [[!DNL Real-Time Customer Profile] overview](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] overview](../../../../../segmentation/home.md)

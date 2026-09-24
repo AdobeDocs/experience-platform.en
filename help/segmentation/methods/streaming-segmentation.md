@@ -28,6 +28,10 @@ topic_v2:
 ---
 # Streaming segmentation guide
 
+>[!IMPORTANT]
+>
+>The streaming segmentation eligibility criteria is changed if you're using the upgraded streaming segmentation capabilities. For more information on these changes, read the [streaming segmentation eligibility criteria updates](/help/segmentation/eligibility-criteria-update.md).
+
 Streaming segmentation is the ability to evaluate audiences in Adobe Experience Platform in near real-time while focusing on data richness.
 
 With streaming segmentation, audience qualification now happens as streaming data lands into Experience Platform, alleviating the need to schedule and run segmentation jobs. This allows you to evaluate data as it is passed into Experience Platform, letting audience membership be automatically kept up-to-date.
@@ -47,12 +51,12 @@ A ruleset will be eligible for streaming segmentation if it meets any of the cri
 | Query type | Details | Query | Example |
 | ---------- | ------- | ----- | ------- |
 | Single event within a time window of less than 24 hours | Any segment definition that refers to a single incoming event within a time window of less than 24 hours. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of a single event within a relative time window is shown.](../images/methods/streaming/single-event.png) |
-| Profile only | Any segment definition that refers to only a profile attribute. | `homeAddress.country.equals("Canada", false)` | ![An example of a profile attribute shown.](../images/methods/streaming/profile-attribute.png) |
 | Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. | `workAddress.country.equals("Canada", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/methods/streaming/single-event-with-profile-attribute.png) |
 | Multiple events within a relative time window of 24 hours | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of multiple events with a profile attribute is shown.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
 
 A segment definition will **not** be eligible for streaming segmentation in the following scenarios:
 
+- The segment definition **only** includes profile attributes.
 - The segment definition includes Adobe Audience Manager (AAM) segments or traits.
 - The segment definition includes multiple entities (multi-entity queries).
 - The segment definition includes a combination of a single event and an `inSegment` event.
@@ -69,7 +73,7 @@ Please note the following guidelines that apply to streaming segmentation querie
 | Query type | Guideline |
 | ---------- | -------- |
 | Single event ruleset | The lookback window is limited to **one day**. |
-| Query with event history | <ul><li>The lookback window is limited to **one day**.</li><li>A strict time-ordering condition **must** exist between the events.</li><li>Queries with at least one negated event are supported. However, the entire event **cannot** be a negation.</li></ul>|
+| Query with event history | <ul><li>The lookback window is limited to **one day**.</li><li>A strict time-ordering condition **must** exist between the events.</li><li>Queries with at least one negated event are supported. However, the entire event **cannot** be a negation.</li></ul> |
 
 If a segment definition is modified so it no longer meets the criteria for streaming segmentation, the segment definition will automatically switch from "Streaming" to "Batch".
 
@@ -98,7 +102,7 @@ CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)
 WHEN(<= 24 hours before now)])
 ```
 
-The resulting audience *will* be evaluated using streaming segmentation, since it leverages the batch audience's membership by referring to the batch audience component.
+The resulting audience *will* be evaluated using streaming segmentation, since it leverages the batch audience's membership by referring to the batch audience component. However, the streaming segmentation will be triggered **only** when the streaming audience is updated.
 
 ### Multiple Experience Events {#two-events}
 
@@ -228,15 +232,15 @@ In Audience Portal, select **[!UICONTROL Create audience]**.
 
 ![The Create audience button is highlighted in Audience Portal.](../images/methods/streaming/select-create-audience.png)
 
-A popover appears. Select **[!UICONTROL Build rules]** to enter Segment Builder.
+A popover appears. Select **[!UICONTROL Build rules]** to enter Audience Builder.
 
 ![The Build rules button is highlighted in the create audience popover.](../images/methods/streaming/select-build-rules.png)
 
-Within Segment Builder, create a segment definition that matches one of the [eligible rulesets](#eligible-rulesets). If the segment definition qualifies for streaming segmentation, you'll be able to select **[!UICONTROL Streaming]** as the **[!UICONTROL Evaluation method]**.
+Within Audience Builder, create a segment definition that matches one of the [eligible rulesets](#eligible-rulesets). If the segment definition qualifies for streaming segmentation, you'll be able to select **[!UICONTROL Streaming]** as the **[!UICONTROL Evaluation method]**.
 
 ![The segment definition is displayed. The evaluation type is highlighted, showing the segment definition can be evaluated using streaming segmentation.](../images/methods/streaming/streaming-evaluation-method.png)
 
-To learn more about creating segment definitions, please read the [Segment Builder guide](../ui/segment-builder.md)
+To learn more about creating segment definitions, please read the [Audience Builder guide](../ui/audience-builder.md)
 
 >[!ENDTABS]
 
