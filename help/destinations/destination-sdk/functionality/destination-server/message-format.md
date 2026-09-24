@@ -167,7 +167,8 @@ This section provides several examples of how these transformations are made, fr
 
 1. Simple transformation examples. Learn how templating works with simple transformations for [Profile attributes](#attributes), [Audience membership](#audience-membership), and [Identity](#identities) fields.
 2. Increased complexity examples of templates that combine the fields above: [Create a template that sends audiences and identities](./message-format.md#segments-and-identities) and [Create a template that sends segments, identities, and profile attributes](#segments-identities-attributes).
-3. Templates that include the aggregation key. When you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in the destination configuration, Experience Platform groups the profiles exported to your destination based on criteria such as audience ID, audience namespace, audience status, or identity namespaces.
+3. A template for a destination that uses [best effort aggregation](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) with one profile per API call. See [Create a template for a single profile per API call](#single-profile-template).
+4. Templates that include the aggregation key. When you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in the destination configuration, Experience Platform groups the profiles exported to your destination based on criteria such as audience ID, audience namespace, audience status, or identity namespaces.
 
 ### Profile Attributes {#attributes}
 
@@ -861,6 +862,70 @@ The `json` below represents the data exported out of [!DNL Adobe Experience Plat
 }
 ```
 
+### Create a template for a single profile per API call {#single-profile-template}
+
+When you use [best effort aggregation](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) and set `maxUsersPerRequest` to `1`, Experience Platform sends one profile per API call. Use `input.profile` (singular) to refer to that profile in your template. Your template does not need a for-loop over profiles, because only one profile is present in each call.
+
+This is different from templates for [configurable aggregation](#template-aggregation-key), where Experience Platform can send multiple profiles in the same API call. Those templates use `input.profiles` (plural) and iterate over the array with a for-loop.
+
+The example below shows a template for a destination that expects one profile, and one audience qualification, in each API call.
+
+**Input**
+
+```json
+{
+    "attributes": {
+        "firstName": {
+            "value": "Tom"
+        }
+    },
+    "segmentMembership": {
+        "ups": {
+            "abcdefgh-ijklmn": {
+                "lastQualificationTime": "2024-01-20T13:15:49Z",
+                "status": "realized"
+            }
+        }
+    }
+}
+```
+
+**Template**
+
+>[!IMPORTANT]
+>
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the [template](../../functionality/destination-server/templating-specs.md) in the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+
+```python
+{
+    "firstname": "{{ input.profile.attributes.firstName.value }}",
+    "audiences": [
+        {% for segment in input.profile.segmentMembership.ups | added %}
+        {
+            "audienceId": "{{ segment.key }}",
+            "audienceQualification": "{{ segment.value.status }}"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+}
+```
+
+**Result**
+
+```json
+{
+    "firstname": "Tom",
+    "audiences": [
+        {
+            "audienceId": "abcdefgh-ijklmn",
+            "audienceQualification": "realized"
+        }
+    ]
+}
+```
+
+The `audiences` array in the template accommodates a profile that qualifies for more than one audience. If the same profile also qualified for a second audience, the `segmentMembership.ups` map would contain a second entry, and the template would output a second object in the `audiences` array, without any other changes to the template.
+
 ### Use aggregation keys in templates {#template-aggregation-key}
 
 When you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in the destination configuration, you can group the profiles exported to your destination based on criteria such as audience ID, audience namespace, audience alias, audience membership, or identity namespaces.
@@ -1213,7 +1278,8 @@ The table below provides descriptions for the functions in the examples above.
 
 |Function | Description | Example |
 |---------|----------|----------|
-| `input.profile` | The profile, represented as a [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Follows the partner XDM schema mentioned further above on this page.||
+| `input.profile` | A single profile, represented as a [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Follows the partner XDM schema mentioned further above on this page. Use `input.profile` in templates for [best effort aggregation](#single-profile-template) with `maxUsersPerRequest` set to `1`, where Experience Platform sends one profile per API call.||
+| `input.profiles` | An array of profiles, each represented as a [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Use `input.profiles` in templates for [configurable aggregation](#template-aggregation-key), where Experience Platform can send multiple profiles in the same API call. Iterate over the array with a for-loop, for example `{% for profile in input.profiles %}`.||
 |`hasSegments`| This function takes a map of namespace audience IDs as parameter. The function returns `true` if there is at least one audience in the map (regardless of its status), and `false` otherwise. You can use this function to decide whether to iterate over a map of audiences or not.|`hasSegments(input.profile.segmentMembership)`|
 |`destination.namespaceSegmentAliases`| Map from audience IDs in a specific [!DNL Adobe Experience Platform] namespace to audience aliases in the partner's system.|`destination.namespaceSegmentAliases["ups"]["seg-id-1"]`|
 |`destination.namespaceSegmentNames`| Map from audience names in specific [!DNL Adobe Experience Platform] namespaces to audience names in the partner's system.|`destination.namespaceSegmentNames["ups"]["seg-name-1"]`|
