@@ -26,3 +26,5 @@ nudge: true
   * [Destinations](health-checks/destinations.md)
   * [Merge policies](health-checks/merge-policies.md)
   * [Query Service](health-checks/query-service.md)
+  * [Sources](health-checks/sources.md)
+  * [Profile](health-checks/profile.md)

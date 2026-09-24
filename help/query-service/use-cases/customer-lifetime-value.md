@@ -119,7 +119,7 @@ Examples of custom CLV widgets that use decile buckets can be seen below.
 
 ## Create and activate high-performance audiences {#create-and-activate-audiences}
 
-The next step is to build a segment definition and generate audiences from your Real-Time Customer Profile data. See the Segment Builder UI guide to learn how to [create and activate audiences in Experience Platform](../../segmentation/ui/segment-builder.md). The guide provides sections on how to:
+The next step is to build a segment definition and generate audiences from your Real-Time Customer Profile data. See the Audience Builder UI guide to learn how to [create and activate audiences in Experience Platform](../../segmentation/ui/audience-builder.md). The guide provides sections on how to:
 
 * Create segment definitions using a combination of attributes, events, and existing audiences as building blocks.
 * Use the rule builder canvas and containers to control the order in which the segmentation rules are executed.

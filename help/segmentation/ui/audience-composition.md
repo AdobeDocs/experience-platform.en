@@ -44,7 +44,7 @@ If you are an Adobe Journey Optimizer customer, please read the [get started wit
 
 >[!NOTE]
 >
->This guide explains how to create audiences using Audience Composition. To learn how to create audiences through segment definitions using Segment Builder please read the [Segment Builder UI guide](./segment-builder.md).
+>This guide explains how to create audiences using Audience Composition. To learn how to create audiences through segment definitions using Audience Builder please read the [Audience Builder UI guide](./audience-builder.md).
 
 Audience Composition provides a workspace to build and edit audiences, using blocks that are used to represent different actions.
 
@@ -96,7 +96,7 @@ To add audiences to the Audience block. select **[!UICONTROL Add Audience]**.
 >
 >Please note that **only** audiences defined using the default merge policy will appear. 
 >
->Additionally, only **published** audiences created using Segment Builder can be used. Audiences created using Audience Composition and externally generated audiences are **not** available.
+>Additionally, only **published** audiences created using Audience Builder can be used. Audiences created using Audience Composition and externally generated audiences are **not** available.
 
 A list of audiences appears. Select the audiences you want to include, followed by **[!UICONTROL Add]** to append them to your audience block.
 
@@ -116,14 +116,14 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_rule_builder"
->title="Segment Builder"
->abstract="You can use Segment Builder to add a custom rule for your composition."
+>title="Audience Builder"
+>abstract="You can use Audience Builder to add a custom rule for your composition."
 
 To add a custom rule to the Audience block, select **[!UICONTROL Build rule]**.
 
 ![The Build rule button is highlighted.](../images/ui/audience-composition/select-build-rule.png)
 
-The rule builder canvas in Audience Builder appears. You can use Audience Builder to create a custom rule for the audience to follow. More information about using the Audience Builder can be found in the [Audience Builder guide](./segment-builder.md).
+The rule builder canvas in Audience Builder appears. You can use Audience Builder to create a custom rule for the audience to follow. More information about using the Audience Builder can be found in the [Audience Builder guide](./audience-builder.md).
 
 ![The Segment Builder UI is displayed.](../images/ui/audience-composition/segment-builder.png)
 
@@ -193,7 +193,7 @@ If you exclude by audience, you can select which audience you want to exclude by
 
 >[!IMPORTANT]
 >
->Only **published** audiences created using Segment Builder can be used. Audiences created using Audience Composition and externally generated audiences are **not** available.
+>Only **published** audiences created using Audience Builder can be used. Audiences created using Audience Composition and externally generated audiences are **not** available.
 
 A list of audiences appears. Select **[!UICONTROL Add]** to add the audience you want to exclude to your exclude block.
 

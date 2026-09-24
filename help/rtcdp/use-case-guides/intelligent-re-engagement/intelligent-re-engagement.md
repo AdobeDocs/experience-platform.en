@@ -371,7 +371,7 @@ For more information on how to create an audience, read the [audience service UI
 
 For more information on how to directly compose [Audiences](/help/segmentation/home.md), read the [Audience Composition UI guide](/help/segmentation/ui/audience-composition.md).
 
-For more information on how to build audiences through Experience Platform-derived audience definitions, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
+For more information on how to build audiences through Experience Platform-derived audience definitions, read the [Audience Builder UI guide](/help/segmentation/ui/audience-builder.md).
 
 >[!BEGINTABS]
 

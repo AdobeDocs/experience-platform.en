@@ -78,7 +78,7 @@ PUT /authoring/destinations/{INSTANCE_ID}
 The following request updates the destination we created in [this example](create-destination-configuration.md#create) with different `filenameConfig` options.
 
 ```shell {line-numbers="true" highlight="115-128"}
-curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
+curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
