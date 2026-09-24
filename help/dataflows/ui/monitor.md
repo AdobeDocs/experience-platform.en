@@ -125,11 +125,11 @@ Select **[!UICONTROL Destinations]** to view metrics on your [!UICONTROL Streami
 
 ![The monitoring dashboard in the UI with the destinations card selected.](../assets/ui/monitor-overview/destinations.png)
 
->[!TAB Campaign Orchestration]
+>[!TAB Orchestrated Campaign]
 
-Select **[!UICONTROL Campaign Orchestration]** to view metrics on data moving from data lake into the relational store used by Campaign Orchestration. Read the guide on [monitoring Campaign Orchestration ingestion](monitor-orchestrated-campaign.md) for more information.
+Select **[!UICONTROL Orchestrated Campaign]** to view metrics on data moving from data lake into the relational store used by Orchestrated Campaign. Read the guide on [monitoring Orchestrated Campaign ingestion](monitor-orchestrated-campaign.md) for more information.
 
-![The monitoring dashboard in the UI with the Campaign Orchestration card selected.](../assets/ui/monitor-orchestrated-campaigns/campaign-orchestration.png)
+![The monitoring dashboard in the UI with the Orchestrated Campaign card selected.](../assets/ui/monitor-orchestrated-campaigns/campaign-orchestration.png)
 
 >[!ENDTABS]
 
@@ -158,7 +158,7 @@ By reading this document, you can now navigate your way through the monitoring d
 * [Monitor profile data](monitor-profiles.md).
 * [Monitor audience data](monitor-audiences.md).
 * [Monitor destinations data](monitor-destinations.md).
-* [Monitor Campaign Orchestration ingestion](monitor-orchestrated-campaign.md).
+* [Monitor Orchestrated Campaign ingestion](monitor-orchestrated-campaign.md).
 
 <!-- 
 >[!TAB Prospect]
