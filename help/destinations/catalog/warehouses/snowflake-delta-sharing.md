@@ -163,7 +163,11 @@ During the beta phase, the app is available through a private listing. To reques
 
 ### Install the app {#install-app}
 
-Use the **[!UICONTROL ACCOUNTADMIN]** role to install the app.
+Install the app from the private listing, then run the setup steps that follow.
+
+>[!IMPORTANT]
+>
+>Before you install the app and run the setup steps, set your [!DNL Snowflake] role to **[!UICONTROL ACCOUNTADMIN]**. The setup steps fail without this role.
 
 1. In your [!DNL Snowflake] account, go to **[!UICONTROL Apps]**, then select the **[!UICONTROL Shared with me]** tab to find the [!DNL Adobe Delta Sharing] app.
 

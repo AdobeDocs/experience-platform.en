@@ -185,6 +185,10 @@ To complete the workflow, select **[!UICONTROL Finish]**. Note the share name th
 
 Finally, install the share in your [!DNL Databricks] workspace and import your credentials to read the shared data. For more information about credential files in [!DNL Databricks], see the [Databricks open sharing documentation](https://docs.databricks.com/aws/en/opensharing/).
 
+>[!NOTE]
+>
+>The share is addressed in [!DNL Databricks] by a composite share name that combines your organization ID and the share name that you entered in the [!DNL Experience Platform] configuration workflow, in the format `<organization_id>-<share_name>`. Use this composite share name when you install and mount the share.
+
 1. Open your [!DNL Databricks] workspace and select **[!UICONTROL Catalog]**.
 
    ![Databricks Catalog pane showing the shares received under the organization.](../../assets/catalog/warehouses/databricks-delta-sharing/db-catalog-pane.png){zoomable="yes"}
@@ -199,7 +203,7 @@ Finally, install the share in your [!DNL Databricks] workspace and import your c
 
    ![Databricks provider page showing the imported share and the Mount to catalog option.](../../assets/catalog/warehouses/databricks-delta-sharing/db-share-confirmation.png){zoomable="yes"}
 
-1. Select **[!UICONTROL Mount to catalog]**. When you enter the catalog name, use a name that is **exactly identical** to the name of the share. Select **[!UICONTROL Create]**.
+1. Select **[!UICONTROL Mount to catalog]**, then select **[!UICONTROL Create a new catalog]**. When you enter the catalog name, use a name that is **exactly identical** to the name of the share. Select **[!UICONTROL Create]**.
 
 The [!DNL Catalog] screen now shows the imported share, along with any datasets that were shared.
 
