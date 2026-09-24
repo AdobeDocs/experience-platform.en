@@ -1,7 +1,6 @@
 ---
 title: Delta Sharing
 description: Learn how to use the Delta Sharing source on Adobe Experience Platform.
-badge: Beta
 exl-id: 69c4e250-aa9b-4db1-b44b-6056bdddb637
 ---
 # [!DNL Delta Sharing]
