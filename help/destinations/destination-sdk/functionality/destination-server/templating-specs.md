@@ -85,6 +85,38 @@ See below an example of an HTTP request template, together with descriptions of 
 
 {style="table-layout:auto"}
 
+## Convert a template to support external audiences {#template-converter-tool}
+
+Older templates only read audience membership from the `ups` namespace. Update these templates to iterate over every namespace in `segmentMembership`, so that they also read membership for [external audiences](/help/segmentation/api/external-audiences.md).
+
+For information on how to configure your destination to support external audiences, see [Configure support for external audiences](/help/destinations/destination-sdk/functionality/destination-configuration/schema-configuration.md#external-audiences).
+
+Use the *Template Converter* tool to convert your existing template automatically. The tool rewrites a template that reads only the `ups` namespace into a template that iterates over all namespaces in `segmentMembership`, including external audiences.
+
+[Download the Template Converter tool](../../assets/functionality/destination-server/templates-converter.zip)
+
+The tool requires Java Runtime Environment (JRE) 11 or later. It supports two modes:
+
+* **Command line interface (CLI) mode**: Run the tool from a terminal and pass your existing template as a parameter.
+
+  ```shell
+  java -jar templates-converter-cli.jar "your-existing-template-string"
+  ```
+
+  The tool prints the converted template to the terminal.
+
+* **User interface (UI) mode**: Run the tool with a graphical interface. This mode requires the JavaFX SDK, which is included in the downloaded archive.
+
+  ```shell
+  java --module-path="./javafx-sdk-17.0.7/lib" --add-modules=javafx.controls,javafx.fxml -jar templates-converter-ui.jar
+  ```
+
+After you convert your template, test it against multiple sample profiles using the [render template API](../../testing-api/streaming-destinations/render-template-api.md) to confirm that it still renders correctly before you add it to your destination server configuration.
+
+>[!IMPORTANT]
+>
+>The Templates Converter tool only rewrites the syntax of your template. It does not validate the business logic of the converted template. Always test your converted template before using it in production.
+
 ## Configure request headers {#headers}
 
 In addition to the request body, you can add custom HTTP headers to the calls Experience Platform makes to your destination. Each header entry uses the same `templatingStrategy` and `value` fields as other templatized fields in the destination server.
