@@ -28,4 +28,6 @@ nudge: true
   * [Query Service](health-checks/query-service.md)
   * [Sources](health-checks/sources.md)
   * [Profile](health-checks/profile.md)
-* [Usage Insights](usage-insights.md) {#usage-insights}
+* Usage Insights {#usage-insights}
+  * [Overview](usage-insights/overview.md)
+  * [Usage analysis reference](usage-insights/usage-analysis.md)
