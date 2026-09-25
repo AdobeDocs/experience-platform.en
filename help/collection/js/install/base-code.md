@@ -1,6 +1,6 @@
 ---
 title: Base code
-description: Queue commands (bootstrap) while the data collection library loads asynchronously.
+description: Queue commands (bootstrap) so they run once the data collection library finishes loading.
 exl-id: 10265747-f6d2-4ae7-bf22-9904c5a96f8e
 ---
 # Base code
@@ -24,10 +24,11 @@ Place the base code as high as possible in the `<head>` tag, before any scripts 
 
 After adding the base code, load the Web SDK using your chosen method ([JavaScript library loader](library.md) or [Tags embed code](/help/tags/extensions/client/web-sdk/getting-started.md)). For tag-based implementations, the base code is supported in the Web SDK tag extension 2.34.0 and later.
 
-This base code is **not** required in the following scenarios:
+## When the base code is required
 
-* If you load the JavaScript library synchronously. Synchronous loading blocks parsing while the library is fetched and executed.
-* If using the tag extension, all calls to the Web SDK are made within tag rules or actions. You only need to include the base code if your implementation references the Web SDK outside of your tags library. Most tag implementations typically do not call the Web SDK outside of the tags library, so most tag implementations do not require the base code.
+* **[JavaScript library](library.md)**: **Required.** The JavaScript library relies on the instance and command queue that the base code creates, so the base code must run before the library loads. This requirement applies whether the `<script>` tag is async or synchronous, because the requirement is about load order rather than the `async` attribute.
+* **[NPM package](npm.md) with `createInstance()`**: **Not required.** When you import the library and call `createInstance()` directly, it returns an instance function to your code with no dependency on the base code.
+* **[Web SDK tag extension](/help/tags/extensions/client/web-sdk/getting-started.md)**: **Supported, but usually not needed.** The tag extension uses an already-present base code if it finds one. You only need to add the base code if your implementation references the Web SDK outside of your tags library. Most tag implementations call the Web SDK only within tag rules or actions, so most do not require the base code.
 
 ## Examples
 
