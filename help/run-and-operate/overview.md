@@ -1,6 +1,6 @@
 ---
 title: Run and Operate overview
-description: Inspect, troubleshoot, and optimize your Experience Platform implementations with the Run and Operate tools. Gain visibility into scheduled batch activations, identify configuration issues, and improve system reliability.
+description: Inspect, troubleshoot, and understand your Experience Platform implementations with Run and Operate tools. Monitor scheduled operations, identify configuration issues, and understand how supported capabilities are being used.
 solution: Experience Platform
 type: Documentation
 role: Admin, User
@@ -8,13 +8,14 @@ exl-id: 7f44cdf3-4db1-47f9-bcde-401f6dcfc551
 ---
 # Run and Operate overview
 
-When batch jobs fail or deliver incomplete data, you need to quickly understand what caused the issue. The root cause could be data availability issues, incorrect timing, configuration problems, or system capacity constraints. Without clear visibility, you may spend hours investigating multiple systems before finding the answer.
+Use [!UICONTROL Run and Operate] tools to understand the health, execution, and usage of your Experience Platform implementation. These tools help you investigate operational issues, identify configuration problems, monitor scheduled processes, and understand how supported Adobe products and capabilities are being used across your organization.
 
 With [!UICONTROL Run and Operate] tools, you can:
 
 * **Inspect your data operations**: Get a complete view of job execution status and health across all your workflows.
 * **Troubleshoot faster**: Access detailed diagnostic information and execution history to quickly identify root causes and reduce your mean time to resolution.
 * **Prevent issues proactively**: Analyze job patterns, detect configuration problems before they cause failures, and optimize your data operations.
+* **Understand product usage**: Review usage and adoption information for supported Real-Time CDP, Adobe Journey Optimizer, and Customer Journey Analytics capabilities.
 
 ## Target audiences {#target-audiences}
 
@@ -33,13 +34,13 @@ To access Run and Operate tools, you need the applicable [access control permiss
 To access the Run and Operate tools from the Experience Platform UI:
 
 1. Log in to your Experience Platform account and select **[!UICONTROL Run and Operate]** from the left navigation.
-2. Select the tool that matches your inspection or troubleshooting needs.
+2. Select the tool that matches your goal, such as inspecting scheduled operations, reviewing configuration health, or understanding product usage.
 
 ![Experience Platform UI showing the Run and Operate left nav.](assets/overview/run-and-operate.png){zoomable="yes"}
 
 ## Available tools {#available-tools}
 
-The following tools help you inspect and optimize your data operations.
+The following tools help you inspect and optimize your data operations and understand product usage.
 
 ### Job schedules {#job-schedules}
 
@@ -81,7 +82,7 @@ Health checks currently evaluate eight categories:
 
 ### Usage Insights {#usage-insights}
 
-With [Usage Insights](usage-insights.md), you can understand how your organization uses supported Real-Time CDP, [!DNL Adobe Journey Optimizer], and [!DNL Customer Journey Analytics] capabilities, including profile, audience, destination, channel, campaign, and journey usage.
+With [Usage Insights](usage-insights/overview.md), you can understand how your organization uses supported Real-Time CDP, [!DNL Adobe Journey Optimizer], and [!DNL Customer Journey Analytics] capabilities, including profile, audience, destination, channel, campaign, and journey usage.
 
 ## Next steps {#next-steps}
 
@@ -89,7 +90,7 @@ Now that you understand the purpose and capabilities of [!UICONTROL Run and Oper
 
 * Learn how to use [health checks](health-checks/overview.md) to detect schema and identity configuration issues
 * Learn how to [inspect job schedules](job-schedules.md) for your batch ingestion and activations
-* Learn how to access and interpret [Usage Insights](usage-insights.md) for your organization's product usage
+* Learn how to access and interpret [Usage Insights](usage-insights/overview.md) for your organization's product usage
 * Learn about [batch ingestion](../ingestion/batch-ingestion/overview.md) to understand how data is ingested into Experience Platform
 * Understand how to [configure scheduled activations](../destinations/ui/activate-batch-profile-destinations.md) for batch destinations
 * Explore [dataflow monitoring](../dataflows/ui/monitor-destinations.md) for destinations
