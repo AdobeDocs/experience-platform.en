@@ -1,54 +1,94 @@
 ---
 title: Usage analysis reference
-description: Learn stuff from metrics.
+description: Learn about the charts available in each Usage Insights analysis area and the usage information they provide.
 ---
 # Usage analysis reference
 
-## Review usage data {#review-usage-data}
+Use the [!UICONTROL Usage Insights] analysis areas to understand how supported Adobe products and capabilities are being used across your organization. Usage Insights organizes this information into six analysis areas: [!UICONTROL Profile analysis], [!UICONTROL Audience analysis], [!UICONTROL Destination analysis], [!UICONTROL Channel analysis], [!UICONTROL Campaign analysis], and [!UICONTROL Journey analysis].
 
-Each analysis area focuses on a different part of your Adobe product usage. The following sections describe what each area shows.
+This reference describes the charts available in each analysis area and the usage information they provide.
 
-### Profile analysis {#profile-analysis}
+## Inspect chart data {#inspect-chart-data}
 
-[!UICONTROL Profile analysis] provides visibility into the scale, growth, and activation readiness of unified customer profiles, helping you assess how effectively profiles are being segmented and used across the platform. This area includes:
+Each chart in [!UICONTROL Usage Insights] includes information about the data it presents. Select the information icon associated with a chart to view its description.
 
-* **[!UICONTROL Total profiles]**: The total number of unified customer profiles in the platform.
-* **[!UICONTROL Total profiles by day]**: The daily count of total profiles, highlighting changes in overall profile volume over time.
-* **[!UICONTROL Profiles in all audiences]**: The daily count of profiles included in at least one audience.
-* **[!UICONTROL Profile activation rate per day]**: The daily profile activation rate.
+To inspect the data behind a chart, use **[!UICONTROL Show data source]** to view the metrics and dimensions used by the chart. For calculated metrics, you can also inspect the calculation used to derive the metric.
 
-### Audience analysis {#audience-analysis}
+## Profile analysis {#profile-analysis}
 
-[!UICONTROL Audience analysis] summarizes how audiences are created, activated, and evaluated across environments, highlighting audience adoption, effectiveness, and quality. This area includes:
+[!UICONTROL Profile analysis] provides information about profile volume, audience participation, and profile activation. The following charts are available:
 
-* **[!UICONTROL Total audiences]**: The total number of audiences.
-* **[!UICONTROL Published audiences]**: The total number of published audiences.
-* **[!UICONTROL Activated audiences]**: The total number of activated audiences.
-* **[!UICONTROL Profiles in activated audiences]**: The total number of profiles across all activated audiences.
-* **[!UICONTROL Largest audiences]** and **[!UICONTROL Smallest audiences]**: The five largest and five smallest activated audiences by profile count.
+| Chart | What it shows |
+| --- | --- |
+| **[!UICONTROL Total profiles]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Total profiles by day]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Profiles in all audiences]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Profile activation rate per day]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Audience profile counts by sandbox]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Profile activation rate by sandbox]** | <!-- TODO: Add description from the live UI. --> |
 
-### Destination analysis {#destination-analysis}
+## Audience analysis {#audience-analysis}
 
-[!UICONTROL Destination analysis] shows how destinations are configured and used for activation, helping you measure the effectiveness, maturity, and reach of audience delivery across channels and sandboxes. This area includes:
+[!UICONTROL Audience analysis] provides information about audience creation, publication, activation, evaluation, and distribution across sandboxes. The following charts are available:
 
-* **[!UICONTROL Total destinations]**: The total number of destinations.
-* **[!UICONTROL Enabled destinations]**: The total number of enabled destinations.
-* **[!UICONTROL Activated destinations]**: The total number of activated destinations.
-* **[!UICONTROL Destination count by sandbox]**: The five largest sandboxes by destination count.
-* **[!UICONTROL Enabled destinations across sandboxes]**: Destinations categorized by audience coverage across sandboxes.
+| Chart | What it shows |
+| --- | --- |
+| **[!UICONTROL Total audiences]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Published audiences]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Activated audiences]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Profiles in activated audiences]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Largest audiences]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Smallest audiences]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Audiences per sandbox]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Week over week audience count change]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Audience activation ratio by sandbox]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Activated audiences by sandbox]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Audience evaluation mode]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Audience evaluation mode by sandbox]** | <!-- TODO: Add description from the live UI. --> |
 
-<!-- TODO: Screenshots for Profile analysis, Audience analysis, and Destination analysis exist (profile-analysis-draft.png, audience-analysis-draft.png, destination-analysis-draft.png) but are not usable as captured — the source sandbox had no data (all metrics show 0), the Destination analysis panel shows broken visualizations ("Unable to render visualization"), and all three display the internal data view name "Usage Insights (customer-value-fra...)." Re-shoot with a representative, properly named sandbox before publication. -->
+## Destination analysis {#destination-analysis}
 
-### Channel, campaign, and journey analysis {#channel-campaign-journey-analysis}
+[!UICONTROL Destination analysis] provides information about destination configuration, enablement, activation, and export behavior across sandboxes. The following charts are available:
 
-[!UICONTROL Channel analysis], [!UICONTROL Campaign analysis], and [!UICONTROL Journey analysis] apply the same segment-filtering and date-range structure described above to [!DNL Adobe Journey Optimizer] channel, campaign, and journey usage, respectively.
+| Chart | What it shows |
+| --- | --- |
+| **[!UICONTROL Total destinations]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Enabled destinations]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Activated destinations]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Destination count by sandbox]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Enabled destinations across sandboxes]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Ratio of activated destinations by sandbox]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Destination export modes]** | <!-- TODO: Add description from the live UI. --> |
 
-<!-- TODO: Only panel titles are confirmed for these three areas (visible collapsed in analysis-dashbaords.png). No expanded screenshot or metric-level detail has been captured for Channel analysis, Campaign analysis, or Journey analysis. Do not add specific metric names here until detail screenshots exist. -->
+## Channel analysis {#channel-analysis}
 
-## Inspect metrics and dimensions {#inspect-metrics-and-dimensions}
+[!UICONTROL Channel analysis] provides information about message delivery across Adobe Journey Optimizer channels and sandboxes. The following charts are available:
 
-Every metric and visualization in [!UICONTROL Usage Insights] includes a description explaining what it shows. Select the **information** icon next to a panel or visualization title to view its description.
+| Chart | What it shows |
+| --- | --- |
+| **[!UICONTROL Messages delivered]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Messages delivered by channel]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Email delivery breakdown]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Non-email delivery breakdown]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Email delivery breakdown by sandbox]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Non-email delivery breakdown by sandbox]** | <!-- TODO: Add description from the live UI. --> |
 
-To inspect the data behind a visualization, expand its data source to view the underlying metrics and dimensions. If a metric is a calculated metric, its formula is also shown. For example, **[!UICONTROL Profile Activation Rate]** is calculated as **[!UICONTROL Activated Audience Profile Count]** divided by **[!UICONTROL Audience Profile Count]**.
+## Campaign analysis {#campaign-analysis}
 
-<!-- TODO: Screenshots of the data-source and metric-detail views exist (data-source-metric-inventory.png, used-metrics-and-dimensions-info-dialog.png, metric-details.png) but are not usable as captured due to the internal data view name and placeholder data described above. Re-shoot before publication. -->
+[!UICONTROL Campaign analysis] provides information about Adobe Journey Optimizer campaign activity. The following chart is available:
+
+| Chart | What it shows |
+| --- | --- |
+| **[!UICONTROL Click through rate]** | <!-- TODO: Add description from the live UI. --> |
+
+## Journey analysis {#journey-analysis}
+
+[!UICONTROL Journey analysis] provides information about Adobe Journey Optimizer journey activity. The following chart is available:
+
+| Chart | What it shows |
+| --- | --- |
+| **[!UICONTROL Journey activity]** | <!-- TODO: Add description from the live UI. --> |
+
+## Next steps {#next-steps}
+
+For information about accessing, enabling, and configuring Usage Insights, see the [Usage Insights overview](overview.md).
