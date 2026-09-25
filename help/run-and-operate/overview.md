@@ -26,7 +26,7 @@ With [!UICONTROL Run and Operate] tools, you can:
 
 ## Prerequisites {#prerequisites}
 
-To access Run and Operate tools, you need the **[!UICONTROL View Job Schedules]** and **[!UICONTROL View Profile Management]** [access control permissions](/help/access-control/home.md#permissions). Contact your system administrator to ensure you have the appropriate permissions.
+To access Run and Operate tools, you need the applicable [access control permissions](/help/access-control/home.md#permissions) for each tool: **[!UICONTROL View Job Schedules]** and **[!UICONTROL View Profile Management]** for Job Schedules and Health Checks, and **[!UICONTROL View Usage Insights]** for Usage Insights. Contact your system administrator to ensure you have the appropriate permissions.
 
 ## Getting started {#getting-started}
 
@@ -79,12 +79,17 @@ Health checks currently evaluate eight categories:
 * **[Merge policies](health-checks/merge-policies.md)**: Identify merge policy naming and definition issues.
 * **[Query Service](health-checks/query-service.md)**: Detect scheduled query failures and performance degradation.
 
+### Usage Insights {#usage-insights}
+
+With [Usage Insights](usage-insights.md), you can understand how your organization uses supported Real-Time CDP, [!DNL Adobe Journey Optimizer], and [!DNL Customer Journey Analytics] capabilities, including profile, audience, destination, channel, campaign, and journey usage.
+
 ## Next steps {#next-steps}
 
 Now that you understand the purpose and capabilities of [!UICONTROL Run and Operate] tools, explore the following resources to deepen your knowledge:
 
 * Learn how to use [health checks](health-checks/overview.md) to detect schema and identity configuration issues
 * Learn how to [inspect job schedules](job-schedules.md) for your batch ingestion and activations
+* Learn how to access and interpret [Usage Insights](usage-insights.md) for your organization's product usage
 * Learn about [batch ingestion](../ingestion/batch-ingestion/overview.md) to understand how data is ingested into Experience Platform
 * Understand how to [configure scheduled activations](../destinations/ui/activate-batch-profile-destinations.md) for batch destinations
 * Explore [dataflow monitoring](../dataflows/ui/monitor-destinations.md) for destinations
