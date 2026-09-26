@@ -74,16 +74,20 @@ The following charts are available:
 
 ## Channel analysis {#channel-analysis}
 
-[!UICONTROL Channel analysis] provides information about message delivery across Adobe Journey Optimizer channels and sandboxes. The following charts are available:
+[!UICONTROL Channel analysis] provides an overview of outbound messaging activity across Adobe Journey Optimizer-managed channels, including delivery activity across email, SMS, in-app, push, and other supported channels.
+
+![The Usage Insights Channel analysis section showing delivered-message metrics and email and non-email delivery breakdowns across channels and sandboxes.](channel-analysis.png)
+
+The following charts are available:
 
 | Chart | What it shows |
 | --- | --- |
-| **[!UICONTROL Messages delivered]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Messages delivered by channel]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Email delivery breakdown]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Non-email delivery breakdown]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Email delivery breakdown by sandbox]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Non-email delivery breakdown by sandbox]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Messages delivered]** | The total number of messages delivered across all channels. |
+| **[!UICONTROL Messages delivered by channel]** | A breakdown of delivered messages across different channels. |
+| **[!UICONTROL Email delivery breakdown]** | How recipients respond to delivered email messages, including engagement actions and opt-outs. |
+| **[!UICONTROL Non-email delivery breakdown]** | How recipients respond to delivered non-email messages. |
+| **[!UICONTROL Email delivery breakdown by sandbox]** | The five largest sandboxes by email activity. |
+| **[!UICONTROL Non-email delivery breakdown by sandbox]** | The five largest sandboxes by non-email activity. |
 
 ## Campaign analysis {#campaign-analysis}
 
