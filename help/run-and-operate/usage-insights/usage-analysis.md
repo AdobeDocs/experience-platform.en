@@ -6,13 +6,31 @@ description: Learn about the charts available in each Usage Insights analysis ar
 
 Use the [!UICONTROL Usage Insights] analysis areas to understand how supported Adobe products and capabilities are being used across your organization. Usage Insights organizes this information into six analysis areas: [!UICONTROL Profile analysis], [!UICONTROL Audience analysis], [!UICONTROL Destination analysis], [!UICONTROL Channel analysis], [!UICONTROL Campaign analysis], and [!UICONTROL Journey analysis].
 
-This reference describes the charts available in each analysis area and the usage information they provide.
+This reference describes the charts available in each analysis area and the usage information they provide. Before reviewing individual charts, you can adjust the analysis period and inspect the sandbox segment used to scope the displayed data.
 
-## Inspect chart data {#inspect-chart-data}
+## Configure analysis settings {#configure-analysis-settings}
 
-Each chart in [!UICONTROL Usage Insights] includes information about the data it presents. Select the information icon associated with a chart to view its description.
+Use the following controls to adjust how Usage Insights data is displayed and to understand the segment applied to each analysis area.
 
-To inspect the data behind a chart, use **[!UICONTROL Show data source]** to view the metrics and dimensions used by the chart. For calculated metrics, you can also inspect the calculation used to derive the metric.
+### Configure the analysis period {#configure-analysis-period}
+
+Use the date range control to change the period displayed in the Usage Insights charts. You can select a date range directly from the calendar or choose an available preset.
+
+For more control over the date range, expand the advanced settings. You can configure the start and end times and use rolling dates so that the selected period moves forward automatically over time.
+
+Select **[!UICONTROL Apply]** to update the current panel, or select **[!UICONTROL Apply to all panels]** to use the same date range across the Usage Insights analysis areas.
+
+![The Usage Insights date range dialog showing calendar selection, preset options, start and end times, rolling date settings, and controls to apply the range to the current or all panels.](../assets/usage-insights/lookback-period-dialog.png){zoomable="yes"}
+
+### Understand the sandbox segment {#sandbox-segment}
+
+Usage Insights uses a sandbox segment to scope the data shown in each analysis area. The **[!UICONTROL Production Sandboxes]** segment includes sandboxes where the sandbox type is `production`.
+
+Select the information icon next to the segment to view its definition and related component information. The details panel shows the segment description and commonly associated dimensions and metrics, such as day, sandbox name, profile count, and audience count.
+
+![The Production Sandboxes segment details showing its production sandbox definition, description, and related dimensions and metrics.](../assets/usage-insights/sandbox-information-dialog.png){zoomable="yes"}
+
+The segment details are informational and do not change the sandbox configuration used by Usage Insights. To change where Usage Insights collects data, use **[!UICONTROL Data Settings]** from the Usage Insights dashboard.
 
 ## Profile analysis {#profile-analysis}
 
