@@ -91,19 +91,27 @@ The following charts are available:
 
 ## Campaign analysis {#campaign-analysis}
 
-[!UICONTROL Campaign analysis] provides information about Adobe Journey Optimizer campaign activity. The following chart is available:
+[!UICONTROL Campaign analysis] measures campaign activity and engagement.
+
+![The Usage Insights Campaign analysis section showing the Click through rate chart for campaign engagement.](campaign-analysis.png)
+
+The following chart is available:
 
 | Chart | What it shows |
 | --- | --- |
-| **[!UICONTROL Click through rate]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Click through rate]** | The top ten campaigns based on click count. |
 
 ## Journey analysis {#journey-analysis}
 
-[!UICONTROL Journey analysis] provides information about Adobe Journey Optimizer journey activity. The following chart is available:
+[!UICONTROL Journey analysis] monitors how customers move through Adobe Journey Optimizer journeys, from entry to exit.
+
+![The Usage Insights Journey analysis section showing the Journey activity chart for profile entry and exit counts across journeys.](journey-analysis.png)
+
+The following chart is available:
 
 | Chart | What it shows |
 | --- | --- |
-| **[!UICONTROL Journey activity]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Journey activity]** | Profile entry and exit counts across the top five journeys. |
 
 ## Next steps {#next-steps}
 
