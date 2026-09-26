@@ -16,16 +16,20 @@ To inspect the data behind a chart, use **[!UICONTROL Show data source]** to vie
 
 ## Profile analysis {#profile-analysis}
 
-[!UICONTROL Profile analysis] provides information about profile volume, audience participation, and profile activation. The following charts are available:
+[!UICONTROL Profile analysis] provides visibility into the scale, growth, and activation readiness of unified customer profiles.
+
+![The Usage Insights Profile analysis section showing six charts for profile counts and activation metrics across the selected date range and sandboxes.](profile-analysis.png)
+
+The following charts are available:
 
 | Chart | What it shows |
 | --- | --- |
-| **[!UICONTROL Total profiles]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Total profiles by day]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Profiles in all audiences]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Profile activation rate per day]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Audience profile counts by sandbox]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Profile activation rate by sandbox]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Total profiles]** | The total number of unified customer profiles in the platform. |
+| **[!UICONTROL Total profiles by day]** | The daily count of total profiles, highlighting changes in overall profile volume over time. |
+| **[!UICONTROL Profiles in all audiences]** | Daily profile activation counts, showing total profiles alongside profiles activated to audiences. |
+| **[!UICONTROL Profile activation rate per day]** | Daily profile activation rates over the displayed date range. |
+| **[!UICONTROL Audience profile counts by sandbox]** | The top five sandboxes ranked by profile audience count. |
+| **[!UICONTROL Profile activation rate by sandbox]** | The top five sandboxes ranked by profile activation rate, showing where profile activation is strongest across environments. |
 
 ## Audience analysis {#audience-analysis}
 
