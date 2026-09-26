@@ -70,7 +70,7 @@ For definitions and details about the charts available in each analysis area, se
 
 ## Understand data freshness and retention {#data-freshness-and-retention}
 
-[!UICONTROL Usage Insights] collects usage data nightly. The dashboard displays a rolling window of the most recent 7 days and updates automatically each day.
+[!UICONTROL Usage Insights] collects usage data nightly. By default, the dashboard displays the most recent seven days of data and updates automatically each day. You can adjust the analysis period to view other dates within the available retention window.
 
 Initial data typically becomes available approximately 24 hours after you enable [!UICONTROL Usage Insights]. You can change how long collected data is retained by using the retention settings described in [Enable and configure Usage Insights](#enable-and-configure).
 

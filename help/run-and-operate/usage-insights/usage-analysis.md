@@ -26,7 +26,7 @@ Select **[!UICONTROL Apply]** to update the current panel, or select **[!UICONTR
 
 Usage Insights uses a sandbox segment to scope the data shown in each analysis area. The **[!UICONTROL Production Sandboxes]** segment includes sandboxes where the sandbox type is `production`.
 
-Select the information icon next to the segment to view its definition and related component information. The details panel shows the segment description and commonly associated dimensions and metrics, such as day, sandbox name, profile count, and audience count.
+Select the information icon next to the segment to view its definition and related component information. The details panel shows the segment description and the components that are frequently used with the segment, such as day, sandbox name, profile count, and audience count.
 
 ![The Production Sandboxes segment details showing its production sandbox definition, description, and related dimensions and metrics.](../assets/usage-insights/sandbox-information-dialog.png){zoomable="yes"}
 
@@ -34,7 +34,7 @@ The segment details are informational and do not change the sandbox configuratio
 
 ## Profile analysis {#profile-analysis}
 
-[!UICONTROL Profile analysis] provides visibility into the scale, growth, and activation readiness of unified customer profiles.
+[!UICONTROL Profile analysis] provides visibility into the scale, growth, and activation readiness of unified customer profiles
 
 ![The Usage Insights Profile analysis section showing six charts for profile counts and activation metrics across the selected date range and sandboxes.](../assets/usage-insights/profile-analysis.png)
 
@@ -44,7 +44,7 @@ The following charts are available:
 | --- | --- |
 | **[!UICONTROL Total profiles]** | The total number of unified customer profiles in the platform. |
 | **[!UICONTROL Total profiles by day]** | The daily count of total profiles, highlighting changes in overall profile volume over time. |
-| **[!UICONTROL Profiles in all audiences]** | Daily profile activation counts, showing total profiles alongside profiles activated to audiences. |
+| **[!UICONTROL Profiles in all audiences]** | Daily profile activation counts, showing total profiles alongside profiles in activated audiences. |
 | **[!UICONTROL Profile activation rate per day]** | Daily profile activation rates over the displayed date range. |
 | **[!UICONTROL Audience profile counts by sandbox]** | The top five sandboxes ranked by profile audience count. |
 | **[!UICONTROL Profile activation rate by sandbox]** | The top five sandboxes ranked by profile activation rate, showing where profile activation is strongest across environments. |
