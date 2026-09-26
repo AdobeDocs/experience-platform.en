@@ -56,17 +56,21 @@ The following charts are available:
 
 ## Destination analysis {#destination-analysis}
 
-[!UICONTROL Destination analysis] provides information about destination configuration, enablement, activation, and export behavior across sandboxes. The following charts are available:
+[!UICONTROL Destination analysis] shows how destinations are configured and used for activation, helping you understand the reach and maturity of audience delivery across sandboxes.
+
+![The Usage Insights Destination analysis section showing destination counts, activation, sandbox distribution, and export modes.](destination-analysis.png)
+
+The following charts are available:
 
 | Chart | What it shows |
 | --- | --- |
-| **[!UICONTROL Total destinations]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Enabled destinations]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Activated destinations]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Destination count by sandbox]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Enabled destinations across sandboxes]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Ratio of activated destinations by sandbox]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Destination export modes]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Total destinations]** | The total number of destinations. |
+| **[!UICONTROL Enabled destinations]** | The total number of enabled destinations. |
+| **[!UICONTROL Activated destinations]** | The total number of activated destinations. |
+| **[!UICONTROL Destination count by sandbox]** | The five largest sandboxes by destination count. |
+| **[!UICONTROL Enabled destinations across sandboxes]** | Destinations categorized by audience coverage across sandboxes. |
+| **[!UICONTROL Ratio of activated destinations by sandbox]** | The rate of activated destinations across the top five sandboxes. |
+| **[!UICONTROL Destination export modes]** | The five largest export modes by destination count. |
 
 ## Channel analysis {#channel-analysis}
 
