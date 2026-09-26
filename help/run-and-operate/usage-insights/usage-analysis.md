@@ -33,22 +33,26 @@ The following charts are available:
 
 ## Audience analysis {#audience-analysis}
 
-[!UICONTROL Audience analysis] provides information about audience creation, publication, activation, evaluation, and distribution across sandboxes. The following charts are available:
+[!UICONTROL Audience analysis] summarizes how audiences are created, activated, and evaluated across environments, highlighting audience adoption, effectiveness, and quality.
+
+![The Usage Insights Audience analysis section showing audience counts, activation, evaluation modes, and sandbox-level analysis.](audience-analysis.png)
+
+The following charts are available:
 
 | Chart | What it shows |
 | --- | --- |
-| **[!UICONTROL Total audiences]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Published audiences]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Activated audiences]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Profiles in activated audiences]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Largest audiences]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Smallest audiences]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Audiences per sandbox]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Week over week audience count change]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Audience activation ratio by sandbox]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Activated audiences by sandbox]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Audience evaluation mode]** | <!-- TODO: Add description from the live UI. --> |
-| **[!UICONTROL Audience evaluation mode by sandbox]** | <!-- TODO: Add description from the live UI. --> |
+| **[!UICONTROL Total audiences]** | The total number of audiences. |
+| **[!UICONTROL Published audiences]** | The total number of published audiences. |
+| **[!UICONTROL Activated audiences]** | The total number of activated audiences. |
+| **[!UICONTROL Profiles in activated audiences]** | The total number of profiles across all activated audiences. |
+| **[!UICONTROL Largest audiences]** | The five largest activated audiences by profile count. |
+| **[!UICONTROL Smallest audiences]** | The five smallest activated audiences by profile count. |
+| **[!UICONTROL Audiences per sandbox]** | The five largest sandboxes based on audience count. |
+| **[!UICONTROL Week over week audience count change]** | Weekly audience count trends compared with the previous seven-day period. |
+| **[!UICONTROL Audience activation ratio by sandbox]** | The rate of activated audiences across the top five sandboxes. |
+| **[!UICONTROL Activated audiences by sandbox]** | Audiences categorized by destination coverage across sandboxes. |
+| **[!UICONTROL Audience evaluation mode]** | Audience counts grouped by evaluation mode. |
+| **[!UICONTROL Audience evaluation mode by sandbox]** | Evaluation modes by audience count across sandboxes. |
 
 ## Destination analysis {#destination-analysis}
 
