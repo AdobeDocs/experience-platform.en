@@ -93,6 +93,8 @@ Use the **[!UICONTROL Mapping]** step to map the [!DNL Demandbase] source fields
 * `accountOrganization.website`, `accountOrganization.industry`
 * `accountPhysicalAddress.city`, `accountPhysicalAddress.country`, `accountPhysicalAddress.stateProvince`, `accountPhysicalAddress.postalCode`
 
+![The mapping interface showing Demandbase source fields mapped to B2B Account target fields.](../../../../images/tutorials/create/demandbase-b2b/mapping.png)
+
 ### Build a composite identity key {#composite-key}
 
 The `accountKey.sourceKey` identity field must uniquely represent each [!DNL Demandbase] account. Rather than mapping it to a single raw field, use [Data Prep's calculated field editor](../../../../../data-prep/ui/mapping.md#calculated-fields) to build a composite key that concatenates the source account ID, the source type, and your [!DNL Demandbase] instance ID.
