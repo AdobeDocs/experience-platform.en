@@ -142,9 +142,9 @@ Use the following table to troubleshoot common issues with the [!DNL TikTok Ads]
 
 ## Next steps
 
-After you confirm that you have an eligible [!DNL TikTok] advertiser account with existing campaigns and ads, continue by connecting [!DNL TikTok Ads] to Experience Platform using the UI.
+After you confirm that you have an eligible [!DNL TikTok] advertiser account with existing campaigns and ads, continue by [connecting TikTok Ads to Experience Platform using the UI](../../tutorials/ui/create/advertising/tiktok-ads.md).
 
-<!-- TODO(satkapoo/eng): Add the UI tutorial link once the account-picker/Explore-step UI design is locked (still pending sign-off per the launch tracker as of 2026-08-31). Screenshots and exact step-by-step UI text can't be finalized until then. -->
+<!-- TODO(satkapoo/eng): The linked tutorial is a draft based on the eng wiki, not a confirmed UI walkthrough. Update this note once the account-picker/Explore-step UI design is locked (still pending sign-off per the launch tracker as of 2026-08-31) and the tutorial has real screenshots. -->
 
 ## More help on this topic
 

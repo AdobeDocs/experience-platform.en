@@ -257,6 +257,7 @@ role: Developer
       - {hide-from-toc} [Google Ads (V2)](tutorials/ui/create/advertising/google-ads.md)
       - [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
       - {hide-from-toc} [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
+      - {hide-from-toc} [TikTok Ads](tutorials/ui/create/advertising/tiktok-ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
