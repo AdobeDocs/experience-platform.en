@@ -35,6 +35,7 @@ role: Developer
     - {hide-from-toc} [Google Ads (V2) connector](connectors/advertising/google-ads.md)
     - [Meta Ads connector](connectors/advertising/meta-ads.md)
     - {hide-from-toc} [Pinterest Ads](connectors/advertising/pinterest-ads.md)
+    - {hide-from-toc} [TikTok Ads](connectors/advertising/tiktok-ads.md)
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
     - [Pendo](connectors/analytics/pendo-webhook.md)
