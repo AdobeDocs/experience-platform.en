@@ -41,7 +41,7 @@ Before you connect [!DNL TikTok Ads] to Experience Platform, ensure that you hav
 
 The [!DNL TikTok Ads] source assigns a target dataset, schema, and field mapping automatically. You do not select a target dataset or map fields yourself when you create the dataflow.
 
-The connector provisions one Paid Media dataset per entity type: account, campaign, ad group, ad, asset, and summary metrics. These are the same canonical schemas that the [!DNL Meta Ads](meta-ads.md) and [!DNL Google Ads](google-ads.md) sources already populate. Read the following section for the core identity fields that the connector maps for each entity.
+The connector provisions one Paid Media dataset per entity type: account, campaign, ad group, ad, asset, and summary metrics. These are the same canonical schemas that the [Meta Ads](meta-ads.md) and [Google Ads](google-ads.md) sources already populate. Read the following section for the core identity fields that the connector maps for each entity.
 
 ## [!DNL TikTok Ads] XDM schema
 
@@ -117,11 +117,13 @@ Each metrics record maps to the identifier of the entity that it measures.
 | Ad | `paidMedia.adID` |
 | Asset | `paidMedia.assetID` |
 
-<!-- TODO(Product): Confirm before publishing whether the following remain out of v1, so this page doesn't need a caveat or correction later:
-     - Reach & Frequency (R&F) buying
-     - Smart+ (automated) campaigns
-     - Catalog / Shop / GMV Max campaigns and metrics
-     Per the XDM mapping wiki, all three are proposed for phase 2 but still marked OPEN, pending Product confirmation. -->
+<!--
+TODO(Product): Confirm before publishing whether the following remain out of v1, so this page doesn't need a caveat or correction later:
+- Reach & Frequency (R&F) buying
+- Smart+ (automated) campaigns
+- Catalog / Shop / GMV Max campaigns and metrics
+Per the XDM mapping wiki, all three are proposed for phase 2 but still marked OPEN, pending Product confirmation.
+-->
 
 ## Troubleshooting
 
