@@ -1,9 +1,14 @@
 ---
 title: Connect Snapchat Ads to Experience Platform UI
 description: Learn how to connect your Snapchat Ads account to Adobe Experience Platform in the UI.
+badge: Beta
 ---
 
 # Connect [!DNL Snapchat Ads] to Experience Platform using the UI
+
+>[!NOTE]
+>
+>The [!DNL Snapchat Ads] source is in beta. Read the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Learn how to connect your [!DNL Snapchat] ad account to Adobe Experience Platform using the Sources workspace. The [!DNL Snapchat Ads] source retrieves campaign, ad, and performance data and maps it to Experience Data Model (XDM) compatible datasets.
 

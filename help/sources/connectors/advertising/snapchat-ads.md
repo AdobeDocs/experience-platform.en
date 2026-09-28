@@ -1,9 +1,14 @@
 ---
 title: Snapchat Ads Source Connector
 description: Learn how to connect Snapchat Ads to Adobe Experience Platform to ingest paid media campaign, ad, and performance data.
+badge: Beta
 ---
 
 # [!DNL Snapchat Ads]
+
+>[!NOTE]
+>
+>The [!DNL Snapchat Ads] source is in beta. Read the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 The [!DNL Snapchat Ads] source is an Adobe Experience Platform paid media connector. Use it to connect your [!DNL Snapchat] ad accounts and ingest campaign, ad, and performance data, such as engagement metrics, into Experience Platform.
 
