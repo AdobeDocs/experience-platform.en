@@ -16,17 +16,17 @@ To understand how your organization uses supported Adobe products and capabiliti
 * Real-Time CDP Ultimate (B2C, B2B, or B2P)
 * Adobe Journey Optimizer B2C
 
-To view the [!UICONTROL Usage Insights] dashboard, you need the **[!UICONTROL View Usage Insights]** [access control permission](/help/access-control/home.md#permissions). Contact your system administrator to ensure that you have the appropriate permissions and access to a sandbox where Usage Insights is configured.
+To view the [!UICONTROL Usage Insights] dashboard, you need the **[!UICONTROL View Usage Insights]** [access control permission](/help/access-control/home.md#permissions). Contact your system administrator to ensure that you have the appropriate permissions and access to the sandbox where Usage Insights data is stored.
 
 ## Enable and configure Usage Insights {#enable-and-configure}
 
-Before your organization can view usage data, a system administrator must enable [!UICONTROL Usage Insights] and configure at least one sandbox for data collection.
+Before your organization can view usage data, a system administrator must enable [!UICONTROL Usage Insights] and select a sandbox where Usage Insights data is stored.
 
 To enable [!UICONTROL Usage Insights]:
 
 1. Select **[!UICONTROL Run and Operate]** from the left navigation, then select **[!UICONTROL Usage Insights]**.
 1. Turn on **[!UICONTROL Enable usage insights]**.
-1. From the **[!UICONTROL AEP Sandbox]** dropdown, select the sandbox where you want [!UICONTROL Usage Insights] to collect data.
+1. From the **[!UICONTROL AEP Sandbox]** dropdown, select the sandbox where you want [!UICONTROL Usage Insights] data to be stored.
 1. Optionally, turn on **[!UICONTROL Override default retention window]** and use **[!UICONTROL Select number of months]** to set a custom retention period. By default, [!UICONTROL Usage Insights] retains data for six months. Select **[!UICONTROL Save]** to update your settings.
 1. Select **[!UICONTROL Dashboard]**.
 
@@ -36,11 +36,11 @@ To enable [!UICONTROL Usage Insights]:
 >
 >Data collection begins when you enable [!UICONTROL Usage Insights]. Initial data typically becomes available within approximately 24 hours.
 
-You can configure [!UICONTROL Usage Insights] for multiple sandboxes in your organization.
+[!UICONTROL Usage Insights] reports usage across your organization's sandboxes, while the Usage Insights data is stored in the selected sandbox.
 
-### Change the configured sandbox {#change-sandbox}
+### Change the data storage sandbox {#change-sandbox}
 
-To change the sandbox configuration, select **[!UICONTROL Data Settings]** from the [!UICONTROL Usage Insights] dashboard. From the **[!UICONTROL AEP Sandbox]** dropdown, select the sandbox that you want to configure, make the required changes, and select **[!UICONTROL Save]**.
+To change the sandbox where Usage Insights data is stored, select **[!UICONTROL Data Settings]** from the [!UICONTROL Usage Insights] dashboard. From the **[!UICONTROL AEP Sandbox]** dropdown, select the new storage sandbox, make any other required changes, and select **[!UICONTROL Save]**.
 
 >[!IMPORTANT]
 >
@@ -52,7 +52,7 @@ To change the sandbox configuration, select **[!UICONTROL Data Settings]** from 
 
 To open the [!UICONTROL Usage Insights] dashboard, select **[!UICONTROL Run and Operate]** from the Experience Platform left navigation, then select **[!UICONTROL Usage Insights]**.
 
-To view Usage Insights data, [!UICONTROL Usage Insights] must be configured for your currently selected sandbox and you must have access to that sandbox. If Usage Insights is not available for the current sandbox, you are prompted to switch to a sandbox where it is configured.
+You can access the [!UICONTROL Usage Insights] dashboard from any sandbox. To view Usage Insights data, you must have the **[!UICONTROL View Usage Insights]** permission and access to the sandbox where the Usage Insights data is stored.
 
 The dashboard organizes usage data into six analysis areas: [!UICONTROL Profile analysis], [!UICONTROL Audience analysis], [!UICONTROL Destination analysis], [!UICONTROL Channel analysis], [!UICONTROL Campaign analysis], and [!UICONTROL Journey analysis].
 
