@@ -122,28 +122,6 @@ In addition to audience compositions and segment definitions, you can use Adobe 
 
 ![A list of audiences created in Federated Audience Composition for your organization.](../images/ui/overview/federated-audience-composition.png)
 
-## Batch segmentation {#batch-segmentation}
-
-Batch segmentation is a segmentation evaluation method that you can use to move profile data all at once to create your corresponding audiences. You can use batch segmentation to create detailed and rich audiences to target large groups of profiles.
-
-For more information on batch segmentation, read the [batch segmentation overview](/help/segmentation/methods/batch-segmentation.md).
-
-## Streaming segmentation {#streaming-segmentation}
-
-Streaming segmentation is the ability to do segmentation on [!DNL Experience Platform] in near real-time, while focusing on data richness. With streaming segmentation, qualification for segmentation now happens as data lands into [!DNL Experience Platform], alleviating the need to schedule and run segmentation jobs.
-
-More information about streaming segmentation can be found in the [streaming segmentation user guide](../methods/streaming-segmentation.md).
-
->[!NOTE]
->
->In order for streaming segmentation to work, you will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the streaming segmentation section in this user guide](#scheduled-segmentation).
-
-## Edge segmentation {#edge-segmentation}
-
-Edge segmentation is the ability to evaluate audiences in Experience Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
-
-More information about edge segmentation can be found in the [edge segmentation UI guide](../methods/edge-segmentation.md).
-
 ## Evaluation {#evaluation}
 
 The **[!UICONTROL Evaluation]** tab lists the schedules available for segmentation in your organization, including both the system-created schedule and user-created schedules.
@@ -195,7 +173,7 @@ On this page, you can select which audiences you want to be activated by the sch
 
 ![The Schedule button is highlighted within the Schedule audiences popover.](/help/segmentation/images/ui/overview/select-schedule.png)
 
-For more detailed information on using schedules, read the [flexible batch schedules guide](/help/segmentation/tutorials/flexible-batch-schedules.md).
+For more detailed information on using schedules, read the [flexible batch schedules guide](/help/segmentation/methods/flexible-batch-schedules.md).
 
 ### Profile snapshot {#profile-snapshot}
 
