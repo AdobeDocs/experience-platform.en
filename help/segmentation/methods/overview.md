@@ -35,7 +35,7 @@ Batch segmentation is a segmentation evaluation method that you can use to move 
 
 For more information on batch segmentation, please read the [batch segmentation overview](./batch-segmentation.md).
 
-### Flexible batch schedules
+### [!BADGE Limited Availability]{type=Informative} Flexible batch schedules {#flexible-batch-schedules}
 
 Flexible batch schedules lets you add audiences to your own custom schedules, which you can control when they are evaluated. For more information on flexible batch schedules, read the [flexible batch schedules guide](/help/segmentation/methods/flexible-batch-schedules.md).
 
