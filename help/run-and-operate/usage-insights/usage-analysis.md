@@ -4,15 +4,13 @@ description: Learn about the charts available in each Usage Insights analysis ar
 ---
 # Usage analysis reference
 
-Use the [!UICONTROL Usage Insights] analysis areas to understand how supported Adobe products and capabilities are being used across your organization. Usage Insights organizes this information into six analysis areas: [!UICONTROL Profile analysis], [!UICONTROL Audience analysis], [!UICONTROL Destination analysis], [!UICONTROL Channel analysis], [!UICONTROL Campaign analysis], and [!UICONTROL Journey analysis].
-
-This reference describes the charts available in each analysis area and the usage information they provide. Before reviewing individual charts, you can adjust the analysis period and inspect the sandbox segment used to scope the displayed data.
+Use the [!UICONTROL Usage Insights] analysis areas to understand how supported Adobe products and capabilities are being used across your organization. [!UICONTROL Usage Insights] organizes usage data into six analysis areas: [!UICONTROL Profile analysis], [!UICONTROL Audience analysis], [!UICONTROL Destination analysis], [!UICONTROL Channel analysis], [!UICONTROL Campaign analysis], and [!UICONTROL Journey analysis]. This reference describes the charts available in each area and the usage information they provide.
 
 ## Configure analysis settings {#configure-analysis-settings}
 
-Use the following controls to adjust how Usage Insights data is displayed and to understand the segment applied to each analysis area.
+Use these settings to control the displayed date range and inspect the applied sandbox segment.
 
-### Configure the analysis period {#configure-analysis-period}
+### Set the analysis period {#configure-analysis-period}
 
 To change the period displayed in the Usage Insights charts, select the date range in any analysis area. In the date range dialog, select dates from the calendar or choose an available preset.
 
@@ -26,19 +24,17 @@ Select **[!UICONTROL Apply]** to update the current panel, or select **[!UICONTR
 
 Usage Insights uses a sandbox segment to scope the data shown in each analysis area. The **[!UICONTROL Production Sandboxes]** segment includes sandboxes where the sandbox type is `production`.
 
-Select the information icon next to the segment to view its definition and related component information. The details panel shows the segment description and the components that are frequently used with the segment, such as day, sandbox name, profile count, and audience count.
+Select the information icon (![The information icon.](../../images/icons/info.png)) next to the segment to view its definition and related component information. The details panel shows the segment description and the components that are frequently used with the segment, such as day, sandbox name, profile count, and audience count.
 
 ![The Production Sandboxes segment details showing its production sandbox definition, description, and related dimensions and metrics.](../assets/usage-insights/sandbox-information-dialog.png){zoomable="yes"}
 
-The segment details are informational and do not change the sandbox configuration used by Usage Insights. To change where Usage Insights collects data, use **[!UICONTROL Data Settings]** from the Usage Insights dashboard.
+The segment details are informational and do not change the sandbox configuration used by Usage Insights. To change where Usage Insights data is stored, use **[!UICONTROL Data Settings]** from the Usage Insights dashboard.
 
 ## Profile analysis {#profile-analysis}
 
-[!UICONTROL Profile analysis] provides visibility into the scale, growth, and activation readiness of unified customer profiles
+[!UICONTROL Profile analysis] provides visibility into the scale, growth, and activation readiness of unified customer profiles.
 
-![The Usage Insights Profile analysis section showing six charts for profile counts and activation metrics across the selected date range and sandboxes.](../assets/usage-insights/profile-analysis.png)
-
-The following charts are available:
+![The Usage Insights Profile analysis section showing profile counts and activation metrics across the selected date range.](../assets/usage-insights/profile-analysis.png)
 
 | Chart | What it shows |
 | --- | --- |
@@ -53,9 +49,7 @@ The following charts are available:
 
 [!UICONTROL Audience analysis] summarizes how audiences are created, activated, and evaluated across environments, highlighting audience adoption, effectiveness, and quality.
 
-![The Usage Insights Audience analysis section showing audience counts, activation, evaluation modes, and sandbox-level analysis.](../assets/usage-insights/audience-analysis.png)
-
-The following charts are available:
+![The Usage Insights Audience analysis section showing audience counts, activation metrics, audience counts by sandbox, and week-over-week audience change.](../assets/usage-insights/audience-analysis.png)
 
 | Chart | What it shows |
 | --- | --- |
@@ -78,8 +72,6 @@ The following charts are available:
 
 ![The Usage Insights Destination analysis section showing destination counts, activation, sandbox distribution, and export modes.](../assets/usage-insights/destination-analysis.png)
 
-The following charts are available:
-
 | Chart | What it shows |
 | --- | --- |
 | **[!UICONTROL Total destinations]** | The total number of destinations. |
@@ -96,8 +88,6 @@ The following charts are available:
 
 ![The Usage Insights Channel analysis section showing delivered-message metrics and email and non-email delivery breakdowns across channels and sandboxes.](../assets/usage-insights/channel-analysis.png)
 
-The following charts are available:
-
 | Chart | What it shows |
 | --- | --- |
 | **[!UICONTROL Messages delivered]** | The total number of messages delivered across all channels. |
@@ -113,8 +103,6 @@ The following charts are available:
 
 ![The Usage Insights Campaign analysis section showing the Click through rate chart for campaign engagement.](../assets/usage-insights/campaign-analysis.png)
 
-The following chart is available:
-
 | Chart | What it shows |
 | --- | --- |
 | **[!UICONTROL Click through rate]** | The top ten campaigns based on click count. |
@@ -125,12 +113,10 @@ The following chart is available:
 
 ![The Usage Insights Journey analysis section showing the Journey activity chart for profile entry and exit counts across journeys.](../assets/usage-insights/journey-analysis.png)
 
-The following chart is available:
-
 | Chart | What it shows |
 | --- | --- |
 | **[!UICONTROL Journey activity]** | Profile entry and exit counts across the top five journeys. |
 
 ## Related documentation {#related-documentation}
 
-To understand how your organization uses Customer Journey Analytics itself, see the [Customer Journey Analytics Product usage overview](https://experienceleague.adobe.com/en/docs/analytics-platform/using/tools/product-usage/usage-overview). Product usage provides analytics on Customer Journey Analytics usage and is separate from the Usage Insights analysis areas described in this guide.
+For analytics about how your organization uses Customer Journey Analytics, see the [Customer Journey Analytics Product usage overview](https://experienceleague.adobe.com/en/docs/analytics-platform/using/tools/product-usage/usage-overview). Customer Journey Analytics Product usage is separate from the Usage Insights analysis areas described in this guide.
