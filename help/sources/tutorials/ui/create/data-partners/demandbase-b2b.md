@@ -41,7 +41,8 @@ In the Experience Platform UI, select **[!UICONTROL Sources]** from the left nav
 
 Select the **[!DNL Demandbase]** source card and then select **[!UICONTROL Add data]**.
 
-<!-- TODO: Add catalog.png once the source card name is confirmed by PM and a new screenshot is captured.
+<!--
+TODO: Add catalog.png once the source card name is confirmed by PM and a new screenshot is captured.
 ![The sources catalog with the "Demandbase" card selected.](../../../../images/tutorials/create/demandbase-b2b/catalog.png)
 -->
 
