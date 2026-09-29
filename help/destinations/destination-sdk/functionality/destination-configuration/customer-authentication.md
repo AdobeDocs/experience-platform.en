@@ -100,6 +100,62 @@ To set up basic authentication for your destination, configure the `customerAuth
 ]
 ```
 
+### Customize the Basic authentication header {#basic-override}
+
+By default, Experience Platform constructs a Base64-encoded `username:password` string and sends it as the `Authorization` header value. Some destinations, such as Oracle Eloqua, require the `Authorization` header to be constructed explicitly rather than relying on the default behavior.
+
+To override the default Basic authentication header, add a custom `Authorization` header in both your destination server configuration and your audience metadata template. Use the [Pebble templating language](/help/destinations/destination-sdk/functionality/destination-server/message-format.md#using-templating) to construct the Base64-encoded value from the credentials the user provides.
+
+**Destination server (`httpTemplate.headers`)**
+
+In your destination server configuration, add the `headers` array under the `httpTemplate` section, alongside your existing `httpMethod` and other template values:
+
+```json
+{
+  "httpTemplate": {
+    "httpMethod": "POST",
+    "headers": [
+      {
+        "header": "Authorization",
+        "value": {
+          "templatingStrategy": "PEBBLE_V1",
+          "value": "Basic {{ (authData.username + ':' + authData.password) | base64encode }}"
+        }
+      }
+    ]
+  }
+}
+```
+
+For the complete destination server payload structure, including the `url` and other required fields, see [Create a destination server](../../authoring-api/destination-server/create-destination-server.md).
+
+**Audience metadata template (`metadataTemplate.create.headers`, `metadataTemplate.update.headers`)**
+
+In your [audience metadata template](/help/destinations/destination-sdk/metadata-api/create-audience-template.md), add the same header to each operation block (`create`, `update`, and any other operation that calls your API and requires authentication) alongside the existing `url` and `httpMethod` fields for that operation:
+
+```json
+{
+  "metadataTemplate": {
+    "create": {
+      "url": "https://example.com/audiences",
+      "httpMethod": "POST",
+      "headers": [
+        {
+          "header": "Authorization",
+          "value": "Basic {{ (authData.username + ':' + authData.password) | base64encode }}"
+        }
+      ]
+    }
+  }
+}
+```
+
+Note that audience metadata template headers use a flat string `value`, unlike destination server headers, which use a `value` object with `templatingStrategy` and `value` fields. For the complete audience template payload structure, see [Create an audience template](/help/destinations/destination-sdk/metadata-api/create-audience-template.md).
+
+>[!IMPORTANT]
+>
+>When using the Basic authentication header override, still set `"authType": "BASIC"` in the `customerAuthenticationConfigurations` section of your destination configuration. The override only changes how the `Authorization` header value is constructed. It does not change the authentication type.
+
 ## Bearer authentication {#bearer}
 
 When you configure the bearer authentication type, users must enter the bearer token that they obtain from your destination.

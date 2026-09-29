@@ -248,6 +248,8 @@ debug: true
     * Warehouse destinations {#warehouse}
         * [Snowflake Batch connection](./catalog/warehouses/snowflake-batch.md)
         * [Snowflake Streaming connection](./catalog/warehouses/snowflake.md)
+        * {hide-from-toc} [Databricks Delta Sharing connection](./catalog/warehouses/databricks-delta-sharing.md)
+        * {hide-from-toc} [Snowflake Delta Sharing connection](./catalog/warehouses/snowflake-delta-sharing.md)
 * Destination SDK {#destination-sdk}
     * [Overview](./destination-sdk/overview.md)
     * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)

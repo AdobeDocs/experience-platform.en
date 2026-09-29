@@ -221,7 +221,7 @@ Although Customer AI requires a minimum period of time for the data to exist wit
 
 ## Customer AI output data {#customer-ai-output-data}
 
-Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score (output) based on what you have provisioned. If you have a Real-time Customer Profile-enabled dataset, you can consume insights from Real-time Customer Profile in the [Segment Builder](../../segmentation/ui/segment-builder.md). If you don't have a Profile-enabled dataset, you can [download the Customer AI output](./user-guide/download-scores.md) dataset available on the data lake.
+Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score (output) based on what you have provisioned. If you have a Real-time Customer Profile-enabled dataset, you can consume insights from Real-time Customer Profile in the [Audience Builder](../../segmentation/ui/audience-builder.md). If you don't have a Profile-enabled dataset, you can [download the Customer AI output](./user-guide/download-scores.md) dataset available on the data lake.
 
 You can find the output dataset in the Experience Platform **Datasets** workspace. All Customer AI output datasets start with the name **Customer AI Scores - NAME_OF_APP**. Similarly, all Customer AI output schemas start with the name **Customer AI Schema - Name_of_app**.
 

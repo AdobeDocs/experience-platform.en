@@ -1,7 +1,7 @@
 ---
-title: Adobe Experience Platform Release Notes August 2026
-description: The August 2026 release notes for Adobe Experience Platform.
-last-update: 2026-08-18
+title: Adobe Experience Platform Release Notes September 2026
+description: The September 2026 release notes for Adobe Experience Platform.
+last-update: 2026-09-22
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 TQID: https://experienceleague.adobe.com/RvjQSbQ2NNwBYQJD4G6jsXWdAAg3vzbXKYvRlMwbBW0
 product_v2:
@@ -60,31 +60,51 @@ topic_v2:
 >- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Release date: August 18 2026**
+**Release date: September 22, 2026**
 
 New features and updates to existing features in Adobe Experience Platform:
 
-- [Access control](#access-control)
+- [CX Enterprise Coworker](#cx-enterprise-coworker)
+- [Capacity](#capacity)
 - [Data Governance](#data-governance)
-- [Data Ingestion](#data-ingestion)
 - [Destinations](#destinations)
+- [Privacy Service](#privacy)
+- [Query Service](#query-service)
 - [Run and Operate](#run-and-operate)
+- [Sandboxes](#sandboxes)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
-## Access control {#access-control}
+## CX Enterprise Coworker {#cx-enterprise-coworker}
 
-Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Experience Platform capabilities, including data modeling, profile management, and sandbox administration.
+Use CX Enterprise Coworker to access AI-powered conversational skills that help you manage and validate data in Experience Platform.
 
 **New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| Object-Level Access Control for Datasets | You can now apply access labels to entire datasets to control which users and applications can read or write dataset data. Use the same Adobe-defined and custom access labels available throughout Adobe Experience Platform to enforce dataset-level access restrictions. For information about applying and managing dataset labels, see the [end to end guide](/help/access-control/abac/end-to-end-guide.md) |
+| [Data management agentic skills in CX Enterprise Coworker](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/coworker/chat/use-cases/data-management/manage-data-lake-retention) | You can now use conversational data management skills in CX Enterprise Coworker to identify high-storage datasets, assess retention changes before applying them, and review dataset configuration and storage metrics. These skills help you investigate data usage and retention without manually checking each dataset. |
+| [Data validation skills in CX Enterprise Coworker](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/coworker/chat/use-cases/data-insights/data-validation-aep) | Use a new conversational skill in CX Enterprise Coworker to run statistical and semantic validations on your Experience Platform datasets and fields, and identify data quality issues, all through chat. |
 
 {style="table-layout:auto"}
 
-For more information, read the [Access control overview](/help/access-control/home.md). 
+For more information, read the [CX Enterprise Coworker documentation](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/coworker/overview).
+
+## Capacity {#capacity}
+
+Use Capacity to see your organization's [guardrails](/help/rtcdp/guardrails/overview.md) and get recommendations for resolving capacity violations by reallocating capacity at the sandbox level.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| [Adobe Experience Platform Growth Credits](/help/landing/license-usage-and-guardrails/capacity.md) | Manage and scale eligible capacity across streaming, edge, and batch segmentation. Monitor credit consumption and capacity utilization, and use self-service workflows to plan, allocate, and scale capacity as your business needs evolve. Built-in monitoring and alerts notify you as usage approaches your capacity limits, so you can respond proactively. |
+| Batch capacity | Batch capacity lets you monitor and manage your organization's on demand runs, scheduled runs, as well as batch audience counts. For more information, read the [license usage and capacities guide](/help/landing/license-usage-and-guardrails/capacity.md). |
+| Edge throughput monitor shows requests skipped and clearer graph detail | The edge monitoring dashboard now reports a **[!UICONTROL Requests skipped]** metric, reflecting requests dropped due to Spike Protection when incoming traffic exceeds your allocated capacity. The throughput graph now shows requested throughput with a peak callout and a separate skip throughput series, and both throughput charts display when the data was last updated. |
+
+{style="table-layout:auto"}
+
+For more information, read the [capacity overview](/help/landing/license-usage-and-guardrails/capacity.md).
 
 ## Data Governance {#data-governance}
 
@@ -94,25 +114,11 @@ Use Data Governance to manage data usage policies and enforce compliance with da
 
 | Feature | Description |
 | --- | --- |
-| mTLS Certificate Hierarchy Update | Adobe is transitioning outbound mTLS client certificates to a new certificate authority (CA) hierarchy. If your endpoint validates Adobe's mTLS client certificates, add the new root and intermediate CA certificates alongside the existing trusted hierarchy to prevent connection or delivery failures. See [Update your trust store for Adobe's new mTLS certificate hierarchy](/help/landing/governance-privacy-security/mtls-trust-chain-migration.md) for more details. |
+| Updated label application workflows | You can now apply data governance labels through inline actions in the Datasets workspace or directly in the Schema Editor, reducing the steps required to label datasets and schema fields. |
 
 {style="table-layout:auto"}
 
 For more information, read the [Data Governance overview](/help/data-governance/home.md).
-
-## Data Ingestion {#data-ingestion}
-
-Use batch and streaming ingestion to bring data into Experience Platform from a variety of sources.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Updated [Batch Ingestion guardrails](/help/ingestion/guardrails.md) | Batch ingestion limits have increased to 25,000 files per batch and up to 1 TB for regular batches. Batches that exceed these limits fail at ingestion time, with updated error messages to help identify the issue. |
-
-{style="table-layout:auto"}
-
-For more information, read the [data ingestion overview](/help/ingestion/home.md).
 
 ## Destinations {#destinations}
 
@@ -122,8 +128,7 @@ For more information, read the [data ingestion overview](/help/ingestion/home.md
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [Activate audiences on-demand for streaming destinations](/help/destinations/ui/activate-now-streaming.md) | Trigger an immediate, on-demand resend of an audience's full current membership to a streaming destination without waiting for the next audience qualification or disqualification event. This update is rolling out through August 21, 2026. This feature is in private beta and available for a limited number of streaming destinations. Contact your Adobe representative to request access. <br> ![Triggering an on-demand resend of an audience's full membership to a streaming destination using Activate now.](../2026/assets/august/activate-now-streaming.gif){zoomable="yes"} |
-| [!BADGE Postponed]{type=Negative} [Data type filter in the destinations catalog](/help/destinations/catalog/overview.md) | Find the destination you need faster by filtering the **[!UICONTROL Browse]** tab of the destinations catalog by data type. **This update has been postponed to the September 2026 release.** <br> ![Filtering destinations by data type in the Browse tab of the destinations catalog.](../2026/assets/august/data-type-filter-browse.gif){zoomable="yes"} |
+| [Data type filter in the destinations catalog](/help/destinations/catalog/overview.md) | Find the destination you need faster by filtering the **[!UICONTROL Browse]** tab of the destinations catalog by data type. **This update has been postponed to the September 2026 release.** <br> ![Filtering destinations by data type in the Browse tab of the destinations catalog.](../2026/assets/august/data-type-filter-browse.gif){zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -131,9 +136,8 @@ For more information, read the [data ingestion overview](/help/ingestion/home.md
 
 | Feature | Description |
 | --- | --- |
-| External ID support for [[!DNL Amazon S3] assumed role authentication](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) | Adobe now includes your Organization ID as the `sts:ExternalId` in every `AssumeRole` call for the [!DNL Amazon S3] destination's assumed role authentication flow. Add an `sts:ExternalId` condition to your IAM role's trust policy in AWS and set it to your Organization ID to strengthen the security of your assumed role connection. View the [documentation](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) for examples of how to use this feature. |
-| [[!DNL ZoomInfo Account Audiences]](/help/destinations/catalog/advertising/zoominfo-account-audiences.md) | Use the [!DNL ZoomInfo Account Audiences] destination to activate account audiences from Experience Platform to [!DNL ZoomInfo] for account-based marketing use cases. |
-| Exclude exited profiles from [[!DNL LiveRamp] - Onboarding](/help/destinations/catalog/advertising/liveramp-onboarding.md) exports | Exports to the [!DNL LiveRamp] - Onboarding destination no longer include profiles that have exited an audience. This helps reduce your [Records Under Management (RUM)](https://docs.liveramp.com/connect/en/records-under-management.html) count in [!DNL LiveRamp]. This update is rolling out through August 21, 2026. |
+| [!DNL Microsoft Entra ID] authentication for [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md#authentication-information) and [[!DNL Azure Blob Storage]](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) | Authenticate to the [!DNL Azure Event Hubs] and [!DNL Azure Blob Storage] destinations using a [!DNL Microsoft Entra ID] service principal (client ID and client secret), in addition to a shared access key or connection string. To update an existing connection to use this authentication method, see [migrate an existing base connection to Entra ID Service Principal authentication](/help/destinations/api/streaming-destinations.md#azure-eventhubs-migrate-service-principal) for [!DNL Azure Event Hubs], or [create a base connection](/help/destinations/api/activate-segments-file-based-destinations.md#create-base-connection) for [!DNL Azure Blob Storage]. |
+| [[!DNL Salesforce CRM]](/help/destinations/catalog/crm/salesforce.md#authenticate) OAuth 2 Client Credentials authentication | The [!DNL Salesforce CRM] destination now supports a new authentication type. Authenticate using the OAuth 2 Client Credentials flow, in addition to the existing OAuth 2 Password Grant flow. This update is rolling out this week. |
 
 {style="table-layout:auto"}
 
@@ -141,21 +145,70 @@ For more information, read the [data ingestion overview](/help/ingestion/home.md
 
 | Fix | Description |
 | --- | --- |
-| B2B audience export fix | When you export B2B audiences to a destination, Experience Platform now sends only the audiences that have actually changed for a profile. Previously, an update to one audience caused every audience that the profile qualified for to be resent, resulting in larger exports than necessary. This aligns with the existing streaming and batch audience export behavior. |
+| [[!DNL Facebook] credentials no longer expire](/help/destinations/catalog/social/facebook.md#refresh-authentication-credentials) | [!DNL Facebook] authentication credentials no longer expire after 60 days. [!DNL Experience Platform] now automatically refreshes the OAuth token, so data exports to the destination continue without interruption. Manual reauthentication is no longer required. |
+| [[!DNL Amazon Ads]](/help/destinations/catalog/advertising/amazon-ads-v2.md) no longer requires marketing actions | The connector was updated to remove the requirement to have marketing actions by default. Customers can now set up connections to [!DNL Amazon Ads] without using marketing actions. |
 
 {style="table-layout:auto"}
 
 For more information, read the [Destinations overview](/help/destinations/home.md).
 
+## [!DNL Privacy Service] {#privacy}
+
+Several legal and organizational regulations give users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| India Digital Personal Data Protection Act support | [!DNL Privacy Service] now supports requests under the India Digital Personal Data Protection Act. You can select India when you create a privacy request in the [!DNL Privacy Service] UI or API. |
+
+{style="table-layout:auto"}
+
+For more information, read the [Privacy Service overview](/help/privacy-service/home.md).
+
+## Query Service {#query-service}
+
+Use Query Service to query data in Adobe Experience Platform [!DNL Data Lake] with standard SQL. Join any datasets from the [!DNL Data Lake] and capture query results as a new dataset for use in reporting, Data Science Workspace, or ingestion into Real-Time Customer Profile.
+
+**Fixes and improvements**
+
+| Fix | Description |
+| --- | --- |
+| Accelerated Queries schema permission enforcement | [Accelerated queries](/help/query-service/api/accelerated-queries.md) now enforce existing schema-level read permissions. Ensure that the roles running accelerated queries have read access to referenced schemas to prevent failures in queries, dashboards, and other dependent tools. |
+
+{style="table-layout:auto"}
+
+For more information, read the [Query Service overview](/help/query-service/home.md).
+
 ## Run and Operate {#run-and-operate}
+
+Use Run and Operate to monitor job health, troubleshoot failures, and track throughput across your Experience Platform implementation.
 
 **New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| [Additional health checks](/help/run-and-operate/health-checks/overview.md) | Health checks now include additional checks for the new Query Service, Merge Policies, and Segmentation categories, in addition to the existing Schemas and Identities, Ingestion, Automatic Data Expiration, and Datasets categories. |
+| [Job Schedules now shows identity ingestion runs](/help/run-and-operate/job-schedules-details.md) | The Job Schedules macro-view timeline now includes identity ingestion runs, in addition to existing data lake and profile ingestion runs. |
+| [Job Schedules now shows campaign runs](/help/run-and-operate/job-schedules-details.md) | The Job Schedules macro-view timeline now includes scheduled batch [!DNL Adobe Journey Optimizer] campaign runs. Filter campaigns by recurrence, channel, and type, and view campaign details, including audience, category, channel, and export and delivery counts. |
+| [Additional health checks](/help/run-and-operate/health-checks/overview.md) | Health checks now include 32 additional checks across the Schemas and Identities, Destinations, Datasets, Segmentation, Ingestion, Merge Policies, and Query Service categories, plus two new categories: Sources and Profile. |
 
 {style="table-layout:auto"}
+
+For more information, read the [Run and Operate overview](/help/run-and-operate/overview.md).
+
+## Sandboxes {#sandboxes}
+
+Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater to the development, testing, and deployment of these applications while ensuring operational compliance.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Multi-sandbox management | Use [!DNL Sandbox Tooling] to migrate supported objects, including schemas and datasets, from a source sandbox to multiple target sandboxes through a single workflow. Select target sandboxes, validate dependencies, and deploy changes centrally to streamline rollouts across environments. |
+
+{style="table-layout:auto"}
+
+For more information, read the [sandboxes overview](/help/sandboxes/home.md).
 
 ## Segmentation Service {#segmentation-service}
 
@@ -165,10 +218,10 @@ Use Segmentation Service to create audiences from your customer data and manage 
 
 | Feature | Description |
 | --- | --- |
-| Batch segmentation progress transparency | When a batch segmentation job is processing, you can now see the percentage of the audience that has been evaluated. This lets you better estimate the remaining time needed for the segmentation job, so you can meet your audience's activation timeline. For more information, read the [monitor audiences guide](/help/dataflows/ui/monitor-audiences.md). |
-| [!BADGE Beta]{type=Informative} On-demand evaluation | On-demand evaluation lets you trigger audience evaluation for a specific audience when needed, without waiting for a system-defined or user-defined schedule. For more information, read the [on-demand evaluation guide](/help/segmentation/methods/on-demand-evaluation.md). |
-| External account audiences (B2B) | You can now upload account audiences using the external audiences endpoint. For more information, read the [external audiences endpoint guide](/help/segmentation/api/external-audiences.md). |
-| Time-series custom objects (B2B) | You can now use time-series relational schemas in custom objects for segmentation use cases in [!DNL Real-Time CDP B2B Edition]. For more information, read the [custom objects guide](/help/rtcdp/segmentation/custom-objects.md). |
+| Audience validation in Audience Builder | Audience Builder now validates field compatibility with your selected evaluation method as you build an audience. Incompatible fields are flagged with an inline error or warning before you save or publish, and a new filter lets you filter attributes and events by ingestion source. |
+| [!BADGE Beta]{type=Informative} Activated destinations | View each audience's activated destinations and see destination-specific details, including the destination type, schedule, and recent flow-run status. For more information, read the [Audience Portal overview](/help/segmentation/ui/audience-portal.md#activated-destinations). This feature is in **beta** and available on request. To get this view enabled, contact Adobe Customer Care or your account manager. |
+| [!BADGE Limited Availability]{type=Informative} Flexible Batch Schedules | Use Flexible Batch Schedules to evaluate audiences on demand using user-defined schedules, giving you greater control over your audience evaluations. For more information, read the [Flexible Batch Schedules guide](/help/segmentation/tutorials/flexible-batch-schedules.md). |
+| [!BADGE Limited Availability]{type=Informative} Large Scale Audiences | You can now have up to 10,000 audiences in your sandbox. In order to use this feature, you must have access to Flexible Batch Schedules. For more information, read the [Flexible Batch Schedules guide](/help/segmentation/tutorials/flexible-batch-schedules.md). |
 
 {style="table-layout:auto"}
 
@@ -182,17 +235,10 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| New sources in GA | The following sources have been promoted from Beta to General Availability (GA): <ul><li>[[!DNL Braze]](/help/sources/connectors/marketing-automation/braze.md)</li><li>[[!DNL Capillary]](/help/sources/connectors/loyalty/capillary.md)</li><li>[[!DNL Didomi]](/help/sources/connectors/consent-and-preferences/didomi.md)</li><li>[[!DNL LAVA]](/help/sources/connectors/loyalty/lava.md)</li><li>[[!DNL Rainfocus]](/help/sources/connectors/analytics/rainfocus.md)</li><li>[[!DNL Relay]](/help/sources/tutorials/ui/create/marketing-automation/relay-connector.md)</li><li>[[!DNL Shopify Streaming]](/help/sources/connectors/ecommerce/shopify-streaming.md)</li><li>[[!DNL Talon.One Batch]](/help/sources/tutorials/ui/create/loyalty/talon-one-batch.md)</li><li>[[!DNL Talon.One Streaming]](/help/sources/tutorials/ui/create/loyalty/talon-one-streaming.md)</li></ul> |
-| Self Serve Sources (Streaming SDK) now in GA | Self-Serve Sources (Streaming SDK) are now generally available. Partners can build and configure streaming sources with secure authentication using either OAuth or HMAC-based authentication. Authentication is required for all Streaming SDK sources. HMAC authentication validates incoming events using SHA-256 signatures, while existing configuration remain compatible with the new authentication options. For more information, read the [Streaming SDK documentation](/help/sources/sources-sdk/streaming/getting-started.md). |
-| Sources compatible with TLS v1.3 | The following source connectors are now compatible with Transport Layer Security (TLS) 1.3: <ul><li>[[!DNL Azure Data Lake Storage Gen2]](/help/sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure Blob Storage]](/help/sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL Azure Event Hubs]](/help/sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL Azure Synapse Analytics]](/help/sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Data Landing Zone]](/help/sources/connectors/cloud-storage/data-landing-zone.md)</li><li>[[!DNL Snowflake] batch connector](/help/sources/connectors/databases/snowflake.md)</li></ul> |
-| Updated IP address allowlist for Sources | The IP address allowlist for Adobe Experience Platform batch sources has been updated. For the current allowlist and configuration guidance, read the guide on [allowlisting IP addresses for sources](/help/sources/ip-address-allow-list.md). |
+| [[!DNL HubSpot]](/help/sources/connectors/marketing-automation/hubspot.md) V2 connector | Ingest data from [!DNL HubSpot] using the updated V2 connector. |
+| [Server-side encryption for [!DNL Amazon S3]](/help/sources/tutorials/api/encrypt-data.md#server-side-encryption-for-amazon-s3) | Combine [!DNL Amazon S3] server-side encryption (SSE) with PGP file encryption when you ingest encrypted data from [!DNL Amazon S3]. On the VA6 region of [Adobe Experience Platform on AWS](/help/landing/multi-cloud.md), the maximum encrypted file size increases from 1 GB to 10 GB. |
+| [Self-Serve Sources (Streaming SDK) on AWS](/help/sources/sources-sdk/streaming/getting-started.md) | Use Self-Serve Sources (Streaming SDK) to build connectors for [Adobe Experience Platform running on AWS](/help/landing/multi-cloud.md). Experience Platform running on AWS is currently available to a limited number of customers. |
 
 {style="table-layout:auto"}
 
-For more information, read the [sources overview](../../sources/home.md).
-
-<!--
-
-| [!DNL Google Ads] (V2) source connector | You can now use the Google Ads (V2) source connector to ingest advertising account, campaign, ad group, ad, asset, experience, and performance data from the [!DNL Google Ads] API into Experience Platform. |
-
--->
+For more information, read the [sources overview](/help/sources/home.md).

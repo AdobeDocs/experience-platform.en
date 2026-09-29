@@ -108,11 +108,11 @@ A dialog appears, asking you to choose between [!UICONTROL Compose audience] and
 
 The Segment Builder page appears. On this page, you can use the components to build your audience.
 
-![Segment Builder is displayed.](../assets/offsite-retargeting/segment-builder.png)
+![Audience Builder is displayed.](../assets/offsite-retargeting/segment-builder.png)
 
 >[!NOTE]
 >
->For more detailed information about using Segment Builder, please read the [Segment Builder UI guide](/help/segmentation/ui/segment-builder.md).
+>For more detailed information about using Audience Builder, please read the [Audience Builder UI guide](/help/segmentation/ui/audience-builder.md).
 
 To achieve the goal of finding these visitors, you'll first need to add a **[!UICONTROL Page View]** event to your audience. Select the **[!UICONTROL Events]** tab under **[!UICONTROL Fields]**, then drag and drop the **[!UICONTROL Page View]** event and add it to the events section canvas.
 
@@ -130,7 +130,7 @@ To add the computed attribute, under **[!UICONTROL Attributes]**, select **[!UIC
 
 Additionally, search for **[!UICONTROL Personal Email]** and add the **[!UICONTROL Address]** attribute below **[!UICONTROL PartnerID]** to the attributes section of the canvas.
 
-![The [!UICONTROL PartnerID] computed attribute and the [!UICONTROL Personal Email Address] attribute are highlighted on the Segment Builder canvas.](../assets/offsite-retargeting/added-attributes.png)
+![The [!UICONTROL PartnerID] computed attribute and the [!UICONTROL Personal Email Address] attribute are highlighted on the Audience Builder canvas.](../assets/offsite-retargeting/added-attributes.png)
 
 Now that you've added your attributes, you'll need to set their evaluation criteria. For **[!UICONTROL PartnerID]**, set the criterion to **[!UICONTROL exists]**, and for **[!UICONTROL Address]**, set the criterion to **[!UICONTROL does not exist]**. 
 

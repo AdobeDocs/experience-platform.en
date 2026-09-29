@@ -144,7 +144,7 @@ In Audience Portal, select **[!UICONTROL Create audience]**.
 
 ![The Create audience button is highlighted in Audience Portal.](../images/methods/batch/select-create-audience.png)
 
-A popover appears. Select **[!UICONTROL Build rules]** to enter Segment Builder.
+A popover appears. Select **[!UICONTROL Build rules]** to enter Audience Builder.
 
 ![The Build rules button is highlighted in the create audience popover.](../images/methods/batch/select-build-rules.png)
 
@@ -152,7 +152,7 @@ After creating your segment definition, select **[!UICONTROL Batch]** as the **[
 
 ![The segment definition is displayed. The evaluation type is highlighted, showing the segment definition can be evaluated using streaming segmentation.](../images/methods/batch/batch-evaluation-method.png)
 
-To learn more about creating segment definitions, please read the [Segment Builder guide](../ui/segment-builder.md)
+To learn more about creating segment definitions, please read the [Audience Builder guide](../ui/audience-builder.md)
 
 >[!ENDTABS]
 

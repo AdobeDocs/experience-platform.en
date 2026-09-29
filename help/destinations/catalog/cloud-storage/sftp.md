@@ -39,7 +39,7 @@ This destination is available in the following [!DNL Adobe CX Enterprise] applic
 
 ## Destination changelog {#changelog}
 
-With the July 2023 Experience Platform release, the SFTP destination provides new functionality, as listed below:
+With the July 2023 [!DNL Experience Platform] release, the SFTP destination provides new functionality, as listed below:
 
 * [Dataset export support](/help/destinations/ui/export-datasets.md).
 * Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
@@ -56,7 +56,7 @@ Create a live outbound connection to your SFTP server to periodically export del
 
 ## Connect to SFTP through API or UI {#connect-api-or-ui}
 
-* To connect to your SFTP storage location using the Experience Platform user interface, read the sections [Connect to the destination](#connect) and [Activate audiences to this destination](#activate) below.
+* To connect to your SFTP storage location using the [!DNL Experience Platform] user interface, read the sections [Connect to the destination](#connect) and [Activate audiences to this destination](#activate) below.
 * To connect to your SFTP storage location programmatically, read the [Activate audiences to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
 
 ## Supported audiences {#supported-audiences}
@@ -109,14 +109,14 @@ See the table below for information about the destination export type and freque
 
 This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
 
-* How to [export datasets using the Experience Platform user interface](/help/destinations/ui/export-datasets.md). 
+* How to [export datasets using the Experience Platform user interface](/help/destinations/ui/export-datasets.md).
 * How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
 
 ## File format of the exported data {#file-format}
 
-When exporting *audience data*, Experience Platform creates a `.csv`, `parquet`, or `.json` file in the storage location that you provided. For more information about the files, see the [supported file formats for export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) section in the audience activation tutorial.
+When exporting *audience data*, [!DNL Experience Platform] creates a `.csv`, `parquet`, or `.json` file in the storage location that you provided. For more information about the files, see the [supported file formats for export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) section in the audience activation tutorial.
 
-When exporting *datasets*, Experience Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
+When exporting *datasets*, [!DNL Experience Platform] creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
 
 ## SFTP server connection requirements {#sftp-connection-requirements}
 
@@ -129,6 +129,19 @@ For optimal performance, your SFTP server should allow at least one concurrent c
 If you schedule exports for 100 audiences or datasets simultaneously, your SFTP server should allow at least 30 concurrent connections.
 
 Properly configuring your SFTP server's connection limits helps prevent failed exports and ensures reliable data delivery from [!DNL Adobe Experience Platform].
+
+## Supported SSH algorithms {#supported-ssh-algorithms}
+
+If your SFTP server restricts which SSH algorithms it accepts, ensure it supports at least one algorithm from each category in the table below.
+
+| Algorithm type | Supported algorithms |
+|---|---|
+| Key exchange | `curve25519-sha256`, `curve25519-sha256@libssh.org`, `ecdh-sha2-nistp256`, `ecdh-sha2-nistp384`, `diffie-hellman-group-exchange-sha256`, `diffie-hellman-group16-sha512` |
+| Host key | `ssh-rsa`, `ssh-ed25519`, `ecdsa-sha2-nistp256`, `rsa-sha2-512` |
+| Encryption (cipher) | `aes128-cbc`, `aes128-ctr`, `aes192-ctr`, `aes256-cbc`, `aes256-ctr` |
+| Message authentication code (MAC) | `hmac-sha1`, `hmac-sha2-256`, `hmac-sha2-256-etm@openssh.com` |
+
+{style="table-layout:auto"}
 
 ## Connect to the destination {#connect}
 
@@ -154,9 +167,9 @@ If you select the **[!UICONTROL SFTP with password]** authentication type to con
 
 ![SFTP destination basic authentication with password.](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
-* **[!UICONTROL Domain]**: The address of your SFTP storage location;
-* **[!UICONTROL Username]**: The username to log into your SFTP storage location;
-* **[!UICONTROL Port]**: The port used by your SFTP storage location;
+* **[!UICONTROL Domain]**: The address of your SFTP storage location.
+* **[!UICONTROL Username]**: The username to log into your SFTP storage location.
+* **[!UICONTROL Port]**: The port used by your SFTP storage location.
 * **[!UICONTROL Password]**: The password to log into your SFTP storage location.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
@@ -167,9 +180,9 @@ If you select the **[!UICONTROL SFTP with SSH key]** authentication type to conn
 
 ![SFTP destination SSH key authentication.](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
-* **[!UICONTROL Domain]**: Fill in the IP address or the domain name of your SFTP account
-* **[!UICONTROL Port]**: The port used by your SFTP storage location;
-* **[!UICONTROL Username]**: The username to log into your SFTP storage location;
+* **[!UICONTROL Domain]**: Fill in the IP address or the domain name of your SFTP account.
+* **[!UICONTROL Port]**: The port used by your SFTP storage location.
+* **[!UICONTROL Username]**: The username to log into your SFTP storage location.
 * **[!UICONTROL SSH Key]**: The private SSH key used to log into your SFTP storage location. The private key must be an RSA-formatted, Base64-encoded string, and must not be password-protected.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
@@ -181,11 +194,11 @@ After establishing the authentication connection to the SFTP location, provide t
 
 ![Destination details fields for the SFTP destination.](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* **[!UICONTROL Name]**: Enter a name that helps you identify this destination in the Experience Platform user interface;
-* **[!UICONTROL Description]**: Enter a description for this destination;
+* **[!UICONTROL Name]**: Enter a name that helps you identify this destination in the [!DNL Experience Platform] user interface.
+* **[!UICONTROL Description]**: Enter a description for this destination.
 * **[!UICONTROL Folder path]**: Enter the path to the folder in your SFTP location where the files will be exported.
-* **[!UICONTROL File type]**: Select the format Experience Platform should use for the exported files. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Compression format]**: Select the compression type that Experience Platform should use for the exported files.
+* **[!UICONTROL File type]**: Select the format [!DNL Experience Platform] should use for the exported files. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: Select the compression type that [!DNL Experience Platform] should use for the exported files.
 * **[!UICONTROL Include manifest file]**: Toggle this option on if you'd like the exports to include a manifest JSON file that contains information about the export location, export size, and more. The manifest is named using the format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. View a [sample manifest file](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). The manifest file includes the following fields:
   * `flowRunId`: The [dataflow run](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) which generated the exported file. 
   * `scheduledTime`: The time in UTC when the file was exported. 

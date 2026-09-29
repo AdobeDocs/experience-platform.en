@@ -11,7 +11,7 @@ nudge: true
 
 # Run and Operate guide help {#run-and-operate}
 
-* [Overview](overview.md)
+* [Overview](overview.md) 
 * Job Schedules {#job-schedules}
   * [Inspect job schedules](job-schedules.md)
   * [View job details](job-schedules-details.md)
@@ -26,3 +26,8 @@ nudge: true
   * [Destinations](health-checks/destinations.md)
   * [Merge policies](health-checks/merge-policies.md)
   * [Query Service](health-checks/query-service.md)
+  * [Sources](health-checks/sources.md)
+  * [Profile](health-checks/profile.md)
+* Usage Insights {#usage-insights}
+  * [Overview](usage-insights/overview.md)
+  * [Usage analysis reference](usage-insights/usage-analysis.md)
