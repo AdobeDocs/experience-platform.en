@@ -21,6 +21,11 @@ Before continuing this guide, review the [getting started with APIs guide](/help
 
 ## Operators {#operators}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_dedupe"
+>title="Deduplication block"
+>abstract="The Deduplication block lets you remove duplicate values from your composition, based off of a ranked field."
+
 The **Payload exclude** operator lets you remove specific array elements from consideration of the audience **without** removing the customer from the audience. This removal is based off of a separately maintained and provided exclusion list.
 
 The **Payload rank** operator lets you select a single best element for a customer that qualified through more than one array element. You can then choose a specific element to rank the customers by.
