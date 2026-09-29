@@ -31,7 +31,7 @@ nudge: true
     - [Audience dashboard](ui/audience-dashboard.md)
     - [Audience Portal](ui/audience-portal.md)
     - [Audience Composition](ui/audience-composition.md)
-    - {hide-from-toc} [Deduplication node](ui/deduplication-node.md)
+    - {hide-from-toc} [Deduplicate operator](ui/deduplicate.md)
     - {hide-from-toc} [Payload Rank and Payload Exclude operators](ui/payload-rank-exclude.md)
     - {hide-from-toc} [Audience Composition enhancements](ui/composition-enhancements.md)
     - [Audience Builder](ui/audience-builder.md)
