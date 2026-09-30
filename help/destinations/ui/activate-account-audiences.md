@@ -62,19 +62,19 @@ Follow the instructions to select a destination where you can export your datase
 
 1. Select **[!UICONTROL Activate]** on the card corresponding to the destination that you want to export datasets to. 
 
-  >[!TIP]
-  >
-  >The destinations that can export account audiences are indicated with an icon in the upper right corner of the card, similar to the destination highlighted below, or you can use the data type filter to only display destinations that can export account audiences, as [shown higher on the page](#supported-destinations).
+   >[!TIP]
+   >
+   >The destinations that can export account audiences are indicated with an icon in the upper right corner of the card, similar to the destination highlighted below, or you can use the data type filter to only display destinations that can export account audiences, as [shown higher on the page](#supported-destinations).
 
-  ![Demandbase destination page that can export profile audiences highlighted.](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png)
+   ![Demandbase destination page that can export profile audiences highlighted.](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png)
 
 1. Select **[!UICONTROL Data type Accounts]**, followed by the destination connection that you want to export datasets to, then select **[!UICONTROL Next]**.
 
-  >[!TIP]
-  > 
-  >If you want to set up a new destination to activate account audiences, select **[!UICONTROL Configure new destination]** to trigger the [Connect to destination](/help/destinations/ui/connect-destination.md) workflow and [select accounts as data type](/help/destinations/ui/connect-destination.md#segment-activation-or-dataset-exports).
+   >[!TIP]
+   > 
+   >If you want to set up a new destination to activate account audiences, select **[!UICONTROL Configure new destination]** to trigger the [Connect to destination](/help/destinations/ui/connect-destination.md) workflow and [select accounts as data type](/help/destinations/ui/connect-destination.md#segment-activation-or-dataset-exports).
 
-  ![Destination activation workflow with accounts control highlighted.](/help/destinations/assets/ui/activate-account-audiences/activate-account-audiences-highlighted.png)
+   ![Destination activation workflow with accounts control highlighted.](/help/destinations/assets/ui/activate-account-audiences/activate-account-audiences-highlighted.png)
 
 1. Proceed to the next section to [select your account audiences](#select-profile-audiences) for export.
 
