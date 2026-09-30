@@ -17,6 +17,10 @@ The **[!UICONTROL Audience Properties]** panel on the left-hand side of the work
 
 ![The Audience Properties panel is highlighted within the Audience Builder.](/help/segmentation/images/ui/audience-builder/audience-properties.png){width="750" zoomable="yes"}
 
+You can select the ![reduce panel icon](/help/images/icons/reduce-panel.png) to minimize the audience properties panel, and maximize the rule view.
+
+![Audience Builder with the Audience properties panel minimized.](/help/segmentation/images/ui/audience-builder/minimized-audience-panel.png)
+
 ### Estimates {#estimates}
 
 The audience estimates section shows both the **qualified** and **estimated** profiles.
@@ -81,7 +85,7 @@ More information about the different audience evaluation methods can be found in
 
 >[!AVAILABILITY]
 >
->The following feature is in **Limited Availability**. For more information on Flexible Batch Schedules, read the [Flexible Batch Schedules guide](/help/segmentation/methods/flexible-batch-schedules.md).
+>The following feature is in **limited availability**. For more information on schedules and using Flexible Batch Schedules, read the [Flexible Batch Schedules guide](/help/segmentation/methods/flexible-batch-schedules.md).
 
 If your audience is evaluated using batch evaluation, you can choose a schedule for the audience to be evaluated with. Select the ![calendar icon](/help/images/icons/calendar.png) to choose the schedule that the audience will be evaluated with.
 
@@ -114,6 +118,10 @@ You can also adjust the settings of the visible fields by selecting ![the settin
 The **[!UICONTROL Show fields only with data]** setting determines if you see **all** fields, or only fields that contain data.
 
 For **[!UICONTROL Data sources]**, you can filter to show attributes that come from the specified ingestion types. Supported values include **[!UICONTROL Batch and streaming/edge]**, **[!UICONTROL Batch only]**, and **[!UICONTROL Streaming/edge only]**.
+
+>[!AVAILABILITY]
+>
+>The **[!UICONTROL Show relation selectors]** setting is **only** available if you have access to Adobe Real-Time Customer Data Platform B2B Edition.
 
 The **[!UICONTROL Show relation selectors]** setting determines if you use the standard relations for your organization or if the relation selectors are shown.
 
@@ -238,6 +246,10 @@ You can add additional attributes to the audience by selecting **[!UICONTROL Add
 If you want to remove an attribute you've added, select ![the minus icon](/help/images/icons/remove-circle-unfilled.png).
 
 ![The remove attribute button is highlighted.](/help/segmentation/images/ui/audience-builder/remove-attribute.png){width="750" zoomable="yes"}
+
+Additionally, you can move an attribute around by selecting the ![move icon](/help/images/icons/move.png) and dragging and dropping the attribute to its new location.
+
+![The attribute moving is displayed within the canvas.](/help/segmentation/images/ui/audience-builder/move-attribute.gif)
 
 #### Computed attributes {#computed-attributes}
 
