@@ -37,7 +37,7 @@ For more information on batch segmentation, please read the [batch segmentation 
 
 ### [!BADGE Limited Availability]{type=Informative} Flexible batch schedules {#flexible-batch-schedules}
 
-Flexible batch schedules lets you add audiences to your own custom schedules, which you can control when they are evaluated. For more information on flexible batch schedules, read the [flexible batch schedules guide](/help/segmentation/methods/flexible-batch-schedules.md).
+Use flexible batch schedules to add audiences to custom schedules, so you can control when they are evaluated. For more information on flexible batch schedules, read the [flexible batch schedules guide](/help/segmentation/methods/flexible-batch-schedules.md).
 
 ### Flexible audience evaluation
 
