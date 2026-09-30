@@ -79,9 +79,13 @@ If you select an invalid evaluation method, you will be prompted to either chang
 
 More information about the different audience evaluation methods can be found in the [segmentation overview](/help/segmentation/home.md#evaluate-audiences).
 
+>[!AVAILABILITY]
+>
+>The following feature is in **Limited Availability**. For more information on Flexible Batch Schedules, read the [Flexible Batch Schedules guide](/help/segmentation/methods/flexible-batch-schedules.md).
+
 If your audience is evaluated using batch evaluation, you can choose a schedule for the audience to be evaluated with. Select the ![calendar icon](/help/images/icons/calendar.png) to choose the schedule that the audience will be evaluated with.
 
-![The calendar icon is highlighted within the audience properties section.](/help/segmentation/images/ui/audience-builder/select-schedule.png)
+![The calendar icon is highlighted within the audience properties section.](/help/segmentation/images/ui/audience-builder/select-schedule.png){width="400" zoomable="yes"}
 
 The **[!UICONTROL Audience schedules]** popover appears. On this popover, you can select the schedules you want the audience to be evaluated using.
 
