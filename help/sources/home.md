@@ -109,6 +109,8 @@ The following sources are only available to [Adobe Real-Time Customer Data Platf
 
 You can use the following sources to ingest advertising data to Experience Platform.
 
+Use [Pinterest Ads](/help/sources/connectors/advertising/pinterest-ads.md) to ingest paid media metadata and metrics with automatic dataset provisioning.
+
 | Source | Ingestion type | Cloud |
 | --- | --- | --- |
 | [[!DNL Google Ads]](connectors/advertising/ads.md) | Batch | Azure |
