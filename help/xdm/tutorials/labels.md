@@ -92,9 +92,9 @@ The **[!UICONTROL Labels]** tab reappears, showing the applied labels for the sc
 
 ## View labels in the schema tree {#view-labels-schema-tree}
 
-You can display label information directly in the schema tree. In the **[!UICONTROL Structure]** tab, select the settings icon in the upper-right of the canvas to open the tree display options. 
+From the **[!UICONTROL Structure]** tab, select the settings icon in the upper-right of the canvas to view labels directly in the schema tree.
 
-![The Structure tab with the settings icon and dilaog highloighted]()
+![The Structure tab with the settings icon and dialog highlighted.](../images/tutorials/labels/schema-structure-settings.png)
 
 A dialog appears with the following options.
 
