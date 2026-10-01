@@ -306,3 +306,5 @@ This guide explains how to create a segment definition that can be evaluated usi
 To learn more about using the Experience Platform user interface, please read the [Segmentation user guide](../ui/overview.md).
 
 For frequently asked questions about batch segmentation, please read the [batch segmentation section of the FAQ](../faq.md#batch-segmentation).
+
+To learn about flexible batch schedules, read the [flexible batch schedules tutorial](/help/segmentation/methods/flexible-batch-schedules.md).
