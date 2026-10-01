@@ -44,7 +44,7 @@ topic_v2:
 
 >[!AVAILABILITY]
 >
->Data Mirror and relational schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
+>Data Mirror is available as a limited release for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
 
 Data Mirror is an Adobe Experience Platform capability that enables row-level change ingestion from external databases into the data lake using relational schemas. It preserves data relationships, enforces uniqueness, and supports versioning without requiring upstream extract, transform, load (ETL) processes.
 
@@ -60,7 +60,7 @@ Data Mirror provides the following essential capabilities for database synchroni
 * **Out-of-order event handling**: Processes change events using version and timestamp descriptors, even when they arrive out of sequence.
 * **Direct warehouse integration**: Connects with supported cloud data warehouses for near real-time change synchronization.
 
-Use Data Mirror to ingest changes directly from your source systems, enforce schema integrity, and make the data available for analytics, journey orchestration, and compliance workflows. Data Mirror eliminates complex upstream ETL processes and accelerates implementation by enabling direct mirroring of existing database models.
+Use Data Mirror to ingest changes directly from your source systems, enforce schema integrity, and make the data available for analysis in Customer Journey Analytics. Data Mirror eliminates complex upstream ETL processes and accelerates implementation by enabling direct mirroring of existing database models.
 
 Plan for deletion and data hygiene requirements when implementing relational schemas with Data Mirror. All applications must consider how deletions affect related datasets, compliance workflows, and downstream processes before deployment.
 
@@ -118,7 +118,7 @@ Set up change data capture connections with supported cloud data warehouses. Ing
 
 ## Common use cases {#use-cases}
 
-Review the common use cases listed below where Data Mirror supports precise data synchronization and relationship preservation. Each scenario shows how Data Mirror supports common business needs across analytics, orchestration, and compliance.
+Review the common use cases listed below where Data Mirror supports precise data synchronization and relationship preservation. Each scenario shows how Data Mirror supports common business needs across analytics and compliance.
 
 ### Relational data modeling 
 
@@ -126,7 +126,7 @@ Use [relational schemas](../schema/relational.md) in Data Mirror to represent en
 
 ### Warehouse-to-lake synchronization
 
-Mirror event data, customer interaction logs, campaign events, and auxiliary data from supported cloud data warehouses into Experience Platform. This supports campaign eligibility, targeting precision, and message sequencing. Journey Optimizer and Real-Time CDP B2B rely on this for near-real-time orchestration logic.
+Mirror event data, customer interaction logs, campaign events, and auxiliary data from supported cloud data warehouses into Experience Platform for analysis in Customer Journey Analytics.
 
 ### Customer Journey Analytics integration
 
