@@ -47,7 +47,7 @@ Within Audience Portal, you can accomplish the following tasks:
   - [View a summary about your audience](#audience-summary)
 - [Enable your audiences for scheduled segmentation](#scheduled-segmentation)
 - [Create an audience](#create-audience)
-  - [Use Segment Builder to create an audience](#segment-builder)
+  - [Use Audience Builder to create an audience](#segment-builder)
   - [Use Audience Composition to create an audience](#audience-composition)
   - [Use Federated Audience Composition to create an audience using data from your existing data warehouse](#fac)
   - [Use Data Distiller to create an audience](#data-distiller)
@@ -81,7 +81,7 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 
 | Action | Origins | Description |
 | ------ | ------- | ----------- |
-| [!UICONTROL Edit] | Segmentation Service | Opens Segment Builder to edit your audience. Please note that if your audience was created through the API, you will **not** be able to edit it using Segment Builder. For more information on using Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md). |
+| [!UICONTROL Edit] | Segmentation Service | Opens Audience Builder to edit your audience. Please note that if your audience was created through the API, you will **not** be able to edit it using Audience Builder. For more information on using Audience Builder, please read the [Audience Builder UI guide](./audience-builder.md). |
 | [!UICONTROL Open composition] | Audience composition | Opens the Audience composition to see your audience. For more information on Audience composition, please read the [audience composition UI guide](./audience-composition.md). |
 | [!UICONTROL Activate to destination] | Segmentation Service | Activates the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md). |
 | [!UICONTROL Share with partners] | Audience composition, Custom upload, Segmentation Service | Shares your audience with other Experience Platform users. For more information on this feature, please read the [Segment Match overview](./segment-match/overview.md). |
@@ -316,7 +316,7 @@ This button will **not** be selectable in the following situations:
 
 ![The audience details page is shown, with the [!UICONTROL Edit audience] button highlighted.](/help/segmentation/images/ui/audience-portal/audience-details-edit-audience.png)
 
-Selecting **[!UICONTROL Edit audience]** lets you edit your audience in Segment Builder. For more detailed information about using the [!DNL Segment Builder] workspace, please read the [[!DNL Segment Builder] user guide](./segment-builder.md).
+Selecting **[!UICONTROL Edit audience]** lets you edit your audience in Audience Builder. For more detailed information about using the [!DNL Audience Builder] workspace, please read the [[!DNL Audience Builder] user guide](./audience-builder.md).
 
 >[!ENDTABS]
 
@@ -360,13 +360,45 @@ For audiences with an origin of **[!UICONTROL Custom upload]**, the **[!UICONTRO
 >
 >Applying data usage labels to the schema is the best practice. You **cannot** apply a data usage label directly to the audience.
 
-### Activated destinations {#activated-destinations}
+### Destinations {#destinations}
 
-The **[!UICONTROL Activated destinations]** section shows the destinations that this audience is activated for.
+The **[!UICONTROL Destinations]** section shows the last five destinations that this audience is activated for.
 
 >[!NOTE]
 >
-> Destinations are a feature available with [!DNL Adobe Real-Time Customer Data Platform], and allow you to export data to external platforms. For more information on destinations, please read the [destinations overview](../../destinations/home.md). To learn how to activate a segment to a destination, see [activation overview](../../destinations/ui/activation-overview.md).
+> Destinations are a feature available with [!DNL Adobe Experience Platform], and allow you to export data to external platforms. For more information on destinations, please read the [destinations overview](../../destinations/home.md). To learn how to activate a segment to a destination, see [activation overview](../../destinations/ui/activation-overview.md).
+
+## Activated destinations {#activated-destinations}
+
+>[!AVAILABILITY]
+>
+>The activated destinations feature is currently in **beta** and is available upon request. To get this view enabled, contact Adobe Customer Care or your account manager.
+
+To view all the destinations the audience is activated to, select **[!UICONTROL Activated destinations]** within the audience details page.
+
+![The Activated destinations tab is highlighted.](/help/segmentation/images/ui/audience-portal/select-activated-destinations.png)
+
+The activated destinations tab shows a read-only list of the activated destinations for the specified audience, with details including the destination name, destination type, schedule, last dataflow run date, and last dataflow run status. Use this view to see each destination's schedule, recent flow-run history, and status for the audience.
+
+![The Activated destinations page is displayed, showing a list of destinations that the audience has been activated to.](/help/segmentation/images/ui/audience-portal/activated-destinations.png)
+
+| Field | Description |
+| ----- | ----------- |
+| Destination name | The name of the destination. If you select the name of the destination, you can view the activation data for the destination. For more information, read the [destinations details guide](/help/destinations/ui/destination-details-page.md). |
+| Destination | The type of destination. A full list of destination types can be found in the [destinations catalog overview](/help/destinations/catalog/overview.md). |
+| Schedule | The schedule which the audience activates to the destination. |
+| Last Dataflow Run Date | The date that the last dataflow run ran. |
+| Last Dataflow Run Status | The status of the last dataflow run. For more information, read the [destination details guide](/help/destinations/ui/destination-details-page.md). |
+
+Additionally, if you select the ![three dots](/help/images/icons/more.png) next to the destination name, you can see additional details about the recent flow runs and the destination itself.
+
+If you select **[!UICONTROL View Recent Flow Runs]**, the **[!UICONTROL Recent Flow Runs]** popover appears. This popover displays detailed information about recent flow runs for the destination.
+
+![The Recent Flow Runs popover is displayed, showing detailed information about the recent flow runs for the specified destination.](/help/segmentation/images/ui/audience-portal/recent-flow-runs.png)
+
+If you select **[!UICONTROL View Destination Details]**, the destination details popover appears. This popover displays detailed information about the destination.
+
+![The destination details popover is displayed, showing more detailed information about the destination.](/help/segmentation/images/ui/audience-portal/destination-details.png)
 
 ### Profile samples {#profile-samples}
 
@@ -429,11 +461,11 @@ Selecting **[!UICONTROL Compose audiences]** takes you to Audience Composition. 
 
 ![The Audience Composition workspace is displayed.](/help/segmentation/images/ui/audience-portal/audience-composition.png)
 
-### Segment Builder {#segment-builder}
+### Audience Builder {#segment-builder}
 
-Selecting **[!UICONTROL Build rule]** takes you to Segment Builder. This workspace provides intuitive controls for building and editing segment definitions, such as drag-and-drop tiles used to represent data properties. To learn more about creating segment definitions, please read the [Segment Builder guide](./segment-builder.md)
+Selecting **[!UICONTROL Build rule]** takes you to Audience Builder. This workspace provides intuitive controls for building and editing segment definitions, such as drag-and-drop tiles used to represent data properties. To learn more about creating segment definitions, please read the [Audience Builder guide](./audience-builder.md)
 
-![The Segment Builder workspace is displayed.](/help/segmentation/images/ui/audience-portal/segment-builder.png)
+![The Audience Builder workspace is displayed.](/help/segmentation/images/ui/audience-portal/segment-builder.png)
 
 ### Federated Audience Composition {#fac}
 

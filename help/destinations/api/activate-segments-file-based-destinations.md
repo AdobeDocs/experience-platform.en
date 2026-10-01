@@ -855,6 +855,84 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
+[!DNL Azure Blob Storage] also supports an additional authentication method using [!DNL Microsoft Entra ID] Service Principal credentials (tenant ID, client ID, and client secret) instead of a connection string. Use this method if your organization prohibits shared access keys or connection strings.
+
+**Request**
+
++++[!DNL Azure Blob Storage] - Base connection request using Entra ID Service Principal authentication
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'accept: application/json' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "name": "Azure Blob Storage Base Connection",
+  "auth": {
+    "specName": "Service principal authentication",
+    "params": {
+      "tenantId": "<Add tenant ID>",
+      "clientId": "<Add client ID>",
+      "clientSecret": "<Add client secret>",
+      "storageAccountName": "<Add storage account name>"
+    }
+  },
+  "connectionSpec": {
+    "id": "6d6b59bf-fb58-4107-9064-4d246c0e5bb2", // Azure Blob Storage connection spec
+    "version": "1.0"
+  }
+}'
+```
+
++++
+
+**Migrate an existing base connection to Entra ID Service Principal authentication**
+
+To migrate an existing base connection from connection string authentication to Entra ID Service Principal authentication, use the `PATCH` operation on the base connection.
+
+>[!IMPORTANT]
+>
+>The `If-Match` header is required when making a `PATCH` request. The value for this header is the unique version of the base connection you want to update. The etag value updates with every successful update of a flow entity such as base connection, dataflow, target connection, and others.
+>
+> To get the latest version of the etag value, perform a GET request to the `https://platform.adobe.io/data/foundation/flowservice/connections/{ID}` endpoint, where `{ID}` is the base connection ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the example below when making `PATCH` requests.
+
+**Request**
+
++++Migrate [!DNL Azure Blob Storage] base connection to Entra ID Service Principal authentication - Request
+
+```shell
+curl --request PATCH \
+  --url 'https://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}' \
+  --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+  --header 'Content-Type: application/json' \
+  --header 'If-Match: "{ETAG_HERE}"' \
+  --header 'x-api-key: {API_KEY}' \
+  --header 'x-gw-ims-org-id: {ORG_ID}' \
+  --header 'x-sandbox-name: {SANDBOX_NAME}' \
+  --data '[
+  {
+    "op": "replace",
+    "path": "/auth",
+    "value": {
+      "specName": "Service principal authentication",
+      "params": {
+        "tenantId": "<Add tenant ID>",
+        "clientId": "<Add client ID>",
+        "clientSecret": "<Add client secret>",
+        "storageAccountName": "<Add storage account name>"
+      }
+    }
+  }
+]'
+```
+
++++
+
 >[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 **Request** 

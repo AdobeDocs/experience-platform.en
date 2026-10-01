@@ -90,6 +90,35 @@ Notice how the URL, headers, and request bodies differ between the three example
 
 Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{segment.name}}` are used in the URL, and in other examples these are used in the headers or request body. Their usage depends on your marketing API specifications.
 
+>[!TIP]
+>
+>Header values in audience metadata templates support [Pebble templating](/help/destinations/destination-sdk/functionality/destination-server/message-format.md#using-templating). For example, if your destination uses Basic authentication and requires a specific Base64-encoded `Authorization` header, add the header to each operation block that calls your API and requires authentication, such as `create`, `update`, `delete`, `validate`, `createDestination`, `updateDestination`, and `deleteDestination`:
+>
+>```json
+>{
+>  "metadataTemplate": {
+>    "create": {
+>      "headers": [
+>        {
+>          "header": "Authorization",
+>          "value": "Basic {{ (authData.username + ':' + authData.password) | base64encode }}"
+>        }
+>      ]
+>    },
+>    "update": {
+>      "headers": [
+>        {
+>          "header": "Authorization",
+>          "value": "Basic {{ (authData.username + ':' + authData.password) | base64encode }}"
+>        }
+>      ]
+>    }
+>  }
+>}
+>```
+>
+>For more information, see [Customize the Basic authentication header](/help/destinations/destination-sdk/functionality/destination-configuration/customer-authentication.md#basic-override).
+
 +++Streaming example 1
 
 ```json

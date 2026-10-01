@@ -71,7 +71,7 @@ To create an account audience, select **[!UICONTROL Create audience]** on the [!
 
 ![The [!UICONTROL Create audience] button is highlighted on the account audience browse page.](../images/types/account/select-create-audience.png)
 
-Segment Builder appears. The account attributes and audiences are displayed on the left navigation bar. Under the [!UICONTROL Attributes] tab, you can add both Experience-Platform-created and custom attributes.
+Audience Builder appears. The account attributes and audiences are displayed on the left navigation bar. Under the [!UICONTROL Attributes] tab, you can add both Experience-Platform-created and custom attributes.
 
 ![Segment Builder is displayed. Note that only the attributes and audiences are displayed.](../images/types/account/segment-builder.png)
 
@@ -79,11 +79,11 @@ Under the [!UICONTROL Audiences] tab, you can add previously created people-base
 
 ![The Audiences tab within the Segment Builder is highlighted.](../images/types/account/audiences.png)
 
-For more information on using Segment Builder, please read the [Segment Builder UI guide](../ui/segment-builder.md).
+For more information on using Audience Builder, please read the [Audience Builder UI guide](../ui/audience-builder.md).
 
 ### Establish relationships {#relationships}
 
-By default for account audiences, the Segment Builder UI displays the direct relationship between an account and a person. However, other relationship types are available for account audiences.
+By default for account audiences, the Audience Builder UI displays the direct relationship between an account and a person. However, other relationship types are available for account audiences.
 
 To use the alternate relationship types, select ![the settings icon](../../images/icons/settings.png).
 
