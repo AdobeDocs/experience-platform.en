@@ -118,6 +118,38 @@ When exporting *audience data*, [!DNL Experience Platform] creates a `.csv`, `pa
 
 When exporting *datasets*, [!DNL Experience Platform] creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
 
+## File encryption {#file-encryption}
+
+### Encryption standard
+
+When you provide an **[!UICONTROL Encryption key]**, Experience Platform encrypts each exported file with standard OpenPGP, as defined by [RFC 4880](https://www.rfc-editor.org/rfc/rfc4880). The encrypted file is a binary OpenPGP message with a `.gpg` extension. You can decrypt the file with any standard OpenPGP client, including GnuPG with the `gpg --decrypt` command.
+
+The implementation uses standard OpenPGP without a proprietary variant.
+
+### Key handling
+
+SFTP uses hybrid encryption:
+
+* A random AES-128 session key encrypts the file content.
+* The session key is encrypted with your RSA public key. RSA does not encrypt the file content directly.
+* A new session key is generated for each file. Each encrypted file starts with a random 16-byte prefix that randomizes the cipher state, so no key material is reused across an export.
+
+### Encryption process
+
+The encryption process uses AES-128 in OpenPGP CFB mode. The payload is ZLIB-compressed before encryption. GCM and CBC modes are not supported. No RSA key size restriction is enforced. You can use 2048-bit, 3072-bit, or 4096-bit RSA keys. Provide the public key as a Base64-encoded key or a raw ASCII-armored PGP public key block.
+
+### Key custody
+
+Adobe stores only your public key. Adobe does not request, transmit, or store your private key. Experience Platform encrypts outbound files but does not decrypt them.
+
+### Integrity protection
+
+Files are encrypted but not digitally signed. Integrity is protected by the OpenPGP Modification Detection Code (MDC), which uses SHA-1 for this packet type. The MDC detects tampering and is not a digital signature. This protection does not rely on SHA-1 collision resistance.
+
+### Transport encryption
+
+File encryption applies to all destinations. Encryption is applied as a stream while each file is written to the destination, so no unencrypted file is ever placed in your SFTP location. File encryption is separate from transport encryption. SFTP delivery uses SSH.
+
 ## SFTP server connection requirements {#sftp-connection-requirements}
 
 To ensure successful data exports, you must configure your target SFTP server to allow a sufficient number of concurrent connections. If your SFTP server limits the number of simultaneous connections, you may experience export job failures, especially when exporting multiple audiences or datasets at the same time.
@@ -132,16 +164,21 @@ Properly configuring your SFTP server's connection limits helps prevent failed e
 
 ## Supported SSH algorithms {#supported-ssh-algorithms}
 
-If your SFTP server restricts which SSH algorithms it accepts, ensure it supports at least one algorithm from each category in the table below.
+If your SFTP server restricts which SSH algorithms it accepts, ensure it supports at least one algorithm from each category in the table below. The connection negotiates the standard intersection of the client and server algorithm lists. No additional algorithm restrictions are imposed. Each list is in order of preference.
 
 | Algorithm type | Supported algorithms |
 |---|---|
-| Key exchange | `curve25519-sha256`, `curve25519-sha256@libssh.org`, `ecdh-sha2-nistp256`, `ecdh-sha2-nistp384`, `diffie-hellman-group-exchange-sha256`, `diffie-hellman-group16-sha512` |
-| Host key | `ssh-rsa`, `ssh-ed25519`, `ecdsa-sha2-nistp256`, `rsa-sha2-512` |
-| Encryption (cipher) | `aes128-cbc`, `aes128-ctr`, `aes192-ctr`, `aes256-cbc`, `aes256-ctr` |
-| Message authentication code (MAC) | `hmac-sha1`, `hmac-sha2-256`, `hmac-sha2-256-etm@openssh.com` |
+| Key exchange (KEX) | `curve25519-sha256`, `curve25519-sha256@libssh.org`, `ecdh-sha2-nistp256`, `ecdh-sha2-nistp384`, `ecdh-sha2-nistp521`, `diffie-hellman-group-exchange-sha256`, `diffie-hellman-group16-sha512`, `diffie-hellman-group18-sha512`, `diffie-hellman-group14-sha256` |
+| Host key (server host key) | `ssh-ed25519`, `ecdsa-sha2-nistp256`, `ecdsa-sha2-nistp384`, `ecdsa-sha2-nistp521`, `rsa-sha2-512`, `rsa-sha2-256` |
+| Cipher | `aes128-ctr`, `aes192-ctr`, `aes256-ctr`, `aes128-gcm@openssh.com`, `aes256-gcm@openssh.com` <br>The same ciphers apply in both directions, client to server and server to client. |
+| Message authentication code (MAC) | `hmac-sha2-256-etm@openssh.com`, `hmac-sha2-512-etm@openssh.com`, `hmac-sha1-etm@openssh.com`, `hmac-sha2-256`, `hmac-sha2-512`, `hmac-sha1` <br>AES-GCM ciphers do not use a separate MAC. |
+| Client public key authentication | `ssh-ed25519`, `ecdsa-sha2-nistp256`, `ecdsa-sha2-nistp384`, `ecdsa-sha2-nistp521`, `rsa-sha2-512`, `rsa-sha2-256` |
 
 {style="table-layout:auto"}
+
+The SFTP destination uses an SSH library embedded in the application. It does not use the OpenSSH client, so `~/.ssh/config` and equivalent files do not apply. Adobe acts as the SSH client. You or your SFTP provider manage the server configuration.
+
+For a restricted SFTP server, run a test export before using the connection in production. Verify a test export with your own OpenPGP tooling before relying on the connection in production.
 
 ## Connect to the destination {#connect}
 
