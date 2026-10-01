@@ -31,7 +31,7 @@ For more information, read the [[!DNL Snapchat Ads] source overview](../../../..
 
 Before you connect [!DNL Snapchat Ads] to Experience Platform, ensure that you have an existing [!DNL Snapchat] ad account with campaigns and ads already set up. For more information, read the [[!DNL Snapchat Ads] source overview](../../../../connectors/advertising/snapchat-ads.md#prerequisites).
 
-You must also have permission to authorize third-party access to your [!DNL Snapchat] [!UICONTROL Ads Manager Organisation], since account creation requires you to sign in to [!DNL Snapchat] and grant access.
+You must also have permission to authorize third-party access to your [!DNL Snapchat] [!UICONTROL Ads Manager Organization], since account creation requires you to sign in to [!DNL Snapchat] and grant access.
 
 ## Connect your [!DNL Snapchat Ads] account
 
@@ -50,9 +50,9 @@ Select **[!UICONTROL Connect Snapchat Ads account]** to open [!DNL Snapchat]'s a
 
 ![The new account screen with the account name, description, and "Connect Snapchat Ads account" option.](../../../../images/tutorials/create/advertising/snapchat-ads/new.png)
 
-On the [!DNL Snapchat] authorization page, review the requested permissions and select **[!UICONTROL Continue]** to grant Experience Platform access to your **[!UICONTROL Ads Manager Organisation]**.
+On the [!DNL Snapchat] authorization page, review the requested permissions and select **[!UICONTROL Continue]** to grant Experience Platform access to your **[!UICONTROL Ads Manager Organization]**.
 
-![The Snapchat authorization page requesting access to the Ads Manager Organisation.](../../../../images/tutorials/create/advertising/snapchat-ads/authorized.png)
+![The Snapchat authorization page requesting access to the Ads Manager Organization.](../../../../images/tutorials/create/advertising/snapchat-ads/authorized.png)
 
 Once authorized, select **[!UICONTROL Connect to source]** to validate and create the account, then select **[!UICONTROL Next]**. An account can be reused across multiple dataflows, so you authorize your [!DNL Snapchat] account only once per account.
 

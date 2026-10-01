@@ -18,7 +18,7 @@ The [!DNL Snapchat Ads] source is an Adobe Experience Platform paid media connec
 
 The connector publishes the data that it captures to Paid Media datasets. Customer Journey Analytics uses these datasets to provide insights into your [!DNL Snapchat] marketing campaigns.
 
-To connect your account, you sign in to [!DNL Snapchat] and authorize Experience Platform to access your [!UICONTROL Ads Manager Organisation]. You do not need to generate or provide any API credentials manually.
+To connect your account, you sign in to [!DNL Snapchat] and authorize Experience Platform to access your [!UICONTROL Ads Manager Organization]. You do not need to generate or provide any API credentials manually.
 
 ## How it works
 
@@ -123,6 +123,12 @@ Each metrics record maps to the identifier of the entity that it measures.
 | Ad group | `paidMedia.adGroupID` |
 | Ad | `paidMedia.adID` |
 | Asset | `paidMedia.assetID` |
+
+<!--
+## Troubleshooting {#troubleshooting}
+
+TODO: Add troubleshooting guidance when available.
+-->
 
 ## Next steps
 
