@@ -8,7 +8,7 @@ hide: true
 
 >[!AVAILABILITY]
 >
->The Deduplicate operators is in **limited availability**. Contact Adobe Customer Care for more information.
+>The Deduplicate operator is in **limited availability**. Contact Adobe Customer Care for more information.
 
 The **[!UICONTROL Deduplicate]** operator lets you remove repeated values from a payload, array, or profiles before continuing through the Audience Composition workflow.
 
@@ -19,7 +19,7 @@ You can use this operator to:
 - Reduce duplicate entries before ranking or exclusion logic
 - Prepare data for downstream audience evaluation
 
-## Usage
+## Usage {#usage}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_dedupe"
@@ -59,6 +59,6 @@ If multiple fields are tied, you can add a tie-breaker field as a way to determi
 | Attribute | The tiebreaking attribute that you want to rank the profiles by. |
 | Sort direction | The sort order for the tiebreaker field. This can either be ascending or descending. |
 
-## Next steps
+## Next steps {#next-steps}
 
 After reading this guide, you now know how to use the Deduplicate operator. For more information on other operators, read the [Audience Composition guide](/help/segmentation/ui/audience-composition.md). To learn how to use the Payload rank and Payload exclude operators, read the [Payload rank and Payload exclude operators guide](/help/segmentation/ui/payload-rank-exclude.md).
