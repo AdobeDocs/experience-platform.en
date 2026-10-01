@@ -78,12 +78,9 @@ A dialog appears that allows you to apply and manage data usage labels at the sc
 >
 >Labels can no longer be applied to fields at the dataset level. This workflow has been deprecated in favour of applying labels at the schema level. Any labels previously applied at the dataset object level will still be supported through the Experience Platform UI until 31st May 2024. To ensure that your labels are consistent across all schemas, any labels previously attached to fields at the dataset level must be migrated to the schema level by you over the coming year. See the documentation for instructions on [how to migrate previously applied labels from the dataset to the schema level](../e2e.md#migrate-labels).
 
-To apply data usage labels to the entire dataset or manage labels at the dataset level, select **[!UICONTROL Datasets]** in the left navigation followed by the dataset name. Then select the **[!UICONTROL Data Governance]** tab and the pencil icon (![A pencil icon.](/help/images/icons/edit.png)) to open the [!UICONTROL Apply access and data governance labels] dialog.
+To apply data usage labels to the entire dataset or manage labels at the dataset level, select **[!UICONTROL Datasets]** in the left navigation followed by the dataset name. Then select the **[!UICONTROL Data Governance]** tab and the edit icon (![The edit icon.](/help/images/icons/edit.png)) to open the [!UICONTROL Apply access and data governance labels] dialog.
 
-![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with Data Governance highlighted.](../images/labels/dataset-governance.png)
-
-
-![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with the edit pencil icon highlighted.](../images/labels/dataset-level-edit.png)
+![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with Data Governance and the edit icon highlighted.](../images/labels/dataset-level-edit.png)
 
 The **[!UICONTROL Apply access and data governance labels]** dialog opens. Within the dialog, check the boxes next to the labels you wish to apply to the dataset. Remember that these labels will be inherited by all fields within the dataset. The [!UICONTROL Applied Labels] section of the [!UICONTROL Summary] panel updates as you check each box, showing the labels you have chosen. Once you have selected the desired labels, select **[!UICONTROL Save]**.
 
