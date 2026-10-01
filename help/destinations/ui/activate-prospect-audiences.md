@@ -67,8 +67,8 @@ Follow the instructions to select a destination where you can export your datase
 1. Select **[!UICONTROL Data type Prospects]**, followed by the destination connection that you want to export datasets to, then select **[!UICONTROL Next]**.
 
    >[!TIP]
-   > 
-   >If you want to set up a new destination to activate prospect audiences, select **[!UICONTROL Configure new destination]** to trigger the [Connect to destination](/help/destinations/ui/connect-destination.md) workflow. 
+   >
+   >If you want to set up a new destination to activate prospect audiences, select **[!UICONTROL Configure new destination]** to trigger the [Connect to destination](/help/destinations/ui/connect-destination.md) workflow.
 
    ![Destination activation workflow with Prospects control highlighted.](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
 

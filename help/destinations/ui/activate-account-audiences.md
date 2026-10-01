@@ -71,7 +71,7 @@ Follow the instructions to select a destination where you can export your datase
 1. Select **[!UICONTROL Data type Accounts]**, followed by the destination connection that you want to export datasets to, then select **[!UICONTROL Next]**.
 
    >[!TIP]
-   > 
+   >
    >If you want to set up a new destination to activate account audiences, select **[!UICONTROL Configure new destination]** to trigger the [Connect to destination](/help/destinations/ui/connect-destination.md) workflow and [select accounts as data type](/help/destinations/ui/connect-destination.md#segment-activation-or-dataset-exports).
 
    ![Destination activation workflow with accounts control highlighted.](/help/destinations/assets/ui/activate-account-audiences/activate-account-audiences-highlighted.png)

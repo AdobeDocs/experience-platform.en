@@ -91,6 +91,7 @@ role: Developer
     - [Acxiom Prospecting Data Import](connectors/data-partners/acxiom-prospecting-data-import.md)
     - [Algolia User Profiles](connectors/data-partners/algolia-user-profiles.md)
     - [Bombora Intent](connectors/data-partners/bombora.md)
+    - [Demandbase](connectors/data-partners/demandbase-b2b.md)
     - [Demandbase Intent](connectors/data-partners/demandbase.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - Data sharing {#data-sharing}
@@ -313,6 +314,7 @@ role: Developer
       - [Acxiom Prospecting Data Import](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - [Algolia User Profiles](tutorials/ui/create/data-partners/algolia-user-profiles.md)
       - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
+      - [Demandbase](tutorials/ui/create/data-partners/demandbase-b2b.md)
       - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
     - Data sharing {#data-sharing}
