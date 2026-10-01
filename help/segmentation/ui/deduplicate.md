@@ -10,11 +10,11 @@ hide: true
 >
 >The Deduplicate operators is in **limited availability**. Contact Adobe Customer Care for more information.
 
-The **[!UICONTROL Deduplicate]** operator lets you remove repeated values from a payload or array before continuing through the Audience Composition workflow.
+The **[!UICONTROL Deduplicate]** operator lets you remove repeated values from a payload, array, or profiles before continuing through the Audience Composition workflow.
 
 You can use this operator to:
 
-- Remove repeated IDs, values, or records from an array
+- Remove repeated IDs, values, or records from an array, payload, or profile
 - Clean payload data before other operators run
 - Reduce duplicate entries before ranking or exclusion logic
 - Prepare data for downstream audience evaluation
