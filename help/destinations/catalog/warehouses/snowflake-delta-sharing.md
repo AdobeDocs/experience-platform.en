@@ -1,7 +1,6 @@
 ---
 title: Snowflake Delta Sharing connection
 description: Use zero-copy data sharing to share datasets from Adobe Experience Platform to your Snowflake account through the open Delta Sharing protocol.
-hide: true
 ---
 # [!DNL Snowflake Delta Sharing] connection {#snowflake-delta-sharing}
 
