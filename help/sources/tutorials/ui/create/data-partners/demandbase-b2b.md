@@ -18,10 +18,6 @@ role_v2:
 
 Read this guide to learn how to connect your [!DNL Demandbase] account to Adobe Experience Platform using the *[!UICONTROL Sources]* workspace in the Experience Platform UI.
 
->[!NOTE]
->
->This tutorial covers the [!DNL Demandbase] account source connector for B2B account data, not the [!DNL Demandbase Intent] source. To ingest intent data, follow the [Demandbase Intent connection tutorial](/help/sources/tutorials/ui/create/data-partners/demandbase.md).
-
 ## Get started {#get-started}
 
 This tutorial requires a working understanding of the following components of Experience Platform:
