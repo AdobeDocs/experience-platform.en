@@ -4,6 +4,10 @@ description: Learn how to connect Google Ads (V2) to Adobe Experience Platform u
 ---
 # [!DNL Google Ads] (V2)
 
+>[!IMPORTANT]
+>
+>The [!DNL Google Ads] source is available as part of the [!DNL Customer Journey Analytics] SKU.
+
 [!DNL Google Ads] (V2) is an Adobe Experience Platform paid media source connector that ingests advertising account, campaign, ad group, ad, asset, experience, and performance data from the [!DNL Google Ads] API into Experience Platform.
 
 The connector maps [!DNL Google Ads] data to standardized paid media Experience Data Model (XDM) structures, allowing you to analyze [!DNL Google Ads] data alongside data from other advertising networks, web properties, commerce systems, and customer applications.
@@ -176,4 +180,3 @@ The connector maps [!DNL Google Ads] API enum values to XDM values using exact m
 ## Next steps
 
 After you have confirmed your [!DNL Google Ads] credentials and account-access model, continue by [creating a connection to [!DNL Google Ads] using the Experience Platform UI](../../tutorials/ui/create/advertising/google-ads.md).
-
