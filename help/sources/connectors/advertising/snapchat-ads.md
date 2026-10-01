@@ -12,7 +12,7 @@ badge: Beta
 
 >[!IMPORTANT]
 >
->The [!DNL Snapchat Ads] source is available as part of the Customer Journey Analytics SKU.
+>The [!DNL Snapchat Ads] source is available as part of the [!DNL Customer Journey Analytics] SKU.
 
 The [!DNL Snapchat Ads] source is an Adobe Experience Platform paid media connector. Use it to connect your [!DNL Snapchat] ad accounts and ingest campaign, ad, and performance data, such as engagement metrics, into Experience Platform.
 

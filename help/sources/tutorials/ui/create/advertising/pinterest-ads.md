@@ -18,6 +18,10 @@ role_v2:
 >
 >The [!DNL Pinterest Ads] source is in beta. Read the [Sources overview](/help/sources/home.md#terms-and-conditions) for the terms and conditions.
 
+>[!IMPORTANT]
+>
+>The [!DNL Pinterest Ads] source is available as part of the [!DNL Customer Journey Analytics] SKU.
+
 Connect your [!DNL Pinterest Ads] account to [!DNL Adobe Experience Platform] using the **[!UICONTROL Sources]** workspace. Create a dataflow to ingest paid media metadata and performance metrics into automatically assigned datasets.
 
 ## Prepare your account {#getting-started}
