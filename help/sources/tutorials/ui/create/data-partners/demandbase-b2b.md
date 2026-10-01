@@ -110,9 +110,9 @@ concat("{SourceAccount}.sourceId", "-", "{SourceAccount}.sourceType", "@13723.De
 
 >[!IMPORTANT]
 >
->Replace `13723` with your own [!DNL Demandbase] instance ID so the identity namespace correctly reflects your organization's instance.
+>Replace `13723` in the expression with your own [!DNL Demandbase] instance ID. Map the same instance ID to `accountKey.sourceInstanceID` so the identity fields remain consistent.
 
-Select the checkmark to preview the result, and then select **[!UICONTROL Save]**.
+To preview the result, select **[!UICONTROL Preview]**, and then select **[!UICONTROL Save]**.
 
 ![The calculated field editor for the accountKey.sourceKey identity field.](../../../../images/tutorials/create/demandbase-b2b/calculated-field.png)
 
