@@ -100,9 +100,11 @@ A successful response returns HTTP status 200 with a list of schedules for the s
             "state": "active",
             "type": "batch_segmentation",
             "schedule": "0 0 1 * * ?",
+            "frequency": "daily",
             "properties": {
-                "segments": []
+                "segments": ["sampleSegmentDefinitionId"]
             },
+            "owner": "user",
             "createEpoch": 1573158851,
             "updateEpoch": 1574365202
         }
@@ -113,16 +115,23 @@ A successful response returns HTTP status 200 with a list of schedules for the s
 }
 ```
 
-| Property | Description  |
-| -------- | ------------ |
+| Property | Description |
+| -------- | ----------- |
 | `_page.totalCount` | The total number of schedules returned. |
 | `_page.pageSize` | The size of the page of schedules. |
+| `children.id` | The ID of the schedule. |
+| `children.imsOrgId` | The organization ID of the schedule. |
+| `children.sandbox` | An object containing sandbox information for the schedule. |
 | `children.name` | The name of the schedule as a string. |
-| `children.type` | The type of job as a string. The two supported types are "batch_segmentation" and "export". |
-| `children.properties` | An object containing additional properties related to the schedule. |
-| `children.properties.segments` | Using `["*"]` ensures all segments are included. |
-| `children.schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day. |
 | `children.state` | A string containing the schedule state. The two supported states are "active" and "inactive". By default, the state is set to "inactive". |
+| `children.type` | The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
+| `children.schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day. |
+| `children.frequency` | The frequency that the schedule runs. Possible values include `daily`, `weekly`, `monthly`, and `yearly`. |
+| `children.properties` | An object containing additional properties related to the schedule. |
+| `children.properties.segments` | The IDs of the segment definitions that belong to the schedule. |
+| `children.owner` | The owner of the schedule. Possible values include `user` if the schedule is user-created and `system` if the schedule is system-created. |
+| `children.createEpoch` | The epoch creation time for the schedule in seconds. |
+| `children.updateEpoch` | The epoch time the schedule was last updated in seconds. |
 
 +++
 
@@ -149,26 +158,26 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
 {
-    "name":"profile-default",
-    "type":"batch_segmentation",
-    "properties":{
-        "segments":[
-            "*"
+    "name": "profile-default",
+    "type": "batch_segmentation",
+    "properties": {
+        "segments": [
+            "sampleSegmentDefinitionId"
         ]
     },
-    "schedule":"0 0 1 * * ?",
-    "state":"inactive"
+    "schedule": "0 0 1 * * ?",
+    "state": "inactive"
 }'
 ```
 
-| Property | Description  |
-| -------- | ------------ |
+| Property | Description |
+| -------- | ----------- |
 | `name` | **Required.** The name of the schedule as a string. |
-| `type` | **Required.** The type of job as a string. The two supported types are "batch_segmentation" and "export". |
+| `type` | **Required.** The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
 | `properties` | **Required.** An object containing additional properties related to the schedule. |
-| `properties.segments` | **Required when `type` equals "batch_segmentation".** Using `["*"]` ensures all segments are included. |
-| `schedule` | *Optional.* A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day. <br><br>If this string is not supplied, a system-generated schedule will be automatically generated. |
-| `state` | *Optional.* A string containing the schedule state. The two supported states are "active" and "inactive". By default, the state is set to "inactive". |
+| `properties.segments` | **Required when `type` equals "batch_segmentation".**  The IDs of the segment definitions you want to include as part of the schedule. |
+| `schedule` | **Required.** A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. The job schedule will determine the schedule's frequency. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day. |
+| `state` | *Optional.* A string containing the schedule state. The two supported states are `active` and `inactive`. By default, the state is set to `inactive`. |
 
 +++
 
@@ -192,15 +201,36 @@ A successful response returns HTTP status 200 with details of your newly created
     "state": "inactive",
     "type": "batch_segmentation",
     "schedule": "0 0 1 * * ?",
+    "frequency": "daily",
     "properties": {
         "segments": [
-            "*"
+            "sampleSegmentDefinitionId"
         ]
     },
+    "owner": "user",
     "createEpoch": 1568267948,
     "updateEpoch": 1568267948
 }
 ```
+
+| Property | Description |
+| -------- | ----------- |
+| `id` | The ID of the newly created schedule. |
+| `imsOrgId` | The organization ID of the user who created the schedule. |
+| `sandbox` | An object that contains the sandbox information for the schedule. For more information about sandboxes, read the [sandboxes overview](/help/sandboxes/home.md). |
+| `sandbox.sandboxId` | The ID of the sandbox that contains your schedule. |
+| `sandbox.sandboxName` | The name of the sandbox that contains your schedule. |
+| `sandbox.type` | The sandbox's type. Possible values include `production` and `development`. |
+| `sandbox.default` | A boolean that shows whether or not the sandbox is the default sandbox. |
+| `name` | The name that you gave to the schedule. |
+| `state` | The state of the schedule. Possible values include `active` and `inactive`. If you didn't set this as part of the request body, the state will be set to `inactive`. |
+| `type` | The type of job for the schedule. Possible values include `batch_segmentation` and `export`. |
+| `schedule` | The cron expression that represents when your schedule runs. For more information about creating cron expressions, read the the [cron expression format section](#appendix). |
+| `frequency` | The frequency in which the schedule runs. This is directly dependent on the schedule's cron expression. Possible values include `daily`, `weekly`, `monthly`, and `yearly`. |
+| `properties` | An object that contains the segment definition IDs for the schedule, if the schedule is of `batch_segmentation` type. |
+| `owner` | The type of entity that owns the schedule. Since you created the schedule, this value is `user`. |
+| `createEpoch` | The epoch creation time for the schedule in seconds. |
+| `updateEpoch` | The epoch time the schedule was last updated in seconds. |
 
 +++
 
@@ -252,24 +282,37 @@ A successful response returns HTTP status 200 with detailed information about th
     "state": "inactive",
     "type": "batch_segmentation",
     "schedule": "0 0 1 * * ?",
+    "frequency": "daily",
     "properties": {
         "segments": [
-            "*"
+            "sampleSegmentDefinitionId"
         ]
     },
+    "owner": "user",
     "createEpoch": 1568267948,
     "updateEpoch": 1568267948
 }
 ```
 
-| Property | Description  |
-| -------- | ------------ |
+| Property | Description |
+| -------- | ----------- |
+| `id` | The ID of the schedule. |
+| `imsOrgId` | The ID of the organization the schedule belongs to. |
+| `sandbox` | An object that contains the sandbox information for the schedule. For more information about sandboxes, read the [sandboxes overview](/help/sandboxes/home.md). |
+| `sandbox.sandboxId` | The ID of the sandbox that contains your schedule. |
+| `sandbox.sandboxName` | The name of the sandbox that contains your schedule. |
+| `sandbox.type` | The sandbox's type. Possible values include `production` and `development`. |
+| `sandbox.default` | A boolean that shows whether or not the sandbox is the default sandbox. |
 | `name` | The name of the schedule as a string. |
-| `type` | The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
-| `properties` | An object containing additional properties related to the schedule. |
-| `properties.segments` | Using `["*"]` ensures all segments are included. |
-| `schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day.|
 | `state` | A string containing the schedule state. The two supported states are `active` and `inactive`. By default, the state is set to `inactive`. |
+| `type` | The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
+| `schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day. |
+| `frequency` | The frequency that the schedule runs. This value is directly dependent on the schedule's cron expression. Possible values include `daily`, `weekly`, `monthly`, and `yearly`. |
+| `properties` | An object containing additional properties related to the schedule. |
+| `properties.segments` | The list of segment definition IDs that are part of the schedule. |
+| `owner` | The type of entity that owns the schedule. If a user created the schedule, this value is `user`. If the schedule was a system-created schedule, this value is `system`. |
+| `createEpoch` | The epoch creation time for the schedule in seconds. |
+| `updateEpoch` | The epoch time the schedule was last updated in seconds. |
 
 +++
 
@@ -394,6 +437,244 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
 **Response**
 
 A successful response returns HTTP status 204 (No Content).
+
+## Add audiences to schedule {#add-audiences}
+
+You can add audiences to a specific schedule by making a POST request to the `/config/schedules/add-audiences` endpoint.
+
+**API format**
+
+```http
+POST /config/schedules/add-audiences
+```
+
+**Request**
+
++++ A sample request to add audiences to the schedule.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/config/schedules/add-audiences/
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '
+ {
+    "id": "4e538382-dbd8-449e-988a-4ac639ebe72b",
+    "segments": [
+        "sampleSegmentDefinitionId"
+    ]
+ }
+ '
+```
+
++++
+
+| Property | Description |
+| -------- | ----------- |
+| `id` | The ID of the schedule you want to add the audiences to. |
+| `segments` | An array of segment definition IDs you want to add to the designated schedule. |
+
+**Response**
+
+A successful response returns HTTP status 200 with detailed information of the operation.
+
++++ A sample response when adding audiences to the schedule.
+
+```json
+{
+    "added:" [
+        "sampleSegmentDefinitionId"
+    ],
+    "existing": [],
+    "invalid": [],
+    "segmentCount": {
+        "previous": 0,
+        "current": 1,
+        "diff": 1
+    }
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `added` | An array containing the IDs of the segment definitions that were added to the schedule. |
+| `existing` | An array containing the IDs of the segment definitions that already were on the schedule. |
+| `invalid` | An array containing invalid segment definition IDs that were part of the request body. |
+| `segmentCount` | An object that contains the number of segment definitions that were previously part of the schedule (`previous`), the number of segment definitions that are now part of the schedule (`current`), and the difference between those two values (`diff`). |
+
++++
+
+## Remove audiences from schedule {#remove-audiences}
+
+You can remove audiences from a specific schedule by making a POST request to the `/config/schedules/remove-audiences` endpoint.
+
+**API format**
+
+```http
+POST /config/schedules/remove-audiences
+```
+
+**Request**
+
++++ A sample request to remove audiences from the schedule.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/config/schedules/remove-audiences/
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '
+ {
+    "id": "4e538382-dbd8-449e-988a-4ac639ebe72b",
+    "segments": [
+        "sampleSegmentDefinitionId"
+    ]
+ }
+ '
+```
+
++++
+
+| Property | Description |
+| -------- | ----------- |
+| `id` | The ID of the schedule you want to remove the audiences from. |
+| `segments` | An array of segment definition IDs you want to remove from the designated schedule. |
+
+**Response**
+
+A successful response returns HTTP status 200 with detailed information of the operation.
+
++++ A sample response when removing audiences from the schedule.
+
+```json
+{
+    "removed": [
+        "sampleSegmentDefinitionId"
+    ],
+    "notFound": [],
+    "segmentCount": {
+        "previous": 2,
+        "current": 1,
+        "diff": -1
+    }
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `removed` | An array containing the IDs of the segment definitions that were removed from the schedule. |
+| `notFound` | An array containing the IDs of segment definitions that could not be found within the schedule. |
+| `segmentCount` | An object that contains the number of segment definitions that were previously part of the schedule (`previous`), the number of segment definitions that are now part of the schedule (`current`), and the difference between those two values (`diff`). |
+
++++
+
+## Get audience map {#get-audience-map}
+
+You can get the audience map of your audiences by making a POST request to the `/config/schedules/audience-map` endpoint. The audience map represents a mapping between the segment definition IDs and the schedules those IDs belong to.
+
+**API format**
+
+```http
+POST /config/schedules/audience-map
+```
+
+**Request**
+
++++ A sample request to get the audience map for the corresponding segment definition IDs.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/config/schedules/audience-map/
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '
+ {
+    "segments": [
+        "sampleSegmentDefinitionId",
+        "sampleSegmentDefinition2",
+        "sampleSegmentDefinition3"
+    ]
+ }
+ '
+```
+
++++
+
+| Property | Description |
+| -------- | ----------- |
+| `segments` | An array of segment definition IDs that you want to retrieve the schedule information for. |
+
+**Response**
+
+A successful response returns HTTP status 200 with detailed information about the audience and schedule mapping.
+
++++ A sample response when getting the audience map.
+
+```json
+{
+    "audienceMap": {
+        "sampleSegmentDefinitionId": [
+            "4e538382-dbd8-449e-988a-4ac639ebe72b"
+        ],
+        "sampleSegmentDefinition2": [],
+        "sampleSegmentDefinition3": []
+    },
+    "schedules": {
+        "4e538382-dbd8-449e-988a-4ac639ebe72b": {
+            "name": "Sample schedule",
+            "schedule": "0 0 18 * * ?",
+            "frequency": "daily"
+        }
+    }
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `audienceMap` | A mapping of segment definition IDs with the schedules they belong to. |
+| `schedules` | An object that contains information about the schedules that are listed within the audience map. |
+
++++
+
+## Trigger schedule job {#trigger}
+
+You can manually trigger a schedule to activate by making a POST request to the `/config/schedules/trigger` endpoint.
+
+**API format**
+
+```http
+POST /config/schedules/trigger
+```
+
+**Request**
+
++++ A sample request to trigger a schedule for activation.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/config/schedules/trigger/
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '
+ {
+    "id": "4e538382-dbd8-449e-988a-4ac639ebe72b"
+ }
+ '
+```
+
++++
+
+| Property | Description |
+| -------- | ----------- |
+| `id` | The ID of the schedule you want to activate. You **must** activate schedules one at a time. |
+
+**Response**
+
+A successful response returns HTTP status 200 with no content.
 
 ## Next steps
 

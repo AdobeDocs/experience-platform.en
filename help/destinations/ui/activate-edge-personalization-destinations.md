@@ -130,7 +130,7 @@ After you have created your destination connection, you must create an [!DNL Act
 
 >[!IMPORTANT]
 >
->Currently, edge destinations only support the activation of audiences that use the [Active-on-Edge Merge Policy](../../segmentation/ui/segment-builder.md#merge-policies) set as default. If you map audiences which use a different merge policy to edge destinations, those audiences will not be evaluated.
+>Currently, edge destinations only support the activation of audiences that use the [Active-on-Edge Merge Policy](../../segmentation/ui/audience-builder.md#merge-policies) set as default. If you map audiences which use a different merge policy to edge destinations, those audiences will not be evaluated.
 
 Follow the instructions on [creating a merge policy](../../profile/merge-policies/ui-guide.md#create-a-merge-policy), and make sure to enable the **[!UICONTROL Active-On-Edge Merge Policy]** toggle.
 
@@ -138,7 +138,7 @@ Follow the instructions on [creating a merge policy](../../profile/merge-policie
 
 After you have created the [!DNL Active-On-Edge] merge policy, you must create a new audience in Experience Platform.
 
-Follow the [audience builder](../../segmentation/ui/segment-builder.md) guide to create your new audience, and make sure to [assign it](../../segmentation/ui/segment-builder.md#merge-policies) the [!DNL Active-On-Edge] merge policy that you created in the previous step.
+Follow the [audience builder](../../segmentation/ui/audience-builder.md) guide to create your new audience, and make sure to [assign it](../../segmentation/ui/audience-builder.md#merge-policies) the [!DNL Active-On-Edge] merge policy that you created in the previous step.
 
 ### Create a destination connection {#connect-destination}
 

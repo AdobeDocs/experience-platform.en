@@ -35,6 +35,7 @@ role: Developer
     - {hide-from-toc} [Google Ads (V2) connector](connectors/advertising/google-ads.md)
     - [Meta Ads connector](connectors/advertising/meta-ads.md)
     - {hide-from-toc} [Pinterest Ads](connectors/advertising/pinterest-ads.md)
+    - [Snapchat Ads](connectors/advertising/snapchat-ads.md)
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
     - [Pendo](connectors/analytics/pendo-webhook.md)
@@ -91,6 +92,7 @@ role: Developer
     - [Acxiom Prospecting Data Import](connectors/data-partners/acxiom-prospecting-data-import.md)
     - [Algolia User Profiles](connectors/data-partners/algolia-user-profiles.md)
     - [Bombora Intent](connectors/data-partners/bombora.md)
+    - [Demandbase](connectors/data-partners/demandbase-b2b.md)
     - [Demandbase Intent](connectors/data-partners/demandbase.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - Data sharing {#data-sharing}
@@ -256,6 +258,7 @@ role: Developer
       - {hide-from-toc} [Google Ads (V2)](tutorials/ui/create/advertising/google-ads.md)
       - [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
       - {hide-from-toc} [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
+      - [Snapchat Ads](tutorials/ui/create/advertising/snapchat-ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
@@ -313,6 +316,7 @@ role: Developer
       - [Acxiom Prospecting Data Import](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - [Algolia User Profiles](tutorials/ui/create/data-partners/algolia-user-profiles.md)
       - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
+      - [Demandbase](tutorials/ui/create/data-partners/demandbase-b2b.md)
       - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
     - Data sharing {#data-sharing}

@@ -9,3 +9,5 @@ usage-agents.log
 .playwright-mcp/
 .github/copilot-instructions.md
 AGENTS.md
+.github/instructions/
+.github/prompts/

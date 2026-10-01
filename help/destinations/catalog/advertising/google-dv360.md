@@ -43,7 +43,7 @@ topic_v2:
 ><br/>
 >Customers who have purchased Adobe Privacy & Security Shield and have configured a [consent policy](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) to filter out non-consented profiles do not need to take any action.
 ><br/>
->Customers who have not purchased Adobe Privacy & Security Shield must use the [segment definition](../../../segmentation/home.md#segment-definitions) capabilities within [Segment Builder](../../../segmentation/ui/segment-builder.md) to filter out non-consented profiles, to continue using the existing [!DNL Real-Time CDP] Google Destinations without interruption.
+>Customers who have not purchased Adobe Privacy & Security Shield must use the [segment definition](../../../segmentation/home.md#segment-definitions) capabilities within [Audience Builder](../../../segmentation/ui/audience-builder.md) to filter out non-consented profiles, to continue using the existing [!DNL Real-Time CDP] Google Destinations without interruption.
 
 [!DNL Display & Video 360], formerly known as [!DNL DoubleClick Bid Manager], is a tool used to execute retargeting and audience targeted digital campaigns across Display, Video, and Mobile inventory sources. 
 

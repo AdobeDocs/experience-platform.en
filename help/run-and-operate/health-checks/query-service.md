@@ -13,6 +13,7 @@ The [!DNL Query Service] health checks scan your sandbox for scheduled queries t
 | --- | --- |
 | [Scheduled queries failing](#scheduled-queries-failing) | Dataset |
 | [Scheduled queries slowing](#scheduled-queries-slowing) | Dataset |
+| [Query Service alerts](#query-service-alerts) | Dataset |
 
 ## Scheduled queries failing {#scheduled-queries-failing}
 
@@ -49,7 +50,7 @@ Compares the duration of each scheduled query's most recent run against the aver
 
 When you select the **[!UICONTROL Scheduled Queries Slowing]** card, a detail panel opens on the right. The panel shows:
 
-* **[!UICONTROL Description]**: For each scheduled query with at least three completed runs, compares the duration of the most recent run against the average of prior runs and flags queries whose latest run is 50 percent or more slower than the historical average.
+* **[!UICONTROL Description]**: For each scheduled query with at least three completed runs, compares the most recent run duration against the average of prior runs. Flags queries whose latest run is 50 percent or more slower than the historical average.
 * **[!UICONTROL Impact]**: Queries continue to succeed but take progressively longer, risking exceeding timeout thresholds and overlap with scheduled batch segmentation.
 * **[!UICONTROL General areas of impact]**: Segmentation results, when the query writes to a profile-enabled dataset.
 * **[!UICONTROL Experience League Documentation]**: A link to guardrails for [!DNL Query Service].
@@ -59,6 +60,27 @@ When you select the **[!UICONTROL Scheduled Queries Slowing]** card, a detail pa
 ![Scheduled Queries Slowing detail panel showing description, impact, general areas of impact, and Check Passed confirmation](../assets/health-checks/scheduled-queries-slowing-detail.png){zoomable="yes"}
 
 For more information, see the [guardrails for Query Service](/help/query-service/guardrails.md) and the [Experience Event dataset retention documentation](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+
+## Query Service alerts {#query-service-alerts}
+
+Detects scheduled queries that are missing failure alert subscriptions.
+
+| Detail | Description |
+| --- | --- |
+| **Issue** | One or more scheduled queries are missing failure alert subscriptions. |
+| **Impact** | When alerts are not enabled, scheduled query failures are only discoverable through manual inspection of the scheduled queries execution history. Failed scheduled queries can go undetected for extended periods, and dependent derived datasets, audiences, and activations silently operate on stale data without team awareness. |
+| **Remediation** | Configure an alert subscription for each scheduled query so that failure, success, or delayed execution notifications are delivered through the Platform UI and email. |
+
+When you select the **[!UICONTROL Query Service Alerts]** card, a detail panel opens on the right. The panel shows:
+
+* **[!UICONTROL Description]**: Explains that [!DNL Query Service] provides a built-in alerts capability that sends notifications when scheduled query runs change state, specifically on failure, success, or delayed execution. Alerts can be configured per scheduled query and deliver notifications through the Platform UI and email.
+* **[!UICONTROL Impact]**: When alerts are not enabled, scheduled query failures are only discoverable through manual inspection of the scheduled queries execution history. Failed scheduled queries can go undetected for extended periods, and dependent derived datasets, audiences, and activations silently operate on stale data without team awareness.
+* **[!UICONTROL General areas of impact]**: Audience quality, Query Service results, and [!DNL Customer Journey Analytics] results.
+* **[!UICONTROL Experience League Documentation]**: A link to monitoring queries.
+
+![Query Service Alerts detail panel showing description, impact, and general areas of impact](../assets/health-checks/query-service-alerts-detail.png){zoomable="yes"}
+
+For more information, see [Monitor queries](/help/query-service/ui/monitor-queries.md).
 
 ## Next steps {#next-steps}
 
