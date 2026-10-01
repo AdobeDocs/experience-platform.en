@@ -5,6 +5,10 @@ description: Learn how to use the Audience Builder so you can create audiences f
 
 # Audience Builder UI Guide
 
+>[!AVAILABILITY]
+>
+>The newly updated Audience Builder is now generally available. You can switch back to the previous Segment Builder experience during this transition period by disabling the **[!UICONTROL New Audience Builder]** toggle. The old Segment Builder experience and the toggle will be deprecated in early 2027. For documentation about the previous Segment Builder, read the [Segment Builder UI guide](./segment-builder.md).
+
 Audience Builder provides a rich workspace that lets you interact with Profile data elements. The workspace provides intuitive controls for building and editing your audience's rules.
 
 ![The Audience Builder UI is displayed.](/help/segmentation/images/ui/audience-builder/audience-builder.png){width="750" zoomable="yes"}
@@ -16,6 +20,10 @@ The Audience Builder UI is comprised of two sections: the **[!UICONTROL Audience
 The **[!UICONTROL Audience Properties]** panel on the left-hand side of the workspace shows you estimates information for your audience and lets you provide details about your audience, including name, description, and evaluation method.
 
 ![The Audience Properties panel is highlighted within the Audience Builder.](/help/segmentation/images/ui/audience-builder/audience-properties.png){width="750" zoomable="yes"}
+
+You can select the ![reduce panel icon](/help/images/icons/reduce-panel.png) to minimize the audience properties panel, and maximize the rule view.
+
+![Audience Builder with the Audience properties panel minimized.](/help/segmentation/images/ui/audience-builder/minimized-audience-panel.png)
 
 ### Estimates {#estimates}
 
@@ -79,9 +87,13 @@ If you select an invalid evaluation method, you will be prompted to either chang
 
 More information about the different audience evaluation methods can be found in the [segmentation overview](/help/segmentation/home.md#evaluate-audiences).
 
+>[!AVAILABILITY]
+>
+>The following feature is in **limited availability**. For more information on schedules and using Flexible Batch Schedules, read the [Flexible Batch Schedules guide](/help/segmentation/methods/flexible-batch-schedules.md).
+
 If your audience is evaluated using batch evaluation, you can choose a schedule for the audience to be evaluated with. Select the ![calendar icon](/help/images/icons/calendar.png) to choose the schedule that the audience will be evaluated with.
 
-![The calendar icon is highlighted within the audience properties section.](/help/segmentation/images/ui/audience-builder/select-schedule.png)
+![The calendar icon is highlighted within the audience properties section.](/help/segmentation/images/ui/audience-builder/select-schedule.png){width="400" zoomable="yes"}
 
 The **[!UICONTROL Audience schedules]** popover appears. On this popover, you can select the schedules you want the audience to be evaluated using.
 
@@ -110,6 +122,10 @@ You can also adjust the settings of the visible fields by selecting ![the settin
 The **[!UICONTROL Show fields only with data]** setting determines if you see **all** fields, or only fields that contain data.
 
 For **[!UICONTROL Data sources]**, you can filter to show attributes that come from the specified ingestion types. Supported values include **[!UICONTROL Batch and streaming/edge]**, **[!UICONTROL Batch only]**, and **[!UICONTROL Streaming/edge only]**.
+
+>[!AVAILABILITY]
+>
+>The **[!UICONTROL Show relation selectors]** setting is **only** available if you have access to Adobe Real-Time Customer Data Platform B2B Edition.
 
 The **[!UICONTROL Show relation selectors]** setting determines if you use the standard relations for your organization or if the relation selectors are shown.
 
@@ -234,6 +250,10 @@ You can add additional attributes to the audience by selecting **[!UICONTROL Add
 If you want to remove an attribute you've added, select ![the minus icon](/help/images/icons/remove-circle-unfilled.png).
 
 ![The remove attribute button is highlighted.](/help/segmentation/images/ui/audience-builder/remove-attribute.png){width="750" zoomable="yes"}
+
+Additionally, you can move an attribute around by selecting the ![move icon](/help/images/icons/move.png) and dragging and dropping the attribute to its new location.
+
+![The attribute moving is displayed within the canvas.](/help/segmentation/images/ui/audience-builder/move-attribute.gif)
 
 #### Computed attributes {#computed-attributes}
 
