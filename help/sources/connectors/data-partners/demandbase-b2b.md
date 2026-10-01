@@ -7,13 +7,20 @@ product_v2:
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
     internal-label: Profile
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+    internal-label: Sources
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
 ---
 # [!DNL Demandbase]
 
-The [!DNL Demandbase] source connector empowers you to connect your [!DNL Demandbase] account with Adobe Experience Platform, enabling automated and scalable ingestion of key B2B account data, such as firmographic, technographic, and intent attributes, directly into your [!DNL Real-Time Customer Profile].
+Use the [!DNL Demandbase] account source connector to ingest B2B account data into [!DNL Adobe Experience Platform]. You can ingest firmographic and technographic attributes for use in [!DNL Real-Time Customer Profile].
+
+>[!NOTE]
+>
+>This guide covers the [!DNL Demandbase] account source connector for B2B account data, not the [!DNL Demandbase Intent] source. For information about ingesting intent data, read the [Demandbase Intent source overview](/help/sources/connectors/data-partners/demandbase.md).
 
 Use this source connector to configure secure authentication, select the [!DNL Demandbase] entities you need, and map them to standardized Experience Data Model (XDM) schemas, such as the B2B Account class. Flexible scheduling options let you configure both one-time backfills and recurring, incremental syncs so your account data stays current.
 

@@ -7,6 +7,9 @@ product_v2:
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
     internal-label: Profile
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+    internal-label: Sources
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -14,6 +17,10 @@ role_v2:
 # Connect [!DNL Demandbase] to Experience Platform using the UI
 
 Read this guide to learn how to connect your [!DNL Demandbase] account to Adobe Experience Platform using the *[!UICONTROL Sources]* workspace in the Experience Platform UI.
+
+>[!NOTE]
+>
+>This tutorial covers the [!DNL Demandbase] account source connector for B2B account data, not the [!DNL Demandbase Intent] source. To ingest intent data, follow the [Demandbase Intent connection tutorial](/help/sources/tutorials/ui/create/data-partners/demandbase.md).
 
 ## Get started {#get-started}
 
@@ -35,16 +42,13 @@ These credentials are used under **[!UICONTROL Account authentication]** when cr
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace, then select the **[!UICONTROL Catalog]** tab. Use the search bar to find **[!DNL Demandbase]**.
 
+Select **[!UICONTROL Set up]** on the [!DNL Demandbase] source card.
+
 >[!NOTE]
 >
->[!DNL Demandbase] appears under multiple categories in the catalog, including [!UICONTROL B2B], [!UICONTROL Data & Identity Partners], and [!UICONTROL DB1Platform].
+>If you already have an authenticated account, select **[!UICONTROL Add data]** instead.
 
-Select the **[!DNL Demandbase]** source card and then select **[!UICONTROL Add data]**.
-
-<!--
-TODO: Add catalog.png once the source card name is confirmed by PM and a new screenshot is captured.
-![The sources catalog with the "Demandbase" card selected.](../../../../images/tutorials/create/demandbase-b2b/catalog.png)
--->
+![The sources catalog with the Demandbase card and its Set up option highlighted under the DB1Platform category.](../../../../images/tutorials/create/demandbase-b2b/catalog.png)
 
 ## Authenticate your account {#authentication}
 
