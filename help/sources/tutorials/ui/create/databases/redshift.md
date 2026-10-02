@@ -75,7 +75,7 @@ To create a new account, select **[!UICONTROL New account]** and then provide a 
 
 To connect your [!DNL AWS Redshift] account to Experience Platform on [!DNL Azure], provide your authentication credentials in the input form.
 
-To scope your connection to a single table, enter its name in **[!UICONTROL table]** using `<schema>.<table>` format. For example, enter `test_schema.my_table`. Provide exactly one schema and one table separated by a single period. When you select data, only the specified table appears. Leave **[!UICONTROL table]** empty to list all tables in the database.
+To scope your connection to a single table, enter its name in **[!UICONTROL table]** using `{SCHEMA}.{TABLE}` format. For example, enter `test_schema.my_table`. Provide exactly one schema and one table separated by a single period. When you select data, only the specified table appears. Leave **[!UICONTROL table]** empty to list all tables in the database.
 
 After providing your connection details, select **[!UICONTROL Connect to source]**.
 
@@ -88,7 +88,7 @@ After providing your connection details, select **[!UICONTROL Connect to source]
 | Username | The username of the account that you want to give access to. |
 | Password | The password that corresponds with the user account. |
 | Database | The [!DNL AWS Redshift] database where data is to be fetched from. |
-| [!UICONTROL table] | Optional. The table to scope this connection to. Use `<schema>.<table>`, for example, `test_schema.my_table`. Provide exactly one schema and one table separated by a single period. Leave this field empty to list all tables in the database. |
+| [!UICONTROL table] | Optional. The table to scope this connection to. Use `{SCHEMA}.{TABLE}`, for example, `test_schema.my_table`. Provide exactly one schema and one table separated by a single period. Leave this field empty to list all tables in the database. |
 
 For more information about getting started, refer to [this [!DNL AWS Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html).
 

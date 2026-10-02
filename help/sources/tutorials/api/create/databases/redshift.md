@@ -53,7 +53,7 @@ Provide the required connection properties to connect [!DNL Flow Service] with [
 | `username` | The username associated with your [!DNL AWS Redshift] account. |
 | `password` | The password that corresponds with the user account. |
 | `database` | The [!DNL AWS Redshift] database where data is to be fetched from. |
-| `table` | Optional. The table to scope this connection to. Use `<schema>.<table>`, for example, `test_schema.my_table`. Provide exactly one schema and one table separated by a single period. |
+| `table` | Optional. The table to scope this connection to. Use `{SCHEMA}.{TABLE}`, for example, `test_schema.my_table`. Provide exactly one schema and one table separated by a single period. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL AWS Redshift] is `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
 
 For more information about getting started, refer to this [[!DNL AWS Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html).
