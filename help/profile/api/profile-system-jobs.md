@@ -229,7 +229,7 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "datasetId": "66a92c5910df2d1767de13f3",
+        "dataSetId": "66a92c5910df2d1767de13f3",
         "batchId": "01JFSYFDFW9JAAEKHX672JMPSB"
       }'
 ```
@@ -238,7 +238,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `datasetId` | The ID of the dataset for the batch you wish to delete. |
+| `dataSetId` | The ID of the dataset for the batch you wish to delete. |
 | `batchId` | The ID of the batch you wish to delete. |
 
 **Response**
