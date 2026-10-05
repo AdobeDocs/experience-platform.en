@@ -182,12 +182,13 @@ For more information, read the [Query Service overview](/help/query-service/home
 
 ## Run and Operate {#run-and-operate}
 
-Use Run and Operate to monitor job health, troubleshoot failures, and track throughput across your Experience Platform implementation.
+Inspect, troubleshoot, and understand your Experience Platform implementations with Run and Operate tools. Monitor scheduled processing, identify configuration issues, and review how your organization uses supported Experience Platform applications.
 
 **New or updated features**
 
 | Feature | Description |
 | --- | --- |
+| Usage Insights general availability | Usage Insights provides visibility into how your organization uses Real-Time CDP and Adobe Journey Optimizer across profiles, audiences, destinations, channels, campaigns, and journeys. Review usage across sandboxes and time periods to identify adoption patterns across your organization. See the [Usage Insights overview](/help/run-and-operate/usage-insights/overview.md) and [Usage Insights analysis](/help/run-and-operate/usage-insights/usage-analysis.md) for more details. |
 | [Job Schedules now shows identity ingestion runs](/help/run-and-operate/job-schedules-details.md) | The Job Schedules macro-view timeline now includes identity ingestion runs, in addition to existing data lake and profile ingestion runs. |
 | [Job Schedules now shows campaign runs](/help/run-and-operate/job-schedules-details.md) | The Job Schedules macro-view timeline now includes scheduled batch [!DNL Adobe Journey Optimizer] campaign runs. Filter campaigns by recurrence, channel, and type, and view campaign details, including audience, category, channel, and export and delivery counts. |
 | [Additional health checks](/help/run-and-operate/health-checks/overview.md) | Health checks now include 32 additional checks across the Schemas and Identities, Destinations, Datasets, Segmentation, Ingestion, Merge Policies, and Query Service categories, plus two new categories: Sources and Profile. |
