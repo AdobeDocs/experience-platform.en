@@ -174,7 +174,7 @@ To limit data lake processing to specific sandboxes, provide the optional `sandb
 
 >[!NOTE]
 >
->Sandbox scoping applies only to Data Lake data. Other products included in the same privacy request are not scoped by the specified sandbox.
+>Sandbox scoping applies only to data lake data. Other products included in the same privacy request are not scoped by the specified sandbox.
 
 The following request creates a new privacy job for the data lake, using the unregistered `email_label` namespace. It includes `aepDataLake` in the `include` array and limits data lake processing to the specified sandbox:
 
