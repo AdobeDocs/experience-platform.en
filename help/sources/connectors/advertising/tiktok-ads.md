@@ -121,14 +121,6 @@ Each metrics record maps to the identifier of the entity that it measures.
 | Ad | `paidMedia.adID` |
 | Asset | `paidMedia.assetID` |
 
-<!--
-TODO(Product): Confirm before publishing whether the following remain out of v1, so this page doesn't need a caveat or correction later:
-- Reach & Frequency (R&F) buying
-- Smart+ (automated) campaigns
-- Catalog / Shop / GMV Max campaigns and metrics
-Per the XDM mapping wiki, all three are proposed for phase 2 but still marked OPEN, pending Product confirmation.
--->
-
 ## Troubleshooting
 
 Use the following table to troubleshoot common issues with the [!DNL TikTok Ads] source.
@@ -143,8 +135,6 @@ Use the following table to troubleshoot common issues with the [!DNL TikTok Ads]
 ## Next steps
 
 After you confirm that you have an eligible [!DNL TikTok] advertiser account with existing campaigns and ads, continue by [connecting TikTok Ads to Experience Platform using the UI](../../tutorials/ui/create/advertising/tiktok-ads.md).
-
-<!-- TODO(satkapoo/eng): The linked tutorial is a draft based on the eng wiki, not a confirmed UI walkthrough. Update this note once the account-picker/Explore-step UI design is locked (still pending sign-off per the launch tracker as of 2026-08-31) and the tutorial has real screenshots. -->
 
 ## More help on this topic
 

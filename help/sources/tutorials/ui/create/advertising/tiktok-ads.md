@@ -15,13 +15,13 @@ badge: Beta
 >The [!DNL TikTok Ads] source is available as part of the Customer Journey Analytics SKU.
 
 <!--
-TODO(satkapoo/eng): This entire tutorial is a draft based on the eng wiki description of the flow, not a
-confirmed UI walkthrough. The account-picker/Explore-step UI design is still pending sign-off per the launch
-tracker (as of 2026-08-31). Verify every step, field label, and button label below against the actual UI once
-it's built, and replace every placeholder image comment with a real screenshot before this leaves draft.
+TODO(satkapoo/eng): Sign-in with a TikTok business account and redirection back to Experience Platform are
+confirmed. No advertiser account selection step exists. Verify the remaining steps, field labels, and button
+labels against the actual UI, and replace the Experience Platform placeholder image comments with real
+screenshots before this leaves draft.
 -->
 
-Learn how to connect your [!DNL TikTok] advertiser account to Adobe Experience Platform using the Sources workspace. The [!DNL TikTok Ads] source retrieves campaign, ad, and performance data and maps it to Experience Data Model (XDM) compatible datasets.
+Learn how to connect your [!DNL TikTok for Business] account to Adobe Experience Platform using the **[!UICONTROL Sources]** workspace. The [!DNL TikTok Ads] source retrieves campaign, ad, and performance data and maps it to Experience Data Model (XDM) compatible datasets.
 
 ## Getting started
 
@@ -38,7 +38,7 @@ For more information, read the [[!DNL TikTok Ads] source overview](../../../../c
 
 Before you connect [!DNL TikTok Ads] to Experience Platform, complete the app setup and approval steps described in the [[!DNL TikTok Ads] source overview](../../../../connectors/advertising/tiktok-ads.md#prerequisites), including business verification and app permission group configuration.
 
-You must also have permission to authorize third-party access to your [!DNL TikTok] advertiser account, since account creation requires you to sign in to [!DNL TikTok] and grant access.
+You must also have a [!DNL TikTok for Business] account that you can use to sign in.
 
 ## Connect your [!DNL TikTok Ads] account
 
@@ -56,38 +56,18 @@ The **[!UICONTROL Authentication]** tab is where you create the account that sto
 | [!UICONTROL Account name] | A name for this connection. |
 | [!UICONTROL Description] (optional) | A short description of the account. |
 
-Select **[!UICONTROL Connect to source]** to open [!DNL TikTok]'s authorization page.
+Select **[!UICONTROL Connect to source]** to open the [!DNL TikTok] sign-in page.
 
 <!--
 TODO: Add new.png once the button label is confirmed and a screenshot is captured.
 ![The new account screen with the account name, description, and connect option.](../../../../images/tutorials/create/advertising/tiktok-ads/new.png)
 -->
 
-On the [!DNL TikTok] authorization page, review the requested permissions and grant Experience Platform access to your advertiser account.
+Sign in with your [!DNL TikTok for Business] account. After you sign in, you are redirected back to Experience Platform.
 
-<!--
-TODO: Add authorized.png once a screenshot of the TikTok authorization page is captured.
-![The TikTok authorization page requesting access to the advertiser account.](../../../../images/tutorials/create/advertising/tiktok-ads/authorized.png)
--->
+You do not select an advertiser account.
 
-Once authorized, select **[!UICONTROL Connect to source]** to validate and create the account, then select **[!UICONTROL Next]**. An account can be reused across multiple dataflows, so you authorize your [!DNL TikTok] account only once per account.
-
-## Select your [!DNL TikTok] advertiser account
-
-<!--
-TODO(satkapoo/eng): Confirm whether advertiser selection is its own tab (as modeled here) or is merged into the
-Dataflow detail step, and confirm the exact tab/field names. This section is a placeholder based on the eng
-wiki's description of the Explore step ("lists every advertiser the authorized user has access to").
--->
-
-Select the [!DNL TikTok] advertiser account that you want to sync with this dataflow.
-
-<!--
-TODO: Add explore.png once the account-picker UI design is locked and a screenshot is captured.
-![The advertiser selection screen listing available TikTok advertiser accounts.](../../../../images/tutorials/create/advertising/tiktok-ads/explore.png)
--->
-
-Select **[!UICONTROL Next]** to continue.
+After you return to Experience Platform, select **[!UICONTROL Next]** to continue. You can reuse this connection across multiple dataflows.
 
 ## Provide dataflow details
 
