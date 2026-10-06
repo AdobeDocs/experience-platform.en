@@ -19,27 +19,12 @@ last-update: 2026-08-18
 
 New features and updates to existing features in Adobe Experience Platform:
 
-- [Access control](#access-control)
 - [Data Governance](#data-governance)
 - [Data Ingestion](#data-ingestion)
 - [Destinations](#destinations)
 - [Run and Operate](#run-and-operate)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
-
-## Access control {#access-control}
-
-Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Experience Platform capabilities, including data modeling, profile management, and sandbox administration.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Object-Level Access Control for Datasets | You can now apply access labels to entire datasets to control which users and applications can read or write dataset data. Use the same Adobe-defined and custom access labels available throughout Adobe Experience Platform to enforce dataset-level access restrictions. For information about applying and managing dataset labels, see the [end to end guide](/help/access-control/abac/end-to-end-guide.md) |
-
-{style="table-layout:auto"}
-
-For more information, read the [Access control overview](/help/access-control/home.md). 
 
 ## Data Governance {#data-governance}
 
