@@ -113,7 +113,9 @@ You can use the following sources to ingest advertising data to Experience Platf
 | --- | --- | --- |
 | [[!DNL Google Ads]](connectors/advertising/ads.md) | Batch | Azure |
 | [[!DNL Meta Ads]](connectors/advertising/meta-ads.md) | Batch | Azure |
+| [[!DNL Pinterest Ads]](connectors/advertising/pinterest-ads.md) | Batch | Azure |
 | [[!DNL Snapchat Ads]](/help/sources/connectors/advertising/snapchat-ads.md) | Batch | Azure |
+| [[!DNL TikTok Ads]](connectors/advertising/tiktok-ads.md) | Batch | Azure |
 
 {style="table-layout:auto"}
 
