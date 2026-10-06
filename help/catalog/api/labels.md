@@ -25,7 +25,8 @@ Use the [!DNL Dataset Service] API to apply and manage data usage labels on data
 >
 >To restrict access to an entire dataset, use `accessLabels` in the [!DNL Catalog Service] API instead. Data usage labels and `accessLabels` use the same core and custom label definitions, but serve different purposes: data usage labels govern how data can be used, while `accessLabels` control who can access the dataset. See [Update array fields](./update-object.md#array-fields) for instructions on setting `accessLabels`.
 
-<!-- January safe OLAC for datasets note PLAT-294991
+<!-- 
+January safe OLAC for datasets note PLAT-294991
 >[!NOTE]
 >
 >To restrict access to an entire dataset, use `accessLabels` in the [!DNL Catalog Service] API instead. Data usage labels and `accessLabels` use the same core and custom label definitions, but serve different purposes: data usage labels govern how data can be used, while `accessLabels` control who can access the dataset. See [Update array fields](./update-object.md#array-fields) for instructions on setting `accessLabels`.

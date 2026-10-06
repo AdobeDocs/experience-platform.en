@@ -171,7 +171,8 @@ A successful response returns an array containing the ID of the updated dataset,
 ]
 ```
 
-<!-- January safe OLAC for datasets note PLAT-294991
+<!-- 
+January safe OLAC for datasets note PLAT-294991
 
 ### Update array fields {#array-fields}
 

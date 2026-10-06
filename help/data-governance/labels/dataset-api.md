@@ -31,7 +31,8 @@ The [[!DNL Dataset Service API]](https://developer.adobe.com/experience-platform
 >
 >For more information about field-level access control, see the [attribute-based access control overview](../../access-control/abac/overview.md).
 
-<!-- January safe OLAC for datasets note PLAT-294991
+<!-- 
+January safe OLAC for datasets note PLAT-294991
 >[!IMPORTANT]
 >
 >Use this API to apply labels for data governance purposes. To restrict access to specific fields, apply labels to the schema instead. To restrict access to the entire dataset, use the dataset's `accessLabels` field.
