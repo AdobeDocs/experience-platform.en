@@ -22,38 +22,38 @@ topic_v2:
 ---
 # Identity namespace configuration
 
-Experience Platform uses identity namespaces to describe the type of specific identities. For example, an identity namespace called `Email` identifies a value like `name@email.com` as an email address.
+[!DNL Experience Platform] uses identity namespaces to describe the type of specific identities. For example, an identity namespace called `Email` identifies a value like `name@email.com` as an email address.
 
 Depending on the type of destination that you create (streaming or file-based), keep in mind the following identity namespace requirements:
 
-* When creating real-time (streaming) destinations through Destination SDK, in addition to [configuring a partner schema](schema-configuration.md) to which users can map profile attributes and identities, you must also define *at least one* identity namespaces supported by your destination platform. For example, if your destination platform accepts hashed emails and [!DNL IDFA], you must define these two identities as [described further down in this document](#supported-parameters).
+* When creating real-time (streaming) destinations through [!DNL Destination SDK], in addition to [configuring a partner schema](schema-configuration.md) to which you can map profile attributes and identities, you must also define *at least one* identity namespace supported by your destination platform. For example, if your destination platform accepts hashed emails and [!DNL IDFA], you must define these two identities as [described further down in this document](#supported-parameters).
 
    >[!IMPORTANT]
    >
-   >When activating audiences to streaming destinations, users must also map _at least one target identity_, in addition to target profile attributes. Otherwise, the audiences will not be activated to the destination platform.
+   >When activating audiences to streaming destinations, you must also map _at least one target identity_, in addition to target profile attributes. Otherwise, the audiences are not activated to the destination platform.
 
-* When creating file-based destinations through Destination SDK, the configuration of identity namespaces is _optional_.
+* When creating file-based destinations through [!DNL Destination SDK], the configuration of identity namespaces is _optional_.
 
-To learn more about identity namespaces in Experience Platform, see the [identity namespaces documentation](../../../../identity-service/features/namespaces.md).
+To learn more about identity namespaces in [!DNL Experience Platform], see the [identity namespaces documentation](../../../../identity-service/features/namespaces.md).
 
 When configuring identity namespaces for your destination, you can fine tune the target identity mapping supported by your destination, such as:
 
-* Allowing users to map XDM attributes to identity namespaces.
-* Allowing users to map [standard identity namespaces](../../../../identity-service/features/namespaces.md#standard) to your own identity namespaces.
-* Allowing users to map [custom identity namespaces](../../../../identity-service/features/namespaces.md#create-namespaces) to your own identity namespaces.
+* Allowing you to map XDM attributes to identity namespaces.
+* Allowing you to map [standard identity namespaces](../../../../identity-service/features/namespaces.md#standard) to your own identity namespaces.
+* Allowing you to map [custom identity namespaces](../../../../identity-service/features/namespaces.md#create-namespaces) to your own identity namespaces.
 
-To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+To understand where this component fits into an integration created with [!DNL Destination SDK], see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 You can configure your supported identity namespaces via the `/authoring/destinations` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
 
 * [Create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Update a destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-This article describes all the supported identity namespaces configuration options that you can use for your destination, and shows what customers will see in the Experience Platform UI.
+This article describes all the supported identity namespaces configuration options that you can use for your destination, and shows what you see in the [!DNL Experience Platform] UI.
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by [!DNL Destination SDK] are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Supported integration types {#supported-integration-types}
 
@@ -70,11 +70,11 @@ When defining the target identities that your destination supports, you can use 
 
 |Parameter | Type | Required / Optional |Description|
 |---------|----------|---|------|
-|`acceptsAttributes` | Boolean | Optional | Indicates if customers can map standard profile attributes to the identity that you are configuring. |
-|`acceptsCustomNamespaces` | Boolean | Optional | Indicates if customers can map custom identity namespaces to the identity namespace that you are configuring. |
-|`acceptedGlobalNamespaces` | - | Optional | Indicates which [standard identity namespaces](../../../../identity-service/features/namespaces.md#standard) (for example, [!UICONTROL IDFA]) customers can map to the identity that you are configuring. |
-|`transformation` | String | Optional | Displays the [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) checkbox in the Experience Platform UI, when the source field is either an XDM attribute or a custom identity namespace. Use this option to give users the ability to hash source attributes on export. To enable this option, set the value to `sha256(lower($))`. |
-|`requiredTransformation` | String | Optional | When customers select this source identity namespace, the [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) checkbox is automatically applied to the mapping, and customers cannot disable it. To enable this option, set the value to `sha256(lower($))`.|
+|`acceptsAttributes` | Boolean | Optional | Indicates if you can map standard profile attributes to the identity that you are configuring. |
+|`acceptsCustomNamespaces` | Boolean | Optional | Indicates if you can map custom identity namespaces to the identity namespace that you are configuring. |
+|`acceptedGlobalNamespaces` | - | Optional | Indicates which [standard identity namespaces](../../../../identity-service/features/namespaces.md#standard) (for example, [!DNL IDFA]) you can map to the identity that you are configuring. |
+|`transformation` | String | Optional | Displays the [Apply transformation](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) checkbox in the [!DNL Experience Platform] UI, when the source field is either an XDM attribute or a custom identity namespace. Use this option to hash source attributes on export. To enable this option, set the value to `sha256(lower($))`. |
+|`requiredTransformation` | String | Optional | When you select this source identity namespace, the [Apply transformation](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) checkbox is automatically applied to the mapping, and you cannot disable it. To enable this option, set the value to `sha256(lower($))`.|
 
 {style="table-layout:auto"}
 
@@ -96,22 +96,21 @@ When defining the target identities that your destination supports, you can use 
    }
 ```
 
-You must indicate which [!DNL Experience Platform] identities customers are able to export to your destination. Some examples are [!DNL Experience Cloud ID], hashed email, device ID ([!DNL IDFA], [!DNL GAID]). These values are [!DNL Experience Platform] identity namespaces that customers can map to identity namespaces from your destination.
+You must indicate which [!DNL Experience Platform] identities you are able to export to your destination. Some examples are [!DNL Experience Cloud ID], hashed email, device ID ([!DNL IDFA], [!DNL GAID]). These values are [!DNL Experience Platform] identity namespaces that you can map to identity namespaces from your destination.
 
-Identity namespaces do not require a 1-to-1 correspondence between [!DNL Experience Platform] and your destination.
-For instance, customers could map an [!DNL Experience Platform] [!DNL IDFA] namespace to an [!DNL IDFA] namespace from your destination, or they can map the same [!DNL Experience Platform] [!DNL IDFA] namespace to a [!DNL Customer ID] namespace in your destination.
+Identity namespaces do not require a 1-to-1 correspondence between [!DNL Experience Platform] and your destination. For instance, you can map an [!DNL Experience Platform] [!DNL IDFA] namespace to an [!DNL IDFA] namespace from your destination, or you can map the same [!DNL Experience Platform] [!DNL IDFA] namespace to a [!DNL Customer ID] namespace in your destination.
 
 Read more about identities in the [identity namespace overview](../../../../identity-service/features/namespaces.md).
 
 ## Mapping considerations {#mapping-considerations}
 
-If customers select a source identity namespace and do not select a target mapping, Experience Platform automatically populates the target mapping with an attribute with the same name.
+If you select a source identity namespace and do not select a target mapping, [!DNL Experience Platform] automatically populates the target mapping with an attribute with the same name.
 
 ## Configure optional source field hashing {#configure-optional-hashing}
 
-Experience Platform customers can choose to ingest data into Experience Platform in hashed format or in plain text. If your destination platform accepts both hashed and unhashed data, you can give customers the option to choose whether Experience Platform should hash the source field values when they get exported to your destination.
+In [!DNL Experience Platform], you can choose to ingest data in hashed format or in plain text. If your destination platform accepts both hashed and unhashed data, you can choose whether [!DNL Experience Platform] hashes the source field values when they get exported to your destination.
 
-The configuration below enables the optional [Apply transformation](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) option in the Experience Platform UI, in the Mapping step.
+The configuration below enables the optional [Apply transformation](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) option in the [!DNL Experience Platform] UI, in the Mapping step.
 
 ```json {line-numbers="true" highlight="5"}
 "identityNamespaces":{
@@ -131,11 +130,11 @@ The configuration below enables the optional [Apply transformation](../../../ui/
 
 Check this option when using unhashed source fields, to have [!DNL Adobe Experience Platform] automatically hash them on activation.
 
-When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have [!DNL Adobe Experience Platform] automatically hash the source attributes on activation.
+When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **[!UICONTROL Apply transformation]** option to have [!DNL Adobe Experience Platform] automatically hash the source attributes on activation.
 
 ## Configure mandatory source field hashing {#configure-mandatory-hashing}
 
-If your destination only accepts hashed data, you can configure the exported attributes to be automatically hashed by Experience Platform. The configuration below automatically checks the **Apply transformation** option when the `Email` and `Phone` identities are mapped.
+If your destination only accepts hashed data, you can configure the exported attributes to be automatically hashed by [!DNL Experience Platform]. The configuration below automatically checks the **[!UICONTROL Apply transformation]** option when the `Email` and `Phone` identities are mapped.
 
 ```json {line-numbers="true" highlight="8,11"}
 "identityNamespaces":{
@@ -157,7 +156,7 @@ If your destination only accepts hashed data, you can configure the exported att
 
 ## Next steps {#next-steps}
 
-After reading this article, you should have a better understanding of how to configure your identity namespaces for destinations built with Destination SDK.
+You now understand how to configure identity namespaces for destinations built with [!DNL Destination SDK], including how to allow attribute and namespace mappings and how to apply optional or mandatory hashing on export.
 
 To learn more about the other destination components, see the following articles:
 

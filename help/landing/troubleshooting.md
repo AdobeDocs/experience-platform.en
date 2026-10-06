@@ -49,7 +49,7 @@ The following is a list of answers to frequently asked questions about Adobe Exp
 
 Request formats vary depending on the [!DNL Experience Platform] API being used. The best way to learn how to structure your API calls is by following along with the examples provided in the documentation for the particular [!DNL Experience Platform] service you are using.
 
-For more information on formating API requests, please visit the Experience Platform API getting started guide [reading sample API calls](./api-guide.md#sample-api) section.
+For more information on formatting API requests, please visit the Experience Platform API getting started guide [reading sample API calls](./api-guide.md#sample-api) section.
 
 ## What is my organization? {#what-is-my-ims-organization}
 

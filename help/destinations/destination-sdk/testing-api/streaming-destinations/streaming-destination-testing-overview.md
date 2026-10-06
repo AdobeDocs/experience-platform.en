@@ -25,7 +25,7 @@ Illustrated below is how testing your destination fits into the [destination con
 
 ![Graphic of where the destination testing step fits into the destination configuration workflow](../../assets/testing-api/test-destination-step.png)
 
-## Destination testing tool - Purpose and prerequisites {#destination-testing-tool}
+## Destination testing tool purpose and prerequisites {#destination-testing-tool}
 
 Use the destination testing tool to test your destination configuration by sending messages to the partner endpoint you provided in the [server configuration](../../authoring-api/destination-server/create-destination-server.md).
 
@@ -47,7 +47,7 @@ With this tool, after having configured your destination, you can:
 
 You can make calls to the destination testing API endpoint with or without adding profiles on the request.
 
-If you don't add any profiles on the request, Adobe will generate those internally for you and add them to the request. If you want to generate profiles to use in this request, see the [Sample profile generation API reference](../../testing-api/streaming-destinations/sample-profile-generation-api.md). You need to generate profiles based on the source XDM schema, as shown in the [API reference](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). Note that the source schema is the [union schema](../../../../profile/ui/union-schema.md) of the sandbox that you are using.
+If you do not add any profiles on the request, Adobe will generate those internally for you and add them to the request. If you want to generate profiles to use in this request, see the [Sample profile generation API reference](../../testing-api/streaming-destinations/sample-profile-generation-api.md). You need to generate profiles based on the source XDM schema, as shown in the [API reference](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). Note that the source schema is the [union schema](../../../../profile/ui/union-schema.md) of the sandbox that you are using.
 
 The response contains the result of the destination request processing. The request includes three main sections:
 

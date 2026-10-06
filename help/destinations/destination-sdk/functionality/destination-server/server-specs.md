@@ -37,7 +37,7 @@ This page shows all the destination server types supported by Destination SDK, w
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Supported integration types {#supported-integration-types}
 
@@ -91,7 +91,7 @@ In the example below, a partner creates a Data Landing Zone destination server w
 
 As a result, when users go through the [destination connection tutorial](../../../ui/connect-destination.md), they will not see an [authentication step](../../../ui/connect-destination.md#authenticate). Instead, the authentication is handled by Experience Platform, as shown in the image below.
 
-![Ui image showing the authentication screen between Experience Platform and a DLZ destination.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
+![UI image showing the authentication screen between Experience Platform and a DLZ destination.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
 
 **Connecting to your destination with user input**
 
@@ -132,7 +132,7 @@ To give users the option of selecting a value from the Experience Platform UI, t
 
 As a result, when users go through the [destination connection tutorial](../../../ui/connect-destination.md), they must select a region before they can connect to the destination platform. When they connect to the destination, the templatized field `{{customerData.region}}` is replaced with the value that the user has selected in the UI, as shown in the image below.
 
-![Ui image showing the destination connection screen with a region selector.](../../assets/functionality/destination-server/server-spec-template-region.png)
+![UI image showing the destination connection screen with a region selector.](../../assets/functionality/destination-server/server-spec-template-region.png)
 
 ## Real-time (streaming) destination server {#streaming-example}
 

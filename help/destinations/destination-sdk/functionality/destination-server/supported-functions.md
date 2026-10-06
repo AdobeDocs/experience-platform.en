@@ -24,11 +24,11 @@ topic_v2:
 
 Experience Platform Destination SDK uses [[!DNL Pebble] templates](https://pebbletemplates.io/), allowing you to transform the data exported from Experience Platform into the format required by your destination.
 
-The Experience Platform [!DNL Pebble] implementation has some changes, compared to the out-of-the box version provided by [!DNL Pebble]. Also, in addition to the out-of-the-box functions provided by [!DNL Pebble], Adobe has created some additional functions that you can use with Destination SDK.
+The Experience Platform [!DNL Pebble] implementation has some changes, compared to the out-of-the-box version provided by [!DNL Pebble]. Also, in addition to the out-of-the-box functions provided by [!DNL Pebble], Adobe has created some additional functions that you can use with Destination SDK.
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Where to use {#where-to-use}
 
@@ -102,7 +102,7 @@ In addition to the out-of-the-box functions provided by [!DNL Pebble], see below
 
 #### Use case {#segments-use-case}
 
-These functions can be used on order to obtain a list of audiences that were added to or removed from a profile.
+These functions can be used to obtain a list of audiences that were added to or removed from a profile.
 
 #### Example {#segments-example}
 

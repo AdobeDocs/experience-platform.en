@@ -1,5 +1,5 @@
 ---
-description: This page explains how to use the /testing/destinationInstance API endpoint to test if your file-based destination is configured correctly and to verify the integrity of data flows to your configured destination.
+description: Learn how to use the destination testing endpoint to verify that your file-based destination is configured correctly and check data flow integrity.
 title: Test your file-based destination with sample profiles
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
 TQID: https://experienceleague.adobe.com/ecETG8hP61A71pRlGrBDvCTSw3j-rbx0zkjNiQoikA0
@@ -24,13 +24,13 @@ topic_v2:
 
 This page explains how to use the `/testing/destinationInstance` API endpoint to test if your file-based destination is configured correctly and to verify the integrity of data flows to your configured destination.
 
-You can make requests to the testing endpoint with or without adding [sample profiles](file-based-sample-profile-generation-api.md) to the call. If you don't send any profiles on the request, the API generates a sample profile automatically and adds it to the request.
+You can make requests to the testing endpoint with or without adding [sample profiles](file-based-sample-profile-generation-api.md) to the call. If you do not send any profiles on the request, the API generates a sample profile automatically and adds it to the request.
 
 The auto-generated sample profiles contain generic data. If you want to test your destination with custom, more intuitive profile data, use the [sample profile generation API](file-based-sample-profile-generation-api.md) to generate a sample profile, then customize its response and include it in the request to the `/testing/destinationInstance` endpoint.
 
 ## Getting started {#getting-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Prerequisites {#prerequisites}
 

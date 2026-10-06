@@ -164,6 +164,8 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 >
 > Assign labels created in the [!UICONTROL Permissions] workspace (such as the audience labels above) to various objects in Adobe Journey Optimizer using [Object Level Access Control](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access)." 
 
+<!-- 
+January safe OLAC for datasets note PLAT-294991
 ## Apply labels to datasets
 
 >[!IMPORTANT]
@@ -184,7 +186,8 @@ Select the ellipsis (`...`) next to the dataset, then select **[!UICONTROL Manag
 
 The **[!UICONTROL Apply access labels]** page appears, allowing you to choose the labels that you want to apply to the dataset. For this use case, select the **[!UICONTROL PHI/ Regulated Health Data]** label, then select **[!UICONTROL Save]**.
 
-![Apply access labels with PHI/Regulated health data selected and highlighting Save.](../images/abac-end-to-end-user-guide/abac-dataset-select-labels.png)
+![Apply access labels with PHI/Regulated health data selected and highlighting Save.](../images/abac-end-to-end-user-guide/abac-dataset-select-labels.png) 
+-->
 
 ## Activate the access control policy {#policy}
 
@@ -287,7 +290,7 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 ## Next steps
 
-You have completed the application of labels to a role, schema fields, and audiences. The external agency assigned to these roles are restricted from viewing these labels and their values in the schema, dataset, and profile view. These fields are also restricted from being used in the segment definition when using Segment Builder.
+You have completed the application of labels to a role, schema fields, and audiences. The external agency assigned to these roles are restricted from viewing these labels and their values in the schema, dataset, and profile view. These fields are also restricted from being used in the segment definition when using Audience Builder.
 
 For more information on attribute-based access control, see the [attribute-based access control overview](./overview.md).
 

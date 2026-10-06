@@ -10,6 +10,13 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.35.1 - September 1, 2026
+
+**Fixes and improvements**
+
+- Inline ES module scripts (`<script type="module">`) in Personalization offers now run as modules. Only executable script types are extracted, and recreated scripts copy only the attributes needed to run correctly.
+- Web SDK now always forwards the Marketo Munchkin cookie (`_mkto_trk`) to the Edge Network so the server can resolve the visitor's Marketo identity. A new Brand Concierge `conversation.transferCookies` option forwards additional first-party cookies into the conversation request `meta.state`.
+
 ## Version 2.35.0 - July 30, 2026
 
 **New features**

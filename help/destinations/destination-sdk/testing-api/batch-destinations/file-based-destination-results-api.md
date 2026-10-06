@@ -1,5 +1,5 @@
 ---
-description: This page explains how to use the /testing/destinationInstance API endpoint to view the complete details of your testing results. This API endpoint returns the same result as you would obtain when using the Flow Service API to monitor dataflows.
+description: Learn how to use the testing endpoint to view complete test results, matching what the Flow Service API returns for dataflow monitoring.
 title: View detailed activation results
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
 TQID: https://experienceleague.adobe.com/6AAD-f--vG4KgZT6kkiobbp1lx9wU-IJ5xyub9F6bAU
@@ -34,7 +34,7 @@ If you want to see more detailed information about your activation flow, you can
 
 ## Getting started {#getting-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Prerequisites {#prerequisites}
 

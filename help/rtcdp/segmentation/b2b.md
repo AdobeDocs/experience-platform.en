@@ -49,13 +49,13 @@ Before you can use the segmentation attributes for B2B classes, you must complet
 1. Create schemas that use the B2B classes. The B2B Edition classes include Account, Campaign, Opportunity, Marketing List, and more. For information on [how to set up schemas for use with B2B classes](../schemas/b2b.md) please see the schema documentation.
 2. Create relationships between your Experience Data Model (XDM) B2B schemas. Audiences based on B2B Edition attributes require relationships between the classes to fully use the extended B2B Segmentation functionality. See the documentation on [how to define a relationship between two B2B schemas](../../xdm/tutorials/relationship-b2b.md) for more information.
 3. Ingest data using datasets based on your B2B schemas. See the sources documentation for [information on how to ingest data](../../sources/connectors/adobe-applications/marketo/marketo.md).
-4. Read the [Segment Builder user guide](../../segmentation/ui/segment-builder.md) for a more detailed guidance on how to build audiences.
+4. Read the [Audience Builder user guide](../../segmentation/ui/audience-builder.md) for a more detailed guidance on how to build audiences.
 
 Once these requirements have been met you are able to combine these attributes for common B2B use cases.
 
 ## Getting started {#getting-started}
 
-Once the union schemas for the B2B classes have relationships established and have been used to ingest data, their attributes are made available in the left rail of Segment Builder. 
+Once the union schemas for the B2B classes have relationships established and have been used to ingest data, their attributes are made available in the left rail of Audience Builder. 
 
 B2B classes and their attributes are appended with a `B2B` label within the Segmentation workspace to differentiate them from those available as standard within Real-Time Customer Data Platform. 
 
@@ -71,9 +71,9 @@ Select the appropriate schema from the available list and select the appropriate
 
 ![source-key example using the people relationship in the schema workspace](../assets/segmentation/b2b/source-key-schema-relationship-example.png)
 
-This relationship is reflected within Segment Builder through the use of `Key` folders as shown in the image below.
+This relationship is reflected within Audience Builder through the use of `Key` folders as shown in the image below.
 
-![source-key example using Segment Builder in the segmentation workspace](../assets/segmentation/b2b/source-key-segmentation-example.png)
+![source-key example using Audience Builder in the segmentation workspace](../assets/segmentation/b2b/source-key-segmentation-example.png)
 
 Please refer to the [schemas in Real-Time Customer Data Platform B2B Edition documentation](../schemas/b2b.md) for more information on the available B2B classes.
 
@@ -107,7 +107,7 @@ Find all the people who are a "Decision Maker" of any opportunity where the acco
 
 To create this audience, you must use "segments of segments" by creating a base audience of all the people who visited the pricing page in the last three days. 
 
-![Segment Builder displaying the base audience.](../assets/segmentation/b2b/example-4-base.png)
+![Audience Builder displaying the base audience.](../assets/segmentation/b2b/example-4-base.png)
 
 After creating the first audience, you can combine that with another audience of people who are a "Decision Maker" of any opportunity where the account is in the "Finance" industry.
 
@@ -131,7 +131,7 @@ Find all the people who are a "Decision Maker" of any closed-lost opportunity, a
 
 To create this audience, you must use "segments of segments" by creating a base audience of all the people who visited the pricing page in the last three days. 
 
-![Segment Builder displaying the base audience.](../assets/segmentation/b2b/example-7-base.png)
+![Audience Builder displaying the base audience.](../assets/segmentation/b2b/example-7-base.png)
 
 After creating the first audience, you can combine that with another audience of people who are a "Decision Maker" of any opportunity where both the "Closed Flag" is set to true and the "Lost Flag" is set to false.
 
@@ -184,7 +184,7 @@ Find all the people who are a "Decision Maker" of any closed-lost opportunity an
 
 To create this audience, you must use "segment of segments" by creating a base audience of all the people who visited the pricing page in the last 24 hours.
 
-![Segment Builder displaying the base audience.](../assets/segmentation/b2b/example-14-base.png)
+![Audience Builder displaying the base audience.](../assets/segmentation/b2b/example-14-base.png)
 
 After creating the first audience, you can combine that with another audience of  people who are a "Decision Maker" of any opportunity where both the "Closed Flag" is set to true and the "Lost Flag" is set to false.
 

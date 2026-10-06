@@ -57,18 +57,20 @@ Select any card to explore the details of that health check.
 
 ## Available health checks {#available-health-checks}
 
-Health checks currently evaluate checks across eight categories. Select a category to view its checks in detail.
+Health checks currently evaluate checks across ten categories. Select a category to view its checks in detail.
 
 | Category | Description | Checks |
 | --- | --- | --- |
-| [Schemas and identities](schemas-and-identities.md) | Data modeling and identity configuration issues across schemas and identity namespaces. | 8 |
+| [Schemas and identities](schemas-and-identities.md) | Data modeling and identity configuration issues across schemas and identity namespaces. | 16 |
 | [TTL](ttl.md) | Data expiration and lookback window configuration for profiles, datasets, and segments. | 4 |
-| [Segmentation](segmentation.md) | Audience counts and evaluation methods approaching sandbox limits. | 3 |
-| [Ingestion](ingestion.md) | Batch ingestion volume approaching platform guardrails. | 1 |
-| [Datasets](datasets.md) | Profile-enabled dataset counts approaching platform limits. | 1 |
-| [Destinations](destinations.md) | Destination activation schedule configuration issues. | 1 |
-| [Merge policies](merge-policies.md) | Merge policy naming and definition issues that affect segmentation and activation. | 3 |
-| [Query Service](query-service.md) | Scheduled query failures and performance degradation. | 2 |
+| [Segmentation](segmentation.md) | Audience counts and evaluation methods approaching sandbox limits. | 5 |
+| [Ingestion](ingestion.md) | Batch ingestion volume approaching platform guardrails. | 3 |
+| [Datasets](datasets.md) | Profile-enabled dataset counts approaching platform limits. | 5 |
+| [Destinations](destinations.md) | Destination activation schedule and guardrail issues. | 11 |
+| [Merge policies](merge-policies.md) | Merge policy naming and definition issues that affect segmentation and activation. | 4 |
+| [Query Service](query-service.md) | Scheduled query failures and performance degradation. | 3 |
+| [Sources](sources.md) | Source dataflow authentication and credential issues. | 1 |
+| [Profile](profile.md) | Profile-enabled dataset and computed attribute configuration issues. | 2 |
 
 These checks target the most impactful data modeling, data lifecycle, segmentation, ingestion, and activation issues across the platform.
 

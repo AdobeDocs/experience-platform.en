@@ -63,7 +63,7 @@ Segment Builder appears, with the prospect profile attributes appearing on the l
 
 ![Segment Builder is displayed. Note that the only available attributes are for the Prospect Profile class.](../images/types/prospect/segment-builder.png)
 
-For more information on using Segment Builder, please read the [Segment Builder UI guide](../ui/segment-builder.md).
+For more information on using Audience Builder, please read the [Audience Builder UI guide](../ui/audience-builder.md).
 
 ## Suggested use cases {#use-cases}
 

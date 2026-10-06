@@ -1,7 +1,7 @@
 ---
 keywords: rtcdp segments;segment builder rtcdp;rtcdp segment
-title: Segment Builder in Real-Time Customer Data Platform
-description: Learn how to use the Segment Builder in Real-Time CDP to define audiences.
+title: Audience Builder in Real-Time Customer Data Platform
+description: Learn how to use the Audience Builder in Real-Time CDP to define audiences.
 feature: Get Started, Audiences, Segments
 exl-id: a9a14ec4-d8e2-48b2-882f-5afd0cb06b71
 TQID: https://experienceleague.adobe.com/faql0nDT2woP-9arEEU2MY79RL0chGsbEgw-M-pgTxw
@@ -15,8 +15,8 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
     internal-label: Customer profiles
 ---
-# Segment Builder in Real-Time Customer Data Platform
+# Audience Builder in Real-Time Customer Data Platform
 
-Built on top of Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Platform] is able to make use of the full Segment Builder capabilities that are a part of [!DNL Experience Platform]. Within the Segment Builder's user interface, you can create new audiences, access existing audiences, and modify existing audiences. 
+Built on top of Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Platform] is able to make use of the full Audience Builder capabilities that are a part of [!DNL Experience Platform]. Within the Audience Builder's user interface, you can create new audiences, access existing audiences, and modify existing audiences. 
 
-For a more detailed guide on Segment Builder, read the [Segment Builder user guide](../../segmentation/ui/segment-builder.md).
+For a more detailed guide on Audience Builder, read the [Audience Builder user guide](../../segmentation/ui/audience-builder.md).

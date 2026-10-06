@@ -37,6 +37,6 @@ The following video is intended to support your understanding of creating dynami
 
 >[!NOTE]
 >
->The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, please refer to the [Segment Builder guide](../ui/segment-builder.md).
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, please refer to the [Audience Builder guide](../ui/audience-builder.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32179?quality=12&learn=on)

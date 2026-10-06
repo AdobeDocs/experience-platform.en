@@ -1,9 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;Pinterest Ads;
-title: Pinterest Ads Source Overview
-description: Learn how to connect Pinterest Ads to Adobe Experience Platform using APIs or the user interface.
-badge: Beta
-hide: true
+keywords: Experience Platform;Pinterest Ads;paid media;sources
+title: Pinterest Ads Source Connector
+description: Learn about Pinterest Ads paid media ingestion, automatic datasets, and field mappings in Adobe Experience Platform. Connect an account to analyze campaigns.
+badgeBeta: label="Beta" type="Informative"
 exl-id: 8edbcb26-0a18-47f1-8012-ca209d99d7a6
 TQID: https://experienceleague.adobe.com/0mbf8jV7vZZmsZQ9cx7y0OykfCTpBfch-RizjFcBMR8
 product_v2:
@@ -17,101 +16,165 @@ role_v2:
 
 >[!NOTE]
 >
->The [!DNL Pinterest Ads] source is in beta. Read the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
-
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
-
-Experience Platform provides support for ingesting data from a third-party advertising system. Support for advertising providers include [!DNL Pinterest Ads].
-
-[[!DNL Pinterest]](https://www.pinterest.com) is a visual discovery engine for finding recipes, home décor, style inspiration, and other ideas across the web. These are presented on a small scale using images, animated GIFs, and videos in pinboard format. [[!DNL Pinterest Ads]](https://ads.pinterest.com/) allows you to grow your business and reach 400 million people using [!DNL Pinterest].
-
-With [!DNL Pinterest Ads], you can reach users through targeted advertisements to discover and buy your products. Pins from [!DNL Pinterest Ads] are sponsored to receive extra exposure in relevant search results. Users subscribed to [!DNL Pinterest Business] can choose to promote existing best-performing pins, create a new image or video, or even promote an image that's been pinned from a website. [!DNL Pinterest Ads] offers several ad formats to help you meet your specific campaign goals.
-
-## [!DNL Pinterest] APIs {#pinterest-apis}
-
-The [!DNL Pinterest Ads] source leverages the [!DNL Pinterest] APIs to retrieve your [!DNL Pinterest Ads] data, along with all performance and metrics. The supported API endpoints are:
-
-* [Campaign analytics](https://developers.pinterest.com/docs/api/v5/#operation/campaigns/analytics)
-* [Ad Group analytics](https://developers.pinterest.com/docs/api/v5/#operation/ad_groups/analytics)
-* [Ads analytics](https://developers.pinterest.com/docs/api/v5/#operation/ads/analytics)
-
-Use the [!DNL Pinterest Ads] source to bring your data from [!DNL Pinterest] to Experience Platform, where you can can then execute data analytics. Data is returned starting from the date of ingestion for a backdated range of 90 days. [!DNL Pinterest Ads] uses bearer tokens as an authentication mechanism to communicate with the [!DNL Pinterest] APIs.
-
-## Prerequisites {#prerequisites}
-
-The first step in creating a [!DNL Pinterest Ads] source connection is to ensure that you have a Pinterest developer account. If you do not have one already, visit the [sign up](https://www.pinterest.com/business/create/?next=https://developers.pinterest.com/account-setup/) page to register and create your account.
-
-### Setup [!DNL Pinterest] app and generate access token {#create-app-and-generate-token}
+>The [!DNL Pinterest Ads] source is in beta. Read the [Sources overview](/help/sources/home.md#terms-and-conditions) for the terms and conditions.
 
 >[!IMPORTANT]
 >
->It is recommended to use the [!DNL Pinterest] APIs to generate your access token because generating your access token in the UI provides a limited access. Through the UI, you will only be able to access the following scopes: `pins:read`, `boards:read` and `user_accounts:read`. This limitation is not adequate for usage with the analytics endpoints of the [!DNL Pinterest] API.
+>The [!DNL Pinterest Ads] source is available as part of the [!DNL Customer Journey Analytics] SKU.
 
-To generate your access token, read the [!DNL Pinterest] guides on [setting up your app](https://developers.pinterest.com/docs/getting-started/set-up-app/) and [authenticating using OAuth 2.0](https://developers.pinterest.com/docs/getting-started/authentication/).
+Use the [!DNL Pinterest Ads] source to connect your ad accounts and ingest paid media metadata and performance metrics. [!DNL Adobe Experience Platform] publishes this data to paid media datasets. Use these datasets in [!DNL Adobe Customer Journey Analytics] to analyze your marketing campaigns.
 
-### Gather required credentials {#gather-required-credentials}
+To connect your account, sign in to [!DNL Pinterest] and authorize [!DNL Experience Platform] to access your advertising data. You do not need to generate or enter API credentials manually.
 
-In order to connect [!DNL Pinterest Ads] to Experience Platform, you must provide values for the following connection properties:
+## How ingestion works {#how-it-works}
 
-| Credential | Description |
+After you create a dataflow and select your ad accounts, [!DNL Experience Platform] provisions datasets and schedules ingestion automatically.
+
+| Process | Behavior |
 | --- | --- |
-| Access token | The [!DNL Pinterest Ads] access token for your user account. The token's user account must either be the owner of the specified [!DNL Pinterest Ad] account or have one of the necessary roles granted to them via Business Access: Admin, Analyst or Campaign Manager. For more information on the access token, please refer to the [[!DNL Pinterest] guide on generating your access token](https://developers.pinterest.com/docs/getting-started/set-up-app/). |
-| Ad account ID | The related [!DNL Pinterest Ads] ad account ID for your business unit. For information on retrieving your Ad account ID. Visit the [[!DNL Pinterest] guide on finding IDs in Ads Manager](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager). |
-| Campaign, ad group, or ad ID | The `campaign`, `ad group`, or `ad` IDs that correspond with your ad account ID. To obtain the required IDs, navigate to the [!DNL Pinterest] page for **Pinterest Business Hub** > **Ad Account Summary** > **Campaigns** / **Ad Groups** / **Ads** and copy the required ID's mentioned just below each of their names. |
+| Dataset provisioning | Reuses existing paid media datasets in your organization and creates them if they do not exist. |
+| Initial backfill | Runs 30 minutes after dataflow creation and retrieves metadata and metrics for the past 30 days. |
+| Daily ingestion | Runs once daily, starting the day after dataflow creation, and retrieves metadata and metrics for the previous day. |
+| Restatement | Runs three times for each daily ingestion run: one, two, and three days after that run. |
 
->[!NOTE]
->
->The [!DNL Pinterest] API provides individual APIs to retrieve data associated with each ID. Accordingly, you need to pass only the corresponding IDs for the ID type you are interested in.
+Restatement retrieves updated historical data to account for changes to previously reported metrics. You do not configure the backfill, daily ingestion, or restatement schedules yourself.
 
-## Guardrails {#guardrails}
+## Account prerequisites {#prerequisites}
 
-The following sections provides information on data guardrails for [!DNL Pinterest].
+Before you connect your account, ensure that you have the following:
 
-### [!DNL Pinterest] date range {#pinterest-date-range}
+* An existing [!DNL Pinterest] ad account.
+* Campaigns and ads already set up in that ad account.
+* Access to sign in to [!DNL Pinterest] and authorize [!DNL Experience Platform] to access the ad accounts you select.
 
-The [!DNL Pinterest] API supports both a `start_date` and an `end_date` parameter to retrieve analytics data between a given date range.
+## Automatic dataset setup {#schema-and-dataset-provisioning}
 
-* The `start_date` cannot be more than 90 days before the current date.
-* The `end_date` cannot be more than 90 days after the `start_date`.
+The connector assigns datasets, schemas, and field mappings automatically. You do not create a target schema, select a target dataset, or map fields during dataflow creation.
 
-When scheduling your dataflow, you must configure one of the follow frequency and interval settings:
+The mapped entity types are account, campaign, ad group, ad, asset, experience, and summary metrics. Assets represent [!DNL Pinterest] Pins. Experience records combine information from Pins and ads rather than a separate experience API.
 
-| Frequency | Interval |
+## XDM field mappings {#pinterest-fields}
+
+Use the following tables to understand the core fields mapped to Experience Data Model (XDM) schemas. The connector maps `paidMedia.adNetwork` to `pinterest`.
+
+### Account fields {#account-fields}
+
+The account schema stores your ad account identity and account details.
+
+| Pinterest field | XDM field | Description |
+| --- | --- | --- |
+| `id` | `paidMedia.accountID` | The ad account identifier. |
+| `name` | `paidMedia.accountDetails.accountName` | The ad account name. |
+| `country` | `paidMedia.accountDetails.country` | The country code. |
+| `currency` | `paidMedia.accountDetails.currency` | The currency code. |
+| `permissions` | `paidMedia.accountDetails.permissions` | An array of account permissions. |
+| `time_zone` | `paidMedia.accountDetails.timezone` | The ad account time zone. |
+| `created_time` | `paidMedia.metadata.createdTime` | The creation timestamp, converted to ISO 8601. |
+| `updated_time` | `paidMedia.metadata.updatedTime` | The modification timestamp, converted to ISO 8601. |
+
+### Campaign fields {#campaign-fields}
+
+The campaign schema stores campaign identity, status, and relationships to ad accounts.
+
+| Pinterest field | XDM field | Description |
+| --- | --- | --- |
+| `id` | `paidMedia.campaignID` | The campaign identifier. |
+| `ad_account_id` | `paidMedia.accountID` | The parent ad account identifier. |
+| `name` | `paidMedia.metadata.name` | The campaign name. |
+| `status` | `paidMedia.metadata.status` | The normalized campaign status. |
+| `summary_status` | `paidMedia.metadata.servingStatus` | The normalized delivery status. |
+| `created_time` | `paidMedia.metadata.createdTime` | The creation timestamp, converted to ISO 8601. |
+| `updated_time` | `paidMedia.metadata.updatedTime` | The modification timestamp, converted to ISO 8601. |
+
+For campaigns, ad groups, and ads, the connector normalizes `ACTIVE`, `PAUSED`, `ARCHIVED`, and `DRAFT` to lowercase status values. It maps `DELETED_DRAFT` to `deleted`.
+
+### Ad group fields {#ad-group-fields}
+
+The ad group schema stores ad group identity and relationships to campaigns and accounts.
+
+| Pinterest field | XDM field | Description |
+| --- | --- | --- |
+| `id` | `paidMedia.adGroupID` | The ad group identifier. |
+| `ad_account_id` | `paidMedia.accountID` | The parent ad account identifier. |
+| `campaign_id` | `paidMedia.campaignID` | The parent campaign identifier. |
+| `name` | `paidMedia.metadata.name` | The ad group name. |
+| `status` | `paidMedia.metadata.status` | The normalized ad group status. |
+| `summary_status` | `paidMedia.metadata.servingStatus` | The normalized delivery status. |
+
+### Ad fields {#ad-fields}
+
+The ad schema stores ad identity, review status, and relationships to other paid media entities.
+
+| Pinterest field | XDM field | Description |
+| --- | --- | --- |
+| `id` | `paidMedia.adID` | The ad identifier. |
+| `ad_group_id` | `paidMedia.adGroupID` | The parent ad group identifier. |
+| `campaign_id` | `paidMedia.campaignID` | The parent campaign identifier. |
+| `ad_account_id` | `paidMedia.accountID` | The parent ad account identifier. |
+| `pin_id` | `paidMedia.assetID` | The related Pin identifier. |
+| `name` | `paidMedia.metadata.name` | The ad name. |
+| `status` | `paidMedia.metadata.status` | The normalized ad status. |
+| `review_status` | `adDetails.reviewStatus` | The review status, such as `pending`, `rejected`, `approved`, or `not_reviewed`. |
+
+Creative titles and descriptions come from the related Pin rather than the ad object.
+
+### Asset fields {#asset-fields}
+
+The asset schema stores Pin content and media properties. The following mappings describe Pins with a single image or video.
+
+| Pinterest field | XDM field | Description |
+| --- | --- | --- |
+| `id` | `paidMedia.assetID` | The Pin identifier. |
+| `title` | `assetDetails.title` | The Pin title. |
+| `description` | `assetDetails.description` | The Pin description. |
+| `media.media_type` | `assetDetails.assetType` | The asset type, such as `image` or `video`. |
+| `media.images["1200x"].url` | `assetDetails.mediaProperties.url` | The largest available image URL. |
+| `media.images["150x150"].url` | `assetDetails.mediaProperties.thumbnailURL` | The image thumbnail URL. |
+| `media.video_url` | `assetDetails.mediaProperties.url` | The video URL for a video Pin. |
+| `media.cover_image_url` | `assetDetails.mediaProperties.thumbnailURL` | The cover image URL for a video Pin. |
+| `media.duration` | `assetDetails.videoProperties.duration` | The video duration, supplied by [!DNL Pinterest] in milliseconds. |
+
+For Pins with multiple images, videos, or mixed media, each item becomes a separate asset record. The connector generates an asset identifier using `{pin_id}_{index}`, where `index` is the item's position starting from zero. These assets use the `carousel_card` asset type.
+
+### Experience fields {#experience-fields}
+
+Experience records describe the creative experience derived from the Pin and ad. The experience identifier uses the Pin identifier.
+
+| Pinterest creative type | XDM experience type |
 | --- | --- |
-| `Day` | 1 |
-| `Hour` | 24 |
+| `REGULAR` | `single_image` |
+| `VIDEO`, `MAX_VIDEO`, `CTV_VIDEO` | `single_video` |
+| `CAROUSEL` | `carousel` |
+| `COLLECTION`, `MAX_WIDTH_REGULAR_COLLECTION`, `MAX_WIDTH_VIDEO_COLLECTION` | `collection` |
+| `IDEA`, `SHOWCASE` | `instant_experience` |
+| `QUIZ`, `SHOPPING`, `COLLAGE`, `APP` | `other` |
 
-For example, if ingestion is set on March 15, 2023 with a frequency and interval setting configured to `Day=1` or `Hour=24`, then the [!DNL Pinterest] API would only retrieve data from as far back as December 15, 2022 because computation is backdated for 90 days.
+For Pins with multiple media items, the connector populates `experienceDetails.carouselProperties.cards[]` with one entry per item. Each card references its generated asset identifier.
 
-### [!DNL Pinterest] time range {#pinterest-time-range}
+### Summary metrics fields {#summary-metrics-fields}
 
-The [!DNL Pinterest] API supports different kinds of time granularity for how data can be retrieved:
+Summary metrics store advertising performance data. The connector maps ad metrics and asset metrics from ad analytics, using `PIN_ID` as the asset grouping key.
 
-| Time granularity | Description |
-| --- | --- |
-| **TOTAL** | The data metrics are aggregated over a specified date range. |
-| **DAY** | The data metrics are broken down on a daily basis. |
-| **HOUR** | The data metrics are broken down on an hourly basis. |
-| **WEEKLY** | The data metrics are broken down on a weekly basis. |
-| **MONTHLY** | The data metrics are broken down on a monthly basis. |
+| Pinterest field | XDM field | Description |
+| --- | --- | --- |
+| `SPEND_IN_MICRO_DOLLAR`, `SPEND_IN_DOLLAR` | `metrics.spend` | Advertising spend. |
+| `PAID_IMPRESSION`, `TOTAL_IMPRESSION` | `metrics.impressions` | Impression count. |
+| `TOTAL_CLICKTHROUGH`, `CLICKTHROUGH_1`, `CLICKTHROUGH_2` | `metrics.clicks` | Click count. |
+| `CTR`, `ECTR`, `CTR_2` | `metrics.ctr` | Click rate. |
+| `TOTAL_ENGAGEMENT`, `ENGAGEMENT_1`, `ENGAGEMENT_2` | `metrics.engagements` | Engagement count. |
+| `TOTAL_CONVERSIONS` | `metrics.conversions` | Conversion count. |
+| `CHECKOUT_ROAS` | `metrics.roas` | Return on advertising spend for checkout conversions. |
+| `TOTAL_VIDEO_MRC_VIEWS`, `VIDEO_MRC_VIEWS_1`, `VIDEO_MRC_VIEWS_2` | `metrics.videoViews` | Video view count. |
+| `TOTAL_VIDEO_P100_COMPLETE`, `VIDEO_P100_COMPLETE_2` | `metrics.videoCompletions` | Completed video view count. |
 
-For Experience Platform, the [!DNL Pinterest Ads] source is internally configured to `Day`, which means data will be aggregated on a daily basis. For example, using `impressions recorded` as a metric, since the granularity is configured as a `DAY`, you would get `xx` impressions on `day 1`, `yy` impressions on `day 2` and so on.
+Additional mappings include cost, conversion, video, attribution, and engagement metrics.
 
->[!IMPORTANT]
->
->Pinterest imposes a rate limit of 1000 API calls daily on its API to read information from ads, ad groups or ad campaigns. For information on rate limits applicable to underlying API calls, refer to the [[!DNL Pinterest] documentation on rate limits](https://developers.pinterest.com/docs/reference/ratelimits/).
+Experience summary metrics include device and placement breakdowns from ad targeting analytics. The connector requests `APPTYPE` for device breakdowns and `PLACEMENT` for placement breakdowns. Other targeting breakdowns are not requested.
 
-## Connect [!DNL Pinterest Ads] to Experience Platform {#connect-to-platform}
+## Connect your account {#connect-to-platform}
 
-The documentation below provides information on how to connect [!DNL Pinterest Ads] to Experience Platform using APIs or the user interface:
+To create a dataflow, follow the [Pinterest Ads UI tutorial](/help/sources/tutorials/ui/create/advertising/pinterest-ads.md).
 
-### Connect [!DNL Pinterest Ads] to Experience Platform using APIs {#connect-to-platform-using-api}
+## Related documentation {#related-documentation}
 
-* [Create a Pinterest base connection using the Flow Service API](../../tutorials/api/create/advertising/pinterest-ads.md)
-* [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
-* [Create a dataflow for an advertising source using Flow Service API](../../tutorials/api/collect/advertising.md)
-
-### Connect [!DNL Pinterest Ads] to Experience Platform using the UI {#connect-to-platform-using-ui}
-
-* [Create a Pinterest source connection in the UI](../../tutorials/ui/create/advertising/pinterest-ads.md)
-* [Create a dataflow for an advertising source connection in the UI](../../tutorials/ui/dataflow/advertising.md)
+Use the [Pinterest API documentation](https://developers.pinterest.com/docs/api/v5/introduction){target="_blank"} for information about the underlying advertising APIs.
