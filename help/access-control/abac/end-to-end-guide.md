@@ -164,7 +164,8 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 >
 > Assign labels created in the [!UICONTROL Permissions] workspace (such as the audience labels above) to various objects in Adobe Journey Optimizer using [Object Level Access Control](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access)." 
 
-<!-- January safe OLAC for datasets note PLAT-294991
+<!-- 
+January safe OLAC for datasets note PLAT-294991
 ## Apply labels to datasets
 
 >[!IMPORTANT]
@@ -185,7 +186,8 @@ Select the ellipsis (`...`) next to the dataset, then select **[!UICONTROL Manag
 
 The **[!UICONTROL Apply access labels]** page appears, allowing you to choose the labels that you want to apply to the dataset. For this use case, select the **[!UICONTROL PHI/ Regulated Health Data]** label, then select **[!UICONTROL Save]**.
 
-![Apply access labels with PHI/Regulated health data selected and highlighting Save.](../images/abac-end-to-end-user-guide/abac-dataset-select-labels.png) -->
+![Apply access labels with PHI/Regulated health data selected and highlighting Save.](../images/abac-end-to-end-user-guide/abac-dataset-select-labels.png) 
+-->
 
 ## Activate the access control policy {#policy}
 
