@@ -291,7 +291,7 @@ A successful response returns the details of the newly created system request.
 
 >[!IMPORTANT]
 >
->Creating a delete request is an **asynchronous** process. As a result, you may need to check the status of the delete request using the [view a specific delete request endpoint](#view-a-specific-delete-request). 
+>Creating a delete request is an **asynchronous** process. As a result, you may need to check the status of the delete request using the [view a specific delete request endpoint](#view-a-specific-delete-request) to ensure the delete request was successfully created. 
 
 If you attempt to initiate a delete request for a Record dataset batch, the request will fail. To check this, run the [view a specific delete request](#view-a-specific-delete-request) with the `requestId` of your system job. In this situation, the `errors` field will be populated, with a full response similar to the following body:
 
