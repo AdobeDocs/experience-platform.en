@@ -140,7 +140,7 @@ A successful response returns page information and a children array that contain
 | `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
 | `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, `FAILED`, and `IN-PROGRESS`. |
 | `properties` | An object that contains batch and/or dataset IDs of the system job. |
-| `metrics` | An object that contains metrics data for the system job. This includes information such as the number of successful records, the number of failed records, the total number of records scanned, and the time it took to process the system job. This object is **not** intended to be used with programmatic service-to-service integrations, and is meant for informative purposes. |
+| `metrics` | An object that contains metric data for the system job. This includes information such as the number of successful records, the number of failed records, the total number of records scanned, and the time it took to process the system job. This object is **not** intended to be used with programmatic service-to-service integrations, and is meant for informative purposes. |
 
 +++
 
@@ -293,7 +293,7 @@ A successful response returns the details of the newly created system request.
 >
 >Creating a delete request is an **asynchronous** process. As a result, you may need to check the status of the delete request using the [view a specific delete request endpoint](#view-a-specific-delete-request) to ensure the delete request was successfully created. 
 
-If you attempt to initiate a delete request for a Record dataset batch, the request will fail. To check this, run the [view a specific delete request](#view-a-specific-delete-request) with the `requestId` of your system job. In this situation, the `errors` field will be populated, with a full response similar to the following body:
+If you try to initiate a delete request for a record-based dataset, the request will fail. To check the status of the delete request, run the [view a specific delete request](#view-a-specific-delete-request) with the `requestId` of your system job. In this situation, the `errors` field will be populated, with a full response similar to the following body:
 
 ```json
 {
@@ -385,7 +385,7 @@ A successful response returns the details of the specified system request, inclu
 | `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
 | `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, `FAILED`, and `IN-PROGRESS`. |
 | `properties` | An object that contains batch and/or dataset IDs of the system job. |
-| `metrics` | An object that contains metrics data for the system job. This includes information such as the number of successful records, the number of failed records, the total number of records scanned, and the time it took to process the system job. This object is **not** intended to be used with programmatic service-to-service integrations, and is meant for informative purposes. |
+| `metrics` | An object that contains metric data for the system job. This includes information such as the number of successful records, the number of failed records, the total number of records scanned, and the time it took to process the system job. This object is **not** intended to be used with programmatic service-to-service integrations, and is meant for informative purposes. |
 
 
 +++
