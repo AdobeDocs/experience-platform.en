@@ -171,6 +171,8 @@ A successful response returns an array containing the ID of the updated dataset,
 ]
 ```
 
+<!-- January safe OLAC for datasets note PLAT-294991
+
 ### Update array fields {#array-fields}
 
 The `accessLabels` field is used by Object-Level Access Control to restrict access to an entire dataset. For information on how dataset access is evaluated, see [Attribute-based access control end-to-end guide](../../access-control/abac/end-to-end-guide.md).
@@ -238,7 +240,7 @@ A successful response returns an array containing the ID of the updated dataset.
 [
     "@/dataSets/67b3077efa10d92ab7a71858"
 ]
-```
+``` -->
 
 ### An example dataset before and after update
 

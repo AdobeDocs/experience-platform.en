@@ -27,7 +27,17 @@ The [[!DNL Dataset Service API]](https://developer.adobe.com/experience-platform
 
 >[!IMPORTANT]
 >
->Applying labels through this API only supports data governance use cases. To restrict access to individual schema fields, apply labels to the schema instead (see the [attribute-based access control overview](../../access-control/abac/overview.md)). To restrict access to an entire dataset, use the dataset's accessLabels field, which is evaluated separately through object-level access control (OLAC).
+>Use this API to apply labels for data governance purposes. To restrict access to specific fields, apply labels to the schema instead.
+>
+>For more information about field-level access control, see the [attribute-based access control overview](../../access-control/abac/overview.md).
+
+<!-- January safe OLAC for datasets note PLAT-294991
+>[!IMPORTANT]
+>
+>Use this API to apply labels for data governance purposes. To restrict access to specific fields, apply labels to the schema instead. To restrict access to the entire dataset, use the dataset's `accessLabels` field.
+>
+>For more information about field-level access control, see the [attribute-based access control overview](../../access-control/abac/overview.md).
+-->
 
 This document covers how to manage labels for datasets and fields using the [!DNL Dataset Service API]. For steps on how to manage data usage labels themselves using API calls, see the [labels endpoint guide](../api/labels.md) for the [!DNL Policy Service API].
 

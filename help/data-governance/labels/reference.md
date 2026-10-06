@@ -54,9 +54,10 @@ Data usage labels allow you to categorize datasets and fields according to [gove
 
 This document outlines the core data usage labels currently provided by Experience Platform.
 
+<!-- January safe OLAC for datasets note PLAT-294991
 >[!NOTE]
 >
->These same labels are also used as `core/` labels when restricting access to an entire dataset using `accessLabels`. See [Update array fields](../../catalog/api/update-object.md#array-fields) for more information on setting `accessLabels`.
+>These same labels are also used as `core/` labels when restricting access to an entire dataset using `accessLabels`. See [Update array fields](../../catalog/api/update-object.md#array-fields) for more information on setting `accessLabels`. -->
 
 ## Contract labels {#contract}
 
