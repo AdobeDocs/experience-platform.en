@@ -81,24 +81,12 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
  -d '{
         "name": "Sample external audience",
         "description": "A sample version of an external audience",
+        "autoDiscoverSchema": true,
         "fields": [
             {
                 "name": "ppid",
                 "type": "string",
                 "identityNs": "email"
-            },
-            {
-                "name": "list_id",
-                "type": "string",
-                "labels": ["core/C2", "custom/deep"]
-            },
-            {
-                "name": "delete",
-                "type": "number"
-            },
-            {
-                "name": "process_consent",
-                "type": "string"
             }
         ],
         "sourceSpec": {
@@ -126,13 +114,15 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | -------- | ---- | ----------- |
 | `name` | String | The name for the external audience. |
 | `description` | String | An optional description for the external audience. |
+| `autoDiscoverSchema` | Boolean | A field that lets the system automatically discover the schema of the external audience. If this value is set to true, you only need to provide the `sourceSpec` and the identity column within `fields`. |
 | `customAudienceId` | String | An optional identifier for your external audience. |
 | `fields` | Array of objects | The list of fields and their data types. You must have a minimum of 1 field and a maximum of 41 fields in your array. One of the fields **must** be an identity field, and include the `identityNs`. When creating the list of fields, you can add the following items: <ul><li>`name`: **Required** The name of the field that is part of the external audience specification.</li><li>`type`: **Required** The type of data that goes into the field. Supported values include `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`), and `boolean`.</li><li>`identityNs`: **Required for identity field** The namespace that is used by the identity field. Supported values include all valid namespaces, such as `ECID` or `email`. If you're creating an account audience, this value **must** be `b2b_account`.</li><li>`labels`: *Optional* An array of access control labels for the field. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). </li></ul> |
 | `sourceSpec` | Object | An object that contains the information where the external audience is located. When using this object, you **must** include the following information: <ul><li>`format`: *Optional* The format that the audience comes in. This value can be `delimited`, `json`, or `parquet`. If left empty, this value defaults to `delimited`. </li><li>`path`: **Required**: The location of the external audience or the folder that contains the external audience within the source. The file path **cannot** contain any spaces. For example, if your path is `activation/sample-source/Example CSV File.csv`, set the path to `activation/sample-source/ExampleCSVFile.csv`. You can find the path to your source within the **Source data** column of the dataflows section.</li><li>`type`: **Required** The type of the object you're retrieving from the source. This value can either be `file` or `folder`.</li><li>`sourceType`: *Optional* The type of source you're retrieving from. Currently, the only supported value is `Cloud Storage`.</li><li>`cloudType`: **Required** The type of cloud storage, based off of the source type. Supported values include `S3`, `DLZ`, `GCS`, `Azure`, and `SFTP`.</li><li>`baseConnectionId`: The ID of the base connection, and is provided from your source provider. This value is **required** if using a `cloudType` value of `S3`, `GCS`, or `SFTP`. Otherwise, you do **not** need to include this parameter. For more information, please read the [source connectors overview](../../sources/home.md).</li><li>`encryption`: *Optional* An object that contains the encryption key required for asynchronous encrypted data ingestion.</li><ul><li>`publicKeyId`: **Required**: The public key ID that was returned when you generated the encryption key pair. For more information, read the [encrypt data guide](/help/sources/tutorials/api/encrypt-data.md#create-encryption-key-pair). </li><li>`signVerificationKeyId`: *Optional*: The public key ID that was returned when you shared your customer managed key with Experience Platform. **Note:** This field is labeled as `publicKeyId` in the response for that API request. For more information, read the [encrypt data guide](/help/sources/tutorials/api/encrypt-data.md##share-your-public-key-to-experience-platform).</li></ul></ul> |
 | `ttlInDays` | Integer | The data expiration for the external audience, in days. This value can be set from 1 to 3650. By default, the data expiration is set to 30 days. |
 | `audienceType` | String | The audience type for the external audience. Supported values include `people` and `account`. |
 | `originName` | String | **Required** The origin of the audience. This states where the audience comes from. For external audiences, you should use `CUSTOM_UPLOAD`. |
-| `expressActivation` | Boolean | *Optional* A boolean that enables the express activation job to be ran. The express activation job creates an additional job that is directly consumed by the downstream activation pipeline, reducing the time to deliver audience membership data to configured batch destinations. This field is best used on **subsequent** audience activations and may not result is faster activation times for **initial** audience activations. By default, the value is set to `false`. For more information on how to use express activation, read the [express activation section](#express-activation). |
+| `expressActivation` | Boolean | *Optional* A boolean that enables the express activation job to be ran.  By default, the value is set to `false`. For more information on how to use express activation, read the [express activation section](#express-activation). |
+| `expressActivationWithPayloadAttrs` | Boolean | *Optional* A boolean that enables express activation with profile attributes to be ran. This field **cannot** be concurrently set true with `expressActivation`. By default, this value is set to `false`. For more information on how to use express activation, read the [express activation section](#express-activation). |
 | `namespace` | String | The namespace for the audience. By default, this value is set to `CustomerAudienceUpload`. |
 | `labels` | Array of strings | The access control labels that apply to the external audience. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). |
 | `tags` | Array of strings | The tags you want to apply to the external audience. When you add the array of tags, you **must** use the `tagId`. More information about tags can be found in the [managing tags guide](/help/administrative-tags/ui/managing-tags.md). |
@@ -881,6 +871,22 @@ The following section displays the available error codes when using the external
 
 ### Express activation {#express-activation}
 
+Express activation creates an additional job that is directly consumed by the downstream activation pipeline, reducing the time to deliver audience membership data to configured batch destinations. Express activations are best used on **subsequent** audience activations and may not result is faster activation times for **initial** audience activations.
+
+There are **two** types of express activation jobs available - without profile attributes and with profile attributes.
+
+>[!NOTE]
+>
+>Using `expressActivation` and `expressActivationWithPayloadAttrs` are **mutually exclusive**. You **cannot** have both of these flags set as `true` at the same time.
+
+#### Express activation without profile attributes
+
+>[!IMPORTANT]
+>
+>Currently, data is activated twice - the first time due to the express activation job, which occurs soon after batch ingestion and the second time after the audience evaluation job.
+>
+>Additionally, express activation will **only** activate enrichment attributes, and will **not** activate profile attributes.
+
 To use express activation, you need to first make a POST request to the `/external-audience` endpoint with `expressActivation` set to `true`. Within the response, make sure to note the `operationId`.
 
 You now want to confirm that the audience has successfully been processed. Make a GET request to the `/external-audience/operations` while providing the `operationId` you previously noted. If the status is `SUCCESS` you can add the audience to your destination.
@@ -889,8 +895,18 @@ When you add the audience to a destination, there is a 30 minute configuration b
 
 Once you've added the audience to a destination, you can trigger an audience ingestion to activate the data into your destination.
 
->[!IMPORTANT]
+#### Express activation with profile attributes
+
+>[!AVAILABILITY]
 >
->Currently, data is activated twice - the first time due to the express activation job, which occurs soon after batch ingestion and the second time after the audience evaluation job.
->
->Additionally, express activation will **only** activate enrichment attributes, and will **not** activate profile attributes.
+>This feature is in **limited availability**. For more information, contact Adobe Customer Care.
+
+To use express activation with profile attributes, you need to first make a POST request to the `/external-audience` endpoint with `expressActivationWithPayloadAttrs` set to `true`. Within the response, make sure to note the `operationId`.
+
+You now want to confirm that the audience has successfully been processed. Make a GET request to the `/external-audience/operations` while providing the `operationId` you previously noted. If the status is `SUCCESS` you can add the audience to your destination.
+
+When you add the audience to a destination, there is a 30 minute configuration between the audience and destination. Wait for at least 30 minutes before triggering the flow run.
+
+Once you've added the audience to a destination, you can trigger an audience ingestion to activate the data into your destination.
+
+With `expressActivationWithPayloadAttrs`, up to **three** datasets may be created - one for the standard profile activation job, one for the faster activation job, and potentially one for the profile union. The profile union database is only created if the linked audience reference **also** has `expressActivationWithPayloadAttrs` set to true.
