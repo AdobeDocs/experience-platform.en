@@ -45,6 +45,8 @@ If you are an Adobe Journey Optimizer customer, please read the [get started wit
 >[!NOTE]
 >
 >This guide explains how to create audiences using Audience Composition. To learn how to create audiences through segment definitions using Audience Builder please read the [Audience Builder UI guide](./audience-builder.md).
+>
+>Policies and labels powered by Privacy Shield are enforced across audience compositions activated in Real-Time CDP and Adobe Journey Optimizer, except for enriched audiences. Enrichment attributes in audience compositions are **not** yet integrated with the policy enforcement service, so data usage labels you apply to your enrichment attributes will not be enforced in either Journey Optimizer campaigns or journeys or Real-Time CDP.
 
 Audience Composition provides a workspace to build and edit audiences, using blocks that are used to represent different actions.
 
