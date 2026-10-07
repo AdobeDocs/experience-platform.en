@@ -44,14 +44,16 @@ Read the steps below for information on how to connect your [!DNL AWS Redshift] 
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect with [!DNL AWS Redshift], you must provide the following connection properties:
+Provide the required connection properties to connect [!DNL Flow Service] with [!DNL AWS Redshift]. You can also provide the optional `table` property to scope your connection to a single table.
 
 | Credential | Description |
+| --- | --- |
 | `server` | The server name of your [!DNL AWS Redshift] instance. |
 | `port` | The TCP port that a [!DNL AWS Redshift] server uses to listen for client connections. |
 | `username` | The username associated with your [!DNL AWS Redshift] account. |
 | `password` | The password that corresponds with the user account. |
 | `database` | The [!DNL AWS Redshift] database where data is to be fetched from. |
+| `table` | Optional. The table to scope this connection to. Use `{SCHEMA}.{TABLE}`, for example, `test_schema.my_table`. Provide exactly one schema and one table separated by a single period. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL AWS Redshift] is `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
 
 For more information about getting started, refer to this [[!DNL AWS Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html).
@@ -66,6 +68,8 @@ A base connection retains information between your source and Experience Platfor
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL AWS Redshift] authentication credentials as part of the request parameters.
 
+To scope the connection to a single table, include `auth.params.table` in your request. When provided, root exploration (`GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root`) returns only the specified table. Omit `auth.params.table` to return the full list of tables in the database during root exploration.
+
 **API format**
 
 ```https
@@ -76,7 +80,7 @@ POST /connections
 
 +++Select to view example
 
-The following request creates a base connection for [!DNL AWS Redshift]:
+The following request creates a base connection for [!DNL AWS Redshift] scoped to a single table:
 
 ```shell
 curl -X POST \
@@ -88,15 +92,16 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "AWS-redshift base connection",
-      "description": "base connection for AWS-redshift,
+      "description": "base connection for AWS-redshift",
       "auth": {
           "specName": "Basic Authentication",
           "params": {
               "server": "{SERVER}",
-              "port": "{PORT},
+              "port": "{PORT}",
               "username": "{USERNAME}",
               "password": "{PASSWORD}",
-              "database": "{DATABASE}"
+              "database": "{DATABASE}",
+              "table": "{SCHEMA}.{TABLE}"
           }
       },
       "connectionSpec": {
@@ -113,6 +118,7 @@ curl -X POST \
 | `auth.params.username` | The username associated with your [!DNL AWS Redshift] account. |
 | `auth.params.password` | The password that corresponds with the user account. |
 | `auth.params.database` | The [!DNL AWS Redshift] database where data is to be fetched from. |
+| `auth.params.table` | Optional. The table to scope this connection to. Use `<schema>.<table>`, for example, `test_schema.my_table`. Provide exactly one schema and one table separated by a single period. When provided, root exploration returns only the specified table. When omitted, root exploration returns all tables in the database. |
 | `connectionSpec.id` | The [!DNL AWS Redshift] connection specification ID: `3416976c-a9ca-4bba-901a-1f08f66978ff` |
 
 +++

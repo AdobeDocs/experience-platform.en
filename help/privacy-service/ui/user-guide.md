@@ -58,6 +58,7 @@ Refer to the [Privacy regulations overview](../regulations/overview.md) for a de
 | [!UICONTROL CPRA_CA_USA (California)]     | `cpra_ca_usa` |  [!DNL California Privacy Rights Act] (CPRA) |
 | [!UICONTROL CTDPA_CT_USA (Connecticut)]   | `ctdpa_ct_usa` | [!DNL Connecticut Data Privacy Act]|
 | [!UICONTROL DPDPA_DE_USA (Delaware)]      | `dpdpa_de_usa` | [!DNL Delaware Personal Data Privacy Act]|
+| [!UICONTROL DPDPA_IND (India)]            | `dpdpa_ind` | [!DNL India Digital Personal Data Protection Act]|
 | [!UICONTROL FDBR_FL_USA (Florida)]        | `fdbr_fl_usa` | [!DNL Florida Digital Bill of Rights]|
 | [!UICONTROL GDPR (European Union)]        | `gdpr` | The European Union's [!DNL General Data Protection Regulation] |
 | [!UICONTROL HIPAA_USA (United States)]    | `hipaa_usa` | [!DNL Health Insurance Portability and Accountability Act]|

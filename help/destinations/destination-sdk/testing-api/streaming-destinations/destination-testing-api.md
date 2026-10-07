@@ -1,5 +1,5 @@
 ---
-description: Learn how to use the destination testing API to test if your streaming destination is configured correctly and to verify the integrity of data flows to your configured destination.
+description: Learn how to use the destination testing API to verify that your streaming destination is configured correctly and check data flow integrity.
 title: Test your streaming destination with sample profiles
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
 TQID: https://experienceleague.adobe.com/iBK4oJed8u-XU9h3giI-jG-tZvDKAsysvJhCXaYA0MY
@@ -26,7 +26,7 @@ topic_v2:
 
 This page lists and describes all the API operations that you can perform using the `/authoring/testing/destinationInstance/` API endpoint, to test if your destination is configured correctly and to verify the integrity of data flows to your configured destination. For a description of the functionality supported by this endpoint, read [Test your destination configuration](streaming-destination-testing-overview.md).
 
-You make requests to the testing endpoint with or without adding profiles to the call. If you don't send any profiles on the request, Adobe will generate those internally for you and add them to the request.
+You make requests to the testing endpoint with or without adding profiles to the call. If you do not send any profiles on the request, Adobe will generate those internally for you and add them to the request.
 
 You can use the [Sample profile generation API](sample-profile-generation-api.md) to create profiles to use in requests to the destination testing API.
 
@@ -36,11 +36,11 @@ You can use the [Sample profile generation API](sample-profile-generation-api.md
 >
 >* To use this API, you must have an existing connection to your destination in the Experience Platform UI. Read [connect to destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) and [activate profiles and audiences to a destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) for more information.
 >* After establishing the connection to your destination, get the destination instance ID that you should use in API calls to this endpoint when [browsing a connection with your destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
->![UI image how to get destination instance ID](../../assets/testing-api/get-destination-instance-id.png)
+>![UI image showing how to get destination instance ID from the URL.](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Getting started with destination testing API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Test your destination configuration without adding profiles to the call {#test-without-adding-profiles}
 

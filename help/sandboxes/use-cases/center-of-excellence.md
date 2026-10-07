@@ -75,7 +75,7 @@ Read through the sections below which include links to further documentation, to
 
 The first step in enabling your center of excellence is to create your golden sandbox. This sandbox should contain the baseline configurations that represent your best practices. To create this golden sandbox, follow the guide on [creating a new sandbox](../ui/user-guide.md#create-a-new-sandbox) in Experience Platform.
 
-Once your sandbox has been created, begin creating your baseline object configurations, such as [schemas](../../xdm/ui/resources/schemas.md#create-a-new-schema), [datasets](../../catalog/datasets/user-guide.md#create-a-dataset), or [audiences](../../segmentation/ui/segment-builder.md). Be sure to review your configurations before continuing.
+Once your sandbox has been created, begin creating your baseline object configurations, such as [schemas](../../xdm/ui/resources/schemas.md#create-a-new-schema), [datasets](../../catalog/datasets/user-guide.md#create-a-dataset), or [audiences](../../segmentation/ui/audience-builder.md). Be sure to review your configurations before continuing.
 
 ### Export your sandbox into a package
 

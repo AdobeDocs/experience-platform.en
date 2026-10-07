@@ -23,6 +23,7 @@ nudge: true
   - [Monitor dataflows for streaming profile ingestion](./ui/monitor-streaming-profile.md)
   - {hide-from-toc} [Monitor dataflows for streaming segmentation](./ui/monitor-streaming-audiences.md)
   - [Monitor datastreams in edge](./ui/monitor-edge.md)
+  - [Monitor Orchestrated Campaign ingestion](./ui/monitor-orchestrated-campaign.md)
   - B2B monitoring {#b2b}
     - [Monitor profile enrichment jobs](./ui/b2b/monitor-profile-enrichment.md)
 - [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/flow-service)

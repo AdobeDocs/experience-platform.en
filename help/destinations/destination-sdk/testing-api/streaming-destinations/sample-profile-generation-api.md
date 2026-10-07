@@ -41,7 +41,7 @@ Note that the purposes for which the sample profiles can be used are not interch
 
 ## Getting started with sample profile generation API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Generate sample profiles based on the source schema to use when testing your destination {#generate-sample-profiles-source-schema}
 
@@ -58,7 +58,7 @@ To get the ID of a destination instance, you must first create a connection in t
 >* To use this API, you must have an existing connection to your destination in the Experience Platform UI. Read [connect to destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) and [activate profiles and audiences to a destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) for more information.
 >* After establishing the connection to your destination, get the destination instance ID that you should use in API calls to this endpoint when [browsing a connection with your destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
 >
->![UI image how to get destination instance ID](../../assets/testing-api/get-destination-instance-id.png)
+>![UI image showing how to get destination instance ID from the URL.](../../assets/testing-api/get-destination-instance-id.png)
 
 **API format**
 

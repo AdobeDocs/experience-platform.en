@@ -19,27 +19,12 @@ last-update: 2026-08-18
 
 New features and updates to existing features in Adobe Experience Platform:
 
-- [Access control](#access-control)
 - [Data Governance](#data-governance)
 - [Data Ingestion](#data-ingestion)
 - [Destinations](#destinations)
 - [Run and Operate](#run-and-operate)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
-
-## Access control {#access-control}
-
-Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Experience Platform capabilities, including data modeling, profile management, and sandbox administration.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Object-Level Access Control for Datasets | You can now apply access labels to entire datasets to control which users and applications can read or write dataset data. Use the same Adobe-defined and custom access labels available throughout Adobe Experience Platform to enforce dataset-level access restrictions. For information about applying and managing dataset labels, see the [end to end guide](/help/access-control/abac/end-to-end-guide.md) |
-
-{style="table-layout:auto"}
-
-For more information, read the [Access control overview](/help/access-control/home.md). 
 
 ## Data Governance {#data-governance}
 
@@ -78,7 +63,7 @@ For more information, read the [data ingestion overview](/help/ingestion/home.md
 | Feature | Description |
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [Activate audiences on-demand for streaming destinations](/help/destinations/ui/activate-now-streaming.md) | Trigger an immediate, on-demand resend of an audience's full current membership to a streaming destination without waiting for the next audience qualification or disqualification event. This update is rolling out through August 21, 2026. This feature is in private beta and available for a limited number of streaming destinations. Contact your Adobe representative to request access. <br> ![Triggering an on-demand resend of an audience's full membership to a streaming destination using Activate now.](assets/august/activate-now-streaming.gif){zoomable="yes"} |
-| [Data type filter in the destinations catalog](/help/destinations/catalog/overview.md) | Find the destination you need faster by filtering the **[!UICONTROL Browse]** tab of the destinations catalog by data type. This update is rolling out through the first week of September 2026. <br> ![Filtering destinations by data type in the Browse tab of the destinations catalog.](assets/august/data-type-filter-browse.gif){zoomable="yes"} |
+| [!BADGE Postponed]{type=Negative} [Data type filter in the destinations catalog](/help/destinations/catalog/overview.md) | Find the destination you need faster by filtering the **[!UICONTROL Browse]** tab of the destinations catalog by data type. **This update has been postponed to the September 2026 release.** <br> ![Filtering destinations by data type in the Browse tab of the destinations catalog.](assets/august/data-type-filter-browse.gif){zoomable="yes"} |
 
 {style="table-layout:auto"}
 

@@ -29,7 +29,7 @@ topic_v2:
 ---
 # Configure audience data type
 
-When you build a destination connector with Destination SDK, you can define the type of audience that will be exported to your destination. Configuring the correct audience data type ensures that your destination receives the right data for its intended use case, whether it's for marketing campaigns, account-based strategies, or data analysis.
+When you build a destination connector with Destination SDK, you can define the type of audience that will be exported to your destination. Configuring the correct audience data type ensures that your destination receives the right data for its intended use case, whether it is for marketing campaigns, account-based strategies, or data analysis.
 
 Review the audience data types below to learn about the differences between them and identify the type that you need for your integration. Then, read the sections further below on the page to learn how to configure your destination to export different audience types.
 
@@ -74,7 +74,7 @@ People audiences are supported by default for all destination types and do not n
 
 +++ Streaming destination configuration example with people audiences support
 
-This is an example of a streaming destination that exports people audiences. Notice how there is no `sources` array in the configuration."
+This is an example of a streaming destination that exports people audiences. Notice how there is no `sources` array in the configuration.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \

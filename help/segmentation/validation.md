@@ -9,7 +9,7 @@ When you write an audience definition in Adobe Experience Platform, audience val
 
 By adhering to audience definition best practices, you ensure your audiences can evaluate faster, ensure your logic remains efficient even when your audience size grows, and reduce the risk of evaluation failures during high-traffic periods. Optimized audiences also improve activation speed to destinations, reduce real-time personalization latency, and maintain overall sandbox stability.
 
-Experience Platform runs these validations in real-time as you build your audience in Segment Builder. When you add events or attributes that exceed validation thresholds, you receive immediate feedback within the Segment Builder interface.
+Experience Platform runs these validations in real-time as you build your audience in Audience Builder. When you add events or attributes that exceed validation thresholds, you receive immediate feedback within the Audience Builder interface.
 
 ## Validation types {#validation-types}
 
@@ -18,6 +18,11 @@ When audience validation runs on your audiences, there are two different types o
 If a critical validation construct is violated, the system will prevent you from saving your audience to protect the stability of your sandbox. If a performance optimization construct is violated, you will be able to save your audience, but it is *highly recommended* you update your audience definition to avoid performance issues.
 
 ## Validation checks {#validation-checks}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_audiencevalidation"
+>title="Audience validation"
+>abstract="Audience Validation provides built-in validations and guardrails that run in real-time to ensure your audiences are not only accurate, but stable and scalable. This ensures your audiences evaluate faster, remain logically efficient, and reduces the risk of evaluation failures. Audience Validation checks include logical complexity, sequential events, aggregated count, nested data, and audience size."
 
 Currently, the following validations are supported:
 
@@ -42,6 +47,8 @@ Currently, the following validations are supported:
 >abstract="Your audience contains too many queries, which results in unnecessary logical complexity. Please simplify your audience definition before continuing."
 
 The logical complexity validation analyzes the structure of your logical statements (AND, OR, NOT) within your audience definition. Specifically, it looks for audience definitions that will force the system to perform an excessive number of comparisons per profile.
+
+![The Logical complexity check failing is shown within the Audience validation UI.](/help/segmentation/images/validation/logical-complexity.png)
 
 If your audience definition has an excessive number of comparisons per profile, this increased complexity leads to slower evaluation on a per profile basis. As a result, this increases the overall time taken for audience evaluation.
 
@@ -108,6 +115,8 @@ plan.equals("trial") AND region.equals("canada")
 
 The sequential event complexity validation limits the number of sequential events in a sequence to 3 events.
 
+![The Sequential events check failing is shown within Audience validation.](/help/segmentation/images/validation/sequential-events.png)
+
 Sequential segmentation is one of the most computationally complicated operations within Experience Platform, since the system needs to scan a customer's entire history of Experience Events, sort them by timestamp, and verify if the specified order matches your query. As a result, when the chain grows, the number of permutations the system needs to calculate drastically increases.
 
 To avoid triggering this validation, focus on the basics of your sequential chain by defining the beginning, middle, and end of the journey. Immediate steps are often implied within the final conversion.
@@ -156,6 +165,8 @@ To avoid triggering this validation, only use specific counts when it's strictly
 
 The nested data complexity validation limits the number of nested data within an audience definition to 2 layers. 
 
+![The Nested data check failing is shown within the Audience validation UI.](/help/segmentation/images/validation/nested-data.png)
+
 While Experience Platform supports the use of array and map objects to store complex data types, unpacking nested structures to find a value requires more complex traversal logic. The deeper data is nested in an array, the longer it takes to retrieve for validation.
 
 If you frequently perform segmentation on a deeply nested attribute, you may need to contact your data engineering team to copy the attribute to a higher level within the profile schema for easier access.
@@ -175,7 +186,7 @@ If you need to create an audience that qualifies more than 30% of your profile s
 
 ## Next steps
 
-After reading this guide, you have a better understanding of how Experience Platform runs automatic validations to improve evaluation, stability, and scalability. For more information on creating audiences using the UI, read the [Segment Builder documentation](./ui/segment-builder.md).
+After reading this guide, you have a better understanding of how Experience Platform runs automatic validations to improve evaluation, stability, and scalability. For more information on creating audiences using the UI, read the [Audience Builder documentation](./ui/audience-builder.md).
 
 ## Appendix
 

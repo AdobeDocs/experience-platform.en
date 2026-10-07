@@ -54,9 +54,12 @@ Data usage labels that are applied at the dataset level are propagated to all fi
 
 In addition to the labels provided by Adobe, you can also define your own custom labels for your organization. See the section on [managing labels](#manage-labels) for more information.
 
+<!-- 
+January safe OLAC for datasets note PLAT-294991
 >[!NOTE]
 >
->These same core and custom labels can also restrict access to an entire dataset using `accessLabels`, evaluated through object-level access control. See [Update array fields](../../catalog/api/update-object.md#array-fields) for more information on setting `accessLabels`.
+>These same core and custom labels can also restrict access to an entire dataset using `accessLabels`, evaluated through object-level access control. See [Update array fields](../../catalog/api/update-object.md#array-fields) for more information on setting `accessLabels`. 
+-->
 
 ## Label inheritance for audiences
 

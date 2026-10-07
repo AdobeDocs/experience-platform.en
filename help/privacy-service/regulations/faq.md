@@ -93,6 +93,7 @@ Many privacy regulations stipulate that if a data subject is below a certain age
 | GDPR (European Union) | 16 | <ul><li>Some member states of the EU may provide a law for a lower age for this purpose, but no lower than 13.</li><li>Parental consent must be provided for all data subjects below the age limit.</li></ul> |
 | LGPD (Brazil) | 13 | <ul><li>Parental consent must be provided for all data subjects below the age limit.</li><li>Consent may be given by a 13 to 18 year old natural person, as long as the processing of their personal data is undergone in their best interest.</li></ul> |
 | PDPA (Thailand) | 10 | <ul><li>Parental consent must be provided for all data subjects below the age limit.</li></ul> |
+| DPDPA (India) | 18 | <ul><li>A "child" is defined as any individual who has not completed 18 years of age.</li><li>Verifiable consent from a parent or lawful guardian must be provided before processing the personal data of a child.</li></ul> |
 
 <!-- | New Zealand [!DNL Privacy Act] | 16 | <ul><li>Parental consent must be provided for all data subjects below the age limit in cases where consent is required.</li></ul> | -->
 
@@ -106,12 +107,34 @@ Assuming that the business has collected personal information and that it can au
 
 | Regulation | Timeframe to respond | Notes |
 | --- | --- | --- |
+| APA (Australia) | 30 days | |
 | CCPA (California) | 45 days | |
+| CPA (Colorado) | 45 days | |
+| CPRA (California) | 45 days | |
+| CTDPA (Connecticut) | 45 days | |
+| DPDPA (Delaware) | 45 days | |
+| DPDPA (India) | 30 days | |
+| FDBR (Florida) | 45 days | |
 | GDPR (European Union) | 30 days | |
-| LGPD (Brazil) | 15 days | |
+| HIPAA (United States) | 30 days | HIPAA provides an access right only; it does not provide a deletion right. |
+| ICDPA (Iowa) | 90 days | |
+| LGPD (Brazil) | 15 days (access), 30 days (delete) | |
+| MCDPA (Minnesota) | 45 days | |
+| MCDPA (Montana) | 45 days | |
+| MHMDA (Washington) | 45 days | |
+| MODPA (Maryland) | 45 days | |
+| NDPA (Nebraska) | 45 days | |
+| New Zealand [!DNL Privacy Act] | 20 working days (access), 180 days (delete) | Under the New Zealand Privacy Act, deletion is treated as a secondary right. |
+| NHDPA (New Hampshire) | 45 days | |
+| NJDPA (New Jersey) | 45 days | |
+| OCPA (Oregon) | 45 days | |
 | PDPA (Thailand) | 30 days | If a company cannot respond to a data subject's request within the compliance window, the company will have an additional 30 days from the date they were unable to fulfill the request to respond in writing to the data subject. |
-
-<!-- | New Zealand [!DNL Privacy Act] | 20 working days | | -->
+| PIPA (South Korea) | 10 days | |
+| QL25 (Quebec) | 20 days | |
+| TDPSA (Texas) | 45 days | |
+| TIPA (Tennessee) | 45 days | |
+| UCPA (Utah) | 45 days | |
+| VCDPA (Virginia) | 45 days | |
 
 ### Does my business need to appoint a data protection officer?
 

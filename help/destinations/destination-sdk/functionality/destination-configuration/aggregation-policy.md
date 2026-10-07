@@ -107,7 +107,7 @@ The example configuration below shows a best effort aggregation configuration. F
 
 ## Configurable aggregation {#configurable-aggregation}
 
-Configurable aggregation works best if you'd rather take in large batches, with thousands of profiles on the same call. This option also supports aggregating the exported profiles based on complex aggregation rules.
+Configurable aggregation works best if you would rather take in large batches, with thousands of profiles on the same call. This option also supports aggregating the exported profiles based on complex aggregation rules.
 
 The example configuration below shows a configurable aggregation configuration. For an example of best effort aggregation, see the [best effort aggregation](#best-effort-aggregation) section. The parameters applicable to configurable aggregation are documented in the table below.
 

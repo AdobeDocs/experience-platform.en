@@ -1,5 +1,5 @@
 ---
-description: This page describes how to authenticate and start using Adobe Experience Platform Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name, and the destination authoring access control permission.
+description: Learn how to authenticate and start using Destination SDK, including how to obtain Adobe I/O credentials, a sandbox name, and destination authoring permission.
 title: Getting started with Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
 TQID: https://experienceleague.adobe.com/alsuk2QIp1-FinuS1dwhkNCC-3HQINeVZeriwDClrKo

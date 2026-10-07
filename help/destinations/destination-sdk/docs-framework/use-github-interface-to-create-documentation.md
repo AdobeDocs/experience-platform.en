@@ -1,6 +1,6 @@
 ---
-title: Use the GitHub web interface to create a destination documentation page
-description: The instructions on this page show you how to use the GitHub web interface to author a documentation page for your Experience Platform destination and submit it for review.
+title: Use GitHub to create a destination documentation page
+description: Learn how to use the GitHub web interface to author a destination documentation page and submit it for review.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
 TQID: https://experienceleague.adobe.com/jJ9qBavmjeRODOWkPGD5oSxv5lDt1OvGOSC9-4PmVA0
 product_v2:
@@ -15,7 +15,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
     internal-label: Personalization
 ---
-# Use the GitHub web interface to create a destination documentation page {#github-interface}
+# Use GitHub to create a destination documentation page {#github-interface}
 
 The instructions below show you how to use the GitHub web interface to author documentation and submit a pull request (PR). Before going through the steps indicated here, make sure you read [Document your destination in Adobe Experience Platform Destinations](./documentation-instructions.md).
 

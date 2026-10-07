@@ -1,5 +1,5 @@
 ---
-description: This page explains how to use the /sample-profiles API endpoint from Destination SDK to generate sample profiles based on a source schema. You can use these sample profiles to test your file-based destination configuration.
+description: Learn how to use the sample profiles endpoint to generate sample profiles based on a source schema for testing your file-based destination.
 title: Generate sample profiles based on a source schema
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
 TQID: https://experienceleague.adobe.com/9B9yemNNDAQZj3OnO-CNoKFf7F02NBJIORYFJLgY4Ow
@@ -26,7 +26,7 @@ Sample profiles can help you understand the JSON structure of a profile. Additio
 
 ## Getting started {#getting-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Prerequisites {#prerequisites}
 

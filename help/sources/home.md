@@ -113,6 +113,8 @@ You can use the following sources to ingest advertising data to Experience Platf
 | --- | --- | --- |
 | [[!DNL Google Ads]](connectors/advertising/ads.md) | Batch | Azure |
 | [[!DNL Meta Ads]](connectors/advertising/meta-ads.md) | Batch | Azure |
+| [[!DNL Pinterest Ads]](connectors/advertising/pinterest-ads.md) | Batch | Azure |
+| [[!DNL Snapchat Ads]](/help/sources/connectors/advertising/snapchat-ads.md) | Batch | Azure |
 
 {style="table-layout:auto"}
 
@@ -221,6 +223,7 @@ You can use the following sources to ingest data and identity partner data to Ex
 | [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) | Batch | Azure |
 | [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) | Batch | Azure |
 | [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) | Batch | Azure |
+| [Demandbase](/help/sources/connectors/data-partners/demandbase-b2b.md) | Batch | Azure |
 | [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) | Batch | Azure |
 | [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) | Batch | Azure |
 

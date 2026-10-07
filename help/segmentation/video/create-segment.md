@@ -37,12 +37,12 @@ topic_v2:
 ---
 # Create a segment in the Experience Platform UI
 
-The following video is intended to support your understanding of creating segments. It shows an example customer experience followed by a quick tour of key features in the [!DNL Platform] interface. To learn more about segmentation and how to create segments in the UI, please read the [Segment Builder guide](../ui/segment-builder.md).
+The following video is intended to support your understanding of creating segments. It shows an example customer experience followed by a quick tour of key features in the [!DNL Platform] interface. To learn more about segmentation and how to create segments in the UI, please read the [Audience Builder guide](../ui/audience-builder.md).
 
 If you are interested in creating a segment using the Segmentation API, please read the [create a segment API guide](../tutorials/create-a-segment.md).
 
 >[!NOTE]
 >
->The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, please refer to the [Segment Builder guide](../ui/segment-builder.md).
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, please refer to the [Audience Builder guide](../ui/audience-builder.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)

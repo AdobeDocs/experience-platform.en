@@ -67,11 +67,11 @@ If you prefer to compose a schema using the [!DNL Schema Registry] API instead, 
 
 Once your schema and dataset are prepared, you can generate and ingest scoring data to the dataset by performing scoring runs using an appropriate model.
 
-## Create audiences using the [!DNL Segment Builder] {#create-audiences-using-the-segment-builder}
+## Create audiences using the [!DNL Audience Builder] {#create-audiences-using-the-segment-builder}
 
-After you have generated and ingested your scoring data insights to your [!DNL Profile]-enabled dataset, you can create dynamic audiences using the [!DNL Segment Builder]. 
+After you have generated and ingested your scoring data insights to your [!DNL Profile]-enabled dataset, you can create dynamic audiences using the [!DNL Audience Builder]. 
 
-The [!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. Follow the [[!DNL Segment Builder] user guide](../../segmentation/ui/segment-builder.md) to learn about:
+The [!DNL Audience Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. Follow the [[!DNL Audience Builder] user guide](../../segmentation/ui/audience-builder.md) to learn about:
 
 - Creating segment definitions using a combination of attributes, events, and existing audiences as building blocks.  
 - Using the rule builder canvas and containers to control the order in which audience rules are executed.
@@ -81,6 +81,6 @@ The [!DNL Segment Builder] provides a rich workspace that allows you to interact
 
 ## Next steps {#next-steps}
 
-To learn more about audiences and the [!DNL Segment Builder], read the [Segmentation Service overview](../../segmentation/home.md).
+To learn more about audiences and the [!DNL Audience Builder], read the [Segmentation Service overview](../../segmentation/home.md).
 
 To learn more about [!DNL Real-Time Customer Profile], read the [Real-Time Customer Profile overview](../../profile/home.md)
