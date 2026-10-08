@@ -54,6 +54,7 @@ GET /system/jobs?{QUERY_PARAMETERS}
 | --------- | ----------- | ------- |
 | `start` | Determines the starting page of the returned result set. The page number is 0-based, which means that `start=0` will return results starting from 0. | `start=4` |
 | `limit` | The number of results returned per page. | `limit=10` |
+| `sort` | The order that you want to sort the returned results. The only supported value is `createdAt`. You can have this value sorted in either **ascending** (`asc`) or **descending** (`desc`) order. By default, the system jobs are returned in ascending order. | `sort=createdAt:desc` |
 
 For example, if you had the query parameter of `?start=1&limit=10`, the response will return records 10-19.
 
@@ -100,7 +101,13 @@ A successful response returns page information and a children array that contain
                 "datasetId": "66a92c5910df2d1767de13f3"
             },
             "createdAt": "2024-12-22T19:44:50.250006Z",
-            "updatedAt": "2024-12-22T19:52:13.380706Z"
+            "updatedAt": "2024-12-22T19:52:13.380706Z",
+            "metrics": {
+                "successRecords": 2305,
+                "failedRecords": 0,
+                "totalScannedRecords": 2305,
+                "timeTakenInSec": 1353
+            }
         },
         {
             "requestId": "38a835eb-b491-4864-902b-be07fa4d6a6d",
@@ -115,7 +122,13 @@ A successful response returns page information and a children array that contain
                 "datasetId": "66a92c5910df2d1767de13f3"
             },
             "createdAt": "2024-12-22T19:44:50.250006Z",
-            "updatedAt": "2024-12-22T19:52:13.380706Z"
+            "updatedAt": "2024-12-22T19:52:13.380706Z",
+            "metrics": {
+                "successRecords": 7756,
+                "failedRecords": 0,
+                "totalScannedRecords": 7756,
+                "timeTakenInSec": 2699
+            }
         }        
     ]
 }
@@ -127,6 +140,7 @@ A successful response returns page information and a children array that contain
 | `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
 | `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, `FAILED`, and `IN-PROGRESS`. |
 | `properties` | An object that contains batch and/or dataset IDs of the system job. |
+| `metrics` | An object that contains metric data for the system job. This includes information such as the number of successful records, the number of failed records, the total number of records scanned, and the time it took to process the system job. This object is **not** intended to be used with programmatic service-to-service integrations, and is meant for informative purposes. |
 
 +++
 
@@ -229,7 +243,7 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "datasetId": "66a92c5910df2d1767de13f3",
+        "dataSetId": "66a92c5910df2d1767de13f3",
         "batchId": "01JFSYFDFW9JAAEKHX672JMPSB"
       }'
 ```
@@ -238,7 +252,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `datasetId` | The ID of the dataset for the batch you wish to delete. |
+| `dataSetId` | The ID of the dataset for the batch you wish to delete. |
 | `batchId` | The ID of the batch you wish to delete. |
 
 **Response**
@@ -275,7 +289,36 @@ A successful response returns the details of the newly created system request.
 
 +++
 
-If you attempt to initiate a delete request for a Record dataset batch, the request will fail.
+>[!IMPORTANT]
+>
+>Creating a delete request is an **asynchronous** process. As a result, you may need to check the status of the delete request using the [view a specific delete request endpoint](#view-a-specific-delete-request) to ensure the delete request was successfully created. 
+
+If you try to initiate a delete request for a record-based dataset, the request will fail. To check the status of the delete request, run the [view a specific delete request](#view-a-specific-delete-request) with the `requestId` of your system job. In this situation, the `errors` field will be populated, with a full response similar to the following body:
+
+```json
+{
+    "requestId": "ef78b766-a19c-4d89-8bb6-721021b18884",
+    "requestType": "DELETE_EE_BATCH",
+    "imsOrgId": "{ORG_ID}",
+           "sandbox": {
+        "sandboxName": "{SANDBOX_NAME}",
+        "sandboxId": "{SANDBOX_ID}",
+        "default": false,
+        "type": "development"
+    },
+    "status": "FAILED",
+    "properties": {
+        "batchId": "91JFSYFDFW9JAAEKHX672JMPSB",
+        "datasetId": "66a92c5910df2d1767de13f3"
+    },
+    "createdAt": "2024-12-22T07:34:46.122504Z",
+    "updatedAt": "2024-12-22T07:35:08.400143Z",
+    "errors": {
+        "code": "UPAPI-113323-400",
+        "message": "Dataset must be an Experience Event dataset"
+    }
+} 
+```
 
 ## View a specific delete request {#view-a-specific-delete-request}
 
@@ -326,7 +369,13 @@ A successful response returns the details of the specified system request, inclu
         "datasetId": "66a92c5910df2d1767de13f3"
     },
     "createdAt": "2024-12-22T19:44:50.250006Z",
-    "updatedAt": "2024-12-22T19:52:13.380706Z"
+    "updatedAt": "2024-12-22T19:52:13.380706Z",
+    "metrics": {
+        "successRecords": 7756,
+        "failedRecords": 0,
+        "totalScannedRecords": 7756,
+        "timeTakenInSec": 2699
+    }
 }
 ```
 
@@ -336,6 +385,8 @@ A successful response returns the details of the specified system request, inclu
 | `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
 | `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, `FAILED`, and `IN-PROGRESS`. |
 | `properties` | An object that contains batch and/or dataset IDs of the system job. |
+| `metrics` | An object that contains metric data for the system job. This includes information such as the number of successful records, the number of failed records, the total number of records scanned, and the time it took to process the system job. This object is **not** intended to be used with programmatic service-to-service integrations, and is meant for informative purposes. |
+
 
 +++
 
