@@ -92,7 +92,7 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 | [!UICONTROL Publish] | Custom upload, Segmentation Service | Publishes the selected audience. For more information on lifecycle status management, please read the [lifecycle state section of the Segmentation FAQ](../faq.md#lifecycle-states). |
 | [!UICONTROL Deactivate] | Custom upload, Segmentation Service | Deactivates the selected audience. Please note that in order to deactivate an audience, it **cannot** be activated in **any** destination (including non-Experience Platform destinations) or be part of **any** other audiences. For more information on lifecycle status management, please read the [lifecycle state section of the Segmentation FAQ](../faq.md#lifecycle-states). |
 | [!UICONTROL Delete] | Audience composition, Custom upload, Segmentation Service | Deletes the selected audience. Audiences that are used in downstream destinations or are dependents in other audiences **cannot** be deleted. For more information on audience deletion, please read the [segmentation FAQ](../faq.md#lifecycle-states). |
-| [!UICONTROL Add to package] | Audience composition, Custom upload, Segmentation Service | Moves the audience between sandboxes. For more information on this feature, please read the [sandbox tooling guide](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Add to package] | Audience composition, Custom upload, Federated Audience Composition, Segmentation Service | Moves the audience between sandboxes. For more information on this feature, please read the [sandbox tooling guide](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!IMPORTANT]
 >
