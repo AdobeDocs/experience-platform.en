@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting
+keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
 solution: Experience Platform
 title: Query Service and Data Distiller frequently asked questions
 description: This document contains common questions and answers related to Query Service and Data Distiller. Topics include exporting data, third-party tools, PSQL errors, and XDM row-validation errors.
