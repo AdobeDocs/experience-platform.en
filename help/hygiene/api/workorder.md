@@ -44,7 +44,7 @@ Before you begin, see the [overview](./overview.md) to learn about required head
 
 >[!NOTE]
 >
->To create, update, or delete record delete work orders, your user account must have the **[!UICONTROL Manage Data Lifecycle]** permission for the applicable sandbox. Read-only operations require **[!UICONTROL View Data Lifecycle]**. For more information about assigning Experience Platform permissions, see the [access control overview](../../access-control/home.md).
+>To create, update, cancel, or delete record delete work orders, your user account must have the **[!UICONTROL Manage Data Lifecycle]** permission for the applicable sandbox. Read-only operations require **[!UICONTROL View Data Lifecycle]**. For more information about assigning Experience Platform permissions, see the [access control overview](../../access-control/home.md).
 
 ## Quotas and processing timelines {#quotas}
 
@@ -95,7 +95,7 @@ The following table describes the query parameters available for listing record 
 | --------------- | ------------|
 | `search`        | Case-insensitive partial match (wildcard search) across fields: author, displayName, description, or datasetName. Also matches exact expiration ID.             |
 | `type`          | Filter results by work order type (e.g., `identity-delete`). |
-| `status`        | Comma-separated list of work order statuses. Status values are case-sensitive.<br>Enum: `received`, `validated`, `submitted`, `ingested`, `completed`, `failed` |
+| `status`        | Comma-separated list of work order statuses. Status values are case-sensitive.<br>Enum: `received`, `validated`, `submitted`, `ingested`, `completed`, `failed`, `cancelled` |
 | `author`        | Find the person who most recently updated the work order (or original creator). Accepts literal or SQL pattern. |
 | `displayName`   | Case-insensitive match for the work order display name.      |
 | `description`   | Case-insensitive match for work order description.           |
@@ -180,7 +180,7 @@ The following table describes the properties in the response.
 | `updatedAt`      | The timestamp when the work order was last updated.                              |
 | `operationCount` | The number of operations included in the work order.                             |
 | `targetServices` | The set of target services that processed the deletion. The default value depends on your organization's entitlements. For organizations with Real-Time CDP or Adobe Journey Optimizer, the default is the full set of supported services (`["datalake", "identity", "profile", "ajo"]`). For Customer Journey Analytics-only organizations (without a Real-Time Customer Profile entitlement), the only valid value is ["datalake"]. |
-| `status`         | Current status of the work order. Possible values are: `received`,`validated`, `submitted`, `ingested`, `completed`, and `failed`.|
+| `status`         | Current status of the work order. Possible values are: `received`, `validated`, `submitted`, `ingested`, `completed`, `failed`, and `cancelled`.|
 | `createdBy`      | The email and identifier of the user who created the work order.                 |
 | `datasetId`      | The dataset(s) targeted by the work order: a single dataset ID, a comma-separated list of dataset IDs (multi-dataset), or the literal `ALL`. When the request used profile-only mode, this value is `ALL`. |
 | `datasetName`    | The name of the dataset associated with the work order.                          |
@@ -674,12 +674,89 @@ A successful response returns the updated work order request.
 | `updatedAt`       |   The timestamp when the work order was last updated.|
 | `operationCount`  |   The number of operations included in the work order.|
 | `targetServices`  |   A list of target services impacted by this record delete work order.|
-| `status`          |   The current status of the record delete work order. Possible values are: `received`,`validated`, `submitted`, `ingested`, `completed`, and `failed`.|
+| `status`          |   The current status of the record delete work order. Possible values are: `received`, `validated`, `submitted`, `ingested`, `completed`, `failed`, and `cancelled`.|
 | `createdBy`       |   The email and identifier of the user who created the record delete work order.|
 | `datasetId`       |   The unique identifier for the dataset(s) associated with the record delete work order (single ID, comma-separated IDs, or `ALL`).|
 | `datasetName`    |   The name of the dataset associated with the record delete work order.|
 | `displayName`    |   A human-readable label for the record delete work order.|
 | `description`    |   A description of the record delete work order.|
 | `productStatusDetails` | An array listing the current status of downstream processes for the request. Each object contains:<ul><li>`productName`: The name of the downstream service.</li><li>`productStatus`: The current processing status from the downstream service.</li><li>`createdAt`: The timestamp when the most recent status was posted by the service.</li></ul>This property is available after the work order is submitted to downstream services to begin processing. |
+
+{style="table-layout:auto"}
+
+## Cancel a record delete work order {#cancel}
+
+To stop a record delete work order before processing begins, send a PUT request to the `/workorder/{workorderId}/cancel` endpoint. You can cancel only a pending work order with a status of `received`.
+
+>[!IMPORTANT]
+>
+>If the work order is not in `received` status, the request returns HTTP 409 (Conflict) and the work order continues processing.
+
+**API format**
+
+```http
+PUT /workorder/{workorderId}/cancel
+```
+
+The following table describes the path parameter for this request.
+
+| Parameter | Description |
+| --- | --- |
+| `{workorderId}` | The unique identifier for the record delete work order you want to cancel. |
+
+{style="table-layout:auto"}
+
+**Request**
+
+The following request cancels a record delete work order that is in `received` status:
+
+```shell
+curl -X PUT \
+  https://platform.adobe.io/data/core/hygiene/workorder/DI-6fa98d52-7bd2-42a5-bf61-fb5c22ec9427/cancel \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns the work order details with the `status` set to `cancelled`.
+
+```json
+{
+  "workorderId": "DI-6fa98d52-7bd2-42a5-bf61-fb5c22ec9427",
+  "orgId": "3C7F2AC143214567890ABCDE@AcmeOrg",
+  "bundleId": "BN-dbe3ffad-cb0b-401f-91ae-01c189f8e7b2",
+  "action": "identity-delete",
+  "createdAt": "2037-01-21T08:25:45.119Z",
+  "updatedAt": "2037-01-21T08:30:45.233Z",
+  "operationCount": 3,
+  "targetServices": [
+    "datalake",
+    "identity",
+    "profile",
+    "ajo"
+  ],
+  "status": "cancelled",
+  "createdBy": "g.baratheon@acme.com <g.baratheon@acme.com> C189F8E7B2@acme.com",
+  "datasetId": "d2f1c8a4b8f747d0ba3521e2",
+  "datasetName": "Acme_Marketing_Events",
+  "displayName": "Marketing Identity Delete Request",
+  "description": "Scheduled identity deletion for marketing compliance"
+}
+```
+
+After the cancellation succeeds, the work order stops processing and any unused quota associated with it becomes available for other work orders. Cancellation does not delete the work order.
+
+The following table describes possible error responses.
+
+| HTTP status | Description |
+| --- | --- |
+| 400 | The request is invalid, such as when the `x-gw-ims-org-id` header is missing. |
+| 401 | Your authentication credentials are missing or invalid. |
+| 403 | You do not have permission to cancel the work order. |
+| 404 | The specified work order does not exist. |
+| 409 | The work order is not in `received` status and cannot be canceled. |
 
 {style="table-layout:auto"}
