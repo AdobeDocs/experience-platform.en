@@ -502,11 +502,13 @@ The **[!UICONTROL Import audience CSV]** workflow appears. You can select a CSV 
 
 >[!NOTE]
 >
->The external generated audience **must** be in CSV format, have a **maximum** of 25 columns, and be less than 1GB.
+>The externally generated audience **must** be in CSV format, have a **maximum** of 26 columns, and be less than or equal to 1 GB.
 >
 >Additionally, you **cannot** use spaces or dashes in the first row or the associated columns of the CSV.
 >
 >For example, the first row's value can be "FirstName" or "First_Name", but it cannot be "First Name" or "First-Name".
+>
+>Your sandbox can contain a **maximum** of 50 externally generated CSV audiences. This limit does **not** include audiences created using Federated Audience Composition.
 
 After selecting the CSV file to import, a list of sample data is shown for this externally generated audience. After confirming that the sample data is correct, select **[!UICONTROL Next]**.
 

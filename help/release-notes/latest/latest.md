@@ -182,12 +182,13 @@ For more information, read the [Query Service overview](/help/query-service/home
 
 ## Run and Operate {#run-and-operate}
 
-Use Run and Operate to monitor job health, troubleshoot failures, and track throughput across your Experience Platform implementation.
+Inspect, troubleshoot, and understand your Experience Platform implementations with Run and Operate tools. Monitor scheduled processing, identify configuration issues, and review how your organization uses supported Experience Platform applications.
 
 **New or updated features**
 
 | Feature | Description |
 | --- | --- |
+| Usage Insights general availability | Usage Insights provides visibility into how your organization uses Real-Time CDP and Adobe Journey Optimizer across profiles, audiences, destinations, channels, campaigns, and journeys. Review usage across sandboxes and time periods to identify adoption patterns across your organization. See the [Usage Insights overview](/help/run-and-operate/usage-insights/overview.md) and [Usage Insights analysis](/help/run-and-operate/usage-insights/usage-analysis.md) for more details. |
 | [Job Schedules now shows identity ingestion runs](/help/run-and-operate/job-schedules-details.md) | The Job Schedules macro-view timeline now includes identity ingestion runs, in addition to existing data lake and profile ingestion runs. |
 | [Job Schedules now shows campaign runs](/help/run-and-operate/job-schedules-details.md) | The Job Schedules macro-view timeline now includes scheduled batch [!DNL Adobe Journey Optimizer] campaign runs. Filter campaigns by recurrence, channel, and type, and view campaign details, including audience, category, channel, and export and delivery counts. |
 | [Additional health checks](/help/run-and-operate/health-checks/overview.md) | Health checks now include 32 additional checks across the Schemas and Identities, Destinations, Datasets, Segmentation, Ingestion, Merge Policies, and Query Service categories, plus two new categories: Sources and Profile. |
@@ -236,6 +237,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
+| Paid media connectors | Use the [Snapchat Ads](/help/sources/connectors/advertising/snapchat-ads.md), [Pinterest Ads](/help/sources/connectors/advertising/pinterest-ads.md), and [Google Ads](/help/sources/connectors/advertising/google-ads.md) sources to ingest advertising data. These paid media connectors are available as part of the [!DNL Customer Journey Analytics] SKU. |
 | [[!DNL HubSpot]](/help/sources/connectors/marketing-automation/hubspot.md) V2 connector | Ingest data from [!DNL HubSpot] using the updated V2 connector. |
 | [Server-side encryption for [!DNL Amazon S3]](/help/sources/tutorials/api/encrypt-data.md#server-side-encryption-for-amazon-s3) | Combine [!DNL Amazon S3] server-side encryption (SSE) with PGP file encryption when you ingest encrypted data from [!DNL Amazon S3]. On the VA6 region of [Adobe Experience Platform on AWS](/help/landing/multi-cloud.md), the maximum encrypted file size increases from 1 GB to 10 GB. |
 | [Self-Serve Sources (Streaming SDK) on AWS](/help/sources/sources-sdk/streaming/getting-started.md) | Use Self-Serve Sources (Streaming SDK) to build connectors for [Adobe Experience Platform running on AWS](/help/landing/multi-cloud.md). Experience Platform running on AWS is currently available to a limited number of customers. |

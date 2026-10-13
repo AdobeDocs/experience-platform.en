@@ -32,9 +32,9 @@ role: Developer
       - [ECID mapping migration guide](connectors/adobe-applications/marketo/migration.md)
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
-    - {hide-from-toc} [Google Ads (V2) connector](connectors/advertising/google-ads.md)
+    - [Google Ads (V2) connector](connectors/advertising/google-ads.md)
     - [Meta Ads connector](connectors/advertising/meta-ads.md)
-    - {hide-from-toc} [Pinterest Ads](connectors/advertising/pinterest-ads.md)
+    - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
     - [Snapchat Ads](connectors/advertising/snapchat-ads.md)
     - {hide-from-toc} [TikTok Ads](connectors/advertising/tiktok-ads.md)
   - Analytics {#analytics}
@@ -256,9 +256,9 @@ role: Developer
       - [Marketo Custom Activities](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
-      - {hide-from-toc} [Google Ads (V2)](tutorials/ui/create/advertising/google-ads.md)
+      - [Google Ads (V2)](tutorials/ui/create/advertising/google-ads.md)
       - [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
-      - {hide-from-toc} [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
+      - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
       - [Snapchat Ads](tutorials/ui/create/advertising/snapchat-ads.md)
       - {hide-from-toc} [TikTok Ads](tutorials/ui/create/advertising/tiktok-ads.md)
     - Analytics {#analytics}

@@ -10,6 +10,10 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.36.0 - October 7, 2026
+
+- Brand Concierge can now include provided surfaces with a conversation request.
+
 ## Version 2.35.1 - September 1, 2026
 
 **Fixes and improvements**
