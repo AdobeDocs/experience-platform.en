@@ -91,13 +91,13 @@ In the identity map, if ECID is present, it is marked as the primary identity fo
 
 ## Migrate privacy handling {#privacy}
 
-Use [!DNL Adobe Experience Platform] Privacy Service to process privacy requests for your [!DNL Adobe Analytics] source dataset. First, review your report suite labels. Next, manually configure schema identities and data usage labels. Finally, switch the privacy source for the dataflow.
+Use Adobe Experience Platform Privacy Service to process privacy requests for your [!DNL Adobe Analytics] source dataset. First, review your report suite labels. Next, manually configure schema identities and data usage labels. Finally, switch the privacy source for the dataflow.
 
 Learn about privacy request handling in the [Privacy Service overview](/help/privacy-service/home.md).
 
 >[!IMPORTANT]
 >
->[!DNL Adobe Analytics] obfuscates identifiers when processing privacy deletion requests and retains the remaining hit data. [!DNL Experience Platform] deletes matching rows instead, which can change reporting metrics. Recreating labels does not preserve the Analytics deletion behavior.
+>[!DNL Adobe Analytics] obfuscates identifiers when processing privacy deletion requests and retains the remaining hit data. Experience Platform deletes matching rows instead, which can change reporting metrics. Recreating labels does not preserve the Analytics deletion behavior.
 
 ### Review report suite labels {#review-analytics-privacy-rules}
 
@@ -113,11 +113,11 @@ Learn about labels in the [privacy labeling overview](https://experienceleague.a
 
 ### Recreate privacy configuration {#configure-platform-privacy}
 
-Manually configure identities and labels in the schema for your Analytics source dataset. [!DNL Experience Platform] does not automatically copy labels from [!DNL Adobe Analytics].
+Manually configure identities and labels in the schema for your Analytics source dataset. Experience Platform does not automatically copy labels from [!DNL Adobe Analytics].
 
-Configure schema identities separately from data usage labels. Use the table to map Analytics labels to [!DNL Experience Platform] settings.
+Configure schema identities separately from data usage labels. Use the table to map Analytics labels to Experience Platform settings.
 
-| [!DNL Adobe Analytics] label | [!DNL Experience Platform] configuration |
+| [!DNL Adobe Analytics] label | Experience Platform configuration |
 | --- | --- |
 | `ID-DEVICE` | Mark the corresponding schema field as an identity. |
 | `ID-PERSON` | Mark the corresponding schema field as an identity. |
@@ -136,7 +136,7 @@ Apply additional [data usage labels](/help/data-governance/labels/reference.md),
 
 Before you switch the privacy source, configure identities and data usage labels.
 
-1. In [!DNL Experience Platform], select **[!UICONTROL Schemas]**, then open the schema for your Analytics source dataset.
+1. In Experience Platform, select **[!UICONTROL Schemas]**, then open the schema for your Analytics source dataset.
 2. Use the [Adobe Analytics field mapping](/help/sources/connectors/adobe-applications/mapping/analytics.md) to find schema fields for your labeled Analytics variables.
 3. Mark the schema fields mapped from `ID-DEVICE` or `ID-PERSON` variables as identities.
 
@@ -152,7 +152,7 @@ Review custom Analytics privacy settings, VISTA rules, and Content Aware and Mar
 
 ### Switch the privacy source {#switch-privacy-source}
 
-After configuring identities and labels, switch the privacy source in the [!DNL Experience Platform] **[!UICONTROL Sources]** workspace. The migration affects the dataset associated with the selected dataflow, not the entire organization.
+After configuring identities and labels, switch the privacy source in the Experience Platform **[!UICONTROL Sources]** workspace. The migration affects the dataset associated with the selected dataflow, not the entire organization.
 
 >[!IMPORTANT]
 >
