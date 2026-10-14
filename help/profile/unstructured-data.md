@@ -46,13 +46,13 @@ Before continuing Profile with unstructured data set up, you'll need to complete
 - Create a profile-enabled dataset
   - Ingest sample profiles into this dataset
 
-Once you've completed the prerequisite steps, you can configure and validate the profile context. You can either do this through CX Coworker or using the API.
+Once you've completed the prerequisite steps, you can configure and validate the profile context. You can either do this through CX Enterprise Coworker or using the API.
 
 >[!BEGINTABS]
 
->[!TAB CX Coworker]
+>[!TAB CX Enterprise Coworker]
 
-Within CX Coworker, select **Customizations** followed by **Integrations**.
+Within Coworker, select **Customizations** followed by **Integrations**.
 
 IMAGE
 
@@ -70,7 +70,182 @@ The **Add integration** popover appears. Add the following details to the popove
 | Tool timeout | How long it takes for the tool to timeout. Keep this value at 60 seconds. |
 | Authentication | How the MCP authenticates. Since this is configured for everyone, select `passthrough`. |
 
+Once you've added the `rtcdp-mcp` integration, you'll need to change your manifest to use the **Semantic Profile AI Assistant**. Select the ICON next to your name, followed by **Settings** to open the Settings popover.
+
+IMAGE
+
+The Settings popover appears. Select **Preferences** and toggle on **Enable debug mode** so you can change the manifest.
+
+IMAGE
+
+With debug mode enabled, select **Manifest** and choose the **Semantic Profile AI Assistant** followed by **Apply** to change the manifest for Coworker.
+
+IMAGE
+
+Now that the integration and the manifest have been set up, you can begin the setup by asking "I want to create a semantic profile configuration" within Coworker.
+
+IMAGE
+
+Coworker will guide you through the steps to set up Profile with unstructured data by proceeding through the following steps:
+
+- Coworker will ask "What is your use case"?
+- After describing your use case, Coworker will provide a list of relevant attributes, based on the use case
+- Once you confirm the attributes look fine, Coworker will confirm the following actions. By default, Coworker will have **no** audience descriptions, **precise** profile narrative, **no** data governance labels, and the **default** person namespace.
+  - If you want to add the audience descriptions to the profile narrative
+  - The preciseness of the profile narrative
+  - Adding data governance labels and setting the person namespace
+
+After going through these steps, your Profile with unstructured data context is created.
+
 >[!TAB API calls]
+
+You can set up the Profile with unstructured data context by using the Experience Platform APIs.
+
+Before continuing, read the [getting started guide](/help/profile/api/getting-started.md) for links to related documentation, a guide to reading the sample API calls in this section, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+
+### Get categories {#get-categories}
+
+You'll first need to get the categories for the Profile context. The categories are groupings of profile attributes that are available in your sandbox. 
+
+**API format**
+
+```http
+GET /semanticprofile/config/category
+```
+
+**Request**
+
+The following request retrieves a list of all the available categories and their attributes within your sandbox.
+
++++A sample request to retrieve the available categories.
+
+```shell
+curl -X GET https://platform.adobe.io.data/core/semanticprofile/config/category \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+
+**Response**
+
+A successful response returns HTTP status 200 with a list of the categories available for your organization and sandbox.
+
++++A sample response that contains a list of the categories and attributes that belong to your organization and sandbox
+
+```json
+{
+  "requestId": "b2c3d4e5-f6a7-8901-bcde-f23456789012",
+  "result": [
+    {
+      "categories": [
+        {
+          "name": "Customer Demographics",
+          "attributes": [
+            "person.name.firstName",
+            "person.name.lastName",
+            "person.gender",
+            "person.maritalStatus"
+          ]
+        },
+        {
+          "name": "Contact Information",
+          "attributes": [
+            "personalEmail.address",
+            "mobilePhone.number"
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| `requestId` | String | The unique ID for the request. |
+| `result` | Array | An array that contains the available categories for your sandbox. |
+| `categories.name` | String | The name of the category. |
+| `categories.attributes` | Array | An array that contains the list of available attributes within the category. |
+
++++
+
+### Create a configuration
+
+After getting the available categories for your sandbox, you can create a configuration. The configuration contains the categories and attributes of the profile data, the audiences you want to highlight, the data usage labels, the narrative precision, as well as the namespace.
+
+**API format**
+
+```http
+POST /semanticprofile/config/configuration
+```
+
+**Request**
+
+The following request creates a Profile with unstructured data configuration, using the Customer Demographics category, including a specified audience, no data usage labels, fuzzy narrative precision, and email namespace.
+
++++ A sample request to create a profile configuration.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/semanticprofile/config/configuration \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+    "data": {
+        "name": "CustomerSummary":,
+        "configurationDetails": {
+            "category": [
+                {
+                    "name": "Customer Demographics",
+                    "attributes": [
+                        "person.name.firstName",
+                        "person.name.lastName"
+                    ]
+                }
+            ],
+            "segments": {
+                "limit": 1,
+                "selection_mode": "inclusion",
+                "inclusion": [
+                    {
+                        "id": "b2cf20ca-5d07-4ef2-b50a-994eb2c11349",
+                        "priority": "1"
+                    }
+                ],
+                "exclusion": []
+            },
+            "marketingActions": [],
+            "narrative_precision": "fuzzy",
+            "personNamespace": {
+                "isPersonNamespaceEnabled": true,
+                "code": ["Email"]
+            }
+        }
+    }
+ }'
+
+```
+
+| Field | Required | Type | Description |
+| ----- | -------- | ---- | ----------- |
+| `name` | Yes | String | The name of the configuration. This is used as the key in the Narrative API. |
+| `configurationDetails` | Yes | Object | An object that contains details for the configuration, including the categories, audience details, data usage labels, narrative precision, and namespace. |
+| `category` | Yes | Array | An array that contains information about the categories that you want your configuration to use. |
+| `category.name` | Yes | String | The name of the category you want to use. This **must** match a value from the GET categories API call. |
+| `category.attributes` | Yes | Array | An array of attributes that you want to use. These attributes **must** be part of the category you used. |
+| `segments` | No | Object | An object that contains the audiences you want to add to the configuration. |
+| `segments.limit` | No | Number | The maximum number of audiences you want to add to the configuration. |
+
+
++++
+
+Create configuration - attribute & audience
 
 >[!ENDTABS]
 
