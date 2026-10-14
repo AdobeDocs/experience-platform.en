@@ -804,7 +804,7 @@ To schedule an ingestion, you must first set the start time value to epoch time 
 
 >[!IMPORTANT]
 >
->For [!DNL OneTrust Integration], each scheduled run ingests data after the previous run, even if that run failed. The next scheduled run does not automatically recover data from the failed run's time window.
+>For [!DNL OneTrust Integration], each scheduled run ingests data after the previous run, even if that run failed. The next scheduled run does not automatically recover data for the failed run's time window.
 
 **API format**
 
