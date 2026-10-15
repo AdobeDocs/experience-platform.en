@@ -104,13 +104,13 @@ If you attempt to create a schedule that exceeds these frequency limits, the API
 
 ### Provide dataset details {#dataset-details}
 
-Manage the query results by either appending the data to an existing dataset or creating a new dataset and appending the data to it.
+Manage the query results by either appending the data to an existing dataset or creating a new dataset and appending the data to it. 
 
-Select **[!UICONTROL Create and append into new dataset]** to create a data set when you execute a query for the first time. Subsequent executions continue to insert data into that data set. Lastly, provide a name and description for the dataset.
+Select **[!UICONTROL Create and append into new dataset]** to create a data set when you execute a query for the first time. Subsequent executions continue to insert data into that data set. Lastly, provide a name and description for the dataset. 
 
 >[!IMPORTANT]
 >
->Since you are using either an existing or creating a new dataset, you do **not** need to include either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of the query, since the datasets are already set. Including either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of your scheduled queries will result in an error.
+> Since you are using either an existing or creating a new dataset, you do **not** need to include either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of the query, since the datasets are already set. Including either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of your scheduled queries will result in an error.
 
 ![The Schedule details panel with Dataset details and the [!UICONTROL Create and append into new dataset] options highlighted.](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
@@ -118,7 +118,7 @@ Alternatively, select **[!UICONTROL Append into existing dataset]** followed by 
 
 ![The Schedule details panel with Dataset details and Append into existing dataset highlighted.](../images/ui/query-schedules/dataset-details-existing.png)
 
-The **[!UICONTROL Select output dataset]** dialog appears.
+The **[!UICONTROL Select output dataset]** dialog appears. 
 
 Next, either browse the existing datasets or use the search field to filter the options. Select the row of the dataset that you wish to use. The dataset details are displayed in the panel on the right. Select **[!UICONTROL Done]** to confirm your choice.
 
