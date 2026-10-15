@@ -354,6 +354,12 @@ Profile with unstructured data lets you use conversational data as an activation
 
 ## Sample flow {#sample-flow}
 
+Let's say that you have a company that offers financial services to clients. 
+
+In this scenario, one of your clients asks an agent about equities. By using Profile with unstructured data, Brand Concierge and Experience Platform can extract intent from these conversations, which lets you send personalized responses through the agent.
+
+Additionally, since this context is shared between all Experience Platform applications, you can continue the equity conversation in multiple forms. For example, you can send the client a follow up email asking about equities, or connect with the client on other platforms like WhatsApp with the full profile context.
+
 ## Frequently asked questions {#faq}
 
 The following section lists frequently asked questions related to profiles with unstructured data.
