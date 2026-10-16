@@ -53,7 +53,7 @@ Use the **[!UICONTROL Activate now]** control to resend every currently qualifie
 The **[!UICONTROL Activate now]** feature:
 
 * Resends full audience membership regardless of qualification state, rather than a differential or changes-only refresh. This behavior may change in future updates.
-* Is available at first for [The Trade Desk](/help/destinations/catalog/advertising/tradedesk.md) and [Google Customer Match](/help/destinations/catalog/advertising/google-customer-match.md).
+* Is available at first for [The Trade Desk](/help/destinations/catalog/advertising/tradedesk.md), [Google Customer Match](/help/destinations/catalog/advertising/google-customer-match.md), and [Facebook](/help/destinations/catalog/social/facebook.md) (Facebook Custom Audiences).
 * You cannot use **[!UICONTROL Activate now]** on an audience within 24 hours after you map it to a dataflow.
 * There is currently no feedback mechanism in the form of a triggered dataflow run after you use **[!UICONTROL Activate now]** on an audience, apart from the in-product confirmation toast.
 

@@ -407,6 +407,40 @@ Once you have identified the target objects that you want to update, select **[!
 
 ![The target objects selected.](../images/ui/sandbox-tooling/add-updated-objects.png)
 
+## Multi-sandbox management {#multi-sandbox-management}
+
+>[!NOTE]
+>
+>Multi-sandbox management currently supports only **schemas** and **datasets**. To promote other object types, such as audiences and journeys, use the package-based sandbox tooling workflow.
+
+Use multi-sandbox management to centrally promote supported objects from a source sandbox, such as a headquarters or authoring sandbox, to multiple target sandboxes in a single workflow. Use this capability when you maintain a shared set of objects in one source sandbox and need to roll the same configuration out to multiple target sandboxes, helping reduce the manual, package-by-package effort of keeping brand-specific, region-specific, or other related sandboxes aligned with a shared headquarters sandbox.
+
+The package-based sandbox tooling workflow described earlier on this page requires you to create, publish, and import a package into each target sandbox individually. Multi-sandbox management lets you select multiple target sandboxes in a single workflow, so you do not need to repeat the export and import steps for each destination.
+
+### Promote a package to sandboxes
+
+For each object and target sandbox, multi-sandbox management automatically resolves required dependencies and recommends whether to create a new object or update an existing one. Before any object is promoted, review a diff preview that summarizes the proposed changes for each target sandbox. Promotion begins only after you approve the preview. All promotion activity is recorded in the audit logs.
+
+To start a multi-sandbox promotion, navigate to **[!UICONTROL Sandboxes]** and select the **[!UICONTROL Packages]** tab. From the list of available packages, select the ellipsis (...) next to the package that you want to promote, then select **[!UICONTROL Promote to sandboxes]**. Alternatively, select **[!UICONTROL Promote to sandboxes]** at the top of the page.
+
+![Sandboxes UI showing the Promote to sandboxes option.](../images/ui/sandbox-tooling/promote-to-sandboxes.png)
+
+Select how you want to promote objects. Select **[!UICONTROL Select existing package]** to promote the contents of an existing package, or select **[!UICONTROL Select objects]** to choose specific schemas and datasets. When you select **[!UICONTROL Select objects]**, use the **[!UICONTROL Schemas]** and **[!UICONTROL Datasets]** tabs to switch between object types. After you select the objects to promote, select **[!UICONTROL Next]**.
+
+![Package selected from list of packages.](../images/ui/sandbox-tooling/promote-to-sandboxes-package.png)
+
+Select the target sandboxes that should receive the package, and then select **[!UICONTROL Next]**.
+
+![Target sandboxes selected from available list.](../images/ui/sandbox-tooling/promote-to-sandboxes-target.png)
+
+Review the proposed changes for each target sandbox. Use the sandbox tabs to switch between target sandboxes and review the objects included in the promotion. Verify whether each object will be created, updated, remain unchanged, or be removed. For objects marked as changed, select **[!UICONTROL Preview]** to review a detailed comparison of the changes between the source and target sandboxes. When you finish reviewing the changes, select **[!UICONTROL Confirm]**.
+
+![Review and confirm objects for the target sandboxes.](../images/ui/sandbox-tooling/promote-to-sandboxes-confirm.png)
+
+Review the promotion status for each target sandbox. Use **[!UICONTROL View details]** to verify the promoted objects and review the promotion results. When all promotion jobs are complete, select **[!UICONTROL Finish]** to return to the Packages workspace.
+
+![Monitor Jobs page showing the promotion status and details for each target sandbox after a multi-sandbox promotion workflow.](../images/ui/sandbox-tooling/promote-to-sandboxes-monitor-jobs.png)
+
 ## Video tutorial
 
 The following video is intended to support your understanding of sandbox tooling, and outlines how to create a new package, publish a package, and import a package.

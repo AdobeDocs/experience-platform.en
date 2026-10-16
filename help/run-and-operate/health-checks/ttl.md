@@ -68,7 +68,7 @@ Detects segment definitions that reference Experience Event data without a tempo
 | --- | --- |
 | **Issue** | A segment definition references Experience Event data without a temporal constraint, such as `inLastDays()`, `inLastHours()`, or `inLastMonths()`. |
 | **Impact** | Without a defined lookback window, results can include slower audience evaluation, because the Segmentation Service must scan months or years of accumulated events per profile instead of a bounded recent window. Results can also include incorrect qualification, where profiles qualify or fail to qualify based on behavioral signals that do not reflect the actual intent of the audience definition. |
-| **Remediation** | In Segment Builder, add a temporal constraint, such as `inLastDays()`, to the Experience Event block. Align the lookback window with your Experience Event dataset TTL to avoid querying data that has already expired. |
+| **Remediation** | In Audience Builder, add a temporal constraint, such as `inLastDays()`, to the Experience Event block. Align the lookback window with your Experience Event dataset TTL to avoid querying data that has already expired. |
 
 When you select the **[!UICONTROL Segment Lookback Window Required]** card, a detail panel opens on the right. The panel shows:
 

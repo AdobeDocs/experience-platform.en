@@ -59,7 +59,7 @@ This overview requires a working understanding of the following components of Ad
 Streaming upserts in [!DNL Data Prep] works as follows:
 
 * You must first create and enable a dataset for [!DNL Profile] consumption. See the guide on [enabling a dataset for [!DNL Profile]](../catalog/datasets/enable-for-profile.md) for more information.
-* If new identities must be linked, then you must also create an additional dataset **with the same schema** as your [!DNL Profile] dataset.
+* If new identities must be linked, then you must also create an additional dataset with a minimal, identity-only schema containing only identity-relevant fields, such as `identityMap` and identity descriptors. Do not reuse the schema of your [!DNL Profile] dataset.
 * Once your dataset(s) are prepared, you must create a dataflow to map your incoming request to the [!DNL Profile] dataset;
 * Next, you must update the incoming request to include the necessary headers. These headers define:
     * The data operation that is needed to be performed with [!DNL Profile]: `create`, `merge`, and `delete`.
@@ -69,39 +69,13 @@ Streaming upserts in [!DNL Data Prep] works as follows:
 
 If new identities must be linked, then you must create and pass an additional dataset in the incoming payload. When creating an identity dataset, you must ensure that the following requirements are met:
 
-* The identity dataset must have its associated schema as the [!DNL Profile] dataset. A mismatch of schemas may lead to inconsistent system behavior.
+* Create a separate, minimal schema for the identity dataset that contains only identity-relevant fields, such as `identityMap` and any required identity descriptors. Do not reuse the [!DNL Profile] dataset schema. It introduces required non-identity fields that [!DNL Identity Service] does not need, which causes schema validation failures on ingestion.
 * However, you must ensure that the identity dataset is different from the [!DNL Profile] dataset. If the datasets are the same, then data will be overwritten instead of updated.
 * While the initial dataset must be enabled for [!DNL Profile], the identity dataset **should not be enabled** for [!DNL Profile]. Otherwise, data will also be overwritten instead of updated. However, the identity dataset **should be enabled** for [!DNL Identity Service].
 
-#### Required fields in the schemas associated with the identity dataset {#identity-dataset-required-fileds}
-
-If your schema contains required fields, validation of the dataset must be suppressed in order to enable [!DNL Identity Service] to only receive the identities. You can suppress validation by applying the `disabled` value to the `acp_validationContext` parameter. See the example below:
-
-```shell
-curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257bef7a75461948ebcaaa' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-    "tags": {
-        "acp_validationContext": [
-            "disabled"
-        ],
-        "unifiedProfile": [
-            "enabled:false"
-        ],
-        "unifiedIdentity": [
-            "enabled:true"
-        ]
-    }
-}'
-```
-
 >[!TIP]
 >
->You do not need to do any additional configuration if the schema associated with the identity dataset does not have any required fields.
+>If the identity dataset schema contains only identity-relevant fields, such as `identityMap` and identity descriptors, no validation suppression is needed. [!DNL Identity Service] does not require or validate non-identity fields. A minimal schema avoids required-field validation failures without any additional configuration.
 
 ## Incoming payload structure 
 

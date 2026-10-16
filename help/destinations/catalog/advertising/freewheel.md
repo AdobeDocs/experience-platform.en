@@ -115,7 +115,8 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 >
->* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data without changing the export schedule, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* Unlike most other batch destinations, [!DNL FreeWheel] sets the export schedule at the destination level instead of the audience level. To change the export schedule, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions).
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
@@ -124,7 +125,13 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 ![Screenshot of the Scheduling step in the FreeWheel activation workflow.](../../assets/catalog/advertising/freewheel/scheduling.png)
 
-In the **[!UICONTROL Scheduling]** step, configure the export schedule for each audience. [!DNL FreeWheel] uses a hybrid export model: the first export for each activated audience is a full snapshot, followed by daily incremental updates.
+In the **[!UICONTROL Scheduling]** step, configure the export schedule for the destination. [!DNL FreeWheel] uses a hybrid export model: the first export for each activated audience is a full snapshot, followed by daily incremental updates.
+
+>[!NOTE]
+>
+>The export schedule that you configure applies to the destination, not to individual audiences. When you activate new audiences to a destination that already has a schedule, the existing schedule is automatically populated in the **[!UICONTROL Scheduling]** step. Only users with the **[!UICONTROL Manage Destinations]** permission can change the populated schedule during activation.
+>
+>The destination details page does not offer an **[!UICONTROL Edit schedule]** option for [!DNL FreeWheel]. To change the schedule for an already-activated audience, select **[!UICONTROL Activate audiences]** from the destination details page without selecting an audience first, then proceed through the activation workflow to the **[!UICONTROL Scheduling]** step.
 
 Configure the following fields:
 

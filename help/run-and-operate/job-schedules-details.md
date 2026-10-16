@@ -9,12 +9,14 @@ exl-id: e568bfc3-f0e1-4305-94e7-070928459a87
 
 >[!IMPORTANT]
 >
->[!UICONTROL Job schedules] are currently available only for the following Real-Time CDP jobs:
+>[!UICONTROL Job schedules] are currently available only for the following jobs:
 >
-> * Batch data lake ingestion
-> * Batch profile ingestion
-> * Batch segmentation
-> * Batch destination activation
+> * Batch data lake ingestion (Real-Time CDP)
+> * Batch profile ingestion (Real-Time CDP)
+> * Batch identity ingestion (Real-Time CDP)
+> * Batch segmentation (Real-Time CDP)
+> * Batch destination activation (Real-Time CDP)
+> * Scheduled batch campaigns ([!DNL Adobe Journey Optimizer])
 
 When troubleshooting job failures or investigating performance issues, you need detailed information about specific datasets and their job runs. The [Job Schedules](job-schedules.md) interface allows you to drill down from the timeline view into individual datasets and jobs to understand execution history, timing, and status.
 
@@ -32,7 +34,7 @@ Before viewing job details, you should:
 
 * Have access to **[!UICONTROL Job Schedules]** with the **[!UICONTROL View Job Schedules]** and **[!UICONTROL View Profile Management]** [access control permissions](/help/access-control/home.md#permissions).
 * Be familiar with the [Job Schedules interface](job-schedules.md#understanding-interface) and timeline view.
-* Understand the different [job types](job-schedules.md#job-schedules-details) (lake ingestion, profile ingestion, segmentation, activation).
+* Understand the different [job types](job-schedules.md#job-schedules-details) (lake ingestion, profile ingestion, identity ingestion, segmentation, activation, campaign audience export, campaign delivery).
 
 ## Understanding the details hierarchy {#details-hierarchy}
 
@@ -56,6 +58,8 @@ The timeline view uses a horizontal and vertical layout to help you understand j
   * **Blue vertical line**: Represents when segmentation is scheduled to begin
   * **Black vertical line**: Represents when destination activation is scheduled to begin
 
+  For scheduled batch campaigns in [!DNL Adobe Journey Optimizer], the campaign row also shows its own send window next to the segmentation job it depends on, so you can compare the two directly on the timeline.
+
 This layout allows you to quickly identify timing relationships between your data pipeline jobs and downstream processing. Ideally, upstream jobs (like data lake and profile ingestion) should complete to the left of these vertical markers, ensuring data is ready before segmentation and activation begin. Jobs that extend past these markers indicate potential timing issues where downstream processes may start before data is fully prepared.
 
 ### Which view should I use? {#which-view}
@@ -73,6 +77,8 @@ Use the table below to choose the right view for your task. Match what you need 
 | Check exact timing of a particular job execution | [Job run details](#view-job-details) |
 | Verify records processed in a single run | [Job run details](#view-job-details) |
 | Access detailed error messages | [Job run details](#view-job-details) → Select dataflow run ID |
+| Check whether a scheduled campaign is at risk of a timing conflict | [Campaign details](#campaign-details) |
+| Confirm a scheduled campaign delivered successfully | [Campaign details](#campaign-details) |
 
 ## View dataset details {#view-dataset-details}
 
@@ -115,9 +121,52 @@ For datasets with profile ingestion jobs, the panel shows the following metrics:
 | **[!UICONTROL Total profiles updated]** | The cumulative number of existing profiles that were updated with data from this dataset | Update frequency tracking |
 | **[!UICONTROL Avg. profile ingestion speed (profiles/second)]** | The average throughput rate for profile ingestion jobs | Performance monitoring |
 
+### Identity ingestion metrics {#identity-ingestion-metrics}
+
+For datasets with identity ingestion jobs, the panel shows the following metrics:
+
+| Metric | Description | Use for |
+|--------|-------------|---------|
+| **[!UICONTROL Total runs]** | The total number of identity ingestion jobs that have completed for this dataset | Activity tracking |
+| **[!UICONTROL Runs in progress]** | How many identity ingestion jobs are currently running | Bottleneck detection |
+| **[!UICONTROL Total identities added]** | The cumulative number of new identities added to the identity service across all job runs | Volume monitoring |
+| **[!UICONTROL Total run duration]** | The combined duration of all identity ingestion jobs | Processing time assessment |
+| **[!UICONTROL Total identities updated]** | The cumulative number of existing identities that were updated during ingestion | Refresh pattern analysis |
+| **[!UICONTROL Avg. identity ingestion speed (identities/sec)]** | The average throughput rate for identity ingestion jobs | Performance comparison |
+
+![The Job Schedules page with the Identity ingestion summary card and the Identity ingestion section of the dataset details panel highlighted.](assets/job-schedules/identity-ingestion-details.png){zoomable="yes"}
+
 >[!NOTE]
 >
 > These metrics show cumulative totals across all job runs for this dataset. To see details for a specific run, select a job directly from the timeline.
+
+### Campaign details {#campaign-details}
+
+For scheduled batch campaigns in [!DNL Adobe Journey Optimizer], the timeline groups campaigns with a start time before the projected segmentation completion time under a **[!UICONTROL start before segmentation end]** label, so you can identify at-risk executions without opening a details panel.
+
+To view details for a specific campaign, select the campaign name from the left column. The campaign details panel opens in a right-side panel.
+
+![The campaign details panel showing campaign identifiers, audience, recurrence, channel, and audience export and campaign delivery metrics for a selected campaign.](assets/job-schedules/campaign-details.png){zoomable="yes"}
+
+The campaign details panel displays the following information:
+
+| Field | Description |
+|-------|-------------|
+| **[!UICONTROL Campaign ID]** | The unique identifier for the campaign. |
+| **[!UICONTROL Version ID]** | The unique identifier for the campaign version. |
+| **[!UICONTROL Audience]** | The audience the campaign sends to, shown as a link to the segment definition. |
+| **[!UICONTROL Recurrence type]** | Whether the campaign is **[!UICONTROL Recurring]**, **[!UICONTROL Once]**, or **[!UICONTROL Now]**. |
+| **[!UICONTROL Category]** | The campaign category, for example **[!UICONTROL Marketing]**. |
+| **[!UICONTROL Channel]** | The delivery channel for the campaign, for example **[!UICONTROL Email]**, **[!UICONTROL Push]**, or **[!UICONTROL SMS]**. |
+
+The panel also shows metrics for the two job types associated with the campaign:
+
+| Metric | Description |
+|--------|-------------|
+| **[!UICONTROL Total exports]** | The total number of campaign audience export jobs that have completed. |
+| **[!UICONTROL In progress exports]** | How many campaign audience export jobs are currently running. |
+| **[!UICONTROL Total deliveries]** | The total number of campaign delivery jobs that have completed. |
+| **[!UICONTROL In progress deliveries]** | How many campaign delivery jobs are currently running. |
 
 ## Filter datasets in the timeline {#filter-datasets}
 
@@ -183,13 +232,20 @@ The dataflow run details panel displays information about the specific job run, 
 | **[!UICONTROL Records added]** | The number of new profiles created during this job run. |
 | **[!UICONTROL Records updated]** | The number of existing profiles that were updated during this job run. |
 
+#### Campaign delivery job details {#campaign-delivery-job-details}
+
+For scheduled batch campaigns in [!DNL Adobe Journey Optimizer], select the campaign name in the left column to open the [campaign details panel](#campaign-details), which shows total and in-progress counts for the campaign audience export and campaign delivery jobs.
+
 ### Understanding job execution flow {#job-execution-flow}
 
-When viewing a specific job run, you can see the relationship between lake ingestion and profile ingestion:
+When viewing a specific job run, you can see the relationship between lake ingestion, profile ingestion, segmentation, and scheduled campaign delivery:
 
 * **Lake ingestion runs first**: Data is loaded into the data lake and validated.
 * **Profile ingestion follows**: After lake ingestion completes, eligible records are processed into the profile store.
-* **Timing matters**: Note the time difference between when lake ingestion completes and when profile ingestion starts. Gaps here can impact downstream processes like segmentation.
+* **Segmentation depends on profile ingestion**: Audiences are evaluated after profile data is available.
+* **Campaign audience export depends on segmentation**: For scheduled batch campaigns in [!DNL Adobe Journey Optimizer], the campaign audience export runs after the upstream segmentation job completes.
+* **Campaign delivery follows the audience export**: The campaign send executes after its audience export completes.
+* **Timing matters**: Note the time difference between when upstream jobs complete and when the next dependent job starts. Gaps here can impact downstream processes like segmentation and campaign delivery.
 
 **Use job run details to**:
 

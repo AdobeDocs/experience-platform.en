@@ -214,7 +214,7 @@ To learn more about Query Service, read the [Query Service overview](../../query
 | Feature | Description |
 | ------- | ----------- |
 | Streaming segmentation criteria update | Starting with the September 2024 release, the criteria for your audiences to be eligible for streaming segmentation have been updated. More information about these changes can be found in the [streaming segmentation eligibility criteria update](../../segmentation/eligibility-criteria-update.md). |
-| Unified Search implementation | Search behavior within Segment Builder will now use Unified Search. This allows for a more robust experience when managing and searching for audiences to reuse for segment membership. For more information on this change, read the [Segment Builder guide](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
+| Unified Search implementation | Search behavior within Segment Builder will now use Unified Search. This allows for a more robust experience when managing and searching for audiences to reuse for segment membership. For more information on this change, read the [Segment Builder guide](../../segmentation/ui/audience-builder.md#rule-builder-canvas). |
 
 {style="table-layout:auto"}
 

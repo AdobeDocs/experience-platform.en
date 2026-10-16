@@ -69,7 +69,7 @@ The data associated with this primary identity column is the **only** data that 
 
 All the other data within the externally generated audience are considered **payload attributes**. These attributes can **only** be used for personalization and enrichment during activation, and are **not** attached to a profile. These attributes are, however, stored in the data lake.
 
-While the externally generated audience can be referenced when creating audiences using Segment Builder, individual profile attributes **cannot** be used. 
+While the externally generated audience can be referenced when creating audiences using Audience Builder, individual profile attributes **cannot** be used. 
 
 ### Can I reconcile externally generated audience data with an existing profile in Experience Platform?
 
@@ -87,7 +87,7 @@ Please note you should **not** include consent information with an externally ge
 
 ### Can I use an externally generated audience to build other audiences?
 
-Yes, any externally generated audience will appear within the audience inventory and can be used when building audiences within [Segment Builder](./ui/segment-builder.md).
+Yes, any externally generated audience will appear within the audience inventory and can be used when building audiences within [Audience Builder](./ui/audience-builder.md).
 
 ### How often are externally generated audiences evaluated?
 
@@ -196,7 +196,7 @@ If an audience that is evaluated using batch segmentation is re-published, which
 
 The method to put an audience into the draft state depends on the origin of the audience.
 
-For audiences created using Segment Builder, you can set the audience to the draft state by selecting "[!UICONTROL Save as draft]" in Segment Builder.
+For audiences created using Audience Builder, you can set the audience to the draft state by selecting "[!UICONTROL Save as draft]" in Audience Builder.
 
 For audiences created in Audience Composition, audiences are automatically saved as a draft until published.
 
@@ -206,7 +206,7 @@ Once an audience is in the published state, you **cannot** change the original a
 
 ### How do I put an audience in the published state?
 
-For audiences created using Segment Builder or Audience Composition, you can set the audience to the published state by selecting "[!UICONTROL Publish]" in their respective UIs.
+For audiences created using Audience Builder or Audience Composition, you can set the audience to the published state by selecting "[!UICONTROL Publish]" in their respective UIs.
 
 Audiences that are externally created are automatically set to published.
 
@@ -296,19 +296,19 @@ At this point in time, no. However, this capability may be available in the futu
 
 The following section lists questions related to Audience Composition.
 
-### When should I use Audience Composition as opposed to using Segment Builder?
+### When should I use Audience Composition as opposed to using Audience Builder?
 
-Both Audience Composition and Segment Builder have important roles in the creation of building audiences in Experience Platform.
+Both Audience Composition and Audience Builder have important roles in the creation of building audiences in Experience Platform.
 
-Segment Builder is more suited for audience **creation** (for building an audience from scratch), while Audience Composition is more suited for audience **curation and personalization** (for creating new audiences based on an existing audience).
+Audience Builder is more suited for audience **creation** (for building an audience from scratch), while Audience Composition is more suited for audience **curation and personalization** (for creating new audiences based on an existing audience).
 
 The following table illustrates the difference between the two services:
 
-| Segment Builder | Audience Composition |
+| Audience Builder | Audience Composition |
 | --------------- | -------------------- |
-| <ul><li>Single stage audience generation</li><li>Creates the basic blocks of audiences from profile, time-series, and multi-entity data</li><li>Used to create **one** audience</li></ul> | <ul><li>Multi-stage audience generation, using set based operations</li><li>Uses the audiences created by Segment Builder and applies data enrichment options such as ranking profile attributes and splitting into sub-audiences</li><li>Used to create **multiple** audiences at once</li></ul> |
+| <ul><li>Single stage audience generation</li><li>Creates the basic blocks of audiences from profile, time-series, and multi-entity data</li><li>Used to create **one** audience</li></ul> | <ul><li>Multi-stage audience generation, using set based operations</li><li>Uses the audiences created by Audience Builder and applies data enrichment options such as ranking profile attributes and splitting into sub-audiences</li><li>Used to create **multiple** audiences at once</li></ul> |
 
-To learn more about Segment Builder, please read the [Segment Builder guide](./ui/segment-builder.md). To learn more about Audience Composition, please read the [Audience Composition guide](./ui/audience-composition.md).
+To learn more about Audience Builder, please read the [Audience Builder guide](./ui/audience-builder.md). To learn more about Audience Composition, please read the [Audience Composition guide](./ui/audience-composition.md).
 
 ### Can I use externally generated audiences in Audience Composition?
 

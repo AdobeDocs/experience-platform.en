@@ -44,7 +44,7 @@ topic_v2:
 ><br/>
 >Customers who have purchased Adobe Privacy & Security Shield and have configured a [consent policy](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) to filter out non-consented profiles do not need to take any action.
 ><br/>
->Customers who have not purchased Adobe Privacy & Security Shield must use the [segment definition](../../../segmentation/home.md#segment-definitions) capabilities within [Segment Builder](../../../segmentation/ui/segment-builder.md) to filter out non-consented profiles, to continue using the existing [!DNL Real-Time CDP] Google Destinations without interruption.
+>Customers who have not purchased Adobe Privacy & Security Shield must use the [segment definition](../../../segmentation/home.md#segment-definitions) capabilities within [Audience Builder](../../../segmentation/ui/audience-builder.md) to filter out non-consented profiles, to continue using the existing [!DNL Real-Time CDP] Google Destinations without interruption.
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) uses your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], and [!DNL Gmail].
 

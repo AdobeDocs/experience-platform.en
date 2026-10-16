@@ -35,11 +35,11 @@ For a detailed description of the capabilities that you can configure through th
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Getting started with destination server API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Update a destination server configuration {#update}
 
@@ -72,7 +72,7 @@ Select each tab below to view the corresponding payload.
 +++Request
 
 ```shell
-curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers\{INSTANCE_ID} \
+curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -105,7 +105,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 |`destinationServerType` | String | *Required.* Set to `URL_BASED` for real-time (streaming) destinations. |
 |`urlBasedDestination.url.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
 |`urlBasedDestination.url.value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to. |
-|`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `PUT`, `DELETE`, `PATCH`. |
+|`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 |`httpTemplate.requestBody.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
 |`httpTemplate.requestBody.value` | String | *Required.* This string is the character-escaped version that transforms the data of Experience Platform customers to the format your service expects. <br> <ul><li> For information on how to write the template, read the [Using templating section](../../functionality/destination-server/message-format.md#using-templating). </li><li> For more information about character escaping, see the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, see the [Profile Attributes](../../functionality/destination-server/message-format.md#attributes) transformation. </li></ul> |
 |`httpTemplate.contentType` | String | *Required.* The content type that your server accepts. This value is most likely `application/json`. |
@@ -125,7 +125,7 @@ A successful response returns HTTP status 200 with the details of your updated d
 +++Request
 
 ```shell
-curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers\{INSTANCE_ID} \
+curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -447,7 +447,7 @@ A successful response returns HTTP status 200 with the details of your updated d
 +++Request
 
 ```shell
-curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_D} \
+curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \

@@ -62,7 +62,7 @@ This page describes the steps that you must follow to look up edge profile data 
 When configuring the use case described in this page, you will use the following Experience Platform components:
 
 * [Datastreams](../../datastreams/overview.md): A datastream receives incoming event data from Web SDK and responds with edge profile data.
-* [Merge Policies](../../segmentation/ui/segment-builder.md#merge-policies): You will create an [!UICONTROL Active-On-Edge] merge policy to ensure that the edge profiles ßuse the correct profile data.
+* [Merge Policies](../../segmentation/ui/audience-builder.md#merge-policies): You will create an [!UICONTROL Active-On-Edge] merge policy to ensure that the edge profiles ßuse the correct profile data.
 * [Custom Personalization connection](../catalog/personalization/custom-personalization.md): You will configure a new custom personalization connection which will send the profile attributes to the Edge Network.
 * [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/): You will use the Edge Network API [interactive data collection](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) functionality to quickly retrieve profile attributes from the edge profiles.
 
@@ -91,7 +91,7 @@ Follow the steps in the [datastream configuration](../../datastreams/configure.m
 
 Looking up profile attributes on the edge requires your audiences to be configured for edge evaluation.
 
-Make sure the audiences that you plan to activate have the [Active-on-Edge Merge Policy](../../segmentation/ui/segment-builder.md#merge-policies) set as default. The [!DNL Active-On-Edge] merge policy ensures that audiences are constantly evaluated [on the edge](../../segmentation/methods/edge-segmentation.md) and are available for real-time personalization use cases.
+Make sure the audiences that you plan to activate have the [Active-on-Edge Merge Policy](../../segmentation/ui/audience-builder.md#merge-policies) set as default. The [!DNL Active-On-Edge] merge policy ensures that audiences are constantly evaluated [on the edge](../../segmentation/methods/edge-segmentation.md) and are available for real-time personalization use cases.
 
 Follow the instructions on [creating a merge policy](../../profile/merge-policies/ui-guide.md#create-a-merge-policy), and make sure to enable the **[!UICONTROL Active-On-Edge Merge Policy]** toggle.
 

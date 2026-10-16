@@ -22,9 +22,12 @@ topic_v2:
 ---
 # Computed attributes API endpoint
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Access to the API is restricted. To learn how to get access to the computed attributes API, please contact Adobe Support.
+>To use these endpoints, you **must** have the following permissions:
+>
+>- **View Computed Attributes**
+>- **Manage Computed Attributes**
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. This guide includes sample API calls for performing basic CRUD operations using the `/attributes` endpoint. 
 

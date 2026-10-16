@@ -168,9 +168,10 @@ curl -X POST \
           "specName": "OAuth2 JWT Token Credential",
           "params":
             "jwtToken": "{JWT_TOKEN},
+            "instanceUrl": "https://acme-enterprise-3126.my.salesforce.com",
             "clientId": "xxxx",
             "clientSecret": "xxxx",
-            "instanceUrl": "https://acme-enterprise-3126.my.salesforce.com"
+            "environmentType": "PRODUCTION"
         }
       },
       "connectionSpec": {
@@ -180,7 +181,15 @@ curl -X POST \
   }'
 ```
 
-For information on how to retrieve your [!DNL Salesforce] `jwtToken`, read the guide on [how to set up a [!DNL Salesforce] source to connect to Experience Platform on AWS](../../../../connectors/crm/salesforce.md#aws).
+| Property | Description |
+| --- | --- |
+| `auth.params.jwtToken` | The signed JSON Web Token used to authenticate your [!DNL Salesforce] account. |
+| `auth.params.instanceUrl` | The URL of your [!DNL Salesforce] instance. |
+| `auth.params.clientId` | The client ID associated with your [!DNL Salesforce] account. |
+| `auth.params.clientSecret` | The client secret associated with your [!DNL Salesforce] account. |
+| `auth.params.environmentType` | The type of [!DNL Salesforce] org to connect to. Accepted values are `PRODUCTION` and `SANDBOX`. This parameter is optional and defaults to `PRODUCTION` when not specified. |
+
+For information on how to retrieve your [!DNL Salesforce] `jwtToken`, read the guide on [how to set up a [!DNL Salesforce] source to connect to Experience Platform on AWS](../../../../connectors/crm/salesforce.md#aws). For more information on connecting to a Sandbox org, read the section on [connecting to a Production or Sandbox org](../../../../connectors/crm/salesforce.md#environment-type).
 
 +++
 

@@ -184,7 +184,7 @@ You can create a new segment definition by making a POST request to the `/segmen
 
 >[!IMPORTANT]
 >
->Segment definitions created through the API **cannot** be edited using Segment Builder.
+>Segment definitions created through the API **cannot** be edited using Audience Builder.
 
 **API format**
 

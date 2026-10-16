@@ -90,7 +90,7 @@ Once you have successfully generated profiles from your ingested data, you can e
 
 ### Create a segment definition
 
-To get started, you must create a segment definition to cluster your customers to create your target audience. A segment definition is a collection of rules that you can use to define the audience you want to target. To create a segment definition, you can follow the instructions in either the UI guide on using the [Segment Builder](../segmentation/ui/segment-builder.md) or the API tutorial on [creating a segment definition](../segmentation/tutorials/create-a-segment.md).
+To get started, you must create a segment definition to cluster your customers to create your target audience. A segment definition is a collection of rules that you can use to define the audience you want to target. To create a segment definition, you can follow the instructions in either the UI guide on using the [Segment Builder](../segmentation/ui/audience-builder.md) or the API tutorial on [creating a segment definition](../segmentation/tutorials/create-a-segment.md).
 
 Once you've created a segment definition, ensure that you keep note of the segment definition ID.
 

@@ -150,6 +150,12 @@ A successful response returns HTTP status 200 with a list of scheduled queries f
 
 You can create a new scheduled query by making a POST request to the `/schedules` endpoint. When you create a scheduled query in the API, you can also see it in the Query Editor. For more information on scheduled queries in the UI, please read the [Query Editor documentation](../ui/user-guide.md#scheduled-queries).
 
+>[!IMPORTANT]
+>
+>Starting August 18, 2026, you cannot create a new query schedule that runs more than once per hour through the Query Service API. Existing sub-hourly schedules continue to run as configured and are not changed by this release.
+
+For the equivalent UI workflow, see the [Query schedules guide](../ui/query-schedules.md#scheduled-query-frequency).
+
 **API format**
 
 ```http
@@ -182,11 +188,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 | Property | Description |
 | -------- | ----------- |
-| `query.dbName` | The name of the database where the scheduled query will run. |
+| `query.dbName` | The name of the database where the scheduled query runs. |
 | `query.sql` | The SQL query to be executed on the defined schedule. |
 | `query.name` | The name of the scheduled query. |
 | `query.description` | An optional description for the scheduled query. |
-| `schedule.schedule` | The cron schedule for the query. Refer to [Crontab.guru](https://crontab.guru/) for an interactive way to create, validate, and understand cron expressions. In this example, "`30 * * * *`" means that the query will run every hour at the 30 minute mark.<br><br>Alternatively, you can use the following shorthand expressions:<ul><li>`@once`: The query only runs once.</li><li>`@hourly`: The query runs every hour at the beginning of the hour. This is equivalent to the cron expression `0 * * * *`.</li><li>`@daily`: The query runs once a day at midnight. This is equivalent to the cron expression `0 0 * * *`.</li><li>`@weekly`: The query runs once a week, on Sunday, at midnight. This is equivalent to the cron expression `0 0 * * 0`.</li><li>`@monthly`: The query runs once a month, on the first day of the month, at midnight. This is equivalent to the cron expression `0 0 1 * *`.</li><li>`@yearly`: The query runs once a year, on January 1st, at midnight. This is equivalent to the cron expression `0 0 1 1 *`. |
+| `schedule.schedule` | The cron schedule for the query. From August 2026 onwards, cron expressions must not schedule runs more frequently than once per hour. Refer to [Crontab.guru](https://crontab.guru/) for an interactive way to create, validate, and understand cron expressions. In this example, "`30 * * * *`" means that the query runs every hour at the 30 minute mark.<br><br>Alternatively, you can use the following shorthand expressions:<ul><li>`@once`: The query only runs once.</li><li>`@hourly`: The query runs every hour at the beginning of the hour. This is equivalent to the cron expression `0 * * * *`.</li><li>`@daily`: The query runs once a day at midnight. This is equivalent to the cron expression `0 0 * * *`.</li><li>`@weekly`: The query runs once a week, on Sunday, at midnight. This is equivalent to the cron expression `0 0 * * 0`.</li><li>`@monthly`: The query runs once a month, on the first day of the month, at midnight. This is equivalent to the cron expression `0 0 1 * *`.</li><li>`@yearly`: The query runs once a year, on January 1st, at midnight. This is equivalent to the cron expression `0 0 1 1 *`. |
 | `schedule.startDate` | The start date for your scheduled query, written as a UTC timestamp. |
 
 **Response**

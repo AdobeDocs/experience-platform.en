@@ -30,8 +30,8 @@ For recommended source-to-target mapping pairs based on your schema structure, s
 
 | Target Identity | Source field to map | Considerations |
 |---|---|---|
-| `email` | A field containing plain text email addresses | Experience Platform sanitizes and hashes the email addresses based on the Microsoft formatting and hashing requirements outlined in their [public documentation](https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_conc_uet_enhancedconversions#format-and-hash-the-data) before exporting them to [!DNL Microsoft Ads]. |
-| `email_lc_sha256` | A field containing email addresses that you have already hashed with SHA-256 | Follow the [!DNL Microsoft Ads] [sanitization and hashing requirements](https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_conc_uet_enhancedconversions#format-and-hash-the-data) before mapping. Experience Platform sends these values to [!DNL Microsoft Ads] without further sanitization or hashing. You are responsible for correct sanitization and hashing before mapping. |
+| `email` | A field containing plain text email addresses | Experience Platform sanitizes and hashes the email addresses based on the Microsoft formatting and hashing requirements outlined in the [public documentation](https://help.ads.microsoft.com/#apex/ads/en/56921/1) before exporting them to [!DNL Microsoft Ads]. |
+| `email_lc_sha256` | A field containing email addresses that you have already hashed with SHA-256 | Follow the [!DNL Microsoft Ads] [sanitization and hashing requirements](https://help.ads.microsoft.com/#apex/ads/en/56921/1) before mapping. Experience Platform sends these values to [!DNL Microsoft Ads] without further sanitization or hashing. You are responsible for correct sanitization and hashing before mapping. |
 
 {style="table-layout:auto"}
 
@@ -195,7 +195,7 @@ Use the table below to select the target field based on your source data. Both i
 
 >[!IMPORTANT]
 >
->For the `email_lc_sha256` target field, follow the [!DNL Microsoft Ads] [sanitization and hashing requirements](https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_conc_uet_enhancedconversions#format-and-hash-the-data) (lowercase, trim, then SHA-256) before mapping. Experience Platform does not re-sanitize already-hashed values, so you are responsible for correct sanitization and hashing. Mapping a non-email field, such as a city name, is still hashed but does not produce valid matches.
+>For the `email_lc_sha256` target field, follow the [!DNL Microsoft Ads] [sanitization and hashing requirements](https://help.ads.microsoft.com/#apex/ads/en/56921/1) (lowercase, trim, then SHA-256) before mapping. Experience Platform does not re-sanitize already-hashed values, so you are responsible for correct sanitization and hashing. Mapping a non-email field, such as a city name, is still hashed but does not produce valid matches.
 
 >[!BEGINSHADEBOX "Correct mapping examples"]
 
@@ -261,7 +261,7 @@ The following Experience Platform considerations also affect your match rates:
 
 * Experience Platform filters out profiles that do not have an email address before export. Only profiles with at least one email address are included in the export payload.
 * Experience Platform sends all email addresses associated with a profile. You cannot configure which emails are sent.
-* For the `email_lc_sha256` namespace, match rates depend on correct sanitization and hashing. Follow the [!DNL Microsoft Ads] [sanitization and hashing requirements](https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_conc_uet_enhancedconversions#format-and-hash-the-data) (lowercase, trim, then SHA-256) before mapping. Experience Platform does not re-sanitize already-hashed values.
+* For the `email_lc_sha256` namespace, match rates depend on correct sanitization and hashing. Follow the [!DNL Microsoft Ads] [sanitization and hashing requirements](https://help.ads.microsoft.com/#apex/ads/en/56921/1) (lowercase, trim, then SHA-256) before mapping. Experience Platform does not re-sanitize already-hashed values.
 * Map only valid email fields as the source for either identity. Mapping a non-email field, such as a city name, is still sanitized and hashed but does not produce valid matches.
 
 ## Additional resources {#additional-resources}

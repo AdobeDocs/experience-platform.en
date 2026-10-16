@@ -113,7 +113,7 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 
 | Feature | Description |
 | ------- | ----------- |
-| Additional aggregation functions | Count functions have been added in Segment Builder. Count functions let you count the number of times the specified event has been done. More information about the count functions can be found in the count functions section of the [Segment Builder guide](../../segmentation/ui/segment-builder.md#count-functions) |
+| Additional aggregation functions | Count functions have been added in Segment Builder. Count functions let you count the number of times the specified event has been done. More information about the count functions can be found in the count functions section of the [Segment Builder guide](../../segmentation/ui/audience-builder.md#count-functions) |
 
 For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
 

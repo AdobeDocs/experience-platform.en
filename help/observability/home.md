@@ -41,7 +41,7 @@ You can also query [!DNL Observability Insights] metrics and breach data using c
 >
 >[!DNL Observability Insights] MCP support is in Beta.
 
-For the list of supported tools and setup instructions, see [Adobe Experience Platform tools in Adobe CX Coworker Gateway](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/mcp/aep-mcp).
+For the list of supported tools and setup instructions, see [Adobe Experience Platform tools in Adobe CX Coworker Gateway](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/mcp/mcp-product-tools/aep-mcp).
 
 ## Coworker skills {#coworker}
 

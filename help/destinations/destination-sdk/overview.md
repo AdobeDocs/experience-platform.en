@@ -56,6 +56,7 @@ Use these resources to configure and submit your destination via Destination SDK
                 <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">Configure a streaming destination</a></li>
                 <li><a href="/help/destinations/destination-sdk/guides/configure-file-based-destination-instructions.md">Configure a file-based destination</a></li>
                 <li><a href="/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md">Configure a destination to export prospect profiles</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/batch/configure-dataset-export-destination.md">Configure a dataset export destination</a></li>
                 <li><a href="/help/destinations/destination-sdk/guides/submit-destination.md">Submit destination for publishing</a></li>
             </ul>
         </td>
@@ -93,6 +94,7 @@ Use these resources to configure and submit your destination via Destination SDK
                 <li><a href="/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md">Configure file formats for the exported files</a></li>
                 <li><a href="/help/destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md">Live configuration example for an Amazon S3 destination</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md">Batch configuration</a> for file export schedule and file naming</li>
+                <li><a href="/help/destinations/destination-sdk/guides/batch/configure-dataset-export-destination.md">Configure a dataset export destination</a></li>
                 <li><a href="/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md">Test your file-based destination</a></li>
             </ul>
         </td>

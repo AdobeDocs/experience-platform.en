@@ -699,7 +699,7 @@ To create a new audience, select **[!UICONTROL Create Audience]** in the top-rig
 
 The Audience Composition UI provides access to profile attributes. Navigate to **[!UICONTROL Attributes] > [!UICONTROL XDM Individual Profile]** to view available attributes.
 
-For more details on using Audience Composition, see the [Audience Composition UI guide](../../segmentation/ui/audience-composition.md). For more details on using Segment Builder, see the [Segment Builder UI guide](../../segmentation/ui/segment-builder.md).
+For more details on using Audience Composition, see the [Audience Composition UI guide](../../segmentation/ui/audience-composition.md). For more details on using Audience Builder, see the [Audience Builder UI guide](../../segmentation/ui/audience-builder.md).
 
 ![The Audience Composition UI with XDM Individual Profile attributes available.](../images/data-distiller/top-tips-to-maximize-value/audience-composer.png)  
 
@@ -713,4 +713,4 @@ To build an audience using RFM attributes, drag and drop the `Rfm_Model` attribu
 
 To finalize the audience, select **[!UICONTROL Save and Publish]** in the top-right corner. After saving, the newly created audience appears in the [!UICONTROL Audiences] workspace, where you can review its summary and qualifying criteria.  
 
-Use the Segment Builder to access the derived RFM attributes and design additional audiences. Activate the newly created SQL audience based on RFM scores and send it to any preferred destination, including Adobe Journey Optimizer.  
+Use the Audience Builder to access the derived RFM attributes and design additional audiences. Activate the newly created SQL audience based on RFM scores and send it to any preferred destination, including Adobe Journey Optimizer.  

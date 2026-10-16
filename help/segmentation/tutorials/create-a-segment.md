@@ -35,7 +35,7 @@ topic_v2:
 
 This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md). 
 
-For information on how to build segment definitions using the user interface, please see the [Segment Builder guide](../ui/segment-builder.md).
+For information on how to build segment definitions using the user interface, please see the [Audience Builder guide](../ui/audience-builder.md).
 
 ## Getting started
 

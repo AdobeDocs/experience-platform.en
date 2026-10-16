@@ -29,7 +29,7 @@ topic_v2:
 ---
 # Configure audience data type
 
-When you build a destination connector with Destination SDK, you can define the type of audience that will be exported to your destination. Configuring the correct audience data type ensures that your destination receives the right data for its intended use case, whether it's for marketing campaigns, account-based strategies, or data analysis.
+When you build a destination connector with Destination SDK, you can define the type of audience that will be exported to your destination. Configuring the correct audience data type ensures that your destination receives the right data for its intended use case, whether it is for marketing campaigns, account-based strategies, or data analysis.
 
 Review the audience data types below to learn about the differences between them and identify the type that you need for your integration. Then, read the sections further below on the page to learn how to configure your destination to export different audience types.
 
@@ -74,7 +74,7 @@ People audiences are supported by default for all destination types and do not n
 
 +++ Streaming destination configuration example with people audiences support
 
-This is an example of a streaming destination that exports people audiences. Notice how there is no `sources` array in the configuration."
+This is an example of a streaming destination that exports people audiences. Notice how there is no `sources` array in the configuration.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -171,7 +171,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 Consider adding account audience support to your destination when you want to configure a [!DNL B2B] destination for account-based marketing. For example, you can use account-based audiences to retrieve records of all the accounts that do not have contact information for any people with the title [!DNL Chief Operating Officer (COO)] or [!DNL Chief Marketing Officer (CMO)].
 
-To build a destination which supports the export of account audiences, add the configuration snippet below to your [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md).
+To build a destination that supports the export of account audiences, add the configuration snippet below to your [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md).
 
 ```json
 "sources":[
@@ -279,7 +279,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 Consider adding prospect audience support to your destination when you want to target individuals who are not yet customers but share characteristics with your target audience. With prospect profiles, you can supplement your customer profiles with attributes from trusted third-party partners. See this [prospecting use case](../../../../rtcdp/partner-data/prospecting.md) for more information.
 
-To build a destination which supports the export of prospect audiences, add the configuration snippet below to your [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md).
+To build a destination that supports the export of prospect audiences, add the configuration snippet below to your [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md).
 
 
 ```json
@@ -411,9 +411,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## Export datasets {#datasets}
 
-Consider adding dataset export support to your destination when you are looking to export raw datasets, which are not grouped or structured by audience interests or qualifications. You could use this data for reporting, data science workflows, and many other use cases. For example, as an administrator, data engineer, or analyst, you can export data from Experience Platform to synchronize with your data warehouse, use in [!DNL BI] analysis tools, external cloud [!DNL ML] tools, or store in your system for long-term storage needs.
+Consider adding dataset export support to your destination when you are looking to export raw datasets, which are not grouped or structured by audience interests or qualifications. You could use this data for reporting, data science workflows, and many other use cases. For example, as an administrator, data engineer, or analyst, you can export data from [!DNL Experience Platform] to synchronize with your data warehouse, use in [!DNL BI] analysis tools, external cloud [!DNL ML] tools, or store in your system for long-term storage needs.
 
-To build a destination which supports the export of datasets , add the configuration snippet below to your [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md).
+To build a destination that supports the export of datasets, add the configuration snippet below to your [destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md).
 
 ```json
 "sources":[

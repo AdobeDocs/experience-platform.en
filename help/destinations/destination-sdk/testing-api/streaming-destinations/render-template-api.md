@@ -28,7 +28,7 @@ This page lists and describes all the API operations that you can perform using 
 
 ## Getting started with render template API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Render exported profiles based on the message transformation template {#render-exported-data}
 
@@ -51,7 +51,7 @@ POST authoring/testing/template/render
 | -------- | ----------- |
 | `destinationId` | The ID of the destination configuration for which you are rendering exported profiles. |
 | `template` | The character-escaped version of the template based on which you are rendering exported profiles. |
-| `profiles` | *Optional*. You can add profiles to the request body. If you don't add any profiles, Experience Platform will automatically generate and add profiles to the request. <br> If you'd like to add profiles to the body of the call, you can generate some by using the [Sample profile generation API](sample-profile-generation-api.md). |
+| `profiles` | *Optional*. You can add profiles to the request body. If you do not add any profiles, Experience Platform will automatically generate and add profiles to the request. <br> If you want to add profiles to the body of the call, you can generate some by using the [Sample profile generation API](sample-profile-generation-api.md). |
 
 {style="table-layout:auto"}
 

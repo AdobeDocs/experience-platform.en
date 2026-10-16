@@ -50,11 +50,11 @@ The use cases covered in this guide are consent trending and consent overlap.
 
 ## Create consented audiences {#create-consent-audiences}
 
-To build a consent dashboard, you must first create an audience of all the profiles that have consented to contact. To navigate to the Real-Time Customer Data Platform Segment Builder, select **[!UICONTROL Audiences]** in the left navigation of the Experience Platform UI. From the the [!UICONTROL Customer] tab of the [!UICONTROL Audiences] dashboard, select **[!UICONTROL Create audience]** in the top right of the view, then **[!UICONTROL Build rules]**.
+To build a consent dashboard, you must first create an audience of all the profiles that have consented to contact. To navigate to the Real-Time Customer Data Platform Audience Builder, select **[!UICONTROL Audiences]** in the left navigation of the Experience Platform UI. From the the [!UICONTROL Customer] tab of the [!UICONTROL Audiences] dashboard, select **[!UICONTROL Create audience]** in the top right of the view, then **[!UICONTROL Build rules]**.
 
 ![The [!UICONTROL Audiences] dashboard with [!UICONTROL Customer], [!UICONTROL Audiences], and [!UICONTROL Create segment] highlighted.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
-Segment Builder appears. Next, select **[!UICONTROL XDM Individual Profile]** from the available options. See the documentation for more information on the [rule builder canvas](../../segmentation/ui/segment-builder.md#rule-builder-canvas). 
+Segment Builder appears. Next, select **[!UICONTROL XDM Individual Profile]** from the available options. See the documentation for more information on the [rule builder canvas](../../segmentation/ui/audience-builder.md#rule-builder-canvas). 
 
 ![Segment Builder with the [!UICONTROL XDM Individual Profile] attribute folder highlighted.](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
 

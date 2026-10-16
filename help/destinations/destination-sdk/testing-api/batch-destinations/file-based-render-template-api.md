@@ -1,5 +1,5 @@
 ---
-description: This page explains how to use the /authoring/testing/template/render endpoint to visualize how the templatized customer data fields defined in your destination configuration would look like.
+description: Learn how to use the template render endpoint to preview how your templatized customer data fields will look.
 title: Validate templatized customer fields
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
 TQID: https://experienceleague.adobe.com/MseDqPbeFaRQVcbAYBcbGi-JHdTYMvinQAGWUSEsF34
@@ -25,7 +25,7 @@ The endpoint generates random values for your customer data fields, and returns 
 
 ## Getting started {#getting-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Prerequisites {#prerequisites}
 
@@ -44,7 +44,7 @@ Before you can use the `/template/render` endpoint, make sure you meet the follo
 POST /authoring/testing/template/render/destination
 ```
 
-To illustrate the behavior of this API endpoint, let's consider a file-based destination with the following customer data fields configuration:
+To illustrate the behavior of this API endpoint, consider a file-based destination with the following customer data fields configuration:
 
 ```json
 "fileBasedS3Destination":{

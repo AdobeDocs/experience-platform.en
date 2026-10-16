@@ -1,6 +1,6 @@
 ---
-title: Identity handling in the destinations activation workflow
-description: Learn how identity export is handled in the activation workflow, depending on destination type
+title: Identity export in activation workflows
+description: Learn which identities are supported for different destination types, how identity maps and attributes behave, and how to configure exports correctly.
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
 TQID: https://experienceleague.adobe.com/zSP6vyySfsJz7SoVfUGSKAiJSGsQuV5n7UuXeb4u9Q8
 product_v2:
@@ -29,7 +29,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
     internal-label: Personalization
 ---
-# Identity handling in the destinations activation workflow
+# Identity export in activation workflows
 
 This page describes the particularities of how identities are exported to different destination types and teaches you how to find which identities are available for export depending on destination.
 
@@ -47,13 +47,13 @@ If you choose to add identities to your file exports, note that only a single id
 
 ![An identity selected as mandatory attribute and deduplication key.](/help/destinations/assets/how-destinations-work/selected-identity.png)
 
-As a workaround, you can add more identities to the export if these have been ingested into Experience Platform as attributes. See below an example where the XDM attribute email address was selected for export, in addition to the identity namespace `Phone_E.164`.
+As a workaround, you can add more identities to the export if these have been ingested into [!DNL Experience Platform] as attributes. See below an example where the XDM attribute email address was selected for export, in addition to the identity namespace `Phone_E.164`.
 
 ![Example of email address attribute selected for export.](/help/destinations/assets/how-destinations-work/email-selected.png)
 
-## Exporting an identity from an identity map versus exporting an identity as an XDM attribute - the differences {#identity-map-or-attribute}
+## Identity map versus XDM attribute export {#identity-map-or-attribute}
 
-The number of exported records can differ, based on whether you select for export identities from the identity map or identities which have been ingested as attributes into Experience Platform. [Merge policies](/help/profile/merge-policies/overview.md) also play an important role in the number of records that get exported when you select identities from the identity map.
+The number of exported records can differ, based on whether you select for export identities from the identity map or identities which have been ingested as attributes into [!DNL Experience Platform]. [Merge policies](/help/profile/merge-policies/overview.md) also play an important role in the number of records that get exported when you select identities from the identity map.
 
 For example, consider that from two different datasets, you have the following profile fragments which will be merged into a single customer profile:
 
@@ -97,23 +97,23 @@ Note, however, that you have the flexibility to use data from either [private gr
 
 >[!TIP]
 >
->When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option to have Experience Platform automatically hash the data on activation. Read more about the **[!UICONTROL Apply transformation]** option in the [streaming destinations activation tutorial](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation).
+>When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option to have [!DNL Experience Platform] automatically hash the data on activation. Read more about the **[!UICONTROL Apply transformation]** option in the [streaming destinations activation tutorial](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation).
 
 ![Example of email address attribute mapped to identity field for Pinterest destination.](/help/destinations/assets/how-destinations-work/email-mapped-to-identity.png)
 
-### Advertising destinations relying on third-party cookie integrations {#third-party-cookie-destinations}
+### Third-party cookie destinations {#third-party-cookie-destinations}
 
-Advertising destinations relying on third party cookies (for example: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) do not require customers to select IDs in the activation workflow. For these destinations, when setting up an activation workflow, Experience Platform automatically looks up the identity match table constructed by the [[!UICONTROL Experience Cloud ID Service]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) and exports all identities that are available for a profile and supported by the destination. 
+Advertising destinations relying on third party cookies (for example: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) do not require customers to select IDs in the activation workflow. For these destinations, when setting up an activation workflow, [!DNL Experience Platform] automatically looks up the identity match table constructed by the [Experience Cloud ID Service](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) and exports all identities that are available for a profile and supported by the destination.
 
-These destinations require an ID sync to happen through either the [!UICONTROL Experience Cloud ID Service] or through [!UICONTROL Experience Platform Web SDK]. 
+These destinations require an ID sync to happen through either the [!UICONTROL Experience Cloud ID Service] or through [!UICONTROL [!DNL Experience Platform] Web SDK]. 
 
-If you are using [!UICONTROL Experience Platform Web SDK] and the legacy [!UICONTROL Experience Cloud ID Service] is not implemented on the page, then you need to ensure that the datastream for the website in question is enabled to allow for Third Party ID syncing, as outlined in the [configure datastream documentation](/help/datastreams/configure.md#create).
+If you are using [!UICONTROL [!DNL Experience Platform] Web SDK] and the legacy [!UICONTROL Experience Cloud ID Service] is not implemented on the page, then you need to ensure that the datastream for the website in question is enabled to allow for Third Party ID syncing, as outlined in the [configure datastream documentation](/help/datastreams/configure.md#create).
 
 When configuring a datastream as described in the documentation linked above, you need to ensure that the **[!UICONTROL Third Party ID Sync]** slider is enabled. Most customers would leave the `container_id` field blank (it will default to 0). You only need to change this value if your legacy Audience Manager implementation used a specific container ID (note, however, that this would be the vast minority of customers).
 
 >[!NOTE]
 >
->Most of these advertising destinations are supported in Audience Manager (these destination types are known in Audience Manager as device-based destinations. See a [list of all supported device-based destinations in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)). Only a few are listed in Experience Platform. For information about sharing data between Experience Platform and Audience Manager, read the section on [enabling data sharing from Experience Platform to Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data). Currently, there is no plan to support more third-party cookie destinations. 
+>Most of these advertising destinations are supported in Audience Manager (these destination types are known in Audience Manager as device-based destinations. See a [list of all supported device-based destinations in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)). Only a few are listed in [!DNL Experience Platform]. For information about sharing data between [!DNL Experience Platform] and Audience Manager, read the section on [enabling data sharing from [!DNL Experience Platform] to Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data). Currently, there is no plan to support more third-party cookie destinations. 
 
 ## Enterprise destinations {#enterprise-destinations}
 
@@ -121,7 +121,7 @@ When configuring a datastream as described in the documentation linked above, yo
 
 ## Personalization destinations {#personalization-destinations}
 
-[Personalization (or edge) destinations](/help/destinations/destination-types.md#edge-personalization-destinations) (for example: [!DNL Adobe Target], [!DNL Custom Personalization]) do not require any identity selection in the activation workflow, as the integration is a profile lookup. The client ([!DNL Target], [!DNL Web SDK], or others) queries the [[!UICONTROL Edge]](/help/collection/home.md) and pulls the profile information that it needs for on-site personalization.
+[Personalization (or edge) destinations](/help/destinations/destination-types.md#edge-personalization-destinations) (for example: [!DNL Adobe Target], [!DNL Custom Personalization]) do not require any identity selection in the activation workflow, as the integration is a profile lookup. The client ([!DNL Target], [!DNL Web SDK], or others) queries the [Edge](/help/collection/home.md) and pulls the profile information that it needs for on-site personalization.
 
 ## Next steps {#next-steps}
 

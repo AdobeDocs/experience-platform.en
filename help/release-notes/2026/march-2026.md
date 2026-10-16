@@ -157,8 +157,8 @@ For more information, read the [Run and Operate overview](../../run-and-operate/
 
 | Feature | Description |
 | ------- | ----------- |
-| Ingestion type | You can now view the ingestion type of your attributes. This lets you know the origin of your data, letting you create better audiences. For more information about this feature, read the [Segment Builder guide](../../segmentation/ui/segment-builder.md). |
-| Summary data | You can now view the summary data for your attributes for account and people-based audiences. For more information about this feature in account audiences, read the account [Audience Builder guide](../../rtcdp/segmentation/audience-builder.md). For more information about this feature in people-based audiences, read the [Segment Builder guide](../../segmentation/ui/segment-builder.md). |
+| Ingestion type | You can now view the ingestion type of your attributes. This lets you know the origin of your data, letting you create better audiences. For more information about this feature, read the [Segment Builder guide](../../segmentation/ui/audience-builder.md). |
+| Summary data | You can now view the summary data for your attributes for account and people-based audiences. For more information about this feature in account audiences, read the account [Audience Builder guide](../../rtcdp/segmentation/audience-builder.md). For more information about this feature in people-based audiences, read the [Segment Builder guide](../../segmentation/ui/audience-builder.md). |
 
 For more information, read the [[!DNL Segmentation Service] overview](../../segmentation/home.md).
 

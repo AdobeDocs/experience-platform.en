@@ -95,7 +95,7 @@ There are two ways to send identity data to Experience Platform:
 
 `identityMap` is a map-type field that describes the various identity values for an individual, along with their associated namespaces. This field can be used to provide identity information for your schemas, instead of defining identity values within the structure of the schema itself.
 
-The main drawback of using `identityMap` is that identity values are nested and may be harder to work with in tools that expect top-level identity fields, such as Segment Builder or some third-party integrations.
+The main drawback of using `identityMap` is that identity values are nested and may be harder to work with in tools that expect top-level identity fields, such as Audience Builder or some third-party integrations.
 
 >[!NOTE]
 >
@@ -387,7 +387,7 @@ The pros and cons of using objects over free-form fields are listed below.
 
 * Objects are best used when you want to create a logical grouping of certain fields.
 * Objects organize the schema in a more structured manner.
-* Objects indirectly help in creating a good menu structure in the Segment Builder UI. The grouped fields within the schema are directly reflected in the folder structure provided in the Segment Builder UI.
+* Objects indirectly help in creating a good menu structure in the Audience Builder UI. The grouped fields within the schema are directly reflected in the folder structure provided in the Audience Builder UI.
 
 **Cons**:
 

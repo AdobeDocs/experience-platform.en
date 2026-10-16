@@ -1,6 +1,6 @@
 ---
-title: Profile export behavior
-description: Learn how profile export behavior varies between the different integration patterns supported in Experience Platform destinations.
+title: Profile export behavior by destination type
+description: Learn how profile export behavior differs across destination types, including aggregation, triggering events, and the fields that are included in each export.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
 TQID: https://experienceleague.adobe.com/DCZplb-dOVBCw3VGErsd1uCvdKfpLubZ-oDuidXFCn4
 product_v2:
@@ -26,9 +26,9 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
 ---
-# Profile export behavior for different destination types
+# Profile export behavior by destination type
 
-There are several destination types in Experience Platform, as shown in the diagram below. These destinations have slightly different export patterns with regards to what triggers a destination export and what is included in an export, as described in the sections further below.
+There are several destination types in [!DNL Experience Platform], as shown in the diagram below. These destinations have slightly different export patterns with regards to what triggers a destination export and what is included in an export, as described in the sections further below.
 
 >[!IMPORTANT]
 >
@@ -40,30 +40,30 @@ There are several destination types in Experience Platform, as shown in the diag
 
 Before diving into specific information per destination type, it is important to understand the concept of message aggregation for *streaming destinations*.
 
-Experience Platform destinations export data to API-based integrations as HTTPS calls. Once the destinations service is notified by other upstream services that profiles have been updated as a result of batch ingestion, streaming ingestion, batch segmentation, streaming segmentation or identity graph changes, data is exported and sent to streaming destinations.
+[!DNL Experience Platform] destinations export data to API-based integrations as HTTPS calls. Once the destinations service is notified by other upstream services that profiles have been updated as a result of batch ingestion, streaming ingestion, batch segmentation, streaming segmentation or identity graph changes, data is exported and sent to streaming destinations.
 
 Profiles are aggregated into HTTPS messages before being dispatched to destination API endpoints. 
 
-Take the [Facebook destination](/help/destinations/catalog/social/facebook.md) with a *[configurable aggregation](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* policy as an example - data is sent in an aggregated fashion, where the destinations service takes all the incoming data from the profile service upstream and aggregates it by one of the following, before dispatching it to Facebook: 
+Take the [Facebook destination](/help/destinations/catalog/social/facebook.md) with a *[configurable aggregation](/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md)* policy as an example - data is sent in an aggregated fashion, where the destinations service takes all the incoming data from the profile service upstream and aggregates it by one of the following, before dispatching it to Facebook: 
 
 * Number of records (maximum of 10,000) or
 * Time window interval (300 seconds) 
   
-Whichever of the thresholds above is first met triggers an export to Facebook. So, in the [!DNL Facebook Custom Audiences] dashboard, you might see audiences coming in from Experience Platform in 10,000 record increments. You might be seeing 10,000 records every 2-3 minutes because the data gets processed and aggregated faster than the 300 seconds export interval, and gets sent faster, so about every 2-3 minutes until all records have been processed. If there are insufficient records to make up a 10,000 batch, then the current number of records will be sent as is when the time window threshold is met, so you might see smaller batches sent to Facebook as well.
+Whichever of the thresholds above is first met triggers an export to Facebook. So, in the [!DNL Facebook Custom Audiences] dashboard, you might see audiences coming in from [!DNL Experience Platform] in 10,000 record increments. You might be seeing 10,000 records every 2-3 minutes because the data gets processed and aggregated faster than the 300 seconds export interval, and gets sent faster, so about every 2-3 minutes until all records have been processed. If there are insufficient records to make up a 10,000 batch, then the current number of records will be sent as is when the time window threshold is met, so you might see smaller batches sent to Facebook as well.
 
-As another example, consider the [HTTP API destination](/help/destinations/catalog/streaming/http-destination.md), which has a *[best effort aggregation](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* policy, with `maxUsersPerRequest: 10`. This means that a maximum of ten profiles will be aggregated before an HTTP call is fired to this destination, but Experience Platform tries to dispatch profiles to the destination as soon as the destinations service receives updated re-evaluation information from an upstream service. 
+As another example, consider the [HTTP API destination](/help/destinations/catalog/streaming/http-destination.md), which has a *[best effort aggregation](/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md)* policy, with `maxUsersPerRequest: 10`. This means that a maximum of ten profiles will be aggregated before an HTTP call is fired to this destination, but [!DNL Experience Platform] tries to dispatch profiles to the destination as soon as the destinations service receives updated re-evaluation information from an upstream service. 
 
-The aggregation policy is configurable, and destination developers can decide how to configure the aggregation policy to best meet the rate limitations of the API endpoints downstream. Read more about [aggregation policy](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) in the Destination SDK documentation. 
+The aggregation policy is configurable, and destination developers can decide how to configure the aggregation policy to best meet the rate limitations of the API endpoints downstream. Read more about [aggregation policy](/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md) in the Destination SDK documentation. 
 
-## Streaming profile export (enterprise) destinations {#streaming-profile-destinations}
+## Enterprise streaming export {#enterprise-streaming-export}
 
 >[!IMPORTANT]
 >
 > Enterprise destinations are available only to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
-The [enterprise destinations](/help/destinations/destination-types.md#advanced-enterprise-destinations) in Experience Platform are Amazon Kinesis, Azure Event Hubs, and HTTP API.
+The [enterprise destinations](/help/destinations/destination-types.md#advanced-enterprise-destinations) in [!DNL Experience Platform] are Amazon Kinesis, Azure Event Hubs, and HTTP API.
 
-Experience Platform optimizes the profile export behavior to your enterprise destination, to only export data to your API endpoint when relevant updates to a profile have occurred following audience qualification or other significant events. Profiles are exported to your destination in the following situations:
+[!DNL Experience Platform] optimizes the profile export behavior to your enterprise destination, to only export data to your API endpoint when relevant updates to a profile have occurred following audience qualification or other significant events. Profiles are exported to your destination in the following situations:
 
 * The profile update was determined by a change in [audience membership](/help/xdm/field-groups/profile/segmentation.md) for at least one of the audiences mapped to the destination. For example, the profile has qualified for one of the audiences mapped to the destination or has exited one of the audiences mapped to the destination.
 * The profile update was determined by a change in the [identity map](/help/xdm/field-groups/profile/identitymap.md). For example, a profile who had already qualified for one of the audiences mapped to the destination has been added a new identity in the identity map attribute.
@@ -75,13 +75,13 @@ In all the cases described above, only the profiles where relevant updates have 
 >
 >All the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
-### What determines a data export and what is included in the export {#enterprise-behavior}
+### What each enterprise export includes {#enterprise-behavior}
 
 Regarding the data that is exported for a given profile, it is important to understand the two different concepts of *what determines a data export to your enterprise destination* and *which data is included in the export*.
 
 |What determines a destination export | What is included in the destination export |
 |---------|----------|
-|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>Since identities cannot currently be mapped to enterprise destinations, changes in any identity on a given profile also determine destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>The `segmentMembership` object includes the segment mapped in the activation dataflow, for which the status of the profile has changed following a qualification or segment exit event. Note that other unmapped segments for which the profile qualified for can be part of the destination export, if these segments belong to the same [merge policy](/help/profile/merge-policies/overview.md) as the segment mapped in the activation dataflow. </li><li>All identities in the `identityMap` object are included as well (Experience Platform currently does not support identity mapping in the enterprise destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
+|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>Since identities cannot currently be mapped to enterprise destinations, changes in any identity on a given profile also determine destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>The `segmentMembership` object includes the segment mapped in the activation dataflow, for which the status of the profile has changed following a qualification or segment exit event. Note that other unmapped segments for which the profile qualified for can be part of the destination export, if these segments belong to the same [merge policy](/help/profile/merge-policies/overview.md) as the segment mapped in the activation dataflow. </li><li>All identities in the `identityMap` object are included as well ([!DNL Experience Platform] currently does not support identity mapping in the enterprise destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -111,7 +111,7 @@ The profile export behavior for streaming destinations such as Facebook, Trade D
 
 Examples of streaming destinations are the destinations belonging to the [social and advertising categories](/help/destinations/destination-types.md#categories) in the catalog.
 
-Experience Platform optimizes the profile export behavior to your streaming destination, to only export data to streaming API-based destinations when relevant updates to a profile have occurred following audience qualification or other significant events. Profiles are exported to your destination in the following situations:
+[!DNL Experience Platform] optimizes the profile export behavior to your streaming destination, to only export data to streaming API-based destinations when relevant updates to a profile have occurred following audience qualification or other significant events. Profiles are exported to your destination in the following situations:
 
 * The profile update was determined by a change in [audience membership](/help/xdm/field-groups/profile/segmentation.md) for at least one of the audiences mapped to the destination. For example, the profile has qualified for one of the audiences mapped to the destination or has exited one of the audiences mapped to the destination.
 * The profile update was determined by a change in the [identity map](/help/xdm/field-groups/profile/identitymap.md) for an identity namespace that is marked for export for this destination instance. For example, a profile who had already qualified for one of the audiences mapped to the destination has been added a new identity in the identity map attribute.
@@ -124,7 +124,7 @@ In all the cases described above, only the profiles where relevant updates have 
 >
 >All the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
-Experience Platform monitors attributes for changes at the sandbox and [merge policy](/help/profile/merge-policies/overview.md) level, not per destination. If audiences that use the same merge policy are mapped to two different destinations in the same sandbox, and one of those destinations maps an [object field](/help/xdm/ui/fields/object.md) (a field that contains its own sub-fields, also called child fields), that object field is added to the shared set of monitored attributes for the merge policy.
+[!DNL Experience Platform] monitors attributes for changes at the sandbox and [merge policy](/help/profile/merge-policies/overview.md) level, not per destination. If audiences that use the same merge policy are mapped to two different destinations in the same sandbox, and one of those destinations maps an [object field](/help/xdm/ui/fields/object.md) (a field that contains its own sub-fields, also called child fields), that object field is added to the shared set of monitored attributes for the merge policy.
 
 As a result, a change to a child field of that object field can trigger an export to the other destination, even when that destination's own mapping does not include the object field or child field. An overwrite of a field with the same value also counts as a change, and can trigger an export.
 
@@ -139,7 +139,7 @@ These two fields are otherwise unrelated. The only connection is that the audien
 
 If `loyaltyId` is overwritten with the same value, this still counts as a change. Both Destination A and Destination B can receive an export as a result.
 
-### What determines a data export and what is included in the export {#streaming-behavior}
+### What each streaming export includes {#streaming-behavior}
 
 Regarding the data that is exported for a given profile, it is important to understand the two different concepts of what determines a data export to your streaming API destination and which data is included in the export.
 
@@ -167,7 +167,7 @@ From a profile attributes point of view, any changes to the three attributes map
 
 ## Batch (file-based) destinations {#file-based-destinations}
 
-When exporting profiles to [file-based destinations](/help/destinations/destination-types.md#file-based) in Experience Platform, there are three types of schedules (listed below) and two file export options (full or incremental files) that you can use. All these settings are set on an audience level, even when multiple audiences are mapped to a single destination dataflow.
+When exporting profiles to [file-based destinations](/help/destinations/destination-types.md#file-based) in [!DNL Experience Platform], there are three types of schedules (listed below) and two file export options (full or incremental files) that you can use. All these settings are set on an audience level, even when multiple audiences are mapped to a single destination dataflow.
 
 * Scheduled exports: Configure a destination, add one or more segments, select if you want to export full or incremental files and select a set time each day or several times per day when files should be exported. For example, a 5 PM export time means that whichever profiles are qualified for the audiencewill be exported at 5PM. 
 * After segment evaluation: The export is triggered immediately after the daily audience evaluation job runs. This means that the exported profile numbers in the file are as close as possible to the latest evaluated population of the segment.
@@ -202,7 +202,7 @@ For example, in the export setting illustrated below, where an audience is expor
 
 >[!ENDSHADEBOX]
 
-### What determines a data export and what is included in the export {#file-based-export-details}
+### What each file export includes {#file-based-export-details}
 
 Based on the information in the section above, the profile export behavior to file-based destinations can be summarized as described below:
 

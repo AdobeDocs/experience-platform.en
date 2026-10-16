@@ -76,7 +76,7 @@ The following features have been updated as part of the B2B architectural upgrad
 
 As part of the new architecture upgrade, Experience Event filters can no longer be used within a single multi-entity audience that includes B2B attributes.
 
-To achieve the same audience logic, you can use Segment Builder to [add audiences and reference audiences](../segmentation/ui/segment-builder.md#adding-audiences)
+To achieve the same audience logic, you can use Audience Builder to [add audiences and reference audiences](../segmentation/ui/audience-builder.md#adding-audiences)
 
 For example:
 

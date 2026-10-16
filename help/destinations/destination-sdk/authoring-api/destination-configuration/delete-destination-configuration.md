@@ -9,11 +9,11 @@ This page exemplifies the API request and payload that you can use to delete an 
 
 >[!IMPORTANT]
 >
->All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, please use the parameters names and values exactly as shown in the documentation.
+>All parameter names and values supported by Destination SDK are **case sensitive**. To avoid case sensitivity errors, use the parameter names and values exactly as shown in the documentation.
 
 ## Getting started with destination configuration API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Delete a destination configuration {#delete}
 

@@ -553,7 +553,7 @@ topic_v2:
 
 **Secret access key**: A secret access key is an [!DNL Amazon] S3 key that is used in conjunction with the access key ID to sign AWS requests.
 
-**Segment Builder**: The [!DNL Segment Builder] is a visual development environment used to build audiences. It serves as a common component of all applications using Experience Platform Segmentation Service.
+**Audience Builder**: The [!DNL Audience Builder] is a visual development environment used to build audiences. It serves as a common component of all applications using Experience Platform Segmentation Service.
 
 **Segment definition**: A segment definition is the rule set used to describe the key characteristics or behavior of a target audience. Once conceptualized, the rules outlined in a segment definition are used to determine qualifying members for an audience.
 

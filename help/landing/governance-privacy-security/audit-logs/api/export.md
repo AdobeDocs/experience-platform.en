@@ -55,3 +55,7 @@ curl -X POST \
 **Response**
 
 The results are generated into a CSV file for export, each entry representing a core or enhanced audit event. A successful response returns HTTP 307 with no response body. A link to the export file is provided in the `Location` response header.
+
+>[!NOTE]
+>
+>For batch operations that act on multiple assets, the exported CSV includes an `assets` column whose value is a stringified JSON of the [`assets` array](./events.md#multi-asset-events). Example value: `"[{""assetId"":""id-1"",""assetName"":""name-1"",""status"":""Success""},{""assetId"":""id-2"",""assetName"":""name-2"",""status"":""Failure"",""failureCode"":""SMS-2010-403""}]"`.

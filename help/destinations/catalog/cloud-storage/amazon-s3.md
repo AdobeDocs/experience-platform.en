@@ -113,6 +113,38 @@ When exporting *audience data*, Experience Platform creates a `.csv`, `parquet`,
 
 When exporting *datasets*, Experience Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
 
+## File encryption {#file-encryption}
+
+### Encryption standard
+
+When you provide an **[!UICONTROL Encryption key]**, Experience Platform encrypts each exported file with standard OpenPGP, as defined by [RFC 4880](https://www.rfc-editor.org/rfc/rfc4880). The encrypted file is a binary OpenPGP message with a `.gpg` extension. You can decrypt the file with any standard OpenPGP client, including GnuPG with the `gpg --decrypt` command.
+
+The implementation uses standard OpenPGP without a proprietary variant.
+
+### Key handling
+
+Amazon S3 uses hybrid encryption:
+
+* A random AES-128 session key encrypts the file content.
+* The session key is encrypted with your RSA public key. RSA does not encrypt the file content directly.
+* A new session key is generated for each file. Each encrypted file starts with a random 16-byte prefix that randomizes the cipher state, so no key material is reused across an export.
+
+### Encryption process
+
+The encryption process uses AES-128 in OpenPGP CFB mode. The payload is ZLIB-compressed before encryption. GCM and CBC modes are not supported. No RSA key size restriction is enforced. You can use 2048-bit, 3072-bit, or 4096-bit RSA keys. Provide the public key as a Base64-encoded key or a raw ASCII-armored PGP public key block.
+
+### Key custody
+
+Adobe stores only your public key. Adobe does not request, transmit, or store your private key. Experience Platform encrypts outbound files but does not decrypt them.
+
+### Integrity protection
+
+Files are encrypted but not digitally signed. Integrity is protected by the OpenPGP Modification Detection Code (MDC), which uses SHA-1 for this packet type. The MDC detects tampering and is not a digital signature. This protection does not rely on SHA-1 collision resistance.
+
+### Transport encryption
+
+File encryption applies to all destinations. Encryption is applied as a stream while each file is written to the destination, so no unencrypted object is ever placed in your Amazon S3 bucket. File encryption is separate from transport encryption. Amazon S3 delivery uses HTTPS and TLS.
+
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]

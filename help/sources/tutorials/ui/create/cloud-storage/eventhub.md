@@ -40,6 +40,10 @@ If you already have a valid [!DNL Event Hubs] connection, you may skip the remai
 
 In order to authenticate your [!DNL Event Hubs] source connector, you must provide values for the following connection properties:
 
+>[!IMPORTANT]
+>
+>Your [!DNL Event Hub] must have at least one consumer group configured in [!DNL Azure] before you connect it to Experience Platform. Without a consumer group, the connection fails with an internal server error. See the [Microsoft documentation on consumer groups](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#consumer-groups) for steps to create one.
+
 >[!BEGINTABS]
 
 >[!TAB Standard authentication]

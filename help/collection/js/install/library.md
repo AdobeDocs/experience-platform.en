@@ -18,7 +18,7 @@ See the [Web SDK release notes](../release-notes.md) for the latest version to i
 
 The code to add consists of two sections:
 
-* **Base code**: Allows bootstrapping by queuing commands while the Web SDK loads asynchronously. See [Base code](base-code.md) for more information. Adobe recommends using the base code when loading the library asynchronously to avoid race conditions when calling Web SDK commands during page load.
+* **Base code**: Allows bootstrapping by queuing commands until the Web SDK finishes loading. See [Base code](base-code.md) for more information.
 * **Library loader**: Loads the full JavaScript library.
 
 Add the following code block as high as possible in the `<head>` tag, before any scripts that might call the Web SDK:

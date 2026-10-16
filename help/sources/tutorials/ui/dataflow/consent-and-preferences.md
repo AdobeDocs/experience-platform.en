@@ -110,6 +110,10 @@ Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
 The [!UICONTROL Scheduling] step appears, allowing you to configure an ingestion schedule to automatically ingest the selected source data using the configured mappings. By default, scheduling is set to `Once`. To adjust your ingestion frequency, select **[!UICONTROL Frequency]** and then select an option from the dropdown menu.
 
+>[!IMPORTANT]
+>
+>For [!DNL OneTrust Integration], each scheduled run ingests data after the previous run, even if that run failed. The next scheduled run does not automatically recover data for the failed run's time window.
+
 >[!TIP]
 >
 >Interval and backfill are not visible during a one-time ingestion.

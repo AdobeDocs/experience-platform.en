@@ -284,6 +284,7 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Reports] | [!UICONTROL View Channel Reports] | The ability to view and modify channel reports. |
 | [!DNL Run and Operate] | [!UICONTROL View Health Checks] | Read-only access to health checks. |
 | [!DNL Run and Operate] | [!UICONTROL View Job Schedules] | Read-only access to job schedules. |
+| [!DNL Run and Operate] | [!UICONTROL View Usage Insights] | Read-only access to Usage Insights. |
 | [!DNL Sandbox Administration] | [!UICONTROL Manage Sandboxes] | Access to read, create, edit, and delete sandboxes. |
 | [!DNL Sandbox Administration] | [!UICONTROL View Sandboxes] | Read-only access for sandboxes belonging to your organization. |
 | [!DNL Sandbox Administration] | [!UICONTROL Reset a Sandbox] | Ability to reset a sandbox. |

@@ -56,21 +56,21 @@ Follow the instructions to select a destination where you can export your datase
     
     ![Destination catalog tab with Catalog control highlighted.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-2. Select **[!UICONTROL Activate]** on the card corresponding to the destination that you want to export datasets to. 
+1. Select **[!UICONTROL Activate]** on the card corresponding to the destination that you want to export datasets to. 
 
-  >[!TIP]
-  >
-  >The destinations that can export profile audiences are indicated with an icon in the upper right corner of the card, similar to the destination highlighted below, or you can use the data type filter to only display destinations that can export prospect audiences, as [shown higher on the page](#supported-destinations).
+   >[!TIP]
+   >
+   >The destinations that can export profile audiences are indicated with an icon in the upper right corner of the card, similar to the destination highlighted below, or you can use the data type filter to only display destinations that can export prospect audiences, as [shown higher on the page](#supported-destinations).
 
-  ![Amazon S3 destination page that can export profile audiences highlighted.](/help/destinations/assets/ui/activate-prospect-audiences/amazon-s3-icon-activate-prospect-audiences.png)
+   ![Amazon S3 destination page that can export profile audiences highlighted.](/help/destinations/assets/ui/activate-prospect-audiences/amazon-s3-icon-activate-prospect-audiences.png)
 
 1. Select **[!UICONTROL Data type Prospects]**, followed by the destination connection that you want to export datasets to, then select **[!UICONTROL Next]**.
 
-  >[!TIP]
-  > 
-  >If you want to set up a new destination to activate prospect audiences, select **[!UICONTROL Configure new destination]** to trigger the [Connect to destination](/help/destinations/ui/connect-destination.md) workflow. 
+   >[!TIP]
+   >
+   >If you want to set up a new destination to activate prospect audiences, select **[!UICONTROL Configure new destination]** to trigger the [Connect to destination](/help/destinations/ui/connect-destination.md) workflow.
 
-  ![Destination activation workflow with Prospects control highlighted.](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
+   ![Destination activation workflow with Prospects control highlighted.](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
 
 1. Proceed to the next section to [select your profile audiences](#select-profile-audiences) for export.
 

@@ -1,6 +1,6 @@
 ---
 description: Learn how to use Destination SDK to configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration.
-title: Configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration.
+title: Configure Azure Data Lake Storage with Custom Formatting
 exl-id: cb67b126-cd30-4fb7-b67e-c15dc7daef73
 TQID: https://experienceleague.adobe.com/rqMwriGLKbdn9FYd0J8MwmQYt-zZBYKJNXKdOqtMA3s
 product_v2:
@@ -17,7 +17,7 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
 ---
-# Configure an [!DNL Azure Data Lake Storage] destination with custom file formatting options and custom file name configuration
+# Configure [!DNL Azure Data Lake Storage] with custom formatting
 
 ## Overview {#overview}
 
@@ -368,7 +368,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       "allowMandatoryFieldSelection":true,
       "allowDedupeKeyFieldSelection":true,
       "defaultExportMode":"DAILY_FULL_EXPORT",
-      "allowedExportMode":[
+      "allowedExportModes":[
          "DAILY_FULL_EXPORT",
          "FIRST_FULL_THEN_INCREMENTAL"
       ],

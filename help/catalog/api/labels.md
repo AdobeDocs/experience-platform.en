@@ -19,4 +19,15 @@ topic_v2:
 ---
 # Data usage labels in the Dataset Service API
 
-Separate from the Catalog Service API, the [!DNL Dataset Service] API provides endpoints to manage data usage labels for datasets. For steps on how to make calls to these endpoints, please refer to the guide on [managing data usage labels using the API](../../data-governance/labels/dataset-api.md) in the Adobe Experience Platform Data Governance documentation.
+Use the [!DNL Dataset Service] API to apply and manage data usage labels on datasets. These labels support data governance policies that control how data can be used. For instructions, see [Manage data usage labels using the API](../../data-governance/labels/dataset-api.md) in the Adobe Experience Platform Data Governance documentation.
+
+>[!NOTE]
+>
+>To restrict access to an entire dataset, use `accessLabels` in the [!DNL Catalog Service] API instead. Data usage labels and `accessLabels` use the same core and custom label definitions, but serve different purposes: data usage labels govern how data can be used, while `accessLabels` control who can access the dataset. See [Update array fields](./update-object.md#array-fields) for instructions on setting `accessLabels`.
+
+<!-- 
+January safe OLAC for datasets note PLAT-294991
+>[!NOTE]
+>
+>To restrict access to an entire dataset, use `accessLabels` in the [!DNL Catalog Service] API instead. Data usage labels and `accessLabels` use the same core and custom label definitions, but serve different purposes: data usage labels govern how data can be used, while `accessLabels` control who can access the dataset. See [Update array fields](./update-object.md#array-fields) for instructions on setting `accessLabels`.
+-->

@@ -63,7 +63,7 @@ For more information about the audience details page, please read the [audience 
 
 ## Create audience {#create}
 
-You can create a people audience either using Audience Composer or Segment Builder. To get started with creating a people audience, select Create audience on the Audience Portal.
+You can create a people audience either using Audience Composer or Audience Builder. To get started with creating a people audience, select Create audience on the Audience Portal.
 
 ![The Create audience button is highlighted.](../images/types/people/select-create-audience.png)
 
