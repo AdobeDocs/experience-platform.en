@@ -63,13 +63,15 @@ Once you've completed the prerequisite steps, you can configure and validate the
 
 Within Coworker, select **Customizations** followed by **Integrations**.
 
-IMAGE
+![](/help/profile/images/unstructured-data/select-integrations.png)
 
 The **Integrations** page appears. You'll need to add the `rtcdp-mcp` integration to Coworker. Select **Add server** to add an integration.
 
-IMAGE
+![](/help/profile/images/unstructured-data/select-add-server.png)
 
 The **Add integration** popover appears. Add the following details to the popover, then select **Add**.
+
+![](/help/profile/images/unstructured-data/add-integration-popover.png)
 
 | Field | Description |
 | ----- | ----------- |
@@ -81,19 +83,18 @@ The **Add integration** popover appears. Add the following details to the popove
 
 Once you've added the `rtcdp-mcp` integration, you'll need to change your manifest to use the **Semantic Profile AI Assistant**. Select the ICON next to your name, followed by **Settings** to open the Settings popover.
 
-IMAGE
+![](/help/profile/images/unstructured-data/select-settings.png)
 
 The Settings popover appears. Select **Preferences** and toggle on **Enable debug mode** so you can change the manifest.
 
-IMAGE
+![](/help/profile/images/unstructured-data/enable-debug.png)
 
 With debug mode enabled, select **Manifest** and choose the **Semantic Profile AI Assistant** followed by **Apply** to change the manifest for Coworker.
 
-IMAGE
+![](/help/profile/images/unstructured-data/change-manifest.png)
+
 
 Now that the integration and the manifest have been set up, you can begin the setup by asking "I want to create a semantic profile configuration" within Coworker.
-
-IMAGE
 
 Coworker will guide you through the steps to set up Profile with unstructured data by proceeding through the following steps:
 
@@ -335,11 +336,11 @@ Now that the profile context has been created, you can save the configuration ag
 
 In Brand Concierge, select the concierge you want to apply the profile configuration to.
 
-IMAGE
+![](/help/profile/images/unstructured-data/select-concierge.png)
 
 Once you've selected the concierge, go the **Personalization** tab and select the previously created configuration.
 
-IMAGE
+![](/help/profile/images/unstructured-data/select-configuration.png)
 
 ## Use cases {#use-cases}
 
