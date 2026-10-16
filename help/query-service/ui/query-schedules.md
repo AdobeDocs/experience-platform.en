@@ -97,7 +97,7 @@ You can choose the following options for **[!UICONTROL Frequency]**:
 - **[!UICONTROL Monthly]**: The selected query runs every month on the day, time, and date period you select. The selected time is in **UTC**, not your local time zone.
 - **[!UICONTROL Yearly]**: The selected query runs every year on the day, month, time, and date period you select. The selected time is in **UTC**, not your local time zone.
 
-If you attempt to create a schedule that exceeds these frequency limits, the API returns one of the following error messages:
+If you attempt to create a schedule that exceeds these frequency limits, Query Service returns one of the following error messages:
 
 - **Hourly frequency limit**: `Schedule frequency cannot be more than once per hour. The provided schedule would run every <N> minutes.` The `<N>` value represents the requested interval in minutes.
 - **Profile-enabled dataset frequency limit**: `INSERT INTO queries on profile-enabled datasets cannot be scheduled more frequently than every 24 hours.`
