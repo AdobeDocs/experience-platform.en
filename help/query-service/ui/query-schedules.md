@@ -86,6 +86,8 @@ The schedule details page appears. Use this page to configure the schedule setti
 >[!IMPORTANT]
 >
 >Starting August 18, 2026, you cannot create a new query schedule that runs more than once per hour, either in the Query Service UI or by using the [schedules endpoint](../api/scheduled-queries.md). Existing sub-hourly schedules continue to run as configured and are not changed by this release.
+>
+>Queries that write results to profile-enabled datasets cannot be scheduled more frequently than once every 24 hours. This restriction also applies to `SELECT` queries when you select a profile-enabled dataset as the output dataset in the Query Service UI.
 
 You can choose the following options for **[!UICONTROL Frequency]**:
 
@@ -94,6 +96,11 @@ You can choose the following options for **[!UICONTROL Frequency]**:
 - **[!UICONTROL Weekly]**: The selected query runs on the days of the week, time, and date period you select. The selected time is in **UTC**, not your local time zone.
 - **[!UICONTROL Monthly]**: The selected query runs every month on the day, time, and date period you select. The selected time is in **UTC**, not your local time zone.
 - **[!UICONTROL Yearly]**: The selected query runs every year on the day, month, time, and date period you select. The selected time is in **UTC**, not your local time zone.
+
+If you attempt to create a schedule that exceeds these frequency limits, Query Service returns one of the following error messages:
+
+- **Hourly frequency limit**: `Schedule frequency cannot be more than once per hour. The provided schedule would run every <N> minutes.` The `<N>` value represents the requested interval in minutes.
+- **Profile-enabled dataset frequency limit**: `INSERT INTO queries on profile-enabled datasets cannot be scheduled more frequently than every 24 hours.`
 
 ### Provide dataset details {#dataset-details}
 
@@ -114,6 +121,8 @@ Alternatively, select **[!UICONTROL Append into existing dataset]** followed by 
 The **[!UICONTROL Select output dataset]** dialog appears. 
 
 Next, either browse the existing datasets or use the search field to filter the options. Select the row of the dataset that you wish to use. The dataset details are displayed in the panel on the right. Select **[!UICONTROL Done]** to confirm your choice.
+
+If you select a profile-enabled dataset as the output dataset, you cannot schedule the query to run more frequently than once every 24 hours. See [Scheduled query frequency](#scheduled-query-frequency) for details.
 
 ![The Select output dataset dialog with the search field, a dataset row, and Done highlighted.](../images/ui/query-schedules/select-output-dataset-dialog.png)
 

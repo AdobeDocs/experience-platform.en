@@ -100,7 +100,7 @@ For more information, read the [Data Governance overview](/help/data-governance/
 
 | Fix | Description |
 | --- | --- |
-| [[!DNL Facebook] credentials no longer expire](/help/destinations/catalog/social/facebook.md#refresh-authentication-credentials) | [!DNL Facebook] authentication credentials no longer expire after 60 days. [!DNL Experience Platform] now automatically refreshes the OAuth token, so data exports to the destination continue without interruption. Manual reauthentication is no longer required. |
+| [Facebook credentials documentation update](/help/destinations/catalog/social/facebook.md#refresh-authentication-credentials) | The [!DNL Facebook] destination documentation now correctly states that authentication credentials do not expire. [!DNL Experience Platform] automatically refreshes the OAuth token, so data exports to the destination continue without interruption. This update applies to the documentation only and does not change destination functionality. |
 | [[!DNL Amazon Ads]](/help/destinations/catalog/advertising/amazon-ads-v2.md) no longer requires marketing actions | The connector was updated to remove the requirement to have marketing actions by default. Customers can now set up connections to [!DNL Amazon Ads] without using marketing actions. |
 
 {style="table-layout:auto"}

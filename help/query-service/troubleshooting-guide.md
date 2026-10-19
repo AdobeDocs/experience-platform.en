@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
 solution: Experience Platform
 title: Query Service and Data Distiller frequently asked questions
-description: This document contains common questions and answers related to Query Service and Data Distiller. Topics include, exporting data, third-party tools, and PSQL errors.
+description: This document contains common questions and answers related to Query Service and Data Distiller. Topics include exporting data, third-party tools, PSQL errors, and XDM row-validation errors.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 TQID: https://experienceleague.adobe.com/stm9X3x6ZCk7ZRj3ghtDdqbG-2UBWLlfJ5-IyLllcyI
 product_v2:
@@ -75,6 +75,7 @@ The following list of answers to frequently asked questions is divided into the 
 - [SQL Syntax](#sql-syntax) 
 - [ITAS Queries](#itas-queries) 
 - [Third-party tools](#third-party-tools)
+- [XDM row-validation errors](#xdm-row-validation-errors)
 - [PostgreSQL API errors](#postgresql-api-errors)
 - [REST API errors](#rest-api-errors)
 
@@ -856,6 +857,33 @@ The purpose of adding the cache server layer is to cache the data from Query Ser
 No, pgAdmin connectivity is not supported. A [list of available third-party clients and instructions on how to connect them to Query Service](./clients/overview.md) can be found in the documentation.
 +++
 
+## XDM row-validation errors {#xdm-row-validation-errors}
+
+You might encounter these errors when Query Service writes data to a dataset and validates the data against the dataset's XDM schema. When a row violates an XDM schema constraint, the write fails with SQLSTATE `22000` and the following message:
+
+```text
+Row failed XDM schema validation on column <column-path> (validation code: INGEST-####-400). Fix the offending data and try again.
+```
+
+The column path identifies the field that failed validation. Use the validation code to find the corresponding constraint and correct the value.
+
+| Validation code | XDM schema constraint | Meaning | Resolution |
+| --- | --- | --- | --- |
+| `INGEST-1555-400` | `required` | A required field contains a `null` value. | Provide a non-null value for the required field. |
+| `INGEST-1552-400` | `maximum` | A numeric value exceeds the field's maximum. | Provide a value that is less than or equal to the configured maximum. |
+| `INGEST-1551-400` | `minimum` | A numeric value is below the field's minimum. | Provide a value that is greater than or equal to the configured minimum. |
+| `INGEST-1515-400` | `maxLength` | A string exceeds the field's maximum length. | Shorten the value to the configured maximum length. |
+| `INGEST-1516-400` | `minLength` | A string is shorter than the field's minimum length. | Provide a string that meets the minimum length. |
+| `INGEST-1517-400` | `pattern` | A string does not match the field's regular expression pattern. | Use a value that matches the configured pattern. |
+| `INGEST-1503-400` | `enum` | A value is not included in the field's allowed values. | Use one of the values defined by the field's `enum` constraint. |
+| `INGEST-1554-400` | `format` | A string does not match the field's required format. | Provide a valid `uri`, `hostname`, `ipv4`, `ipv6`, or `email` value, as required by the field. |
+
+>[!NOTE]
+>
+>The `format` validation code applies to `uri`, `hostname`, `ipv4`, `ipv6`, and `email` formats. Temporal formats such as `date` and `date-time` are validated through type coercion and do not return this code.
+>
+>`Row failed XDM schema validation` indicates that a value violates an XDM schema constraint. By contrast, `Error validating schema` indicates that Query Service cannot locate a field in the schema.
+
 ## PostgreSQL API errors {#postgresql-api-errors}
 
 The following table provides PSQL error codes and their possible causes.  
@@ -904,5 +932,4 @@ The following table provides HTTP error codes and their possible causes.
 | 400              | Bad request           | Malformed or illegal query |
 | 401              | Authentication failed | Invalid auth token         |
 | 500              | Internal server error | Internal system failure    |
-
 
