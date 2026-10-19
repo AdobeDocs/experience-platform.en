@@ -690,7 +690,7 @@ To stop a record delete work order before processing begins, send a PUT request 
 
 >[!IMPORTANT]
 >
->If the work order is not in `received` status, the request returns HTTP 409 (Conflict) and the work order continues processing.
+>If the work order is not in `received` status, the cancellation request returns HTTP 409 (Conflict).
 
 **API format**
 
