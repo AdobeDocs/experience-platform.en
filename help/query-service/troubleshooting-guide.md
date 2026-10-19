@@ -869,7 +869,7 @@ The column path identifies the field that failed validation. Use the validation 
 
 | Validation code | XDM schema constraint | Meaning | Resolution |
 | --- | --- | --- | --- |
-| `INGEST-1555-400` | `required` | A required field did not contain a value. | Ensure that the field is included and provide a non-null value. |
+| `INGEST-1555-400` | `required` | A required field contains a `null` value. | Provide a non-null value for the required field. |
 | `INGEST-1552-400` | `maximum` | A numeric value exceeds the field's maximum. | Provide a value that is less than or equal to the configured maximum. |
 | `INGEST-1551-400` | `minimum` | A numeric value is below the field's minimum. | Provide a value that is greater than or equal to the configured minimum. |
 | `INGEST-1515-400` | `maxLength` | A string exceeds the field's maximum length. | Shorten the value to the configured maximum length. |
