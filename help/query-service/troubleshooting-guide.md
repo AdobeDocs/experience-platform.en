@@ -865,7 +865,7 @@ You might encounter these errors when Query Service writes data to a dataset and
 Row failed XDM schema validation on column <column-path> (validation code: INGEST-####-400). Fix the offending data and try again.
 ```
 
-The column path identifies the field that failed validation. Use the validation code to identify the schema constraint and correct the value before trying the write again.
+The column path identifies the field that failed validation. Use the validation code to find the corresponding constraint and correct the value.
 
 | Validation code | XDM schema constraint | Meaning | Resolution |
 | --- | --- | --- | --- |
@@ -873,8 +873,8 @@ The column path identifies the field that failed validation. Use the validation 
 | `INGEST-1552-400` | `maximum` | A numeric value exceeds the field's maximum. | Provide a value that is less than or equal to the configured maximum. |
 | `INGEST-1551-400` | `minimum` | A numeric value is below the field's minimum. | Provide a value that is greater than or equal to the configured minimum. |
 | `INGEST-1515-400` | `maxLength` | A string exceeds the field's maximum length. | Shorten the value to the configured maximum length. |
-| `INGEST-1516-400` | `minLength` | A string is shorter than the field's minimum length. | Provide a value that meets the configured minimum length. |
-| `INGEST-1517-400` | `pattern` | A string does not match the field's regular expression pattern. | Change the value so that it matches the configured pattern. |
+| `INGEST-1516-400` | `minLength` | A string is shorter than the field's minimum length. | Provide a string that meets the minimum length. |
+| `INGEST-1517-400` | `pattern` | A string does not match the field's regular expression pattern. | Use a value that matches the configured pattern. |
 | `INGEST-1503-400` | `enum` | A value is not included in the field's allowed values. | Use one of the values defined by the field's `enum` constraint. |
 | `INGEST-1554-400` | `format` | A string does not match the field's required format. | Provide a valid `uri`, `hostname`, `ipv4`, `ipv6`, or `email` value, as required by the field. |
 
@@ -882,7 +882,7 @@ The column path identifies the field that failed validation. Use the validation 
 >
 >The `format` validation code applies to `uri`, `hostname`, `ipv4`, `ipv6`, and `email` formats. Temporal formats such as `date` and `date-time` are validated through type coercion and do not return this code.
 >
->The message `Row failed XDM schema validation` is different from `Error validating schema`. The latter means that Query Service cannot locate a field in the schema.
+>`Row failed XDM schema validation` indicates that a value violates an XDM schema constraint. By contrast, `Error validating schema` indicates that Query Service cannot locate a field in the schema.
 
 ## PostgreSQL API errors {#postgresql-api-errors}
 
