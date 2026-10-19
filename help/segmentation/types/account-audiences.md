@@ -49,6 +49,10 @@ Before getting started with account audiences, please review the differences bet
 
 ## Access {#access}
 
+>[!NOTE]
+>
+>If you want to enable scheduled segmentation for your account audiences, you **must** open Audience Portal within the **Customer** section. If you enable scheduled segmentation within Audience Portal, this enable scheduled segmentation for **both** people-based audiences and account audiences.
+
 To access account audiences, select **[!UICONTROL Audiences]** in the **[!UICONTROL Accounts]** section.
 
 ![The Audiences button is highlighted within the Accounts section.](../images/types/account/select.png)
