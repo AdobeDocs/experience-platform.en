@@ -29,7 +29,7 @@ Use the [!DNL OneTrust Integration] source to connect your account and ingest co
 
 >[!IMPORTANT]
 >
->With the [!DNL OneTrust Integration] source, each run only ingests new data that was created after the previous run, even if the previous run did not complete successfully.
+>For [!DNL OneTrust Integration], each scheduled run ingests data after the previous run, even if that run failed. The next scheduled run does not automatically recover data for the failed run's time window.
 
 ## Connect [!DNL OneTrust Integration] to Experience Platform using APIs
 
