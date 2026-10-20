@@ -89,6 +89,10 @@ For more information, read the [XDM overview](/help/xdm/home.md).
 
 ## Process Manager {#process-manager}
 
+>[!AVAILABILITY]
+>
+>Process Manager is in beta. The feature and documentation are subject to change.
+
 Use Process Manager to define and coordinate data workflows across Experience Platform services. With Process Manager, you can create workflows that connect data ingestion, Data Distiller queries, segmentation, profile exports, and destination activation, as well as schedule workflows and monitor execution across the connected tasks.
 
 ## Query Service {#query-service}
