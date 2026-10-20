@@ -90,6 +90,10 @@ For more information, read the [XDM overview](/help/xdm/home.md).
 
 Use Process Manager to define and coordinate data workflows across Experience Platform services.
 
+>[!AVAILABILITY]
+>
+>Process Manager is available in beta to select customers.
+
 **New or updated features**
 
 | Feature | Description |
