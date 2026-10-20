@@ -30,6 +30,7 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Destinations](#destinations)
 - [Experience Data Model](#xdm)
 - [Process Manager](#process-manager)
+- [Real-Time Customer Profile](#profile)
 - [Query Service](#query-service)
 - [Sources](#sources)
 
@@ -88,19 +89,7 @@ For more information, read the [XDM overview](/help/xdm/home.md).
 
 ## Process Manager {#process-manager}
 
-Use Process Manager to define and coordinate data workflows across Experience Platform services.
-
->[!AVAILABILITY]
->
->Process Manager is available in beta to select customers.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| End-to-end data workflows | Create workflows that connect data ingestion, Data Distiller queries, segmentation, profile exports, and destination activation. Schedule workflows and monitor execution across the connected tasks. |
-
-{style="table-layout:auto"}
+Use Process Manager to define and coordinate data workflows across Experience Platform services. With Process Manager, you can create workflows that connect data ingestion, Data Distiller queries, segmentation, profile exports, and destination activation, as well as schedule workflows and monitor execution across the connected tasks.
 
 ## Query Service {#query-service}
 
@@ -115,6 +104,18 @@ Use Query Service to explore and validate Experience Platform data with SQL.
 {style="table-layout:auto"}
 
 For more information, read the [Query Service overview](/help/query-service/home.md).
+
+## Real-Time Customer Profile {#profile}
+
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third-party data.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Real-Time Customer Profile support for unstructured data | Real-Time Customer Profile now supports unstructured data. With unstructured data support, you can use conversational and other unstructured customer data as part of the profile building blocks, which lets you understand customer intent, personalize conversations, and activate intent in real-time. |
+
+{style="table-layout:auto"}
 
 ## Sources {#sources}
 
