@@ -67,7 +67,7 @@ Use destinations to activate audiences and export data from Experience Platform 
 | Feature | Description |
 | --- | --- |
 | [Manual deletion from Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) | Delete exported data manually from your [!DNL Data Landing Zone] destination in [!DNL Azure]. You no longer need to wait for automatic deletion after seven days. Files that you do not delete manually still expire after seven days. |
-| [Updated file name editor](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) | Reorder file name components with drag-and-drop or keyboard controls when configuring file-based destination exports. The generated file name follows the component order you choose. |
+| [When to activate](/help/destinations/ui/when-to-activate.md) general availability | **[!UICONTROL When to activate]** is now generally available. Control which profile changes trigger exports to streaming API-based and streaming profile export destinations. Enable or disable attribute changes, segmentation changes, and identity changes for each dataflow. All three triggers are enabled by default. |
 
 {style="table-layout:auto"}
 
