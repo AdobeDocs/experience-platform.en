@@ -5,7 +5,7 @@ exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 ---
 # Adobe Experience Platform pre-release notes
 
-Preview the features and updates planned for October 2026 in [!DNL Adobe Experience Platform].
+Preview the features and updates planned for October 2026 in Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
@@ -30,8 +30,8 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Destinations](#destinations)
 - [Experience Data Model](#xdm)
 - [Process Manager](#process-manager)
-- [Real-Time Customer Profile](#profile)
 - [Query Service](#query-service)
+- [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
 
 ## CX Enterprise Coworker {#cx-enterprise-coworker}
@@ -42,9 +42,9 @@ Use [!DNL Adobe CX Enterprise Coworker] to work with Experience Platform data th
 
 | Feature | Description |
 | --- | --- |
-| SQL data preparation skills | Run read-only SQL queries or create audiences through Coworker. Audience creation requires a Data Distiller entitlement and consumes compute hours after your confirmation. |
-| AI-assisted data ingestion entry point | Start a conversational data ingestion and schema creation workflow from the schema creation dialog. Coworker opens with a prompt based on your schema creation task. Access depends on your Coworker and skill availability. |
-| Coworker in AI platforms | Access Coworker from [!DNL Microsoft 365 Copilot] and [!DNL ChatGPT] to ask questions and retrieve insights. |
+| SQL data preparation skills | Run read-only SQL queries or create audiences through [!DNL Coworker]. Audience creation requires a [!DNL Data Distiller] entitlement and consumes compute hours after your confirmation. |
+| AI-assisted data ingestion entry point | Start a conversational data ingestion and schema creation workflow from the schema creation dialog. [!DNL Coworker] opens with a prompt based on your schema creation task. Access depends on the availability of [!DNL Coworker] and its data ingestion skills. |
+| [!DNL Coworker] in AI platforms | Access [!DNL Coworker] from [!DNL Microsoft 365 Copilot] and [!DNL ChatGPT] to ask questions and retrieve insights. |
 
 {style="table-layout:auto"}
 
@@ -81,7 +81,7 @@ Use Experience Data Model (XDM) schemas to define data structures and relationsh
 
 | Feature | Description |
 | --- | --- |
-| [Expanded relational schema relationships](/help/xdm/schema/relational.md) | Create relationships from relational schemas to supported non-primary-identity fields in standard schemas, in addition to primary identities. Relational schemas no longer require segmentation enablement to create these relationships. Standard schemas must remain enabled for Real-Time Customer Profile. Direct relationships remain one-to-one or many-to-one, with the standard schema on the one side. |
+| [Expanded relational schema relationships](/help/xdm/schema/relational.md) | Create relationships from relational schemas to primary identity fields in standard schemas. Also target other supported fields in standard schemas. Relational schemas no longer require segmentation enablement to create these relationships. Standard schemas must remain enabled for [!DNL Real-Time Customer Profile]. Each direct relationship links one or more relational records to one record in a standard schema. |
 
 {style="table-layout:auto"}
 
@@ -89,15 +89,17 @@ For more information, read the [XDM overview](/help/xdm/home.md).
 
 ## Process Manager {#process-manager}
 
+Use [!DNL Process Manager] to define and coordinate data workflows across Experience Platform services.
+
 >[!AVAILABILITY]
 >
->Process Manager is in beta. The feature and documentation are subject to change.
+>[!DNL Process Manager] is in beta. The feature and documentation are subject to change.
 
-Use Process Manager to define and coordinate data workflows across Experience Platform services. With Process Manager, you can create workflows that connect data ingestion, Data Distiller queries, segmentation, profile exports, and destination activation, as well as schedule workflows and monitor execution across the connected tasks.
+Create workflows that connect data ingestion, [!DNL Data Distiller] queries, segmentation, profile exports, and destination activation. Schedule workflows and monitor execution across the connected tasks.
 
 ## Query Service {#query-service}
 
-Use Query Service to explore and validate Experience Platform data with SQL.
+Use [!DNL Query Service] to explore and validate Experience Platform data with SQL.
 
 **Fixes and improvements**
 
@@ -111,13 +113,13 @@ For more information, read the [Query Service overview](/help/query-service/home
 
 ## Real-Time Customer Profile {#profile}
 
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third-party data.
+Use [!DNL Real-Time Customer Profile] to combine customer data from online channels, offline channels, customer relationship management systems, and third parties. Build a unified view of each customer to deliver consistent, relevant experiences across channels.
 
 **New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| Real-Time Customer Profile support for unstructured data | Real-Time Customer Profile now supports unstructured data. With unstructured data support, you can use conversational and other unstructured customer data as part of the profile building blocks, which lets you understand customer intent, personalize conversations, and activate intent in real-time. |
+| [!DNL Real-Time Customer Profile] support for unstructured data | Use conversational and other unstructured customer data in [!DNL Real-Time Customer Profile]. Understand customer intent, personalize conversations, and activate intent in real time. |
 
 {style="table-layout:auto"}
 
