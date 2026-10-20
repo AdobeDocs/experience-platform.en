@@ -55,7 +55,7 @@ This destination is available in the following [!DNL Adobe CX Enterprise] applic
 
 [!DNL Data Landing Zone] is a cloud storage interface provisioned by [!DNL Adobe Experience Platform]. Use it to export files out of Experience Platform to a secure, cloud-based file storage location. Experience Platform and its applications, such as [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], and [!DNL Real-Time Customer Data Platform], provision one [!DNL Data Landing Zone] container per sandbox. The total data volume across all containers is limited to the total data provided with your Experience Platform Products and Services license.
 
-Experience Platform automatically deletes every file in a [!DNL Data Landing Zone] container seven days after the file is added. If your [!DNL Data Landing Zone] is provisioned in Azure, you can also [delete exported files manually](#delete-exported-files) before the seven days pass.
+Experience Platform automatically deletes all files in a [!DNL Data Landing Zone] container after seven days. If your [!DNL Data Landing Zone] is provisioned in Azure, you can also [delete exported files manually](#delete-exported-files) before the seven days pass.
 
 The [!DNL Data Landing Zone] destination connector is available for Experience Platform running on Azure or Amazon Web Services (AWS). The authentication mechanism depends on the cloud in which the destination is provisioned. Everything else about the destination and its use cases is the same. Read more about the two authentication mechanisms in the sections [Authenticate to the Data Landing Zone provisioned in Azure Blob](#authenticate-dlz-azure) and [Authenticate to the AWS-provisioned Data Landing Zone](#authenticate-dlz-aws).
 
@@ -129,7 +129,7 @@ When exporting *datasets*, Experience Platform creates a `.parquet` or `.json` f
 >
 >This section applies to implementations of Experience Platform running on Microsoft Azure. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-You can read, list, and delete files in your container through [!DNL Azure Storage Explorer] or your command-line interface.
+You can read and write files to your container through [!DNL Azure Storage Explorer] or your command-line interface.
 
 [!DNL Data Landing Zone] supports SAS-based authentication. Standard [!DNL Azure Blob] storage security mechanisms protect its data at rest and in transit. SAS stands for [shared access signature](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
 
@@ -399,9 +399,4 @@ To verify that the export succeeded, check your [!DNL Data Landing Zone] storage
 
 ## Delete exported files {#delete-exported-files}
 
-Experience Platform automatically deletes exported files from your [!DNL Data Landing Zone] container seven days after they are added. To remove files sooner, delete them manually from your container. Manual deletion is available for [!DNL Data Landing Zone] containers provisioned in Azure.
-
-The SAS credentials that you [retrieve for your Data Landing Zone](#retrieve-dlz-credentials) include delete permission. Use the same tools that you use to read your files to delete them:
-
-* **[!DNL Azure Storage Explorer]**: [Connect your container to Azure Storage Explorer](#connect-container-to-storage-explorer), and then delete the files or folders that you no longer need. For instructions, see the [Microsoft documentation on managing blob resources in Azure Storage Explorer](https://learn.microsoft.com/en-us/azure/storage/storage-explorer/vs-azure-tools-storage-explorer-blobs).
-* **Command-line interface**: Use your `SASUri` with a command-line tool such as [!DNL AzCopy] to delete files from your container. For more information, see the [Microsoft documentation on AzCopy](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10).
+Experience Platform automatically deletes exported files from your [!DNL Data Landing Zone] container after seven days. If your [!DNL Data Landing Zone] is provisioned in Azure, you can also delete files manually from your container before the seven days pass.
