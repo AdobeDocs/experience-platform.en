@@ -41,10 +41,9 @@ Use [!DNL Adobe CX Enterprise Coworker] to work with Experience Platform data th
 
 | Feature | Description |
 | --- | --- |
-| Anomaly detection skills (limited release) | Identify spikes and drops in supported ingestion, segmentation, and destination activation metrics through Coworker. Review deviations from baseline trends without changing your data. |
 | SQL data preparation skills | Run read-only SQL queries or create audiences through Coworker. Audience creation requires a Data Distiller entitlement and consumes compute hours after your confirmation. |
 | AI-assisted data ingestion entry point | Start a conversational data ingestion and schema creation workflow from the schema creation dialog. Coworker opens with a prompt based on your schema creation task. Access depends on your Coworker and skill availability. |
-| Coworker in AI platforms | Access Coworker from [!DNL Microsoft 365 Copilot], [!DNL ChatGPT], and [!DNL Claude] to ask questions and retrieve insights. |
+| Coworker in AI platforms | Access Coworker from [!DNL Microsoft 365 Copilot] and [!DNL ChatGPT] to ask questions and retrieve insights. |
 
 {style="table-layout:auto"}
 
