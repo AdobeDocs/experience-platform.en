@@ -1,7 +1,7 @@
 ---
-title: Data Landing Zone destination
-description: Learn how to connect to Data Landing Zone to activate audiences and export datasets.
-last-substantial-update: 2023-07-26T00:00:00.000Z
+title: Data Landing Zone Destination
+description: Learn how to connect to the Data Landing Zone destination to activate audiences, export datasets, and delete exported files from your Azure container.
+last-substantial-update: 2026-10-20T00:00:00.000Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 TQID: https://experienceleague.adobe.com/e64tDoP8iBdZgF-79Gp-tbF8VM0PlPx7daxey0JWMaI
 product_v2:
@@ -38,27 +38,26 @@ topic_v2:
 
 Export data files from [!DNL Adobe CX Enterprise] applications to your [!DNL Data Landing Zone] cloud storage location.
 
-If you arrived to this page from [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), see [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
+If you came to this page from [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), see [Activate audiences from Real-Time CDP Collaboration](#activate-collaboration) for the details specific to that application.
 
 ## Supported [!DNL Adobe CX Enterprise] applications {#supported-applications}
 
 This destination is available in the following [!DNL Adobe CX Enterprise] applications:
 
-* [[!DNL Real-Time CDP]](../../../rtcdp/home.md)
-* [[!DNL Real-Time CDP Collaboration]](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)
+* [Real-Time CDP](../../../rtcdp/home.md)
+* [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)
 
 >[!IMPORTANT]
 >
->This documentation page refers to the [!DNL Data Landing Zone] *destination*. There is also a [!DNL Data Landing Zone] *source* in the sources catalog. For more information, read the [[!DNL Data Landing Zone] source](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentation.
+>This documentation page refers to the [!DNL Data Landing Zone] *destination*. There is also a [!DNL Data Landing Zone] *source* in the sources catalog. For more information, read the [Data Landing Zone source](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentation.
 
+## How [!DNL Data Landing Zone] works {#overview}
 
-## Overview {#overview}
+[!DNL Data Landing Zone] is a cloud storage interface provisioned by [!DNL Adobe Experience Platform]. Use it to export files out of Experience Platform to a secure, cloud-based file storage location. Experience Platform and its applications, such as [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], and [!DNL Real-Time Customer Data Platform], provision one [!DNL Data Landing Zone] container per sandbox. The total data volume across all containers is limited to the total data provided with your Experience Platform Products and Services license.
 
-[!DNL Data Landing Zone] is a cloud storage interface provisioned by [!DNL Adobe Experience Platform], granting you access to a secure, cloud-based file storage facility to export files out of Experience Platform. You have access to one [!DNL Data Landing Zone] container per sandbox, and the total data volume across all containers is limited to the total data provided with your Experience Platform Products and Services license. All customers of Experience Platform and its applications such as [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], and [!DNL Real-Time Customer Data Platform] are provisioned with one [!DNL Data Landing Zone] container per sandbox. 
+Experience Platform automatically deletes every file in a [!DNL Data Landing Zone] container seven days after the file is added. If your [!DNL Data Landing Zone] is provisioned in Azure, you can also [delete exported files manually](#delete-exported-files) before the seven days pass.
 
-Experience Platform enforces a strict seven-day time-to-live (TTL) on all files uploaded to a [!DNL Data Landing Zone] container. All files are deleted after seven days.
-
-The [!DNL Data Landing Zone] destination connector is available to customers using the Azure or Amazon Web Service cloud support. The authentication mechanism is different based on the cloud in which the destination is provisioned, everything else about the destination and its use cases are the same. Read more about the two different authentication mechanisms in the sections [Authenticate to the Data Landing Zone provisioned in Azure Blob](#authenticate-dlz-azure) and [Authenticate to the AWS-provisioned Data Landing Zone](#authenticate-dlz-aws).
+The [!DNL Data Landing Zone] destination connector is available for Experience Platform running on Azure or Amazon Web Services (AWS). The authentication mechanism depends on the cloud in which the destination is provisioned. Everything else about the destination and its use cases is the same. Read more about the two authentication mechanisms in the sections [Authenticate to the Data Landing Zone provisioned in Azure Blob](#authenticate-dlz-azure) and [Authenticate to the AWS-provisioned Data Landing Zone](#authenticate-dlz-aws).
 
 ![Diagram showing how the implementation of the Data Landing Zone destination is different based on the cloud support.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png "Data Landing Zone destination implementation by cloud support"){zoomable="yes"}
 
@@ -130,17 +129,17 @@ When exporting *datasets*, Experience Platform creates a `.parquet` or `.json` f
 >
 >This section applies to implementations of Experience Platform running on Microsoft Azure. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-You can read and write files to your container through [!DNL Azure Storage Explorer] or your command-line interface.
+You can read, list, and delete files in your container through [!DNL Azure Storage Explorer] or your command-line interface.
 
-[!DNL Data Landing Zone] supports SAS-based authentication and its data is protected with standard [!DNL Azure Blob] storage security mechanisms at rest and in transit. SAS stands for [shared access signature](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
+[!DNL Data Landing Zone] supports SAS-based authentication. Standard [!DNL Azure Blob] storage security mechanisms protect its data at rest and in transit. SAS stands for [shared access signature](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
 
-To protect your data over a public internet connection, use SAS-based authentication to securely access your [!DNL Data Landing Zone] container. There are no network changes required for you to access your [!DNL Data Landing Zone] container, which means you do not need to configure any allowlists or cross-region setups for your network. 
+To protect your data over a public internet connection, use SAS-based authentication to securely access your [!DNL Data Landing Zone] container. You do not need to make any network changes to access your [!DNL Data Landing Zone] container. This means you do not need to configure any allowlists or cross-region setups for your network.
 
 ### Connect your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer] {#connect-container-to-storage-explorer}
 
-You can use [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) to manage the contents of your [!DNL Data Landing Zone] container. To start using [!DNL Data Landing Zone], you must first retrieve your credentials, input them in [!DNL Azure Storage Explorer], and connect your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer].
+Use [Azure Storage Explorer](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) to manage the contents of your [!DNL Data Landing Zone] container. To start using [!DNL Data Landing Zone], first retrieve your credentials. Then, enter them in [!DNL Azure Storage Explorer] to connect your [!DNL Data Landing Zone] container.
 
-In the [!DNL Azure Storage Explorer] UI, select the connection icon in the left navigation bar. The **Select Resource** window appears, providing you with options to connect to. Select **[!DNL Blob container]** to connect to your [!DNL Data Landing Zone] storage.
+In [!DNL Azure Storage Explorer], open the connect dialog. The **Select Resource** window appears, listing the resources you can connect to. Select **[!DNL Blob container]** to connect to your [!DNL Data Landing Zone] storage.
 
 ![Select resource highlighted in the Azure UI.](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
@@ -148,13 +147,13 @@ Next, select **Shared access signature URL (SAS)** as your connection method, an
 
 ![Select connection method highlighted in the Azure UI.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
-After selecting your connection method, you must provide a **display name** and the **[!DNL Blob] container SAS URL** that corresponds with your [!DNL Data Landing Zone] container.
+After you select your connection method, provide a **display name** and the **[!DNL Blob] container SAS URL** that corresponds with your [!DNL Data Landing Zone] container.
 
 >[!BEGINSHADEBOX]
 
 ### Retrieve the credentials for your [!DNL Data Landing Zone] {#retrieve-dlz-credentials}
 
-You must use the Experience Platform APIs to retrieve your [!DNL Data Landing Zone] credentials. The API call to retrieve your credentials is described below. For information about getting the required values for your headers, refer the [Getting started with Adobe Experience Platform APIs](/help/landing/api-guide.md) guide.
+Use the Experience Platform APIs to retrieve your [!DNL Data Landing Zone] credentials, as described in this section. For information about getting the required values for your headers, see the [Getting started with Adobe Experience Platform APIs](/help/landing/api-guide.md) guide.
 
 **API format**
 
@@ -199,13 +198,13 @@ The following response returns the credential information for your landing zone,
 | --- | --- |
 | `containerName` | The name of your landing zone. |
 | `SASToken` | The shared access signature token for your landing zone. This string contains all the information necessary to authorize a request. |
-| `SASUri` | The shared access signature URI for your landing zone. This string is a combination of the URI to the landing zone for which you are being authenticated to and its corresponding SAS token, |
+| `SASUri` | The shared access signature URI for your landing zone. This string combines the URI of the landing zone you are authenticating to with its corresponding SAS token. |
 
 {style="table-layout:auto"}
 
 ### Update [!DNL Data Landing Zone] credentials {#update-dlz-credentials}
 
-You can also refresh your credentials when desired. You can update your `SASToken` by making a POST request to the `/credentials` endpoint of the [!DNL Connectors] API.
+You can refresh your credentials at any time. To update your `SASToken`, make a POST request to the `/credentials` endpoint of the [!DNL Connectors] API.
 
 **API format**
 
@@ -261,7 +260,7 @@ A successful connection updates your [!DNL Azure Storage Explorer] UI with your 
 
 ![Summary of the DLZ user container highlighted in the Azure UI.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
-With your [!DNL Data Landing Zone] container connected to [!DNL Azure Storage Explorer], you can now start exporting files from Experience Platform to your [!DNL Data Landing Zone] container. To export files, you must establish a connection to the [!DNL Data Landing Zone] destination in the Experience Platform UI, as described in the section below. 
+With your [!DNL Data Landing Zone] container connected to [!DNL Azure Storage Explorer], you can start exporting files from Experience Platform to your [!DNL Data Landing Zone] container. To export files, connect to the [!DNL Data Landing Zone] destination in the Experience Platform UI, as described in [Connect to the destination](#connect).
 
 ## Authenticate to the AWS-provisioned Data Landing Zone {#authenticate-dlz-aws}
 
@@ -269,18 +268,18 @@ With your [!DNL Data Landing Zone] container connected to [!DNL Azure Storage Ex
 >
 >This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-Perform the operations below to get credentials to your [!DNL Data Landing Zone] instance provisioned on AWS. Then, use a client of choice to connect to your [!DNL Data Landing Zone] instance. 
+Follow the steps in this section to get credentials for your [!DNL Data Landing Zone] instance provisioned on AWS. Then, use a client of your choice to connect to your [!DNL Data Landing Zone] instance.
 
 >[!BEGINSHADEBOX]
 
 ### Retrieve the credentials for your [!DNL Data Landing Zone] {#retrieve-dlz-credentials-aws}
 
-You must use the Experience Platform APIs to retrieve your [!DNL Data Landing Zone] credentials. The API call to retrieve your credentials is described below. For information about getting the required values for your headers, refer the [Getting started with Adobe Experience Platform APIs](/help/landing/api-guide.md) guide.
+Use the Experience Platform APIs to retrieve your [!DNL Data Landing Zone] credentials, as described in this section. For information about getting the required values for your headers, see the [Getting started with Adobe Experience Platform APIs](/help/landing/api-guide.md) guide.
 
 **API format**
 
 ```http
-GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination'
+GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 ```
 
 | Query parameters | Description |
@@ -327,7 +326,7 @@ The following response returns the credential information for your landing zone,
 | `credentials` | This object includes the `awsAccessKeyId`, `awsSecretAccessKey`, and `awsSessionToken` that Experience Platform uses to export files to your provisioned Data Landing Zone location. |
 | `dlzPath` | This object includes the path in the Adobe-provisioned AWS location where exported files are deposited. |
 | `dlzProvider` | Indicates that this is an Amazon S3-provisioned Data Landing Zone. |
-| `expiryTime` | Indicates when the credentials in the `credentials` object will expire. To refresh the credetials, perform the request again. |
+| `expiryTime` | Indicates when the credentials in the `credentials` object expire. To refresh the credentials, perform the request again. |
 
 {style="table-layout:auto"}
 
@@ -343,7 +342,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authenticate to destination {#authenticate}
 
-Make sure that you have connected your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer] as described in the [prerequisites](#prerequisites) section. Because [!DNL Data Landing Zone] is an Adobe-provisioned storage, you do not need to perform any further steps in the Experience Platform UI to authenticate to the destination.
+If your [!DNL Data Landing Zone] is provisioned in Azure, make sure that you have connected your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer], as described in [Connect your Data Landing Zone container to Azure Storage Explorer](#connect-container-to-storage-explorer). Because [!DNL Data Landing Zone] is an Adobe-provisioned storage, you do not need to perform any further steps in the Experience Platform UI to authenticate to the destination.
 
 ### Fill in destination details {#destination-details}
 
@@ -351,12 +350,12 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
     ![Image showing an example of a correctly formatted PGP key in the UI.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
-*  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
-*  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
+* **[!UICONTROL Name]**: Fill in the preferred name for this destination.
+* **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
 * **[!UICONTROL Folder path]**: Enter the path to the destination folder that will host the exported files.
 * **[!UICONTROL File type]**: Select the format Experience Platform should use for the exported files. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Compression format]**: Select the compression type that Experience Platform should use for the exported files.
-* **[!UICONTROL Include manifest file]**: Toggle this option on if you'd like the exports to include a manifest JSON file that contains information about the export location, export size, and more. The manifest is named using the format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. View a [sample manifest file](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). The manifest file includes the following fields:
+* **[!UICONTROL Include manifest file]**: Turn on this option to include a manifest JSON file in the exports. The manifest file contains information about the export location, export size, and more. The manifest is named using the format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. View a [sample manifest file](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). The manifest file includes the following fields:
   * `flowRunId`: The [dataflow run](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) which generated the exported file. 
   * `scheduledTime`: The time in UTC when the file was exported. 
   * `exportResults.sinkPath`: The path in your storage location where the exported file is deposited. 
@@ -396,4 +395,13 @@ For instructions on activating audiences to this destination from a [!DNL Real-T
 
 ## Validate successful data export {#exported-data}
 
-To verify if data has been exported successfully, check your [!DNL Data Landing Zone] storage and make sure that the exported files contain the expected profile populations.
+To verify that the export succeeded, check your [!DNL Data Landing Zone] storage and make sure that the exported files contain the expected profile populations.
+
+## Delete exported files {#delete-exported-files}
+
+Experience Platform automatically deletes exported files from your [!DNL Data Landing Zone] container seven days after they are added. To remove files sooner, delete them manually from your container. Manual deletion is available for [!DNL Data Landing Zone] containers provisioned in Azure.
+
+The SAS credentials that you [retrieve for your Data Landing Zone](#retrieve-dlz-credentials) include delete permission. Use the same tools that you use to read your files to delete them:
+
+* **[!DNL Azure Storage Explorer]**: [Connect your container to Azure Storage Explorer](#connect-container-to-storage-explorer), and then delete the files or folders that you no longer need. For instructions, see the [Microsoft documentation on managing blob resources in Azure Storage Explorer](https://learn.microsoft.com/en-us/azure/storage/storage-explorer/vs-azure-tools-storage-explorer-blobs).
+* **Command-line interface**: Use your `SASUri` with a command-line tool such as [!DNL AzCopy] to delete files from your container. For more information, see the [Microsoft documentation on AzCopy](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10).
