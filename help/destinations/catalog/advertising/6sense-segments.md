@@ -118,6 +118,12 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 ### Fill in destination details {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_6sense_segmentnameprefix"
+>title="Segment Name Prefix"
+>abstract="Optional text that Experience Platform adds before each audience name when it creates the segment in [!DNL 6sense]. Use only letters, numbers, spaces, and the characters `_`, `-`, `#`, and `/`. The prefix does not count toward the 64-character segment name limit."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/6sense-segments.html#segment-creation" text="Learn how segments are named"
+
 To configure details for the destination, fill in the following required and optional fields. An asterisk next to a field in the UI indicates that the field is required.
 
 ![The Configure new destination page in Experience Platform, with a connected 6sense Segments account and the Name, Description, and Segment Name Prefix fields filled in under Destination details.](../../assets/catalog/advertising/6sense-segments/6sense-segments-destination-details.png "Fill in destination details"){zoomable="yes"}
