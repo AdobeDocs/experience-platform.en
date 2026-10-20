@@ -22,9 +22,9 @@ Preview the features and updates planned for October 2026 in [!DNL Adobe Experie
 >- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes){target="_blank"}
 >- [Adobe Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest){target="_blank"}
 
-Release date: October 2026
+**Release date: October 2026**
 
-Explore new features and updates by service:
+New features and updates to existing features in Adobe Experience Platform:
 
 - [CX Enterprise Coworker](#cx-enterprise-coworker)
 - [Destinations](#destinations)
@@ -36,6 +36,8 @@ Explore new features and updates by service:
 ## CX Enterprise Coworker {#cx-enterprise-coworker}
 
 Use [!DNL Adobe CX Enterprise Coworker] to work with Experience Platform data through conversational skills.
+
+**New or updated features**
 
 | Feature | Description |
 | --- | --- |
@@ -52,6 +54,8 @@ For more information, read the [CX Enterprise Coworker documentation](https://ex
 
 Use destinations to activate audiences and export data from Experience Platform to supported advertising, marketing, and storage services.
 
+**New or updated functionality**
+
 | Feature | Description |
 | --- | --- |
 | [Manual deletion from Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) | Delete exported data manually from your [!DNL Data Landing Zone] destination in [!DNL Azure]. You no longer need to wait for automatic deletion after seven days. Files that you do not delete manually still expire after seven days. |
@@ -59,11 +63,9 @@ Use destinations to activate audiences and export data from Experience Platform 
 
 {style="table-layout:auto"}
 
-### New destinations {#new-destinations}
+**New or updated destinations**
 
-Explore the new destination for activating account audiences.
-
-| Destination | Description |
+| Feature | Description |
 | --- | --- |
 | [!DNL 6sense Segments] | Activate account audiences from [!DNL Adobe Real-Time CDP B2B Edition] to [!DNL 6sense] as API-origin segments. Use the segments for ad campaigns, AI email, and account prioritization. You need a [!DNL 6sense] account with Segments API access enabled. |
 
@@ -74,6 +76,8 @@ For more information, read the [destinations overview](/help/destinations/home.m
 ## Experience Data Model {#xdm}
 
 Use Experience Data Model (XDM) schemas to define data structures and relationships in Experience Platform.
+
+**New or updated features**
 
 | Feature | Description |
 | --- | --- |
@@ -87,6 +91,8 @@ For more information, read the [XDM overview](/help/xdm/home.md).
 
 Use Process Manager to define and coordinate data workflows across Experience Platform services.
 
+**New or updated features**
+
 | Feature | Description |
 | --- | --- |
 | End-to-end data workflows | Create workflows that connect data ingestion, Data Distiller queries, segmentation, profile exports, and destination activation. Schedule workflows and monitor execution across the connected tasks. |
@@ -97,7 +103,9 @@ Use Process Manager to define and coordinate data workflows across Experience Pl
 
 Use Query Service to explore and validate Experience Platform data with SQL.
 
-| Update | Description |
+**Fixes and improvements**
+
+| Fix | Description |
 | --- | --- |
 | [XDM row-validation error reference](/help/query-service/troubleshooting-guide.md#xdm-row-validation-errors) | Use the `INGEST-####-400` error reference to identify the XDM constraint behind a failed write. Find guidance to correct the data and retry the query. This documentation update does not introduce new query behavior. |
 
@@ -109,7 +117,9 @@ For more information, read the [Query Service overview](/help/query-service/home
 
 Use source connections to bring data from supported external systems into Experience Platform.
 
-| Update | Description |
+**New or updated sources**
+
+| Source | Description |
 | --- | --- |
 | [Delta Sharing availability](/help/sources/connectors/data-sharing/delta-sharing.md) | The limited beta for the [!DNL Delta Sharing] source concluded on August 1, 2026. General availability is currently planned for 2027. The updated documentation no longer directs you to request beta access. |
 
