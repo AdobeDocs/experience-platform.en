@@ -165,6 +165,8 @@ On first activation, [!DNL 6sense] creates a segment from the audience and adds 
 
 To validate the export, open the **[!UICONTROL Segments]** tool in [!DNL 6sense] and select the **[!UICONTROL Segments]** tab. Locate the segment named after your audience, and then open it. The **[!UICONTROL Accounts]** tab lists the matched accounts.
 
+![The Accounts tab of a segment in the 6sense Segments tool, listing the matched accounts from an Experience Platform audience.](../../assets/catalog/advertising/6sense-segments/6sense-segments-validate-segment.png "Validate the segment in 6sense"){zoomable="yes"}
+
 [!DNL 6sense] processes requests asynchronously and matches accounts in the segment during its nightly refresh. Accounts that Experience Platform sends during the day appear as matched accounts after the next nightly refresh.
 
 [!DNL 6sense] matches accounts by using its own identity graph. Experience Platform does not have visibility into which accounts matched or why an account did not match. Contact [6sense Support](https://support.6sense.com/) about match rates or unmatched accounts.
