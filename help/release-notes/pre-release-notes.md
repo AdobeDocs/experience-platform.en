@@ -54,20 +54,20 @@ For more information, read the [CX Enterprise Coworker documentation](https://ex
 
 Use destinations to activate audiences and export data from Experience Platform to supported advertising, marketing, and storage services.
 
+**New or updated destinations**
+
+| Feature | Description |
+| --- | --- |
+| [!DNL 6sense Segments] | Activate account audiences from [!DNL Adobe Real-Time CDP B2B Edition] to [!DNL 6sense] as API-origin segments. Use the segments for ad campaigns, AI email, and account prioritization. You need a [!DNL 6sense] account with Segments API access enabled. |
+
+{style="table-layout:auto"}
+
 **New or updated functionality**
 
 | Feature | Description |
 | --- | --- |
 | [Manual deletion from Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) | Delete exported data manually from your [!DNL Data Landing Zone] destination in [!DNL Azure]. You no longer need to wait for automatic deletion after seven days. Files that you do not delete manually still expire after seven days. |
 | [Updated file name editor](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) | Reorder file name components with drag-and-drop or keyboard controls when configuring file-based destination exports. The generated file name follows the component order you choose. |
-
-{style="table-layout:auto"}
-
-**New or updated destinations**
-
-| Feature | Description |
-| --- | --- |
-| [!DNL 6sense Segments] | Activate account audiences from [!DNL Adobe Real-Time CDP B2B Edition] to [!DNL 6sense] as API-origin segments. Use the segments for ad campaigns, AI email, and account prioritization. You need a [!DNL 6sense] account with Segments API access enabled. |
 
 {style="table-layout:auto"}
 
