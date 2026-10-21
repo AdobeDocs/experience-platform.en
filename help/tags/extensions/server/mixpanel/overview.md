@@ -19,27 +19,16 @@ product_v2:
 feature_v2:
   - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
     internal-label: Reports
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: ''
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: ''
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
   - id: f73667dc-d296-4875-8975-ac3fdc3adc42
     internal-label: Dashboards
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-    internal-label: ''
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: ''
+    internal-label: Event forwarding
   - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-    internal-label: ''
+    internal-label: Dashboards
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

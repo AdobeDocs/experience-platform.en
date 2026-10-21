@@ -2,15 +2,13 @@
 title: AI Assistant Frequently Asked Questions
 description: Learn about answers to frequently asked questions regarding AI Assistant (Legacy).
 exl-id: 17a07c11-7bc6-4cba-be0a-d75fdb567053
-TQID: https://experienceleague.adobe.com/RSNXJ1NRM1fuAyABU8wXvhc4lKJXaiBaIzpZf58tqI0
+TQID: 'https://experienceleague.adobe.com/RSNXJ1NRM1fuAyABU8wXvhc4lKJXaiBaIzpZf58tqI0'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-    internal-label: AI Assistant
+    internal-label: AI assistant
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

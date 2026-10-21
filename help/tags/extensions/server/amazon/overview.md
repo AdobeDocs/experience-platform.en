@@ -20,21 +20,10 @@ product_v2:
 feature_v2:
   - id: a075b2c1-7748-4328-b7f6-343aa314616a
     internal-label: Campaigns
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: ''
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: ''
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-    internal-label: ''
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

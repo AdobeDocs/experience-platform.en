@@ -17,29 +17,21 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: ''
   - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
     internal-label: Reports
   - id: b3f03848-ae12-48b2-8aab-cad18567eb32
     internal-label: Metrics
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
     internal-label: Implementation
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
   - id: fdbb8fc9-ffa3-4b86-88fe-aa4c5a3e1bc6
     internal-label: Administration
-subfeature_v2:
   - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
-    internal-label: ''
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: ''
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
+    internal-label: Permissions
+subfeature_v2:
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83

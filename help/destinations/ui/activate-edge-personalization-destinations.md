@@ -8,27 +8,11 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: ''
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: ''
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: ''
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: ''
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: ''
   - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
-    internal-label: ''
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: ''
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: ''
+    internal-label: Datastreams
+subfeature_v2:
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
 role_v2:

@@ -3,20 +3,10 @@ title: Connect [!DNL Google BigQuery] To Experience Platform Using The UI
 description: Learn how to create a Google Big Query source connection using the Adobe Experience Platform UI.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-TQID: https://experienceleague.adobe.com/7dFl507nX-YsGaEXuNfHkRyJRK86YnXsV5mV7DhwgXA
+TQID: 'https://experienceleague.adobe.com/7dFl507nX-YsGaEXuNfHkRyJRK86YnXsV5mV7DhwgXA'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
-  - id: e0c8953a-a203-4291-bef3-3560160d3041
-    internal-label: Get started
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

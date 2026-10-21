@@ -4,30 +4,24 @@ title: How to Gain & Grant Access Permissions for Experience Platform Dashboards
 type: Documentation
 description: Grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console.
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-TQID: https://experienceleague.adobe.com/ZuPk5map-epe3a7-yCh6BmkrsxRWUIfy6t6MzKuQ2gM
+TQID: 'https://experienceleague.adobe.com/ZuPk5map-epe3a7-yCh6BmkrsxRWUIfy6t6MzKuQ2gM'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
   - id: eec185bd-7d60-4193-ba3f-da427569936a
-    internal-label: Destinations dashboard
-subfeature_v2:
-  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-    internal-label: Access control
-  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
-    internal-label: Adobe Admin Console
+    internal-label: Destinations
   - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
     internal-label: Permissions
-  - id: d175cb4c-5781-454e-a826-bf6dff786265
-    internal-label: Roles
   - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
     internal-label: Sandboxes
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+    internal-label: Roles
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

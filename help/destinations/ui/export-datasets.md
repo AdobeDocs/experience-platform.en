@@ -8,19 +8,10 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: ''
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: ''
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-    internal-label: ''
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: ''
   - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
-    internal-label: ''
+    internal-label: License usage
   - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-    internal-label: ''
+    internal-label: Dashboards
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

@@ -24,8 +24,6 @@ feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
 subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83

@@ -17,15 +17,13 @@ product_v2:
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: ''
   - id: fc7979f3-56c3-43ca-9784-f1ea3dc69c4b
     internal-label: Integrations
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
 subfeature_v2:
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: ''
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

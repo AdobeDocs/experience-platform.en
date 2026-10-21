@@ -3,14 +3,11 @@ keywords: Experience Platform;home;popular topics;Teradata Vantage
 title: Create a Teradata Vantage  Source Connection in the UI
 description: Learn how to create a Teradata Vantage source connection using the Adobe Experience Platform UI.
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
-TQID: https://experienceleague.adobe.com/lIbO3c63KHxBMXABqBDMQpuuX1KZ7JC6RXhFw0MXynk
+TQID: 'https://experienceleague.adobe.com/lIbO3c63KHxBMXABqBDMQpuuX1KZ7JC6RXhFw0MXynk'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
-subfeature_v2:
   - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
     internal-label: Sandboxes
 role_v2:

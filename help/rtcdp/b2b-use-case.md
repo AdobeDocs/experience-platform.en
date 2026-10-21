@@ -16,12 +16,6 @@ feature_v2:
     internal-label: Use cases
   - id: ebefeaba-efa6-45e2-ae01-f6171cdb8d1e
     internal-label: Tier
-  - id: 3a169e2a-3892-5965-bb98-8d80a2bbb0f1
-    internal-label: ''
-  - id: 9f812dab-edb7-5eb6-a447-602521583af5
-    internal-label: ''
-  - id: 33ca0c14-7e3b-55a1-8fd7-8a61b47da4e1
-    internal-label: ''
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin

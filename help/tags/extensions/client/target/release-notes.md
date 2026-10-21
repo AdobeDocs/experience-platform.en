@@ -19,23 +19,21 @@ product_v2:
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
     internal-label: Implementation
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
   - id: eb9732ab-8232-4b21-bc4c-89de86dbe4d7
     internal-label: Integrations
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: ''
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
     internal-label: Integrations
   - id: fc7979f3-56c3-43ca-9784-f1ea3dc69c4b
     internal-label: Integrations
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
 subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
     internal-label: at.js
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

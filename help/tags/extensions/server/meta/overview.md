@@ -31,37 +31,21 @@ feature_v2:
     internal-label: Use cases
   - id: bef6f891-2e8a-425e-8f99-7ddf22070daa
     internal-label: APIs
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: ''
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
     internal-label: Implementation
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
+  - id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4
+    internal-label: Assurance
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: Datastreams
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+    internal-label: Event forwarding
 subfeature_v2:
   - id: a94ced60-8199-4549-b453-ede2acb4101e
     internal-label: Hybrid implementation
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: ''
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: ''
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: ''
-  - id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4
-    internal-label: ''
-  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
-    internal-label: ''
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-    internal-label: ''
-  - id: e0c8953a-a203-4291-bef3-3560160d3041
-    internal-label: ''
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: ''
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83

@@ -24,8 +24,6 @@ feature_v2:
 subfeature_v2:
   - id: c069c44e-5426-4c1a-accc-8028662f2fde
     internal-label: Functions
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
   - id: df312454-73c4-43f6-a90e-18f5043f074c
     internal-label: Tags
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a

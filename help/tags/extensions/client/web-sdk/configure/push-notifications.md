@@ -2,7 +2,7 @@
 title: Push notification settings
 description: Configure push notification settings for the Web SDK tag extension.
 exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
-TQID: https://experienceleague.adobe.com/VgGzBccAStme5jPkQ-szKaebhisbDHrn6ds850CLQMk
+TQID: 'https://experienceleague.adobe.com/VgGzBccAStme5jPkQ-szKaebhisbDHrn6ds850CLQMk'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -14,12 +14,9 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

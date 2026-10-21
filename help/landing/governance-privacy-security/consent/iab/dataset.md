@@ -11,8 +11,6 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: ''
   - id: de9975b2-c43a-4287-9698-4f4cad92b83f
     internal-label: Schemas
   - id: 9c3a4e5f-6d7b-4c8a-8e9f-1b2c3d4e5f6a

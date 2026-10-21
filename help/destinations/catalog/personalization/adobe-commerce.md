@@ -7,17 +7,10 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: ''
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: ''
   - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
-    internal-label: ''
+    internal-label: Datastreams
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

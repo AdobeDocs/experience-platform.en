@@ -3,13 +3,10 @@ title: Create a Pendo Source Connection in the UI
 description: Learn how to create a Pendo source connection using the Adobe Experience Platform UI.
 badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-TQID: https://experienceleague.adobe.com/gFL7p-MHd8GMYuCpucyLKTR8Osi0osI5nfBiQ3EboCI
+TQID: 'https://experienceleague.adobe.com/gFL7p-MHd8GMYuCpucyLKTR8Osi0osI5nfBiQ3EboCI'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

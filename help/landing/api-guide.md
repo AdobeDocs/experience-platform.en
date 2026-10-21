@@ -11,31 +11,15 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: ''
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
   - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
     internal-label: Permissions
-subfeature_v2:
-  - id: a230274e-7e6e-49eb-b817-514495a710ac
-    internal-label: ''
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-    internal-label: ''
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: ''
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: ''
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: ''
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: ''
-  - id: d1a87129-ba05-4f15-98b1-233618f1774a
-    internal-label: ''
+    internal-label: Sources
   - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-    internal-label: ''
+    internal-label: Schemas
+subfeature_v2:
   - id: 01a3139f-2204-4e1b-bd65-5437f7d5a5bd
     internal-label: API credentials
 role_v2:

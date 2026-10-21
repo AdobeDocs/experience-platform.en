@@ -17,23 +17,15 @@ product_v2:
 feature_v2:
   - id: a075b2c1-7748-4328-b7f6-343aa314616a
     internal-label: Campaigns
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
   - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
     internal-label: Implementations
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
-subfeature_v2:
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: ''
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: ''
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-    internal-label: ''
+    internal-label: Event forwarding
+subfeature_v2:
   - id: df312454-73c4-43f6-a90e-18f5043f074c
     internal-label: Tags
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb

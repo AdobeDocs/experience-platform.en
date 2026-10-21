@@ -21,11 +21,9 @@ feature_v2:
     internal-label: APIs
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
-subfeature_v2:
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-    internal-label: ''
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
+    internal-label: Sources
+subfeature_v2:
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
 role_v2:

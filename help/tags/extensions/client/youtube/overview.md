@@ -19,8 +19,6 @@ feature_v2:
     internal-label: Reports
   - id: c153fd90-23e1-4614-81d3-3cc7571227f7
     internal-label: Analysis Workspace
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
   - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
@@ -30,8 +28,6 @@ feature_v2:
 subfeature_v2:
   - id: b0a1f9d5-5795-42a3-a6d0-bd0e2748fd06
     internal-label: Components
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
   - id: df312454-73c4-43f6-a90e-18f5043f074c
     internal-label: Tags
   - id: e7d92df1-c5ba-4e93-85df-f83171b889be

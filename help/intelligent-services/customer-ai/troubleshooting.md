@@ -13,8 +13,6 @@ product_v2:
   - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
     internal-label: Real-Time Customer Data Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: ''
   - id: f5a6b7c8-5003-4003-9003-500000000003
     internal-label: Services
 subfeature_v2:

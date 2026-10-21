@@ -23,15 +23,9 @@ feature_v2:
     internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
-subfeature_v2:
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-    internal-label: ''
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: ''
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: ''
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
+    internal-label: Sources
+subfeature_v2:
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83

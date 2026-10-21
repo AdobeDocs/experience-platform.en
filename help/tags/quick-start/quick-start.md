@@ -27,39 +27,33 @@ feature_v2:
     internal-label: Integrations
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
     internal-label: Implementation
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
   - id: eb9732ab-8232-4b21-bc4c-89de86dbe4d7
     internal-label: Integrations
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: ''
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
     internal-label: Integrations
   - id: fc7979f3-56c3-43ca-9784-f1ea3dc69c4b
     internal-label: Integrations
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
-subfeature_v2:
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-    internal-label: ''
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: ''
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: ''
+    internal-label: Sources
   - id: d2a6cbf4-df32-480f-909e-b42f66dcb9f0
-    internal-label: ''
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
+    internal-label: Places
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-    internal-label: ''
+    internal-label: Event forwarding
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
     internal-label: Data collection tags hosts
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
     internal-label: Data collection tags data elements
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

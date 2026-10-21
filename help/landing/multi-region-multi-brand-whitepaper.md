@@ -2,46 +2,26 @@
 title: Adobe Experience Platform for multi-region, multi-brand enterprises
 description: Learn how to empower your implementation teams with the tools and insights needed to navigate the intricacies of Adobe Experience Platform effectively.
 exl-id: e714cbd8-8915-4f77-b1ba-a7fcf50de8d6
-TQID: https://experienceleague.adobe.com/L6N1-7bjAAPJ7shDueGe9CMXKR83S3lT-NeZWU7-JCs
+TQID: 'https://experienceleague.adobe.com/L6N1-7bjAAPJ7shDueGe9CMXKR83S3lT-NeZWU7-JCs'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
-subfeature_v2:
-  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-    internal-label: Access control
   - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
     internal-label: Permissions
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: d175cb4c-5781-454e-a826-bf6dff786265
-    internal-label: Roles
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
   - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
     internal-label: Sandboxes
-  - id: db909e74-607e-4493-905b-93836ba51e32
-    internal-label: Customer acquisition
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: Guardrails
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+  - id: b1c2d3e4-1001-4001-9001-100000000001
+    internal-label: Customer audiences
+subfeature_v2:
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+    internal-label: Roles
   - id: f0c9f224-75f2-4864-8de6-859ae7856690
-    internal-label: Segment Match
+    internal-label: Segment match
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

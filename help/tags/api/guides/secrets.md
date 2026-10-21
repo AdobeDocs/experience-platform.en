@@ -25,15 +25,13 @@ feature_v2:
     internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
-subfeature_v2:
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-    internal-label: ''
+    internal-label: Sources
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+    internal-label: Event forwarding
+subfeature_v2:
   - id: c5c5043c-63aa-4aa6-ade0-3840596e7a6b
     internal-label: Tokens
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

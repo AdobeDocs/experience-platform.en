@@ -20,8 +20,6 @@ feature_v2:
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
 subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83

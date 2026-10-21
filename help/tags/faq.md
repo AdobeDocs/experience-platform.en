@@ -17,39 +17,31 @@ product_v2:
   - id: f7bdf6be-dd3b-4d2d-ac52-0e62ed0d3102
     internal-label: Admin Console
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: ''
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
   - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
     internal-label: Implementations
   - id: eb9732ab-8232-4b21-bc4c-89de86dbe4d7
     internal-label: Integrations
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: ''
   - id: fc7979f3-56c3-43ca-9784-f1ea3dc69c4b
     internal-label: Integrations
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
 subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: ''
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-    internal-label: ''
   - id: c77ba355-6681-41fe-b719-563d3f507fdb
     internal-label: Mobile SDK
   - id: c8add8f2-4250-4fd9-9cde-9707036c567d
     internal-label: Methods
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
   - id: df312454-73c4-43f6-a90e-18f5043f074c
     internal-label: Tags
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
     internal-label: Data collection tags data elements
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

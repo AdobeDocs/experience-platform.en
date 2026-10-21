@@ -18,33 +18,18 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: ''
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
     internal-label: Implementation
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
-subfeature_v2:
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-    internal-label: ''
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: ''
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: ''
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-    internal-label: ''
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
+    internal-label: Sources
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-    internal-label: ''
+    internal-label: Event forwarding
   - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-    internal-label: ''
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: ''
+    internal-label: Schemas
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

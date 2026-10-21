@@ -6,11 +6,6 @@ exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: 9f812dab-edb7-5eb6-a447-602521583af5
-    internal-label: ''
-  - id: d449eab5-a38f-5b69-8356-2de733045c81
-    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

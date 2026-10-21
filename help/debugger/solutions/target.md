@@ -7,17 +7,9 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: ''
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
 subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: ''
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-    internal-label: ''
   - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
     internal-label: Data collection tags hosts
 role_v2:

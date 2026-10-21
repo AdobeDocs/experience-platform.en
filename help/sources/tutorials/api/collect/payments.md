@@ -5,13 +5,10 @@ title: Create a Dataflow for Payments Sources Using the Flow Service API
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a payments application and ingesting it into Experience Platform using source connectors and APIs.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-TQID: https://experienceleague.adobe.com/2JaHThfW3zd5A15AY1D9gk1uSh4ycR-gVKj5ysjAOSw
+TQID: 'https://experienceleague.adobe.com/2JaHThfW3zd5A15AY1D9gk1uSh4ycR-gVKj5ysjAOSw'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

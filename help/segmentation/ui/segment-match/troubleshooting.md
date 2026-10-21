@@ -4,22 +4,16 @@ solution: Experience Platform
 title: Segment Match FAQ
 description: Segment Match is a segment-sharing service in Adobe Experience Platform that allows for two or more Experience Platform users to exchange segment data in a secure, governed, and privacy-friendly manner.
 exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
-TQID: https://experienceleague.adobe.com/JYjWKXQ1HV-LiyHbAMBUABU-Ydrd-LI8XpMZW3d9U9U
+TQID: 'https://experienceleague.adobe.com/JYjWKXQ1HV-LiyHbAMBUABU-Ydrd-LI8XpMZW3d9U9U'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: b1c2d3e4-1001-4001-9001-100000000001
+    internal-label: Customer audiences
 subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
   - id: f0c9f224-75f2-4864-8de6-859ae7856690
-    internal-label: Segment Match
+    internal-label: Segment match
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

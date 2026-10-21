@@ -27,23 +27,17 @@ feature_v2:
     internal-label: Audiences
   - id: b12f6872-9271-4369-85e5-86969a0b99a2
     internal-label: APIs
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
   - id: f73667dc-d296-4875-8975-ac3fdc3adc42
     internal-label: Dashboards
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+    internal-label: Event forwarding
 subfeature_v2:
   - id: bf97c196-a4d1-4fa3-a151-e68a114c8ac0
     internal-label: REST API
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-    internal-label: ''
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

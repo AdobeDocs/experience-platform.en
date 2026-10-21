@@ -18,8 +18,6 @@ feature_v2:
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
 subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
   - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
     internal-label: Data collection tags hosts
 role_v2:

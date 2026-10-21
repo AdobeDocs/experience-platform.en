@@ -4,11 +4,6 @@ description: Learn how to use the legacy Select attributes step for Adobe Campai
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: ''
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: ''
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

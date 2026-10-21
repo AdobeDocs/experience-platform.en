@@ -24,8 +24,6 @@ feature_v2:
 subfeature_v2:
   - id: b0a1f9d5-5795-42a3-a6d0-bd0e2748fd06
     internal-label: Components
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

@@ -7,15 +7,8 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: ''
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: ''
-subfeature_v2:
-  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-    internal-label: ''
   - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
-    internal-label: ''
+    internal-label: Permissions
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

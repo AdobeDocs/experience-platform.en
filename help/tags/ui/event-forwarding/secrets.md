@@ -27,23 +27,17 @@ product_v2:
 feature_v2:
   - id: bef6f891-2e8a-425e-8f99-7ddf22070daa
     internal-label: APIs
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: ''
   - id: c975b431-530e-4c29-9216-0301b9e204c1
     internal-label: Authentication
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
-subfeature_v2:
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-    internal-label: ''
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: ''
+    internal-label: Sources
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+    internal-label: Event forwarding
+subfeature_v2:
   - id: c5c5043c-63aa-4aa6-ade0-3840596e7a6b
     internal-label: Tokens
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-    internal-label: ''
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83

@@ -2,42 +2,22 @@
 title: Data Management License Entitlement Best Practices
 description: Learn about best practices and tools you can use to better manage your license entitlements with Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-TQID: https://experienceleague.adobe.com/oBQUBAK-N-3JjG-au7Q92-ayZ04N-zp-KyyyCOiiyAg
+TQID: 'https://experienceleague.adobe.com/oBQUBAK-N-3JjG-au7Q92-ayZ04N-zp-KyyyCOiiyAg'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
+    internal-label: Data collection tags
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
     internal-label: Sources
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
-  - id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13
-    internal-label: Data prep
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
-  - id: d1a87129-ba05-4f15-98b1-233618f1774a
-    internal-label: Data ingestion
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
     internal-label: Event forwarding
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: Guardrails
-  - id: f5efb499-54f9-432b-ac5c-599dbac103af
-    internal-label: Data management
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: Datastreams
+subfeature_v2:
+  - id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13
+    internal-label: Datastreams data prep
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

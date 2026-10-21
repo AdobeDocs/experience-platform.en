@@ -32,8 +32,6 @@ feature_v2:
 subfeature_v2:
   - id: c8add8f2-4250-4fd9-9cde-9707036c567d
     internal-label: Methods
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
   - id: df312454-73c4-43f6-a90e-18f5043f074c
     internal-label: Tags
   - id: e7d92df1-c5ba-4e93-85df-f83171b889be

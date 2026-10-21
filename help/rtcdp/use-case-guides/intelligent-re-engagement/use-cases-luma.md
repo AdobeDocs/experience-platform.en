@@ -12,8 +12,6 @@ product_v2:
 feature_v2:
   - id: ba929a52-9339-4154-9487-317dc875a3c7
     internal-label: Use cases
-  - id: 9f812dab-edb7-5eb6-a447-602521583af5
-    internal-label: ''
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin

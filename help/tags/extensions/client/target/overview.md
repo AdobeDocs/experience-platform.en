@@ -20,8 +20,6 @@ feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
 subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
     internal-label: at.js
 role_v2:

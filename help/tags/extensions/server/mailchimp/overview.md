@@ -11,8 +11,6 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: 8d89a9fb-a98a-500a-ae8d-4d99599b4f3f
-    internal-label: ''
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
     internal-label: Event forwarding
 role_v2:

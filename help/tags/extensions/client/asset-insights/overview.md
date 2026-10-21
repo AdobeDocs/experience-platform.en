@@ -23,8 +23,6 @@ feature_v2:
     internal-label: Reports
   - id: b3f03848-ae12-48b2-8aab-cad18567eb32
     internal-label: Metrics
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: ''
   - id: da0dfbce-df02-4f8b-b32d-a4e3b1d05085
     internal-label: Configuration
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
@@ -33,13 +31,13 @@ feature_v2:
     internal-label: Integrations
   - id: eb9732ab-8232-4b21-bc4c-89de86dbe4d7
     internal-label: Integrations
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: ''
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
 subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: ''
   - id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
     internal-label: Events
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

@@ -9,8 +9,6 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: ''
   - id: f5a6b7c8-5003-4003-9003-500000000003
     internal-label: Services
 subfeature_v2:
