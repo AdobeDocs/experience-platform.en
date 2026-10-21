@@ -6,30 +6,34 @@ description: Learn how to configure your data operations and schemas to convey c
 role: Developer
 feature: Consent
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-TQID: https://experienceleague.adobe.com/P38CR-Nc-Brm7ndSc4xryELzb6Oekm7jVPPxPYWr4gU
+TQID: 'https://experienceleague.adobe.com/P38CR-Nc-Brm7ndSc4xryELzb6Oekm7jVPPxPYWr4gU'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
+    internal-label: ''
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
   - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
+  - id: b4cdce0b-478e-4da1-bd14-9772484a2151
+    internal-label: Policies
 subfeature_v2:
   - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
+    internal-label: ''
   - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
+    internal-label: ''
   - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
-    internal-label: Datastreams
+    internal-label: ''
   - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
+    internal-label: ''
   - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-    internal-label: Schemas
+    internal-label: ''
+  - id: a3b3152b-4985-4b09-b52d-53d4801bd726
+    internal-label: Consent
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

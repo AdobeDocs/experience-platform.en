@@ -2,7 +2,7 @@
 title: Release Notes for the Core Extension
 description: The latest release notes for the Core extension in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-TQID: https://experienceleague.adobe.com/0xlK-pC8-F9CtKAeu2uVNPpaGkOo-W8ZN9bzPxLjpsI
+TQID: 'https://experienceleague.adobe.com/0xlK-pC8-F9CtKAeu2uVNPpaGkOo-W8ZN9bzPxLjpsI'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -18,17 +18,23 @@ feature_v2:
   - id: bef6f891-2e8a-425e-8f99-7ddf22070daa
     internal-label: APIs
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
   - id: d2a6cbf4-df32-480f-909e-b42f66dcb9f0
-    internal-label: Places
+    internal-label: ''
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-    internal-label: Data elements
+    internal-label: Data collection tags data elements
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
     internal-label: Customer experience

@@ -8,15 +8,21 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
+    internal-label: ''
 subfeature_v2:
   - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-    internal-label: Monitoring
+    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 
 # Monitor Orchestrated Campaign ingestion in the UI

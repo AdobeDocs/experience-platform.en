@@ -2,7 +2,7 @@
 title: Experience Platform Tags (China)
 description: Learn about the Experience Platform Tags (China) feature for tags and how it can be used to deliver your content in multiple geographic regions.
 exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
-TQID: https://experienceleague.adobe.com/KFSFevurJ-HKiG9RKdoNEJX0WUtIkwBOnhSwawbO-jY
+TQID: 'https://experienceleague.adobe.com/KFSFevurJ-HKiG9RKdoNEJX0WUtIkwBOnhSwawbO-jY'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -14,21 +14,27 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
   - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
+    internal-label: ''
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
   - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
-    internal-label: Hosts
+    internal-label: Data collection tags hosts
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation

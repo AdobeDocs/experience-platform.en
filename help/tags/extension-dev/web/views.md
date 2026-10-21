@@ -2,7 +2,7 @@
 title: Views in Web Extensions
 description: Learn how to define views for library modules in your Adobe Experience Platform web extensions.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-TQID: https://experienceleague.adobe.com/Vx3huRlBr6dfUapFD7Axam-l7RpCKAgLb6Q3xK-5qY8
+TQID: 'https://experienceleague.adobe.com/Vx3huRlBr6dfUapFD7Axam-l7RpCKAgLb6Q3xK-5qY8'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -22,17 +22,23 @@ feature_v2:
   - id: bef6f891-2e8a-425e-8f99-7ddf22070daa
     internal-label: APIs
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-    internal-label: Data elements
+    internal-label: Data collection tags data elements
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
     internal-label: Customer experience

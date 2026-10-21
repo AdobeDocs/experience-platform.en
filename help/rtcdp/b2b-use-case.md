@@ -5,18 +5,32 @@ description: This sample scenario provides an example for the configuration of y
 feature: Get Started, Use Cases, B2B
 badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-TQID: https://experienceleague.adobe.com/i0spp7aOeTMoX-ggKcGQ2WJcGoj2syqseDzHErDAMZI
+TQID: 'https://experienceleague.adobe.com/i0spp7aOeTMoX-ggKcGQ2WJcGoj2syqseDzHErDAMZI'
 product_v2:
   - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
     internal-label: Real-Time Customer Data Platform
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
 feature_v2:
   - id: ba929a52-9339-4154-9487-317dc875a3c7
     internal-label: Use cases
   - id: ebefeaba-efa6-45e2-ae01-f6171cdb8d1e
     internal-label: Tier
+  - id: 3a169e2a-3892-5965-bb98-8d80a2bbb0f1
+    internal-label: ''
+  - id: 9f812dab-edb7-5eb6-a447-602521583af5
+    internal-label: ''
+  - id: 33ca0c14-7e3b-55a1-8fd7-8a61b47da4e1
+    internal-label: ''
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation

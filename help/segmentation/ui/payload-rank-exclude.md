@@ -3,6 +3,12 @@ solution: Experience Platform
 title: Payload Rank and Payload Exclude Operators
 description: Learn how to use the Payload rank and Payload exclude operations in audience compositions. These operations let you directly affect the elements of the array without modifying the audience itself.
 hide: true
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 
 # Payload rank and Payload exclude operators

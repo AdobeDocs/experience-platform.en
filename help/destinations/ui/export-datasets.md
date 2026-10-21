@@ -3,29 +3,33 @@ title: Export Datasets to Cloud Storage Destinations
 type: Tutorial
 description: Learn how to export datasets from Adobe Experience Platform to your preferred cloud storage location.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-TQID: https://experienceleague.adobe.com/c3seBtBJQ2KgxJowsVUplBh3ECPdKnfrK9GBpdC02m0
+TQID: 'https://experienceleague.adobe.com/c3seBtBJQ2KgxJowsVUplBh3ECPdKnfrK9GBpdC02m0'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
   - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
+    internal-label: ''
 subfeature_v2:
   - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-    internal-label: Monitoring
+    internal-label: ''
   - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: Guardrails
+    internal-label: ''
   - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
-    internal-label: License usage
+    internal-label: ''
   - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-    internal-label: Dashboards
+    internal-label: ''
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting

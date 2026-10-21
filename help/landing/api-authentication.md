@@ -6,17 +6,22 @@ description: This document provides a step-by-step tutorial for gaining access t
 role: Developer
 feature: API
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-TQID: https://experienceleague.adobe.com/smnoNfQjs0DcOO80h2nnX0ve-3wWFqXKkdpRAxWUO6Y
+TQID: 'https://experienceleague.adobe.com/smnoNfQjs0DcOO80h2nnX0ve-3wWFqXKkdpRAxWUO6Y'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
   - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
+    internal-label: ''
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
+    internal-label: ''
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
+subfeature_v2:
+  - id: 01a3139f-2204-4e1b-bd65-5437f7d5a5bd
+    internal-label: API credentials
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

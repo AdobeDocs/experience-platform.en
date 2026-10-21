@@ -3,18 +3,24 @@ title: XDM Business Person Details Schema Field Group
 description: Learn about the XDM Business Person Details schema field group.
 badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-TQID: https://experienceleague.adobe.com/OsVRQv-ZSeKOaQ4H0nx-P-IKZ42W2hZK6ss8RFMT9eo
+TQID: 'https://experienceleague.adobe.com/OsVRQv-ZSeKOaQ4H0nx-P-IKZ42W2hZK6ss8RFMT9eo'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
   - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
+    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting

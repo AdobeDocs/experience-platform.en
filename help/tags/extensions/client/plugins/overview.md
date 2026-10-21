@@ -2,7 +2,7 @@
 title: Common Analytics Extension Overview
 description: Learn about the Common Analytics tag extension in Adobe Experience Platform.
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
-TQID: https://experienceleague.adobe.com/mWtMNd7CQAik8cmxeqm92ECFezJs7ATep0jJZAJ62jM
+TQID: 'https://experienceleague.adobe.com/mWtMNd7CQAik8cmxeqm92ECFezJs7ATep0jJZAJ62jM'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -14,13 +14,19 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation

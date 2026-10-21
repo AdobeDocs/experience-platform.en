@@ -3,7 +3,7 @@ title: Snowflake Overview
 description: Learn about Snowflake for event forwarding in Adobe Experience Platform.
 last-substantial-update: 2023-06-21T00:00:00.000Z
 exl-id: abddf0c4-3d4c-4f66-a6e0-c10b54ea3430
-TQID: https://experienceleague.adobe.com/uPDEUwZFSzJyLEiZDSGwpSzSgJl-2Zv3cwba-1-hJso
+TQID: 'https://experienceleague.adobe.com/uPDEUwZFSzJyLEiZDSGwpSzSgJl-2Zv3cwba-1-hJso'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -15,17 +15,23 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-    internal-label: Event forwarding
+    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting

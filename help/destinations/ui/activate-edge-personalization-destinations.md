@@ -3,32 +3,32 @@ title: Activate audiences to edge personalization destinations
 description: Learn how to activate audiences from Adobe Experience Platform to edge personalization destinations for same-page and next-page personalization use-cases.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-TQID: https://experienceleague.adobe.com/-W-vvtL2Lcg5ntwUs3h2fJUaYu1-LDqHCZeeo0aMGek
+TQID: 'https://experienceleague.adobe.com/-W-vvtL2Lcg5ntwUs3h2fJUaYu1-LDqHCZeeo0aMGek'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
+    internal-label: ''
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
   - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
+    internal-label: ''
   - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
+    internal-label: ''
   - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
+    internal-label: ''
   - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
+    internal-label: ''
   - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
-    internal-label: Datastreams
+    internal-label: ''
   - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
+    internal-label: ''
   - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
+    internal-label: ''
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
 role_v2:
@@ -36,6 +36,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
     internal-label: Governance

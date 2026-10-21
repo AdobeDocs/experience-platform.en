@@ -4,6 +4,14 @@ solution: Experience Platform
 title: Real-time Machine Learning Overview
 description: Real-time Machine Learning can dramatically enhance the relevance of your digital experience content for your end-users. This is made possible by leveraging real-time inferencing and continuous learning on the Experience Platform Edge Network.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Real-time Machine Learning overview (Alpha)
 

@@ -2,7 +2,7 @@
 title: Experience Cloud Organization Setup
 description: Learn how to register an Adobe Experience Cloud organization in order to start developing extensions for Adobe Experience Platform.
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
-TQID: https://experienceleague.adobe.com/RFpJ35gtqkOAYoPk4DrU-Akwe0YMqREtqLbh6F3uCsI
+TQID: 'https://experienceleague.adobe.com/RFpJ35gtqkOAYoPk4DrU-Akwe0YMqREtqLbh6F3uCsI'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -16,19 +16,25 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
+    internal-label: ''
   - id: fc7979f3-56c3-43ca-9784-f1ea3dc69c4b
     internal-label: Integrations
 subfeature_v2:
   - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
+    internal-label: ''
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
     internal-label: Customer experience

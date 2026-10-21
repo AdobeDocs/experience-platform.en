@@ -4,16 +4,22 @@ title: Export XDM Schemas in the UI
 description: Learn how to export an existing schema to a different sandbox or organization in the Adobe Experience Platform user interface.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-TQID: https://experienceleague.adobe.com/fzH5LC2MViIugJMfk5rTic5n3joGGz292UnVEon9204
+TQID: 'https://experienceleague.adobe.com/fzH5LC2MViIugJMfk5rTic5n3joGGz292UnVEon9204'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Export XDM schemas in the UI {#export-xdm-schemas-in-the-UI}
 

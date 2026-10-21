@@ -4,10 +4,18 @@ description: Learn how to set up your CMK app with your Azure tenant and send yo
 role: Developer
 feature: API, Privacy
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-TQID: https://experienceleague.adobe.com/ZVIwLn5sMIG5-RS0A7sYW5i7t9X7lY-k5KTma8jIkEg
+TQID: 'https://experienceleague.adobe.com/ZVIwLn5sMIG5-RS0A7sYW5i7t9X7lY-k5KTma8jIkEg'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
+feature_v2:
+  - id: e3bd89b0-dc58-5eb1-a500-c325853fab11
+    internal-label: ''
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
+subfeature_v2:
+  - id: 01a3139f-2204-4e1b-bd65-5437f7d5a5bd
+    internal-label: API credentials
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

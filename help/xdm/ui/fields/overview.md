@@ -4,19 +4,25 @@ solution: Experience Platform
 title: Define XDM Fields in the UI
 description: Learn how to define XDM fields in the Experience Platform user interface.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-TQID: https://experienceleague.adobe.com/syA6AOVPFb5DmmDsj76bsefVxMU6BXzHaMrcmQwpoEk
+TQID: 'https://experienceleague.adobe.com/syA6AOVPFb5DmmDsj76bsefVxMU6BXzHaMrcmQwpoEk'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
+    internal-label: ''
 subfeature_v2:
   - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
+    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
     internal-label: Data modeling

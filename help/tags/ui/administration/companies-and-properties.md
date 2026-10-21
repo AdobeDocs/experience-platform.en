@@ -2,7 +2,7 @@
 title: Properties
 description: Learn how your extensions, environments, and libraries are organized and grouped for your organization in Adobe Experience Platform.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-TQID: https://experienceleague.adobe.com/B9AzoGNIjWkivmmBiN800fYXL99LDlRsjG2mA-VsNpo
+TQID: 'https://experienceleague.adobe.com/B9AzoGNIjWkivmmBiN800fYXL99LDlRsjG2mA-VsNpo'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -18,7 +18,7 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
+    internal-label: ''
   - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
     internal-label: Reports
   - id: b3f03848-ae12-48b2-8aab-cad18567eb32
@@ -26,27 +26,33 @@ feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
     internal-label: Implementation
   - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
   - id: fdbb8fc9-ffa3-4b86-88fe-aa4c5a3e1bc6
     internal-label: Administration
 subfeature_v2:
   - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
-    internal-label: Permissions
+    internal-label: ''
   - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
+    internal-label: ''
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-    internal-label: Data elements
+    internal-label: Data collection tags data elements
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation

@@ -3,31 +3,35 @@ keywords: airship tags;airship destination
 title: Airship Tags connection
 description: Seamlessly pass Adobe Audience Data to Airship as Audience Tags for targeting within Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-TQID: https://experienceleague.adobe.com/JPaL7El70TnYpgZ1d1bcVdJBhPXVirJdXYTCZiA-FgY
+TQID: 'https://experienceleague.adobe.com/JPaL7El70TnYpgZ1d1bcVdJBhPXVirJdXYTCZiA-FgY'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
+    internal-label: ''
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
   - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
+    internal-label: ''
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
+    internal-label: ''
 subfeature_v2:
   - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
+    internal-label: ''
   - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
+    internal-label: ''
   - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
+    internal-label: ''
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: addf009e-030a-4310-8534-776a3e62ed48
     internal-label: Customer lifecycle

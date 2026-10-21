@@ -3,41 +3,45 @@ keywords: destinations; questions; frequently asked questions; faq; destinations
 title: Frequently asked questions
 description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-TQID: https://experienceleague.adobe.com/vdkLsZ5DNVWagPQZo2Z-XJm9ovbtDPFRtGb0Yw0M9CA
+TQID: 'https://experienceleague.adobe.com/vdkLsZ5DNVWagPQZo2Z-XJm9ovbtDPFRtGb0Yw0M9CA'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
+    internal-label: ''
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
   - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
+    internal-label: ''
 subfeature_v2:
   - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
+    internal-label: ''
   - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
+    internal-label: ''
   - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-    internal-label: Troubleshooting
+    internal-label: ''
   - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
+    internal-label: ''
   - id: e2caa907-399e-441d-a026-6f449b9a4286
-    internal-label: Data lifecycle
+    internal-label: ''
   - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: Guardrails
+    internal-label: ''
   - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
+    internal-label: ''
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation

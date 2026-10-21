@@ -2,6 +2,12 @@
 title: Stream Data From Kobie To Experience Platform Using The UI
 description: Learn how to stream data from Kobie into Adobe Experience Platform using the UI.
 exl-id: 4e2e3287-3673-4426-8666-5f2ee284ca3d
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Stream data from [!DNL Kobie Streaming Events] to Experience Platform using the UI
 

@@ -5,7 +5,7 @@ feature: Customer AI
 title: Configure a Customer AI Instance
 description: AI/ML Services provide Customer AI as a simple-to-use Adobe AI service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-TQID: https://experienceleague.adobe.com/Eu5uG-1g0jnRAJdqlvjWOJZVGxQeGqUo5cCpbW0yVas
+TQID: 'https://experienceleague.adobe.com/Eu5uG-1g0jnRAJdqlvjWOJZVGxQeGqUo5cCpbW0yVas'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -15,7 +15,12 @@ feature_v2:
   - id: ba929a52-9339-4154-9487-317dc875a3c7
     internal-label: Use cases
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
+  - id: f5a6b7c8-5003-4003-9003-500000000003
+    internal-label: Services
+subfeature_v2:
+  - id: af7d4edc-6e6b-4176-bf14-907faf40ebd4
+    internal-label: Customer AI
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

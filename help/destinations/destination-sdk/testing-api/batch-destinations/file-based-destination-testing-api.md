@@ -2,18 +2,22 @@
 description: Learn how to use the destination testing endpoint to verify that your file-based destination is configured correctly and check data flow integrity.
 title: Test your file-based destination with sample profiles
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-TQID: https://experienceleague.adobe.com/ecETG8hP61A71pRlGrBDvCTSw3j-rbx0zkjNiQoikA0
+TQID: 'https://experienceleague.adobe.com/ecETG8hP61A71pRlGrBDvCTSw3j-rbx0zkjNiQoikA0'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
     internal-label: Troubleshooting

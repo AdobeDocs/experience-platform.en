@@ -2,7 +2,7 @@
 title: Quickstart Guide
 description: Learn how to quickly get up and running with tags in Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-TQID: https://experienceleague.adobe.com/3N7o3QDBF--Wp-WM4wcDYvdfbU3gWfBrZExNWJDeoEE
+TQID: 'https://experienceleague.adobe.com/3N7o3QDBF--Wp-WM4wcDYvdfbU3gWfBrZExNWJDeoEE'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -28,13 +28,13 @@ feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
     internal-label: Implementation
   - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: eb9732ab-8232-4b21-bc4c-89de86dbe4d7
     internal-label: Integrations
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
+    internal-label: ''
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
     internal-label: Integrations
   - id: fc7979f3-56c3-43ca-9784-f1ea3dc69c4b
@@ -43,26 +43,32 @@ feature_v2:
     internal-label: API
 subfeature_v2:
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-    internal-label: Sources
+    internal-label: ''
   - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
+    internal-label: ''
   - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
+    internal-label: ''
   - id: d2a6cbf4-df32-480f-909e-b42f66dcb9f0
-    internal-label: Places
+    internal-label: ''
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-    internal-label: Event forwarding
+    internal-label: ''
   - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
-    internal-label: Hosts
+    internal-label: Data collection tags hosts
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-    internal-label: Data elements
+    internal-label: Data collection tags data elements
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation

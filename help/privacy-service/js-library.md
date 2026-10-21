@@ -4,21 +4,25 @@ solution: Experience Platform
 title: Adobe Privacy JavaScript Library Overview
 description: The Adobe Privacy JavaScript Library allows you to retrieve data subject identities for use in Privacy Service.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-TQID: https://experienceleague.adobe.com/fdU0VrJoLLWCPk6hJjLhvyMBbGX1jTMUKzqZHKnY1gM
+TQID: 'https://experienceleague.adobe.com/fdU0VrJoLLWCPk6hJjLhvyMBbGX1jTMUKzqZHKnY1gM'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection

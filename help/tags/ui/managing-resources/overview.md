@@ -2,7 +2,7 @@
 title: Manage Resources
 description: Learn how to manage various resources in Adobe Experience Platform, including extensions, data elements, and rules.
 exl-id: 3ec0078e-76a6-42ac-94cf-df9572b37b52
-TQID: https://experienceleague.adobe.com/ZsRJMN-MuWW7Ptt2LHDs4zxxbmxML3WKSsG8SGvmvHM
+TQID: 'https://experienceleague.adobe.com/ZsRJMN-MuWW7Ptt2LHDs4zxxbmxML3WKSsG8SGvmvHM'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -14,19 +14,25 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-    internal-label: Sources
+    internal-label: ''
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-    internal-label: Data elements
+    internal-label: Data collection tags data elements
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation

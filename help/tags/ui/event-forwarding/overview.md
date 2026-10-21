@@ -3,7 +3,7 @@ title: Event Forwarding Overview
 description: Learn about event forwarding in Adobe Experience Platform, which allows you to use the Experience Platform Edge Network to execute tasks without changing your tag implementation.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-TQID: https://experienceleague.adobe.com/lJWevoZHpHlTKp15DzOR86xChLszIDHDc7ejlbTh26E
+TQID: 'https://experienceleague.adobe.com/lJWevoZHpHlTKp15DzOR86xChLszIDHDc7ejlbTh26E'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -17,31 +17,39 @@ product_v2:
     internal-label: Real-Time Customer Data Platform
 feature_v2:
   - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-    internal-label: Sources
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
-  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
-    internal-label: Datastreams
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: Data collection tags
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
     internal-label: Event forwarding
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+    internal-label: ''
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+    internal-label: ''
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: ''
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+    internal-label: ''
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: ''
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: ''
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+    internal-label: ''
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-    internal-label: Data elements
+    internal-label: Data collection tags data elements
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation

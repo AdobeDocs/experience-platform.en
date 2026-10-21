@@ -5,20 +5,24 @@ title: Governance, Privacy, and Security Overview
 description: Adobe Experience Platform provides several services and tools that allow you to confidently control your collected experience data in order to comply with your business practices, legal obligations, and development process.
 feature: Data Governance,Privacy
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
-TQID: https://experienceleague.adobe.com/P-JKPcACwNXqqRfF2RgOnzlY73BqbYKJzstCMw9Iu6M
+TQID: 'https://experienceleague.adobe.com/P-JKPcACwNXqqRfF2RgOnzlY73BqbYKJzstCMw9Iu6M'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
+    internal-label: ''
+  - id: 392d408e-4e40-5bf7-afae-72086f108746
+    internal-label: ''
+  - id: e3bd89b0-dc58-5eb1-a500-c325853fab11
+    internal-label: ''
 subfeature_v2:
   - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
+    internal-label: ''
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

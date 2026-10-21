@@ -2,7 +2,7 @@
 title: Content Security Policy (CSP) Support
 description: Learn how to deal with Content Security Policy (CSP) restrictions when integrating your website with tags in Adobe Experience Platform.
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-TQID: https://experienceleague.adobe.com/pIeubuRMJoFa7XJkDscjwflNsOjXc9JjCjlehnmXYtc
+TQID: 'https://experienceleague.adobe.com/pIeubuRMJoFa7XJkDscjwflNsOjXc9JjCjlehnmXYtc'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -20,13 +20,19 @@ feature_v2:
   - id: d556b755-390a-43f0-be32-a08cf6236126
     internal-label: Configuration
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
     internal-label: Customer experience

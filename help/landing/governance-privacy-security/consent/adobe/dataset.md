@@ -6,13 +6,22 @@ description: Learn how to configure an Experience Data Model (XDM) schema and da
 role: Developer
 feature: Consent, Schemas, Datasets
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-TQID: https://experienceleague.adobe.com/bb9PfbxDmSr3mJt2bbWeY50xMCzZaWeO-W1HHcHTX9M
+TQID: 'https://experienceleague.adobe.com/bb9PfbxDmSr3mJt2bbWeY50xMCzZaWeO-W1HHcHTX9M'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+    internal-label: Schemas
+  - id: 9c3a4e5f-6d7b-4c8a-8e9f-1b2c3d4e5f6a
+    internal-label: Datasets
+  - id: b4cdce0b-478e-4da1-bd14-9772484a2151
+    internal-label: Policies
+subfeature_v2:
+  - id: a3b3152b-4985-4b09-b52d-53d4801bd726
+    internal-label: Consent
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

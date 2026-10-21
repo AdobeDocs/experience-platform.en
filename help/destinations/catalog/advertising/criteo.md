@@ -3,18 +3,22 @@ keywords: advertising; criteo;
 title: Criteo connection
 description: Criteo powers trusted and impactful advertising to bring richer experiences to every consumer across the open internet. With the world's largest commerce data set and best-in-class AI, Criteo ensures each touchpoint across the shopping journey is personalized to reach customers with the right ad, at the right time.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-TQID: https://experienceleague.adobe.com/WNRnMVT0tVOHKY2uQdexYZGkX3yHTQZDJTupB19CxkY
+TQID: 'https://experienceleague.adobe.com/WNRnMVT0tVOHKY2uQdexYZGkX3yHTQZDJTupB19CxkY'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
     internal-label: Governance

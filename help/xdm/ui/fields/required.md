@@ -3,13 +3,19 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 title: Define Required Fields in the UI
 description: Learn how to define a required XDM field in the Experience Platform user interface.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-TQID: https://experienceleague.adobe.com/7aWbwy7svAlW1aWnB9wKtGtPt4Vr4KHjjlYVBkecNhE
+TQID: 'https://experienceleague.adobe.com/7aWbwy7svAlW1aWnB9wKtGtPt4Vr4KHjjlYVBkecNhE'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Define required fields in the UI
 

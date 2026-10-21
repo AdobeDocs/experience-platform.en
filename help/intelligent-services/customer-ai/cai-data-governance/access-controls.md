@@ -5,22 +5,26 @@ feature: Customer AI
 title: Access Control for Customer AI
 description: This document provides information on attribute-based access control for Customer AI.
 exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
-TQID: https://experienceleague.adobe.com/ovzb-dwRBsFOMNTl-DwQLQ78zHvRmCBHDLPEV2--oCg
+TQID: 'https://experienceleague.adobe.com/ovzb-dwRBsFOMNTl-DwQLQ78zHvRmCBHDLPEV2--oCg'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
+    internal-label: ''
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
+  - id: f5a6b7c8-5003-4003-9003-500000000003
+    internal-label: Services
 subfeature_v2:
   - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-    internal-label: Access control
+    internal-label: ''
   - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
-    internal-label: Permissions
+    internal-label: ''
   - id: d175cb4c-5781-454e-a826-bf6dff786265
     internal-label: Roles
+  - id: af7d4edc-6e6b-4176-bf14-907faf40ebd4
+    internal-label: Customer AI
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

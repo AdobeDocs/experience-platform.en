@@ -2,29 +2,33 @@
 title: Profile export behavior by destination type
 description: Learn how profile export behavior differs across destination types, including aggregation, triggering events, and the fields that are included in each export.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-TQID: https://experienceleague.adobe.com/DCZplb-dOVBCw3VGErsd1uCvdKfpLubZ-oDuidXFCn4
+TQID: 'https://experienceleague.adobe.com/DCZplb-dOVBCw3VGErsd1uCvdKfpLubZ-oDuidXFCn4'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
+    internal-label: ''
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
+    internal-label: ''
 subfeature_v2:
   - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
+    internal-label: ''
   - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
+    internal-label: ''
   - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
+    internal-label: ''
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Profile export behavior by destination type
 

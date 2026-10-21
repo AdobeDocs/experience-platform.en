@@ -2,16 +2,16 @@
 title: Record Delete Requests (UI Workflow)
 description: Learn how to delete records in the Adobe Experience Platform UI.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-TQID: https://experienceleague.adobe.com/ma8clV2BTpyReIQewIgC0ryu1w2HC9Ri95qxcIy8Zpk
+TQID: 'https://experienceleague.adobe.com/ma8clV2BTpyReIQewIgC0ryu1w2HC9Ri95qxcIy8Zpk'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
 subfeature_v2:
   - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: Guardrails
+    internal-label: ''
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
@@ -19,6 +19,8 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
     internal-label: Metadata

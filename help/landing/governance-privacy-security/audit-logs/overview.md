@@ -4,13 +4,15 @@ description: Learn how audit logs allow you to see who did what actions in Adobe
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-TQID: https://experienceleague.adobe.com/I5y-Sbsz7sauzkzknWJBPuRwfZ-DD5ToRBwvthv6ZUs
+TQID: 'https://experienceleague.adobe.com/I5y-Sbsz7sauzkzknWJBPuRwfZ-DD5ToRBwvthv6ZUs'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
+  - id: face57a7-855c-40fe-be2c-28bd0ce4a311
+    internal-label: Audits
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin

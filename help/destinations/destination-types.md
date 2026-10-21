@@ -3,36 +3,36 @@ keywords: destinations;destination;destination types
 title: Destination types and categories
 description: Learn about the different types and categories of destinations in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-TQID: https://experienceleague.adobe.com/ASiVeC74mG6OUPqVdq07b1901ZUKixb4zii8yIu2dAY
+TQID: 'https://experienceleague.adobe.com/ASiVeC74mG6OUPqVdq07b1901ZUKixb4zii8yIu2dAY'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
+    internal-label: ''
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
+    internal-label: ''
 subfeature_v2:
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-    internal-label: Sources
+    internal-label: ''
   - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
+    internal-label: ''
   - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
+    internal-label: ''
   - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
+    internal-label: ''
   - id: d3f95e25-a50e-4fd0-bc23-9a22409a183b
-    internal-label: Profile enrichment
+    internal-label: ''
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-    internal-label: Event forwarding
+    internal-label: ''
   - id: e8c2a8db-c24b-44d9-ab8e-a8bc03acf6b1
-    internal-label: Data export
+    internal-label: ''
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
 role_v2:
@@ -40,6 +40,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: beb7a3c1-66ab-4786-b879-7621375b3c40
     internal-label: Email marketing

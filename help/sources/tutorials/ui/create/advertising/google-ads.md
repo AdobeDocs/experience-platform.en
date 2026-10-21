@@ -1,6 +1,12 @@
 ---
 title: Connect Google Ads (V2) to Experience Platform UI
 description: Learn how to connect your Google Ads (V2) account to Adobe Experience Platform in the UI.
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect [!DNL Google Ads] (V2) to Experience Platform using the UI
 

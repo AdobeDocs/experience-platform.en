@@ -1,32 +1,36 @@
 ---
 title: Snowflake Batch connection
 description: Create a live Snowflake data share to receive daily audience updates directly as shared tables into your account.
-last-substantial-update: 2026-05-29
+last-substantial-update: 2026-05-29T00:00:00.000Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-TQID: https://experienceleague.adobe.com/9rHuZjQpD9FAjKdktXxBEUjhc5ZGeKlqFFl2K-Y-9HE
+TQID: 'https://experienceleague.adobe.com/9rHuZjQpD9FAjKdktXxBEUjhc5ZGeKlqFFl2K-Y-9HE'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
+    internal-label: ''
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
   - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
+    internal-label: ''
 subfeature_v2:
   - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
+    internal-label: ''
   - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
+    internal-label: ''
   - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
+    internal-label: ''
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting

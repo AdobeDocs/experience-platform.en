@@ -2,6 +2,9 @@
 title: Base code
 description: Queue commands (bootstrap) so they run once the data collection library finishes loading.
 exl-id: 10265747-f6d2-4ae7-bf22-9904c5a96f8e
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Base code
 

@@ -3,29 +3,35 @@ solution: Experience Platform
 title: Consents and Preferences Schema Field Group
 description: Learn about the Consents and Preferences schema field group.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-TQID: https://experienceleague.adobe.com/wOhEsFSQQknczmSnFyHtm17-kE5G-EdSWho2yi2MoU8
+TQID: 'https://experienceleague.adobe.com/wOhEsFSQQknczmSnFyHtm17-kE5G-EdSWho2yi2MoU8'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-    internal-label: Sources
+    internal-label: ''
   - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
+    internal-label: ''
   - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
+    internal-label: ''
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
   - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-    internal-label: Schemas
+    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
     internal-label: Metadata

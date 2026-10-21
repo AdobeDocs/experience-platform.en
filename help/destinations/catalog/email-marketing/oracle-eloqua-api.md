@@ -3,29 +3,33 @@ title: (API) Oracle Eloqua connection
 description: Use the (API) Oracle Eloqua destination to export your account data and activate it within Oracle Eloqua for your business needs.
 last-substantial-update: 2023-03-14T00:00:00.000Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-TQID: https://experienceleague.adobe.com/7Cffuml8Slh4ubKJ1m-mGji0WpLj62nCMIWdlp0Lk6I
+TQID: 'https://experienceleague.adobe.com/7Cffuml8Slh4ubKJ1m-mGji0WpLj62nCMIWdlp0Lk6I'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
+    internal-label: ''
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
 subfeature_v2:
   - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-    internal-label: Access control
+    internal-label: ''
   - id: a7150a74-b8a9-4042-b066-147c5f0ca505
-    internal-label: Alerts
+    internal-label: ''
   - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
-    internal-label: Permissions
+    internal-label: ''
   - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: Guardrails
+    internal-label: ''
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
     internal-label: Customer experience

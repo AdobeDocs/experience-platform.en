@@ -5,7 +5,7 @@ feature: Customer AI
 title: Discover Insights with Customer AI
 description: This document serves as a guide for interacting with service instance insights in the Intelligent Services Customer AI user interface.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-TQID: https://experienceleague.adobe.com/ChexcCvlaKGZ43eoXm7xpgpJKkOJcZ6HX979rcMIabg
+TQID: 'https://experienceleague.adobe.com/ChexcCvlaKGZ43eoXm7xpgpJKkOJcZ6HX979rcMIabg'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -13,16 +13,20 @@ product_v2:
     internal-label: Real-Time Customer Data Platform
 feature_v2:
   - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
+    internal-label: ''
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
+  - id: f5a6b7c8-5003-4003-9003-500000000003
+    internal-label: Services
 subfeature_v2:
   - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
+    internal-label: ''
   - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
+    internal-label: ''
   - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
+    internal-label: ''
+  - id: af7d4edc-6e6b-4176-bf14-907faf40ebd4
+    internal-label: Customer AI
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

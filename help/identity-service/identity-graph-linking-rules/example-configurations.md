@@ -2,25 +2,29 @@
 title: Identity Graph Linking Rules Configurations Guide
 description: Learn about the different implementation types that you can configure using Identity Graph Linking Rules.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-TQID: https://experienceleague.adobe.com/lb51Oazv4fAGSIVGe09Kethm0zYa0JNguNmnA-BlQKk
+TQID: 'https://experienceleague.adobe.com/lb51Oazv4fAGSIVGe09Kethm0zYa0JNguNmnA-BlQKk'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
   - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
+    internal-label: ''
 subfeature_v2:
   - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-    internal-label: Troubleshooting
+    internal-label: ''
   - id: e0c8953a-a203-4291-bef3-3560160d3041
-    internal-label: Get started
+    internal-label: ''
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
     internal-label: Metadata

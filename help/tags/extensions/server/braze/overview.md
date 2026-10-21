@@ -4,7 +4,7 @@ title: Braze Event Forwarding Extension
 description: This Adobe Experience Platform event forwarding extension sends Edge Network events to Braze.
 last-substantial-update: 2023-03-29T00:00:00.000Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-TQID: https://experienceleague.adobe.com/dY1OHyH--qDK2hL6FKY0nOOvMiz870Q7xWesqsQfbYY
+TQID: 'https://experienceleague.adobe.com/dY1OHyH--qDK2hL6FKY0nOOvMiz870Q7xWesqsQfbYY'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -28,9 +28,9 @@ feature_v2:
   - id: b12f6872-9271-4369-85e5-86969a0b99a2
     internal-label: APIs
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: f73667dc-d296-4875-8975-ac3fdc3adc42
     internal-label: Dashboards
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
@@ -39,14 +39,20 @@ subfeature_v2:
   - id: bf97c196-a4d1-4fa3-a151-e68a114c8ac0
     internal-label: REST API
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-    internal-label: Event forwarding
+    internal-label: ''
   - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: Guardrails
+    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
     internal-label: Customer engagement

@@ -2,7 +2,7 @@
 title: Administration Overview
 description: Learn key information concerning administrators in Adobe Experience Platform Launch.
 exl-id: 56ae72fb-5599-4794-a7e3-71ea9a40f9e4
-TQID: https://experienceleague.adobe.com/qDVOPrMdmec0LM3QVByb6zUpVdbb9T8JzwP9SNa8A4k
+TQID: 'https://experienceleague.adobe.com/qDVOPrMdmec0LM3QVByb6zUpVdbb9T8JzwP9SNa8A4k'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -14,21 +14,27 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: fdbb8fc9-ffa3-4b86-88fe-aa4c5a3e1bc6
     internal-label: Administration
 subfeature_v2:
   - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
-    internal-label: Permissions
+    internal-label: ''
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
     internal-label: Customer experience

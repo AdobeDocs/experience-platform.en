@@ -3,7 +3,7 @@ title: Snapchat Conversions API extension overview
 description: Use the Snapchat conversion to send server-side event data to Snap.
 last-substantial-update: 2025-01-20T00:00:00.000Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-TQID: https://experienceleague.adobe.com/SbZbjD4PtmqMTLZfAFTB1FgNd1o90Xudfjc3EdETWvE
+TQID: 'https://experienceleague.adobe.com/SbZbjD4PtmqMTLZfAFTB1FgNd1o90Xudfjc3EdETWvE'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -17,25 +17,31 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
 subfeature_v2:
   - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
+    internal-label: ''
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-    internal-label: Event forwarding
+    internal-label: ''
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-    internal-label: Data elements
+    internal-label: Data collection tags data elements
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting

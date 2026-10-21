@@ -4,23 +4,27 @@ solution: Experience Platform
 title: Privacy Regulations overview
 description: This document provides an overview of the different privacy regulations supported by Adobe Experience Cloud.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-TQID: https://experienceleague.adobe.com/26CQJvd74dLBVtlaB9xbBTIoYHIctKdv2UxQUuU47Ec
+TQID: 'https://experienceleague.adobe.com/26CQJvd74dLBVtlaB9xbBTIoYHIctKdv2UxQUuU47Ec'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
+    internal-label: ''
 subfeature_v2:
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-    internal-label: Sources
+    internal-label: ''
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security

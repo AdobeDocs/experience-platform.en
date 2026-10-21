@@ -2,25 +2,31 @@
 title: Edge Delivery View
 description: This guide details information about the Edge Delivery view in Adobe Experience Platform Assurance.
 exl-id: 570c1bcb-ec6d-465e-84ff-ed910d4f7e8a
-TQID: https://experienceleague.adobe.com/NnE95pgNlZdFfexC63pqCkvJuXaHzNOUJkUTyC9PT7g
+TQID: 'https://experienceleague.adobe.com/NnE95pgNlZdFfexC63pqCkvJuXaHzNOUJkUTyC9PT7g'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
   - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
+    internal-label: ''
   - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
+    internal-label: ''
   - id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4
-    internal-label: Assurance
+    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
     internal-label: Metadata

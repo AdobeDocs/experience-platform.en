@@ -4,7 +4,7 @@ title: Pinterest event forwarding extension
 description: This Adobe Experience Platform event forwarding extension allows you to ingest events into Pinterest for your business requirements.
 last-substantial-update: 2023-04-27T00:00:00.000Z
 exl-id: 44f38a9b-0a28-4b51-bead-ee460eb8405e
-TQID: https://experienceleague.adobe.com/oBoefrt3wDx3GSXT-nFdb6L5aoVBUvrX-dJATsjaaFw
+TQID: 'https://experienceleague.adobe.com/oBoefrt3wDx3GSXT-nFdb6L5aoVBUvrX-dJATsjaaFw'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -26,21 +26,27 @@ feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
     internal-label: Implementation
   - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
 subfeature_v2:
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-    internal-label: Event forwarding
+    internal-label: ''
   - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
+    internal-label: ''
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation

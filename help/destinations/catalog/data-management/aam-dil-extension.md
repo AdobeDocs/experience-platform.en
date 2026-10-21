@@ -3,33 +3,37 @@ keywords: Audience Manager DIL extension;destination audience manager;dil extens
 title: Audience Manager DIL extension
 description: The Audience Manager DIL extension is a Data Management Platform (DMP) destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 exl-id: 7e1099de-0650-4ee2-b746-721afe194097
-TQID: https://experienceleague.adobe.com/Bh74ytEjMwhanOa1hUaGZxmOx2dtZm8N9sf9Np5o69s
+TQID: 'https://experienceleague.adobe.com/Bh74ytEjMwhanOa1hUaGZxmOx2dtZm8N9sf9Np5o69s'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
+    internal-label: ''
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
   - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
+    internal-label: ''
   - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
+    internal-label: ''
   - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: ''
   - id: f5efb499-54f9-432b-ac5c-599dbac103af
-    internal-label: Data management
+    internal-label: ''
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-    internal-label: Data elements
+    internal-label: Data collection tags data elements
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation

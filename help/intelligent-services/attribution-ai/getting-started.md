@@ -4,13 +4,18 @@ feature: Attribution AI
 title: Getting Started in Attribution AI
 description: The following guides require an understanding of the various Adobe Experience Platform services involved with using Attribution AI. Before beginning the tutorials, please review the following documents.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-TQID: https://experienceleague.adobe.com/mQIUSi-d-vHHbd7rLsB1-peyf4QrwSP5lgH0RckiDX0
+TQID: 'https://experienceleague.adobe.com/mQIUSi-d-vHHbd7rLsB1-peyf4QrwSP5lgH0RckiDX0'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+    internal-label: ''
+  - id: f5a6b7c8-5003-4003-9003-500000000003
+    internal-label: Services
+subfeature_v2:
+  - id: b99a0135-be89-4dd1-b66a-c313ae5278fa
+    internal-label: Attribution AI
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
