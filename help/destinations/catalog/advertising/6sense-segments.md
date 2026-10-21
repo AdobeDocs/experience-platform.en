@@ -1,9 +1,9 @@
 ---
-title: "[!DNL 6sense Segments Connection]"
+title: "[!DNL 6sense Account] connection"
 description: "Activate account audiences to [!DNL 6sense] as segments for ad campaigns, AI email, and other revenue activations."
 ---
 
-# [!DNL 6sense Segments Connection] {#6sense-segments}
+# [!DNL 6sense Account] connection {#6sense-segments}
 
 >[!AVAILABILITY]
 >
@@ -23,7 +23,7 @@ For more information, read the [[!DNL 6sense] documentation for this integration
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL 6sense Segments Connection] destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL 6sense Account] destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Advertising and campaign activation {#advertising-campaign-activation}
 
@@ -56,7 +56,7 @@ The connection requests the following [!DNL 6sense] scopes:
 
 ## Supported identities {#supported-identities}
 
-[!DNL 6sense Segments Connection] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
+[!DNL 6sense Account] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 | Target Identity | Description | Considerations |
 |---|---|---|

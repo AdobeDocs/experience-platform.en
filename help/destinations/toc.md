@@ -74,7 +74,7 @@ debug: true
         * [Experience Platform audience sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
         * [Federated Audience Composition connection](https://www.adobe.com/go/destinations-federated-audience-composition)
     * Advertising destinations{#advertising}
-        * [6sense Segments Connection](./catalog/advertising/6sense-segments.md)
+        * [6sense Account connection](./catalog/advertising/6sense-segments.md)
         * [Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
         * [Acxiom Real ID&trade; Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
         * [Advertising destinations overview](./catalog/advertising/overview.md)
