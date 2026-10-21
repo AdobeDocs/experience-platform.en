@@ -1,23 +1,18 @@
 ---
 title: When to activate
 description: Learn about the When to activate feature for streaming destinations and how to use it to control which profile changes trigger exports to your destinations.
-badgeBeta: label="Beta" type="Informative"
 nudge: true
 ---
 
 # When to activate
 
->[!IMPORTANT]
->
->This feature is currently in beta. The functionality and documentation are subject to change. This feature is also only available on-demand. Contact your Adobe representative for access.
+By default, [!DNL Adobe Experience Platform] exports data to a destination whenever any change occurs to a profile: an *attribute update*, an *audience qualification or disqualification*, or an *identity change*. This can generate a large volume of exports, many of which carry no meaningful change for downstream systems.
+
+With the **[!UICONTROL When to activate]** feature, you get fine-grained control over which types of profile changes trigger exports for a given destination dataflow. You can enable or disable each trigger type independently. Disabling a trigger type suppresses exports caused only by that type of change.
 
 >[!NOTE]
 >
 >For detailed information about how each profile change type triggers activation, see [Profile export behavior](/help/destinations/how-destinations-work/profile-export-behavior.md).
-
-By default, [!DNL Adobe Experience Platform] exports data to a destination whenever any change occurs to a profile: an *attribute update*, an *audience qualification or disqualification*, or an *identity change*. This can generate a large volume of exports, many of which carry no meaningful change for downstream systems.
-
-With the **[!UICONTROL When to activate]** feature, you get fine-grained control over which types of profile changes trigger exports for a given destination dataflow. You can enable or disable each trigger type independently. Disabling a trigger type suppresses exports caused only by that type of change.
 
 ## Supported destination types {#supported-destinations}
 
