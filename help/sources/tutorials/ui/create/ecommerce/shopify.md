@@ -3,13 +3,10 @@ keywords: Experience Platform;home;popular topics;shopify;Shopify
 title: Create a Shopify  Source Connection in the UI
 description: Learn how to create a Shopify source connection using the Adobe Experience Platform UI.
 exl-id: 527cac95-3d9a-4089-98e4-66d746641b85
-TQID: https://experienceleague.adobe.com/5ZVrDrQ40RcxR0poFHhh19VhzzrVU41yYlnBzI7hhNc
+TQID: 'https://experienceleague.adobe.com/5ZVrDrQ40RcxR0poFHhh19VhzzrVU41yYlnBzI7hhNc'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

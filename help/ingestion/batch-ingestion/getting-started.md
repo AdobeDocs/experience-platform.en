@@ -4,13 +4,10 @@ title: Getting Started with the Data Ingestion API
 type: Documentation
 description: The Data Ingestion API getting started guide outlines the key concepts and basic functionality that you need to know before you can begin to ingest data into Experience Platform using APIs.
 exl-id: 0653de2b-3268-478b-a23f-c458b6d3df7c
-TQID: https://experienceleague.adobe.com/JJbItfMFua4vz4ofzCKm6NiMn1apkkNTZDqsgeM-MyM
+TQID: 'https://experienceleague.adobe.com/JJbItfMFua4vz4ofzCKm6NiMn1apkkNTZDqsgeM-MyM'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

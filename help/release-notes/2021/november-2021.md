@@ -2,13 +2,10 @@
 title: Adobe Experience Platform Release Notes November 2021
 description: The November 2021 release notes for Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-TQID: https://experienceleague.adobe.com/ywhIZNdw6os2TxG5QAvpVnDMtGUQYP-wIc5ly-v5I8M
+TQID: 'https://experienceleague.adobe.com/ywhIZNdw6os2TxG5QAvpVnDMtGUQYP-wIc5ly-v5I8M'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

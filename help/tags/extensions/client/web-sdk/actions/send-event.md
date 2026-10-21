@@ -2,7 +2,7 @@
 title: Send event
 description: Send data to the Adobe Experience Platform Edge Network.
 exl-id: 4ac7750e-48ab-4eb6-873d-bb2556dbf788
-TQID: https://experienceleague.adobe.com/wigmBsoROqaLGEVNIgAn2b6BJ3lhAAKFBW9cj12iZZs
+TQID: 'https://experienceleague.adobe.com/wigmBsoROqaLGEVNIgAn2b6BJ3lhAAKFBW9cj12iZZs'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -23,19 +23,11 @@ feature_v2:
     internal-label: Implementation
   - id: d556b755-390a-43f0-be32-a08cf6236126
     internal-label: Configuration
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
   - id: b3a93754-a8b8-46eb-9421-7eccaeeb3dff
     internal-label: Best practices
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

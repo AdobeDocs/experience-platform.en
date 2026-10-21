@@ -4,13 +4,19 @@ solution: Experience Platform
 title: Web Information Data Type
 description: Learn about the web information Experience Data Model (XDM) data type.
 exl-id: bfb00835-5908-4baf-af2a-6d845710e340
-TQID: https://experienceleague.adobe.com/8VirJ2uuFLnH0-JFMtcqXs7mkhSTcD1Skr1L3VM5QsM
+TQID: 'https://experienceleague.adobe.com/8VirJ2uuFLnH0-JFMtcqXs7mkhSTcD1Skr1L3VM5QsM'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # [!UICONTROL Web information] data type
 

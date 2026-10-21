@@ -6,12 +6,18 @@ title: Attribution AI error troubleshooting
 description: Find answers to common errors in Attribution AI.
 type: Documentation
 exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
-TQID: https://experienceleague.adobe.com/USuhMP2k6AWQKAh27k4KPSQ99WDws5VLydTy5w1WfKc
+TQID: 'https://experienceleague.adobe.com/USuhMP2k6AWQKAh27k4KPSQ99WDws5VLydTy5w1WfKc'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
   - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
     internal-label: Real-Time Customer Data Platform
+feature_v2:
+  - id: f5a6b7c8-5003-4003-9003-500000000003
+    internal-label: Services
+subfeature_v2:
+  - id: b99a0135-be89-4dd1-b66a-c313ae5278fa
+    internal-label: Attribution AI
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

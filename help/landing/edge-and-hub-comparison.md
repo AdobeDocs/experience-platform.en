@@ -3,18 +3,13 @@ solution: Experience Platform
 title: Edge Network and hub comparison
 description: Learn about the different processing paths that are available to use on Adobe Experience Platform.
 exl-id: 3e9c63d2-c798-44b4-870d-bf1551f29690
-TQID: https://experienceleague.adobe.com/wkBilzxWropja9A0TBo1oNY8rdVax8rmlDbTQjE-jlE
+TQID: 'https://experienceleague.adobe.com/wkBilzxWropja9A0TBo1oNY8rdVax8rmlDbTQjE-jlE'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: a230274e-7e6e-49eb-b817-514495a710ac
-    internal-label: query service
+    internal-label: Data collection tags
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
     internal-label: Event forwarding
 role_v2:

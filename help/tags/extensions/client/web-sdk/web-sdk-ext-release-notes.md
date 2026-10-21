@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK Extension Release Notes
 description: Adobe Experience Platform Web SDK Tag Extension
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-TQID: https://experienceleague.adobe.com/eilTfCs5SF-W1P4Ik0HN5Biu8uVuWyy7-wJZ4CLrA9I
+TQID: 'https://experienceleague.adobe.com/eilTfCs5SF-W1P4Ik0HN5Biu8uVuWyy7-wJZ4CLrA9I'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -23,8 +23,6 @@ product_v2:
 feature_v2:
   - id: a8b0238e-1d43-4679-a3b4-5ba1bad83baa
     internal-label: Implementation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: c814092e-2730-45e8-a12d-e084529f52cb
     internal-label: Destinations
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
@@ -33,10 +31,8 @@ feature_v2:
     internal-label: Authentication
   - id: d556b755-390a-43f0-be32-a08cf6236126
     internal-label: Configuration
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
     internal-label: Implementations
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
@@ -44,8 +40,6 @@ feature_v2:
 subfeature_v2:
   - id: d2e8a157-b3b0-4143-9ff3-809bf400be56
     internal-label: Sandboxes
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
   - id: df312454-73c4-43f6-a90e-18f5043f074c
     internal-label: Tags
   - id: e992d880-33bc-4949-a648-aa7d410276cd

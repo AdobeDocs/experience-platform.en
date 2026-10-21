@@ -2,28 +2,10 @@
 title: Connect Adobe Analytics To Experience Platform
 description: Learn how to bring your Adobe Analytics report suite data to Experience Platform
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-TQID: https://experienceleague.adobe.com/9bCvEqM-V97tG839lRQRhizF-O65xfwcg-8UlY-BxRE
+TQID: 'https://experienceleague.adobe.com/9bCvEqM-V97tG839lRQRhizF-O65xfwcg-8UlY-BxRE'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: e0c8953a-a203-4291-bef3-3560160d3041
-    internal-label: Get started
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

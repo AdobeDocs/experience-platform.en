@@ -1,6 +1,12 @@
 ---
 title: Multi-Entity Segmentation with B2B Segmentation
 description: Learn how to author an audience that is evaluated using streaming segmentation that contains a B2B entity.
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 
 # Multi-entity streaming segmentation

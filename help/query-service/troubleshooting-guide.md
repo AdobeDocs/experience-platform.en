@@ -4,18 +4,11 @@ solution: Experience Platform
 title: Query Service and Data Distiller frequently asked questions
 description: This document contains common questions and answers related to Query Service and Data Distiller. Topics include exporting data, third-party tools, PSQL errors, and XDM row-validation errors.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-TQID: https://experienceleague.adobe.com/stm9X3x6ZCk7ZRj3ghtDdqbG-2UBWLlfJ5-IyLllcyI
+TQID: 'https://experienceleague.adobe.com/stm9X3x6ZCk7ZRj3ghtDdqbG-2UBWLlfJ5-IyLllcyI'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-    internal-label: Monitoring
   - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
     internal-label: License usage
   - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3

@@ -1,6 +1,9 @@
 ---
 title: Best Practices for Dynamic Datastream Configurations
-description: "Learn best practices for designing, organizing, and operating [!DNL Dynamic Datastream Configuration] rules to ensure reliable event routing and system performance."
+description: Learn best practices for designing, organizing, and operating [!DNL Dynamic Datastream Configuration] rules to ensure reliable event routing and system performance.
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 
 # Best practices for [!DNL Dynamic Datastream Configurations]

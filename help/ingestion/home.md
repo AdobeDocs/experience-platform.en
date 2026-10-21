@@ -2,36 +2,24 @@
 title: Data Ingestion Overview
 description: This document introduces the three main ways in which data is ingested into Experience Platform, with links to their respective overview documentation for more detailed information.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-TQID: https://experienceleague.adobe.com/iTttvMpFM54JSco2OSY5G8vS4IyIvyh8SgOH9frpzqw
+TQID: 'https://experienceleague.adobe.com/iTttvMpFM54JSco2OSY5G8vS4IyIvyh8SgOH9frpzqw'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: a230274e-7e6e-49eb-b817-514495a710ac
-    internal-label: query service
+    internal-label: Data collection tags
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
     internal-label: Sources
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
-  - id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13
-    internal-label: Data prep
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: d1a87129-ba05-4f15-98b1-233618f1774a
-    internal-label: Data ingestion
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
     internal-label: Event forwarding
   - id: de9975b2-c43a-4287-9698-4f4cad92b83f
     internal-label: Schemas
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: Datastreams
+subfeature_v2:
+  - id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13
+    internal-label: Datastreams data prep
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

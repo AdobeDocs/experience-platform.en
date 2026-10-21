@@ -3,7 +3,7 @@ title: Amazon Conversions API Extension Overview
 description: Share website interactions directly with Amazon using the Adobe Experience Platform web events API
 last-substantial-update: 2025-04-17T00:00:00.000Z
 exl-id: 20339b6e-15e3-4d0e-8870-a3a85b7e66fd
-TQID: https://experienceleague.adobe.com/i7qqnDNojOFDHyp0-XJdwS7iB9lMDvEgBaSzbXZhhp8
+TQID: 'https://experienceleague.adobe.com/i7qqnDNojOFDHyp0-XJdwS7iB9lMDvEgBaSzbXZhhp8'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -20,24 +20,19 @@ product_v2:
 feature_v2:
   - id: a075b2c1-7748-4328-b7f6-343aa314616a
     internal-label: Campaigns
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-    internal-label: Monitoring
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting

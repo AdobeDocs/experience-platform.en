@@ -2,13 +2,10 @@
 title: LiveRamp - Distribution Connection
 description: Learn how to use the LiveRamp - Distribution connector to orchestrate and activate audiences previously onboarded into LiveRamp, to downstream advertising destinations.
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-TQID: https://experienceleague.adobe.com/gwYN-yDqT8yZnSE4SHEfRIjWCw2dEC45Bef8Sde-SOQ
+TQID: 'https://experienceleague.adobe.com/gwYN-yDqT8yZnSE4SHEfRIjWCw2dEC45Bef8Sde-SOQ'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

@@ -2,7 +2,7 @@
 title: Configure top and bottom of page events in Web SDK
 description: This article explains how to use top and bottom of page events in Web SDK.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-TQID: https://experienceleague.adobe.com/eKp-6NGGcWLlW1ZwCQfjnU9ZpIDpcgrW-jNXdxtNBqI
+TQID: 'https://experienceleague.adobe.com/eKp-6NGGcWLlW1ZwCQfjnU9ZpIDpcgrW-jNXdxtNBqI'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -18,7 +18,7 @@ feature_v2:
   - id: b3f03848-ae12-48b2-8aab-cad18567eb32
     internal-label: Metrics
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
   - id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
     internal-label: Events

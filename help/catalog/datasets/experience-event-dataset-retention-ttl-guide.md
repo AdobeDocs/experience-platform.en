@@ -2,32 +2,18 @@
 title: Manage Experience Event Dataset Retention in the Data Lake using TTL
 description: Learn how to evaluate, set, and manage Experience Event Dataset Retention in the data lake using Time-To-Live (TTL) configurations with Adobe Experience Platform APIs. This guide explains how TTL row-level expiration supports data retention policies, optimizes storage efficiency, and ensures effective data lifecycle management. It also provides use cases and best practices to help you apply TTL effectively.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-TQID: https://experienceleague.adobe.com/qSbHu9ejtvLpiisdp5lrGXXTJaa4IQo7xLlkx9lHeJU
+TQID: 'https://experienceleague.adobe.com/qSbHu9ejtvLpiisdp5lrGXXTJaa4IQo7xLlkx9lHeJU'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-    internal-label: Troubleshooting
-  - id: e0c8953a-a203-4291-bef3-3560160d3041
-    internal-label: Get started
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
   - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
     internal-label: License usage
   - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
     internal-label: Dashboards
+subfeature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
