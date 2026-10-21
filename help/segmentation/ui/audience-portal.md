@@ -440,6 +440,8 @@ Enabling your audiences for scheduled evaluation can be done using the UI or the
 >[!NOTE]
 >
 >Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for [!DNL XDM Individual Profile]. If your organization has more than five merge policies for [!DNL XDM Individual Profile] within a single sandbox environment, you will not be able to use scheduled evaluation.
+>
+>Additionally, enabling scheduled segmentation applies for **both** people-based and account-based audiences.
 
 Schedules can currently only be created using the API. For detailed steps on creating, editing, and working with schedules using the API, please follow the tutorial for evaluating and accessing segmentation results, specifically the section on [scheduled evaluation using the API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 

@@ -10,6 +10,12 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.36.1 - October 14, 2026
+
+- Events sent with [`documentUnloading`](/help/collection/js/commands/sendevent/documentunloading.md) set to `true` now use `keepalive` when they are sent to the `interact` endpoint using `fetch`, such as before an identity is established. This change lets the request finish even if the visitor navigates away from the page. If the browser rejects the `keepalive` request because the page's in-flight `keepalive` data would exceed 64 KB, Web SDK retries it as a standard `fetch` request.
+- Improved debug logging for requests sent using the browser's [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) method, such as `sendEvent` calls with `documentUnloading` set to `true`. Because browsers don't return a response for `sendBeacon` requests, the log no longer shows "Received response with status code 204". It now states that the request was sent using `sendBeacon` and that no response is available. These requests might appear as canceled in browser developer tools if the visitor navigates away from the page.
+- Fixed an issue where event history operations from Adobe Journey Optimizer dropped the `iam.action` field. Inserted events now include this field, so they are recorded in the same event history entry as the matching Web SDK interaction, such as an in-app message `clicked` interaction. Historical rule conditions that filter on an action now count these events correctly.
+
 ## Version 2.36.0 - October 7, 2026
 
 - Brand Concierge can now include provided surfaces with a conversation request.
@@ -128,7 +134,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **Fixes and improvements**
 
 - Fixed an issue with in-app messages where the custom styling was not applied correctly.
-- Changed the format of event history. This will cause in-app messages and content cards to be re-shown as the old history data is deleted.
+- Changed the format of event history. This change will cause in-app messages and content cards to be re-shown as the old history data is deleted.
 - Fixed an issue where propositions would be reapplied in SPA use cases.
 - Fixed an issue with click tracking on shadow DOM elements.
 
@@ -136,7 +142,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-- You can now use the Web SDK NPM package to create custom Web SDK builds and select only the library components that you need. This leads to a reduces library size and optimized loading times. See the documentation on how to [create a custom Web SDK build using the NPM package](install/create-custom-build.md).
+- You can now use the Web SDK NPM package to create custom Web SDK builds and select only the library components that you need. This capability leads to a reduced library size and optimized loading times. See the documentation on how to [create a custom Web SDK build using the NPM package](install/create-custom-build.md).
 - The [`getIdentity`](commands/getidentity.md) command now automatically reads the ECID directly from the `kndctr` identity cookie. If you call `getIdentity` with the `ECID` namespace, and there is already an identity cookie, Web SDK no longer makes a request to the Edge Network to get the identity. It now reads the identity from the cookie.
 
 **Fixes and improvements**
@@ -306,7 +312,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.13.1 - October 13, 2022
 
-- Fixed an issue where visitor migration does not work if window.Visitor is defined after configure. This is especially an issue when running with Adobe Tags.
+- Fixed an issue where visitor migration does not work if window.Visitor is defined after configure. This issue is especially problematic when running with Adobe Tags.
 - Fixed an issue where `device.screenWidth` and `device.screenHeight` were populated as strings in some environments.
 
 ## Version 2.13.0 - September 28, 2022
@@ -315,7 +321,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 - Added support for Page by Page Full Migration. The Adobe Target profile will now be preserved as a visitor moves between at.js and Web SDK pages.
 - Added configurable support for [high entropy User-Agent Client Hints](../use-cases/client-hints.md).
-- Added support for the [`applyResponse`](commands/applyresponse.md) command. This enables hybrid personalization via the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/).
+- Added support for the [`applyResponse`](commands/applyresponse.md) command. This command enables hybrid personalization via the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/).
 - QA mode links now work across multiple pages.
 
 **Fixes and improvements**
@@ -328,7 +334,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.12.0 - June 29, 2022
 
-- Change the requests to the Edge Network to use the `cluster` cookie location hint as part of the URL. This ensures that users who change their location (e.g. through a VPN or driving with mobile devices, etc) mid session hit the same edge and have the same personalization profile.
+- Change the requests to the Edge Network to use the `cluster` cookie location hint as part of the URL. This change ensures that users who change their location (for example, through a VPN or while driving with a mobile device) mid-session hit the same edge and have the same personalization profile.
 - Stringify configured functions in the getLibraryInfo command response.
 
 ## Version 2.11.0 - June 13, 2022
@@ -361,7 +367,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 - Removed console warning when no `eventType` is present.
 - Fixed an issue where the `propositions` property was only returned from a `sendEvent` command when experiences were requested or retrieved from the cache. The `propositions` property will now always be defined as an array.
 - Fixed an issue where hidden containers were not shown when there was an error returned from the Edge Network.
-- Fixed an issue where the interact events were not being counted in Adobe Target. This was fixed by adding the view name to the XDM at web.webPageDetails.viewName.
+- Fixed an issue where the interact events were not being counted in Adobe Target. This issue was fixed by adding the view name to the XDM at web.webPageDetails.viewName.
 - Fix broken documentation links in console messages.
 
 ## Version 2.8.0 - January 19, 2022

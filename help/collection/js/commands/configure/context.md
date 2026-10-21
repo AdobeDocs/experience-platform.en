@@ -63,17 +63,17 @@ The **`"environment"`** keyword collects information about the user's browser.
 
 ### Place context
 
-The **`"placeContext"`** keyword collects information about the user's location.
+The **`"placeContext"`** keyword collects the user's local time and time zone from the browser's clock and time zone settings.
 
 | Dimension | Description | XDM path | Example value |
 | --- | --- | --- | --- |
-| Local time | Local timestamp for the end user in simplified [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format, without a time zone offset. | [`xdm.placeContext.localTime`](/help/xdm/data-types/place-context.md) | `YYYY-07-04T12:08:56` |
-| Local timezone offset | The number of minutes that the user's local time is offset from UTC. | [`xdm.placeContext.localTimezoneOffset`](/help/xdm/data-types/place-context.md) | `360` |
-| Country code | The country code of the end user. | [`xdm.placeContext.geo.countryCode`](/help/xdm/data-types/geo.md) | `US` |
-| State province | The state province code of the end user. | [`xdm.placeContext.geo.stateProvince`](/help/xdm/data-types/geo.md) | `CA` |
-| Latitude | The latitude of the end user location. | [`xdm.placeContext.geo._schema.latitude`](/help/xdm/data-types/geo-coordinates.md) | `37.3307447` |
-| Longitude | The longitude of the end user location. | [`xdm.placeContext.geo._schema.longitude`](/help/xdm/data-types/geo-coordinates.md) | `-121.8945965` |
-| IANA time zone | The IANA time zone of the end user. Included in library versions 2.32.0 or greater. | [`xdm.placeContext.ianaTimezone`](/help/xdm/data-types/place-context.md) | `America/Denver` |
+| Local time | Local timestamp for the end user in extended [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format, including milliseconds and the UTC offset. Experience Platform converts this value to UTC at ingestion and does not retain the offset; use the local timezone offset or IANA time zone to determine the user's local time. | [`xdm.placeContext.localTime`](/help/xdm/data-types/place-context.md) | `YYYY-07-04T12:08:56.123-06:00` |
+| Local timezone offset | The number of minutes between the user's local time and UTC, using the same convention as JavaScript's [`Date.getTimezoneOffset()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset). Time zones behind UTC are positive and time zones ahead of UTC are negative. This value reflects daylight saving time when applicable. | [`xdm.placeContext.localTimezoneOffset`](/help/xdm/data-types/place-context.md) | `360` |
+| IANA time zone | The IANA time zone of the end user, as reported by the browser. The Web SDK omits this field if the browser does not report a time zone. Included in library versions 2.32.0 or greater. | [`xdm.placeContext.ianaTimezone`](/help/xdm/data-types/place-context.md) | `America/Denver` |
+
+>[!NOTE]
+>
+>The Web SDK does not collect geolocation data such as country, state or province, city, postal code, latitude, or longitude. Instead, the Edge Network populates `xdm.placeContext.geo` fields based on the visitor's IP address when you enable **[!UICONTROL Geo Lookup]** in your datastream. Geolocation lookup fields rely on the `"placeContext"` keyword, so keep it in the `context` array if you use this feature. See [Configure geolocation and network lookup](/help/datastreams/configure.md#geolocation-network-lookup) for more information.
 
 ### Timestamp
 

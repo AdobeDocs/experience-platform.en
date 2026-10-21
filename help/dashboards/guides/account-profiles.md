@@ -39,6 +39,8 @@ The profile data in the snapshot shows the data exactly as it appears at the spe
 >[!NOTE]
 >
 >Any changes or updates made to the data since the snapshot was taken will not be reflected in the dashboard until the next snapshot is taken.
+>
+>Additionally, account profiles may not immediately appear in the dashboard after data ingestion, since the account lookup store needs to be populated. In a newly configured sandbox, you can trigger this by enabling scheduled segmentation. To enable scheduled segmentation, open Audience Portal and enable the **Schedule all audiences** toggle. For more information, read the [Audience Portal overview](/help/segmentation/ui/audience-portal.md#enable-scheduled-segmentation).
 
 ## Explore the [!UICONTROL Account Profiles] dashboard {#explore}
 
