@@ -34,18 +34,155 @@ IMAGE
 | Send Notification | Sends a notification to users on Experience Platform. For more information, read the [send notification section](#send-notification). |
 | Wait | Makes the process wait for a specified amount of time. For more information, read the [wait section](#wait). |
 
-### Ingest data {#ingest-data}
+For more information about the available tasks, read the [tasks section](#tasks).
 
-### Run Data Distiller {#run-data-distiller}
+After you add tasks to the canvas, you can connect the tasks to chain them together for the process. To connect the tasks, select the plus icon that appears on the task while it's close to the task that you want to connect the task to.
 
-### Verify Profile ingestion {#verify-profile-ingestion}
+IMAGE
 
-### Run Segmentation {#run-segmentation}
+Within the canvas, you can also select from the following options to manipulate the canvas itself.
 
-### Run Profile export {#run-profile-export}
+| Option | Description |
+| ------ | ----------- |
+| Arrange Nodes ICON | Arranges the nodes, so they're more neatly arranged. |
+| Show Grid ICON | Shows the grid pattern in the canvas. |
+| Snap to Grid ICON | Snaps the nodes on to the grid. |
+| Download canvas image ICON | Takes a screenshot of the canvas and downloads it to your device. |
+| Zoom out ICON | Zooms out on the canvas. |
+| Zoom in ICON | Zooms in on the canvas. |
 
-### Trigger activation {#trigger-activation}
+IMAGE
 
-### Send notification {#send-notification}
+After adding all the tasks to the canvas, you can **Save** the process. Once you save the process, you can either immediately run the process or create a schedule for the process to run for.
 
-### Wait {#wait}
+IMAGE
+
+If you select **Run**, you can set the required inputs for the process to run. After inserting the inputs, select **Run** to start the process.
+
+IMAGE
+
+>[!NOTE]
+>
+>For more information about cron schedules, read the [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation.
+
+If you select **Schedule**, the scheduling popover appears. On this screen, you can set the cron schedule for the process, as well as the required inputs for the process to run. For the cron schedule, you can open the dropdown to see a list of supported defaults.
+
+IMAGE
+
+Once you've added all the information, select **Create schedule** to create the schedule.
+
+IMAGE
+
+### Tasks {#tasks}
+
+This section lists out all the available tasks that you can use with Process Manager. When adding a task to the canvas, the following settings are common to all tasks:
+
+| Setting | Description |
+| ------- | ----------- |
+| Task ID | The ID of the task. |
+| Task Type | The type of task. |
+| Max attempts | The maximum number of attempts to retry the task if it fails. |
+| Backoff coefficient | The value that sets how fast the retry interval increases. For example, setting this value to `2.0` means that the amount of time the system will take to retry the task will double between every failure. |
+
+#### Ingest data {#ingest-data}
+
+The **Ingest data** task lets you trigger a flow ingestion run into Experience Platform. When you use this task, you can choose which source and flow you want to ingest data from.
+
+| Setting | Description |
+| ------- | ----------- |
+| Source | The name of the source that you want to ingest data from. You can select which source you want to choose from the dropdown. The number in parenthesis represents the number of available flows in the source. |
+| Flow | The name of the flow that you want to ingest data from. |
+| Flow ID | The ID of the flow that you want to ingest data from. This field is automatically filled out when you choose the flow in the previous dropdown. |
+| startTime | The start time for the flow run. If you set the option to **Relative**, you can set the start time to be relative to the full process. For example, if you want the flow run to start three minutes after the task runs, you can set this value to `now+3m`.<br/><br/>If you set the option to **Absolute**, you can use the calendar to set the date. |
+| windowStartTime | The start time for when data will be pulled for the flow. If you set the option to **Relative**, you can set the start time to be relative to the full process. For example, if you want the flow to look for data from 24 hours before the task runs, you can set this value to `now-24h`.<br/><br/>If you set the option to **Absolute**, you can use the calendar to set the date. |
+| windowEndTime | The end time for when data will be retrieved up to for the flow. If you set the option to **Relative**, you can set the start time to be relative to the full process. For example, if you want the flow to look for data up until the task runs, you can set this value to `now`.<br/><br/>If you set the option to **Absolute**, you can use the calendar to set the date. |
+
+For relative times, `now` represents no offset to the time. You can either use `+` or `-` to add or subtract from this zero offset. Supported units include `s` for seconds, `m` for minutes, `h` for hours, and `d` for days. 
+
+#### Run Data Distiller {#run-data-distiller}
+
+The **Run Data Distiller** task lets you run Data Distiller template. When you use this task, you choose the template as well as the associated parameters related to the template.
+
+| Setting | Description |
+| ------- | ----------- |
+| templateId | The template ID for the Data Distiller |
+
+#### Verify Profile ingestion {#verify-profile-ingestion}
+
+The **Verify Profile ingestion** task lets you verify if the ingestion from the **Ingest data** task has successfully completed. When you use this task, you can choose which batch ID you want to verify has completed.
+
+| Setting | Description |
+| ------- | ----------- |
+| batchId | The ID of the batch you want to verify has been ingested. If you chain this task with a previous **Ingest data** task, this value is automatically filled. |
+| maxDurationSeconds | The maximum amount of time, in seconds, that the task should wait for verification. By default, this is 86,400 seconds (24 hours). |
+| comment | An optional description that you can use to describe the task. |
+
+#### Run Segmentation {#run-segmentation}
+
+The **Run Segmentation** task lets you run a segmentation job on the specified segment definitions. 
+
+| Setting | Description |
+| ------- | ----------- |
+| segmentIds | A dropdown that lists the available segment definitions in your organization and sandbox. You can select multiple segment definitions to be added to the task. |
+| maxDurationSeconds | The maximum amount of time, in seconds, that the task should wait for the segmentation job to finish running. By default, this is 86,400 seconds (24 hours). |
+| comment | An optional description that you can use to describe the task. |
+
+#### Run Profile export {#run-profile-export}
+
+The **Run Profile export** task lets you run a Profile export job on the specified segment definitions. When you use this task, you can choose which segment definitions you want to export, what merge policy you want to use, as well as which dataset you want to export the segment definitions to.
+
+| Setting | Description |
+| ------- | ----------- |
+| mergePolicyId | The ID of the merge policy you want to use for the Profile export job. |
+| segmentIds |  A dropdown that lists the available segment definitions in your organization and sandbox. You can select multiple segment definitions to be added to the task. |
+| datasetId | The ID of the dataset that you want to export the segment definitions to. |
+| maxDurationSeconds | The maximum amount of time, in seconds, that the task should wait for the export job to finish running. By default, this is 86,400 seconds (24 hours). |
+| comment | An optional description that you can use to describe the task. |
+
+#### Trigger activation {#trigger-activation}
+
+The **Trigger activation** task lets you activate either audiences or datasets to a specified destination. The available settings differ, depending on the Activation Type selected.
+
+If you select **Dataset**, the following settings are available:
+
+| Setting | Description |
+| ------- | ----------- |
+| Destination flowId | The flow ID of the destination you want to export to. |
+| Destination datasetId | The ID of the dataset you want to export to the destination. |
+| comment | An optional description that you can use to describe the task. |
+
+If you select **Audience**, the following settings are available:
+
+| Setting | Description |
+| ------- | ----------- |
+| Source datasetId | The ID of the dataset  |
+| Source batchId | ??? |
+| Destination flowId | The flow ID of the destination you want to export to. |
+| Destination segmentId | The IDs of the segment definitions you want to export to the destination. |
+| comment | An optional description that you can use to describe the task. |
+
+#### Send notification {#send-notification}
+
+The **Send notification** task lets you send a notification to specified users on Experience Platform.
+
+| Setting | Description |
+| ------- | ----------- |
+| userIds | The IDs of the users you want to send the notification to. |
+| groupIds | The IDs of the groups you want to send the notification to. |
+| comment | An optional description that you can use to describe the task. |
+| sendToOrg | A boolean that determines if the notification is sent to the entire organization. If userIds or groupIds contain any values, this value **cannot** be set to true. |
+| message | The notification message you want to send. |
+| failOnError | A boolean that determines if the notification should send an error if it fails to send. |
+
+#### Wait {#wait}
+
+The **Wait** task causes the process execution to be paused for the specified amount of time.
+
+| Setting | Description |
+| ------- | ----------- |
+| duration | The amount of time that the process should wait, as written in the ISO-8601 format. For example, if you want the process to wait 10 seconds, you'd set this value as `PT10S`. Supported values include `S` for seconds, `M` for minutes, and `H` for hours. |
+| comment | An optional description that you can use to describe the task. |
+
+## Runs {#runs}
+
+list of runs
