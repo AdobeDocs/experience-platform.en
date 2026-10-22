@@ -36,7 +36,7 @@ To understand the difference between connections and extensions, see [Connection
 
 ### Connections {#connections}
 
-* [6sense Segments connection](6sense-segments.md)
+* [6sense Account connection](6sense-segments.md)
 * [(Beta) Acxiom Audience Distribution](acxiom-audience-connection.md)
 * [(Beta) Acxiom Real ID Audience Connection](acxiom-real-id-audience-connection.md)
 * [Adobe Advertising DSP connection](adobe-advertising-dsp-connection.md)

@@ -70,7 +70,7 @@ Use destinations to activate audiences and export data from Experience Platform 
 
 | Feature | Description |
 | --- | --- |
-| [!DNL 6sense Segments] | Activate account audiences from [!DNL Adobe Real-Time CDP B2B Edition] to [!DNL 6sense] as API-origin segments. Use the segments for ad campaigns, AI email, and account prioritization. You need a [!DNL 6sense] account with Segments API access enabled. |
+| [!DNL 6sense Account] | Activate account audiences from [!DNL Adobe Real-Time CDP B2B Edition] to [!DNL 6sense] as API-origin segments. Use the segments for ad campaigns, AI email, and account prioritization. You need a [!DNL 6sense] account with Segments API access enabled. |
 
 {style="table-layout:auto"}
 

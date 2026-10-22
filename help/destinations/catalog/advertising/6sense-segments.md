@@ -1,9 +1,9 @@
 ---
-title: "[!DNL 6sense Segments] Connection"
+title: "[!DNL 6sense Account] Connection"
 description: "Learn how to activate account audiences from Real-Time CDP B2B Edition to [!DNL 6sense] as segments for ad campaigns, AI email, reporting, and account prioritization."
 ---
 
-# [!DNL 6sense Segments] connection {#sixsense-segments}
+# [!DNL 6sense Account] connection {#sixsense-account}
 
 [!DNL 6sense] is a go-to-market (GTM) intelligence platform that uses AI to identify in-market accounts and run campaigns against them. Use this destination to send [account audiences](/help/segmentation/types/account-audiences.md) from [!DNL Adobe Experience Platform] to [!DNL 6sense] as segments. You do not need to export CSV files manually.
 
@@ -23,7 +23,7 @@ For more information, read the [6sense documentation for this integration](https
 
 ## Use cases {#use-cases}
 
-Use the following examples to understand when to use the [!DNL 6sense Segments] destination.
+Use the following examples to understand when to use the [!DNL 6sense Account] destination.
 
 ### Advertising and campaign activation {#advertising-campaign-activation}
 
@@ -56,7 +56,7 @@ The connection requests the following [!DNL 6sense] scopes:
 
 ## Supported identities {#supported-identities}
 
-The [!DNL 6sense Segments] destination supports activating the identities in the following table. Learn more about [identities](/help/identity-service/features/namespaces.md).
+The [!DNL 6sense Account] destination supports activating the identities in the following table. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 | Target identity | Description | Considerations |
 |---|---|---|
@@ -126,7 +126,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the following required and optional fields. An asterisk next to a field in the UI indicates that the field is required.
 
-![The Configure new destination page in Experience Platform, with a connected 6sense Segments account and the Name, Description, and Segment Name Prefix fields filled in under Destination details.](../../assets/catalog/advertising/6sense-segments/6sense-segments-destination-details.png "Fill in destination details"){zoomable="yes"}
+![The Configure new destination page in Experience Platform, with a connected 6sense account and the Name, Description, and Segment Name Prefix fields filled in under Destination details.](../../assets/catalog/advertising/6sense-segments/6sense-segments-destination-details.png "Fill in destination details"){zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name to identify this destination.
 * **[!UICONTROL Description]**: A description to help you identify this destination. This field is optional.
