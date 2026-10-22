@@ -1,6 +1,7 @@
 ---
 title: "[!DNL 6sense Account] Connection"
 description: "Learn how to activate account audiences from Real-Time CDP B2B Edition to [!DNL 6sense] as segments for ad campaigns, AI email, reporting, and account prioritization."
+badgeBeta: label="Beta" type="Informative"
 ---
 
 # [!DNL 6sense Account] connection {#sixsense-account}
@@ -8,6 +9,8 @@ description: "Learn how to activate account audiences from Real-Time CDP B2B Edi
 [!DNL 6sense] is a go-to-market (GTM) intelligence platform that uses AI to identify in-market accounts and run campaigns against them. Use this destination to send [account audiences](/help/segmentation/types/account-audiences.md) from [!DNL Adobe Experience Platform] to [!DNL 6sense] as segments. You do not need to export CSV files manually.
 
 >[!AVAILABILITY]
+>
+>The [!DNL 6sense Account] destination is in beta and is available only to select customers. The functionality and documentation are subject to change.
 >
 >Your organization must purchase [!DNL Adobe Real-Time CDP B2B Edition] to activate account audiences to this destination. Learn about the [Business-to-Business edition](/help/rtcdp/overview.md#rtcdp-b2b). You also need a [!DNL 6sense] account with Segments API access enabled.
 
