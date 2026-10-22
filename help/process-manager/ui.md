@@ -1,17 +1,34 @@
 ---
 title: Process Manager UI Guide
-description: Learn how to use Process Manager to ???
+description: Learn how to use the Process Manager to orchestrate end-to-end use cases by chaining together multiple Adobe Experience Platform services.
 ---
 
 # Process Manager UI guide
 
-Process Manger ???
+Process Manager let you natively orchestrate end-to-end use cases by chaining together multiple Adobe Experience Platform services. With the Process Manager UI, you can actively control when each of the tasks run, with a guarantee that each tasks only runs exactly once, and with automatic failure recovery.
 
 ## Process list {#list}
 
-list of processes
+The **Process** page displays a list of all the processes that have been created for your organization. This includes details such as name, number of tasks, schedule, cadence, last updated date, as well as actions for the process.
 
-to create process, select create process
+IMAGE
+
+| Field | Description |
+| ----- | ----------- |
+| Name | The name of the process. If you select the name, you can edit the existing process. To learn more about editing the process, read the [canvas section](#canvas). |
+| Tasks | The number of tasks within the process. |
+| Schedule | The state of the schedule for the process. Possible values include [!UICONTROL Paused], [!UICONTROL Active], [!UICONTROL Error], and [!UICONTROL None]. |
+| Cadence | The cadence which the process runs. This is written as a cron schedule. For more information about cron schedules, read the [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. |
+| Updated | The date and time the process was last updated. |
+| Actions | Available quick actions for the process. <ul><li>**Canvas**: Opens the canvas so you can edit the process. For more information on editing the process, read the [canvas section](#canvas).</li><li>**Runs**: Displays the runs associated with the process. For more information, read the [runs section](#runs).</li><li>**Schedule**:</li>Update the cadence in which the process runs. You can set the cron schedule for the process, as well as the required inputs for the process to run.</li><li>**Notifications**: Lets you add notifications for the process. You can send a notification upon the process failing and send the notification to everyone in the organization or specified users or user groups.</li><li>**Clone**: Duplicates the process.</li><li>**Delete**: Deletes the process.</li></ul> |
+
+Additionally, you can filter the listed processes by the schedule status.
+
+IMAGE
+
+To create a new process, select **[!UICONTROL Create process]**. For more information on creating a new process, read the [canvas section](#canvas).
+
+IMAGE
 
 ## Canvas {#canvas}
 
@@ -185,4 +202,22 @@ The **Wait** task causes the process execution to be paused for the specified am
 
 ## Runs {#runs}
 
-list of runs
+The **Runs** page displays a list of runs for the selected process. You can either see the runs in **Grid** view or **Graph** view. 
+
+IMAGE
+
+Grid view displays a list of the tasks for the process, the state of those tasks, as well as how long the tasks took.
+
+IMAGE
+
+If you select the task, you can see further details about the run, including the specific error that caused the run to fail.
+
+IMAGE
+
+Graph view displays the selected run, with the tasks shown as individual blocks. You can see the location, state, and runtime of each of the tasks.
+
+IMAGE
+
+If you select a task within the run, you can see more details about the task's execution.
+
+IMAGE
