@@ -6,7 +6,7 @@ badgeBeta: label="Beta" type="Informative"
 
 # [!DNL 6sense Account] connection {#sixsense-account}
 
-[!DNL 6sense] is a go-to-market (GTM) intelligence platform that uses AI to identify in-market accounts and run campaigns against them. Use this destination to send [account audiences](/help/segmentation/types/account-audiences.md) from [!DNL Adobe Experience Platform] to [!DNL 6sense] as segments. You do not need to export CSV files manually.
+[!DNL 6sense] is a go-to-market (GTM) intelligence platform that uses AI to identify in-market accounts and run campaigns against them. Use this destination to send [account audiences](/help/segmentation/types/account-audiences.md) from [!DNL Adobe Experience Platform] to [!DNL 6sense] as segments.
 
 >[!AVAILABILITY]
 >
@@ -26,7 +26,7 @@ For more information, read the [6sense documentation for this integration](https
 
 ## Use cases {#use-cases}
 
-Use the following examples to understand when to use the [!DNL 6sense Account] destination.
+To help you better understand how and when you should use the [!DNL 6sense Account]  destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Advertising and campaign activation {#advertising-campaign-activation}
 
@@ -198,15 +198,15 @@ When an account no longer qualifies for the audience, Experience Platform remove
 
 ### Audience deletion and renaming {#audience-deletion}
 
-Deleting an activated account audience in Experience Platform does not delete or archive the corresponding [!DNL 6sense] segment. To delete the segment, a [!DNL 6sense] administrator completes the following steps:
+Deleting an activated account audience in Experience Platform does not delete or archive the corresponding [!DNL 6sense] segment. To delete the segment, sign in to [!DNL 6sense] as an administrator and complete the following steps:
 
 1. In [!DNL 6sense], open the **[!UICONTROL Segments]** tool, and then select the **[!UICONTROL Segments]** tab.
 1. Locate the segment, and then open the actions menu for that row.
 1. Select **[!UICONTROL Delete]**, and then confirm **[!UICONTROL Delete]**.
 
-If **[!UICONTROL Delete]** is unavailable, the segment might have active activations or dependencies, or the user might not have edit permissions.
+If **[!UICONTROL Delete]** is unavailable, the segment might have active activations or dependencies, or you might not have edit permissions.
 
-Renaming an audience in Experience Platform does not rename the [!DNL 6sense] segment. Membership updates continue to sync. To keep the names aligned, a [!DNL 6sense] administrator renames the segment:
+Renaming an audience in Experience Platform does not rename the [!DNL 6sense] segment. Membership updates continue to sync. To keep the names aligned, sign in to [!DNL 6sense] as an administrator and rename the segment:
 
 1. In [!DNL 6sense], open the **[!UICONTROL Segments]** tool, and then select the **[!UICONTROL Segments]** tab.
 1. Locate the segment, and then open the actions menu for that row.
