@@ -2,13 +2,10 @@
 title: Account Profiles Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's B2B account profiles.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-TQID: https://experienceleague.adobe.com/2iGEtoxhzpQnllXsFOe0-6OP2WoqRKkHlAzTZ6hcz1A
+TQID: 'https://experienceleague.adobe.com/2iGEtoxhzpQnllXsFOe0-6OP2WoqRKkHlAzTZ6hcz1A'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

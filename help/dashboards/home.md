@@ -4,6 +4,14 @@ title: Dashboards Overview
 type: Documentation
 description: Explore multiple dashboards in Adobe Experience Platform to view important information about your organization's data, as captured during daily snapshots.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 
 # Dashboards overview {#dashboards}

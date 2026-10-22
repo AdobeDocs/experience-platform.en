@@ -4,13 +4,10 @@ solution: Experience Platform
 title: Intelligent Services Overview
 description: Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in Adobe Experience Cloud, Adobe Experience Platform, and 3rd party applications.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
-TQID: https://experienceleague.adobe.com/TVQ8jA-bH-EeCruUnmvx7-4Um0IYkr-HNCNxLmRPmiU
+TQID: 'https://experienceleague.adobe.com/TVQ8jA-bH-EeCruUnmvx7-4Um0IYkr-HNCNxLmRPmiU'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

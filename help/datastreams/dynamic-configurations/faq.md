@@ -1,6 +1,9 @@
 ---
 title: Dynamic Datastream Configurations FAQ
-description: "Learn about common questions on [!DNL Dynamic Datastream Configurations], including rule behavior, event routing, system interactions, performance, and limitations."
+description: Learn about common questions on [!DNL Dynamic Datastream Configurations], including rule behavior, event routing, system interactions, performance, and limitations.
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 
 # Dynamic datastream configurations FAQ

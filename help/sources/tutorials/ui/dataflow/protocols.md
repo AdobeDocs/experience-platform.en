@@ -5,13 +5,10 @@ title: Create a Dataflow Using a Protocols Source in the UI
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Experience Platform dataset. This tutorial provides steps on how to create a dataflow for a protocols source using Experience Platform UI.
 exl-id: 94631a78-14ea-41d7-876c-468634dfc6c1
-TQID: https://experienceleague.adobe.com/v6-ldP1mCiRY8OUTSjrljkxIW-QRJSocnSBzyg5nAbM
+TQID: 'https://experienceleague.adobe.com/v6-ldP1mCiRY8OUTSjrljkxIW-QRJSocnSBzyg5nAbM'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

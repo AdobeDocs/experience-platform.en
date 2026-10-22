@@ -2,6 +2,12 @@
 title: TikTok Ads Source Connector
 description: Learn how to connect TikTok Ads to Adobe Experience Platform to ingest paid media campaign, ad, and performance data.
 badge: Beta
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 
 # [!DNL TikTok Ads]

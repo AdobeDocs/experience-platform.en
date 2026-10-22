@@ -2,6 +2,9 @@
 title: Share identity across domains
 description: Maintain identity continuity across domains that your organization owns to improve personalization and reporting.
 exl-id: 5856eef0-81a6-4f16-ac93-1057ba05c3e6
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Share identity across domains
 

@@ -4,10 +4,16 @@ feature: Attribution AI
 title: Download Scores in Attribution AI
 description: This document serves as a guide for downloading scores for Attribution AI.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-TQID: https://experienceleague.adobe.com/3DLniFrsMWLQKj2CxGyYNeA7rANLlGhlT9tO9tByGV4
+TQID: 'https://experienceleague.adobe.com/3DLniFrsMWLQKj2CxGyYNeA7rANLlGhlT9tO9tByGV4'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
+feature_v2:
+  - id: f5a6b7c8-5003-4003-9003-500000000003
+    internal-label: Services
+subfeature_v2:
+  - id: b99a0135-be89-4dd1-b66a-c313ae5278fa
+    internal-label: Attribution AI
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

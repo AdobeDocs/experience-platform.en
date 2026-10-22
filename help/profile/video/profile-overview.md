@@ -9,18 +9,10 @@ audience: all
 doc-type: video
 activity: understand
 exl-id: cdc91194-771f-4026-808f-97d70db436d9
-TQID: https://experienceleague.adobe.com/iAiDCgTkKpqbbgWZRwY4DjKbzeJNHvZbULQowQ3XiYA
+TQID: 'https://experienceleague.adobe.com/iAiDCgTkKpqbbgWZRwY4DjKbzeJNHvZbULQowQ3XiYA'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-subfeature_v2:
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: Guardrails
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

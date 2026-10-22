@@ -5,13 +5,10 @@ title: Insights API Endpoint
 description: Insights contain metrics which are used to empower a data scientist to evaluate and choose optimal ML models by displaying relevant evaluation metrics.
 role: Developer
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-TQID: https://experienceleague.adobe.com/5-EtnCOjDU6JI-R7-uxgykd589WVGvZX9XZkfwJEwUs
+TQID: 'https://experienceleague.adobe.com/5-EtnCOjDU6JI-R7-uxgykd589WVGvZX9XZkfwJEwUs'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

@@ -4,6 +4,20 @@ description: Learn how to integrate the Adobe Experience Platform Web SDK to pro
 role: Developer
 feature: Consent, Web SDK
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+  - id: b4cdce0b-478e-4da1-bd14-9772484a2151
+    internal-label: Policies
+subfeature_v2:
+  - id: a3b3152b-4985-4b09-b52d-53d4801bd726
+    internal-label: Consent
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Integrate the Experience Platform Web SDK to process customer consent data
 

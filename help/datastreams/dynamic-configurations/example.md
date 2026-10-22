@@ -1,6 +1,9 @@
 ---
 title: End-to-End Dynamic Datastream Configuration Example
-description: "Learn how to combine [!DNL Dynamic Datastream Configuration] use cases into a single datastream for an e-commerce implementation using the Analytical first pattern."
+description: Learn how to combine [!DNL Dynamic Datastream Configuration] use cases into a single datastream for an e-commerce implementation using the Analytical first pattern.
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 
 # End-to-end [!DNL Dynamic Datastream Configuration] example

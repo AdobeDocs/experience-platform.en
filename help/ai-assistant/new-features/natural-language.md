@@ -3,15 +3,15 @@ title: Natural Language Estimation With AI Assistant
 description: Learn how to use AI Assistant's natural language estimation capabilities.
 badge: Alpha
 exl-id: 7997c84f-288b-4b48-9f88-8de4addbae36
-TQID: https://experienceleague.adobe.com/tMbm4Vdg5CiVkv4NpyJCO5dl1YWTiWq6-iMrwVNFWfs
+TQID: 'https://experienceleague.adobe.com/tMbm4Vdg5CiVkv4NpyJCO5dl1YWTiWq6-iMrwVNFWfs'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-    internal-label: AI Assistant
+    internal-label: AI assistant
+  - id: f5a6b7c8-5003-4003-9003-500000000003
+    internal-label: Services
 subfeature_v2:
   - id: af7d4edc-6e6b-4176-bf14-907faf40ebd4
     internal-label: Customer AI

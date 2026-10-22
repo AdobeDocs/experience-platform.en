@@ -1,6 +1,9 @@
 ---
 title: Dynamic Datastream Configuration Use Cases
-description: "Learn how to use [!DNL Dynamic Datastream Configurations] to separate events by value, manage data retention, suppress system events, and filter bot traffic."
+description: Learn how to use [!DNL Dynamic Datastream Configurations] to separate events by value, manage data retention, suppress system events, and filter bot traffic.
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 
 # Dynamic datastream configuration use cases

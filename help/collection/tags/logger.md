@@ -2,7 +2,7 @@
 title: logger
 description: Output information to the browser console when debugging.
 exl-id: c79d0d15-47e2-4a77-9318-1ccbe6fe5dd1
-TQID: https://experienceleague.adobe.com/WvwiuKMWVNg3faKdQBB3u0JQV-39QEZLx9ROvwf1FdI
+TQID: 'https://experienceleague.adobe.com/WvwiuKMWVNg3faKdQBB3u0JQV-39QEZLx9ROvwf1FdI'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -12,10 +12,7 @@ product_v2:
     internal-label: Pass
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

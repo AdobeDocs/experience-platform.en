@@ -5,13 +5,10 @@ title: Create a Dataflow Using a Marketing Automation Source in the UI
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Experience Platform dataset. This tutorial provides steps on how to create a dataflow for a marketing automation source using Experience Platform UI.
 exl-id: 8d31fc2d-b952-44f7-98e7-f51b0acc19ed
-TQID: https://experienceleague.adobe.com/JxHp9VIWpKijsBPd3y3xN7wOeij3HtwP6G3B6kGzxjU
+TQID: 'https://experienceleague.adobe.com/JxHp9VIWpKijsBPd3y3xN7wOeij3HtwP6G3B6kGzxjU'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

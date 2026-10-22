@@ -2,7 +2,7 @@
 title: Streaming media configuration settings
 description: Customize how the Web SDK tag extension collects streaming media data.
 exl-id: f486d729-b7ad-4720-8399-71495cb9c57e
-TQID: https://experienceleague.adobe.com/Oimv345d5pcvdhA0O4JyayB1Z5ZXXGGak-9tWgkA1Nk
+TQID: 'https://experienceleague.adobe.com/Oimv345d5pcvdhA0O4JyayB1Z5ZXXGGak-9tWgkA1Nk'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -16,12 +16,9 @@ feature_v2:
   - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
     internal-label: Reports
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
+    internal-label: Data collection tags
   - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
     internal-label: Datastreams
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

@@ -5,13 +5,10 @@ title: Create a Dataflow Using a CRM Source in the UI
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Experience Platform dataset. This tutorial provides steps on how to create a dataflow for a CRM source using Experience Platform UI.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-TQID: https://experienceleague.adobe.com/HbpqVKACBbj3G0Grmb5n-yDvzaMqHTIhzL-ug0PRd-s
+TQID: 'https://experienceleague.adobe.com/HbpqVKACBbj3G0Grmb5n-yDvzaMqHTIhzL-ug0PRd-s'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

@@ -2,18 +2,19 @@
 description: Learn how to use the sample profiles endpoint to generate sample profiles based on a source schema for testing your file-based destination.
 title: Generate sample profiles based on a source schema
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-TQID: https://experienceleague.adobe.com/9B9yemNNDAQZj3OnO-CNoKFf7F02NBJIORYFJLgY4Ow
+TQID: 'https://experienceleague.adobe.com/9B9yemNNDAQZj3OnO-CNoKFf7F02NBJIORYFJLgY4Ow'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
     internal-label: Troubleshooting

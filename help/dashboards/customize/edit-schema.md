@@ -3,13 +3,10 @@ keywords: Experience Platform;user interface;UI;dashboards;dashboard;profiles;se
 title: Edit Schema to Create Custom Dashboard Widgets
 description: This guide provides step-by-step instructions for selecting attributes and configuring your organization's schema in order to create custom widgets for Adobe Experience Platform dashboards.
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
-TQID: https://experienceleague.adobe.com/wzsVe7h8x3mxCzbF-xHMNxsbCZyoc1njuArukNFm-nU
+TQID: 'https://experienceleague.adobe.com/wzsVe7h8x3mxCzbF-xHMNxsbCZyoc1njuArukNFm-nU'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

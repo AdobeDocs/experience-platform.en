@@ -2,7 +2,7 @@
 description: This page exemplifies the API call used to retrieve a credential configuration through Adobe Experience Platform Destination SDK.
 title: Retrieve a credential configuration
 exl-id: cec55073-6e2f-4412-a9dd-1aeb445279c0
-TQID: https://experienceleague.adobe.com/GL2Yk368Lqh0ST3J26-ukRq2cBxPSxD9E9-we7ZBjCQ
+TQID: 'https://experienceleague.adobe.com/GL2Yk368Lqh0ST3J26-ukRq2cBxPSxD9E9-we7ZBjCQ'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -11,6 +11,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
     internal-label: Troubleshooting

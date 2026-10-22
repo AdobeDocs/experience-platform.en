@@ -7,13 +7,10 @@ doc-type: video
 activity: understand
 thumbnail: 27361.jpg
 exl-id: f59bf52a-13fe-4b84-81d6-518b9b081151
-TQID: https://experienceleague.adobe.com/opJ7b5YO6R3812UtfTzP7VLVq3e9OvJuf33a3SjsUG0
+TQID: 'https://experienceleague.adobe.com/opJ7b5YO6R3812UtfTzP7VLVq3e9OvJuf33a3SjsUG0'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

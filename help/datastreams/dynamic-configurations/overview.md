@@ -1,6 +1,9 @@
 ---
 title: Dynamic Datastream Configuration Overview
-description: "Learn about [!DNL Dynamic Datastream Configurations], how it routes events to Experience Cloud services based on rules, and how it compares to other routing options."
+description: Learn about [!DNL Dynamic Datastream Configurations], how it routes events to Experience Cloud services based on rules, and how it compares to other routing options.
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 
 # Dynamic datastream configuration overview

@@ -2,15 +2,13 @@
 title: AI Assistant (Legacy) in Adobe Experience Platform Overview
 description: Learn about AI Assistant (Legacy), its nuances and use cases, and how you can use it to expedite your workflow with Adobe Experience Platform and Real-Time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-TQID: https://experienceleague.adobe.com/-TALMu9apV404SYDSgl1lM6crpNZbFNIGN7gHvwkwaM
+TQID: 'https://experienceleague.adobe.com/-TALMu9apV404SYDSgl1lM6crpNZbFNIGN7gHvwkwaM'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-    internal-label: AI Assistant
+    internal-label: AI assistant
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

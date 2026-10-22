@@ -3,6 +3,18 @@ title: Leverage Customer Experience Use Cases to Drive Business Goals
 description: Use a practical, workshop-ready framework to define, prioritize, and activate customer experience use cases tied to measurable business outcomes. Apply a simple Why → Who/What/Where → How model to align teams, guide execution, and deliver impact.
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Leverage customer experience use cases to drive business goals
 

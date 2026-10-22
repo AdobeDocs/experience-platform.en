@@ -4,7 +4,7 @@ title: Real-Time Customer Data Platform Administration Overview
 description: This document provides an overview of the administration capabilities of Adobe Real-Time Customer Data Platform, powered by Adobe Experience Platform.
 feature: Access Control, Get Started, Sandboxes
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
-TQID: https://experienceleague.adobe.com/qSXP2h0wS-89O6K3Xn21JCWCf-Ur1iuAzfLtMSgp8yc
+TQID: 'https://experienceleague.adobe.com/qSXP2h0wS-89O6K3Xn21JCWCf-Ur1iuAzfLtMSgp8yc'
 product_v2:
   - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
     internal-label: Real-Time Customer Data Platform
@@ -13,7 +13,7 @@ feature_v2:
     internal-label: Administration
 subfeature_v2:
   - id: a3118268-59a6-4679-b8b5-7e62de26c61f
-    internal-label: Account profile, Account profile (RTCDP)
+    internal-label: Account profile
   - id: c14504d0-ed2f-4120-8361-02a1874e245a
     internal-label: Access control
 role_v2:

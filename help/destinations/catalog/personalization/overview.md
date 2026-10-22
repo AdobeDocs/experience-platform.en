@@ -3,18 +3,19 @@ keywords: personalization;Personalization
 title: Personalization destinations overview
 description: Personalization platforms collect data and insights from individual behaviors. These platforms can assist marketers in navigating anonymous data, serving up offers or ads to prospects based on previous activity or as part of audiences with similar habits.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-TQID: https://experienceleague.adobe.com/06xq8sMhTYpsv6GSsxHiRXCE6kELNHNBM-iFeHITWQs
+TQID: 'https://experienceleague.adobe.com/06xq8sMhTYpsv6GSsxHiRXCE6kELNHNBM-iFeHITWQs'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
     internal-label: Personalization

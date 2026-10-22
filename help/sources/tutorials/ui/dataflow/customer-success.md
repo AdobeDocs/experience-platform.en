@@ -5,13 +5,10 @@ title: Create a Dataflow Using a Customer Success Source in the UI
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Experience Platform dataset. This tutorial provides steps on how to create a dataflow for a customer success source using Experience Platform UI.
 exl-id: d348a7f8-6302-45f1-9961-bab56ad0407e
-TQID: https://experienceleague.adobe.com/praRzON1Q-yG-L-GYcPUu5IMrjfGQ77zZKc4eDZxSao
+TQID: 'https://experienceleague.adobe.com/praRzON1Q-yG-L-GYcPUu5IMrjfGQ77zZKc4eDZxSao'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

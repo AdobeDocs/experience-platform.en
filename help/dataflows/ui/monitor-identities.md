@@ -4,16 +4,19 @@ description: Adobe Experience Platform Identity Service provides you with a comp
 title: Monitor Dataflows for Identities in the UI
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-TQID: https://experienceleague.adobe.com/uRO3V8XCORzLU2ZUXlR-Hp5uNIZZobBv3LrR6FRD0DA
+TQID: 'https://experienceleague.adobe.com/uRO3V8XCORzLU2ZUXlR-Hp5uNIZZobBv3LrR6FRD0DA'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Monitor dataflows for identities in the UI
 
