@@ -20,11 +20,9 @@ Before using the API, complete the [authentication tutorial](/help/landing/api-a
 >
 >For more information about sandboxes in [!DNL Adobe Experience Platform], see the [sandboxes overview documentation](/help/sandboxes/home.md).
 
-## Process Definitions
+## List process definitions {#list-process-definitions}
 
-### GET /process-definitions
-
-Lists current process definitions in the caller's sandbox.
+You can list all the current process definitions by making a GET request to the `/process-definitions` endpoint.
 
 **API format**
 
@@ -32,30 +30,41 @@ Lists current process definitions in the caller's sandbox.
 GET /process-definitions
 ```
 
+**Query parameters**
+
++++ A list of available query parameters.
+
+| Parameter | Description |
+| --------- | ----------- |
+| `name` | Case-insensitive substring filter on the definition name. |
+| `sort` | Field to sort by. Supported values are `createdAt`, `updatedAt`, and `name`. Default is `createdAt`. |
+| `order` | Sort order. Supported values are `asc` and `desc`. Default is `desc`. |
+| `pageSize` | Items per page. Supported range is 1 to 100. Default is 100. |
+| `cursor` | Opaque pagination cursor returned by a previous call. Mutually exclusive with `offset`. |
+| `offset` | Zero-based offset. Mutually exclusive with `cursor`. |
+
++++
+
 **Request**
 
++++ A sample request to get a list of process definitions.
+
 ```shell
-curl -X GET "https://platform.adobe.io/data/core/maestro/process-definitions?sort=updatedAt&order=desc&pageSize=2" \
+curl -X GET "https://aep-maestro.adobe.io/process-definitions?sort=updatedAt&order=desc&pageSize=2" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-**Query parameters**
++++
 
-| Parameter | Required | Description |
-| --------- | -------- | ----------- |
-| `name` | No | Case-insensitive substring filter on the definition name. |
-| `sort` | No | Field to sort by. Supported values are `createdAt`, `updatedAt`, and `name`. Default is `createdAt`. |
-| `order` | No | Sort order. Supported values are `asc` and `desc`. Default is `desc`. |
-| `pageSize` | No | Items per page. Supported range is 1 to 100. Default is 100. |
-| `cursor` | No | Opaque pagination cursor returned by a previous call. Mutually exclusive with `offset`. |
-| `offset` | No | Zero-based offset. Mutually exclusive with `cursor`. |
 
 **Response**
 
-A successful request returns HTTP status `200` with a page of process definitions. The response supports both cursor-based and offset-based pagination.
+A successful request returns HTTP status `200` with a list of process definitions.
+
++++ A sample response when retrieving a list of process definitions.
 
 ```json
 {
@@ -72,42 +81,48 @@ A successful request returns HTTP status `200` with a page of process definition
 }
 ```
 
-**Status codes**
+| Field | Description |
+| ----- | ----------- |
+| `definitionUuid` | The ID of the process definition. |
+| `name` | The name of the process definition. |
+| `createdAt` | The date and time the process definition was created. |
+| `updatedAt` | The date and time the process definition was last updated. |
 
-- `200 OK`: The request succeeded.
-- `400 Bad Request`: The request is invalid.
-- `401 Unauthorized`: The user is not authenticated.
-- `403 Forbidden`: The user cannot access the resource.
++++
 
-### GET /process-definitions/{definitionUuid}
+### Retrieve a specific process definition
 
-Gets the current version of a process definition.
+You can retrieve a specific process definition by making a GET request to the `/process-definitions` endpoint while providing the process definition ID.
 
 **API format**
 
 ```http
-GET /process-definitions/{definitionUuid}
+GET /process-definitions/{DEFINITION_ID}
 ```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{DEFINITION_ID}` | The ID of the process definition. |
 
 **Request**
 
++++ A sample request to retrieve the specified process definition. 
+
 ```shell
-curl -X GET "https://platform.adobe.io/data/core/maestro/process-definitions/{definitionUuid}" \
+curl -X GET "https://aep-maestro.adobe.io/process-definitions/5b4e018b-f37c-4104-928b-b67148ce8537" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-**Path parameters**
-
-| Parameter | Type | Description |
-| --------- | ---- | ----------- |
-| `definitionUuid` | String | The unique identifier of the process definition. |
++++
 
 **Response**
 
-A successful request returns HTTP status `200` with the full `ProcessDefinitionView` payload for the requested definition.
+A successful request returns HTTP status 200 with information about the requested process definition.
+
++++ A sample response when retrieving a specific process definition.
 
 ```json
 {
@@ -125,33 +140,27 @@ A successful request returns HTTP status `200` with the full `ProcessDefinitionV
 }
 ```
 
-**Status codes**
+| Field | Description |
+| ----- | ----------- |
+| `definitionUuid` | The ID of the process definition. |
+| `name` | The name of the process definition. |
+| `description` | An optional description about the process definition. |
+| `tasks` | An array that contains the tasks that belong to the process definition. |
+| `tasks.id` | The ID of the task within the process definition. |
+| `tasks.taskType` | The type of task within the process definition. |
+| `createdAt` | The date and time the process definition was created. |
+| `updatedAt` | The date and time the process definition was last updated. |
 
-- `200 OK`: The definition was returned.
-- `401 Unauthorized`: The user is not authenticated.
-- `403 Forbidden`: The user cannot access the resource.
-- `404 Not Found`: The definition does not exist in the current sandbox.
++++
 
-## Process Runs
+## List process definition runs {#list-process-definition-runs}
 
-### GET /runs
-
-Lists executions for a process definition. The response includes up to 100 of the most recent runs, sorted by `submittedAt` descending.
+You can retrieve a list of all the runs for a process definition by making a GET request to the `/runs` endpoint and providing the ID of the process definition.
 
 **API format**
 
 ```http
-GET /runs
-```
-
-**Request**
-
-```shell
-curl -X GET "https://platform.adobe.io/data/core/maestro/runs?definitionUuid={DEFINITION_UUID}&executionTrigger=MANUAL" \
-  -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key: {API_KEY}" \
-  -H "x-gw-ims-org-id: {ORG_ID}" \
-  -H "x-sandbox-name: {SANDBOX_NAME}"
+GET /runs?{QUERY_PARAMETERS}
 ```
 
 **Query parameters**
@@ -161,9 +170,25 @@ curl -X GET "https://platform.adobe.io/data/core/maestro/runs?definitionUuid={DE
 | `definitionUuid` | Yes | The process definition whose runs you want to list. |
 | `executionTrigger` | No | Filters results to runs started by `MANUAL` or `SCHEDULE`. |
 
+**Request**
+
++++ A sample request to retrieve all the manual runs for the specified process definition. 
+
+```shell
+curl -X GET "https://aep-maestro.adobe.io/runs?definitionUuid=5b4e018b-f37c-4104-928b-b67148ce8537&executionTrigger=MANUAL" \
+  -H "Authorization: Bearer {ACCESS_TOKEN}" \
+  -H "x-api-key: {API_KEY}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
+  -H "x-sandbox-name: {SANDBOX_NAME}"
+```
+
++++
+
 **Response**
 
-A successful request returns HTTP status `200` with an array of `ProcessRunView` objects.
+A successful request returns HTTP status 200 with information about the process definition runs.
+
++++ A sample response when retrieving a process definition's runs.
 
 ```json
 [
@@ -176,41 +201,48 @@ A successful request returns HTTP status `200` with an array of `ProcessRunView`
 ]
 ```
 
-**Status codes**
+| Field | Description |
+| ----- | ----------- |
+| `runId` | The ID of the process definition run. |
+| `definitionUuid` | The ID of the process definition. |
+| `state` | The state of the process definition run. Possible values include `PENDING`, `RUNNING`, `COMPLETED`, `FAILED`, `CANCELED`, `TERMINATED`, and `TIMED_OUT`. |
+| `executionTrigger` | The method which the process definition was executed. Possible values include `MANUAL` or `SCHEDULE`. |
 
-- `200 OK`: Matching executions were returned.
-- `400 Bad Request`: The request is invalid.
-- `401 Unauthorized`: The user is not authenticated.
++++
 
-### GET /runs/{runId}
+### Get specific process definition run {#get-process-definition-run}
 
-Gets the state and event history for an execution.
+You can retrieve a specific process definition run by making a GET request to the `/runs` endpoint while providing the run ID.
 
 **API format**
 
 ```http
-GET /runs/{runId}
+GET /runs/{RUN_ID}
 ```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{RUN_ID}` | The ID of the process definition run. |
 
 **Request**
 
++++ A sample request to retrieve the specified process definition run.
+
 ```shell
-curl -X GET "https://platform.adobe.io/data/core/maestro/runs/{runId}" \
+curl -X GET "https://aep-maestro.adobe.io/runs/{RUN_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-**Path parameters**
-
-| Parameter | Type | Description |
-| --------- | ---- | ----------- |
-| `runId` | String | The unique identifier of the execution. |
++++ A sample response when retrieving a specific process definition run.
 
 **Response**
 
-A successful request returns HTTP status `200` with the full `ProcessRunView`, including the event history.
+A successful request returns HTTP status 200 with information about the specified process definition run.
+
++++ A sample response with information about the process definition run.
 
 ```json
 {
@@ -226,16 +258,18 @@ A successful request returns HTTP status `200` with the full `ProcessRunView`, i
 }
 ```
 
-**Status codes**
+| Field | Description |
+| ----- | ----------- |
+| `runId` | The ID of the process definition run. |
+| `definitionUuid` | The ID of the process definition. |
+| `state` | The state of the process definition run. Possible values include `PENDING`, `RUNNING`, `COMPLETED`, `FAILED`, `CANCELED`, `TERMINATED`, and `TIMED_OUT`. |
+| `eventHistory` | An array that contains objects of the event history of the process definition run. |
 
-- `200 OK`: The execution was returned.
-- `401 Unauthorized`: The user is not authenticated.
-- `403 Forbidden`: The user cannot access the resource.
-- `404 Not Found`: The execution does not exist in the current sandbox.
++++
 
-### POST /runs
+### Start a process definition run {#start-run}
 
-Submits an execution against the current internal version of a named definition.
+You can start a process definition run by making a POST request to the `/runs` endpoint.
 
 **API format**
 
@@ -245,8 +279,10 @@ POST /runs
 
 **Request**
 
++++ A sample request to start a process definition run.
+
 ```shell
-curl -X POST "https://platform.adobe.io/data/core/maestro/runs" \
+curl -X POST "https://aep-maestro.adobe.io/runs" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {ORG_ID}" \
@@ -261,21 +297,18 @@ curl -X POST "https://platform.adobe.io/data/core/maestro/runs" \
   }'
 ```
 
-**Request body**
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `definitionUuid` | String | The ID of the process definition you want to start a run for. |
+| `inputs` | Object | An optional object that contains fields that are required in the process definition. |
 
-```json
-{
-  "definitionUuid": "5b4e018b-f37c-4104-928b-b67148ce8537",
-  "inputs": {
-    "customerEmail": "alice@example.com",
-    "orgName": "ACME Corp"
-  }
-}
-```
++++
 
 **Response**
 
-A successful request returns HTTP status `202 Accepted` with the accepted run details. The execution is asynchronous and returns immediately with `state: PENDING`.
+A successful request returns HTTP status 202 Accepted with the accepted run details. The execution is asynchronous and returns immediately with `state: PENDING`.
+
++++ A sample response when starting a process definition run.
 
 ```json
 {
@@ -286,47 +319,48 @@ A successful request returns HTTP status `202 Accepted` with the accepted run de
 }
 ```
 
-**Status codes**
+| Field | Description |
+| ----- | ----------- |
+| `runId` | The ID of the newly accepted run. |
+| `definitionUuid` | The ID of the process definition the run is for. |
+| `state` | The state of the run. Since this process is asynchronous, this will be `PENDING`. |
+| `executionTrigger` | The method which the process definition run was triggered. |
 
-- `202 Accepted`: The execution was accepted.
-- `400 Bad Request`: The request payload is invalid.
-- `401 Unauthorized`: The user is not authenticated.
-- `403 Forbidden`: The user cannot access the resource.
-- `404 Not Found`: The process definition does not exist.
-- `409 Conflict`: A manual run is already in progress for the same definition.
-- `503 Service Unavailable`: The service is unavailable.
++++
 
-## Process Schedules
+## Retrieve process definition schedule {#get-schedule}
 
-### GET /process-definitions/{definitionUuid}/schedule
-
-Reads the schedule attached to a process definition.
+You can get the schedule for a process definition by making a GET request to the `/process-definitions/{DEFINITION_ID}/schedule` endpoint and providing the ID of the process definition.
 
 **API format**
 
 ```http
-GET /process-definitions/{definitionUuid}/schedule
+GET /process-definitions/{DEFINITION_ID}/schedule
 ```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{DEFINITION_ID}` | The ID of the process definition that owns the schedule. |
 
 **Request**
 
++++ A sample request to retrieve the schedule for a process definition. 
+
 ```shell
-curl -X GET "https://platform.adobe.io/data/core/maestro/process-definitions/{definitionUuid}/schedule" \
+curl -X GET "https://aep-maestro.adobe.io/process-definitions/{DEFINITION_ID}/schedule" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-**Path parameters**
-
-| Parameter | Type | Description |
-| --------- | ---- | ----------- |
-| `definitionUuid` | String | The unique identifier of the process definition that owns the schedule. |
++++
 
 **Response**
 
-A successful request returns HTTP status `200` with the schedule definition.
+A successful request returns HTTP status `200` with information about the process definition schedule.
+
++++ A sample response with information about the process definition schedule.
 
 ```json
 {
@@ -337,26 +371,35 @@ A successful request returns HTTP status `200` with the schedule definition.
 }
 ```
 
-**Status codes**
+| Field | Description |
+| ----- | ----------- |
+| `definitionUuid` | The ID of the process definition. |
+| `scheduleType` | The type of schedule. |
+| `cron` | The cron format for the schedule. For more information about cron schedules, read the [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. |
+| `paused` | A boolean that states if the schedule is paused or not. |
 
-- `200 OK`: The schedule was returned.
-- `401 Unauthorized`: The user is not authenticated.
-- `404 Not Found`: The definition or schedule does not exist.
++++
 
-### PUT /process-definitions/{definitionUuid}/schedule
+## Replace a schedule {#replace-schedule}
 
-Replaces the schedule body for a process definition.
+You can replace the schedule for a process definition by making a PUT request to the `/process-definitions/{DEFINITION_ID}/schedule` endpoint while providing the ID of the process definition.
 
 **API format**
 
 ```http
-PUT /process-definitions/{definitionUuid}/schedule
+PUT /process-definitions/{DEFINITION_ID}/schedule
 ```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{DEFINITION_ID}` | The ID of the process definition that owns the schedule. |
 
 **Request**
 
++++ A sample request to replace the process definition's schedule.
+
 ```shell
-curl -X PUT "https://platform.adobe.io/data/core/maestro/process-definitions/{definitionUuid}/schedule" \
+curl -X PUT "https://aep-maestro.adobe.io/process-definitions/{definitionUuid}/schedule" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {ORG_ID}" \
@@ -367,13 +410,11 @@ curl -X PUT "https://platform.adobe.io/data/core/maestro/process-definitions/{de
   }'
 ```
 
-**Request body**
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `cron` | String | The cron format for the schedule. For more information about cron schedules, read the [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. |
 
-```json
-{
-  "cron": "0 0 * * *"
-}
-```
++++
 
 **Response**
 
@@ -399,7 +440,7 @@ DELETE /process-definitions/{definitionUuid}/schedule
 **Request**
 
 ```shell
-curl -X DELETE "https://platform.adobe.io/data/core/maestro/process-definitions/{definitionUuid}/schedule" \
+curl -X DELETE "https://aep-maestro.adobe.io/process-definitions/{definitionUuid}/schedule" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {ORG_ID}" \
@@ -429,7 +470,7 @@ POST /process-definitions/{definitionUuid}/schedule:pause
 **Request**
 
 ```shell
-curl -X POST "https://platform.adobe.io/data/core/maestro/process-definitions/{definitionUuid}/schedule:pause" \
+curl -X POST "https://aep-maestro.adobe.io/process-definitions/{definitionUuid}/schedule:pause" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {ORG_ID}" \
@@ -459,7 +500,7 @@ POST /process-definitions/{definitionUuid}/schedule:resume
 **Request**
 
 ```shell
-curl -X POST "https://platform.adobe.io/data/core/maestro/process-definitions/{definitionUuid}/schedule:resume" \
+curl -X POST "https://aep-maestro.adobe.io/process-definitions/{definitionUuid}/schedule:resume" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {ORG_ID}" \
