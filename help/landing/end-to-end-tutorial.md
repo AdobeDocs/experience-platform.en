@@ -3,20 +3,16 @@ keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer
 title: Adobe Experience Platform End-to-End Example Workflow
 description: Learn the basic end-to-end workflow for Adobe Experience Platform at a high level.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-TQID: https://experienceleague.adobe.com/WmodBks576CJjMwfzfSBLdjFJwOFVGUiSDMtqrXIE8Q
+TQID: 'https://experienceleague.adobe.com/WmodBks576CJjMwfzfSBLdjFJwOFVGUiSDMtqrXIE8Q'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
-subfeature_v2:
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

@@ -2,7 +2,7 @@
 title: Web SDK JavaScript library overview
 description: Send data to the Adobe Experience Platform Edge Network using JavaScript.
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-TQID: https://experienceleague.adobe.com/9lk8ofZIQFzuYYl-BaT-c79H1yEmRps-ZuiLXm4mjPU
+TQID: 'https://experienceleague.adobe.com/9lk8ofZIQFzuYYl-BaT-c79H1yEmRps-ZuiLXm4mjPU'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -35,13 +35,9 @@ feature_v2:
     internal-label: Integrations
   - id: d833d0ef-8ed5-4cff-a5e7-9f12abd02a31
     internal-label: SDKs
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: eb9732ab-8232-4b21-bc4c-89de86dbe4d7
-    internal-label: Integrations
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
     internal-label: Integrations
@@ -49,23 +45,19 @@ feature_v2:
     internal-label: Integrations
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
-subfeature_v2:
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
     internal-label: Sources
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
   - id: d2a6cbf4-df32-480f-909e-b42f66dcb9f0
     internal-label: Places
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: e8a4c7eb-7254-4984-ac46-e651a57c7e39
     internal-label: SDKs
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
     internal-label: at.js
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

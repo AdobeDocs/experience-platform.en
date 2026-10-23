@@ -3,7 +3,7 @@ title: IP address allowlist for file-based cloud storage destinations
 type: Documentation
 description: This page provides IP ranges that you can add to your allowlist, to safely export data from Experience Platform to cloud storage destinations.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-TQID: https://experienceleague.adobe.com/6U6Qcw4zLJxWsD3mdocqmd7fRVTNfeWClhCaqCn4qIA
+TQID: 'https://experienceleague.adobe.com/6U6Qcw4zLJxWsD3mdocqmd7fRVTNfeWClhCaqCn4qIA'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -12,6 +12,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # IP address allowlist for file-based cloud storage destinations {#ip-address-allow-list-cloud-storage}
 

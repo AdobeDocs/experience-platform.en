@@ -2,7 +2,7 @@
 title: Encrypting Values
 description: Learn how to encrypt sensitive values when using the Reactor API.
 exl-id: d89e7f43-3bdb-40a5-a302-bad6fd1f4596
-TQID: https://experienceleague.adobe.com/Ui3AuOGd9Pr5CoM1kNo6oddr-gVT9Xh2PWkDV7E6bm8
+TQID: 'https://experienceleague.adobe.com/Ui3AuOGd9Pr5CoM1kNo6oddr-gVT9Xh2PWkDV7E6bm8'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -14,15 +14,18 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
     internal-label: Customer experience

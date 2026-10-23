@@ -2,13 +2,10 @@
 title: Connect Azure Blob Storage to Experience Platform in the UI
 description: Learn how to connect your Azure Blob Storage account to Experience Platform using the sources workspace in the UI.
 exl-id: 0e54569b-7305-4065-981e-951623717648
-TQID: https://experienceleague.adobe.com/GjawW6qIp16-dB-Az7hXeqTM8RHx5opH1hRFY1Fcl2s
+TQID: 'https://experienceleague.adobe.com/GjawW6qIp16-dB-Az7hXeqTM8RHx5opH1hRFY1Fcl2s'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

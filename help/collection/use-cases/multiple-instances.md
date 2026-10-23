@@ -3,6 +3,9 @@ title: Use multiple Web SDK instances
 description: Learn how to interact with multiple Experience Platform Web SDK properties.
 keywords: multiple properties
 exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Use multiple Web SDK instances
 

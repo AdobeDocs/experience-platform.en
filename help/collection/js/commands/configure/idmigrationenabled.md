@@ -2,7 +2,7 @@
 title: idMigrationEnabled
 description: Allows the Web SDK to read AMCV cookies.
 exl-id: 33b9d645-0fbe-4fe4-8847-e6f9e78557b6
-TQID: https://experienceleague.adobe.com/hbyGQRiwdHakLAJboWijFbU7V7rdNb64W2-jJqwGB-s
+TQID: 'https://experienceleague.adobe.com/hbyGQRiwdHakLAJboWijFbU7V7rdNb64W2-jJqwGB-s'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -10,7 +10,7 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

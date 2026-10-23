@@ -4,10 +4,16 @@ feature: Attribution AI
 title: Discover Insights in Attribution AI
 description: This document serves as a guide for interacting with service instance insights in the Adobe Intelligent Services user interface.
 exl-id: 6b8e51e7-1b56-4f4e-94cf-96672b426c88
-TQID: https://experienceleague.adobe.com/RIr-16FceplVeprcE8kGwQvmy0-qmIlG8M1E3Fx7Uk8
+TQID: 'https://experienceleague.adobe.com/RIr-16FceplVeprcE8kGwQvmy0-qmIlG8M1E3Fx7Uk8'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
+feature_v2:
+  - id: f5a6b7c8-5003-4003-9003-500000000003
+    internal-label: Services
+subfeature_v2:
+  - id: b99a0135-be89-4dd1-b66a-c313ae5278fa
+    internal-label: Attribution AI
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

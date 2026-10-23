@@ -2,6 +2,9 @@
 title: Share identity from mobile apps to mobile web/WebViews
 description: Pass identity from a mobile app into mobile web content or a WebView so reporting and personalization can continue in the web context.
 exl-id: 08441a5d-3d6f-41d4-aa4e-061bddc5df6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Share identity from mobile apps to mobile web/WebViews
 

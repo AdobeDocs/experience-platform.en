@@ -2,7 +2,7 @@
 title: Apply response
 description: Perform an action based on a response from the Edge Network.
 exl-id: 64ea7d48-ce20-4694-a3f1-415fc5a97ac5
-TQID: https://experienceleague.adobe.com/HAeiB4M-sGxM9KMqkzwsJYocmoXYqvElOlpysKgc8BE
+TQID: 'https://experienceleague.adobe.com/HAeiB4M-sGxM9KMqkzwsJYocmoXYqvElOlpysKgc8BE'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -13,15 +13,8 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

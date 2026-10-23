@@ -2,7 +2,7 @@
 title: Use a text editor to create a destination documentation page
 description: Learn how to use a text editor in your local environment to author a destination documentation page and submit it for review.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-TQID: https://experienceleague.adobe.com/n2NvyC5LSYmj4s2vf1fvYggCL7mLtcBDXGIx1B7M9C8
+TQID: 'https://experienceleague.adobe.com/n2NvyC5LSYmj4s2vf1fvYggCL7mLtcBDXGIx1B7M9C8'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -11,6 +11,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
     internal-label: Personalization

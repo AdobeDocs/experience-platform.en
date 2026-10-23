@@ -4,13 +4,10 @@ solution: Experience Platform
 title: Manage Data Usage Labels in the UI
 description: This guide covers steps for working with data usage labels within the Adobe Experience Platform user interface.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-TQID: https://experienceleague.adobe.com/YVw-HONV14aOx-s-U40l3Yhs0GpnTSjGo-HUudM37yY
+TQID: 'https://experienceleague.adobe.com/YVw-HONV14aOx-s-U40l3Yhs0GpnTSjGo-HUudM37yY'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

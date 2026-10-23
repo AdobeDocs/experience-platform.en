@@ -5,13 +5,10 @@ title: Score a Model Using the Adobe AI Machine Learning API
 type: Tutorial
 description: This tutorial will show you how to leverage the Adobe AI Machine Learning APIs to create an Experiment and an Experiment Run.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-TQID: https://experienceleague.adobe.com/5bu-W9ypp2xDunBHXRk6UPX9eCCW4JlE2yF1bIWe4-A
+TQID: 'https://experienceleague.adobe.com/5bu-W9ypp2xDunBHXRk6UPX9eCCW4JlE2yF1bIWe4-A'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

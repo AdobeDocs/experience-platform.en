@@ -2,7 +2,7 @@
 title: getMediaAnalyticsTracker
 description: Learn how to create a Media Analytics Tracker object and use it to track media events.
 exl-id: ae968da8-7763-4b2a-a716-3014ba0d270d
-TQID: https://experienceleague.adobe.com/DXkThFtFfX8TjDj5l3dC3gwZstJ0WjzQVKGQA04WdS4
+TQID: 'https://experienceleague.adobe.com/DXkThFtFfX8TjDj5l3dC3gwZstJ0WjzQVKGQA04WdS4'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -22,7 +22,7 @@ feature_v2:
   - id: d833d0ef-8ed5-4cff-a5e7-9f12abd02a31
     internal-label: SDKs
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
 role_v2:

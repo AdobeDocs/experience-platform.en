@@ -3,7 +3,7 @@ title: Web SDK installation overview
 description: Learn how to install the Experience Platform Web SDK.
 keywords: web sdk installation;installing web sdk;internet explorer;promise;npm package
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-TQID: https://experienceleague.adobe.com/C8-LOh7sINppoBOGZP9YUuRnhj7-qxXb8c2Gmziecdw
+TQID: 'https://experienceleague.adobe.com/C8-LOh7sINppoBOGZP9YUuRnhj7-qxXb8c2Gmziecdw'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -12,17 +12,10 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
+    internal-label: Data collection tags
   - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
     internal-label: Datastreams
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
   - id: de9975b2-c43a-4287-9698-4f4cad92b83f
     internal-label: Schemas
 role_v2:

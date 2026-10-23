@@ -2,6 +2,9 @@
 title: company
 description: Obtain information around the IMS organization that owns the implemented tag property.
 exl-id: 172b3b1c-8b35-478d-97b8-603d16e3fb2f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # `company`
 

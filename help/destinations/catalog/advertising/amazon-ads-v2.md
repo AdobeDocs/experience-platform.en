@@ -1,8 +1,20 @@
 ---
 title: Amazon Ads
 description: Amazon Ads offers a range of options to help you achieve your advertising goals to registered sellers, vendors, book vendors, Kindle Direct Publishing (KDP) authors, app developers, or agencies. The Amazon Ads integration with Adobe Experience Platform provides turn-key integration to Amazon Ads products.
-last-substantial-update: 2026-03-31
+last-substantial-update: 2026-03-31T00:00:00.000Z
 exl-id: 8656e114-af22-4696-b109-ffdf99b5316e
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Amazon Ads connection {#amazon-ads-v2}
 

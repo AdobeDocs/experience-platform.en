@@ -2,20 +2,11 @@
 title: Audience Identity Overlaps
 description: Learn how to analyze audience identity overlaps using the Audience Identity Overlaps dashboard. Filter audiences, specify merge policies, and examine identity relationships to make data-driven decisions.
 exl-id: 355835b8-2a67-40b1-a0e8-6afef01ddc6a
-TQID: https://experienceleague.adobe.com/Gp3X3VJm6FV1YvtkrLHsu--wXLgJkW7IJzFBFxc6-AE
+TQID: 'https://experienceleague.adobe.com/Gp3X3VJm6FV1YvtkrLHsu--wXLgJkW7IJzFBFxc6-AE'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-subfeature_v2:
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
   - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
     internal-label: Dashboards
 role_v2:

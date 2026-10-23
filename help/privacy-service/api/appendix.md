@@ -5,13 +5,10 @@ title: Privacy Service API Guide Appendix
 description: This document contains additional information for working with the Privacy Service API.
 role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-TQID: https://experienceleague.adobe.com/sTfXLUp5MYhKzUb2k478ur0b3s2rdoR5NWswtV3cp6U
+TQID: 'https://experienceleague.adobe.com/sTfXLUp5MYhKzUb2k478ur0b3s2rdoR5NWswtV3cp6U'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

@@ -2,7 +2,7 @@
 title: Get Media Analytics tracker
 description: Exports the Legacy Media API to a window object.
 exl-id: 45124032-efbf-4b38-8c96-59abc30af5bc
-TQID: https://experienceleague.adobe.com/FFNRnk9K4IQhadiOIEtlMyZ4Twye3dXnPkyRbU56rH4
+TQID: 'https://experienceleague.adobe.com/FFNRnk9K4IQhadiOIEtlMyZ4Twye3dXnPkyRbU56rH4'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -14,12 +14,9 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

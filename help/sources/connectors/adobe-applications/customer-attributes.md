@@ -4,16 +4,13 @@ solution: Experience Platform
 title: Customer Attributes Source Connector Overview
 description: Learn how to connect Customer Attributes to Adobe Experience Platform using APIs or the user interface
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-TQID: https://experienceleague.adobe.com/SEkixDB2pXqkq6fFwOJsTuHuyAGO34NvVHf2XdDiMRI
+TQID: 'https://experienceleague.adobe.com/SEkixDB2pXqkq6fFwOJsTuHuyAGO34NvVHf2XdDiMRI'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
+    internal-label: Data collection tags
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
     internal-label: Sources
 role_v2:

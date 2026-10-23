@@ -3,7 +3,7 @@ title: Adobe TikTok web events API extension Integration
 description: This Adobe Experience Platform web events API allows you to share website interactions directly with TikTok.
 last-substantial-update: 2023-09-26T00:00:00.000Z
 exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
-TQID: https://experienceleague.adobe.com/X5swX7MnFvVXFQ8AYGKWZpSOAZppvknnXPldZMOs83c
+TQID: 'https://experienceleague.adobe.com/X5swX7MnFvVXFQ8AYGKWZpSOAZppvknnXPldZMOs83c'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -20,28 +20,26 @@ product_v2:
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
     internal-label: Audiences
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
-subfeature_v2:
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
     internal-label: Event forwarding
+subfeature_v2:
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-    internal-label: Data elements
+    internal-label: Data collection tags data elements
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting

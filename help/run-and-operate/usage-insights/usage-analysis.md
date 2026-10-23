@@ -1,6 +1,14 @@
 ---
 title: Usage analysis reference
 description: Learn about the charts available in each Usage Insights analysis area and the usage information they provide.
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 # Usage analysis reference
 

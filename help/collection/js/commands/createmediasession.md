@@ -2,7 +2,7 @@
 title: createMediaSession
 description: Learn how to configure Web SDK to manage media sessions automatically
 exl-id: abcb26f6-7249-4235-99eb-e4b9aeecff3e
-TQID: https://experienceleague.adobe.com/7wV5TUFeB8GgK40MenSnKr4QAN-HZJPVihQxuSH2Y0Q
+TQID: 'https://experienceleague.adobe.com/7wV5TUFeB8GgK40MenSnKr4QAN-HZJPVihQxuSH2Y0Q'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -14,7 +14,7 @@ feature_v2:
   - id: b3f03848-ae12-48b2-8aab-cad18567eb32
     internal-label: Metrics
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
   - id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
     internal-label: Events

@@ -2,6 +2,9 @@
 title: track()
 description: Trigger a direct call rule.
 exl-id: 738cecb0-3dd4-4326-ad64-403ce584fda5
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # `track()`
 

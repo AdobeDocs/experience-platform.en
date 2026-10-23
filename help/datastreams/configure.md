@@ -2,6 +2,9 @@
 title: Create and configure datastreams
 description: Learn how to connect your client-side Web SDK integration with other Adobe products and third-party destinations.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 
 # Create and configure datastreams

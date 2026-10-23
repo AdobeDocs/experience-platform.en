@@ -4,7 +4,7 @@ description: Learn how the Adobe Experience Platform Edge Network manages client
 seo-description: Learn how the Adobe Experience Platform Edge Network  manages client state
 keywords: client;state;management;edge;network;gateway;api
 exl-id: 798ecc52-1af1-4480-a2a3-3198a83538f8
-TQID: https://experienceleague.adobe.com/bYivgb628drUdrx2NREGAk2NUCRQ4MTk-O-3QX1gfCg
+TQID: 'https://experienceleague.adobe.com/bYivgb628drUdrx2NREGAk2NUCRQ4MTk-O-3QX1gfCg'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -16,7 +16,7 @@ product_v2:
     internal-label: Pass
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

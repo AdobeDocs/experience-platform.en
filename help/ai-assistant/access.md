@@ -2,13 +2,13 @@
 title: Access AI Assistant (Legacy) in Experience Platform
 description: Learn how you can access AI Assistant in the Experience Cloud UI.
 exl-id: c4cdff25-512c-4b4c-be91-ad9360067a0a
-TQID: https://experienceleague.adobe.com/BD0anxydq-2tfsJ1zCZnjPFWag70OmqnGYgC6Johs-k
+TQID: 'https://experienceleague.adobe.com/BD0anxydq-2tfsJ1zCZnjPFWag70OmqnGYgC6Johs-k'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-    internal-label: AI Assistant
+    internal-label: AI assistant
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

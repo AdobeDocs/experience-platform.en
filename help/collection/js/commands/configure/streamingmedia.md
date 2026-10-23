@@ -2,7 +2,7 @@
 title: streamingMedia
 description: Configure the Web SDK to collect data related to media usage on your web properties.
 exl-id: f7733619-d35e-43eb-ac90-052717310c39
-TQID: https://experienceleague.adobe.com/p60r5QGs2W6uqX11MNuRA-9keaWhESwZxG3IIiu3Ak4
+TQID: 'https://experienceleague.adobe.com/p60r5QGs2W6uqX11MNuRA-9keaWhESwZxG3IIiu3Ak4'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -16,7 +16,7 @@ feature_v2:
   - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
     internal-label: Reports
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties

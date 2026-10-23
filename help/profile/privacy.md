@@ -5,13 +5,10 @@ title: Privacy Request Processing in Real-Time Customer Profile
 type: Documentation
 description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by numerous privacy regulations. This document covers essential concepts related to processing privacy requests for Real-Time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-TQID: https://experienceleague.adobe.com/eLC-1-DirU9gDl-Bvd6YWbZ3O5oHgQn1Kq8qQiNaI5I
+TQID: 'https://experienceleague.adobe.com/eLC-1-DirU9gDl-Bvd6YWbZ3O5oHgQn1Kq8qQiNaI5I'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

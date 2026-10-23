@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service Overview
 description: Discover how Privacy Service can facilitate automated compliance with legal privacy regulations in your Experience Cloud data operations.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-TQID: https://experienceleague.adobe.com/Y-VDhBnsrSr-sFRAD8BHquyIt2BFAwKa6tjCoYHLkhI
+TQID: 'https://experienceleague.adobe.com/Y-VDhBnsrSr-sFRAD8BHquyIt2BFAwKa6tjCoYHLkhI'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -13,6 +13,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
     internal-label: Customer experience

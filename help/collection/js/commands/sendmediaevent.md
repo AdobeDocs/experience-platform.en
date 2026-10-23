@@ -2,7 +2,7 @@
 title: sendMediaEvent
 description: Learn how to use the sendMediaEvent command to track media sessions in Web SDK.
 exl-id: a38626fd-4810-40a0-8893-e98136634fac
-TQID: https://experienceleague.adobe.com/YaW0TBTiYfbruytGwPxQLjTr9BZD1a88Yv7RsJr4oL4
+TQID: 'https://experienceleague.adobe.com/YaW0TBTiYfbruytGwPxQLjTr9BZD1a88Yv7RsJr4oL4'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -18,10 +18,7 @@ product_v2:
     internal-label: Pass
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

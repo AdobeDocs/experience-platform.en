@@ -2,7 +2,7 @@
 title: Collect commerce, product, and order information using the Adobe Experience Platform Web SDK
 description: Learn how to add data related to products or a shopping cart using the Adobe Experience Platform Web SDK.
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-TQID: https://experienceleague.adobe.com/2ISKS1Vq-MFW6Kw3AkNoIsS8m0SDsCGsawvZyfFQ4HU
+TQID: 'https://experienceleague.adobe.com/2ISKS1Vq-MFW6Kw3AkNoIsS8m0SDsCGsawvZyfFQ4HU'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -20,7 +20,7 @@ feature_v2:
   - id: a075b2c1-7748-4328-b7f6-343aa314616a
     internal-label: Campaigns
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

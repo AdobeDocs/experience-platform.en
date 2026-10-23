@@ -2,7 +2,7 @@
 title: Install the Web SDK using the NPM package
 description: Use an NPM package to install and reference the Web SDK library.
 exl-id: 4c70ec5d-33fd-4ef7-ba9e-5b92ff6c3e86
-TQID: https://experienceleague.adobe.com/72KJtyfIf-2QXKbRLxuTuttBOFsmovDBGIeK8uNkOr8
+TQID: 'https://experienceleague.adobe.com/72KJtyfIf-2QXKbRLxuTuttBOFsmovDBGIeK8uNkOr8'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -12,7 +12,7 @@ product_v2:
     internal-label: Pass
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

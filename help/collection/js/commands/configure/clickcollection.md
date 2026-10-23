@@ -2,6 +2,9 @@
 title: clickCollection
 description: Fine-tune click collection settings.
 exl-id: 5a128b4a-4727-4415-87b4-4ae87a7e1750
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # `clickCollection`
 

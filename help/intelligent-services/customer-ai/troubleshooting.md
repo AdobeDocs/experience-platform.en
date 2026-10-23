@@ -6,15 +6,18 @@ title: Customer AI error troubleshooting
 description: Find answers to common errors in Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-TQID: https://experienceleague.adobe.com/n-K-k-zwoIZ-x96onn4hIoH27T8iAMaMuZgjfo8thG4
+TQID: 'https://experienceleague.adobe.com/n-K-k-zwoIZ-x96onn4hIoH27T8iAMaMuZgjfo8thG4'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
   - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
     internal-label: Real-Time Customer Data Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: f5a6b7c8-5003-4003-9003-500000000003
+    internal-label: Services
+subfeature_v2:
+  - id: af7d4edc-6e6b-4176-bf14-907faf40ebd4
+    internal-label: Customer AI
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

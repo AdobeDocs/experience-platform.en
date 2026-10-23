@@ -2,13 +2,10 @@
 title: Connect Your RainFocus Account To Experience Platform Using the UI
 description: Learn how to connect your RainFocus account to Experience Platform using the UI.
 exl-id: a349e37e-9f2c-47ff-8360-ccbe578dce27
-TQID: https://experienceleague.adobe.com/trIZaZnO2OxuY9jmJUzyDJ1mk5PFq87H0nLXUs3ZjJs
+TQID: 'https://experienceleague.adobe.com/trIZaZnO2OxuY9jmJUzyDJ1mk5PFq87H0nLXUs3ZjJs'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

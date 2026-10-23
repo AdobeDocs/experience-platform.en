@@ -3,13 +3,10 @@ keywords: Experience Platform;home;popular topics;data prep;Data Prep;streaming;
 title: Send Partial Row Updates To Real-Time Customer Profile Using Data Prep
 description: Learn how to send partial row updates to Real-Time Customer Profile using Data Prep.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-TQID: https://experienceleague.adobe.com/HKhuYcYpE--wPMnTDFOg-He9i9nIh-xXmi5idYUzwzY
+TQID: 'https://experienceleague.adobe.com/HKhuYcYpE--wPMnTDFOg-He9i9nIh-xXmi5idYUzwzY'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

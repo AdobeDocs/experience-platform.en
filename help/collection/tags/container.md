@@ -2,6 +2,9 @@
 title: _container
 description: See the entire tag container in a single object.
 exl-id: aa3561e4-b39a-4a00-a770-c192b5bc1282
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # `_container`
 

@@ -3,13 +3,10 @@ title: Models
 description: Model lifecycle management with the Data Distiller SQL extension. Learn how to create, train, and manage advanced statistical models using SQL, including key processes such as model versioning, evaluation, and prediction, to derive actionable insights from your data.
 role: Developer
 exl-id: c609a55a-dbfd-4632-8405-55e99d1e0bd8
-TQID: https://experienceleague.adobe.com/SNGf3ljvvpI1DitXJHoVwSnIpK1SRrNT5DBy82UeQxg
+TQID: 'https://experienceleague.adobe.com/SNGf3ljvvpI1DitXJHoVwSnIpK1SRrNT5DBy82UeQxg'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

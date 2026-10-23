@@ -3,7 +3,7 @@ title: User agent client hints
 description: Learn how user agent client hints work in Web SDK. Client hints allow website owners to access much of the same information available in the user agent string, but in a more privacy-preserving way.
 keywords: user-agent;client hints; string; user-agent string; low entropy; high entropy
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-TQID: https://experienceleague.adobe.com/QioPtdSdXjNNDtNwsgFKMLz2fVwTWqgseSvDHJwRB1U
+TQID: 'https://experienceleague.adobe.com/QioPtdSdXjNNDtNwsgFKMLz2fVwTWqgseSvDHJwRB1U'
 product_v2:
   - id: cb954087-f4fc-4456-afb9-e939cabcdc79
     internal-label: Journey Optimizer
@@ -26,8 +26,6 @@ product_v2:
 feature_v2:
   - id: a075b2c1-7748-4328-b7f6-343aa314616a
     internal-label: Campaigns
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
   - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
     internal-label: Reports
   - id: d556b755-390a-43f0-be32-a08cf6236126
@@ -35,12 +33,10 @@ feature_v2:
   - id: df64005d-8f9a-422e-ba4d-c6f6dc3454b4
     internal-label: Use cases
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
 subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
 role_v2:

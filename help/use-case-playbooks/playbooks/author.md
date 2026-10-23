@@ -4,15 +4,13 @@ title: Learn how to author and share your own Playbooks using the AI Assistant.
 description: How to author and share your own use case playbooks.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-TQID: https://experienceleague.adobe.com/-lIJHAgRhSfTOPi01OYAWmsEjjN5jYfV9waDg6Rvd-0
+TQID: 'https://experienceleague.adobe.com/-lIJHAgRhSfTOPi01OYAWmsEjjN5jYfV9waDg6Rvd-0'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-    internal-label: AI Assistant
+    internal-label: AI assistant
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

@@ -5,15 +5,10 @@ title: Create a Schema Using the Schema Editor
 type: Tutorial
 description: This tutorial covers the steps for creating a schema using the Schema Editor within Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-TQID: https://experienceleague.adobe.com/ZKEa-vyCMpCB4TkJeWEyZdNVt1m1RG2KQopF1tQQqzc
+TQID: 'https://experienceleague.adobe.com/ZKEa-vyCMpCB4TkJeWEyZdNVt1m1RG2KQopF1tQQqzc'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

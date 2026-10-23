@@ -4,13 +4,10 @@ solution: Experience Platform
 title: Mapping Fields for the Marketo Engage Source
 description: Learn how fields in Marketo Engage datasets map to XDM fields when you use the Marketo Engage source to ingest B2B data into Adobe Experience Platform.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-TQID: https://experienceleague.adobe.com/g2-hGKFTAQ0jvTRJnxZCHXgaD9fORd90BOvZ-2pvI6M
+TQID: 'https://experienceleague.adobe.com/g2-hGKFTAQ0jvTRJnxZCHXgaD9fORd90BOvZ-2pvI6M'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

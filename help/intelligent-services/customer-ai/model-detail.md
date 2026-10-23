@@ -2,18 +2,10 @@
 title: Customer AI Propensity Scoring Model Details
 description: Learn about the AI model used for Customer AI.
 exl-id: 08210982-10fe-43ef-a54e-e701241ac175
-TQID: https://experienceleague.adobe.com/Buhj2m7HQOePab-KwoKXe7VVI-qrq2toRrmhodTFVXc
+TQID: 'https://experienceleague.adobe.com/Buhj2m7HQOePab-KwoKXe7VVI-qrq2toRrmhodTFVXc'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

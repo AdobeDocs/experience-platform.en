@@ -1,6 +1,12 @@
 ---
 title: Custom Objects With B2B CDP
 description: Learn how to create a one-to-many relationship custom object for B2B CDP.
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 
 # Use custom objects with B2B CDP

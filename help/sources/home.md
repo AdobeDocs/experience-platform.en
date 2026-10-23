@@ -4,24 +4,15 @@ solution: Experience Platform
 title: Source Connectors Overview
 description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-TQID: https://experienceleague.adobe.com/V-4eFafnVuOwDnYpLjkxnFTznwbqb4usTiPyPv6j60M
+TQID: 'https://experienceleague.adobe.com/V-4eFafnVuOwDnYpLjkxnFTznwbqb4usTiPyPv6j60M'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
+    internal-label: Data collection tags
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
     internal-label: Sources
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
-  - id: d1a87129-ba05-4f15-98b1-233618f1774a
-    internal-label: Data ingestion
   - id: de9975b2-c43a-4287-9698-4f4cad92b83f
     internal-label: Schemas
 role_v2:

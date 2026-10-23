@@ -2,7 +2,7 @@
 title: setConsent
 description: Used on each page to track your users' consent preferences.
 exl-id: d01a6ef1-4fa7-4a60-a3a1-19568b4e0d23
-TQID: https://experienceleague.adobe.com/kQQB8KbJRWZvviQB-8hQ5dsdBio411lMiKugggJRDRQ
+TQID: 'https://experienceleague.adobe.com/kQQB8KbJRWZvviQB-8hQ5dsdBio411lMiKugggJRDRQ'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -13,17 +13,8 @@ product_v2:
   - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
     internal-label: Pass
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

@@ -4,13 +4,19 @@ solution: Experience Platform
 title: Geo Shape Data Type
 description: Learn about the Geo Shape XDM data type.
 exl-id: 50b9d783-a555-45eb-b154-7dc71389e224
-TQID: https://experienceleague.adobe.com/2D0Z7wkA8uFm7UV26vfK46-bU6WetUzx3Qh6T5iuKv4
+TQID: 'https://experienceleague.adobe.com/2D0Z7wkA8uFm7UV26vfK46-bU6WetUzx3Qh6T5iuKv4'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # [!UICONTROL Geo Shape] data type
 

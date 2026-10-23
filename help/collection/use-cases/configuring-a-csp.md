@@ -5,7 +5,7 @@ description: Learn how to configure a CSP for the Experience Platform Web SDK
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;context;web;device;environment;web sdk settings;content security policy;
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-TQID: https://experienceleague.adobe.com/KKKsGpKtueETXu07nlNxn6zdRghWlomteunJBAP011c
+TQID: 'https://experienceleague.adobe.com/KKKsGpKtueETXu07nlNxn6zdRghWlomteunJBAP011c'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -19,7 +19,7 @@ feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
     internal-label: Configuration
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

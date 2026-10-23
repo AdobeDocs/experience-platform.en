@@ -2,7 +2,7 @@
 title: Adobe Target v2 Extension Overview
 description: Learn about the Adobe Target v2 tag extension in Adobe Experience Platform.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-TQID: https://experienceleague.adobe.com/cqZu2HyCdKsadxRRxTIx3r83P2UmGiaEo3zXumwlSeY
+TQID: 'https://experienceleague.adobe.com/cqZu2HyCdKsadxRRxTIx3r83P2UmGiaEo3zXumwlSeY'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -18,14 +18,12 @@ feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
     internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
     internal-label: Implementations
 subfeature_v2:
   - id: c069c44e-5426-4c1a-accc-8028662f2fde
     internal-label: Functions
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
   - id: df312454-73c4-43f6-a90e-18f5043f074c
     internal-label: Tags
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
@@ -33,6 +31,12 @@ subfeature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting

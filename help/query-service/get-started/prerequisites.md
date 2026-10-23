@@ -3,13 +3,14 @@ keywords: Experience Platform;query service;Query service;query
 title: Getting Started with Adobe Experience Platform Query Service
 description: A breakdown of the necessary steps to fully utilize Adobe Experience Platform Query Service
 exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
-TQID: https://experienceleague.adobe.com/KBHvQTA56g1ufzrX062FuD5FoEvdZCMYYFd3PDKw0SM
+TQID: 'https://experienceleague.adobe.com/KBHvQTA56g1ufzrX062FuD5FoEvdZCMYYFd3PDKw0SM'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
 role_v2:

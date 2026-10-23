@@ -7,22 +7,16 @@ doc-type: video
 activity: understand
 thumbnail: 32456.jpg
 exl-id: 7217ed7c-7b50-473d-86da-2cb7a344fdd3
-TQID: https://experienceleague.adobe.com/T1VUHVQhfmt97jTGotBihGKd2EmF5ARoSDMDxrz2aGw
+TQID: 'https://experienceleague.adobe.com/T1VUHVQhfmt97jTGotBihGKd2EmF5ARoSDMDxrz2aGw'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

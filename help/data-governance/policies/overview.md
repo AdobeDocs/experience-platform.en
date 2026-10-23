@@ -4,15 +4,10 @@ solution: Experience Platform
 title: Data Usage Policies Overview
 description: Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-TQID: https://experienceleague.adobe.com/nLzYV-Grtp7Ek5mOtCjNAm0Y6qm-mA9wsDV1IXeWsrQ
+TQID: 'https://experienceleague.adobe.com/nLzYV-Grtp7Ek5mOtCjNAm0Y6qm-mA9wsDV1IXeWsrQ'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

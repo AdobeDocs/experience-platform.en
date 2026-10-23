@@ -2,6 +2,9 @@
 title: Unified identity support in Data Collection
 description: Learn how unified identity support brings first-party persistence and supported third-party activation together in web data collection.
 exl-id: 8a755b61-6280-47f9-87a1-2d1da331a1c6
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Unified identity support in Data Collection
 

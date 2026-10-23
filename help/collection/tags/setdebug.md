@@ -2,6 +2,9 @@
 title: setDebug()
 description: Enable debugging on your site through the browser console.
 exl-id: c042d521-46b4-441b-a91f-685e0428e4dd
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # `setDebug()`
 

@@ -1,8 +1,8 @@
 ---
 title: Create [!DNL Dynamic Datastream Configurations]
-description: "Learn how to add routing rules to a [!DNL Dynamic Datastream Configuration] and route events to specific datasets and Experience Cloud services based on event data."
+description: Learn how to add routing rules to a [!DNL Dynamic Datastream Configuration] and route events to specific datasets and Experience Cloud services based on event data.
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-TQID: https://experienceleague.adobe.com/9wUD6vPq5i-OsBDqy57fa2j5QD2-wZiiOpAVgMnGIp4
+TQID: 'https://experienceleague.adobe.com/9wUD6vPq5i-OsBDqy57fa2j5QD2-wZiiOpAVgMnGIp4'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -18,8 +18,7 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
+    internal-label: Data collection tags
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
     internal-label: Sources
   - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149

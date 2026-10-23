@@ -3,15 +3,13 @@ keywords: Experience Platform;user interface;UI;dashboards;dashboard;profiles;se
 title: Dashboard Customization Overview
 description: Learn more about the ways in which you can customize the data displayed in your Adobe Experience Platform dashboards.
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-TQID: https://experienceleague.adobe.com/3DsIKHOTOkofiuP6YtCz37R83K2-QYLtPjAXFvWBZ94
+TQID: 'https://experienceleague.adobe.com/3DsIKHOTOkofiuP6YtCz37R83K2-QYLtPjAXFvWBZ94'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: eec185bd-7d60-4193-ba3f-da427569936a
-    internal-label: Destinations dashboard
+    internal-label: Destinations
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

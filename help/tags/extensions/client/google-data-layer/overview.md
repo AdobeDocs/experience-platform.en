@@ -2,7 +2,7 @@
 title: Google Data Layer Extension
 description: Learn about the Google Client Data Layer tag extension in Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-TQID: https://experienceleague.adobe.com/XBpdVYy-uipd2SJZ-NsN-DtfQXjB9tamFhbI6DlS0s8
+TQID: 'https://experienceleague.adobe.com/XBpdVYy-uipd2SJZ-NsN-DtfQXjB9tamFhbI6DlS0s8'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -13,22 +13,20 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-    internal-label: Data elements
+    internal-label: Data collection tags data elements
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation

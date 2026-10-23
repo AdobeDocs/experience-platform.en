@@ -2,13 +2,13 @@
 title: Privacy, Security, and Governance in AI Assistant (Legacy)
 description: Learn about the privacy, security, and governance practices for AI Assistant (Legacy).
 exl-id: 371e065d-c2dd-4233-b78e-a42757fce853
-TQID: https://experienceleague.adobe.com/8BM02f1fZmZqqfV4uVgtDETNVX0kh4SkGceKEyTzz6o
+TQID: 'https://experienceleague.adobe.com/8BM02f1fZmZqqfV4uVgtDETNVX0kh4SkGceKEyTzz6o'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-    internal-label: AI Assistant
+    internal-label: AI assistant
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

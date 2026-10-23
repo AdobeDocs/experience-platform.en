@@ -2,6 +2,18 @@
 title: Legacy Adobe Advertising DSP connection
 description: Adobe Advertising DSP is an integrated destination for Adobe Real-Time Customer Data Platform, allowing you to share authenticated first-party audiences with approved advertisers and users for campaign activation.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Legacy [!DNL Adobe Advertising] DSP connection
 

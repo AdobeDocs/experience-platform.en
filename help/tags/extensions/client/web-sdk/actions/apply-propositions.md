@@ -2,7 +2,7 @@
 title: Apply propositions
 description: Render propositions in single-page applications without incrementing metrics.
 exl-id: cac9c65b-259b-4776-bd32-fab070a145fb
-TQID: https://experienceleague.adobe.com/dzvNI7AGqvf2e1Man7WUOugdwRTjX4IeSqkzxGh--Mk
+TQID: 'https://experienceleague.adobe.com/dzvNI7AGqvf2e1Man7WUOugdwRTjX4IeSqkzxGh--Mk'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -15,15 +15,9 @@ product_v2:
 feature_v2:
   - id: b3f03848-ae12-48b2-8aab-cad18567eb32
     internal-label: Metrics
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
   - id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
     internal-label: Events
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb

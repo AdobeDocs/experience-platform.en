@@ -2,6 +2,9 @@
 title: renderDecisions
 description: Render personalized content that is eligible for automatic rendering.
 exl-id: 6f7a3531-c2b6-4e90-a7ad-9f0fe4dc39e9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # `renderDecisions`
 

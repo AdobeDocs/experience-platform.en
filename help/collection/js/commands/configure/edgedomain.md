@@ -2,7 +2,7 @@
 title: edgeDomain
 description: Determine the domain that you want to send data to.
 exl-id: 6beb5116-cd23-42fd-934c-5cf84d1d7153
-TQID: https://experienceleague.adobe.com/AGtfo51srVVyouLSiLya2Ie5-P6V50vl9Xxxwi0iQ-s
+TQID: 'https://experienceleague.adobe.com/AGtfo51srVVyouLSiLya2Ie5-P6V50vl9Xxxwi0iQ-s'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -12,12 +12,12 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: fdbb8fc9-ffa3-4b86-88fe-aa4c5a3e1bc6
     internal-label: Administration
 subfeature_v2:
   - id: bdea9bc8-5600-45db-b85e-d74bb59dfcff
-    internal-label: Organizations, Organizations (AEC)
+    internal-label: Organizations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

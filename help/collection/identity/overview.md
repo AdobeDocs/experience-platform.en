@@ -2,6 +2,9 @@
 title: Identity in Data Collection
 description: Learn how Data Collection uses ECIDs, CORE IDs, first-party persistence, and identityMap across web implementations.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Identity in Data Collection
 

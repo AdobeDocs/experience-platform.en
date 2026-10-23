@@ -2,7 +2,7 @@
 title: Supported Browsers
 description: A list of multiple browsers compatible with an Adobe Experience Platform tag runtime.
 exl-id: fc9ff6f5-7d54-4f13-8286-44791499d704
-TQID: https://experienceleague.adobe.com/dwCx1zQCtY3pX5uhOSlPPelSp8U6Gb-giGlWfLf2X38
+TQID: 'https://experienceleague.adobe.com/dwCx1zQCtY3pX5uhOSlPPelSp8U6Gb-giGlWfLf2X38'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -16,15 +16,16 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
     internal-label: Customer experience

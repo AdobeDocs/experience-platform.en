@@ -2,7 +2,7 @@
 title: pushNotifications
 description: Configure push notifications for the Web SDK to enable browser-based push messaging.
 exl-id: a5cf4817-a4c2-4cf1-8f3a-7e92b807de8f
-TQID: https://experienceleague.adobe.com/9rbMQjUORLLES-KeaX1laWGFmilU3Triq6yGGgDiCzg
+TQID: 'https://experienceleague.adobe.com/9rbMQjUORLLES-KeaX1laWGFmilU3Triq6yGGgDiCzg'
 product_v2:
   - id: cb954087-f4fc-4456-afb9-e939cabcdc79
     internal-label: Journey Optimizer
@@ -13,10 +13,8 @@ product_v2:
 feature_v2:
   - id: d556b755-390a-43f0-be32-a08cf6236126
     internal-label: Configuration
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

@@ -2,20 +2,15 @@
 title: defaultConsent
 description: Set the default consent collection method for your web property.
 exl-id: 2a22fa8b-a234-4d3e-9b55-c7482a928fe6
-TQID: https://experienceleague.adobe.com/1bc7KJIMEOri1ExqjmpCXB9MoRIYKuZS8CEGJqtVvFU
+TQID: 'https://experienceleague.adobe.com/1bc7KJIMEOri1ExqjmpCXB9MoRIYKuZS8CEGJqtVvFU'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

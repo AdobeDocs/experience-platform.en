@@ -2,35 +2,24 @@
 title: Adobe Campaign Managed Cloud Services connection
 description: Adobe Campaign Managed Cloud Services provides a platform for designing cross-channel customer experiences and an environment for visual campaign orchestration, real-time interaction management and cross channel execution.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-TQID: https://experienceleague.adobe.com/-0MbMDp5SX-upRs6G7IzG9tO6HXPq4VpbQbZdIsasyw
+TQID: 'https://experienceleague.adobe.com/-0MbMDp5SX-upRs6G7IzG9tO6HXPq4VpbQbZdIsasyw'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-subfeature_v2:
-  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-    internal-label: Access control
   - id: a7150a74-b8a9-4042-b066-147c5f0ca505
     internal-label: Alerts
   - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
     internal-label: Permissions
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: Guardrails
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
     internal-label: Customer experience

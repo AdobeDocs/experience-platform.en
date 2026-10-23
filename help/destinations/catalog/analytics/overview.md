@@ -3,7 +3,7 @@ keywords: analytics destinations;analytics destination
 title: Analytics destinations overview
 description: Analytics destinations track how visitors interact with content on your site and collect data to understand the behavior of your audience. These platforms deliver unique insights on engagement and conversion of your most valuable visitors.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-TQID: https://experienceleague.adobe.com/7wQLLLpCGKxeBLUGwAtpS6JI-MhTrJ7WBGh4xXqWOEo
+TQID: 'https://experienceleague.adobe.com/7wQLLLpCGKxeBLUGwAtpS6JI-MhTrJ7WBGh4xXqWOEo'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -12,6 +12,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
     internal-label: Insights

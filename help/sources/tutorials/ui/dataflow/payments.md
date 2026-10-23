@@ -5,13 +5,10 @@ title: Create a Dataflow Using a Payments Source in the UI
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Experience Platform dataset. This tutorial provides steps on how to create a dataflow for a payments source using Experience Platform UI.
 exl-id: 7355435b-c038-4310-b04a-8ac6b6723b9b
-TQID: https://experienceleague.adobe.com/TVTqdBG5XAX2qzE8Q-zZFr5QENdhmxlkiu27dVbHQsQ
+TQID: 'https://experienceleague.adobe.com/TVTqdBG5XAX2qzE8Q-zZFr5QENdhmxlkiu27dVbHQsQ'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

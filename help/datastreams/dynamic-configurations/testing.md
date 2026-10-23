@@ -1,6 +1,9 @@
 ---
 title: Test and Validate Dynamic Datastream Configurations
-description: "Learn how to use Adobe Experience Platform Assurance to test [!DNL Dynamic Datastream Configuration] rules and confirm event routing across datasets and services."
+description: Learn how to use Adobe Experience Platform Assurance to test [!DNL Dynamic Datastream Configuration] rules and confirm event routing across datasets and services.
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 
 # Test and validate [!DNL Dynamic Datastream Configurations]

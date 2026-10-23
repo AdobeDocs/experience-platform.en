@@ -2,13 +2,10 @@
 title: Create a Microsoft SQL Server Source Connection in the UI
 description: Learn how to create a Microsoft SQL Server source connection using the Adobe Experience Platform UI.
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
-TQID: https://experienceleague.adobe.com/bq6sS42wNhby9v4elhHuVFL2C1lAPTnIhayedUA2-Sg
+TQID: 'https://experienceleague.adobe.com/bq6sS42wNhby9v4elhHuVFL2C1lAPTnIhayedUA2-Sg'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

@@ -2,13 +2,10 @@
 title: Computed Attributes API Endpoint
 description: Learn how to create, view, update, and delete computed attributes using the Real-Time Customer Profile API.
 exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
-TQID: https://experienceleague.adobe.com/pFaTDDlw-jUKrqkVzzvU1-28ww5-RZVKWWHjFYHH33k
+TQID: 'https://experienceleague.adobe.com/pFaTDDlw-jUKrqkVzzvU1-28ww5-RZVKWWHjFYHH33k'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
