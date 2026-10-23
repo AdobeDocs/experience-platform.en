@@ -72,12 +72,36 @@ A successful request returns HTTP status `200` with a list of process definition
     {
       "definitionUuid": "5b4e018b-f37c-4104-928b-b67148ce8537",
       "name": "onboard-new-customer",
+      "imsOrg": "{ORG_ID}",
+      "sandboxId": "{SANDBOX_ID}",
+      "sandboxName": "prod",
+      "tasks": [
+          {
+            "id": "wait-task-id",
+            "taskType": "wait",
+            "retry": {
+                "maxAttempts": 1,
+                "backoffCoefficient": 2.0
+            }
+        }
+      ],
       "createdAt": "2026-05-13T17:45:00Z",
-      "updatedAt": "2026-05-13T17:45:00Z"
+      "updatedAt": "2026-05-13T17:45:00Z",
+      "createdBy": {
+        "userId": "{USER_ID}",
+        "isService": false
+      },
+      "updatedBy": {
+        "userId": "{USER_ID}",
+        "isService": false
+      }
     }
   ],
   "offset": 0,
-  "nextCursor": "opaque-pagination-cursor"
+  "nextCursor": "opaque-pagination-cursor",
+  "pageSize": 1,
+  "total": 1,
+  "hasMore": true
 }
 ```
 
@@ -85,8 +109,18 @@ A successful request returns HTTP status `200` with a list of process definition
 | ----- | ----------- |
 | `definitionUuid` | The ID of the process definition. |
 | `name` | The name of the process definition. |
+| `imsOrg` | The ID of the organization that the process definition belongs to. |
+| `sandboxId` | The ID of the sandbox that the process definition belongs to. |
+| `sandboxName` | The name of the sandbox that the process definition belongs to. |
+| `tasks` | An array that contains the task objects related to the process definition. |
+| `tasks.id` | The ID of the task. |
+| `tasks.taskType` | The type of task. Possible values include `wait`, `ingest-data`, `verify-profile-ingestion`, `run-segmentation`, `run-profile-export`, `trigger-activation`, `run-data-distiller`, and `send-notification`. |
+| `tasks.retry.maxAttempts` | The number of times the task will be retried if the task fails. |
+| `tasks.retry.backoffCoefficient` | |
 | `createdAt` | The date and time the process definition was created. |
 | `updatedAt` | The date and time the process definition was last updated. |
+| `createdBy` | An object that contains information about the user that created the process definition. |
+| `updatedBy` | An object that contains information about the user that last updated the process definition. |
 
 +++
 
@@ -126,17 +160,31 @@ A successful request returns HTTP status 200 with information about the requeste
 
 ```json
 {
-  "definitionUuid": "5b4e018b-f37c-4104-928b-b67148ce8537",
-  "name": "onboard-new-customer",
-  "description": "Welcome flow for new customers",
-  "tasks": [
-    {
-      "id": "send-welcome",
-      "taskType": "send-email"
+    "definitionUuid": "5b4e018b-f37c-4104-928b-b67148ce8537",
+    "name": "onboard-new-customer",
+    "imsOrg": "{ORG_ID}",
+    "sandboxId": "{SANDBOX_ID}",
+    "sandboxName": "prod",
+    "tasks": [
+        {
+            "id": "wait-task-id",
+            "taskType": "wait",
+            "retry": {
+                "maxAttempts": 1,
+                "backoffCoefficient": 2.0
+        }
     }
-  ],
-  "createdAt": "2026-05-13T17:45:00Z",
-  "updatedAt": "2026-05-13T17:45:00Z"
+    ],
+    "createdAt": "2026-05-13T17:45:00Z",
+    "updatedAt": "2026-05-13T17:45:00Z",
+    "createdBy": {
+        "userId": "{USER_ID}",
+        "isService": false
+    },
+    "updatedBy": {
+        "userId": "{USER_ID}",
+        "isService": false
+    }
 }
 ```
 
@@ -144,12 +192,18 @@ A successful request returns HTTP status 200 with information about the requeste
 | ----- | ----------- |
 | `definitionUuid` | The ID of the process definition. |
 | `name` | The name of the process definition. |
-| `description` | An optional description about the process definition. |
-| `tasks` | An array that contains the tasks that belong to the process definition. |
-| `tasks.id` | The ID of the task within the process definition. |
-| `tasks.taskType` | The type of task within the process definition. |
+| `imsOrg` | The ID of the organization that the process definition belongs to. |
+| `sandboxId` | The ID of the sandbox that the process definition belongs to. |
+| `sandboxName` | The name of the sandbox that the process definition belongs to. |
+| `tasks` | An array that contains the task objects related to the process definition. |
+| `tasks.id` | The ID of the task. |
+| `tasks.taskType` | The type of task. Possible values include `wait`, `ingest-data`, `verify-profile-ingestion`, `run-segmentation`, `run-profile-export`, `trigger-activation`, `run-data-distiller`, and `send-notification`. |
+| `tasks.retry.maxAttempts` | The number of times the task will be retried if the task fails. |
+| `tasks.retry.backoffCoefficient` | |
 | `createdAt` | The date and time the process definition was created. |
 | `updatedAt` | The date and time the process definition was last updated. |
+| `createdBy` | An object that contains information about the user that created the process definition. |
+| `updatedBy` | An object that contains information about the user that last updated the process definition. |
 
 +++
 
@@ -195,8 +249,23 @@ A successful request returns HTTP status 200 with information about the process 
   {
     "runId": "b4d8e7c0-6c31-4d77-9f3d-c7d8a99496d2",
     "definitionUuid": "5b4e018b-f37c-4104-928b-b67148ce8537",
+    "definitionName": "Sample run",
+    "imsOrg": "{ORG_ID}",
+    "sandboxId": "{SANDBOX_ID}",
+    "sandboxName": "prod",
     "state": "RUNNING",
-    "executionTrigger": "MANUAL"
+    "submittedAt": "2026-10-23T18:32:52.402Z",
+    "startedAt": "2026-10-23T18:32:52.402Z",
+    "events": [
+        {
+            "type": "PROCESS_STARTED",
+            "taskId": "sample-task",
+            "taskType": "wait",
+            "attempt": 1,
+            "occurredAt": "2026-10-23T18:33:07.402Z",
+        }
+    ],
+    "triggeredBy": "MANUAL"
   }
 ]
 ```
@@ -204,9 +273,16 @@ A successful request returns HTTP status 200 with information about the process 
 | Field | Description |
 | ----- | ----------- |
 | `runId` | The ID of the process definition run. |
-| `definitionUuid` | The ID of the process definition. |
+| `definitionUuid` | The ID of the process definition that the run belongs to. |
+| `definitionName` | The name of the process definition that the run belongs to. |
+| `imsOrg` | The ID of the organization that the process definition run belongs to. |
+| `sandboxId` | The ID of the sandbox that the process definition run belongs to. |
+| `sandboxName` | The name of the sandbox that the process definition run belongs to. |
 | `state` | The state of the process definition run. Possible values include `PENDING`, `RUNNING`, `COMPLETED`, `FAILED`, `CANCELED`, `TERMINATED`, and `TIMED_OUT`. |
-| `executionTrigger` | The method which the process definition was executed. Possible values include `MANUAL` or `SCHEDULE`. |
+| `submittedAt` | The date and time the process definition run was submitted. |
+| `startedAt` | The date and time the process definition run starts executing. |
+| `events` | An object that contains the tasks that are executed as part of the process definition run. |
+| `triggeredBy` | The method which the process definition was executed. Possible values include `MANUAL` or `SCHEDULE`. |
 
 +++
 
@@ -246,24 +322,41 @@ A successful request returns HTTP status 200 with information about the specifie
 
 ```json
 {
-  "runId": "b4d8e7c0-6c31-4d77-9f3d-c7d8a99496d2",
-  "definitionUuid": "5b4e018b-f37c-4104-928b-b67148ce8537",
-  "state": "PENDING",
-  "eventHistory": [
-    {
-      "eventType": "SUBMITTED",
-      "timestamp": "2026-05-13T17:50:00Z"
-    }
-  ]
+    "runId": "b4d8e7c0-6c31-4d77-9f3d-c7d8a99496d2",
+    "definitionUuid": "5b4e018b-f37c-4104-928b-b67148ce8537",
+    "definitionName": "Sample run",
+    "imsOrg": "{ORG_ID}",
+    "sandboxId": "{SANDBOX_ID}",
+    "sandboxName": "prod",
+    "state": "RUNNING",
+    "submittedAt": "2026-10-23T18:32:52.402Z",
+    "startedAt": "2026-10-23T18:32:52.402Z",
+    "events": [
+        {
+            "type": "PROCESS_STARTED",
+            "taskId": "sample-task",
+            "taskType": "wait",
+            "attempt": 1,
+            "occurredAt": "2026-10-23T18:33:07.402Z",
+        }
+    ],
+    "triggeredBy": "MANUAL"
 }
 ```
 
 | Field | Description |
 | ----- | ----------- |
 | `runId` | The ID of the process definition run. |
-| `definitionUuid` | The ID of the process definition. |
+| `definitionUuid` | The ID of the process definition that the run belongs to. |
+| `definitionName` | The name of the process definition that the run belongs to. |
+| `imsOrg` | The ID of the organization that the process definition run belongs to. |
+| `sandboxId` | The ID of the sandbox that the process definition run belongs to. |
+| `sandboxName` | The name of the sandbox that the process definition run belongs to. |
 | `state` | The state of the process definition run. Possible values include `PENDING`, `RUNNING`, `COMPLETED`, `FAILED`, `CANCELED`, `TERMINATED`, and `TIMED_OUT`. |
-| `eventHistory` | An array that contains objects of the event history of the process definition run. |
+| `submittedAt` | The date and time the process definition run was submitted. |
+| `startedAt` | The date and time the process definition run starts executing. |
+| `events` | An object that contains the tasks that are executed as part of the process definition run. |
+| `triggeredBy` | The method which the process definition was executed. Possible values include `MANUAL` or `SCHEDULE`. |
 
 +++
 
@@ -312,10 +405,25 @@ A successful request returns HTTP status 202 Accepted with the accepted run deta
 
 ```json
 {
-  "runId": "b4d8e7c0-6c31-4d77-9f3d-c7d8a99496d2",
-  "definitionUuid": "5b4e018b-f37c-4104-928b-b67148ce8537",
-  "state": "PENDING",
-  "executionTrigger": "MANUAL"
+    "runId": "b4d8e7c0-6c31-4d77-9f3d-c7d8a99496d2",
+    "definitionUuid": "5b4e018b-f37c-4104-928b-b67148ce8537",
+    "definitionName": "Sample run",
+    "imsOrg": "{ORG_ID}",
+    "sandboxId": "{SANDBOX_ID}",
+    "sandboxName": "prod",
+    "state": "RUNNING",
+    "submittedAt": "2026-10-23T18:32:52.402Z",
+    "startedAt": "2026-10-23T18:32:52.402Z",
+    "events": [
+        {
+            "type": "PROCESS_STARTED",
+            "taskId": "sample-task",
+            "taskType": "wait",
+            "attempt": 1,
+            "occurredAt": "2026-10-23T18:33:07.402Z",
+        }
+    ],
+    "triggeredBy": "MANUAL"
 }
 ```
 
@@ -323,8 +431,15 @@ A successful request returns HTTP status 202 Accepted with the accepted run deta
 | ----- | ----------- |
 | `runId` | The ID of the newly accepted run. |
 | `definitionUuid` | The ID of the process definition the run is for. |
+| `definitionName` | The name of the process definition that the run belongs to. |
+| `imsOrg` | The ID of the organization that the process definition run belongs to. |
+| `sandboxId` | The ID of the sandbox that the process definition run belongs to. |
+| `sandboxName` | The name of the sandbox that the process definition run belongs to. |
 | `state` | The state of the run. Since this process is asynchronous, this will be `PENDING`. |
-| `executionTrigger` | The method which the process definition run was triggered. |
+| `submittedAt` | The date and time the process definition run was submitted. |
+| `startedAt` | The date and time the process definition run starts executing. |
+| `events` | An object that contains the tasks that are executed as part of the process definition run. |
+| `triggeredBy` | The method which the process definition was executed. Possible values include `MANUAL` or `SCHEDULE`. |
 
 +++
 
@@ -364,19 +479,29 @@ A successful request returns HTTP status `200` with information about the proces
 
 ```json
 {
-  "definitionUuid": "5b4e018b-f37c-4104-928b-b67148ce8537",
-  "scheduleType": "cron",
   "cron": "0 0 * * *",
-  "paused": false
+  "paused": false,
+  "createdAt": "2026-10-23T20:50:40.581Z",
+  "updatedAt": "2026-10-23T20:50:40.581Z",
+  "createdBy": {
+    "userId": "{USER_ID}",
+    "isService": false
+  },
+  "updatedBy": {
+    "userId": "{USER_ID}",
+    "isService": false
+  }
 }
 ```
 
 | Field | Description |
 | ----- | ----------- |
-| `definitionUuid` | The ID of the process definition. |
-| `scheduleType` | The type of schedule. |
 | `cron` | The cron format for the schedule. For more information about cron schedules, read the [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. |
 | `paused` | A boolean that states if the schedule is paused or not. |
+| `createdAt` | The date and time the schedule was created. |
+| `updatedAt` | The date and time the schedule was last updated. |
+| `createdBy` | An object that contains details of the user who created the schedule. |
+| `updatedBy` | An object that contains details of the user who last updated the schedule. |
 
 +++
 
@@ -399,7 +524,7 @@ PUT /process-definitions/{DEFINITION_ID}/schedule
 +++ A sample request to replace the process definition's schedule.
 
 ```shell
-curl -X PUT "https://aep-maestro.adobe.io/process-definitions/{definitionUuid}/schedule" \
+curl -X PUT "https://aep-maestro.adobe.io/process-definitions/5b4e018b-f37c-4104-928b-b67148ce8537/schedule" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {ORG_ID}" \
@@ -418,101 +543,163 @@ curl -X PUT "https://aep-maestro.adobe.io/process-definitions/{definitionUuid}/s
 
 **Response**
 
++++ A sample response when updating a schedule.
+
 A successful request returns HTTP status `200` with the updated schedule.
 
-**Status codes**
+```json
+{
+  "cron": "0 0 * * *",
+  "paused": false,
+  "createdAt": "2026-10-23T20:50:40.581Z",
+  "updatedAt": "2026-10-23T20:50:40.581Z",
+  "createdBy": {
+    "userId": "{USER_ID}",
+    "isService": false
+  },
+  "updatedBy": {
+    "userId": "{USER_ID}",
+    "isService": false
+  }
+}
+```
 
-- `200 OK`: The schedule was replaced.
-- `400 Bad Request`: The schedule payload is invalid.
-- `404 Not Found`: The definition or schedule does not exist.
-- `503 Service Unavailable`: The service is unavailable.
++++
 
-### DELETE /process-definitions/{definitionUuid}/schedule
+## Remove the process definition schedule {#remove-schedule}
 
-Removes the schedule attached to a process definition.
+You can remove the schedule attached to a process definition by making a DELETE request to the `/process-definitions/{DEFINITION_ID}/schedule` endpoint while providing the ID of the process definition.
 
 **API format**
 
 ```http
-DELETE /process-definitions/{definitionUuid}/schedule
+DELETE /process-definitions/{DEFINITION_ID}/schedule
 ```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{DEFINITION_ID}` | The ID of the process definition. |
 
 **Request**
 
++++ A sample request to remove the process definition's schedule.
+
 ```shell
-curl -X DELETE "https://aep-maestro.adobe.io/process-definitions/{definitionUuid}/schedule" \
+curl -X DELETE "https://aep-maestro.adobe.io/process-definitions/5b4e018b-f37c-4104-928b-b67148ce8537/schedule" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
++++
+
 **Response**
 
-A successful request returns HTTP status `204 No Content`.
+A successful request returns HTTP 204 with no response body.
 
-**Status codes**
+## Pause the specified schedule {#pause-schedule}
 
-- `204 No Content`: The schedule was deleted.
-- `404 Not Found`: The definition or schedule does not exist.
-- `503 Service Unavailable`: The service is unavailable.
-
-### POST /process-definitions/{definitionUuid}/schedule:pause
-
-Pauses the schedule for a process definition.
+You can pause the schedule for a process definition by making a POST request to the `/process-definitions/{DEFINITION_ID}/schedule:pause` endpoint while providing the process definition ID.
 
 **API format**
 
 ```http
-POST /process-definitions/{definitionUuid}/schedule:pause
+POST /process-definitions/{DEFINITION_ID}/schedule:pause
 ```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{DEFINITION_ID}` | The ID of the process definition. |
 
 **Request**
 
++++ A sample request to pause the schedule.
+
 ```shell
-curl -X POST "https://aep-maestro.adobe.io/process-definitions/{definitionUuid}/schedule:pause" \
+curl -X POST "https://aep-maestro.adobe.io/process-definitions/5b4e018b-f37c-4104-928b-b67148ce8537/schedule:pause" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
++++
+
 **Response**
 
-A successful request returns HTTP status `200` with the paused schedule state.
+A successful request returns HTTP status 200 with information about the schedule.
 
-**Status codes**
++++ A sample response when pausing a schedule.
 
-- `200 OK`: The schedule was paused.
-- `404 Not Found`: The definition or schedule does not exist.
-- `503 Service Unavailable`: The service is unavailable.
+```json
+{
+  "cron": "0 0 * * *",
+  "paused": true,
+  "createdAt": "2026-10-23T20:50:40.581Z",
+  "updatedAt": "2026-10-23T20:50:40.581Z",
+  "createdBy": {
+    "userId": "{USER_ID}",
+    "isService": false
+  },
+  "updatedBy": {
+    "userId": "{USER_ID}",
+    "isService": false
+  }
+}
+```
 
-### POST /process-definitions/{definitionUuid}/schedule:resume
++++
 
-Resumes a paused schedule for a process definition.
+## Resume the specified schedule {#resume-schedule}
+
+You can resume the schedule for a process definition by making a POST request to the `/process-definitions/{DEFINITION_ID}/schedule:resume` endpoint while providing the process definition ID.
 
 **API format**
 
 ```http
-POST /process-definitions/{definitionUuid}/schedule:resume
+POST /process-definitions/{DEFINITION_ID}/schedule:resume
 ```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{DEFINITION_ID}` | The ID of the process definition. |
 
 **Request**
 
++++ A sample request when resuming a schedule.
+
 ```shell
-curl -X POST "https://aep-maestro.adobe.io/process-definitions/{definitionUuid}/schedule:resume" \
+curl -X POST "https://aep-maestro.adobe.io/process-definitions/5b4e018b-f37c-4104-928b-b67148ce8537/schedule:resume" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
++++
+
 **Response**
 
-A successful request returns HTTP status `200` with the resumed schedule state.
+A successful request returns HTTP status 200 with information about the schedule.
 
-**Status codes**
++++ A sample response when resuming a schedule.
 
-- `200 OK`: The schedule was resumed.
-- `404 Not Found`: The definition or schedule does not exist.
-- `503 Service Unavailable`: The service is unavailable.
+```json
+{
+  "cron": "0 0 * * *",
+  "paused": false,
+  "createdAt": "2026-10-23T20:50:40.581Z",
+  "updatedAt": "2026-10-23T20:50:40.581Z",
+  "createdBy": {
+    "userId": "{USER_ID}",
+    "isService": false
+  },
+  "updatedBy": {
+    "userId": "{USER_ID}",
+    "isService": false
+  }
+}
+```
+
++++
