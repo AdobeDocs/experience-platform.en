@@ -1,6 +1,9 @@
 ---
 title: Dynamic Datastream Configuration Prerequisites
-description: "Learn how to prepare your datastream, schemas, datasets, and event inventory before configuring [!DNL Dynamic Datastream Configuration] rules to prevent setup errors."
+description: Learn how to prepare your datastream, schemas, datasets, and event inventory before configuring [!DNL Dynamic Datastream Configuration] rules to prevent setup errors.
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 
 # Prerequisites and planning checklist

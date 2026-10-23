@@ -3,13 +3,10 @@ solution: Experience Platform
 title: Browser and Language Support for the Experience Platform UI
 description: Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-TQID: https://experienceleague.adobe.com/9DXzNTnRJOUjEymIcDKQewo0vvBSUiTfyGzNUGmyUIs
+TQID: 'https://experienceleague.adobe.com/9DXzNTnRJOUjEymIcDKQewo0vvBSUiTfyGzNUGmyUIs'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

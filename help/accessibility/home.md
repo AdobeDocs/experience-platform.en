@@ -4,13 +4,10 @@ title: Overview of accessibility features in Experience Platform
 type: Documentation
 description: Adobe Experience Platform is committed to providing accessible and inclusive features to all individuals.
 exl-id: 54ce6826-09ee-4716-8237-ef904a41986f
-TQID: https://experienceleague.adobe.com/ZnRdMJzWOTx7XanrYya8-2c1rJMnKnmjEag7xvCfDHs
+TQID: 'https://experienceleague.adobe.com/ZnRdMJzWOTx7XanrYya8-2c1rJMnKnmjEag7xvCfDHs'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

@@ -2,7 +2,7 @@
 title: Datastreams overview
 description: Learn how datastreams help you connect your client-side Experience Platform SDK integration with Adobe products and third-party destinations.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-TQID: https://experienceleague.adobe.com/RKMXa4lwEGzns3NPt8k-Sac-y3lCmorR7v-v2cglNHc
+TQID: 'https://experienceleague.adobe.com/RKMXa4lwEGzns3NPt8k-Sac-y3lCmorR7v-v2cglNHc'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -20,20 +20,16 @@ feature_v2:
   - id: c814092e-2730-45e8-a12d-e084529f52cb
     internal-label: Destinations
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13
-    internal-label: Data prep
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
+    internal-label: Data collection tags
   - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
     internal-label: Datastreams
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
     internal-label: Event forwarding
   - id: de9975b2-c43a-4287-9698-4f4cad92b83f
     internal-label: Schemas
+subfeature_v2:
+  - id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13
+    internal-label: Datastreams data prep
   - id: e8a4c7eb-7254-4984-ac46-e651a57c7e39
     internal-label: SDKs
 role_v2:

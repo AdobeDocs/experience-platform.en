@@ -4,13 +4,13 @@ description: Read this document to learn how you can use AI Assistant for Experi
 badge: Alpha
 hide: true
 exl-id: 041034c6-da45-437f-ad46-f9c2ded9f82c
-TQID: https://experienceleague.adobe.com/-dXeZqH5-zPYNKFnEZa44lUtTWNkkUhdJso9flRSUQo
+TQID: 'https://experienceleague.adobe.com/-dXeZqH5-zPYNKFnEZa44lUtTWNkkUhdJso9flRSUQo'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-    internal-label: AI Assistant
+    internal-label: AI assistant
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

@@ -4,13 +4,10 @@ title: Download Experience Platform Dashboards to PDF
 type: Documentation
 description: Save copies of dashboard visualizations using the download-to-PDF feature available within the Experience Platform UI.
 exl-id: 838e98a0-ce2e-4dcd-8c8f-d28ef2cb8315
-TQID: https://experienceleague.adobe.com/2LtQLhdwTGsXDIs1H3gTvQ1CiZ2KXDKenEZMADWJqOs
+TQID: 'https://experienceleague.adobe.com/2LtQLhdwTGsXDIs1H3gTvQ1CiZ2KXDKenEZMADWJqOs'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

@@ -4,11 +4,14 @@ solution: Experience Platform
 title: JupyterLab UI Overview
 description: JupyterLab is a web-based user interface for Project Jupyter and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter Notebooks, code, and data. This document provides an overview of JupyterLab and its features as well as instructions to perform common actions.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-TQID: https://experienceleague.adobe.com/iOMfV8qywfflOSlbiuRtzlqwLFstW3pthBabXRWlSso
+TQID: 'https://experienceleague.adobe.com/iOMfV8qywfflOSlbiuRtzlqwLFstW3pthBabXRWlSso'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
 role_v2:

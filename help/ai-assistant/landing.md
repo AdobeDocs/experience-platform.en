@@ -3,13 +3,13 @@ title: AI Assistant (Legacy) in Adobe Experience Platform Product Documentation
 description: Get started with AI Assistant (Legacy) in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-TQID: https://experienceleague.adobe.com/iT-GKLpsMKW8HhDPdSQePn37JF0hpzERNztB-vbcd1A
+TQID: 'https://experienceleague.adobe.com/iT-GKLpsMKW8HhDPdSQePn37JF0hpzERNztB-vbcd1A'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-    internal-label: AI Assistant
+    internal-label: AI assistant
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

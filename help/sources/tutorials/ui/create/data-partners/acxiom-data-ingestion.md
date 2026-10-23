@@ -2,13 +2,10 @@
 title: Acxiom Data Ingestion
 description: Use the Acxiom Data Ingestion to ingest Acxiom data into Real-Time CDP and enrich first-party profiles. Use your Acxiom-enriched first-party profiles to improve audiences and activate across marketing channels.
 exl-id: a0a080ef-4603-437f-8a68-11dbf530ac90
-TQID: https://experienceleague.adobe.com/ura7nVB2R-zV9-XFf8WSYHMY9LrxBTwXDBn8-ldmSIc
+TQID: 'https://experienceleague.adobe.com/ura7nVB2R-zV9-XFf8WSYHMY9LrxBTwXDBn8-ldmSIc'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

@@ -36,6 +36,7 @@ role: Developer
     - [Meta Ads connector](connectors/advertising/meta-ads.md)
     - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
     - [Snapchat Ads](connectors/advertising/snapchat-ads.md)
+    - {hide-from-toc} [TikTok Ads](connectors/advertising/tiktok-ads.md)
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
     - [Pendo](connectors/analytics/pendo-webhook.md)
@@ -259,6 +260,7 @@ role: Developer
       - [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
       - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
       - [Snapchat Ads](tutorials/ui/create/advertising/snapchat-ads.md)
+      - {hide-from-toc} [TikTok Ads](tutorials/ui/create/advertising/tiktok-ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)

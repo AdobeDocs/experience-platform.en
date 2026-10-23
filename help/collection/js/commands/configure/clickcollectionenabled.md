@@ -2,7 +2,7 @@
 title: clickCollectionEnabled
 description: Learn how to configure Web SDK to tetermine if link click data is automatically collected.
 exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
-TQID: https://experienceleague.adobe.com/yQpTqRt4bZSH7fToCyuYkXAac7MTBFazfQEoFmgwrTI
+TQID: 'https://experienceleague.adobe.com/yQpTqRt4bZSH7fToCyuYkXAac7MTBFazfQEoFmgwrTI'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -14,7 +14,7 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
 role_v2:

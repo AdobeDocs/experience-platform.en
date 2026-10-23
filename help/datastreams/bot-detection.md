@@ -2,7 +2,7 @@
 title: Configure bot detection for datastreams
 description: Learn how to configure bot detection for datastreams, to differentiate human and nonhuman traffic.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-TQID: https://experienceleague.adobe.com/ISjGdLgu5D3dK-B82aBqEbbs4VTT3M-OHlLfCwqBn8M
+TQID: 'https://experienceleague.adobe.com/ISjGdLgu5D3dK-B82aBqEbbs4VTT3M-OHlLfCwqBn8M'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -16,12 +16,12 @@ feature_v2:
   - id: b3f03848-ae12-48b2-8aab-cad18567eb32
     internal-label: Metrics
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
-subfeature_v2:
   - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
     internal-label: Datastreams
+subfeature_v2:
   - id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
     internal-label: Events
 role_v2:

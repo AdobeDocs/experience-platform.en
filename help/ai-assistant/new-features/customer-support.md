@@ -2,17 +2,13 @@
 title: Product Support Agent
 description: Learn how you can use Product Support Agent in AI Assistant to streamline troubleshooting and the customer support ticket filing process.
 exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
-TQID: https://experienceleague.adobe.com/HelspNNVYqrWzDMOq6f0-LBiNE-eeVZXOflxOlJek2U
+TQID: 'https://experienceleague.adobe.com/HelspNNVYqrWzDMOq6f0-LBiNE-eeVZXOflxOlJek2U'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-    internal-label: AI Assistant
+    internal-label: AI assistant
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

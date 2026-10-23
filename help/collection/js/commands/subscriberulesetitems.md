@@ -2,6 +2,9 @@
 title: subscribeRulesetItems
 description: Subscribe to content cards for a specific surface using the subscribeRulesetItems command.
 exl-id: bc932ba5-a810-4fa6-82cc-998af39fdd34
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # `subscribeRulesetItems`
 

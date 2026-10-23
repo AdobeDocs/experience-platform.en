@@ -6,10 +6,16 @@ description: This document contains steps outlining how to set up a Postman envi
 role: Developer
 feature: API
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-TQID: https://experienceleague.adobe.com/TSfyd-YpWj4GntOUgq-ySsA2--oAAD2J-d9aD4KRs4c
+TQID: 'https://experienceleague.adobe.com/TSfyd-YpWj4GntOUgq-ySsA2--oAAD2J-d9aD4KRs4c'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
+feature_v2:
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
+subfeature_v2:
+  - id: 01a3139f-2204-4e1b-bd65-5437f7d5a5bd
+    internal-label: API credentials
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

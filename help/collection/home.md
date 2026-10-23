@@ -3,22 +3,17 @@ solution: Experience Platform
 title: Data collection overview
 description: Learn how to send data to Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-TQID: https://experienceleague.adobe.com/cZl7JCCNUNwni6DKqQeyyH7qaup0HFDpxm0NiJYN4S8
+TQID: 'https://experienceleague.adobe.com/cZl7JCCNUNwni6DKqQeyyH7qaup0HFDpxm0NiJYN4S8'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
+    internal-label: Data collection tags
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
     internal-label: Sources
   - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
     internal-label: Datastreams
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
     internal-label: Event forwarding
 role_v2:

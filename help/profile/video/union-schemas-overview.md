@@ -4,19 +4,16 @@ description: This video provides a basic understanding of union schemas within A
 product: experience platform
 type: Documentation
 solution: Experience Platform
-kt: null
+kt: 
 audience: all
 doc-type: video
 activity: understand
-thumbnail: null
+thumbnail: 
 exl-id: b3f84ed8-09e8-470e-b5e2-944a4eaf147b
-TQID: https://experienceleague.adobe.com/IU8ju30PwRHeQjL0i8pknvnnqZY440tFrL35pNmjBrY
+TQID: 'https://experienceleague.adobe.com/IU8ju30PwRHeQjL0i8pknvnnqZY440tFrL35pNmjBrY'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

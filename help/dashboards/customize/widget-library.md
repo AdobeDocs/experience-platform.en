@@ -3,13 +3,10 @@ keywords: Experience Platform;user interface;UI;dashboards;dashboard;profiles;se
 title: Dashboard Widget Library Overview
 description: This guide provides step-by-step instructions for accessing the widget library in Adobe Experience Platform.
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-TQID: https://experienceleague.adobe.com/Nn2p-Dna74g9siLfUdjL-ZT8eEIEU6eEraE6-2BigtM
+TQID: 'https://experienceleague.adobe.com/Nn2p-Dna74g9siLfUdjL-ZT8eEIEU6eEraE6-2BigtM'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

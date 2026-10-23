@@ -2,24 +2,16 @@
 title: Audience Portal Overview
 description: Learn how to use Audience Portal to view, manage, and create audiences within Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-TQID: https://experienceleague.adobe.com/AdgwAOdeq25AQrvZhbI7dgmYKG-BYBl5IWL3CAzn49Q
+TQID: 'https://experienceleague.adobe.com/AdgwAOdeq25AQrvZhbI7dgmYKG-BYBl5IWL3CAzn49Q'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: b1c2d3e4-1001-4001-9001-100000000001
+    internal-label: Customer audiences
 subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
   - id: f0c9f224-75f2-4864-8de6-859ae7856690
-    internal-label: Segment Match
+    internal-label: Segment match
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
@@ -92,7 +84,7 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 | [!UICONTROL Publish] | Custom upload, Segmentation Service | Publishes the selected audience. For more information on lifecycle status management, please read the [lifecycle state section of the Segmentation FAQ](../faq.md#lifecycle-states). |
 | [!UICONTROL Deactivate] | Custom upload, Segmentation Service | Deactivates the selected audience. Please note that in order to deactivate an audience, it **cannot** be activated in **any** destination (including non-Experience Platform destinations) or be part of **any** other audiences. For more information on lifecycle status management, please read the [lifecycle state section of the Segmentation FAQ](../faq.md#lifecycle-states). |
 | [!UICONTROL Delete] | Audience composition, Custom upload, Segmentation Service | Deletes the selected audience. Audiences that are used in downstream destinations or are dependents in other audiences **cannot** be deleted. For more information on audience deletion, please read the [segmentation FAQ](../faq.md#lifecycle-states). |
-| [!UICONTROL Add to package] | Audience composition, Custom upload, Segmentation Service | Moves the audience between sandboxes. For more information on this feature, please read the [sandbox tooling guide](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Add to package] | Audience composition, Custom upload, Federated Audience Composition, Segmentation Service | Moves the audience between sandboxes. For more information on this feature, please read the [sandbox tooling guide](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!IMPORTANT]
 >
@@ -440,6 +432,8 @@ Enabling your audiences for scheduled evaluation can be done using the UI or the
 >[!NOTE]
 >
 >Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for [!DNL XDM Individual Profile]. If your organization has more than five merge policies for [!DNL XDM Individual Profile] within a single sandbox environment, you will not be able to use scheduled evaluation.
+>
+>Additionally, enabling scheduled segmentation applies for **both** people-based and account-based audiences.
 
 Schedules can currently only be created using the API. For detailed steps on creating, editing, and working with schedules using the API, please follow the tutorial for evaluating and accessing segmentation results, specifically the section on [scheduled evaluation using the API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
@@ -502,11 +496,13 @@ The **[!UICONTROL Import audience CSV]** workflow appears. You can select a CSV 
 
 >[!NOTE]
 >
->The external generated audience **must** be in CSV format, have a **maximum** of 25 columns, and be less than 1GB.
+>The externally generated audience **must** be in CSV format, have a **maximum** of 26 columns, and be less than or equal to 1 GB.
 >
 >Additionally, you **cannot** use spaces or dashes in the first row or the associated columns of the CSV.
 >
 >For example, the first row's value can be "FirstName" or "First_Name", but it cannot be "First Name" or "First-Name".
+>
+>Your sandbox can contain a **maximum** of 50 externally generated CSV audiences. This limit does **not** include audiences created using Federated Audience Composition.
 
 After selecting the CSV file to import, a list of sample data is shown for this externally generated audience. After confirming that the sample data is correct, select **[!UICONTROL Next]**.
 

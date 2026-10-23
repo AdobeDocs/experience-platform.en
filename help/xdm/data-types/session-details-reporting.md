@@ -2,18 +2,19 @@
 title: Session Details Reporting Data Type
 description: Learn about the Session Details Reporting Experience Data Model (XDM) data type.
 exl-id: 8bcaa0d8-2f85-4189-b0b5-8c72ecbb0660
-TQID: https://experienceleague.adobe.com/d5up9DXvvwBOczR-nO4p6-LnHyvXF5O89arNJMng9Dk
+TQID: 'https://experienceleague.adobe.com/d5up9DXvvwBOczR-nO4p6-LnHyvXF5O89arNJMng9Dk'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
     internal-label: Metadata

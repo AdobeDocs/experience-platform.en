@@ -1,6 +1,12 @@
 ---
 title: Using Flexible Batch Schedules
 description: Learn how to use Flexible Batch Schedules to evaluate your batch audiences on demand.
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 
 # Control batch audience evaluation with Flexible Batch Schedules

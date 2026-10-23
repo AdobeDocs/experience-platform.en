@@ -2,13 +2,10 @@
 title: Data Governance in Query Service
 description: This overview covers the major elements of data governance in Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-TQID: https://experienceleague.adobe.com/9s6jw0fpJcs1pKksipJ2LMC7Nn4o5QFGljQKuAvdV3w
+TQID: 'https://experienceleague.adobe.com/9s6jw0fpJcs1pKksipJ2LMC7Nn4o5QFGljQKuAvdV3w'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
@@ -64,7 +61,7 @@ Access control in Adobe Experience Platform is managed by role-based permissions
 
 This section outlines the required access control permissions that a user must have in order to fully utilize Query Service features. See the documents on [managing permissions](../../access-control/ui/permissions.md) and [managing users](../../access-control/ui/users.md) for detailed instructions on assigning access to a product profile.
 
-#### Relevant permissions
+#### Relevant permissions {#permissions}
 
 The relevant access control permissions are defined in the tables below according to their level of scope.
 
@@ -77,6 +74,10 @@ To run queries within Query Service, a user must be assigned a role with the fol
 | [!UICONTROL Manage Queries] | This permission allows users to execute data exploration and batch queries, which can either read an existing dataset or write data on datasets. This includes both `CREATE TABLE AS SELECT` (`CTAS`) and `INSERT INTO AS SELECT` (`ITAS`) queries. |
 
 **Dataset permissions**
+
+>[!IMPORTANT]
+>
+>As of September 22, 2026, Accelerated Queries honor existing schema-level READ permissions. Roles used for Accelerated Queries require the **[!UICONTROL View Profiles]** permission and READ access to the required schemas. If a role queries destination data, it also requires the **[!UICONTROL View Destinations]** permission. Missing permissions may affect custom dashboards and other tools that rely on these queries.
 
 This section serves as a guide for the resource-based access required to access datasets while querying data through Query Service.
 

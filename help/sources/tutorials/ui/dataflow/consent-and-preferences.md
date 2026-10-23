@@ -5,13 +5,10 @@ title: Create a Dataflow Using a Consent and Preferences Source in the UI
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Experience Platform dataset. This tutorial provides steps on how to create a dataflow for a consent and preferences source using Experience Platform UI.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
-TQID: https://experienceleague.adobe.com/rIUl1NLY7e4TlQ4u-6GsdRbDg5qx4tSw5KQ9yiadJlc
+TQID: 'https://experienceleague.adobe.com/rIUl1NLY7e4TlQ4u-6GsdRbDg5qx4tSw5KQ9yiadJlc'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -109,6 +106,10 @@ Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 ## Schedule ingestion runs
 
 The [!UICONTROL Scheduling] step appears, allowing you to configure an ingestion schedule to automatically ingest the selected source data using the configured mappings. By default, scheduling is set to `Once`. To adjust your ingestion frequency, select **[!UICONTROL Frequency]** and then select an option from the dropdown menu.
+
+>[!IMPORTANT]
+>
+>For [!DNL OneTrust Integration], each scheduled run ingests data after the previous run, even if that run failed. The next scheduled run does not automatically recover data for the failed run's time window.
 
 >[!TIP]
 >
