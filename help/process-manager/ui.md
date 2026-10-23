@@ -118,11 +118,16 @@ For relative times, `now` represents no offset to the time. You can either use `
 
 #### Run Data Distiller {#run-data-distiller}
 
-The **Run Data Distiller** task lets you run Data Distiller template. When you use this task, you choose the template as well as the associated parameters related to the template.
+The **Run Data Distiller** task lets you run Data Distiller query. When you use this task, you choose the template as well as the associated parameters related to the template.
 
 | Setting | Description |
 | ------- | ----------- |
-| templateId | The template ID for the Data Distiller |
+| templateId | The template ID for the Data Distiller query you want to run. |
+| templateParameters | The required parameters to run the Data Distiller query. |
+| failOnQueryError | Determines if the Data Distiller job fails if the query errors. You can select between true, false, or the system default. |
+| database | The SQL database that the Data Distiller job should run in. |
+| maxDurationSeconds | The maximum amount of time, in seconds, that the task should wait for the Data Distiller template to run. By default, this is 86,400 seconds (24 hours). |
+| comment | An optional description that you can use to describe the task. |
 
 #### Verify Profile ingestion {#verify-profile-ingestion}
 
@@ -172,8 +177,8 @@ If you select **Audience**, the following settings are available:
 
 | Setting | Description |
 | ------- | ----------- |
-| Source datasetId | The ID of the dataset  |
-| Source batchId | ??? |
+| Source datasetId | The ID of the dataset where the profiles for the activation come from. |
+| Source batchId | The ID of the flow where the profiles from the activation come from. |
 | Destination flowId | The flow ID of the destination you want to export to. |
 | Destination segmentId | The IDs of the segment definitions you want to export to the destination. |
 | comment | An optional description that you can use to describe the task. |
