@@ -312,7 +312,7 @@ curl -X GET "https://aep-maestro.adobe.io/runs/{RUN_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-+++ A sample response when retrieving a specific process definition run.
++++
 
 **Response**
 
