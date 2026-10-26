@@ -159,7 +159,7 @@ In the mapping step of the activation workflow, map your account fields to the f
 | `xdm: accountKey.sourceKey` | `Identity: primaryId` | The account identity. This mapping is required. |
 | `xdm: accountOrganization.domain` | `xdm: domain` | The company domain. [!DNL 6sense] uses this value as the primary matching field. |
 | `xdm: accountName` | `xdm: name` | The company name. [!DNL 6sense] uses this value as a fallback matching signal. |
-| `xdm: accountBillingAddress.country` | `xdm: country` | The country code. [!DNL 6sense] uses this value with the country-specific match type. |
+| `xdm: accountBillingAddress.country` | `xdm: country` | The country name. [!DNL 6sense] uses this value with the country-specific match type. |
 | `xdm: accountKey.sourceKey` | `xdm: externalId` | The account identifier from your system. [!DNL 6sense] stores this value as the `external_id` of the record and uses it to identify the record during removals. [!DNL 6sense] does not use it to match accounts. |
 
 {style="table-layout:auto"}
