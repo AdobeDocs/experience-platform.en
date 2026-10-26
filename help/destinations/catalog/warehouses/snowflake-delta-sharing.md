@@ -1,6 +1,7 @@
 ---
 title: Snowflake Delta Sharing connection
 description: Use zero-copy data sharing to share datasets from Adobe Experience Platform to your Snowflake account through the open Delta Sharing protocol.
+badgeBeta: label="Beta" type="Informative"
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -18,7 +19,7 @@ role_v2:
 
 >[!AVAILABILITY]
 >
->This destination connector is in Beta. The documentation and the feature are made available to enrolled Beta participants only. The functionality and documentation are subject to change.
+>This destination connector is in Beta and available only to [!DNL Adobe Real-Time CDP Ultimate] customers enrolled in the Beta program. The functionality and documentation are subject to change.
 
 ## Overview {#overview}
 
