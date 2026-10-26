@@ -2,6 +2,9 @@
 title: edgeBasePath
 description: The base path of the endpoint used to interact with Adobe services.
 exl-id: 3542575d-ad02-415c-8e47-97c877dfdd9d
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # `edgeBasePath`
 

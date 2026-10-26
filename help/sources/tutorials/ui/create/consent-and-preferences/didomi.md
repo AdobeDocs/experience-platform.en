@@ -3,13 +3,14 @@ title: Connect Didomi to Experience Platform
 description: Learn how to connect your Didomi account to Experience Platform using the UI.
 last-substantial-update: 2025-07-29T00:00:00.000Z
 exl-id: 1374574f-c8ba-4cf5-bad0-94a884f5c0a6
-TQID: https://experienceleague.adobe.com/twa7BM6SnNmDmMzWXuo4hHrifadwm322HDtp2p1ElCI
+TQID: 'https://experienceleague.adobe.com/twa7BM6SnNmDmMzWXuo4hHrifadwm322HDtp2p1ElCI'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
 role_v2:

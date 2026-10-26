@@ -3,15 +3,13 @@ title: Send-Time Optimization Model Details
 description: Learn about the AI model used for Send-Time Optimization in Adobe Journey Optimizer.
 hide: true
 exl-id: 95e1fc8f-1817-40d7-aa55-93daa50f43c0
-TQID: https://experienceleague.adobe.com/4J6eSeDpKP0Amc9fMoazaIG--0y77-DV6jiwsAuZfRo
+TQID: 'https://experienceleague.adobe.com/4J6eSeDpKP0Amc9fMoazaIG--0y77-DV6jiwsAuZfRo'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-    internal-label: AI Assistant
+    internal-label: AI assistant
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

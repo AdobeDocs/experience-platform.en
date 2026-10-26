@@ -2,18 +2,19 @@
 description: This page exemplifies the API call used to create a destination server through Adobe Experience Platform Destination SDK.
 title: Create a destination server configuration
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-TQID: https://experienceleague.adobe.com/PlaM8hfKOc6uZ31YigUb-QWhrQBd22Jw4zS7fQpOgic
+TQID: 'https://experienceleague.adobe.com/PlaM8hfKOc6uZ31YigUb-QWhrQBd22Jw4zS7fQpOgic'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
     internal-label: Troubleshooting

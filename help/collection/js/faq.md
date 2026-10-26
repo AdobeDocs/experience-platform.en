@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK FAQ
 description: Get answers to frequently asked questions about the Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-TQID: https://experienceleague.adobe.com/BYHDdbH5bkjkmokYEgmmAbI3hyVtaV0iKu1n03ZAFUw
+TQID: 'https://experienceleague.adobe.com/BYHDdbH5bkjkmokYEgmmAbI3hyVtaV0iKu1n03ZAFUw'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -27,29 +27,19 @@ feature_v2:
     internal-label: APIs and SDKs
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
     internal-label: Implementation
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
   - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
     internal-label: Datastreams
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
     internal-label: Event forwarding
   - id: de9975b2-c43a-4287-9698-4f4cad92b83f
     internal-label: Schemas
+subfeature_v2:
   - id: e8a4c7eb-7254-4984-ac46-e651a57c7e39
     internal-label: SDKs
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
 role_v2:

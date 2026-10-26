@@ -5,13 +5,10 @@ title: Create a Dataflow for E-commerce Sources using the Flow Service API
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party eCommerce system and ingesting it into Experience Platform using source connectors and APIs.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-TQID: https://experienceleague.adobe.com/jSL2GM9HS2lAaCClY2SLyaGLC8P6Km0wr9YHcgNKRrc
+TQID: 'https://experienceleague.adobe.com/jSL2GM9HS2lAaCClY2SLyaGLC8P6Km0wr9YHcgNKRrc'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

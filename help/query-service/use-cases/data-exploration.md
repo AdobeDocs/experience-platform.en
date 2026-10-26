@@ -2,7 +2,7 @@
 title: Explore, Troubleshoot, and Verify Batch Ingestion with SQL
 description: Learn how to understand and manage the data ingestion process in Adobe Experience Platform. This document includes how to verify batches and query ingested data.
 exl-id: 8f49680c-42ec-488e-8586-50182d50e900
-TQID: https://experienceleague.adobe.com/AUqT3UL99Y69g6fxVInVJ-gLovfWid6DX4MoYtAlRt8
+TQID: 'https://experienceleague.adobe.com/AUqT3UL99Y69g6fxVInVJ-gLovfWid6DX4MoYtAlRt8'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -11,6 +11,10 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
     internal-label: Metadata

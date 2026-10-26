@@ -2,13 +2,13 @@
 title: Predict Customer Churn with SQL-Based Logistic Regression
 description: Learn how to predict customer churn using SQL-based logistic regression. This guide covers the entire process from model creation to evaluation and prediction. Gain actionable insights from customer purchase behavior to implement proactive retention strategies and optimize business decisions.
 exl-id: 3b18870d-104c-4dce-8549-a6818dc40d24
-TQID: https://experienceleague.adobe.com/KVX-6VhI455zMHFU5r56Mpz4OfBMOCUX4LWc2dYRm6g
+TQID: 'https://experienceleague.adobe.com/KVX-6VhI455zMHFU5r56Mpz4OfBMOCUX4LWc2dYRm6g'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-    internal-label: AI Assistant
+    internal-label: AI assistant
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

@@ -2,21 +2,19 @@
 title: Define Map Fields in the UI
 description: Learn how to define a map field in the Experience Platform user interface.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-TQID: https://experienceleague.adobe.com/-zzCEOyqCnuDKOiijQNpWcs744jnXb7niAK1gIh97z0
+TQID: 'https://experienceleague.adobe.com/-zzCEOyqCnuDKOiijQNpWcs744jnXb7niAK1gIh97z0'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Define map fields in the UI
 

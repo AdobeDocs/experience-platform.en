@@ -2,16 +2,19 @@
 title: XDM Individual Prospect Profile Class
 description: Learn about the XDM Individual Prospect Profile class in Experience Data Model (XDM).
 exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
-TQID: https://experienceleague.adobe.com/E5Cy--a4G9AxEJzIezipcPbe011DJE5Lut3W6V7dG8Q
+TQID: 'https://experienceleague.adobe.com/E5Cy--a4G9AxEJzIezipcPbe011DJE5Lut3W6V7dG8Q'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # [!UICONTROL XDM Individual Prospect Profile] class 
 

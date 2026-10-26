@@ -2,7 +2,7 @@
 title: autoCollectPropositionInteractions
 description: Automatically collect data when a link is clicked.
 exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
-TQID: https://experienceleague.adobe.com/TOhnO1l7gwD9tUbkcHTJBOxsaIIkyDTgriZENdvw-qw
+TQID: 'https://experienceleague.adobe.com/TOhnO1l7gwD9tUbkcHTJBOxsaIIkyDTgriZENdvw-qw'
 product_v2:
   - id: cb954087-f4fc-4456-afb9-e939cabcdc79
     internal-label: Journey Optimizer
@@ -22,7 +22,7 @@ feature_v2:
   - id: d998adac-2f81-400b-a669-d07bb196e4eb
     internal-label: Journeys
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
   - id: fa683eda-48de-4558-af32-2673edcd44fe
     internal-label: Events

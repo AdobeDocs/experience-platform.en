@@ -2,13 +2,10 @@
 title: Create a Google Cloud Storage  Source Connection in the UI
 description: Learn how to create a Google Cloud Storage source connection using the Adobe Experience Platform UI.
 exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
-TQID: https://experienceleague.adobe.com/QqT1o2z98KjH1NGa3eHZShjfyHIQYDSFQGF2R7Ob87U
+TQID: 'https://experienceleague.adobe.com/QqT1o2z98KjH1NGa3eHZShjfyHIQYDSFQGF2R7Ob87U'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

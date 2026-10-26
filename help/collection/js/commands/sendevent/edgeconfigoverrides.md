@@ -2,7 +2,7 @@
 title: edgeConfigOverrides
 description: Configure datastream overrides for just the sendEvent command.
 exl-id: 8e327892-9520-43f5-abf4-d65a5ca34e6d
-TQID: https://experienceleague.adobe.com/bkTUWKjT3bqk90h84rGEeR2Uic8UHJwoWJaEkG-BrEg
+TQID: 'https://experienceleague.adobe.com/bkTUWKjT3bqk90h84rGEeR2Uic8UHJwoWJaEkG-BrEg'
 product_v2:
   - id: cb954087-f4fc-4456-afb9-e939cabcdc79
     internal-label: Journey Optimizer
@@ -22,7 +22,7 @@ feature_v2:
   - id: d556b755-390a-43f0-be32-a08cf6236126
     internal-label: Configuration
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

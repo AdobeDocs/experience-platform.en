@@ -4,18 +4,10 @@ title: Enable a Dataset for Profile and Identity Service using APIs
 type: Tutorial
 description: This tutorial shows you how to enable a dataset for use with Real-Time Customer Profile and Identity Service using Adobe Experience Platform APIs.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-TQID: https://experienceleague.adobe.com/DIVgFHnU3IqfwzblXJFctZOkzvjOHRnk-dbB6VDXrDY
+TQID: 'https://experienceleague.adobe.com/DIVgFHnU3IqfwzblXJFctZOkzvjOHRnk-dbB6VDXrDY'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-subfeature_v2:
-  - id: e87e2d37-4b79-43e9-ad8e-53009e3f83f2
-    internal-label: Identity Services
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

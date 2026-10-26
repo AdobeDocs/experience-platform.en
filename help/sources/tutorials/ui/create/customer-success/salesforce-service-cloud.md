@@ -2,13 +2,10 @@
 title: Connect Your Salesforce Service Cloud Account Using the Experience Platform User Interface
 description: Learn how to connect your Salesforce Service Cloud account and bring your customer success data to Experience Platform using the user interface.
 exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
-TQID: https://experienceleague.adobe.com/ECKQlI7fuOkpNcBz2V6ieAH08-N7dn-nlfdToux5Fac
+TQID: 'https://experienceleague.adobe.com/ECKQlI7fuOkpNcBz2V6ieAH08-N7dn-nlfdToux5Fac'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

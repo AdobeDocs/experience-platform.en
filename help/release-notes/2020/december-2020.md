@@ -5,13 +5,10 @@ doc-type: release notes
 last-update: December 9, 2020
 author: ens60013 & ens72471
 exl-id: 89d631f1-1b11-4a18-98e1-08e1d5bd8b0d
-TQID: https://experienceleague.adobe.com/wZMYmmvmDDv9GEP9kp3rArFgpIgbqG6Y7YgouKYUG5s
+TQID: 'https://experienceleague.adobe.com/wZMYmmvmDDv9GEP9kp3rArFgpIgbqG6Y7YgouKYUG5s'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

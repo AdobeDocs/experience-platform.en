@@ -2,18 +2,10 @@
 title: Connect MySQL To Experience Platform Using The UI
 description: Learn how to connect your MySQL database to Experience Platform using the UI.
 exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
-TQID: https://experienceleague.adobe.com/dBOoAZWqTRDYSCGQ0jiKu3BAfM-o06Xj8ux8st21UHE
+TQID: 'https://experienceleague.adobe.com/dBOoAZWqTRDYSCGQ0jiKu3BAfM-o06Xj8ux8st21UHE'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

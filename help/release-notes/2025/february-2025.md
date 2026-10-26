@@ -2,30 +2,18 @@
 title: Adobe Experience Platform Release Notes February 2025
 description: The February 2025 release notes for Adobe Experience Platform.
 exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
-TQID: https://experienceleague.adobe.com/IVK34udpPn2jlUyF941nEcNS4-qRqKRxh9uOIblwd80
+TQID: 'https://experienceleague.adobe.com/IVK34udpPn2jlUyF941nEcNS4-qRqKRxh9uOIblwd80'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+    internal-label: AI assistant
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
-  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-    internal-label: AI Assistant
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-    internal-label: Monitoring
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

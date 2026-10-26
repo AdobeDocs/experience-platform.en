@@ -2,17 +2,18 @@
 title: Power BI Report Templates for Experience Platform Dashboards
 description: Use report templates to explore Experience Platform data using Power BI.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-TQID: https://experienceleague.adobe.com/-L7BuDUv7QP18lxTbRQjlgUcVRkmOiFQmkyAs0u6d-w
+TQID: 'https://experienceleague.adobe.com/-L7BuDUv7QP18lxTbRQjlgUcVRkmOiFQmkyAs0u6d-w'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+    internal-label: Destinations
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
-  - id: eec185bd-7d60-4193-ba3f-da427569936a
-    internal-label: Destinations dashboard
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

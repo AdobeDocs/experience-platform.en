@@ -2,13 +2,10 @@
 title: Capillary Streaming Events Overview
 description: Learn how to stream data from Capillary to Experience Platform.
 exl-id: 3b8eb2f6-3b4a-4b91-89d4-b6d9027c6ab4
-TQID: https://experienceleague.adobe.com/DdAfedXXnpRZGGLuXpHAr2W4zt2qovopubFBfycKPg8
+TQID: 'https://experienceleague.adobe.com/DdAfedXXnpRZGGLuXpHAr2W4zt2qovopubFBfycKPg8'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

@@ -4,13 +4,14 @@ solution: Experience Platform
 title: Basics of Schema Composition
 description: Learn about Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-TQID: https://experienceleague.adobe.com/aWe8rBHi9h54CeVw2w7-s5itqPHoBy3y8ABtRj-J5Ak
+TQID: 'https://experienceleague.adobe.com/aWe8rBHi9h54CeVw2w7-s5itqPHoBy3y8ABtRj-J5Ak'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
 role_v2:

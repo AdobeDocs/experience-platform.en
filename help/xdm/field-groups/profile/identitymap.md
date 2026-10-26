@@ -3,16 +3,19 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual p
 title: IdentityMap Schema Field Group
 description: Learn about the XDM Individual Profile class.
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-TQID: https://experienceleague.adobe.com/-NasT5qGLXk1qJ0HKOROQM-tv1QOZS8vWOw5FCg6TpY
+TQID: 'https://experienceleague.adobe.com/-NasT5qGLXk1qJ0HKOROQM-tv1QOZS8vWOw5FCg6TpY'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # [!UICONTROL IdentityMap] schema field group
 
