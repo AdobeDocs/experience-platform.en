@@ -2,23 +2,19 @@
 title: Best practices for Privacy Service
 description: Learn how to reduce the processing time and the costs incurred to your organization when completing privacy requests by following these optimal use guidelines.
 exl-id: 1333d6c6-5ca0-41c1-9f9e-aa2a5a8b8a9c
-TQID: https://experienceleague.adobe.com/s12W18PJYq1-PziBxK1tNe65yiaiGEUhPiDF-dQShdg
+TQID: 'https://experienceleague.adobe.com/s12W18PJYq1-PziBxK1tNe65yiaiGEUhPiDF-dQShdg'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-    internal-label: Monitoring
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting

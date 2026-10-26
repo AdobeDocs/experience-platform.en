@@ -3,22 +3,16 @@ keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer
 title: Applications Documentation
 description: Adobe Experience Platform documentation is provided in multiple formats, including overviews, tutorials, and guides for both the user interface and API. Here is a brief description of the most common documentation types that are available for Experience Platform applications.
 exl-id: 24fdb183-f75b-40e0-828e-9dd49422a7b1
-TQID: https://experienceleague.adobe.com/bnM-OxOAzbR1VU5oTpH3vowN1trHHt34lGrQrK3N0WQ
+TQID: 'https://experienceleague.adobe.com/bnM-OxOAzbR1VU5oTpH3vowN1trHHt34lGrQrK3N0WQ'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: b1c2d3e4-1001-4001-9001-100000000001
+    internal-label: Customer audiences
 subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
   - id: f0c9f224-75f2-4864-8de6-859ae7856690
-    internal-label: Segment Match
+    internal-label: Segment match
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

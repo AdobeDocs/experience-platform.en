@@ -9,15 +9,30 @@ type: Documentation
 role: Developer
 feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-TQID: https://experienceleague.adobe.com/1fKH08BLQ1H92AQFB-gK2jhr829dCpl1tfDHfv7e-ts
+TQID: 'https://experienceleague.adobe.com/1fKH08BLQ1H92AQFB-gK2jhr829dCpl1tfDHfv7e-ts'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: 9c3a4e5f-6d7b-4c8a-8e9f-1b2c3d4e5f6a
+    internal-label: Datasets
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+    internal-label: Destinations
+  - id: f5a6b7c8-5001-4001-9001-500000000001
+    internal-label: Queries
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+    internal-label: Schemas
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+    internal-label: Sandboxes
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+    internal-label: Sources
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
+  - id: 01a3139f-2204-4e1b-bd65-5437f7d5a5bd
+    internal-label: API credentials
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
 role_v2:

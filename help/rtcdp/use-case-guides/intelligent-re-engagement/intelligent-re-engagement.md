@@ -3,16 +3,24 @@ title: Intelligent Re-engagement
 description: Deliver compelling and connected experiences during the key conversion moments to intelligently re-engage infrequent customers.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-TQID: https://experienceleague.adobe.com/ZDB01BCQ05Ol1Wlr-r8UknHykSJjSZ9bn-MhiLyP5DI
+TQID: 'https://experienceleague.adobe.com/ZDB01BCQ05Ol1Wlr-r8UknHykSJjSZ9bn-MhiLyP5DI'
 product_v2:
   - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
     internal-label: Real-Time Customer Data Platform
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
 feature_v2:
   - id: ba929a52-9339-4154-9487-317dc875a3c7
     internal-label: Use cases
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation

@@ -4,15 +4,10 @@ solution: Experience Platform
 title: Query Service Credentials Guide
 description: Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your organization.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-TQID: https://experienceleague.adobe.com/CjFR-lbn7d18HyvPZk6yM4fCAYoKtoJJJq1Xs6rIElU
+TQID: 'https://experienceleague.adobe.com/CjFR-lbn7d18HyvPZk6yM4fCAYoKtoJJJq1Xs6rIElU'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

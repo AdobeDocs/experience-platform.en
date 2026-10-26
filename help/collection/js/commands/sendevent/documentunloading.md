@@ -2,6 +2,9 @@
 title: documentUnloading
 description: Use the browser's sendBeacon method to send data to Adobe.
 exl-id: 7683c0c4-ae2e-46ec-8471-628a10e17afc
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # `documentUnloading`
 

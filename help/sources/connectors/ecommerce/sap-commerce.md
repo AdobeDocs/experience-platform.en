@@ -4,11 +4,14 @@ description: Learn how to connect SAP Commerce to Adobe Experience Platform usin
 last-substantial-update: 2023-07-26T00:00:00.000Z
 badge: Beta
 exl-id: d2ddfec3-a421-48a7-b765-86ce9162f26f
-TQID: https://experienceleague.adobe.com/flOPoNcH3QyR9rnoyulz4leapTNlfRI2Y8jdDRLrQKA
+TQID: 'https://experienceleague.adobe.com/flOPoNcH3QyR9rnoyulz4leapTNlfRI2Y8jdDRLrQKA'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
 role_v2:

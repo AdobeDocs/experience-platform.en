@@ -3,16 +3,10 @@ title: Record Delete Work Orders
 description: Learn how to use the /workorder endpoint in the Data Hygiene API to manage record delete work orders in Adobe Experience Platform. This guide covers quotas, processing timelines, and API usage.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-TQID: https://experienceleague.adobe.com/oKFqT0xEE47wgrh78-DKl6Ur-taOrFJTn81NQl2ljfM
+TQID: 'https://experienceleague.adobe.com/oKFqT0xEE47wgrh78-DKl6Ur-taOrFJTn81NQl2ljfM'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-subfeature_v2:
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: Guardrails
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

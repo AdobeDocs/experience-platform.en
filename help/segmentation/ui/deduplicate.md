@@ -2,6 +2,12 @@
 title: Deduplicate Operator
 description: Learn how to use the Deduplicate operator in audience compositions. The Deduplicate operation lets you remove duplicate values from your compositions.
 hide: true
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 
 # Deduplicate operator

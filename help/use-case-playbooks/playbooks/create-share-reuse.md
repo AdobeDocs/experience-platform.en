@@ -4,26 +4,13 @@ title: Create, share, and reuse playbook instances
 description: Learn how to create, share, and reuse playbook instances to accomplish your marketing use case.
 role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-TQID: https://experienceleague.adobe.com/wT2519oTh0EN678WmrUc3nsUVnXiU8EG3yd12G0BFKk
+TQID: 'https://experienceleague.adobe.com/wT2519oTh0EN678WmrUc3nsUVnXiU8EG3yd12G0BFKk'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-    internal-label: Troubleshooting
-  - id: e0c8953a-a203-4291-bef3-3560160d3041
-    internal-label: Get started
   - id: ed87b366-4dcf-4108-97b9-e29ea31192dd
     internal-label: Playbooks
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

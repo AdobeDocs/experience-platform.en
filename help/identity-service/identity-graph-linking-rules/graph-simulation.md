@@ -2,23 +2,19 @@
 title: Graph Simulation UI Guide
 description: Learn how to use the Graph Simulation in the Identity Service UI.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-TQID: https://experienceleague.adobe.com/gd--4yj-MFW4N8u7eUAAN-IHwwJY-aKsfXSuV0DtfuA
+TQID: 'https://experienceleague.adobe.com/gd--4yj-MFW4N8u7eUAAN-IHwwJY-aKsfXSuV0DtfuA'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
-subfeature_v2:
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-    internal-label: Troubleshooting
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation

@@ -4,6 +4,14 @@ solution: Experience Platform
 title: Identify Job Schedule Anti-Patterns
 type: Tutorial
 exl-id: f94e3ef3-2252-46f5-8075-45b5483d9d83
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 # Identify job schedule anti-patterns
 

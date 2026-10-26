@@ -4,22 +4,16 @@ feature: Attribution AI
 title: Input and Output in Attribution AI
 description: The following document outlines the different input and outputs utilized in Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-TQID: https://experienceleague.adobe.com/k2ShJpMN58cZFMDDXlyklyTzI6UY2lyus3iQxkaHDB0
+TQID: 'https://experienceleague.adobe.com/k2ShJpMN58cZFMDDXlyklyTzI6UY2lyus3iQxkaHDB0'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
+  - id: f5a6b7c8-5003-4003-9003-500000000003
+    internal-label: Services
 subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
+  - id: b99a0135-be89-4dd1-b66a-c313ae5278fa
+    internal-label: Attribution AI
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

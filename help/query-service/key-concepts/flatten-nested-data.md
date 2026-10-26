@@ -3,13 +3,10 @@ keywords: Experience Platform;query service;Query service;nested data structures
 title: Flatten Nested Data Structures For Use With BI Tools
 description: This document explains how to flatten XDM schemas for all tables and views during a session when using third-party BI tools with Query Service.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-TQID: https://experienceleague.adobe.com/-J5p2xg4fdim1Fbr6iacguvIF3zvsLYol0GiijgEzjM
+TQID: 'https://experienceleague.adobe.com/-J5p2xg4fdim1Fbr6iacguvIF3zvsLYol0GiijgEzjM'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

@@ -5,13 +5,10 @@ title: Create an Azure File Storage  Source Connection in the UI
 type: Tutorial
 description: Learn how to create an Azure File Storage source connection using the Adobe Experience Platform UI.
 exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
-TQID: https://experienceleague.adobe.com/FZbAESSB8wIwcAyui-18S2WZCb1GnYRZA7G8Gxms1ug
+TQID: 'https://experienceleague.adobe.com/FZbAESSB8wIwcAyui-18S2WZCb1GnYRZA7G8Gxms1ug'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
