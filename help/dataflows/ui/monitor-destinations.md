@@ -5,29 +5,27 @@ title: Monitor dataflows for destinations in the UI
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 nudge: true
-TQID: https://experienceleague.adobe.com/mPpX2-qdMt0QCJa3ZXmia9z4A14EcIGGuWdApdoTC5U
+TQID: 'https://experienceleague.adobe.com/mPpX2-qdMt0QCJa3ZXmia9z4A14EcIGGuWdApdoTC5U'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+    internal-label: Destinations
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
-  - id: eec185bd-7d60-4193-ba3f-da427569936a
-    internal-label: Destinations dashboard
-subfeature_v2:
-  - id: ac9ff56e-fdaf-4412-aba7-1f588cb8aa2b
-    internal-label: File based Destination
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-    internal-label: Monitoring
-  - id: dcded644-509e-49c5-ae85-3862a2a08609
-    internal-label: Streaming destinations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting

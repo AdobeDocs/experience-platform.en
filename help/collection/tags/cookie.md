@@ -2,6 +2,9 @@
 title: cookie
 description: Manually write, edit, or delete cookies for the tag property.
 exl-id: d9de504b-de5d-4b82-b72c-327cdf386cd8
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # `cookie`
 

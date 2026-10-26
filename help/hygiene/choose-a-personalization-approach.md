@@ -3,6 +3,18 @@ title: Choose the right long-term personalization approach
 description: Support long-term personalization in Adobe Experience Platform without storing years of raw event history in the Profile store. Understand the analytical and engagement workflows, compare Data Distiller, Customer Journey Analytics, and Federated Audience Composition, and choose the approach that fits your architecture.
 solution: Experience Platform
 keywords: Experience Platform;long-term personalization;profile store;data lake;signals;derived attributes;audiences;total data volume;data distiller;customer journey analytics;federated audience composition
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Choose the right long-term personalization approach
 

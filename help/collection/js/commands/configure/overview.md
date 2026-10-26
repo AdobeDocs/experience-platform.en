@@ -2,7 +2,7 @@
 title: Configure the Adobe Experience Platform Web SDK
 description: Use the configure command to set required settings when using the Web SDK.
 exl-id: 05ba98ae-c004-4b7b-b55b-38290ca62cfa
-TQID: https://experienceleague.adobe.com/MPrJXWHz2aG1iXNg5JmrGTS9MDSGeHJCtwJkjHMwLZE
+TQID: 'https://experienceleague.adobe.com/MPrJXWHz2aG1iXNg5JmrGTS9MDSGeHJCtwJkjHMwLZE'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -13,10 +13,8 @@ product_v2:
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
     internal-label: Implementation
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

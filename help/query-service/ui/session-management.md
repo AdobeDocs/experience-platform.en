@@ -4,6 +4,14 @@ description: Learn how administrators can view, monitor, and end active Query Se
 keywords: Experience Platform;Query Service;sessions;session management;Data Distiller;admin
 solution: Experience Platform
 exl-id: f986177a-9a46-4fc6-927e-98b6b7dc8cfe
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Manage Query Service sessions
 

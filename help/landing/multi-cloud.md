@@ -3,13 +3,10 @@ solution: Experience Platform
 title: Adobe Experience Platform multi-cloud overview
 description: Learn what the differences are between running Experience Platform on Microsoft Azure and Amazon Web Services.
 exl-id: da552311-6e50-4b09-bcc8-696a25325796
-TQID: https://experienceleague.adobe.com/2tKDwwPcXRPITGOfwJGwP3fQ1MvsUv9yJ44Q8AXo07k
+TQID: 'https://experienceleague.adobe.com/2tKDwwPcXRPITGOfwJGwP3fQ1MvsUv9yJ44Q8AXo07k'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

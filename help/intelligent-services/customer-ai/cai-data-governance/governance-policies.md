@@ -4,10 +4,16 @@ feature: Customer AI
 title: Governance Policies for Customer AI
 description: Adobe Experience Platform provides several services and tools that allow you to confidently control your collected experience data.
 exl-id: be3eca3a-0ea1-4b84-9454-675a4f9ac71e
-TQID: https://experienceleague.adobe.com/-M15OKzPOdrjHyc2UQk-gjwrNXCv14HrpZFr5x97DF8
+TQID: 'https://experienceleague.adobe.com/-M15OKzPOdrjHyc2UQk-gjwrNXCv14HrpZFr5x97DF8'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
+feature_v2:
+  - id: f5a6b7c8-5003-4003-9003-500000000003
+    internal-label: Services
+subfeature_v2:
+  - id: af7d4edc-6e6b-4176-bf14-907faf40ebd4
+    internal-label: Customer AI
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

@@ -5,20 +5,16 @@ title: Privacy Jobs API Endpoint
 description: Learn how to manage privacy jobs for Experience Cloud applications using the Privacy Service API.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-TQID: https://experienceleague.adobe.com/BKO-vCxXCw-Hfcz6ew37BdcwwTGgjpJ1pENArJ-ztTc
+TQID: 'https://experienceleague.adobe.com/BKO-vCxXCw-Hfcz6ew37BdcwwTGgjpJ1pENArJ-ztTc'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

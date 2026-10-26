@@ -2,7 +2,7 @@
 title: Redirect with identity
 description: Allows sharing a visitor identifier across your organization's domains.
 exl-id: 81ef1361-20eb-48d7-83c4-e77f459eeade
-TQID: https://experienceleague.adobe.com/A2xsYOGctKKKfr91oLiHlN5Rbp9YhZu-s6UQfjCOWO8
+TQID: 'https://experienceleague.adobe.com/A2xsYOGctKKKfr91oLiHlN5Rbp9YhZu-s6UQfjCOWO8'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -15,17 +15,8 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

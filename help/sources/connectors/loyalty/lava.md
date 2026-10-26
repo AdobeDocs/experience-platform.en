@@ -1,6 +1,12 @@
 ---
 title: LAVA
 description: Learn about the LAVA source on Adobe Experience Platform
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL LAVA]
 

@@ -2,13 +2,10 @@
 title: Query Logs
 description: Query logs are automatically generated each time a query is executed and are available through the UI to help with troubleshooting. This document outlines how to use and navigate the Query Service Logs section of the UI.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-TQID: https://experienceleague.adobe.com/gkhovNrNG6vcjU-2P9KDf5OMms--aMtnAnQDVnhF-CU
+TQID: 'https://experienceleague.adobe.com/gkhovNrNG6vcjU-2P9KDf5OMms--aMtnAnQDVnhF-CU'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

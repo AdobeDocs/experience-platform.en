@@ -4,13 +4,10 @@ solution: Experience Platform
 title: Identity Service Troubleshooting Guide
 description: This document provides answers to frequently asked questions about Adobe Experience Platform Identity Service, as well as a troubleshooting guide for common errors.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-TQID: https://experienceleague.adobe.com/CkZNMxP3j8J7cExgVAM9aJJeb32p8bFqtVWglAluo98
+TQID: 'https://experienceleague.adobe.com/CkZNMxP3j8J7cExgVAM9aJJeb32p8bFqtVWglAluo98'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin

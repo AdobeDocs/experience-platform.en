@@ -2,7 +2,7 @@
 title: Connect Jupyter Notebook to Query Service
 description: Learn how to connect Jupyter Notebook with Adobe Experience Platform Query Service.
 exl-id: 358eab67-538f-4ada-931f-783b92db4a1c
-TQID: https://experienceleague.adobe.com/F--2ep1FKEss-Y9KIKrpMy5FdqVeqxijk3VZheId-eM
+TQID: 'https://experienceleague.adobe.com/F--2ep1FKEss-Y9KIKrpMy5FdqVeqxijk3VZheId-eM'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -11,6 +11,10 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Connect [!DNL Jupyter Notebook] to Query Service
 

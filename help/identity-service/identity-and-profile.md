@@ -2,13 +2,10 @@
 title: Identity Service and Real-Time Customer Profile
 description: Learn about the relationship between Identity Service and Real-Time Customer Profile
 exl-id: 09961b8e-f736-4fcc-ac53-88b55cca7d55
-TQID: https://experienceleague.adobe.com/MmIRavLlxLzYEsiNAOS190aKA-ve9CzseNvf-jLbzAg
+TQID: 'https://experienceleague.adobe.com/MmIRavLlxLzYEsiNAOS190aKA-ve9CzseNvf-jLbzAg'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin

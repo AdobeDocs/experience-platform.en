@@ -4,6 +4,14 @@ solution: Experience Platform
 title: View Job Schedule Details
 type: Tutorial
 exl-id: e568bfc3-f0e1-4305-94e7-070928459a87
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 # View job schedule details
 

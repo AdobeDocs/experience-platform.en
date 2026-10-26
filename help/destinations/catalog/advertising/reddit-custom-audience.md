@@ -1,9 +1,21 @@
 ---
 title: Reddit Custom Audience
 description: Reddit Ads connect brands to people who are actively exploring their passions and problems in real time. By pairing high-intent, community-driven conversations with flexible ad formats and robust targeting, Reddit Ads help advertisers reach engaged audiences, drive performance outcomes, and learn directly from the communities that shape culture online. This guide is for advertisers and media teams using Adobe Experience Platform to send audiences to Reddit Ads. It covers what you need to connect your accounts, map identities, and activate audiences.
-last-substantial-update: 2026-03-31
+last-substantial-update: 2026-03-31T00:00:00.000Z
 exl-id: bcce02bd-d508-47a0-8f5c-bf162db1859d
 badgeBeta: label="Beta" type="Informative"
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # [!DNL Reddit Custom Audience] connection {#reddit-custom-audience-connection}
 

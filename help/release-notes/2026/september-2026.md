@@ -1,7 +1,19 @@
 ---
 title: Adobe Experience Platform Release Notes September 2026
 description: The September 2026 release notes for Adobe Experience Platform.
-last-update: 2026-09-22
+last-update: 2026-09-22T00:00:00.000Z
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Adobe Experience Platform release notes
 
@@ -100,7 +112,7 @@ For more information, read the [Data Governance overview](/help/data-governance/
 
 | Fix | Description |
 | --- | --- |
-| [[!DNL Facebook] credentials no longer expire](/help/destinations/catalog/social/facebook.md#refresh-authentication-credentials) | [!DNL Facebook] authentication credentials no longer expire after 60 days. [!DNL Experience Platform] now automatically refreshes the OAuth token, so data exports to the destination continue without interruption. Manual reauthentication is no longer required. |
+| [Facebook credentials documentation update](/help/destinations/catalog/social/facebook.md#refresh-authentication-credentials) | The [!DNL Facebook] destination documentation now correctly states that authentication credentials do not expire. [!DNL Experience Platform] automatically refreshes the OAuth token, so data exports to the destination continue without interruption. This update applies to the documentation only and does not change destination functionality. |
 | [[!DNL Amazon Ads]](/help/destinations/catalog/advertising/amazon-ads-v2.md) no longer requires marketing actions | The connector was updated to remove the requirement to have marketing actions by default. Customers can now set up connections to [!DNL Amazon Ads] without using marketing actions. |
 
 {style="table-layout:auto"}

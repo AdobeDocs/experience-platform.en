@@ -2,13 +2,10 @@
 title: Profile Insights
 description: Discover the SQL that powers your profile insights and use these queries to generate custom insights that further explore your customers and their consumer experiences.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-TQID: https://experienceleague.adobe.com/x-B2yvty3I-jNBhwgspFI8T5dg6n6Ah3H-Sh4a5bcbw
+TQID: 'https://experienceleague.adobe.com/x-B2yvty3I-jNBhwgspFI8T5dg6n6Ah3H-Sh4a5bcbw'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

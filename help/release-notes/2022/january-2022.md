@@ -2,40 +2,22 @@
 title: Adobe Experience Platform Release Notes January 2022
 description: The January 2022 release notes for Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-TQID: https://experienceleague.adobe.com/wcRVicN4gHBCNm4lHB0IYXUQSRXH78OAIoxWYkAsmn8
+TQID: 'https://experienceleague.adobe.com/wcRVicN4gHBCNm4lHB0IYXUQSRXH78OAIoxWYkAsmn8'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
   - id: eec185bd-7d60-4193-ba3f-da427569936a
-    internal-label: Destinations dashboard
-subfeature_v2:
-  - id: ac9ff56e-fdaf-4412-aba7-1f588cb8aa2b
-    internal-label: File based Destination
-  - id: b08f50f9-9135-4961-a21e-47e56473ae77
-    internal-label: Profiles dashboard
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-    internal-label: Monitoring
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
-  - id: dcded644-509e-49c5-ae85-3862a2a08609
-    internal-label: Streaming destinations
-  - id: f0c9f224-75f2-4864-8de6-859ae7856690
-    internal-label: Segment Match
+    internal-label: Destinations
   - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
     internal-label: Dashboards
+  - id: b1c2d3e4-1001-4001-9001-100000000001
+    internal-label: Customer audiences
+subfeature_v2:
+  - id: f0c9f224-75f2-4864-8de6-859ae7856690
+    internal-label: Segment match
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

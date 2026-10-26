@@ -2,13 +2,10 @@
 title: AI/ML feature pipelines
 description: Learn how to use Data Distiller to enrich your machine learning pipelines with features derived from Adobe Experience Platform data. Transform raw data into features and deliver the feature data to train or score a model that supports your marketing use cases.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-TQID: https://experienceleague.adobe.com/ZzW5n6GuE6B-BcJ6lOpTX4G1O8d2pfW9QmpiTuRBBDs
+TQID: 'https://experienceleague.adobe.com/ZzW5n6GuE6B-BcJ6lOpTX4G1O8d2pfW9QmpiTuRBBDs'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

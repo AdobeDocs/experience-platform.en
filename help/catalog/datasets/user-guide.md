@@ -4,18 +4,11 @@ solution: Experience Platform
 title: Datasets UI Guide
 description: Learn how to perform common actions when working with datasets in the Adobe Experience Platform user interface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-TQID: https://experienceleague.adobe.com/rrY6T21-wdJgGIFlx8pKf9LoJjzi8SfFEIQjgv8yOt4
+TQID: 'https://experienceleague.adobe.com/rrY6T21-wdJgGIFlx8pKf9LoJjzi8SfFEIQjgv8yOt4'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-    internal-label: Monitoring
   - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
     internal-label: License usage
   - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
