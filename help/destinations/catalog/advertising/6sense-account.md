@@ -16,7 +16,7 @@ badgeBeta: label="Beta" type="Informative"
 
 ## How the destination works {#overview}
 
-[!DNL 6sense] creates an API-origin segment from each activated audience. [!DNL 6sense] matches each audience member to an account by using its identity graph. You can then use the segment for ad campaigns, AI email, reporting, and other revenue activations in [!DNL 6sense].
+[!DNL 6sense] creates an API-origin segment from each activated audience. Then, it matches each audience member to an account by using the [!DNL 6sense] identity graph. You can then use the segment for ad campaigns, AI email campaigns, reporting, and other revenue activations in [!DNL 6sense].
 
 For more information, read the [6sense documentation for this integration](https://app.6sense.com/go/adobe-destinations).
 
