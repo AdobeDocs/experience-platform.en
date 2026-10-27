@@ -67,8 +67,7 @@ Use destinations to activate audiences and export data from Experience Platform 
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [!DNL 6sense Segments] | Activate account audiences from [!DNL Adobe Real-Time CDP B2B Edition] to [!DNL 6sense] as API-origin segments. Use the segments for ad campaigns, AI email, and account prioritization. You need a [!DNL 6sense] account with Segments API access enabled. This destination is in **beta** and rolls out during the week of October 26, 2026. To request access, contact your Adobe account representative. |
 | [The Trade Desk Third-Party Audiences](/help/destinations/catalog/advertising/tradedesk-third-party-audiences.md) | Send audiences from [!DNL Adobe Real-Time CDP] to the Data Marketplace in [!DNL The Trade Desk]. Buyers can then license your audiences and target them in programmatic campaigns. The destination supports TDID, GAID, IDFA, and UID2 identities. This destination is available only to data providers based in the United States. |
-| [The Trade Desk - CRM ](/help/destinations/catalog/advertising/tradedesk-emails.md) update for UID2 conversion |  |
-
+| [The Trade Desk - CRM](/help/destinations/catalog/advertising/tradedesk-emails.md#uid2-conversion-identities) update for UID2 conversion | Convert email addresses and phone numbers to UID2 before activation. In the **[!UICONTROL Mapping]** step, select one of four new target identity namespaces: `email_to_uid2`, `hashed_email_to_uid2`, `phone_to_uid2`, or `hashed_phone_to_uid2`. These namespaces are available only in the [!DNL The Trade Desk - CRM (NAMER & APAC)] destination. They are not available in the [!DNL The Trade Desk - CRM (EU)] destination. |
 
 {style="table-layout:auto"}
 
