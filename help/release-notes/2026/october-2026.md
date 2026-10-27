@@ -36,7 +36,6 @@ New features and updates to existing features in Adobe Experience Platform:
 - [CX Enterprise Coworker](#cx-enterprise-coworker)
 - [Destinations](#destinations)
 - [Experience Data Model](#xdm)
-- [Process Manager](#process-manager)
 - [Query Service](#query-service)
 - [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
@@ -101,6 +100,7 @@ Use Experience Data Model (XDM) schemas to define data structures and relationsh
 
 For more information, read the [XDM overview](/help/xdm/home.md).
 
+<!--
 ## Process Manager {#process-manager}
 
 Use [!DNL Process Manager] to define and coordinate data workflows across Experience Platform services.
@@ -110,6 +110,7 @@ Use [!DNL Process Manager] to define and coordinate data workflows across Experi
 >[!DNL Process Manager] is in beta. The feature and documentation are subject to change.
 
 Create workflows that connect data ingestion, [!DNL Data Distiller] queries, segmentation, profile exports, and destination activation. Schedule workflows and monitor execution across the connected tasks.
+-->
 
 ## Query Service {#query-service}
 
