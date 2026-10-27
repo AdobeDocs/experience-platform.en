@@ -8,7 +8,7 @@ hide: true
 
 >[!AVAILABILITY]
 >
->This feature is currently in **beta**. The functionality and documentation are subject to change. For more information, contact Adobe Customer Care.
+>This feature is currently in **beta**. The functionality and documentation are subject to change. To participate in this beta, contact Adobe Customer Care or your account representative.
 
 In Adobe Experience Platform, Real-Time Customer Profile lets you consolidate your customer data into a unified view by combining data from multiple channels. With support for unstructured data, Experience Platform extends these capabilities, semantically letting you use conversational and other unstructured customer data as part of the profile building blocks.
 
@@ -41,60 +41,137 @@ To use Profile with unstructured data, you **must** meet the following prerequis
   - CDP-powered decisioning on AI agents
     - Use Real-Time CDP to help determine the next-best action, offer, or content for an individual customer or AI agent.
 
-If you fulfill all of these prerequisites, contact Adobe Customer Care for more information on requesting enablement for Profile with unstructured data and Personalization within Brand Concierge.
+If you fulfill all of these prerequisites, contact Adobe Customer Care for more information on requesting enablement for Profile with unstructured data.
 
-## Setup {#setup}
+## Requirements {#requirements}
 
 Before continuing Profile with unstructured data set up, you'll need to complete the following steps:
 
-- Have an organization with entitlements to the following products:
-  - Brand Concierge
-  - Access to either Real-Time CDP or Adobe Journey Optimizer
-- Create a Brand Concierge configuration
+- Access to either Real-Time CDP or Adobe Journey Optimizer
+  - This organization **cannot** be a Healthcare Shield customer
 - Enable [Identity Graph Linking Rules](/help/identity-service/identity-graph-linking-rules/overview.md)
 - Create a profile-enabled dataset
-  - Ingest sample profiles into this dataset
+  - Ingest at least one profile into this dataset
 
-Once you've completed the prerequisite steps, you can configure and validate the profile context. You can either do this through CX Enterprise Coworker or using the API.
+Once you've completed the prerequisite steps, contact Adobe Customer Care to help you enable Profile with unstructured data. 
+
+Once Profile with unstructured data has been enabled, you can start using this feature by setting up the following steps:
+
+- Ingesting unstructured data in Experience Platform
+- Configuring the profile context to personalize conversations
+- Configuring signals to extract data from unstructured data for activation
+
+## Ingest unstructured data
+
+In order to use unstructured data as part of your personalization process, you'll first need to ingest that data into Experience Platform.
+
+The method to ingest unstructured data differs, depending on the source of the unstructured data.
+
+>[!BEGINTABS]
+
+>[!TAB Standard raw text]
+
+For the standard simple identity with raw text use case, you can use an ExperienceEvent schema and dataset to ingest the data in to Experience Platform. This is best used for most use cases, including importing transcripts, conversations, notes, and reviews.
+
+>[!IMPORTANT]
+>
+>When you create the schema and dataset, do **not** enable it for either Profile or Identity.
+
+You'll first need to create an XDM ExperienceEvent schema for the dataset. This schema needs to include the following information:
+
+- The `unstructuredContent` field group. For more information about the unstructured content field group, look at the [XDM GitHub](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-unstructured-content.schema.json).
+- An identity to mark the known individual. This identity can either be an identity map or a field that's marked as the identity descriptor.
+
+To learn how to create a schema, read the [create a schema guide](/help/xdm/tutorials/create-schema-ui.md).
+
+After you create the schema, you can create a dataset that uses this schema. To learn how to create a dataset based off of an existing schema, read the [create a dataset guide](/help/catalog/datasets/user-guide.md#schema).
+
+Once you've created the dataset, you can make a PATCH request to the `v2/dataSets` endpoint while providing the ID of the newly created dataset. This lets you update the dataset for usage with Profile with unstructured data.
+
++++Sample patch request to enable the dataset for Profile with unstructured data.
+
+```shell
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/{DATASET_ID}
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "extensions": {
+        "adobe_unifiedProfile": {
+            "semanticProfile": {
+                "enablement": {
+                    "status": "READY"
+                }
+            }
+        },
+        "adobe_dataContent": {
+            "channel": "call_transcripts"
+        }
+    }
+  }'
+```
+
++++
+
+Now that the schema and dataset are set up, you can now start ingesting data into Experience Platform. You can use a standard source connector to load the data into Experience Platform, as CSV, JSON, and Parquet are all supported. When ingesting the data, put the unstructured text into the `rawText` field and the identity in the `identity` column.
+
+You can now contact Adobe Customer Care with information such as the IMS Org ID, sandbox information, dataset information, and method of ingestion (simple ID with raw text XDM) to complete the setup of data ingestion.
+
+>[!TAB WhatsApp Business]
+
+>[!AVAILABILITY]
+>
+>The WhatsApp connector is in **closed beta**.
+
+To learn how to set up the WhatsApp connector, read the [WhatsApp connector guide](/help/sources/connectors/marketing-automation/whatsapp.md).
+
+When you set up the WhatsApp connector, the **WhatsApp Webhook Raw Event** dataset is automatically created. This dataset is automatically enabled for Profile with unstructured data with the channel info also applied.
+
+After setting up the WhatsApp connector, contact Adobe Customer Care with information including the IMS org ID, sandbox information, channel (WhatsApp Business), and the mode (streaming or batch) to allowlist the connector to be used for Profile with unstructured data.
+
+>[!TAB Brand Concierge Conversations]
+
+For Brand Concierge conversations, three datasets that track user prompt, agent response, and feedback are automatically created. 
+
+To enable these datasets for Profile with unstructured data, you need to make a PATCH request to the `v2/dataSets` endpoint while providing the ID of each of the three datasets.
+
++++Sample patch request to enable the dataset for Profile with unstructured data.
+
+```shell
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/{DATASET_ID}
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "extensions": {
+        "adobe_unifiedProfile": {
+            "semanticProfile": {
+                "enablement": {
+                    "status": "READY"
+                }
+            }
+        }
+    }
+  }'
+```
+
++++
+
+>[!ENDTABS]
+
+## Configure the profile context
+
+After ingesting unstructured data into Experience Platform, you can configure the profile context to help personalize your conversations. You can configure this profile narrative either using Coworker or using the Experience Platform APIs.
 
 >[!BEGINTABS]
 
 >[!TAB CX Enterprise Coworker]
 
-Within Coworker, select **Customizations** followed by **Integrations**.
-
-![](/help/profile/images/unstructured-data/select-integrations.png)
-
-The **Integrations** page appears. You'll need to add the `rtcdp-mcp` integration to Coworker. Select **Add server** to add an integration.
-
-![](/help/profile/images/unstructured-data/select-add-server.png)
-
-The **Add integration** popover appears. Add the following details to the popover, then select **Add**.
-
-![](/help/profile/images/unstructured-data/add-integration-popover.png)
-
-| Field | Description |
-| ----- | ----------- |
-| Server name | The name of the server. Set this value to `rtcdp-mcp`. |
-| Source URL | The source URL for the MCP. Set this value to `https://cx-enterprise.adobe.io/mcp/server/rtcdp`. |
-| Connection type | The method for the MCP to connect to Coworker. Select **HTTP**. |
-| Tool timeout | How long it takes for the tool to timeout. Keep this value at 60 seconds. |
-| Authentication | How the MCP authenticates. Since this is configured for everyone, select `passthrough`. |
-
-Once you've added the `rtcdp-mcp` integration, you'll need to change your manifest to use the **Semantic Profile AI Assistant**. Select the ICON next to your name, followed by **Settings** to open the Settings popover.
-
-![](/help/profile/images/unstructured-data/select-settings.png)
-
-The Settings popover appears. Select **Preferences** and toggle on **Enable debug mode** so you can change the manifest.
-
-![](/help/profile/images/unstructured-data/enable-debug.png)
-
-With debug mode enabled, select **Manifest** and choose the **Semantic Profile AI Assistant** followed by **Apply** to change the manifest for Coworker.
-
-![](/help/profile/images/unstructured-data/change-manifest.png)
-
-
-Now that the integration and the manifest have been set up, you can begin the setup by asking "I want to create a semantic profile configuration" within Coworker.
+You can begin the setup by asking "I want to create a semantic profile configuration" within Coworker.
 
 Coworker will guide you through the steps to set up Profile with unstructured data by proceeding through the following steps:
 
@@ -254,7 +331,7 @@ curl -X POST https://platform.adobe.io/data/core/semanticprofile/config/configur
 | `segments.selection_mode` | No | String | The method which the audiences are chosen. At this time, only `inclusion` is supported. |
 | `segments.inclusion` | No | Array | An array that contains the audiences you want to include. The audiences are written as objects that contain both the segment definition ID and the priority, where a lower number means a higher priority (so "1" is the highest priority). |
 | `marketingActions` | No | Array | An array that contains the marketing actions you want to apply to the configuration. For more information on marketing actions, read the [marketing actions endpoint guide](/help/data-governance/api/marketing-actions.md). |
-| `narrativePrecision` | No | String | The level of precision that the configuration narrative will be. Supported values include `precise` and `fuzzy`. |
+| `narrativePrecision` | No | String | The level of precision that the configuration narrative will be. Supported values include `precise`, `fuzzy`, and `value_only`. |
 | `personNamespace` | No | Object | An object that contains details of the identity namespace for the configuration. If this field is left blank, the sandbox's default namespace will be used. |
 | `personNamespace.isPersonNamespaceEnabled` | No | Boolean | If set to `true`, the namespaces listed in `personNamespace.code` are used. Otherwise, the sandbox's default namespace will be used. |
 | `personNamespace.code` | No | Array | An array that lists the identity namespace codes you want the narrative to use. |
@@ -332,7 +409,7 @@ A successful response returns HTTP status 200 with a unique request ID and the d
 
 >[!ENDTABS]
 
-Now that the profile context has been created, you can save the configuration against Brand Concierge.
+Now that the profile context has been created, you can save the configuration against Brand Concierge or any other customer-facing agent.
 
 In Brand Concierge, select the concierge you want to apply the profile configuration to.
 
@@ -341,6 +418,34 @@ In Brand Concierge, select the concierge you want to apply the profile configura
 Once you've selected the concierge, go the **Personalization** tab and select the previously created configuration.
 
 ![](/help/profile/images/unstructured-data/select-configuration.png)
+
+## Configure signals to extract data {#configure-signals}
+
+Once you configure the profile context, you can now configure signals to extract data from your unstructured data.
+
+You can begin this process by going to Coworker and asking "Let me extract signals from conversations". 
+
+IMAGE
+
+Coworker asks what type of signals you want to detect from the conversations.
+
+IMAGE
+
+Next, Coworker asks what type of brand or business these conversations are part of.
+
+IMAGE
+
+Finally, Coworker asks you if you want to create a new signal group or if you want to add to an existing signal group.
+
+IMAGE
+
+You can then confirm if the above steps look accurate, and if you want to proceed with the signal creation.
+
+IMAGE
+
+The signal creation begins. Coworker then creates a signal that  automatically gets added to Experience Platform.
+
+IMAGE
 
 ## Use cases {#use-cases}
 
@@ -357,9 +462,13 @@ Profile with unstructured data lets you use conversational data as an activation
 
 Let's say that you have a company that offers financial services to clients. 
 
-In this scenario, one of your clients asks an agent about equities. By using Profile with unstructured data, Brand Concierge and Experience Platform can extract intent from these conversations, which lets you send personalized responses through the agent.
+In this scenario, one of your clients asks an agent about equities. Since this client is logged in, your agent knows about this user by reading their Real-Time Customer Profile. 
 
-Additionally, since this context is shared between all Experience Platform applications, you can continue the equity conversation in multiple forms. For example, you can send the client a follow up email asking about equities, or connect with the client on other platforms like WhatsApp with the full profile context.
+This client then continues the conversation by stating "I've also been meaning to sit down and really review my retirement savings, just haven't gotten around to scheduling it.". By using Profile with unstructured data, Brand Concierge and Experience Platform can extract intent from these conversations, which lets you send personalized responses through the agent.
+
+As a result, Experience Platform can make this client enter the "Financial Planning Interest" audience, and immediately personalize the agent to reply with "Let's make sure your retirement plan is on track — book a free check-in with Alex Agent."
+
+Additionally, since this context is shared between all Experience Platform applications, you can continue the retirement conversation in multiple forms. For example, Adobe Journey Optimizer can automatically send the client an email with a retirement check-in invitation with Alex Agent.
 
 ## Frequently asked questions {#faq}
 
