@@ -1,6 +1,6 @@
 ---
 title: Data Landing Zone Destination
-description: Learn how to connect to the Data Landing Zone destination to activate audiences, export datasets, and manually delete exported files from your container.
+description: Learn how to connect to the Data Landing Zone destination to activate audiences and export datasets.
 last-substantial-update: 2026-10-20T00:00:00.000Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 TQID: 'https://experienceleague.adobe.com/e64tDoP8iBdZgF-79Gp-tbF8VM0PlPx7daxey0JWMaI'
