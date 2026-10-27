@@ -69,6 +69,7 @@ Use destinations to activate audiences and export data from Experience Platform 
 | [The Trade Desk Third-Party Audiences](/help/destinations/catalog/advertising/tradedesk-third-party-audiences.md) | Send audiences from [!DNL Adobe Real-Time CDP] to the Data Marketplace in [!DNL The Trade Desk]. Buyers can then license your audiences and target them in programmatic campaigns. The destination supports TDID, GAID, IDFA, and UID2 identities. This destination is available only to data providers based in the United States. |
 | [The Trade Desk - CRM ](/help/destinations/catalog/advertising/tradedesk-emails.md) update for UID2 conversion |  |
 
+
 {style="table-layout:auto"}
 
 **New or updated functionality**
