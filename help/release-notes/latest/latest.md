@@ -52,7 +52,6 @@ New features and updates to existing features in Adobe Experience Platform:
 
 - [CX Enterprise Coworker](#cx-enterprise-coworker)
 - [Destinations](#destinations)
-- [Experience Data Model](#xdm)
 - [Query Service](#query-service)
 - [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
@@ -102,20 +101,6 @@ Use destinations to activate audiences and export data from Experience Platform 
 -->
 
 For more information, read the [destinations overview](/help/destinations/home.md).
-
-## Experience Data Model {#xdm}
-
-Use Experience Data Model (XDM) schemas to define data structures and relationships in Experience Platform.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| [Expanded relational schema relationships](/help/xdm/schema/relational.md#relationship-support) | Create relationships from relational schemas to primary identity fields or other supported fields in standard schemas. You no longer need to enable relational schemas for segmentation to create these relationships. Standard schemas must remain enabled for [!DNL Real-Time Customer Profile]. Each direct relationship links one or more relational records to one record in a standard schema. |
-
-{style="table-layout:auto"}
-
-For more information, read the [XDM overview](/help/xdm/home.md).
 
 <!--
 ## Process Manager {#process-manager}
