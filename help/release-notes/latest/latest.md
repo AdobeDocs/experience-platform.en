@@ -83,6 +83,7 @@ Use destinations to activate audiences and export data from Experience Platform 
 | Feature | Description |
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [!DNL 6sense Segments] | Activate account audiences from [!DNL Adobe Real-Time CDP B2B Edition] to [!DNL 6sense] as API-origin segments. Use the segments for ad campaigns, AI email, and account prioritization. You need a [!DNL 6sense] account with Segments API access enabled. This destination is in **beta** and rolls out during the week of October 26, 2026. To request access, contact your Adobe account representative. |
+| [The Trade Desk Third-Party Audiences](/help/destinations/catalog/advertising/tradedesk-third-party-audiences.md) | Send audiences from [!DNL Adobe Real-Time CDP] to the Data Marketplace in [!DNL The Trade Desk]. Buyers can then license your audiences and target them in programmatic campaigns. The destination supports TDID, GAID, IDFA, and UID2 identities. This destination is available only to data providers based in the United States. |
 
 {style="table-layout:auto"}
 
@@ -91,7 +92,9 @@ Use destinations to activate audiences and export data from Experience Platform 
 | Feature | Description |
 | --- | --- |
 | [Manual deletion from Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) | Delete exported data manually from your [!DNL Data Landing Zone] destination in [!DNL Azure]. You no longer need to wait for automatic deletion after seven days. Files that you do not delete manually still expire after seven days. |
-| [When to activate](/help/destinations/ui/when-to-activate.md) general availability | **[!UICONTROL When to activate]** is now generally available. Control which profile changes trigger exports to streaming API-based and streaming profile export destinations. Enable or disable attribute changes, segmentation changes, and identity changes for each dataflow. All three triggers are enabled by default. |
+
+<!-- 
+| [When to activate](/help/destinations/ui/when-to-activate.md) general availability | **[!UICONTROL When to activate]** is now generally available. Control which profile changes trigger exports to streaming API-based and streaming profile export destinations. Enable or disable attribute changes, segmentation changes, and identity changes for each dataflow. All three triggers are enabled by default. | -->
 
 {style="table-layout:auto"}
 
