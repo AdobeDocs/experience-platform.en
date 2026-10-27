@@ -69,7 +69,7 @@ To connect [!DNL Algolia] with Adobe Experience Platform, you'll need the follow
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| Application ID | Your Application Id can be found in the [API Keys](https://www.algolia.com/account/api-keys/all) section of your [!DNL Algolia] Dashboard. | 0ABCDEFG12 |
+| Application ID | Your Application ID can be found in the [API Keys](https://www.algolia.com/account/api-keys/all) section of your [!DNL Algolia] Dashboard. | 0ABCDEFG12 |
 | Search API Key | Your Search API Key can be found in the [API Keys](https://www.algolia.com/account/api-keys/all) section of your [!DNL Algolia] Dashboard. | 1234a12345678901b1234567890c1ab1 |
 
 >[!NOTE]
@@ -97,9 +97,10 @@ The fields shown depend on the selected authentication method:
 
 | Property | Description |
 | --- | --- |
-| [!UICONTROL Application ID] | Enter the [!UICONTROL Application Id] you previously gathered in the [configuration details](#configuration-details) section. This field is **required** when using the [!UICONTROL Default] method and **optional** when using the [!UICONTROL Proxy] method, since the proxy supplies the credentials. |
+| [!UICONTROL Application ID] | Enter the [!UICONTROL Application ID] you previously gathered in the [configuration details](#configuration-details) section. This field is **required** when using the [!UICONTROL Default] method and **optional** when using the [!UICONTROL Proxy] method, since the proxy supplies the credentials. |
 | [!UICONTROL Search API Key] | Enter the [!UICONTROL Search API Key] you previously gathered in the [configuration details](#configuration-details) section. This field is **required** when using the [!UICONTROL Default] method. When using the [!UICONTROL Proxy] method, leave this blank to keep the key hidden from the browser. The proxy injects it server-side. |
-| [!UICONTROL Proxy URL] | Required when the [!UICONTROL Proxy] authentication method is selected. Enter the URL of your server to route Insights events through before Adobe Experience Platform forwards them to [!DNL Algolia]. Your proxy injects the [!DNL Algolia] Application ID and Search API Key, so you can leave those fields blank. This field supports data elements to set the value statically or resolve it dynamically at runtime. |
+| [!UICONTROL Proxy URL] | Required when the [!UICONTROL Proxy] authentication method is selected. Enter the URL of your server to route Insights events through before they are forwarded to [!DNL Algolia]. Your proxy injects the [!DNL Algolia] Application ID and Search API Key, so you can leave those fields blank. This field supports data elements to set the value statically or resolve it dynamically at runtime. |
+| [!UICONTROL Proxy Headers] | Optional. Shown only when the [!UICONTROL Proxy] authentication method is selected. Specify HTTP headers to include on every request to your proxy URL, such as an authorization token your proxy requires. Enter a JSON object of header names to values, such as `{"Authorization": "Bearer token"}`, or a data element that returns an object of header names to values. To use a data element inside a JSON value, keep it within the quotes, such as `{"Authorization": "Bearer %myToken%"}`. Data elements are resolved each time an event is sent, so the headers always use their current values. Headers with empty values are not sent. If the value can't be read as an object of header names to values, the extension logs an error and sends events without the custom headers. Your proxy must allow these headers in its CORS configuration. |
 
 The following image shows the [!UICONTROL Default] authentication method:
 
