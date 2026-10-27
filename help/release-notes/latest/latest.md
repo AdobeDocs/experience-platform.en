@@ -66,11 +66,14 @@ Use [!DNL Adobe CX Enterprise Coworker] to work with Experience Platform data th
 | --- | --- |
 | [Anomaly detection skills](https://experienceleague.adobe.com/en/docs/coworker/content/chat/use-cases/data-insights/intelligent-implementation-and-administration/anomaly-detection){target="_blank"} | Detect spikes and drops in supported ingestion, segmentation, and destination activation metrics with [!DNL Coworker] Chat. Compare flow and audience trends, review flow health, and investigate currently failed jobs. These skills do not change your data or configuration. Anomaly detection is in limited availability. |
 | [Notification skills](https://experienceleague.adobe.com/en/docs/coworker/content/chat/use-cases/notifications/notification-skills){target="_blank"} | Use [!DNL Coworker] Chat to summarize notifications, identify action items, and manage notification preferences through conversation. Open notifications, mark them as read or unread, or set reminders. Notification skills are available to all customers with access to [!DNL Coworker], without additional setup. Delivery through [!DNL Slack] requires a connected workspace. |
-| SQL data preparation skills | Run SQL queries to read data, or create audiences with [!DNL Coworker]. Audience creation requires a [!DNL Data Distiller] entitlement and consumes compute hours after you confirm. |
-| Conversational data ingestion entry point | Start a conversational data ingestion and schema creation workflow from the schema creation dialog. [!DNL Coworker] opens with a prompt based on your schema creation task. Access depends on the availability of [!DNL Coworker] and its data ingestion skills. |
 | [!DNL Coworker] in AI platforms | Access [!DNL Coworker] from [!DNL Microsoft 365 Copilot] and [!DNL ChatGPT] to ask questions and retrieve insights. |
 
 {style="table-layout:auto"}
+
+<!--
+| SQL data preparation skills | Run SQL queries to read data, or create audiences with [!DNL Coworker]. Audience creation requires a [!DNL Data Distiller] entitlement and consumes compute hours after you confirm. |
+| Conversational data ingestion entry point | Start a conversational data ingestion and schema creation workflow from the schema creation dialog. [!DNL Coworker] opens with a prompt based on your schema creation task. Access depends on the availability of [!DNL Coworker] and its data ingestion skills. |
+-->
 
 For more information, read the [CX Enterprise Coworker overview](https://experienceleague.adobe.com/en/docs/coworker/content/home){target="_blank"}.
 
