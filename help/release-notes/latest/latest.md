@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform Release Notes October 2026
-description: Learn about the features and updates in the October 2026 release of Adobe Experience Platform, including Coworker skills, destinations, schemas, and sources.
+description: Learn about features and updates in the October 2026 release of Adobe Experience Platform, including Coworker skills, destinations, Query Service, and sources.
 last-update: 2026-10-27T00:00:00.000Z
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 TQID: 'https://experienceleague.adobe.com/RvjQSbQ2NNwBYQJD4G6jsXWdAAg3vzbXKYvRlMwbBW0'
@@ -53,7 +53,6 @@ New features and updates to existing features in Adobe Experience Platform:
 - [CX Enterprise Coworker](#cx-enterprise-coworker)
 - [Destinations](#destinations)
 - [Query Service](#query-service)
-- [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
 
 ## CX Enterprise Coworker {#cx-enterprise-coworker}
@@ -66,7 +65,7 @@ Use [!DNL Adobe CX Enterprise Coworker] to work with Experience Platform data th
 | --- | --- |
 | [Anomaly detection skills](https://experienceleague.adobe.com/en/docs/coworker/content/chat/use-cases/data-insights/intelligent-implementation-and-administration/anomaly-detection){target="_blank"} | Detect spikes and drops in supported ingestion, segmentation, and destination activation metrics with [!DNL Coworker] Chat. Compare flow and audience trends, review flow health, and investigate currently failed jobs. These skills do not change your data or configuration. Anomaly detection is in limited availability. |
 | [Notification skills](https://experienceleague.adobe.com/en/docs/coworker/content/chat/use-cases/notifications/notification-skills){target="_blank"} | Use [!DNL Coworker] Chat to summarize notifications, identify action items, and manage notification preferences through conversation. Open notifications, mark them as read or unread, or set reminders. Notification skills are available to all customers with access to [!DNL Coworker], without additional setup. Delivery through [!DNL Slack] requires a connected workspace. |
-| [!DNL Coworker] in AI platforms | Access [!DNL Coworker] from [!DNL Microsoft 365 Copilot] and [!DNL ChatGPT] to ask questions and retrieve insights. |
+| [Coworker in AI platforms](https://experienceleague.adobe.com/en/docs/coworker/content/ai-platforms){target="_blank"} | Access [!DNL Coworker] from [!DNL Microsoft 365 Copilot], [!DNL ChatGPT], and [!DNL Claude] to ask questions and retrieve insights. |
 
 {style="table-layout:auto"}
 
@@ -95,7 +94,7 @@ Use destinations to activate audiences and export data from Experience Platform 
 
 | Feature | Description |
 | --- | --- |
-| [Manual deletion from Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) | To remove exported data before automatic deletion, delete files manually from your [!DNL Data Landing Zone] destination in [!DNL Azure]. Files that you do not delete manually are automatically deleted after seven days. |
+| [Manual deletion from Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) | Delete exported files manually from your [!DNL Data Landing Zone] destination before automatic deletion. Manual deletion supports [!DNL Azure] and [!DNL Amazon Web Services]. Files that you do not delete manually are automatically deleted after seven days. |
 
 {style="table-layout:auto"}
 
@@ -131,6 +130,7 @@ Use [!DNL Query Service] to explore and validate Experience Platform data with S
 
 For more information, read the [Query Service overview](/help/query-service/home.md).
 
+<!--
 ## Real-Time Customer Profile {#profile}
 
 Use [!DNL Real-Time Customer Profile] to combine customer data from online and offline channels. Include data from customer relationship management systems and third parties. Build a unified view of each customer to deliver consistent, relevant experiences across channels.
@@ -144,6 +144,7 @@ Use [!DNL Real-Time Customer Profile] to combine customer data from online and o
 {style="table-layout:auto"}
 
 For more information, read the [Real-Time Customer Profile overview](/help/profile/home.md).
+-->
 
 ## Sources {#sources}
 
