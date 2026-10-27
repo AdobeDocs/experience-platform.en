@@ -21,12 +21,12 @@ Review the features and updates released in October 2026 for Adobe Experience Pl
 
 >[!TIP]
 >
->Refer to the following documentation for release notes of other Adobe Experience Platform applications:
+>Read the release notes for related applications:
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes){target="_blank"}
 >- [Adobe Journey Optimizer B2B Edition](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes){target="_blank"}
 >- [Adobe Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest){target="_blank"}
->- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes){target="_blank"}
+>- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes/latest){target="_blank"}
 >- [Adobe Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest){target="_blank"}
 
 **Release date: October 27, 2026**
@@ -49,13 +49,15 @@ Use [!DNL Adobe CX Enterprise Coworker] to work with Experience Platform data th
 
 | Feature | Description |
 | --- | --- |
-| SQL data preparation skills | Run read-only SQL queries or create audiences through [!DNL Coworker]. Audience creation requires a [!DNL Data Distiller] entitlement and consumes compute hours after your confirmation. |
-| AI-assisted data ingestion entry point | Start a conversational data ingestion and schema creation workflow from the schema creation dialog. [!DNL Coworker] opens with a prompt based on your schema creation task. Access depends on the availability of [!DNL Coworker] and its data ingestion skills. |
+| [Anomaly detection skills](https://experienceleague.adobe.com/en/docs/coworker/content/chat/use-cases/data-insights/intelligent-implementation-and-administration/anomaly-detection){target="_blank"} | Detect spikes and drops in supported ingestion, segmentation, and destination activation metrics with [!DNL Coworker] Chat. Compare flow and audience trends, review flow health, and investigate currently failed jobs. These skills do not change your data or configuration. Anomaly detection is in limited availability. |
+| [Notification skills](https://experienceleague.adobe.com/en/docs/coworker/content/chat/use-cases/notifications/notification-skills){target="_blank"} | Use [!DNL Coworker] Chat to summarize notifications, identify action items, and manage notification preferences through conversation. Open notifications, mark them as read or unread, or set reminders. Notification skills are available to all customers with access to [!DNL Coworker], without additional setup. Delivery through [!DNL Slack] requires a connected workspace. |
+| SQL data preparation skills | Run SQL queries to read data, or create audiences with [!DNL Coworker]. Audience creation requires a [!DNL Data Distiller] entitlement and consumes compute hours after you confirm. |
+| Conversational data ingestion entry point | Start a conversational data ingestion and schema creation workflow from the schema creation dialog. [!DNL Coworker] opens with a prompt based on your schema creation task. Access depends on the availability of [!DNL Coworker] and its data ingestion skills. |
 | [!DNL Coworker] in AI platforms | Access [!DNL Coworker] from [!DNL Microsoft 365 Copilot] and [!DNL ChatGPT] to ask questions and retrieve insights. |
 
 {style="table-layout:auto"}
 
-For more information, read the [CX Enterprise Coworker documentation](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/coworker/overview){target="_blank"}.
+For more information, read the [CX Enterprise Coworker overview](https://experienceleague.adobe.com/en/docs/coworker/content/home){target="_blank"}.
 
 ## Destinations {#destinations}
 
@@ -65,9 +67,9 @@ Use destinations to activate audiences and export data from Experience Platform 
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL 6sense Segments] | Activate account audiences from [!DNL Adobe Real-Time CDP B2B Edition] to [!DNL 6sense] as API-origin segments. Use the segments for ad campaigns, AI email, and account prioritization. You need a [!DNL 6sense] account with Segments API access enabled. This destination is in **beta** and rolls out during the week of October 26, 2026. To request access, contact your Adobe account representative. |
+| [!BADGE Beta]{type=Informative} [!DNL 6sense Segments] | Activate account audiences from [!DNL Adobe Real-Time CDP B2B Edition] to [!DNL 6sense] as segments created through the API. Use the segments for ad campaigns, AI email, and account prioritization. You need a [!DNL 6sense] account with Segments API access enabled. This destination is in beta and rolls out during the week of October 26, 2026. To request access, contact your Adobe account representative. |
 | [!DNL The Trade Desk] Third-Party Audiences | Send audiences from [!DNL Adobe Real-Time CDP] to the Data Marketplace in [!DNL The Trade Desk]. Buyers can then license your audiences and target them in programmatic campaigns. The destination supports TDID, GAID, IDFA, and UID2 identities. This destination is available only to data providers based in the United States. |
-| [The Trade Desk - CRM](/help/destinations/catalog/advertising/tradedesk-emails.md#uid2-conversion-identities) update for UID2 conversion | Convert email addresses and phone numbers to UID2 before activation. In the **[!UICONTROL Mapping]** step, select one of four new target identity namespaces: `email_to_uid2`, `hashed_email_to_uid2`, `phone_to_uid2`, or `hashed_phone_to_uid2`. These namespaces are available only in the [!DNL The Trade Desk - CRM (NAMER & APAC)] destination. They are not available in the [!DNL The Trade Desk - CRM (EU)] destination. |
+| [The Trade Desk - CRM](/help/destinations/catalog/advertising/tradedesk-emails.md#activate) update for UID2 conversion | Convert email addresses and phone numbers to UID2 before activation. In the **[!UICONTROL Mapping]** step, select one of four new target identity namespaces: `email_to_uid2`, `hashed_email_to_uid2`, `phone_to_uid2`, or `hashed_phone_to_uid2`. These namespaces are available only in the [!DNL The Trade Desk - CRM (NAMER & APAC)] destination. They are not available in the [!DNL The Trade Desk - CRM (EU)] destination. |
 
 {style="table-layout:auto"}
 
@@ -75,7 +77,7 @@ Use destinations to activate audiences and export data from Experience Platform 
 
 | Feature | Description |
 | --- | --- |
-| [Manual deletion from Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) | Delete exported data manually from your [!DNL Data Landing Zone] destination in [!DNL Azure]. You no longer need to wait for automatic deletion after seven days. Files that you do not delete manually still expire after seven days. |
+| [Manual deletion from Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) | To remove exported data before automatic deletion, delete files manually from your [!DNL Data Landing Zone] destination in [!DNL Azure]. Files that you do not delete manually are automatically deleted after seven days. |
 
 {style="table-layout:auto"}
 
@@ -93,7 +95,7 @@ Use Experience Data Model (XDM) schemas to define data structures and relationsh
 
 | Feature | Description |
 | --- | --- |
-| [Expanded relational schema relationships](/help/xdm/schema/relational.md) | Create relationships from relational schemas to primary identity fields in standard schemas. Also target other supported fields in standard schemas. Relational schemas no longer require segmentation enablement to create these relationships. Standard schemas must remain enabled for [!DNL Real-Time Customer Profile]. Each direct relationship links one or more relational records to one record in a standard schema. |
+| [Expanded relational schema relationships](/help/xdm/schema/relational.md#relationship-support) | Create relationships from relational schemas to primary identity fields or other supported fields in standard schemas. You no longer need to enable relational schemas for segmentation to create these relationships. Standard schemas must remain enabled for [!DNL Real-Time Customer Profile]. Each direct relationship links one or more relational records to one record in a standard schema. |
 
 {style="table-layout:auto"}
 
@@ -117,7 +119,7 @@ Use [!DNL Query Service] to explore and validate Experience Platform data with S
 
 | Fix | Description |
 | --- | --- |
-| [XDM row-validation error reference](/help/query-service/troubleshooting-guide.md#xdm-row-validation-errors) | Use the `INGEST-####-400` error reference to identify the XDM constraint behind a failed write. Find guidance to correct the data and retry the query. This documentation update does not introduce new query behavior. |
+| [XDM row validation error reference](/help/query-service/troubleshooting-guide.md#xdm-row-validation-errors) | Use the `INGEST-####-400` error reference to identify the XDM constraint that caused a write to fail. Follow the guidance to correct the data and retry the query. This documentation update does not change query behavior. |
 
 {style="table-layout:auto"}
 
@@ -125,7 +127,7 @@ For more information, read the [Query Service overview](/help/query-service/home
 
 ## Real-Time Customer Profile {#profile}
 
-Use [!DNL Real-Time Customer Profile] to combine customer data from online channels, offline channels, customer relationship management systems, and third parties. Build a unified view of each customer to deliver consistent, relevant experiences across channels.
+Use [!DNL Real-Time Customer Profile] to combine customer data from online and offline channels. Include data from customer relationship management systems and third parties. Build a unified view of each customer to deliver consistent, relevant experiences across channels.
 
 **New or updated features**
 
@@ -145,7 +147,8 @@ Use source connections to bring data from supported external systems into Experi
 
 | Source | Description |
 | --- | --- |
-| [Delta Sharing availability](/help/sources/connectors/data-sharing/delta-sharing.md) | The limited beta for the [!DNL Delta Sharing] source concluded on August 1, 2026. General availability is currently planned for 2027. The updated documentation no longer directs you to request beta access. |
+| [Azure Event Hubs network access update](/help/sources/connectors/cloud-storage/eventhub.md) | Allowlisting the Experience Platform virtual network is deprecated. [!DNL Azure] no longer supports adding the Experience Platform subnet as a virtual network rule for new [!DNL Event Hubs] namespaces. This restriction also applies when you update the network rules of an existing namespace. If you need firewall restrictions or cannot allow public network access, contact Adobe Customer Care. The [streaming IP allowlist documentation](/help/sources/ip-address-allow-list.md#streaming) no longer lists [!DNL Azure Event Hubs]. |
+| [Delta Sharing availability](/help/sources/connectors/data-sharing/delta-sharing.md) | The limited beta for the [!DNL Delta Sharing] source concluded on August 1, 2026. General availability is currently planned for 2027. The documentation no longer includes instructions for requesting beta access. |
 
 {style="table-layout:auto"}
 
