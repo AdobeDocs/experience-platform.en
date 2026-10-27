@@ -163,7 +163,7 @@ Use the checkboxes to the left of the dataset names to select the datasets that 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="File export options for datasets"
->abstract="Select **Export incremental files** to export only the data which was added to the dataset since the last export. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. Future incremental files include only the data which was added to the dataset since the first export. <br> Select **Export full files** to export the complete membership of each dataset on each export. "
+>abstract="Select **Export incremental files** to export only the records that were added or updated in the dataset since the previous export. Records deleted from the dataset are not exported. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. <br> Select **Export full files** to export the complete membership of each dataset on each export. "
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"
@@ -199,7 +199,7 @@ Use the **[!UICONTROL Edit schedule]** control on the page to edit the export ca
 
 ![Edit schedule control highlighted in the Scheduling step.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png){zoomable="yes"}
 
-The **[!UICONTROL Export incremental files]** option is selected by default. This triggers an export of one or multiple files representing a full snapshot of the dataset. Subsequent files are incremental additions to the dataset since the previous export. You can also select **[!UICONTROL Export full files]**. In this case, select the frequency **[!UICONTROL Once]** for a one-time full export of the dataset.
+The **[!UICONTROL Export incremental files]** option is selected by default. This option triggers an export of one or multiple files representing a full snapshot of the dataset. Subsequent files include only records that were added or updated since the previous export. Records deleted from the dataset are not included in incremental exports, so deletions are not reflected in your storage location. You can also select **[!UICONTROL Export full files]**. In this case, select the frequency **[!UICONTROL Once]** for a one-time full export of the dataset.
 
 >[!IMPORTANT]
 >
@@ -330,7 +330,8 @@ Keep in mind the following limitations for the general availability release of d
 * Exported file names are currently not customizable.
 * The UI does not currently block you from deleting a dataset that is being exported to a destination. Do not delete any datasets that are being exported to destinations. [Remove the dataset](#remove-dataset) from a destination dataflow before deleting it.
 * Monitoring metrics for dataset exports are currently mixed with numbers for profile exports so they do not reflect the true export numbers.
-* Data with a timestamp older than 365 days is excluded from dataset exports. For more information, view the [guardrails for scheduled dataset exports](/help/destinations/guardrails.md#scheduled-dataset-exports)
+* Data with a timestamp older than 365 days is excluded from dataset exports. For more information, view the [guardrails for scheduled dataset exports](/help/destinations/guardrails.md#scheduled-dataset-exports).
+* Incremental dataset exports include only records that were added or updated since the previous export. Records deleted from the dataset are not included in incremental exports, so deletions are not reflected in your storage location.
 
 ## Frequently Asked Questions {#faq}
 
