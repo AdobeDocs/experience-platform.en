@@ -1,6 +1,6 @@
 ---
 title: Data Landing Zone Destination
-description: Learn how to connect to the Data Landing Zone destination to activate audiences, export datasets, and delete exported files from your Azure container.
+description: Learn how to connect to the Data Landing Zone destination to activate audiences, export datasets, and manually delete exported files from your container.
 last-substantial-update: 2026-10-20T00:00:00.000Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 TQID: 'https://experienceleague.adobe.com/e64tDoP8iBdZgF-79Gp-tbF8VM0PlPx7daxey0JWMaI'
@@ -43,7 +43,7 @@ This destination is available in the following [!DNL Adobe CX Enterprise] applic
 
 [!DNL Data Landing Zone] is a cloud storage interface provisioned by [!DNL Adobe Experience Platform]. Use it to export files out of Experience Platform to a secure, cloud-based file storage location. Experience Platform and its applications, such as [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], and [!DNL Real-Time Customer Data Platform], provision one [!DNL Data Landing Zone] container per sandbox. The total data volume across all containers is limited to the total data provided with your Experience Platform Products and Services license.
 
-Experience Platform automatically deletes all files in a [!DNL Data Landing Zone] container after seven days. If your [!DNL Data Landing Zone] is provisioned in Azure, you can also [delete exported files manually](#delete-exported-files) before the seven days pass.
+Experience Platform automatically deletes all files in a [!DNL Data Landing Zone] container after seven days. You can also [delete exported files manually](#delete-exported-files) before the seven days pass.
 
 The [!DNL Data Landing Zone] destination connector is available for Experience Platform running on Azure or Amazon Web Services (AWS). The authentication mechanism depends on the cloud in which the destination is provisioned. Everything else about the destination and its use cases is the same. Read more about the two authentication mechanisms in the sections [Authenticate to the Data Landing Zone provisioned in Azure Blob](#authenticate-dlz-azure) and [Authenticate to the AWS-provisioned Data Landing Zone](#authenticate-dlz-aws).
 
@@ -387,4 +387,4 @@ To verify that the export succeeded, check your [!DNL Data Landing Zone] storage
 
 ## Delete exported files {#delete-exported-files}
 
-Experience Platform automatically deletes exported files from your [!DNL Data Landing Zone] container after seven days. If your [!DNL Data Landing Zone] is provisioned in Azure, you can also delete files manually from your container before the seven days pass.
+Experience Platform automatically deletes exported files from your [!DNL Data Landing Zone] container after seven days. You can also delete files manually from your container before the seven days pass. Manual deletion is available for [!DNL Data Landing Zone] containers provisioned in both Azure and AWS.
