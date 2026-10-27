@@ -423,29 +423,25 @@ Once you've selected the concierge, go the **Personalization** tab and select th
 
 Once you configure the profile context, you can now configure signals to extract data from your unstructured data.
 
-You can begin this process by going to Coworker and asking "Let me extract signals from conversations". 
+You can begin this process by going to Coworker and asking "Let me extract signals from conversations". Coworker then asks what type of signals you want to detect from the conversations.
 
-IMAGE
-
-Coworker asks what type of signals you want to detect from the conversations.
-
-IMAGE
+![](/help/profile/images/unstructured-data/what-to-detect.png)
 
 Next, Coworker asks what type of brand or business these conversations are part of.
 
-IMAGE
+![](/help/profile/images/unstructured-data/type-of-business.png)
 
 Finally, Coworker asks you if you want to create a new signal group or if you want to add to an existing signal group.
 
-IMAGE
+![](/help/profile/images/unstructured-data/new-or-existing-signal.png)
 
 You can then confirm if the above steps look accurate, and if you want to proceed with the signal creation.
 
-IMAGE
+![](/help/profile/images/unstructured-data/proceed-with-signal-creation.png)
 
 The signal creation begins. Coworker then creates a signal that  automatically gets added to Experience Platform.
 
-IMAGE
+![](/help/profile/images/unstructured-data/signal-criteria.png)
 
 ## Use cases {#use-cases}
 
