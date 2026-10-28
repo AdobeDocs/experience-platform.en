@@ -77,13 +77,10 @@ Use destinations to activate audiences and export data from Experience Platform 
 
 | Feature | Description |
 | --- | --- |
+| [When to activate](/help/destinations/ui/when-to-activate.md) general availability | Control which profile change types trigger exports to a destination. Enable or disable two trigger types per dataflow: attribute changes and identity changes. Segmentation changes are always on and all three triggers are enabled by default. |
 | [Manual deletion from Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) | Delete exported files manually from your [!DNL Data Landing Zone] destination before automatic deletion. Manual deletion supports [!DNL Azure] and [!DNL Amazon Web Services]. Files that you do not delete manually are automatically deleted after seven days. |
 
 {style="table-layout:auto"}
-
-<!--
-| [When to activate](/help/destinations/ui/when-to-activate.md) general availability | **[!UICONTROL When to activate]** is now generally available. Control which profile changes trigger exports to streaming API-based and streaming profile export destinations. Enable or disable attribute changes and identity changes for each dataflow. All three triggers are enabled by default, and segmentation changes are always on. |
--->
 
 For more information, read the [destinations overview](/help/destinations/home.md).
 
