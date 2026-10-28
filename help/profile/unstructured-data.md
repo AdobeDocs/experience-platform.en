@@ -1,7 +1,6 @@
 ---
 title: Real-Time Customer Profile with Unstructured Data
-description:
-hide: true
+description: Learn how to use Real-Time Customer Profile with unstructured data, which lets you have access to unprocessed data. This lets you better personalize conversations since the customer context can be shared across multiple platforms.
 ---
 
 # Real-Time Customer Profile with unstructured data
@@ -16,7 +15,7 @@ In Adobe Experience Platform, Real-Time Customer Profile lets you consolidate yo
 
 Real-Time Customer Profile currently combines structured data from multiple channels, including online, offline, CRM, and third party, consolidating this data into a unified view that offers an actionable and timestamped account of every customer interaction. However, this doesn't cover unstructured data ingestion, meaning data from conversations, transcripts, or other multi-modal data (such as PDFs or images) are unavailable to be used with Profile.
 
-Semantic profiles allows Experience Platform profiles have access to unstructured data, which lets you better personalize conversations since the customer context will continue to be shared across multiple platforms, including Brand Concierge. 
+Profile with unstructured data lets you have access to unprocessed data, which lets you better personalize conversations since the customer context will continue to be shared across multiple platforms, including Brand Concierge. 
 
 Profile with unstructured data provides the following capabilities to Experience Platform customers:
 
@@ -27,19 +26,35 @@ Profile with unstructured data provides the following capabilities to Experience
 - Activate intent in real time
   - You can extract marketer-defined signals from conversations and activate them through audiences, journeys, and personalization. These downstream activations can be used throughout Experience Platform, including Adobe Journey Optimizer and Target.
 
-## Access prerequisites {#prerequisites}
+## Use cases {#use-cases}
+
+Profile with unstructured data lets you use conversational data as an activation signal for further engagements, which allows you to more easily drive inbound personalizations and outbound activations. As a result, you can use these profiles in a variety of use cases:
+
+- Interest-based activation
+  - As a retail business, an authenticated shopper mentions a dietary preference in conversation. The extracted signal qualifies them for a "gluten-free" interest audience, which can be used for inbound and outbound activation such as tailored offers and journeys.
+- Negative-experience suppression
+  - As a big-box retail company, frustration is detected in a customer's conversation. This customer is then suppressed from a promotional audience to avoid sending a tone-deaf outbound message.
+- Intent-based routing and next-session personalization
+  - As a financial service or fintech company, a customer mentions a life event (such as "married", "moved states", or "new job") in a conversation. These keywords are extracted and used to personalize their next session to match the customer to an advisor who has the relevant domain expertise.
+
+## Sample flow {#sample-flow}
+
+Let's say that you have a company that offers financial services to clients. 
+
+In this scenario, one of your clients asks an agent about equities. Since this client is logged in, your agent knows about this user by reading their Real-Time Customer Profile. 
+
+This client then continues the conversation by stating "I've also been meaning to sit down and really review my retirement savings, just haven't gotten around to scheduling it.". By using Profile with unstructured data, Brand Concierge and Experience Platform can extract intent from these conversations, which lets you send personalized responses through the agent.
+
+As a result, Experience Platform can make this client enter the "Financial Planning Interest" audience, and immediately personalize the agent to reply with "Let's make sure your retirement plan is on track — book a free check-in with Alex Agent."
+
+Additionally, since this context is shared between all Experience Platform applications, you can continue the retirement conversation in multiple forms. For example, Adobe Journey Optimizer can automatically send the client an email with a retirement check-in invitation with Alex Agent.
+
+## Beta prerequisites {#prerequisites}
 
 To use Profile with unstructured data, you **must** meet the following prerequisites:
 
 - Already an existing Adobe Experience Platform user
 - Do **not** have the Healthcare Shield add-on
-- Have a use case in one of the three following areas:
-  - Profile context for AI agents
-    - Surface customer profile context to an AI agent so you can personalize interactions in real-time.
-  - Unstructured data ingestion
-    - Bring unstructured data, such as call transcripts, chat logs, survey responses, or emails into Profile, so it can be used to inform downstream experiences.
-  - CDP-powered decisioning on AI agents
-    - Use Real-Time CDP to help determine the next-best action, offer, or content for an individual customer or AI agent.
 
 If you fulfill all of these prerequisites, contact Adobe Customer Care for more information on requesting enablement for Profile with unstructured data.
 
@@ -47,13 +62,9 @@ If you fulfill all of these prerequisites, contact Adobe Customer Care for more 
 
 Before continuing Profile with unstructured data set up, you'll need to complete the following steps:
 
-- Access to either Real-Time CDP or Adobe Journey Optimizer
-  - This organization **cannot** be a Healthcare Shield customer
 - Enable [Identity Graph Linking Rules](/help/identity-service/identity-graph-linking-rules/overview.md)
 - Create a profile-enabled dataset
   - Ingest at least one profile into this dataset
-
-Once you've completed the prerequisite steps, contact Adobe Customer Care to help you enable Profile with unstructured data. 
 
 Once Profile with unstructured data has been enabled, you can start using this feature by setting up the following steps:
 
@@ -73,6 +84,8 @@ The method to ingest unstructured data differs, depending on the source of the u
 
 For the standard simple identity with raw text use case, you can use an ExperienceEvent schema and dataset to ingest the data in to Experience Platform. This is best used for most use cases, including importing transcripts, conversations, notes, and reviews.
 
+### Create a schema
+
 >[!IMPORTANT]
 >
 >When you create the schema and dataset, do **not** enable it for either Profile or Identity.
@@ -84,14 +97,16 @@ You'll first need to create an XDM ExperienceEvent schema for the dataset. This 
 
 To learn how to create a schema, read the [create a schema guide](/help/xdm/tutorials/create-schema-ui.md).
 
+### Create a dataset
+
 After you create the schema, you can create a dataset that uses this schema. To learn how to create a dataset based off of an existing schema, read the [create a dataset guide](/help/catalog/datasets/user-guide.md#schema).
 
 Once you've created the dataset, you can make a PATCH request to the `v2/dataSets` endpoint while providing the ID of the newly created dataset. This lets you update the dataset for usage with Profile with unstructured data.
 
-+++Sample patch request to enable the dataset for Profile with unstructured data.
++++Sample patch request and response to enable the dataset for Profile with unstructured data.
 
 ```shell
-curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/{DATASET_ID}
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3077efa10d92ab7a71858
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -113,7 +128,17 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/{DAT
   }'
 ```
 
+A successful response returns HTTP status 200 with the ID of your newly updated dataset.
+
+```json
+[
+    "@/dataSets/67b3077efa10d92ab7a71858"
+]
+```
+
 +++
+
+### Ingest data
 
 Now that the schema and dataset are set up, you can now start ingesting data into Experience Platform. You can use a standard source connector to load the data into Experience Platform, as CSV, JSON, and Parquet are all supported. When ingesting the data, put the unstructured text into the `rawText` field and the identity in the `identity` column.
 
@@ -137,10 +162,10 @@ For Brand Concierge conversations, three datasets that track user prompt, agent 
 
 To enable these datasets for Profile with unstructured data, you need to make a PATCH request to the `v2/dataSets` endpoint while providing the ID of each of the three datasets.
 
-+++Sample patch request to enable the dataset for Profile with unstructured data.
++++Sample patch request and response to enable the dataset for Profile with unstructured data.
 
 ```shell
-curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/{DATASET_ID}
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3077efa10d92ab7a71858
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -157,6 +182,14 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/{DAT
         }
     }
   }'
+```
+
+A successful response returns HTTP status 200 with the ID of your newly updated dataset.
+
+```json
+[
+    "@/dataSets/67b3077efa10d92ab7a71858"
+]
 ```
 
 +++
@@ -413,11 +446,11 @@ Now that the profile context has been created, you can save the configuration ag
 
 In Brand Concierge, select the concierge you want to apply the profile configuration to.
 
-![](/help/profile/images/unstructured-data/select-concierge.png)
+![Brand Concierge is displayed, showing a list of concierges.](/help/profile/images/unstructured-data/select-concierge.png)
 
 Once you've selected the concierge, go the **Personalization** tab and select the previously created configuration.
 
-![](/help/profile/images/unstructured-data/select-configuration.png)
+![The personalization tab is displayed in Brand Concierge.](/help/profile/images/unstructured-data/select-configuration.png)
 
 ## Configure signals to extract data {#configure-signals}
 
@@ -425,46 +458,23 @@ Once you configure the profile context, you can now configure signals to extract
 
 You can begin this process by going to Coworker and asking "Let me extract signals from conversations". Coworker then asks what type of signals you want to detect from the conversations.
 
-![](/help/profile/images/unstructured-data/what-to-detect.png)
+![The "What to detect" is displayed within Coworker.](/help/profile/images/unstructured-data/what-to-detect.png)
 
 Next, Coworker asks what type of brand or business these conversations are part of.
 
-![](/help/profile/images/unstructured-data/type-of-business.png)
+![Coworker asks the user about brand or context for the signal.](/help/profile/images/unstructured-data/type-of-business.png)
 
 Finally, Coworker asks you if you want to create a new signal group or if you want to add to an existing signal group.
 
-![](/help/profile/images/unstructured-data/new-or-existing-signal.png)
+![Coworker asks if you want to create a new signal or update an existing signal.](/help/profile/images/unstructured-data/new-or-existing-signal.png)
 
 You can then confirm if the above steps look accurate, and if you want to proceed with the signal creation.
 
-![](/help/profile/images/unstructured-data/proceed-with-signal-creation.png)
+![Coworker asks if you want to confirm if the steps look accurate.](/help/profile/images/unstructured-data/proceed-with-signal-creation.png)
 
 The signal creation begins. Coworker then creates a signal that  automatically gets added to Experience Platform.
 
-![](/help/profile/images/unstructured-data/signal-criteria.png)
-
-## Use cases {#use-cases}
-
-Profile with unstructured data lets you use conversational data as an activation signal for further engagements, which allows you to more easily drive inbound personalizations and outbound activations. As a result, you can use these profiles in a variety of use cases:
-
-- Interest-based activation
-  - As a retail business, an authenticated shopper mentions a dietary preference in conversation. The extracted signal qualifies them for a "gluten-free" interest audience, which can be used for inbound and outbound activation such as tailored offers and journeys.
-- Negative-experience suppression
-  - As a big-box retail company, frustration is detected in a customer's conversation. This customer is then suppressed from a promotional audience to avoid sending a tone-deaf outbound message.
-- Intent-based routing and next-session personalization
-  - As a financial service or fintech company, a customer mentions a life event (such as "married", "moved states", or "new job") in a conversation. These keywords are extracted and used to personalize their next session to match the customer to an advisor who has the relevant domain expertise.
-
-## Sample flow {#sample-flow}
-
-Let's say that you have a company that offers financial services to clients. 
-
-In this scenario, one of your clients asks an agent about equities. Since this client is logged in, your agent knows about this user by reading their Real-Time Customer Profile. 
-
-This client then continues the conversation by stating "I've also been meaning to sit down and really review my retirement savings, just haven't gotten around to scheduling it.". By using Profile with unstructured data, Brand Concierge and Experience Platform can extract intent from these conversations, which lets you send personalized responses through the agent.
-
-As a result, Experience Platform can make this client enter the "Financial Planning Interest" audience, and immediately personalize the agent to reply with "Let's make sure your retirement plan is on track — book a free check-in with Alex Agent."
-
-Additionally, since this context is shared between all Experience Platform applications, you can continue the retirement conversation in multiple forms. For example, Adobe Journey Optimizer can automatically send the client an email with a retirement check-in invitation with Alex Agent.
+![Coworker lists what you need to copy and paste to insert the signal.](/help/profile/images/unstructured-data/signal-criteria.png)
 
 ## Frequently asked questions {#faq}
 
