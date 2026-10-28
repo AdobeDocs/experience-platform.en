@@ -133,6 +133,7 @@ role_v2:
         * [Snapchat Ads connection](./catalog/advertising/snap-inc.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
         * [The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
+        * [The Trade Desk Third-Party Audiences connection](./catalog/advertising/tradedesk-third-party-audiences.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
         * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)
         * [ZoomInfo Account Audiences connection](./catalog/advertising/zoominfo-account-audiences.md)
