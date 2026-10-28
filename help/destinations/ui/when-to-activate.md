@@ -42,7 +42,7 @@ The **[!UICONTROL When to activate]** feature is supported for the following des
 
 The table below describes each trigger type. Triggers are listed in order of expected activation volume, from highest to lowest.
 
-![The When to activate panel showing three checkboxes: Attribute changes, Segmentation changes, and Identity changes, all enabled.](../assets/ui/when-to-activate/when-to-activate.png)
+![The When to activate panel has all three triggers selected. Segmentation changes is always on and cannot be cleared.](../assets/ui/when-to-activate/when-to-activate-segmentation-always-on.png)
 
 >[!NOTE]
 >
