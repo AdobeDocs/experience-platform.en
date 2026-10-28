@@ -82,7 +82,7 @@ Use destinations to activate audiences and export data from Experience Platform 
 {style="table-layout:auto"}
 
 <!--
-| [When to activate](/help/destinations/ui/when-to-activate.md) general availability | **[!UICONTROL When to activate]** is now generally available. Control which profile changes trigger exports to streaming API-based and streaming profile export destinations. Enable or disable attribute changes, segmentation changes, and identity changes for each dataflow. All three triggers are enabled by default. |
+| [When to activate](/help/destinations/ui/when-to-activate.md) general availability | **[!UICONTROL When to activate]** is now generally available. Control which profile changes trigger exports to streaming API-based and streaming profile export destinations. Enable or disable attribute changes and identity changes for each dataflow. All three triggers are enabled by default, and segmentation changes are always on. |
 -->
 
 For more information, read the [destinations overview](/help/destinations/home.md).
