@@ -1,7 +1,7 @@
 ---
 title: The Trade Desk - CRM connection
 description: Activate profiles to your Trade Desk account for audience targeting and suppression based on CRM data.
-last-substantial-update: 2026-04-29T00:00:00.000Z
+last-substantial-update: 2026-10-27T00:00:00.000Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 TQID: 'https://experienceleague.adobe.com/ffAWVtX2AVWGf99mqthLKZI8prjJWRKJ2vM--zkSYag'
 product_v2:
@@ -55,13 +55,13 @@ Depending on the type of IDs that you ingest into [!DNL Adobe Experience Platfor
 
 [!DNL The Trade Desk] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-Both unhashed and hashed emails addresses and phone numbers are supported by [!DNL Adobe Experience Platform]. Follow the instructions in the ID matching requirements section and use the appropriate namespaces for plain text and hashed email addresses, respectively.
+Experience Platform supports both unhashed and hashed email addresses and phone numbers. Follow the instructions in the [ID matching requirements](#id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses.
 
 |Target Identity|Description|
 |---|---|
 |Email|Email addresses (clear text)|
-|Email_LC_SHA256|Email addresses need to be hashed using SHA256 and lowercased. You won't be able to change this setting later.|
-|Phone (E.164)|Phone numbers that need to be normalized in E.164 format. The E.164 format includes a plus sign (+), an international country calling code, a local area code, and a phone number. For example: (+)(country code)(area code)(phone number). This identifier is not available for The Trade Desk – First-Party Data (EU).|
+|Email_LC_SHA256|Email addresses converted to lowercase and then hashed using SHA256. You cannot change this setting later.|
+|Phone (E.164)|Phone numbers normalized to E.164 format. The E.164 format includes a plus sign (+), an international country calling code, a local area code, and a phone number. For example: (+)(country code)(area code)(phone number). This identifier is not available for The Trade Desk – First-Party Data (EU).|
 |Phone (SHA256_E.164)|Phone numbers that have already been normalized to E.164 format and then hashed using SHA-256, with the resulting hash Base64-encoded. This identifier is not available for The Trade Desk – First-Party Data (EU).|
 |TDID|Cookie ID in The Trade Desk|
 |GAID|Google Advertising ID|
@@ -75,6 +75,25 @@ Both unhashed and hashed emails addresses and phone numbers are supported by [!D
 |FirstID|The user's First-id, a first-party cookie typically set by publishers in France. This ID is supported only in Europe.|
 
 {style="table-layout:auto"}
+
+### UID2 conversion identities {#uid2-conversion-identities}
+
+Convert email addresses and phone numbers to UID2 before activation. In the **[!UICONTROL Mapping]** step of the [activation workflow](#activate), select one of the following target identity namespaces.
+
+>[!IMPORTANT]
+>
+>These target identity namespaces are available only in the **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destination. They are not available in the **[!DNL The Trade Desk - CRM (EU)]** destination.
+
+|Target identity namespace|Description|
+|---|---|
+|`email_to_uid2`|Transcodes email addresses to UID2 before activation.|
+|`hashed_email_to_uid2`|Transcodes pre-hashed email addresses to UID2 before activation.|
+|`phone_to_uid2`|Transcodes phone numbers in E.164 format to UID2 before activation.|
+|`hashed_phone_to_uid2`|Transcodes pre-hashed phone numbers to UID2 before activation. Normalize phone numbers to E.164 format before you hash them.|
+
+{style="table-layout:auto"}
+
+For email hashing and phone number normalization requirements, read the [email hashing requirements](#email-hashing) and [phone number normalization and hashing requirements](#phone-hashing) sections.
 
 ## Supported audiences {#supported-audiences}
 
@@ -234,6 +253,8 @@ Selecting source and target fields:
 |FirstID|first_id|
 
 {style="table-layout:auto"}
+
+To convert email addresses and phone numbers to UID2 before activation, select a [UID2 conversion identity](#uid2-conversion-identities) as the target field. These target identity namespaces are available only in the [!DNL The Trade Desk - CRM (NAMER & APAC)] destination.
 
 ## Validate Data Export {#validate}
 
