@@ -46,7 +46,7 @@ role_v2:
     * [Create a new destination connection](./ui/connect-destination.md)
     * Activate data to destinations{#activate}
         * [Activation overview](./ui/activation-overview.md)
-        * [(Beta) When to activate](./ui/when-to-activate.md)
+        * [When to activate](./ui/when-to-activate.md)
         * [Activate audiences to streaming audience export destinations](./ui/activate-segment-streaming-destinations.md)
         * [Activate audiences to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
         * Batch profile export destinations{#activate-batch-profile}
@@ -85,6 +85,7 @@ role_v2:
         * [Experience Platform audience sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
         * [Federated Audience Composition connection](https://www.adobe.com/go/destinations-federated-audience-composition)
     * Advertising destinations{#advertising}
+        * [(Beta) 6sense Account connection](/help/destinations/catalog/advertising/6sense.md)
         * [Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
         * [Acxiom Real ID&trade; Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
         * [Advertising destinations overview](./catalog/advertising/overview.md)
@@ -132,6 +133,7 @@ role_v2:
         * [Snapchat Ads connection](./catalog/advertising/snap-inc.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
         * [The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
+        * [The Trade Desk Third-Party Audiences connection](./catalog/advertising/tradedesk-third-party-audiences.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
         * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)
         * [ZoomInfo Account Audiences connection](./catalog/advertising/zoominfo-account-audiences.md)

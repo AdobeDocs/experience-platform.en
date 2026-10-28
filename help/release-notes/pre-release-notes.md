@@ -43,7 +43,6 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Experience Data Model](#xdm)
 - [Process Manager](#process-manager)
 - [Query Service](#query-service)
-- [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
 
 ## CX Enterprise Coworker {#cx-enterprise-coworker}
@@ -56,7 +55,7 @@ Use [!DNL Adobe CX Enterprise Coworker] to work with Experience Platform data th
 | --- | --- |
 | SQL data preparation skills | Run read-only SQL queries or create audiences through [!DNL Coworker]. Audience creation requires a [!DNL Data Distiller] entitlement and consumes compute hours after your confirmation. |
 | AI-assisted data ingestion entry point | Start a conversational data ingestion and schema creation workflow from the schema creation dialog. [!DNL Coworker] opens with a prompt based on your schema creation task. Access depends on the availability of [!DNL Coworker] and its data ingestion skills. |
-| [!DNL Coworker] in AI platforms | Access [!DNL Coworker] from [!DNL Microsoft 365 Copilot] and [!DNL ChatGPT] to ask questions and retrieve insights. |
+| [Coworker in AI platforms](https://experienceleague.adobe.com/en/docs/coworker/content/ai-platforms){target="_blank"} | Access [!DNL Coworker] from [!DNL Microsoft 365 Copilot], [!DNL ChatGPT], and [!DNL Claude] to ask questions and retrieve insights. |
 
 {style="table-layout:auto"}
 
@@ -70,7 +69,7 @@ Use destinations to activate audiences and export data from Experience Platform 
 
 | Feature | Description |
 | --- | --- |
-| [!DNL 6sense Segments] | Activate account audiences from [!DNL Adobe Real-Time CDP B2B Edition] to [!DNL 6sense] as API-origin segments. Use the segments for ad campaigns, AI email, and account prioritization. You need a [!DNL 6sense] account with Segments API access enabled. |
+| [!BADGE Beta]{type=Informative} [!DNL 6sense Account] | Activate account audiences from [!DNL Adobe Real-Time CDP B2B Edition] to [!DNL 6sense] as API-origin segments. Use the segments for ad campaigns, AI email, and account prioritization. You need a [!DNL 6sense] account with Segments API access enabled. This destination is in beta and is available only to select customers. |
 
 {style="table-layout:auto"}
 
@@ -78,8 +77,8 @@ Use destinations to activate audiences and export data from Experience Platform 
 
 | Feature | Description |
 | --- | --- |
-| [Manual deletion from Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) | Delete exported data manually from your [!DNL Data Landing Zone] destination in [!DNL Azure]. You no longer need to wait for automatic deletion after seven days. Files that you do not delete manually still expire after seven days. |
-| [When to activate](/help/destinations/ui/when-to-activate.md) general availability | **[!UICONTROL When to activate]** is now generally available. Control which profile changes trigger exports to streaming API-based and streaming profile export destinations. Enable or disable attribute changes, segmentation changes, and identity changes for each dataflow. All three triggers are enabled by default. |
+| [Manual deletion from Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) | Delete exported files manually from your [!DNL Data Landing Zone] destination before automatic deletion. Manual deletion supports [!DNL Azure] and [!DNL Amazon Web Services]. Files that you do not delete manually are automatically deleted after seven days. |
+| [When to activate](/help/destinations/ui/when-to-activate.md) general availability | **[!UICONTROL When to activate]** is now generally available. Control which profile changes trigger exports to streaming API-based and streaming profile export destinations. Enable or disable attribute changes and identity changes for each dataflow. All three triggers are enabled by default, and segmentation changes are always on. |
 
 {style="table-layout:auto"}
 
@@ -123,6 +122,7 @@ Use [!DNL Query Service] to explore and validate Experience Platform data with S
 
 For more information, read the [Query Service overview](/help/query-service/home.md).
 
+<!--
 ## Real-Time Customer Profile {#profile}
 
 Use [!DNL Real-Time Customer Profile] to combine customer data from online channels, offline channels, customer relationship management systems, and third parties. Build a unified view of each customer to deliver consistent, relevant experiences across channels.
@@ -134,6 +134,7 @@ Use [!DNL Real-Time Customer Profile] to combine customer data from online chann
 | [!DNL Real-Time Customer Profile] support for unstructured data | Use conversational and other unstructured customer data in [!DNL Real-Time Customer Profile]. Understand customer intent, personalize conversations, and activate intent in real time. |
 
 {style="table-layout:auto"}
+-->
 
 ## Sources {#sources}
 

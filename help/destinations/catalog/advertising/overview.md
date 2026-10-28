@@ -36,6 +36,7 @@ To understand the difference between connections and extensions, see [Connection
 
 ### Connections {#connections}
 
+* [(Beta) 6sense Account connection](/help/destinations/catalog/advertising/6sense.md)
 * [(Beta) Acxiom Audience Distribution](acxiom-audience-connection.md)
 * [(Beta) Acxiom Real ID Audience Connection](acxiom-real-id-audience-connection.md)
 * [Adobe Advertising DSP connection](adobe-advertising-dsp-connection.md)
@@ -60,6 +61,7 @@ To understand the difference between connections and extensions, see [Connection
 * [(Beta) Snapchat Ads connection](snap-inc.md)
 * [The Trade Desk connection](tradedesk.md)
 * [(Beta) The Trade Desk CRM connection](tradedesk-emails.md)
+* [The Trade Desk Third-Party Audiences connection](/help/destinations/catalog/advertising/tradedesk-third-party-audiences.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### Extensions {#extensions}
