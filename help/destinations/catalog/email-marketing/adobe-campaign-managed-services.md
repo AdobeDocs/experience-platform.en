@@ -94,7 +94,7 @@ To help you better understand how and when you should use the [!DNL Adobe Campai
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|external_id|Custom user IDs|Select this target identity when your source identity is a custom namespace. We recommend using this identity and mapping it to the ID in your Campaign instance that represents customer (loyalty_ID, account_ID, customer_ID...)|
+|`external_id`|Custom profile IDs|Map a source profile attribute to this target identity, such as an email address or another string or number field. Use an attribute that identifies the corresponding profile in [!DNL Adobe Campaign], such as `loyalty_ID`, `account_ID`, or `customer_ID`. This target identity only accepts source profile attributes.|
 |ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 |phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by [!DNL Adobe Experience Platform]. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
@@ -189,7 +189,7 @@ Select XDM fields to export with the profiles and map them to the corresponding 
 
 1. Select source fields:
 
-    * Select an **identifier** (For example: the email field) as source identity that uniquely identifies a profile in [!DNL Adobe Experience Platform] and [!DNL Adobe Campaign].
+    * Select an identifier, such as the email field, that uniquely identifies a profile in [!DNL Adobe Experience Platform] and [!DNL Adobe Campaign]. For the `external_id` target identity, select a source profile attribute with a string or number value. Do not select an identity namespace from `identityMap`.
 
     * Select all other **XDM source profile attributes** that need to be exported to [!DNL Adobe Campaign].
 
