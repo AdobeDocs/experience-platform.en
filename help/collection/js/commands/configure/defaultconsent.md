@@ -1,5 +1,5 @@
 ---
-title: defaultConsent
+title: defaultConsent (Web SDK)
 description: Set the default consent collection method for your web property.
 exl-id: 2a22fa8b-a234-4d3e-9b55-c7482a928fe6
 TQID: 'https://experienceleague.adobe.com/1bc7KJIMEOri1ExqjmpCXB9MoRIYKuZS8CEGJqtVvFU'
@@ -20,7 +20,13 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# `defaultConsent`
+# `defaultConsent` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes `defaultConsent` in the Web SDK `configure` command. For the Server SDK, see [`defaultConsent`](/help/collection/server-js/methods/configure/defaultconsent.md).*
+
+>[!ENDSHADEBOX]
 
 The `defaultConsent` property determines how you handle data collection consent before you call the [`setConsent`](../setconsent.md) command. This property is valuable when you don't want to accidentally collect data from individuals who reside in areas where consent is required before collecting data.
 

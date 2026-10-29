@@ -1,5 +1,5 @@
 ---
-title: setConsent
+title: setConsent (Web SDK)
 description: Used on each page to track your users' consent preferences.
 exl-id: d01a6ef1-4fa7-4a60-a3a1-19568b4e0d23
 TQID: 'https://experienceleague.adobe.com/kQQB8KbJRWZvviQB-8hQ5dsdBio411lMiKugggJRDRQ'
@@ -32,7 +32,13 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
     internal-label: Privacy
 ---
-# `setConsent`
+# `setConsent` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes the Web SDK `setConsent` command. For the Server SDK, see [`setConsent`](/help/collection/server-js/methods/setconsent.md).*
+
+>[!ENDSHADEBOX]
 
 The `setConsent` command tells the Web SDK if it should send data (opt in), discard data (opt out), or use [`defaultConsent`](configure/defaultconsent.md) (consent unknown).
 

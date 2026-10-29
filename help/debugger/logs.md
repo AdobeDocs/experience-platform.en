@@ -25,7 +25,7 @@ topic_v2:
 ---
 # Logs tab
 
-The **Logs** tab provides information specific to tags and Adobe Experience Platform Web SDK implementations. You can filter by solutions implemented via their associated tools. 
+The **Logs** tab provides information specific to tags and Adobe Experience Platform Web SDK implementations. You can filter by solutions implemented via their associated tools. To see how the Edge Network processes Web SDK requests, use the **[!UICONTROL Edge]** tab; see [Edge Trace](edge-trace.md).
 
 ![](images/logs.jpg)
 

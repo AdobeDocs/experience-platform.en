@@ -1,5 +1,5 @@
 ---
-title: context
+title: context (Web SDK)
 description: Automatically collect device, environment, or location data.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
 TQID: 'https://experienceleague.adobe.com/9rYD-3NrLBMxgby-DnScJGouV7mrCy-YDJfVa0dyu18'
@@ -24,7 +24,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
     internal-label: Privacy
 ---
-# `context`
+# `context` (Web SDK)
 
 The `context` property is an array of strings that determines what the Web SDK can automatically collect. While this data can provide great value, omitting some of this data can be beneficial so that you can comply with your organization's privacy policy.
 
