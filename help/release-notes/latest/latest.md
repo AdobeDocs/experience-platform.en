@@ -136,7 +136,7 @@ Use [!DNL Real-Time Customer Profile] to combine customer data from online and o
 
 | Feature | Description |
 | --- | --- |
-| [!DNL Real-Time Customer Profile] support for unstructured data | Use conversational and other unstructured customer data in [!DNL Real-Time Customer Profile]. Understand customer intent, personalize conversations, and activate intent in real time. For more information, read the [personalize customer conversations using Real-Time Customer Profile with unstructured data guide](/help/profile/unstructured-data.md). |
+| [!BADGE Beta]{type=Informative} [!DNL Real-Time Customer Profile] support for unstructured data | Use conversational and other unstructured customer data in [!DNL Real-Time Customer Profile]. Understand customer intent, personalize conversations, and activate intent in real time. For more information, read the [personalize customer conversations using Real-Time Customer Profile with unstructured data guide](/help/profile/unstructured-data.md). |
 
 {style="table-layout:auto"}
 
