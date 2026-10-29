@@ -1,6 +1,6 @@
 ---
 title: User Permissions for Tags
-description: Learn about the different types of permissions available for tags and some basic implementation strategies for different business use cases.
+description: Learn about the different types of permissions available for tags and event forwarding, how to configure them in Adobe Admin Console, and some basic implementation strategies for different business use cases.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
@@ -17,13 +17,24 @@ role_v2:
 ---
 # User permissions for tags
 
+>[!CONTEXTUALHELP]
+>id="platform_tags_permissions"
+>title="Permissions"
+>abstract="Understand the key permissions required for working with tags, event forwarding, datastreams, schemas, identities, and sandboxes within Adobe Experience Platform."
+
 User permissions for tags in Adobe Experience Platform are assigned to users through Adobe Admin Console. Rather than being assigned to individual users, different sets of permissions are configured separately as product profiles. Users are then assigned to these product profiles in order to be granted the permissions they've been configured for.
 
-This guide provides an overview of the different types of permissions available for tags, the functionalities they grant access to, and some basic implementation strategies for different business use cases.
+This guide provides an overview of the different types of permissions available for tags, the functionalities they grant access to, how to configure them in Admin Console, and some basic implementation strategies for different business use cases.
 
 >[!NOTE]
 >
->For steps on how to configure permissions for users using Admin Console, please refer to the tutorial on [managing permissions for data collection](../../../collection/permissions.md).
+>For steps on how to configure permissions for users using Admin Console, see the section on [configuring permissions in Admin Console](#admin-console). For permissions to datastreams, schemas, and identity namespaces, see the section on [Experience Platform permissions](#platform-permissions).
+
+## Prerequisites {#prerequisites}
+
+To configure permissions for tags, you must have administrator privileges for an organization that has a product integration with Adobe Experience Platform Data Collection. The minimum role that can grant or withdraw permissions is a **product profile administrator**. **Product administrators** can manage all profiles within a product, and **system administrators** have no restrictions. See the article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) in the Adobe Enterprise administration guide for more information.
+
+This guide assumes you are familiar with basic Admin Console concepts like product profiles and how they grant product permissions to individual users and groups. For more information, see the [Admin Console user guide](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
 ## Permission types
 
@@ -36,7 +47,9 @@ Within a product profile, permissions for tags are divided into four categories:
 
 ### Platforms
 
-Each tag property has a platform. There are currently two platforms that you can use for tags: Web and Mobile. You can use this permission type to restrict or grant access to a particular type of property. This can be useful when the team that manages your mobile apps is different from the one that manages your websites.
+Each tag property has a platform. There are currently three platforms: Web, Mobile, and Edge. Edge properties are used for [event forwarding](../event-forwarding/getting-started.md). You can use this permission type to restrict or grant access to a particular type of property. This can be useful when the team that manages your mobile apps is different from the one that manages your websites.
+
+Platform permissions only grant access when combined with other property rights.
 
 ### Properties
 
@@ -57,6 +70,7 @@ The following table outlines the available property rights and the functionaliti
 | **Develop** | This allows you to perform the following actions:<ul><li>Create rules and data elements</li><li>Create libraries and build them in existing development environments</li><li>Submit a library for approval</li></ul>Most day-to-day tasks in the UI require this right. |
 | **Approve** | This allows you to take a submitted library and build to the staging environment. You can also approve a library for publishing once testing has been completed. |
 | **Publish** | This allows you to publish approved libraries to the production environment. |
+| **Edit Property** | This allows you to edit the basic configuration for the properties you have access to. |
 | **Manage Extensions** | This allows you to perform the following actions: <ul><li>Install new extensions to a property</li><li>Modify the configuration for an already installed extension</li><li>Delete an extension</li></ul>See the extensions overview documentation for [more information on extensions](../managing-resources/extensions/overview.md). This role typically belongs to IT or Marketing, depending on your organization. |
 | **Manage Environments** | This allows you to create and modify environments. See the [environments documentation](../publishing/environments.md) for more information. This role typically belongs to the IT group. |
 
@@ -68,9 +82,9 @@ Company rights apply to permissions that span multiple properties.  These are ou
 
 | Company right | Description |
 | --- | --- |
-| **Manage Properties** | This allows you to perform the following actions:<ul><li>Create new properties</li><li>Modify metadata and settings at the property level</li><li>Delete properties</li></ul>Administrators usually perform this role. See the [properties documentation](companies-and-properties.md) for more information. |
+| **Manage Properties** | This allows you to perform the following actions for web, mobile, and edge (event forwarding) properties:<ul><li>Create new properties</li><li>Modify metadata and settings at the property level</li><li>Delete properties</li></ul>Administrators usually perform this role. See the [properties documentation](companies-and-properties.md) for more information. |
 | **Develop Extensions** | Grants the ability to create and modify extension packages that are owned by the company, including private releases and requests for public release. |
-| **Manage App Configurations** | This is only available to if you have a license for Adobe Journey Optimizer or another solution that grants access to mobile in-app and push messaging.  This allows you to manage the apps that Experience Cloud knows about along with the necessary push credentials needed to communicate with the Firebase Cloud Messaging service and the Apple Push Notification Service. |
+| **Manage App Configurations** | This permission is only applicable if you have a license for Adobe Journey Optimizer or another solution that grants access to mobile in-app and push messaging. This allows you to manage the apps that Adobe Experience Cloud knows about along with the necessary push credentials needed to communicate with the Firebase Cloud Messaging service and the Apple Push Notification service. |
 
 {style="table-layout:auto"}
 
@@ -121,6 +135,31 @@ The following table provides some examples of the types of roles you might have 
 
 {style="table-layout:auto"}
 
+## Configure permissions in Admin Console {#admin-console}
+
+Permissions for tags and event forwarding are managed under the **[!UICONTROL Adobe Experience Platform Data Collection]** product in Admin Console. To configure them:
+
+1. Sign in to [Admin Console](https://adminconsole.adobe.com/), select **[!UICONTROL Products]** in the top navigation, and then select **[!UICONTROL Adobe Experience Platform Data Collection]**.
+1. Select an existing product profile, such as the default **[!DNL Default Data Collection All Access]** profile, or select **[!UICONTROL New Profile]** to create one. If different roles or user groups in your organization require different levels of access, create a separate product profile for each of them.
+1. On the **[!UICONTROL Permissions]** tab, select the edit icon for a permission category. Select permissions to move them between the available and included columns, switch categories from the left navigation as needed, and then select **[!UICONTROL Save]**.
+1. Select the **[!UICONTROL Users]** tab, and then select **[!UICONTROL Add user]** to assign users to the product profile.
+
+For more information, see the Admin Console documentation on [managing product profiles](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html).
+
+## Experience Platform permissions for data collection {#platform-permissions}
+
+Datastreams, schemas, and identity namespaces are not controlled by the Adobe Experience Platform Data Collection product profile. Instead, they are managed through Experience Platform [access control](../../../access-control/home.md). To work with these features, a user's role must include the relevant permissions in the following categories, along with access to the appropriate [sandboxes](../../../sandboxes/home.md):
+
+* **[!UICONTROL Data Collection]**: Manage or view [datastreams](../../../datastreams/overview.md).
+* **[!UICONTROL Data Modeling]**: Manage or view [Experience Data Model (XDM) schemas](../../../xdm/home.md).
+* **[!UICONTROL Identity Management]**: Manage or view [identity namespaces](../../../identity-service/features/namespaces.md).
+
+See the [resource permissions](../../../access-control/home.md#permissions) reference for a full list of Experience Platform permissions, and the guide on [managing permissions for a role](../../../access-control/abac/ui/permissions.md) for configuration steps.
+
+>[!NOTE]
+>
+>Depending on the product SKUs your organization has access to, you may not have every Experience Platform permission available to you.
+
 ## Next steps
 
-This document provided an overview of the available permissions for tags in Experience Platform. For steps on how to configure product profiles for tags in Adobe Admin Console, see the guide on [managing user permissions for data collection](../../../collection/permissions.md).
+This document provided an overview of the available permissions for tags and event forwarding, and how to configure them in Admin Console. For more information on managing permissions for other Experience Platform capabilities, see the [access control overview](../../../access-control/home.md).

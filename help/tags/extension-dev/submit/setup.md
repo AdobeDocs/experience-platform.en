@@ -69,7 +69,7 @@ This program is for consulting firms that help Adobe customers make the most of 
 
 Once your company is in the Exchange Partner program, you can request access to Adobe Solutions by signing in to the [Exchange Partner Site](https://partners.adobe.com/exchangeprogram/experiencecloud) and following the steps below.
 
-If you have an Experience Cloud Account require access the Data Collection UI and Experience Platform UI, please see the [data collection permissions  guide](../../../collection/permissions.md).
+If you have an Experience Cloud Account require access the Data Collection UI and Experience Platform UI, please see the [data collection permissions  guide](../../ui/administration/user-permissions.md).
 
 ## For independent developers
 
