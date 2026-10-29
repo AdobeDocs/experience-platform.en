@@ -53,6 +53,7 @@ New features and updates to existing features in Adobe Experience Platform:
 - [CX Enterprise Coworker](#cx-enterprise-coworker)
 - [Destinations](#destinations)
 - [Query Service](#query-service)
+- [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
 
 ## CX Enterprise Coworker {#cx-enterprise-coworker}
@@ -127,7 +128,6 @@ Use [!DNL Query Service] to explore and validate Experience Platform data with S
 
 For more information, read the [Query Service overview](/help/query-service/home.md).
 
-<!--
 ## Real-Time Customer Profile {#profile}
 
 Use [!DNL Real-Time Customer Profile] to combine customer data from online and offline channels. Include data from customer relationship management systems and third parties. Build a unified view of each customer to deliver consistent, relevant experiences across channels.
@@ -136,12 +136,11 @@ Use [!DNL Real-Time Customer Profile] to combine customer data from online and o
 
 | Feature | Description |
 | --- | --- |
-| [!DNL Real-Time Customer Profile] support for unstructured data | Use conversational and other unstructured customer data in [!DNL Real-Time Customer Profile]. Understand customer intent, personalize conversations, and activate intent in real time. |
+| [!BADGE Beta]{type=Informative} [!DNL Real-Time Customer Profile] support for unstructured data | Use conversational and other unstructured customer data in [!DNL Real-Time Customer Profile]. Understand customer intent, personalize conversations, and activate intent in real time. For more information, read the [personalize customer conversations using Real-Time Customer Profile with unstructured data guide](/help/profile/unstructured-data.md). |
 
 {style="table-layout:auto"}
 
 For more information, read the [Real-Time Customer Profile overview](/help/profile/home.md).
--->
 
 ## Sources {#sources}
 
