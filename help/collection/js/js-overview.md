@@ -75,7 +75,7 @@ topic_v2:
 ---
 # Web SDK JavaScript library overview
 
-The **Adobe Experience Platform Web SDK** is a client-side JavaScript library that allows you to send data to the Adobe Experience Platform Edge Network. This guide documents the Web SDK JavaScript library (`alloy.js`) implementation path, including core concepts, installation, configuration, and commands. For the Web SDK tag extension in the Data Collection UI, see the [Web SDK tag extension](/help/tags/extensions/client/web-sdk/overview.md).
+The **Adobe Experience Platform Web SDK** is a client-side JavaScript library that allows you to send data to the Adobe Experience Platform Edge Network. This guide documents the Web SDK JavaScript library (`alloy.js`) implementation path, including core concepts, installation, configuration, and commands. For the Web SDK tag extension in the Data Collection UI, see the [Web SDK tag extension](/help/tags/extensions/client/web-sdk/overview.md). To send data from a server instead of a browser, see the [Server SDK for JavaScript](/help/collection/server-js/overview.md).
 
 The Web SDK sends data in a solution-agnostic way (XDM) to the Experience Platform Edge Network, which then maps the data to solution-specific formats and destinations and sends it in real time.
 

@@ -1,5 +1,5 @@
 ---
-title: sendEvent
+title: sendEvent (Web SDK)
 description: Send data to the Adobe Experience Platform Edge Network.
 exl-id: 83de368d-78d4-4e28-aadd-afaea1ca091d
 TQID: 'https://experienceleague.adobe.com/47eXICo3e7d2v3Qge6kjRYGA0wRgOnYSCK0uRNrM3AU'
@@ -26,7 +26,13 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
     internal-label: Machine learning
 ---
-# `sendEvent`
+# `sendEvent` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes the Web SDK `sendEvent` command. For the Server SDK, see [`sendEvent`](/help/collection/server-js/methods/sendevent/overview.md).*
+
+>[!ENDSHADEBOX]
 
 The `sendEvent` command is the primary way to send data to Adobe. Its response object is the primary way to retrieve personalized content, identities, and audience destinations. Use the [`xdm`](xdm.md) object to send data that maps to your Adobe Experience Platform schema. Use the [`data`](data.md) object to send non-XDM data. The payload when sending data to Adobe has a maximum limit of 64 KB.
 

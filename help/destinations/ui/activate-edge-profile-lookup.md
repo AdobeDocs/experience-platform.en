@@ -57,7 +57,7 @@ When configuring the use case described in this page, you will use the following
 
 ## Performance guardrails {#guardrails}
 
-Edge profile lookup use cases are subject to the specific performance guardrails described in the table below. For more details regarding the Edge Network API guardrails, see the guardrails [documentation page](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/).
+Edge profile lookup use cases are subject to the specific performance guardrails described in the table below. For more details regarding the Edge Network API guardrails, see the guardrails [documentation page](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails).
 
 |Edge Network Service | Edge Segmentation | Requests per second |
 |---------|----------|---------|

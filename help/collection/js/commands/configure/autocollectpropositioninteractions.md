@@ -1,5 +1,5 @@
 ---
-title: autoCollectPropositionInteractions
+title: autoCollectPropositionInteractions (Web SDK)
 description: Automatically collect data when a link is clicked.
 exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
 TQID: 'https://experienceleague.adobe.com/TOhnO1l7gwD9tUbkcHTJBOxsaIIkyDTgriZENdvw-qw'
@@ -37,7 +37,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
     internal-label: Personalization
 ---
-# `autoCollectPropositionInteractions`
+# `autoCollectPropositionInteractions` (Web SDK)
 
 The `autoCollectPropositionInteractions` property is an optional setting that determines if the Web SDK automatically collects proposition interactions. The value is a map of decision providers, each with value that indicates how automatic proposition interactions should be handled.
 

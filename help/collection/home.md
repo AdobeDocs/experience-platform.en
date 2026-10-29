@@ -34,6 +34,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 Adobe supports the following code languages with dedicated libraries for data collection:
 
 * **JavaScript**: For websites and web-based applications
+* **Server-side JavaScript**: For server applications that run in Node.js or another server-side JavaScript runtime
 * **Kotlin**: For Android devices
 * **Swift**: For iOS devices
 * **Brightscript**: For Roku devices
