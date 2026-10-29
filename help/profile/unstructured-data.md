@@ -468,7 +468,7 @@ curl -X GET "https://platform.adobe.io/data/core/semanticprofile/lookup/narrativ
 | --------------- | ----------- |
 | `entityIdNS` | The identity namespace. This must be a namespace that is defined in your sandbox. Possible values include `Email`, `ECID`, and `CRMID`. |
 | `entityId` | The identity value within the namespace. You **must** URL encode reserved characters. |
-| `configurationName` | The name of the previously created configuration. | 
+| `configurationName` | The name of the previously created configuration. |
 
 A successful response returns HTTP status 200 with information about the profile context.
 
