@@ -3,13 +3,13 @@ title: Real-Time Customer Profile with Unstructured Data
 description: Learn how to use Real-Time Customer Profile with unstructured data, which lets you have access to unprocessed data. This lets you better personalize conversations since the customer context can be shared across multiple platforms.
 ---
 
-# Real-Time Customer Profile with unstructured data
+# Personalize customer conversations using Real-Time Customer Profile with unstructured data
 
 >[!AVAILABILITY]
 >
 >This feature is currently in **beta**. The functionality and documentation are subject to change. To participate in this beta, contact Adobe Customer Care or your account representative.
 
-In Adobe Experience Platform, Real-Time Customer Profile lets you consolidate your customer data into a unified view by combining data from multiple channels. With support for unstructured data, Experience Platform extends these capabilities, semantically letting you use conversational and other unstructured customer data as part of the profile building blocks.
+In Adobe Experience Platform, you can consolidate your customer data into a unified view by combining data from multiple channels with Real-Time Customer Profile. With support for unstructured data, Experience Platform extends these capabilities, semantically letting you use conversational and other unstructured customer data as part of the profile building blocks.
 
 ## Understanding Profile with unstructured data {#understanding}
 
@@ -19,27 +19,21 @@ Profile with unstructured data lets you have access to unprocessed data, which l
 
 Profile with unstructured data provides the following capabilities to Experience Platform customers:
 
-- Understand customer intent
-  - You can ingest conversations, messaging, search queries, call transcripts, surveys, and other text-based interactions to enrich the existing customer profile.
-- Personalize conversations
-  - You can combine profile attributes, audience membership, and conversation history together so Brand Concierge and other customer-facing agents can deliver personalized experiences with continuity across agents, sessions, devices, and channels.
-- Activate intent in real time
-  - You can extract marketer-defined signals from conversations and activate them through audiences, journeys, and personalization. These downstream activations can be used throughout Experience Platform, including Adobe Journey Optimizer and Target.
+- **Understand customer intent**: Ingest conversations, messaging, search queries, call transcripts, surveys, and other text-based interactions to enrich the existing customer profile.
+- **Personalize conversations**: Combine profile attributes, audience membership, and conversation history together so Brand Concierge and other customer-facing agents can deliver personalized experiences with continuity across agents, sessions, devices, and channels.
+- **Activate intent in real time**: Extract marketer-defined signals from conversations and activate them through audiences, journeys, and personalization. These downstream activations can be used throughout Experience Platform, including Adobe Journey Optimizer and Target.
 
 ## Use cases {#use-cases}
 
 Profile with unstructured data lets you use conversational data as an activation signal for further engagements, which allows you to more easily drive inbound personalizations and outbound activations. As a result, you can use these profiles in a variety of use cases:
 
-- Interest-based activation
-  - As a retail business, an authenticated shopper mentions a dietary preference in conversation. The extracted signal qualifies them for a "gluten-free" interest audience, which can be used for inbound and outbound activation such as tailored offers and journeys.
-- Negative-experience suppression
-  - As a big-box retail company, frustration is detected in a customer's conversation. This customer is then suppressed from a promotional audience to avoid sending a tone-deaf outbound message.
-- Intent-based routing and next-session personalization
-  - As a financial service or fintech company, a customer mentions a life event (such as "married", "moved states", or "new job") in a conversation. These keywords are extracted and used to personalize their next session to match the customer to an advisor who has the relevant domain expertise.
+- **Interest-based activation**: As a retail business, an authenticated shopper mentions a dietary preference in conversation. The extracted signal qualifies them for a "gluten-free" interest audience, which can be used for inbound and outbound activation such as tailored offers and journeys.
+- **Negative-experience suppression**: As a big-box retail company, frustration is detected in a customer's conversation. This customer is then suppressed from a promotional audience to avoid sending a tone-deaf outbound message.
+- **Intent-based routing and next-session personalization**: As a financial service or fintech company, a customer mentions a life event (such as "married", "moved states", or "new job") in a conversation. These keywords are extracted and used to personalize their next session to match the customer to an advisor who has the relevant domain expertise.
 
 ## Sample flow {#sample-flow}
 
-Let's say that you have a company that offers financial services to clients. 
+Consider a company that offers financial services to clients. 
 
 In this scenario, one of your clients asks an agent about equities. Since this client is logged in, your agent knows about this user by reading their Real-Time Customer Profile. 
 
@@ -68,11 +62,11 @@ Before continuing Profile with unstructured data set up, you'll need to complete
 
 Once Profile with unstructured data has been enabled, you can start using this feature by setting up the following steps:
 
-- Ingesting unstructured data in Experience Platform
-- Configuring the profile context to personalize conversations
-- Configuring signals to extract data from unstructured data for activation
+- Ingest unstructured data in Experience Platform
+- Configure the profile context to personalize conversations
+- Configure signals to extract data from unstructured data for activation
 
-## Ingest unstructured data
+## Ingest unstructured data {#ingest}
 
 In order to use unstructured data as part of your personalization process, you'll first need to ingest that data into Experience Platform.
 
@@ -142,19 +136,19 @@ A successful response returns HTTP status 200 with the ID of your newly updated 
 
 Now that the schema and dataset are set up, you can now start ingesting data into Experience Platform. You can use a standard source connector to load the data into Experience Platform, as CSV, JSON, and Parquet are all supported. When ingesting the data, put the unstructured text into the `rawText` field and the identity in the `identity` column.
 
-You can now contact Adobe Customer Care with information such as the IMS Org ID, sandbox information, dataset information, and method of ingestion (simple ID with raw text XDM) to complete the setup of data ingestion.
+You can now contact Adobe Customer Care with information such as the organization ID, sandbox information, dataset information, and method of ingestion (simple ID with raw text XDM) to complete the setup of data ingestion.
 
 >[!TAB WhatsApp Business]
 
 >[!AVAILABILITY]
 >
->The WhatsApp connector is in **closed beta**.
+>The [!DNL WhatsApp] connector is in **closed beta**.
 
-To learn how to set up the WhatsApp connector, read the [WhatsApp connector guide](/help/sources/connectors/marketing-automation/whatsapp.md).
+To learn how to set up the [!DNL WhatsApp] connector, read the [[!DNL WhatsApp] connector guide](/help/sources/connectors/marketing-automation/whatsapp.md).
 
-When you set up the WhatsApp connector, the **WhatsApp Webhook Raw Event** dataset is automatically created. This dataset is automatically enabled for Profile with unstructured data with the channel info also applied.
+When you set up the WhatsApp connector, the **[!DNL WhatsApp] Webhook Raw Event** dataset is automatically created. This dataset is automatically enabled for Profile with unstructured data with the channel info also applied.
 
-After setting up the WhatsApp connector, contact Adobe Customer Care with information including the IMS org ID, sandbox information, channel (WhatsApp Business), and the mode (streaming or batch) to allowlist the connector to be used for Profile with unstructured data.
+After setting up the [!DNL WhatsApp] connector, contact Adobe Customer Care with information including the organization ID, sandbox information, channel ([!DNL WhatsApp] Business), and the mode (streaming or batch) to allowlist the connector to be used for Profile with unstructured data.
 
 >[!TAB Brand Concierge Conversations]
 
@@ -444,6 +438,8 @@ A successful response returns HTTP status 200 with a unique request ID and the d
 
 Now that the profile context has been created, you can save the configuration against Brand Concierge or any other customer-facing agent.
 
+### Profile context in Brand Concierge {#profile-context-brand-concierge}
+
 In Brand Concierge, select the concierge you want to apply the profile configuration to.
 
 ![Brand Concierge is displayed, showing a list of concierges.](/help/profile/images/unstructured-data/select-concierge.png)
@@ -451,6 +447,108 @@ In Brand Concierge, select the concierge you want to apply the profile configura
 Once you've selected the concierge, go the **Personalization** tab and select the previously created configuration.
 
 ![The personalization tab is displayed in Brand Concierge.](/help/profile/images/unstructured-data/select-configuration.png)
+
+### Profile context with other customer-facing agents {#profile-context-other}
+
+To use profile context with other customer-facing agents, you'll need to use the Experience Platform API to look up the customer's profile context and to retrieve the conversation history. By retrieving both of these values, your agent can properly retrieve the full and relevant context before starting a conversation.
+
+To look up the customer's profile context, you'll need to make a GET request to the `/semanticprofile/lookup/narrative` endpoint while providing the `entityIdNS`, `entityId`, and `configurationName` as query parameters.
+
++++ Sample request and response to getting the profile narrative
+
+```shell
+curl -X GET "https://platform.adobe.io/data/core/semanticprofile/lookup/narrative?entityIdNS=Email&entityId=jane.doe%2B1@example.com&configurationName=CustomerSummary" \
+  -H "Authorization: Bearer {ACCESS_TOKEN}" \
+  -H "x-api-key: {API_KEY}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
+  -H "x-sandbox-name: {SANDBOX_NAME}"
+```
+
+| Query parameter | Description |
+| --------------- | ----------- |
+| `entityIdNS` | The identity namespace. This must be a namespace that is defined in your sandbox. Possible values include `Email`, `ECID`, and `CRMID`. |
+| `entityId` | The identity value within the namespace. You **must** URL encode reserved characters. |
+| `configurationName` | The name of the previously created configuration. | 
+
+A successful response returns HTTP status 200 with information about the profile context.
+
+```json
+{
+    "requestId": "7f3a9c8e-4d7b-4a6e-9f2c-1b6e8d4a2c91",
+    "narrative": "Jane Doe is a member of the 'High Value Loyalty' audience. Her primary email address is jane.doe+1@example.com."
+}
+```
+
+| Field | Description |
+| ----- | ----------- |
+| `requestId` | The unique ID generated for the request. |
+| `narrative` | The generated natural language profile summary. |
+
++++
+
+To look up a customer's previous conversation history, you'll need to make a POST request to the `/semanticprofile/query/v1/profile` endpoint, while providing the `entityIdNS` and `entityId` as query parameters.
+
++++ Sample request and response
+
+```shell
+curl -X POST "https://platform.adobe.io.data/core/semanticprofile/query/v1/profile?entityIdNS=Email&entityId=jane.doe%2B1@example.com" \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+    "conversations": {}
+ }'
+```
+
+| Query parameter | Description |
+| --------------- | ----------- |
+| `entityIdNS` | The identity namespace. This must be a namespace that is defined in your sandbox. Possible values include `Email`, `ECID`, and `CRMID`. |
+| `entityId` | The identity value within the namespace. You **must** URL encode reserved characters. |
+
+| Request field | Type | Description |
+| ------------- | -------- | ---- | ----------- |
+| `conversations` | Object | An object that determines you want to return information about the conversations. By leaving it as an empty object, you automatically will receive information about the interactions, metadata, and signals.  |
+
+A sample response returns HTTP status 200 with information about the conversations for the requested entity.
+
+```json
+{
+    "conversations": {
+        "items": [{
+            "conversation_id": "conv-001",
+            "channel": "web-chat",
+            "created_at": "2026-05-02T14:03:11Z",
+            "last_active_at": "2026-05-02T14:21:55Z",
+            "participants": [{ 
+                "identity_map": { 
+                    "Email": [{ 
+                        "id": "jane.doe+1@example.com", 
+                        "primary": true
+                    }] 
+                }, 
+                "role": "customer", 
+                "is_author": true 
+            }],
+            "interactions": [{
+                "interaction_id": "int-001",
+                "timestamp": "2026-05-02T14:03:11Z",
+                "contents": [{ 
+                    "content_value": "Hi, I'd like to upgrade my plan.", 
+                    "content_type": "TEXT" 
+                }]
+            }]
+        }],
+    "has_more": true,
+    "page_token": "eyJjdXJzb3IiOi…"
+  }
+}
+```
+
++++
+
+After getting both the narrative and conversations, you can feed this information to your third-party AI agents. As a result, the AI agent will have information about who the customer is as well as information about what the customer discussed.
 
 ## Configure signals to extract data {#configure-signals}
 
