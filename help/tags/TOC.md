@@ -54,7 +54,7 @@ nudge: true
   * [Getting started](./ui/event-forwarding/getting-started.md)
   * [Guided Setup](./ui/event-forwarding/guided-setup.md)
   * [Configuring secrets](./ui/event-forwarding/secrets.md)
-  * [Monitoring (Beta)](./ui/event-forwarding/monitoring.md)
+  * [Monitoring](./ui/event-forwarding/monitoring.md)
 * Administration {#admin}
   * [Overview](./ui/administration/overview.md)
   * [Companies and properties](./ui/administration/companies-and-properties.md)
