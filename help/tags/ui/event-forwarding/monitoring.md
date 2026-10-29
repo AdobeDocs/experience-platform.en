@@ -73,10 +73,7 @@ The **[!UICONTROL Error Insights]** tab on the **[!UICONTROL Monitoring]** page 
 
 ### Access Error Insights
 
-1. Open **[!UICONTROL Monitoring]** in the Data Collection UI.
-2. Select the property and environment you want to investigate.
-3. Open the **[!UICONTROL Error Insights]** tab.
-4. Select a rolling time window of **1 hour**, **12 hours**, or **24 hours** to view aggregated error details for that period.
+Select the **[!UICONTROL Error Insights]** tab from the **[!UICONTROL Monitoring]** UI. Next, select the property and environment you want to investigate and select a rolling time window of **1 hour**, **12 hours**, or **24 hours** to view aggregated error details for that period.
 
 ### Investigate error details
 
