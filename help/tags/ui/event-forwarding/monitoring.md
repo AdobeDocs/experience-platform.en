@@ -21,10 +21,6 @@ role_v2:
 ---
 # Monitor activities in event forwarding
 
->[!IMPORTANT]
->
->This feature is currently in beta and your organization may not have access to it yet. The functionality and documentation are subject to change.
-
 The **[!UICONTROL Dashboard]** tab in the **[!UICONTROL Monitoring]** interface provides insights into the performance of your event forwarding properties, including usage patterns, errors, and compute time. You can also use **[!UICONTROL Error Insights]** to investigate aggregated error data and troubleshoot issues in your running event forwarding libraries. This guide explains how to access, view, and interpret these reports.
 
 ![Image showing the monitoring tab in the Data Collection UI](../../images/ui/event-forwarding/monitoring/monitoring-tab.png)
