@@ -2,24 +2,10 @@
 title: Adobe Analytics source connector for report suite data
 description: This document provides an overview of the Adobe Analytics source connector for Adobe Experience Platform.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-TQID: https://experienceleague.adobe.com/tn8xFuLHCbCI09BI92znF-tHumF9luCTeY8OCVDZcgQ
+TQID: 'https://experienceleague.adobe.com/tn8xFuLHCbCI09BI92znF-tHumF9luCTeY8OCVDZcgQ'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: Guardrails
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -88,6 +74,92 @@ When the identity or identities are copied into `identityMap`, `endUserIDs._expe
 * If AACUSTOMID is present, `endUserIDs._experience.aacustomid.namespace.code` is set to "AACUSTOMID".
 
 In the identity map, if ECID is present, it is marked as the primary identity for the event. In this case, AAID may be based on ECID due to the [Visitor ID Service grace period](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Otherwise, AAID is marked as the primary identity for the event. AACUSTOMID is never marked as the Primary ID for the event. However, if AACUSTOMID is present, then AAID is based on AACUSTOMID due to the Experience Cloud order of operations.
+
+## Migrate privacy handling {#privacy}
+
+Use Adobe Experience Platform Privacy Service to process privacy requests for your [!DNL Adobe Analytics] source dataset. First, review your report suite labels. Next, manually configure schema identities and data usage labels. Finally, switch the privacy source for the dataflow.
+
+Learn about privacy request handling in the [Privacy Service overview](/help/privacy-service/home.md).
+
+>[!IMPORTANT]
+>
+>[!DNL Adobe Analytics] obfuscates identifiers when processing privacy deletion requests and retains the remaining hit data. Experience Platform deletes matching rows instead, which can change reporting metrics. Recreating labels does not preserve the Analytics deletion behavior.
+
+### Review report suite labels {#review-analytics-privacy-rules}
+
+Before you migrate, review the labels and identity namespaces for the report suite that supplies your dataset. You need the **[!UICONTROL Data Governance]** admin permission in [!DNL Adobe Analytics].
+
+1. In [!DNL Adobe Analytics], go to **[!UICONTROL Admin]** > **[!UICONTROL All admin]** > **[!UICONTROL Data configuration and collection]** > **[!UICONTROL Data governance]**.
+2. Select the report suite.
+3. Review the variable labels for identity, sensitivity, access, and deletion, along with the configured identity namespaces.
+
+![The [!DNL Adobe Analytics] privacy labeling grid lists report suite variables with identity, sensitivity, access, deletion, and namespace settings.](./images/aa-datagov-grid.png)
+
+Learn about labels in the [privacy labeling overview](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/privacy-labeling/labeling-overview){target="_blank"}. Follow the instructions to [assign or edit report suite privacy labels](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/privacy-labeling/labeling-overview#assign-edit){target="_blank"}. Review the definitions of [data privacy labels for variables](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/privacy-labeling/labels){target="_blank"}.
+
+### Recreate privacy configuration {#configure-platform-privacy}
+
+Manually configure identities and labels in the schema for your Analytics source dataset. Experience Platform does not automatically copy labels from [!DNL Adobe Analytics].
+
+Configure schema identities separately from data usage labels. Use the table to map Analytics labels to Experience Platform settings.
+
+| [!DNL Adobe Analytics] label | Experience Platform configuration |
+| --- | --- |
+| `ID-DEVICE` | Mark the corresponding schema field as an identity. |
+| `ID-PERSON` | Mark the corresponding schema field as an identity. |
+| `I1` | Apply the `I1` data usage label. |
+| `I2` | Apply the `I2` data usage label. |
+| `S1` | Apply the `S1` data usage label. |
+| `S2` | Apply the `S2` data usage label. |
+| `ACC-ALL`, `ACC-PERSON` | Experience Platform does not support these labels. Access requests return all data in matching hits. You cannot select which fields to return. |
+| `DEL-DEVICE`, `DEL-PERSON` | Do not recreate these labels. Experience Platform deletes matching rows instead of obfuscating identifiers. |
+
+Apply additional [data usage labels](/help/data-governance/labels/reference.md), including `C1` through `C12`, `PSPD`, and `RHD`, where applicable. The additional labels have no direct Analytics equivalents. The labels `I1`, `I2`, `S1`, and `S2` have corresponding meanings, but the products use them for different purposes.
+
+>[!IMPORTANT]
+>
+>Changing schema identities or field labels affects every dataset that uses the schema. Review the affected datasets before editing the schema.
+
+Before you switch the privacy source, configure identities and data usage labels.
+
+1. In Experience Platform, select **[!UICONTROL Schemas]**, then open the schema for your Analytics source dataset.
+2. Use the [Adobe Analytics field mapping](/help/sources/connectors/adobe-applications/mapping/analytics.md) to find schema fields for your labeled Analytics variables.
+3. Mark the schema fields mapped from `ID-DEVICE` or `ID-PERSON` variables as identities.
+
+   Follow the [schema identity configuration instructions](/help/xdm/tutorials/create-schema-ui.md#identity-field) to configure identity fields and namespaces.
+
+4. In the **[!UICONTROL Labels]** tab, select the fields that need data usage labels.
+5. Select **[!UICONTROL Apply access and data governance labels]**, then select the applicable labels from the mapping table.
+6. Select **[!UICONTROL Save]**.
+
+For detailed instructions, read how to [apply labels to a schema](/help/data-governance/e2e.md#schema-labels).
+
+Review custom Analytics privacy settings, VISTA rules, and Content Aware and Marketing Channel configurations. Also review Data Prep transformations. Configure identities and labels for any additional fields that require them.
+
+### Switch the privacy source {#switch-privacy-source}
+
+After configuring identities and labels, switch the privacy source in the Experience Platform **[!UICONTROL Sources]** workspace. The migration affects the dataset associated with the selected dataflow, not the entire organization.
+
+>[!IMPORTANT]
+>
+>You cannot reverse migration after you start the process. To restart migration, delete the connection and create it again.
+
+1. In **[!UICONTROL Sources]**, select **[!UICONTROL Dataflows]** and open the menu for the dataflow you want to migrate.
+
+   ![The dataflow menu includes the [!UICONTROL Migrate privacy to AEP] action.](./images/migrate-privacy-handling-menu.png)
+
+2. Select **[!UICONTROL Migrate privacy to AEP]** to open the confirmation dialog.
+
+   Review the configuration reminder in the confirmation dialog before continuing.
+
+   ![The privacy migration dialog includes a configuration acknowledgment and the [!UICONTROL Start migration] action.](./images/migrate-privacy-handling-dialog.png)
+
+3. Confirm your dataset privacy configuration by selecting the acknowledgment checkbox.
+4. Select **[!UICONTROL Start migration]**.
+
+   In **[!UICONTROL Dataflows]**, the **[!UICONTROL Privacy handling]** column displays **[!UICONTROL Migrating to AEP]** with a transition notice.
+
+   ![The [!UICONTROL Privacy handling] column displays [!UICONTROL Migrating to AEP] and a transition notice.](./images/migrating-transition-notice.png)
 
 ## Hit timestamp precision and event ordering
 

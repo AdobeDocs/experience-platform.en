@@ -5,15 +5,10 @@ type: Documentation
 description: Adobe Experience Platform enables you to delete a dataset or batch from the Profile store in order to remove Real-Time Customer Profile data that is no longer needed or was added in error. This requires using the Profile API to create a Profile system job, or delete request.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-TQID: https://experienceleague.adobe.com/-x1wYB0ISg-uOuBi9VvGIIN-UnE0-7VzabSBTMB0LCo
+TQID: 'https://experienceleague.adobe.com/-x1wYB0ISg-uOuBi9VvGIIN-UnE0-7VzabSBTMB0LCo'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

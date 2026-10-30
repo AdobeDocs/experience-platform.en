@@ -1,8 +1,8 @@
 ---
-title: onBeforeEventSend
+title: onBeforeEventSend (Web SDK)
 description: Learn how to configure the Web SDK to register a JavaScript function that can alter the data you send just before that data is sent to Adobe.
 exl-id: 945f4fa1-380c-46aa-a92a-bbcfd6644751
-TQID: https://experienceleague.adobe.com/v-IDNkSGDKx7Bkv8ciUc5pf3bELnfGAFoWp7m6ofdu4
+TQID: 'https://experienceleague.adobe.com/v-IDNkSGDKx7Bkv8ciUc5pf3bELnfGAFoWp7m6ofdu4'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -14,7 +14,7 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -22,7 +22,13 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# `onBeforeEventSend`
+# `onBeforeEventSend` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes `onBeforeEventSend` in the Web SDK `configure` command. For the Server SDK, see [`onBeforeEventSend`](/help/collection/server-js/methods/configure/onbeforeeventsend.md).*
+
+>[!ENDSHADEBOX]
 
 The `onBeforeEventSend` callback allows you to register a JavaScript function that can alter the data you send just before that data is sent to Adobe. This callback allows you to manipulate the `xdm` or `data` object, including the ability to add, edit, or remove elements. You can also conditionally cancel the sending of data altogether, such as with detected client-side bot traffic.
 

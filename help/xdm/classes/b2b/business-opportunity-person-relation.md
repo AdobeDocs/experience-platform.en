@@ -2,16 +2,19 @@
 title: XDM Business Opportunity Person Relation Class
 description: Learn about the XDM Business Opportunity Person Relation class in Experience Data Model (XDM).
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
-TQID: https://experienceleague.adobe.com/CZjEhevT7rql7WYWlHypeXBecAnOa6b9IUyvur3iF2U
+TQID: 'https://experienceleague.adobe.com/CZjEhevT7rql7WYWlHypeXBecAnOa6b9IUyvur3iF2U'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # [!UICONTROL XDM Business Opportunity Person Relation] class
 

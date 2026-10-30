@@ -3,20 +3,11 @@ title: Export Datasets to Cloud Storage Destinations
 type: Tutorial
 description: Learn how to export datasets from Adobe Experience Platform to your preferred cloud storage location.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-TQID: https://experienceleague.adobe.com/c3seBtBJQ2KgxJowsVUplBh3ECPdKnfrK9GBpdC02m0
+TQID: 'https://experienceleague.adobe.com/c3seBtBJQ2KgxJowsVUplBh3ECPdKnfrK9GBpdC02m0'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-    internal-label: Monitoring
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: Guardrails
   - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
     internal-label: License usage
   - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
@@ -26,6 +17,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting
@@ -168,7 +163,7 @@ Use the checkboxes to the left of the dataset names to select the datasets that 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="File export options for datasets"
->abstract="Select **Export incremental files** to export only the data which was added to the dataset since the last export. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. Future incremental files include only the data which was added to the dataset since the first export. <br> Select **Export full files** to export the complete membership of each dataset on each export. "
+>abstract="Select **Export incremental files** to export only the records that were added or updated in the dataset since the previous export. Records deleted from the dataset are not exported. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. <br> Select **Export full files** to export the complete membership of each dataset on each export. "
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"
@@ -204,7 +199,7 @@ Use the **[!UICONTROL Edit schedule]** control on the page to edit the export ca
 
 ![Edit schedule control highlighted in the Scheduling step.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png){zoomable="yes"}
 
-The **[!UICONTROL Export incremental files]** option is selected by default. This triggers an export of one or multiple files representing a full snapshot of the dataset. Subsequent files are incremental additions to the dataset since the previous export. You can also select **[!UICONTROL Export full files]**. In this case, select the frequency **[!UICONTROL Once]** for a one-time full export of the dataset.
+The **[!UICONTROL Export incremental files]** option is selected by default. This option triggers an export of one or multiple files representing a full snapshot of the dataset. Subsequent files include only records that were added or updated since the previous export. Records deleted from the dataset are not included in incremental exports, so deletions are not reflected in your storage location. You can also select **[!UICONTROL Export full files]**. In this case, select the frequency **[!UICONTROL Once]** for a one-time full export of the dataset.
 
 >[!IMPORTANT]
 >
@@ -335,7 +330,8 @@ Keep in mind the following limitations for the general availability release of d
 * Exported file names are currently not customizable.
 * The UI does not currently block you from deleting a dataset that is being exported to a destination. Do not delete any datasets that are being exported to destinations. [Remove the dataset](#remove-dataset) from a destination dataflow before deleting it.
 * Monitoring metrics for dataset exports are currently mixed with numbers for profile exports so they do not reflect the true export numbers.
-* Data with a timestamp older than 365 days is excluded from dataset exports. For more information, view the [guardrails for scheduled dataset exports](/help/destinations/guardrails.md#scheduled-dataset-exports)
+* Data with a timestamp older than 365 days is excluded from dataset exports. For more information, view the [guardrails for scheduled dataset exports](/help/destinations/guardrails.md#scheduled-dataset-exports).
+* Incremental dataset exports include only records that were added or updated since the previous export. Records deleted from the dataset are not included in incremental exports, so deletions are not reflected in your storage location.
 
 ## Frequently Asked Questions {#faq}
 

@@ -2,20 +2,13 @@
 title: Implementation Guide for Identity Service
 description: Learn how data provided to Adobe Experience Platform is processed prior to being used by Identity Service to build identity graphs.
 exl-id: c961bbf6-6b46-470f-a671-93ff4173876c
-TQID: https://experienceleague.adobe.com/ivGRbgSeErIFeOqy2NbsXXnmPU-ruhVGijoci-LhHxo
+TQID: 'https://experienceleague.adobe.com/ivGRbgSeErIFeOqy2NbsXXnmPU-ruhVGijoci-LhHxo'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
+    internal-label: Data collection tags
   - id: de9975b2-c43a-4287-9698-4f4cad92b83f
     internal-label: Schemas
 role_v2:

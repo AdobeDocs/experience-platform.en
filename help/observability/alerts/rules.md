@@ -4,18 +4,22 @@ title: Standard alert rules
 description: This document covers the predefined alert rules provided by Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-TQID: https://experienceleague.adobe.com/R0DgxagdfYwL4-qOxLp-IzuLi0smrnQwaZzTw1snmIg
+TQID: 'https://experienceleague.adobe.com/R0DgxagdfYwL4-qOxLp-IzuLi0smrnQwaZzTw1snmIg'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: a7150a74-b8a9-4042-b066-147c5f0ca505
+    internal-label: Alerts
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
     internal-label: Metadata

@@ -5,13 +5,14 @@ type: Documentation
 description: Adobe Experience Platform enables you to access Real-Time Customer Profile data using RESTful APIs or the user interface. This guide outlines how to access entities, more commonly known as "profiles", using the Profile API.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-TQID: https://experienceleague.adobe.com/fI05Qed9BZKYm3ZMDYHg8tX29-1eR6lm5YzpceoimuY
+TQID: 'https://experienceleague.adobe.com/fI05Qed9BZKYm3ZMDYHg8tX29-1eR6lm5YzpceoimuY'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
 role_v2:

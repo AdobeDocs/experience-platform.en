@@ -4,22 +4,10 @@ solution: Experience Platform
 title: Data Usage Labels Overview
 description: Learn how data usage labels are used to help enforce data governance compliance in Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-TQID: https://experienceleague.adobe.com/7pzsy2I5tNQP1s3QxXKIzBiijHA4BkicuBph0kX6Uy8
+TQID: 'https://experienceleague.adobe.com/7pzsy2I5tNQP1s3QxXKIzBiijHA4BkicuBph0kX6Uy8'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

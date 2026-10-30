@@ -2,18 +2,19 @@
 description: Learn how to use the file-based destination testing API to validate the configuration of your file-based destinations built through the Destination SDK.
 title: File-based destination testing API
 exl-id: 2733fd00-af08-4763-a30e-a53ee56c0a19
-TQID: https://experienceleague.adobe.com/ZQL06EEfX6N335Fx6Kp-hjoZcXiPKTrZ92s9M3QdbjY
+TQID: 'https://experienceleague.adobe.com/ZQL06EEfX6N335Fx6Kp-hjoZcXiPKTrZ92s9M3QdbjY'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # File-based destination testing API overview
 

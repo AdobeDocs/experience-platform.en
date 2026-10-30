@@ -3,44 +3,24 @@ keywords: target personalization; destination; experience platform target destin
 title: Adobe Target connection
 description: Adobe Target is an application that provides real-time, AI-powered personalization and experimentation capabilities in all inbound customer interactions across websites, mobile apps, and more.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-TQID: https://experienceleague.adobe.com/-fU-zvoxIhZ2PBnGpr5j7Kh0SOWRIN-7Hx1ESH3juuE
+TQID: 'https://experienceleague.adobe.com/-fU-zvoxIhZ2PBnGpr5j7Kh0SOWRIN-7Hx1ESH3juuE'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-    internal-label: Access control
+    internal-label: Data collection tags
   - id: a7150a74-b8a9-4042-b066-147c5f0ca505
     internal-label: Alerts
   - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
     internal-label: Permissions
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
   - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
     internal-label: Datastreams
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d175cb4c-5781-454e-a826-bf6dff786265
-    internal-label: Roles
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
   - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
     internal-label: Sandboxes
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
+subfeature_v2:
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+    internal-label: Roles
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
 role_v2:
@@ -48,6 +28,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation

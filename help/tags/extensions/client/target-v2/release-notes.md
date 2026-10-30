@@ -2,7 +2,7 @@
 title: Release Notes for the Adobe Target v2 Extension
 description: The latest release notes for the Adobe Target v2 tag extension in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-TQID: https://experienceleague.adobe.com/kl8KpQrBUAsTy4XJD4BDCZa0oaf0sx72YZCO6uWJaQ0
+TQID: 'https://experienceleague.adobe.com/kl8KpQrBUAsTy4XJD4BDCZa0oaf0sx72YZCO6uWJaQ0'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -21,13 +21,9 @@ product_v2:
 feature_v2:
   - id: b3f03848-ae12-48b2-8aab-cad18567eb32
     internal-label: Metrics
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: eb9732ab-8232-4b21-bc4c-89de86dbe4d7
-    internal-label: Integrations
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
     internal-label: Integrations
@@ -35,16 +31,24 @@ feature_v2:
     internal-label: Integrations
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
 subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
   - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
     internal-label: Analytics integration
   - id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
     internal-label: Events
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
     internal-label: Customer experience

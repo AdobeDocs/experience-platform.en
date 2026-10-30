@@ -5,13 +5,10 @@ title: Create a GreenPlum  Source Connection in the UI
 type: Tutorial
 description: Learn how to create a GreenPlum source connection using the Adobe Experience Platform UI.
 exl-id: e6c6a495-25ce-4497-b20e-91374c7bb548
-TQID: https://experienceleague.adobe.com/uoJtqg-NWE18dXqnGCLvel61BCyERRoPu-e1pqgG18g
+TQID: 'https://experienceleague.adobe.com/uoJtqg-NWE18dXqnGCLvel61BCyERRoPu-e1pqgG18g'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

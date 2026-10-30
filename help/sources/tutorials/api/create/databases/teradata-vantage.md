@@ -3,14 +3,11 @@ keywords: Experience Platform;home;popular topics;Teradata Vantage
 title: Create a Teradata Vantage Base Connection Using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Teradata Vantage using the Flow Service API.
 exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
-TQID: https://experienceleague.adobe.com/0SURGJ3FeBy8Jc15yLmLMKJKlIXMHATM6HfLtnu19dU
+TQID: 'https://experienceleague.adobe.com/0SURGJ3FeBy8Jc15yLmLMKJKlIXMHATM6HfLtnu19dU'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
-subfeature_v2:
   - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
     internal-label: Sandboxes
 role_v2:

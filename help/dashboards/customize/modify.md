@@ -3,15 +3,13 @@ keywords: Experience Platform;user interface;UI;dashboards;dashboard;profiles;se
 title: Modify Experience Platform Dashboards in the UI
 description: This guide provides step-by-step instructions for customizing how your organization's Adobe Experience Platform data is displayed within dashboards.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-TQID: https://experienceleague.adobe.com/LbACNJ1xta5bNE9tzi6uQ1jf-db3D3nnKMmUA6-idGI
+TQID: 'https://experienceleague.adobe.com/LbACNJ1xta5bNE9tzi6uQ1jf-db3D3nnKMmUA6-idGI'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: eec185bd-7d60-4193-ba3f-da427569936a
-    internal-label: Destinations dashboard
+    internal-label: Destinations
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

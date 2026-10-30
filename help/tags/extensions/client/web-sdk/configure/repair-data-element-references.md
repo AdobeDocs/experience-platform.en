@@ -1,6 +1,9 @@
 ---
 title: Repair data element references
 description: Learn how to scan and repair stale data element references across all Web SDK extension actions in a tag property.
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Repair data element references {#repair-data-element-references}
 

@@ -2,6 +2,9 @@
 title: Manage Flicker for Personalized Experiences Using the Adobe Experience Platform Web SDK
 description: Learn how to use the Adobe Experience Platform Web SDK to manage flicker on user experiences.
 exl-id: f4b59109-df7c-471b-9bd6-7082e00c293b
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Manage flicker
 

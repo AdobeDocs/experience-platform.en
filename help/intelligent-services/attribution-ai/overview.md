@@ -6,13 +6,16 @@ description: Attribution AI is used to attribute credits to touchpoints leading 
 landing-page-description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
 short-description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-TQID: https://experienceleague.adobe.com/QWro3X2U9AGYV82YSmkRhpPz-3eosVwihOhYjIdKMC4
+TQID: 'https://experienceleague.adobe.com/QWro3X2U9AGYV82YSmkRhpPz-3eosVwihOhYjIdKMC4'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
+  - id: f5a6b7c8-5003-4003-9003-500000000003
+    internal-label: Services
+subfeature_v2:
+  - id: b99a0135-be89-4dd1-b66a-c313ae5278fa
+    internal-label: Attribution AI
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

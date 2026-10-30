@@ -2,11 +2,18 @@
 title: Create and configure datastreams
 description: Learn how to connect your client-side Web SDK integration with other Adobe products and third-party destinations.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 
 # Create and configure datastreams
 
 This guide covers the steps for configuring a [datastream](/help/datastreams/overview.md) in the UI.
+
+>[!NOTE]
+>
+>To create or edit datastreams, your role must include the **[!UICONTROL Manage Datastreams]** permission, along with access to the relevant sandboxes. The **[!UICONTROL View Datastreams]** permission grants read-only access. See the [resource permissions](/help/access-control/home.md#permissions) reference for more information.
 
 ## Access the [!UICONTROL Datastreams] workspace {#workspace}
 
@@ -95,7 +102,7 @@ To access advanced configuration options, select **[!UICONTROL Advanced Options]
 | [!UICONTROL Third Party ID Sync Container ID] | The numeric ID of the container to be used for third party ID sync.<br><br>**Note:** The datastream references the default Audience Manager Container ID, which is 0. If you have multiple Audience Manager ID sync Container IDs, work with your Audience Manager consultant to properly identify and resolve the ID sync configuration. |
 | [!UICONTROL Container ID Overrides] | In this section, you can define additional third party ID sync container IDs which you can use to override the default one. |
 | [!UICONTROL Access Type] | Defines the authentication type that the Edge Network accepts for the datastream. <ul><li>**[!UICONTROL Mixed Authentication]**: When this option is selected, the Edge Network accepts both authenticated and unauthenticated requests. Select this option when you plan to use the Web SDK or [Mobile SDK](https://developer.adobe.com/client-sdks/home/), along with the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/). </li><li>**[!UICONTROL Authenticated Only]**: When this option is selected, the Edge Network only accepts authenticated requests. Select this option when you plan to use only the Edge Network API and want to prevent any unauthenticated requests from being processed by the Edge Network.</li></ul> |
-| [!UICONTROL Media Analytics] | Enables processing of streaming tracking data for [!DNL Edge Network] integration via Experience Platform SDKs or [Media Edge API](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started/). Learn about Media Analytics from the [documentation](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html). |
+| [!UICONTROL Media Analytics] | Enables processing of streaming tracking data for [!DNL Edge Network] integration via Experience Platform SDKs or [Media Edge API](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/). Learn about Media Analytics from the [documentation](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html). |
 
 From here, if you are configuring your datastream for Experience Platform, follow the tutorial on [Data Prep for Data Collection](/help/datastreams/data-prep.md) to map your data to an Experience Platform event schema before returning to this guide. Otherwise, select **[!UICONTROL Save]** and continue to the next section.
 

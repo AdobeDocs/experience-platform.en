@@ -1,8 +1,8 @@
 ---
-title: thirdPartyCookiesEnabled
+title: thirdPartyCookiesEnabled (Web SDK)
 description: Allow the use of third-party cookies to identify visitors.
 exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
-TQID: https://experienceleague.adobe.com/Do2Kw6kb1yxrwmqU7SD3hGL9eqorgWDb68FsAKkUYUY
+TQID: 'https://experienceleague.adobe.com/Do2Kw6kb1yxrwmqU7SD3hGL9eqorgWDb68FsAKkUYUY'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -14,7 +14,7 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -22,7 +22,13 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# `thirdPartyCookiesEnabled`
+# `thirdPartyCookiesEnabled` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes `thirdPartyCookiesEnabled` in the Web SDK `configure` command. For the Server SDK, see [`thirdPartyCookiesEnabled`](/help/collection/server-js/methods/configure/thirdpartycookiesenabled.md).*
+
+>[!ENDSHADEBOX]
 
 The `thirdPartyCookiesEnabled` property is a boolean that determines if the Web SDK sets cookies in a third-party context. Enabling this option is useful if you want to identify visitors between subdomains or domains that your organization owns. However, many modern browsers limit the setting and expiration of third-party cookies. If a visitor's browser does not support third-party cookies, then this property does nothing.
 

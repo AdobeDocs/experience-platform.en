@@ -5,13 +5,10 @@ title: Create a HubSpot  Source Connection in the UI
 type: Tutorial
 description: Learn how to create a HubSpot source connection using the Adobe Experience Platform UI.
 exl-id: 452b7290-b9e8-4728-8b58-0e0c76bd9449
-TQID: https://experienceleague.adobe.com/Nf8jfZPsplLcc-uLptQH3VaZz2b79h-MZDRG9WXkQWY
+TQID: 'https://experienceleague.adobe.com/Nf8jfZPsplLcc-uLptQH3VaZz2b79h-MZDRG9WXkQWY'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

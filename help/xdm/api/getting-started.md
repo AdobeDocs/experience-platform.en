@@ -4,13 +4,10 @@ solution: Experience Platform
 title: Getting Started with the Schema Registry API
 description: This document provides an introduction to the core concepts you need to know before attempting to make calls to the Schema Registry API.
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-TQID: https://experienceleague.adobe.com/RIT9owLwNgUUMLLs3ss7dntbujUZfUUYw-UdnARjZMQ
+TQID: 'https://experienceleague.adobe.com/RIT9owLwNgUUMLLs3ss7dntbujUZfUUYw-UdnARjZMQ'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

@@ -49,7 +49,7 @@ nudge: true
 * Guardrails {#guardrails}
   * [Real-Time CDP guardrails overview](guardrails/overview.md)
   * [Guardrails for data ingestion](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
-  * [Guardrails for the [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
+  * [Guardrails for the [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails){target="_blank"}
   * [Guardrails for [!DNL Real-Time Customer Profile] data and segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html){target="_blank"}
   * [Guardrails for [!DNL Identity Service] data](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
   * [Guardrails for [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}

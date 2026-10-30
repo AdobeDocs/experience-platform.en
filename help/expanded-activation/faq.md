@@ -2,7 +2,7 @@
 title: Audience Manager Expanded Activation Frequently Asked Questions
 description: This page provides answers to the most frequently asked questions regarding Audience Manager Expanded Activation.
 exl-id: 65122e8f-0851-419e-8a91-2c90dac59094
-TQID: https://experienceleague.adobe.com/AHUpCjT7X-sGHPkfyGqLLXoxWEfEDgWTJfCo16csgqY
+TQID: 'https://experienceleague.adobe.com/AHUpCjT7X-sGHPkfyGqLLXoxWEfEDgWTJfCo16csgqY'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -11,6 +11,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Frequently Asked Questions
 

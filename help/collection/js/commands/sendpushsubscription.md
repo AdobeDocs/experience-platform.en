@@ -1,18 +1,16 @@
 ---
-title: sendPushSubscription
+title: sendPushSubscription (Web SDK)
 description: Register push notification subscriptions with Adobe Experience Platform.
 exl-id: 7cb13834-46f4-481c-bd9d-600083eb6cfb
-TQID: https://experienceleague.adobe.com/3acin90o8JdMA6LS-s7tHnf2-qcRn7XDO1aw-Zx3QyU
+TQID: 'https://experienceleague.adobe.com/3acin90o8JdMA6LS-s7tHnf2-qcRn7XDO1aw-Zx3QyU'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -20,7 +18,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# `sendPushSubscription` {#send-push-subscription}
+# `sendPushSubscription` (Web SDK) {#send-push-subscription}
 
 The `sendPushSubscription` command registers push notification subscriptions with Adobe Experience Platform. This command handles the retrieval of push subscription details from the browser and sends them to your configured datastream. It is available in Web SDK versions 2.29.0 or later.
 

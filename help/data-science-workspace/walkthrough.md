@@ -4,13 +4,10 @@ solution: Experience Platform
 title: Data Science Workspace course
 description: This document provides a link and description for the Adobe Experience Platform Data Science Workspace course.
 exl-id: d814846e-52a9-46c6-831a-3399241959f2
-TQID: https://experienceleague.adobe.com/pTsvNlJOSEGs8VwjcYSEEtHkcRD-5mfVFq66CpHdQ6w
+TQID: 'https://experienceleague.adobe.com/pTsvNlJOSEGs8VwjcYSEEtHkcRD-5mfVFq66CpHdQ6w'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

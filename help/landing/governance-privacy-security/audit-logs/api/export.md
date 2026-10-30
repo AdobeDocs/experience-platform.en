@@ -4,13 +4,18 @@ description: Learn how to export audit events in Experience Platform using the A
 role: Developer
 feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
-TQID: https://experienceleague.adobe.com/6xAZfZ9FmZ9Tn6K1i0u-H1Oi5lXsn8TnOz-iansYpoA
+TQID: 'https://experienceleague.adobe.com/6xAZfZ9FmZ9Tn6K1i0u-H1Oi5lXsn8TnOz-iansYpoA'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: face57a7-855c-40fe-be2c-28bd0ce4a311
+    internal-label: Audits
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
+subfeature_v2:
+  - id: 01a3139f-2204-4e1b-bd65-5437f7d5a5bd
+    internal-label: API credentials
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

@@ -4,30 +4,18 @@ solution: Experience Platform
 title: Sandboxes Overview
 description: Sandboxes are virtual partitions within a single instance of Experience Platform, which allow for seamless integration with the development process of your digital experience applications.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-TQID: https://experienceleague.adobe.com/vr1vffpJC5dHt9bUDI1zcH0t2Ak-qxw2zMa3asD3CaE
+TQID: 'https://experienceleague.adobe.com/vr1vffpJC5dHt9bUDI1zcH0t2Ak-qxw2zMa3asD3CaE'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-subfeature_v2:
-  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-    internal-label: Access control
-  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
-    internal-label: Adobe Admin Console
   - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
     internal-label: Permissions
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: d175cb4c-5781-454e-a826-bf6dff786265
-    internal-label: Roles
   - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
     internal-label: Sandboxes
+subfeature_v2:
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+    internal-label: Roles
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

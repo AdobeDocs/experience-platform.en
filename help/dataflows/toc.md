@@ -5,6 +5,18 @@ user-guide-description: Learn about dataflows and how to configure them across d
 feature: Dataflows
 role: Developer
 nudge: true
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+    internal-label: Sources
+subfeature_v2:
+  - id: b5eb20d5-4893-4245-8a24-ea6bf0e51fbb
+    internal-label: Dataflows
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 
 # Dataflows {#dataflows}

@@ -1,8 +1,8 @@
 ---
-title: getIdentity
+title: getIdentity (Web SDK)
 description: Obtain a visitor's identity without sending event data.
 exl-id: 28b99f62-14c4-4e52-a5c7-9f6fe9852a87
-TQID: https://experienceleague.adobe.com/dJQdcfriMQ61Xyijd5wG3Ew6SmBpPxFcMqeTsx-bgY4
+TQID: 'https://experienceleague.adobe.com/dJQdcfriMQ61Xyijd5wG3Ew6SmBpPxFcMqeTsx-bgY4'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -12,7 +12,7 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -20,7 +20,13 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# `getIdentity`
+# `getIdentity` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes the Web SDK `getIdentity` command. For the Server SDK, see [`getIdentity`](/help/collection/server-js/methods/getidentity.md).*
+
+>[!ENDSHADEBOX]
 
 When you run the [`sendEvent`](sendevent/overview.md) command, the Web SDK automatically obtains the visitor's identity if one is not already present. The `getIdentity` command allows you to obtain a visitor ID without sending event data. If you require separate calls to generate a visitor ID and send data, you can use this command.
 

@@ -2,16 +2,10 @@
 title: Total Data Volume Metric
 description: Learn about the new Total Data Volume metric and how it replaces the previous average profile richness metric.
 exl-id: 4b21d25c-b82b-4d1a-83ce-b510f02fd160
-TQID: https://experienceleague.adobe.com/rw9ErvR7VeAB1UeNF0tA-nDcY5kG2MbC5Oo5RA9Yvbw
+TQID: 'https://experienceleague.adobe.com/rw9ErvR7VeAB1UeNF0tA-nDcY5kG2MbC5Oo5RA9Yvbw'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-subfeature_v2:
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: Guardrails
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

@@ -2,13 +2,10 @@
 title: Data Governance in Query Service
 description: This overview covers the major elements of data governance in Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-TQID: https://experienceleague.adobe.com/9s6jw0fpJcs1pKksipJ2LMC7Nn4o5QFGljQKuAvdV3w
+TQID: 'https://experienceleague.adobe.com/9s6jw0fpJcs1pKksipJ2LMC7Nn4o5QFGljQKuAvdV3w'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

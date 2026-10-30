@@ -2,22 +2,18 @@
 title: Adobe Experience Platform Release Notes November 2024
 description: The November 2024 release notes for Adobe Experience Platform.
 exl-id: e3969f8b-70b2-40f8-bb9b-5be6e3d8f722
-TQID: https://experienceleague.adobe.com/KK6YGMilj3y6UwuFQwxGtGo67gfbv79g4Oo0-1pZOlA
+TQID: 'https://experienceleague.adobe.com/KK6YGMilj3y6UwuFQwxGtGo67gfbv79g4Oo0-1pZOlA'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+    internal-label: AI assistant
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
-  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-    internal-label: AI Assistant
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-    internal-label: Monitoring
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

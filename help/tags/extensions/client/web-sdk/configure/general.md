@@ -2,7 +2,7 @@
 title: SDK instance configuration settings
 description: Configure general settings for the Web SDK instance.
 exl-id: cc22b8b3-88c6-4030-91b4-60e14a3b0f42
-TQID: https://experienceleague.adobe.com/YcT1bzlpS8kUyB-agr5inPv2adRL8V1y2R8LweccnRU
+TQID: 'https://experienceleague.adobe.com/YcT1bzlpS8kUyB-agr5inPv2adRL8V1y2R8LweccnRU'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -14,12 +14,9 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
+    internal-label: Data collection tags
   - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
     internal-label: Datastreams
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

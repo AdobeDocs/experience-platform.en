@@ -16,6 +16,7 @@ nudge: true
 * [Edge profiles](edge-profiles.md)
 * [Experience Event expirations](event-expirations.md)
 * [Pseudonymous Profile expirations](pseudonymous-profiles.md)
+* [[!DNL Profile] with unstructured data](unstructured-data.md)
 * {hide-from-toc} [Customer timestamp ordering](customer-timestamp-ordering.md)
 * {hide-from-toc} [Traits](traits.md)
 * [!DNL Profile] API {#api}

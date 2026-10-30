@@ -2,6 +2,9 @@
 title: Brand Concierge configuration settings
 description: Configure desired settings for Brand Concierge chat.
 exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Brand Concierge configuration settings {#brand-concierge}
 

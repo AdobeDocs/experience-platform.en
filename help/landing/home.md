@@ -4,22 +4,16 @@ solution: Experience Platform
 title: Adobe Experience Platform Overview
 description: Adobe Experience Platform enables organizations to centralize and standardize customer data before applying data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-TQID: https://experienceleague.adobe.com/J20k61DEyOg-aggOCD4L9YlcQ3sqRubN3ZeX8Nhq2Vk
+TQID: 'https://experienceleague.adobe.com/J20k61DEyOg-aggOCD4L9YlcQ3sqRubN3ZeX8Nhq2Vk'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: b1c2d3e4-1001-4001-9001-100000000001
+    internal-label: Customer audiences
 subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
   - id: f0c9f224-75f2-4864-8de6-859ae7856690
-    internal-label: Segment Match
+    internal-label: Segment match
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

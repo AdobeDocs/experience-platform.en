@@ -2,6 +2,9 @@
 title: Using identityMap in Data Collection
 description: Learn how to construct and send identityMap payloads to identify known visitors across namespaces in your Web SDK implementation.
 exl-id: 33b409cb-48f5-4e77-ba2f-7dfe0b2cb2a9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Using identityMap in Data Collection
 

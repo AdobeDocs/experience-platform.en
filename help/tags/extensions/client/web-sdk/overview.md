@@ -2,7 +2,7 @@
 title: Web SDK tag extension overview
 description: Learn about the Web SDK tag extension in Adobe Experience Platform Data Collection.
 exl-id: 2bc738b9-5939-47a6-a829-429937e4c673
-TQID: https://experienceleague.adobe.com/-AAHFBRO0WB3gA-k2GBMYBOiHn3gX7HAG0ekSBNvUlI
+TQID: 'https://experienceleague.adobe.com/-AAHFBRO0WB3gA-k2GBMYBOiHn3gX7HAG0ekSBNvUlI'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -24,10 +24,8 @@ feature_v2:
   - id: c814092e-2730-45e8-a12d-e084529f52cb
     internal-label: Destinations
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
   - id: ef60b66e-5984-4336-ba72-6d978b1b6f87
     internal-label: Report suites
 role_v2:

@@ -2,7 +2,7 @@
 title: Data collection configuration settings
 description: Configure data collection settings in the Web SDK tag extension.
 exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
-TQID: https://experienceleague.adobe.com/i1Q45GvFU8S73NBxDsGPKyLU8S-EdzbKyys2-7DNchs
+TQID: 'https://experienceleague.adobe.com/i1Q45GvFU8S73NBxDsGPKyLU8S-EdzbKyys2-7DNchs'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -20,12 +20,8 @@ feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
     internal-label: Configuration
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
 role_v2:

@@ -4,17 +4,10 @@ solution: Experience Platform
 title: Data Usage Labels Glossary
 description: This document outlines all data usage labels currently supported by Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-TQID: https://experienceleague.adobe.com/epTsSc9-CmGVAlYcvZpmhkoYjMktsueh5Q4tBVfNysM
+TQID: 'https://experienceleague.adobe.com/epTsSc9-CmGVAlYcvZpmhkoYjMktsueh5Q4tBVfNysM'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

@@ -7,32 +7,20 @@ doc-type: video
 activity: understand
 thumbnail: 32553.jpg
 exl-id: 022b1af7-7577-4e9d-bfb3-85eab3898ee3
-TQID: https://experienceleague.adobe.com/p97br4fghwZJjxUVSPVqkoyimpQkMAS1rL-CrGVZ10c
+TQID: 'https://experienceleague.adobe.com/p97br4fghwZJjxUVSPVqkoyimpQkMAS1rL-CrGVZ10c'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
-subfeature_v2:
+    internal-label: Data collection tags
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
     internal-label: Sources
-  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
-    internal-label: B2B
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

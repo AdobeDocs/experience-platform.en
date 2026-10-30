@@ -7,6 +7,17 @@ feature: Destinations
 role: Admin,User
 nudge: true
 debug: true
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+    internal-label: Destinations
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 
 # Destinations {#destinations}
@@ -35,7 +46,7 @@ debug: true
     * [Create a new destination connection](./ui/connect-destination.md)
     * Activate data to destinations{#activate}
         * [Activation overview](./ui/activation-overview.md)
-        * [(Beta) When to activate](./ui/when-to-activate.md)
+        * [When to activate](./ui/when-to-activate.md)
         * [Activate audiences to streaming audience export destinations](./ui/activate-segment-streaming-destinations.md)
         * [Activate audiences to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
         * Batch profile export destinations{#activate-batch-profile}
@@ -74,6 +85,7 @@ debug: true
         * [Experience Platform audience sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
         * [Federated Audience Composition connection](https://www.adobe.com/go/destinations-federated-audience-composition)
     * Advertising destinations{#advertising}
+        * [(Beta) 6sense Account connection](/help/destinations/catalog/advertising/6sense.md)
         * [Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
         * [Acxiom Real ID&trade; Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
         * [Advertising destinations overview](./catalog/advertising/overview.md)
@@ -121,6 +133,7 @@ debug: true
         * [Snapchat Ads connection](./catalog/advertising/snap-inc.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
         * [The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
+        * [The Trade Desk Third-Party Audiences connection](./catalog/advertising/tradedesk-third-party-audiences.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
         * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)
         * [ZoomInfo Account Audiences connection](./catalog/advertising/zoominfo-account-audiences.md)
@@ -248,8 +261,8 @@ debug: true
     * Warehouse destinations {#warehouse}
         * [Snowflake Batch connection](./catalog/warehouses/snowflake-batch.md)
         * [Snowflake Streaming connection](./catalog/warehouses/snowflake.md)
-        * [Databricks Delta Sharing connection](./catalog/warehouses/databricks-delta-sharing.md)
-        * [Snowflake Delta Sharing connection](./catalog/warehouses/snowflake-delta-sharing.md)
+        * [(Beta) Databricks Delta Sharing connection](./catalog/warehouses/databricks-delta-sharing.md)
+        * [(Beta) Snowflake Delta Sharing connection](./catalog/warehouses/snowflake-delta-sharing.md)
 * Destination SDK {#destination-sdk}
     * [Overview](./destination-sdk/overview.md)
     * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)

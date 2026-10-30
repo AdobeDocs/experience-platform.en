@@ -1,9 +1,21 @@
 ---
 keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;node reference;
 solution: Experience Platform
-title:  Manage Real-time Machine Learning Notebooks
+title: Manage Real-time Machine Learning Notebooks
 description: The following guide outlines the steps needed to build a Real-time Machine Learning application in Adobe Experience Platform JupyterLab.
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Manage Real-time Machine Learning notebooks (Alpha)
 

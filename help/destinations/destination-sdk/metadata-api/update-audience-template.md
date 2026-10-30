@@ -2,7 +2,7 @@
 description: This page exemplifies the API call used to update an audience template through Adobe Experience Platform Destination SDK.
 title: Update an audience template
 exl-id: 8185a015-256d-46a7-af33-8475832fb6c1
-TQID: https://experienceleague.adobe.com/Qi2z1Gj0KhxJw83Fci1Y8-WnfB67oUY4dYDP4LZM-9E
+TQID: 'https://experienceleague.adobe.com/Qi2z1Gj0KhxJw83Fci1Y8-WnfB67oUY4dYDP4LZM-9E'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -11,6 +11,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
     internal-label: Metadata

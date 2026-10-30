@@ -4,13 +4,10 @@ title: Use case playbooks overview
 description: Learn how to use the Use Case Playbooks feature in Experience Platform to get started with various marketing use cases
 role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-TQID: https://experienceleague.adobe.com/cakqaVe-j7rrl4-ZkgZYzlpwNdac2AxqDzP8uuFGtyI
+TQID: 'https://experienceleague.adobe.com/cakqaVe-j7rrl4-ZkgZYzlpwNdac2AxqDzP8uuFGtyI'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

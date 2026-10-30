@@ -2,20 +2,15 @@
 title: Adobe Experience Platform Release Notes November 2022
 description: The November 2022 release notes for Adobe Experience Platform.
 exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
-TQID: https://experienceleague.adobe.com/4-QrsXu0gw7qLUx0PR8vdvWFV2TojviqvqL6lFETKJs
+TQID: 'https://experienceleague.adobe.com/4-QrsXu0gw7qLUx0PR8vdvWFV2TojviqvqL6lFETKJs'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
+    internal-label: Data collection tags
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
     internal-label: Sources
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
     internal-label: Event forwarding
   - id: de9975b2-c43a-4287-9698-4f4cad92b83f

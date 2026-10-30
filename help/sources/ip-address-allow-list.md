@@ -330,7 +330,7 @@ You must add the following IP addresses to your allowlist to let traffic flow fo
 
 ### Streaming sources on Experience Platform on [!DNL Azure] {#streaming}
 
-You must add the following IP addresses to your allowlist to let traffic flow for the data transfer service for streaming sources such as [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md), and [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+You must add the following IP addresses to your allowlist to let traffic flow for the data transfer service for streaming sources such as [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md), and [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
 
 >[!BEGINTABS]
 

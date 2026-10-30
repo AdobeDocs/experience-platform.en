@@ -4,20 +4,16 @@ solution: Experience Platform
 title: Developing ETL Integrations for Adobe Experience Platform
 description: The ETL integration guide outlines general steps for creating high-performance, secure connectors for Experience Platform and ingesting data into Experience Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-TQID: https://experienceleague.adobe.com/omYKrWwAqvXkVfI-EDLUXBRbAxYXzxVybnIrHFhFwMo
+TQID: 'https://experienceleague.adobe.com/omYKrWwAqvXkVfI-EDLUXBRbAxYXzxVybnIrHFhFwMo'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
-subfeature_v2:
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-    internal-label: Troubleshooting
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

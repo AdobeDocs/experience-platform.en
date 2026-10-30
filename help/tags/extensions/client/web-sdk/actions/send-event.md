@@ -2,7 +2,7 @@
 title: Send event
 description: Send data to the Adobe Experience Platform Edge Network.
 exl-id: 4ac7750e-48ab-4eb6-873d-bb2556dbf788
-TQID: https://experienceleague.adobe.com/wigmBsoROqaLGEVNIgAn2b6BJ3lhAAKFBW9cj12iZZs
+TQID: 'https://experienceleague.adobe.com/wigmBsoROqaLGEVNIgAn2b6BJ3lhAAKFBW9cj12iZZs'
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
     internal-label: Advertising
@@ -23,19 +23,11 @@ feature_v2:
     internal-label: Implementation
   - id: d556b755-390a-43f0-be32-a08cf6236126
     internal-label: Configuration
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
   - id: b3a93754-a8b8-46eb-9421-7eccaeeb3dff
     internal-label: Best practices
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -83,7 +75,7 @@ The **[!UICONTROL Send event]** action sends a payload to a datastream on the Ad
 * **[!UICONTROL XDM]**: The XDM payload that you want to send to Adobe. You can use either an [XDM object](../data-element-types.md#xdm-object) or [Variable](../data-element-types.md#variable) in this field. If you have rules that populate multiple XDM objects, you can use [Merged objects](../../core/overview.md#merged-objects) to combine them.
 * **[!UICONTROL Data]**: The data payload that you want to send to Adobe. Some apps and services do not require adhering to an XDM schema, such as Adobe Analytics or Adobe Target. Use a [Variable](../data-element-types.md#variable) data element type for this field.
 * **[!UICONTROL Include rendered propositions]**: Enable this checkbox to use this event as a display event, including the propositions that rendered when "automatically send a display event" was unchecked. The `_experience.decisioning` XDM field populates with information about rendered personalization.
-* **[!UICONTROL Document will unload]**: Enable this checkbox to make sure that the event reaches the server even if the user navigates away from the page. This setting allows events to reach the server, but responses from the Edge Network are ignored.
+* **[!UICONTROL Document will unload]**: Enable this checkbox to make sure that the event reaches the server even if the user navigates away from the page. Browser developer tools can show these requests as **(canceled)** even when the Edge Network receives them. The JavaScript library equivalent to this field is [`documentUnloading`](/help/collection/js/commands/sendevent/documentunloading.md). See [Validate events sent with `documentUnloading`](/help/collection/js/commands/sendevent/documentunloading.md#validate) to learn how to confirm delivery.
 * **[!UICONTROL Merge ID]** _(Deprecated)_: Populates the `eventMergeId` XDM field.
 
 ## Personalization fields

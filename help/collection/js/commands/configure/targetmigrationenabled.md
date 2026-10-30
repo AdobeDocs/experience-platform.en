@@ -1,8 +1,8 @@
 ---
-title: targetMigrationEnabled
+title: targetMigrationEnabled (Web SDK)
 description: Allow the Web SDK to read and write Adobe Target cookies.
 exl-id: 4b9203c6-31b7-45af-a6a6-a206d7edac3f
-TQID: https://experienceleague.adobe.com/F76GzS20NxTKOYF4bR3V-XDAxV-fmR5ZGyJi-x4hJPw
+TQID: 'https://experienceleague.adobe.com/F76GzS20NxTKOYF4bR3V-XDAxV-fmR5ZGyJi-x4hJPw'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -14,7 +14,7 @@ feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
     internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -26,7 +26,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
     internal-label: Personalization
 ---
-# `targetMigrationEnabled`
+# `targetMigrationEnabled` (Web SDK)
 
 The `targetMigrationEnabled` property is a boolean that allows the Web SDK to read and write the [`mbox` and `mboxEdgeCluster` cookies](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) that the Adobe Target 1.x and 2.x libraries use. This option allows you to preserve the visitor profile between pages using previous Adobe Target implementations and pages using the Web SDK.
 

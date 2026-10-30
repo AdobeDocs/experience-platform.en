@@ -1,8 +1,8 @@
 ---
-title: data
+title: data (Web SDK)
 description: Learn how to send non-XDM data to Adobe, through the data object.
 exl-id: 537fc34e-3cda-4aa7-ae0d-0d3ef4b89848
-TQID: https://experienceleague.adobe.com/42nSK16mE8kHI8pGzqHNlRgZl-XdvVP-wDrJAzosroU
+TQID: 'https://experienceleague.adobe.com/42nSK16mE8kHI8pGzqHNlRgZl-XdvVP-wDrJAzosroU'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -21,13 +21,8 @@ feature_v2:
     internal-label: Implementation
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
     internal-label: Implementation
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
+    internal-label: Data collection tags
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -39,7 +34,13 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# `data`
+# `data` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes `data` in the Web SDK `sendEvent` command. For the Server SDK, see [`data`](/help/collection/server-js/methods/sendevent/data.md).*
+
+>[!ENDSHADEBOX]
 
 The `data` object allows you to send a payload to Adobe that does not match an XDM schema. It is useful in non-XDM scenarios, such as sending data directly to Adobe Analytics, Adobe Target, or Adobe Audience Manager. When data arrives at the datastream, you can use [Data Prep mapping](/help/data-prep/ui/mapping.md) to assign XDM fields to each field in the `data` object. If a product is already configured by Adobe to detect fields within the `data` object, you can send that data as-is to a datastream.
 

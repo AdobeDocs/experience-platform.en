@@ -2,18 +2,11 @@
 title: Query Accelerated Store Reporting Insights Guide
 description: Learn how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-TQID: https://experienceleague.adobe.com/iKc8qaMunv53b4epLB43U6z7knE8kmnPto9jub35Y-Y
+TQID: 'https://experienceleague.adobe.com/iKc8qaMunv53b4epLB43U6z7knE8kmnPto9jub35Y-Y'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-subfeature_v2:
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: Guardrails
   - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
     internal-label: Dashboards
 role_v2:

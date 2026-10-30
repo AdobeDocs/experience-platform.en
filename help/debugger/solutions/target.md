@@ -2,29 +2,25 @@
 title: Test an Adobe Target Implementation with Adobe Experience Platform Debugger
 description: Learn how to use Adobe Experience Platform Debugger to test and debug a website that is enabled with Adobe Target.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-TQID: https://experienceleague.adobe.com/0rONlTRlBMQqPKeAhd8-mq62xqVwgH4jFjr5dcirr3o
+TQID: 'https://experienceleague.adobe.com/0rONlTRlBMQqPKeAhd8-mq62xqVwgH4jFjr5dcirr3o'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-    internal-label: Troubleshooting
   - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
-    internal-label: Hosts
+    internal-label: Data collection tags hosts
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
     internal-label: Metadata

@@ -2,6 +2,9 @@
 title: Personalization configuration settings
 description: Configure personalization settings in the Web SDK tag extension.
 exl-id: 24009a40-92ad-49d6-b768-49d64dccf4e0
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Personalization configuration settings {#personalization}
 

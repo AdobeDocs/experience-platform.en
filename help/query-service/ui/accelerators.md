@@ -4,6 +4,14 @@ solution: Experience Platform
 title: Data Distiller accelerators
 description: Use Data Distiller accelerators to run and schedule Adobe-approved parameterized SQL templates in the Query Service UI. Accelerators are read-only and Adobe-managed; use **[!UICONTROL Create custom template]** to clone and edit them.
 exl-id: 989fc35b-462c-4db8-963e-2e0a7b6217c6
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Data Distiller accelerators {#data-distiller-accelerators}
 

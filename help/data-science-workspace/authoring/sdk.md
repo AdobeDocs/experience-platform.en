@@ -4,13 +4,10 @@ solution: Experience Platform
 title: Model Authoring SDK
 description: The Model Authoring SDK enables you to develop custom machine learning Recipes and Feature Pipelines which can be used in Adobe Experience Platform Data Science Workspace, providing implementable templates in PySpark and Spark (Scala).
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
-TQID: https://experienceleague.adobe.com/OT-XeVDIl682BGceLNDLSe7osR5GSu3GrEBeumkFe3Y
+TQID: 'https://experienceleague.adobe.com/OT-XeVDIl682BGceLNDLSe7osR5GSu3GrEBeumkFe3Y'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

@@ -3,18 +3,19 @@ title: Marketo Measure Ultimate Destination
 description: Learn how to connect to the Adobe Marketo Measure Ultimate destination and export B2B datasets from Experience Platform for marketing attribution reporting.
 last-substantial-update: 2026-10-15T00:00:00.000Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-TQID: https://experienceleague.adobe.com/OtNVIlcZPsIlGkRY07s0pc0hqT6GzIN1lwpTKj-Z9-A
+TQID: 'https://experienceleague.adobe.com/OtNVIlcZPsIlGkRY07s0pc0hqT6GzIN1lwpTKj-Z9-A'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting

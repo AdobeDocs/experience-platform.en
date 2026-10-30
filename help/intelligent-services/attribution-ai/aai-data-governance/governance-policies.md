@@ -4,10 +4,16 @@ feature: Attribution AI
 title: Governance Policies for Attribution AI
 description: Adobe Experience Platform provides several services and tools that allow you to confidently control your collected experience data.
 exl-id: 448b10c8-8eac-41cb-9b77-66aa283c0a9d
-TQID: https://experienceleague.adobe.com/UpBD2NB-239jbrPC55ux9sgrdNoyUyrqHD5NmvNTVtI
+TQID: 'https://experienceleague.adobe.com/UpBD2NB-239jbrPC55ux9sgrdNoyUyrqHD5NmvNTVtI'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
+feature_v2:
+  - id: f5a6b7c8-5003-4003-9003-500000000003
+    internal-label: Services
+subfeature_v2:
+  - id: b99a0135-be89-4dd1-b66a-c313ae5278fa
+    internal-label: Attribution AI
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

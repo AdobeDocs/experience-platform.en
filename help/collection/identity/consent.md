@@ -2,6 +2,9 @@
 title: Consent and identity in Data Collection
 description: Understand how consent choices affect identity behavior in Web SDK implementations, including ECID generation, cookie persistence, and visitor continuity.
 exl-id: aee0ca1f-b846-4984-917f-8dfbcd6d3388
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Consent and identity in Data Collection
 

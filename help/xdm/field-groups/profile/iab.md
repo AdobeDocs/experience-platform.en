@@ -4,16 +4,19 @@ solution: Experience Platform
 title: IAB TCF 2.0 Consent Field Group for Profile Schemas
 description: Learn about the IAB TCF 2.0 Consent schema field group for the XDM Individual Profile class.
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
-TQID: https://experienceleague.adobe.com/McCw6O5c1l-WVvFvtsX9d7v4XWjSI7if2uiz9KMSGns
+TQID: 'https://experienceleague.adobe.com/McCw6O5c1l-WVvFvtsX9d7v4XWjSI7if2uiz9KMSGns'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
     internal-label: Governance

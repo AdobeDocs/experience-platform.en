@@ -4,13 +4,10 @@ title: Overview of data awareness in Use Case Playbooks
 description: Learn how to accelerate time to value by copying the assets generated in the end inspirational sandbox to other sandboxes.
 role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-TQID: https://experienceleague.adobe.com/1YhhTYyxgj-PKTqU3NDs0BWg4OHRLAmqWiOpc0R5T4E
+TQID: 'https://experienceleague.adobe.com/1YhhTYyxgj-PKTqU3NDs0BWg4OHRLAmqWiOpc0R5T4E'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

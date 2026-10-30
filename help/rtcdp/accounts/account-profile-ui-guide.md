@@ -5,7 +5,7 @@ description: Through the use of account profiles, Adobe Real-Time Customer Data 
 badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-TQID: https://experienceleague.adobe.com/Yo5q-kUX7-DhWBa32yIwibmv3JgFDMX2FKp4D7A4Z5w
+TQID: 'https://experienceleague.adobe.com/Yo5q-kUX7-DhWBa32yIwibmv3JgFDMX2FKp4D7A4Z5w'
 product_v2:
   - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
     internal-label: Real-Time Customer Data Platform
@@ -14,7 +14,7 @@ feature_v2:
     internal-label: Administration
 subfeature_v2:
   - id: a3118268-59a6-4679-b8b5-7e62de26c61f
-    internal-label: Account profile, Account profile (RTCDP)
+    internal-label: Account profile
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin

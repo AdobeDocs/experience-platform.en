@@ -4,25 +4,19 @@ solution: Experience Platform
 title: Create and Edit Schemas in the UI
 description: Learn the basics of how to create and edit schemas in the Experience Platform user interface.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-TQID: https://experienceleague.adobe.com/yevQxPbQDMaftqQBj5oeLlpGvoINcaQNnLe1eHUgTKk
+TQID: 'https://experienceleague.adobe.com/yevQxPbQDMaftqQBj5oeLlpGvoINcaQNnLe1eHUgTKk'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
-  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
-    internal-label: B2B
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
     internal-label: Metadata
