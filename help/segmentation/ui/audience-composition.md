@@ -442,9 +442,18 @@ To learn how to manage your destination, read the [activate audiences to batch p
 
 >[!AVAILABILITY]
 >
->Evaluation for audience composition, including **scheduled** evaluation and **on-demand** evaluation, is currently in **beta**. The functionality and documentation are subject to change.
+>Evaluation for audience composition, including scheduled evaluation and on-demand evaluation, is currently in **beta**. The functionality and documentation are subject to change.
 
-Currently, two methods of evaluation are supported for audience compositions: scheduled evaluation and on-demand evaluation.
+Currently, two methods of evaluation are supported for audience compositions: scheduled evaluation and on-demand evaluation. The following table outlines the similarities and differences between scheduled evaluation and on-demand evaluation.
+
+| Capability | Scheduled evaluation | On-demand evaluation |
+| ---------- | -------------------- | -------------------- |
+| Evaluation initiation | System-generated | User-initiated |
+| Frequency | Once a day | As requested |
+| Execution mechanism | Scheduled system evaluation | Asynchronous evaluation job |
+| Dependency on batch segmentation | Runs immediately after batch segmentation | Does not depend on batch segmentation |
+| Maximum number of compositions evaluated per day | 200 | 500 |
+| Monitoring available | Yes | Yes |
 
 ### Scheduled evaluation {#scheduled-evaluation}
 
@@ -452,13 +461,19 @@ Scheduled evaluation evaluates audience compositions once every 24 hours. The ev
 
 To enable an audience composition for scheduled evaluation, after selecting **[!UICONTROL Publish]**, enable **[!UICONTROL Schedule this composition]**, and select **[!UICONTROL Batch Segmentation]**.
 
-IMAGE
+![The Publish composition popover is displayed, letting you choose if you want to add the composition to the system schedule.](/help/segmentation/images/ui/audience-composition/publish-composition-scheduled.png)
 
 ### On-demand evaluation {#on-demand-evaluation}
 
-On-demand evaluation lets you explicitly request for an audience composition to be evaluated. As opposed to scheduled evaluation, on-demand evaluation does not require the composition to be evaluated every day. 
+On-demand evaluation lets you explicitly request for an audience composition to be evaluated. As opposed to scheduled evaluation, on-demand evaluation does not require the composition to be evaluated every day. The maximum number of compositions that can be evaluated using on-demand evaluation per day is **500**.
 
-To evaluate an audience composition with on-demand evaluation, 
+To evaluate an audience composition with on-demand evaluation, go to the **[!UICONTROL Compositions]** section of Audiences, choose the composition you want to evaluate, and select **[!UICONTROL Run now]**. You can **only** select one composition at a time for on-demand evaluation.
+
+![Both the Compositions tab and the Run now button are highlighted, demonstrating how to access on-demand evaluation.](/help/segmentation/images/ui/audience-composition/select-run-now.png)
+
+The **[!UICONTROL On-demand audience composition evaluation]** popover appears, confirming which composition you want to evaluate on, and the number of runs that will be consumed. Select **[!UICONTROL Run now]** to continue with the evaluation.
+
+![The On-demand audience composition evaluation popover is displayed, showing ](/help/segmentation/images/ui/audience-composition/on-demand.png)
 
 ## Next steps
 
