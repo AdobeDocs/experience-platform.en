@@ -28,6 +28,12 @@ topic_v2:
 ---
 # Configure the Adobe Experience Platform Web SDK
 
+>[!BEGINSHADEBOX]
+
+*This page describes how to configure the Web SDK. For the Server SDK, see [Configure the Server SDK](/help/collection/server-js/methods/configure/overview.md).*
+
+>[!ENDSHADEBOX]
+
 Configuration for the Web SDK is done with the **`configure`** command. This command is required on every page load before you call any other Web SDK commands, such as [`sendEvent`](../sendevent/overview.md).
 
 **The [`datastreamId`](datastreamid.md) and [`orgId`](orgid.md) properties are required.** All other properties are optional, depending on your organization's implementation requirements. The following example shows a configuration object using most available properties:

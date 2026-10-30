@@ -25,6 +25,10 @@ Choose the pattern that matches the proposition items you receive:
 >
 >These patterns can be combined. For example, you can enable automatic DOM action rendering while also manually rendering content from specific decision scopes.
 
+## Request personalization on your server
+
+If your server builds the page, it can request propositions before the page reaches the browser, and the Web SDK can then render them. See [Hybrid personalization with the Server SDK](hybrid-server-personalization.md).
+
 ## Common companion topics
 
 Most personalization implementations involve these common topics:

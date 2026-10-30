@@ -1,5 +1,5 @@
 ---
-title: personalization
+title: personalization (Web SDK)
 description: Render different content to different users, creating a personalized experience for them.
 exl-id: 4bd370c8-8d8d-469e-9666-b5b6d0e3a660
 TQID: 'https://experienceleague.adobe.com/8i3XgBUE5aqnvgELSwmcfd4NBcLVf0QobRRiDa32hfM'
@@ -51,7 +51,13 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
     internal-label: Personalization
 ---
-# `personalization`
+# `personalization` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes `personalization` in the Web SDK `sendEvent` command. For the Server SDK, see [`personalization`](/help/collection/server-js/methods/sendevent/personalization.md).*
+
+>[!ENDSHADEBOX]
 
 The `personalization` object configures what personalization decisions (offers or propositions) are requested and how they are handled in the request and response. It is especially valuable in Adobe Target or Adobe Journey Optimizer implementations, as it is the driving force that allows you to customize displayed content per user.
 

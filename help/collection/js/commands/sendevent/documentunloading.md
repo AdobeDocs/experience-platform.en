@@ -1,12 +1,12 @@
 ---
-title: documentUnloading
+title: documentUnloading (Web SDK)
 description: Use the browser's sendBeacon method to send data to Adobe.
 exl-id: 7683c0c4-ae2e-46ec-8471-628a10e17afc
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
 ---
-# `documentUnloading`
+# `documentUnloading` (Web SDK)
 
 The `documentUnloading` property allows you to use the browser's [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) method to send data to Adobe. This method is part of the browser's Web APIs, not the JavaScript language itself. If a typical request takes too long, the browser can cancel the request. You can tell the Web SDK to use `sendBeacon` so that the request runs in the background after you navigate away from the page. Enable this property to help prevent data requests from getting canceled by the browser when unloading.
 
@@ -26,6 +26,18 @@ alloy("sendEvent", {
   "documentUnloading": true
 });
 ```
+
+## Validate events sent with `documentUnloading` {#validate}
+
+If the page navigates away before a `sendBeacon` request finishes, Chrome developer tools can show the request (type `ping`) as **(canceled)** even when the browser continues sending it. Requests sent using `fetch` with `keepalive` can show as canceled in the same way. This label alone does not establish whether data was lost.
+
+Web SDK debug logs can't confirm delivery either. Browsers don't return a response for `sendBeacon` requests, so the log shows only that Web SDK sent the request using `sendBeacon`.
+
+Open an inspection tool before reproducing navigation. Look for a captured server response or, in a connected Edge Trace/Assurance session, the incoming request at the Edge Network. See [Aborted requests](/help/collection/debugging/inspect-requests.md#aborted-requests) for the shared inspection workflow and its evidence limits. Confirmation of Edge receipt does not by itself establish downstream processing.
+
+### When events can be lost {#data-loss}
+
+The `documentUnloading` property can't help with events that Web SDK hasn't sent yet when the page unloads. For example, Web SDK holds events while consent is `pending` (see [`defaultConsent`](../configure/defaultconsent.md)), or while it waits for an in-progress identity request to finish. In the second case, the debug log shows `Delaying request while retrieving ECID from server.`
 
 ## Document unloading using the Web SDK tag extension
 

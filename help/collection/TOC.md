@@ -12,7 +12,6 @@ nudge: true
 # Data collection {#collection}
 
 + [Overview](home.md)
-+ [Permissions](permissions.md)
 + Identity {#identity}
   + [Overview](identity/overview.md)
   + [Using identityMap](identity/identity-map.md)
@@ -81,6 +80,45 @@ nudge: true
     + [Command responses](js/commands/command-responses.md)
   + [Monitoring hooks](js/monitoring-hooks.md)
   + [FAQ](js/faq.md)
++ Server SDK {#server-js}
+  + [Overview](server-js/overview.md)
+  + [Release notes](https://github.com/adobe/alloy/blob/main/packages/node/CHANGELOG.md)
+  + [Install](server-js/install.md)
+  + [Authentication](server-js/authentication.md)
+  + Concepts {#server-js-concepts}
+    + [Instances and requests](server-js/concepts/instances-and-requests.md)
+    + [Context and forwarded headers](server-js/concepts/context-and-headers.md)
+    + [Platform services](server-js/concepts/platform-services.md)
+  + Methods {#server-js-methods}
+    + [Overview](server-js/methods/overview.md)
+    + [appendIdentityToUrl](server-js/methods/appendidentitytourl.md)
+    + [applyResponse](server-js/methods/applyresponse.md)
+    + configure {#server-js-configure}
+      + [Overview](server-js/methods/configure/overview.md)
+      + [datastreamId](server-js/methods/configure/datastreamid.md)
+      + [debugEnabled](server-js/methods/configure/debugenabled.md)
+      + [defaultConsent](server-js/methods/configure/defaultconsent.md)
+      + [edgeBasePath](server-js/methods/configure/edgebasepath.md)
+      + [edgeConfigOverrides](server-js/methods/configure/edgeconfigoverrides.md)
+      + [edgeCredentials](server-js/methods/configure/edgecredentials.md)
+      + [edgeDomain](server-js/methods/configure/edgedomain.md)
+      + [idMigrationEnabled](server-js/methods/configure/idmigrationenabled.md)
+      + [onBeforeEventSend](server-js/methods/configure/onbeforeeventsend.md)
+      + [orgId](server-js/methods/configure/orgid.md)
+      + [thirdPartyCookiesEnabled](server-js/methods/configure/thirdpartycookiesenabled.md)
+    + [forRequest](server-js/methods/forrequest.md)
+    + [getIdentity](server-js/methods/getidentity.md)
+    + [getLibraryInfo](server-js/methods/getlibraryinfo.md)
+    + sendEvent {#server-js-sendevent}
+      + [Overview](server-js/methods/sendevent/overview.md)
+      + [data](server-js/methods/sendevent/data.md)
+      + [edgeConfigOverrides](server-js/methods/sendevent/edgeconfigoverrides.md)
+      + [eventType](server-js/methods/sendevent/eventtype.md)
+      + [personalization](server-js/methods/sendevent/personalization.md)
+      + [xdm](server-js/methods/sendevent/xdm.md)
+    + [setConsent](server-js/methods/setconsent.md)
+    + [setDebug](server-js/methods/setdebug.md)
+  + [Differences from Web SDK](server-js/differences.md)
 + Tags client-side JavaScript {#tags}
   + [Overview](tags/overview.md)
   + [buildInfo](tags/buildinfo.md)
@@ -95,13 +133,17 @@ nudge: true
   + [setDebug](tags/setdebug.md)
   + [setVar](tags/setvar.md)
   + [track](tags/track.md)
++ Debugging and troubleshooting {#debugging}
+  + [Overview](debugging/overview.md)
+  + [Enable debug logging](debugging/logging.md)
+  + [Inspect requests](debugging/inspect-requests.md)
+  + [Debugging tools](debugging/tools.md)
 + Use cases {#use-cases}
   + [Overview](use-cases/overview.md)
   + [Client hints](use-cases/client-hints.md)
   + [Client state](use-cases/client-state.md)
   + [Collect commerce data](use-cases/collect-commerce-data.md)
   + [Configure a CSP](use-cases/configuring-a-csp.md)
-  + [Debugging](use-cases/debugging.md)
   + [Event deduplication](use-cases/event-duplication.md)
   + MCP {#mcp}
     + [ChatGPT apps](use-cases/mcp/chatgpt.md)
@@ -111,6 +153,7 @@ nudge: true
     + [Render DOM actions automatically](use-cases/personalization/render-auto-pers-content.md)
     + [Render HTML offers](use-cases/personalization/render-html-offers.md)
     + [Render propositions manually](use-cases/personalization/render-manual-propositions.md)
+    + [Hybrid personalization with the Server SDK](use-cases/personalization/hybrid-server-personalization.md)
     + [Manage flicker](use-cases/personalization/manage-flicker.md)
     + [Display events](use-cases/personalization/display-events.md)
     + [Top and bottom page events](use-cases/personalization/top-bottom-page-events.md)

@@ -1,14 +1,20 @@
 ---
-title: setDebug
+title: setDebug (Web SDK)
 description: Enable or disable the Web SDK debug setting.
 exl-id: 9faac147-b7c7-4732-8454-35102970dae0
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
 ---
-# `setDebug`
+# `setDebug` (Web SDK)
 
-The `setDebug` command allows you to enter or exit debugging mode in the Web SDK. It is one of several options available for [debugging](../../use-cases/debugging.md). Adobe advises enabling debug mode within development environments or just on your local machine within production environments.
+>[!BEGINSHADEBOX]
+
+*This page describes the Web SDK `setDebug` command. For the Server SDK, see [`setDebug`](/help/collection/server-js/methods/setdebug.md).*
+
+>[!ENDSHADEBOX]
+
+The `setDebug` command allows you to enter or exit debugging mode in the Web SDK. It is one of several options available for [debug logging](../../debugging/logging.md#enable-logging). Adobe advises enabling debug mode within development environments or just on your local machine within production environments.
 
 Run the `setDebug` command when calling your configured instance of the Web SDK. The only option in the configuration object is `enabled`, which is a boolean that determines if debug mode is enabled.
 

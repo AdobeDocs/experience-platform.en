@@ -1,12 +1,18 @@
 ---
-title: edgeBasePath
+title: edgeBasePath (Web SDK)
 description: The base path of the endpoint used to interact with Adobe services.
 exl-id: 3542575d-ad02-415c-8e47-97c877dfdd9d
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
 ---
-# `edgeBasePath`
+# `edgeBasePath` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes `edgeBasePath` in the Web SDK `configure` command. For the Server SDK, see [`edgeBasePath`](/help/collection/server-js/methods/configure/edgebasepath.md).*
+
+>[!ENDSHADEBOX]
 
 The `edgeBasePath` property alters the destination path when you interact with Adobe services. Adobe might request that you change this variable if you participate in alpha or beta programs for data collection. Most organizations do not need to set or alter this property.
 
