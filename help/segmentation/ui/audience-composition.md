@@ -438,6 +438,28 @@ Faster activation lets you activate your audience to a downstream destination im
 
 To learn how to manage your destination, read the [activate audiences to batch profile destinations guide](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files).
 
+## Evaluation {#evaluation}
+
+>[!AVAILABILITY]
+>
+>Evaluation for audience composition, including **scheduled** evaluation and **on-demand** evaluation, is currently in **beta**. The functionality and documentation are subject to change.
+
+Currently, two methods of evaluation are supported for audience compositions: scheduled evaluation and on-demand evaluation.
+
+### Scheduled evaluation {#scheduled-evaluation}
+
+Scheduled evaluation evaluates audience compositions once every 24 hours. The evaluation takes part of a system-initiated process that executes immediately after the scheduled batch segmentation job. The scheduled evaluation job can evaluate a maximum of **200** audience compositions at a time.
+
+To enable an audience composition for scheduled evaluation, after selecting **[!UICONTROL Publish]**, enable **[!UICONTROL Schedule this composition]**, and select **[!UICONTROL Batch Segmentation]**.
+
+IMAGE
+
+### On-demand evaluation {#on-demand-evaluation}
+
+On-demand evaluation lets you explicitly request for an audience composition to be evaluated. As opposed to scheduled evaluation, on-demand evaluation does not require the composition to be evaluated every day. 
+
+To evaluate an audience composition with on-demand evaluation, 
+
 ## Next steps
 
 Audience Composition provides a rich workflow allowing you to create compositions from the different block types. To learn more about other parts of the Segmentation Service UI, please read the [Segmentation Service user guide](./overview.md).
