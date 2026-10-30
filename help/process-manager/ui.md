@@ -9,7 +9,7 @@ Process Manager let you natively orchestrate end-to-end use cases by chaining to
 
 ## Process list {#list}
 
-The **Process** page displays a list of all the processes that have been created for your organization. This includes details such as name, number of tasks, schedule, cadence, last updated date, as well as actions for the process.
+The **[!UICONTROL Process]** page displays a list of all the processes that have been created for your organization. This includes details such as name, number of tasks, schedule, cadence, last updated date, as well as actions for the process.
 
 IMAGE
 
