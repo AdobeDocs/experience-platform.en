@@ -47,6 +47,13 @@ For more details on how publisher provided identifiers work in Google Ad Manager
 
 The [!DNL Google Ad Manager 360] destination exports [!DNL CSV] files to your [!DNL Google Cloud Storage] bucket. Once you've exported the [!DNL CSV] files, you must import them into your [!DNL Google Ad Manager 360] account.
 
+## Supported applications {#supported-applications}
+
+Use the [!DNL Google Ad Manager 360] destination in the following applications:
+
+* [Adobe Real-Time CDP](/help/rtcdp/home.md)
+* [Adobe Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home){target="_blank"}
+
 ## Destination specifics {#specifics}
 
 Note the following details that are specific to [!DNL Google Ad Manager 360] destinations.
@@ -66,7 +73,11 @@ Note the following details that are specific to [!DNL Google Ad Manager 360] des
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which types of audiences you can export to this destination.
+Audience support depends on the application from which you activate audiences to [!DNL Google Ad Manager 360].
+
+### Real-Time CDP {#supported-audiences-rtcdp}
+
+You can export the following audiences from [!DNL Real-Time CDP].
 
 | Audience origin | Supported | Description |
 |---------|----------|----------|
@@ -85,6 +96,24 @@ Supported audiences by audience data type:
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
 | [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
+### Real-Time CDP Collaboration {#supported-audiences-collaboration}
+
+You can activate audiences with match keys from [!DNL Real-Time CDP Collaboration] to [!DNL Google Ad Manager 360].
+
+| Audience origin | Supported | Description |
+|---------|----------|----------|
+| [!DNL Real-Time CDP Collaboration] | Yes | Audiences sourced in [!DNL Real-Time CDP Collaboration]. |
+
+{style="table-layout:auto"}
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| Collaboration audiences | Yes | Audiences made up of [match keys](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections#match-keys){target="_blank"} in [!DNL Real-Time CDP Collaboration]. | Paid media activation |
 
 {style="table-layout:auto"}
 
