@@ -1,12 +1,18 @@
 ---
-title: edgeConfigOverrides
+title: edgeConfigOverrides (Web SDK, configure)
 description: Configure datastream overrides for your implementation.
 exl-id: 9c5dde06-ae73-4cad-b8b4-4cb5cd00988c
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
 ---
-# `edgeConfigOverrides` (`configure` command)
+# `edgeConfigOverrides` (Web SDK, `configure`)
+
+>[!BEGINSHADEBOX]
+
+*This page describes `edgeConfigOverrides` in the Web SDK `configure` command. For the Server SDK, see [`edgeConfigOverrides`](/help/collection/server-js/methods/configure/edgeconfigoverrides.md).*
+
+>[!ENDSHADEBOX]
 
 The `edgeConfigOverrides` object allows you to override configuration settings for commands run on the current page. This object is useful when you have different websites or subdomains for different countries, or if you have multiple Experience Platform sandboxes to store data specific to different business units. If you want to override configuration settings for only a single command on the page, consider using the [`edgeConfigOverrides` object in the `sendEvent` command](../sendevent/edgeconfigoverrides.md).
 

@@ -1,12 +1,12 @@
 ---
-title: applyPropositions
+title: applyPropositions (Web SDK)
 description: Re-render propositions that have already been rendered with sendEvent.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
 ---
-# `applyPropositions`
+# `applyPropositions` (Web SDK)
 
 The `applyPropositions` command allows you to re-render propositions that were already rendered using the [`sendEvent`](sendevent/overview.md) command. This command is useful when working with single-page applications where portions of the page get re-rendered, potentially overwriting any personalizations already applied to the page.
 

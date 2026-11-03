@@ -1,5 +1,5 @@
 ---
-title: edgeDomain
+title: edgeDomain (Web SDK)
 description: Determine the domain that you want to send data to.
 exl-id: 6beb5116-cd23-42fd-934c-5cf84d1d7153
 TQID: 'https://experienceleague.adobe.com/AGtfo51srVVyouLSiLya2Ie5-P6V50vl9Xxxwi0iQ-s'
@@ -27,7 +27,13 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
 ---
-# `edgeDomain`
+# `edgeDomain` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes `edgeDomain` in the Web SDK `configure` command. For the Server SDK, see [`edgeDomain`](/help/collection/server-js/methods/configure/edgedomain.md).*
+
+>[!ENDSHADEBOX]
 
 The `edgeDomain` property allows you to change the domain where the Web SDK sends data. Using a custom domain can help reduce the impact of ad blockers.
 

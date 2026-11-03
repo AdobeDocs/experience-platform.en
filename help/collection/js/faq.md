@@ -122,7 +122,7 @@ No. Any Adobe Digital Experience customer can use the Adobe Experience Platform 
 * Customers who do *not* have access to Experience Platform or Real-time CDP and wish to use the [!DNL Web SDK] will need to configure the right permissions to create schemas and datastreams in the Data Collection UI or Experience Platform UI.
 * Customers who have access to Experience Platform or Real-time CDP and wish to use the [!DNL Web SDK] will need to configure the right permissions to create schemas, datasets, identity namespaces, and datastreams in the Data Collection UI or Experience Platform UI.
 
-For more information on configuring these permissions see our documentation on [data collection permissions management](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
+For more information on configuring these permissions, see the [Experience Platform resource permissions](../../access-control/home.md#permissions) reference.
 
 ## Who should use the Web SDK?
 

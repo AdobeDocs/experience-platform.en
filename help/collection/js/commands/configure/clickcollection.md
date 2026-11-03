@@ -1,12 +1,12 @@
 ---
-title: clickCollection
+title: clickCollection (Web SDK)
 description: Fine-tune click collection settings.
 exl-id: 5a128b4a-4727-4415-87b4-4ae87a7e1750
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
 ---
-# `clickCollection`
+# `clickCollection` (Web SDK)
 
 The `clickCollection` object contains several variables that help you control automatically collected link data. Use these variables when you want to include or exclude types of links from data collection. It is supported on Web SDK versions 2.25.0 or later.
 

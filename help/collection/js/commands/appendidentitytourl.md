@@ -1,5 +1,5 @@
 ---
-title: appendIdentityToUrl
+title: appendIdentityToUrl (Web SDK)
 description: Deliver personalized experiences more accurately between apps, web, and across domains.
 exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
 TQID: 'https://experienceleague.adobe.com/qv1cDywmnFUHfk2eRMCksc4kx9MFspy0eOn1ZtbPxhQ'
@@ -20,7 +20,13 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# `appendIdentityToUrl`
+# `appendIdentityToUrl` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes the Web SDK `appendIdentityToUrl` command. For the Server SDK, see [`appendIdentityToUrl`](/help/collection/server-js/methods/appendidentitytourl.md).*
+
+>[!ENDSHADEBOX]
 
 The `appendIdentityToUrl` command allows you to add a user identifier to the URL as a query string. This action allows you to carry a visitor's identity between domains, preventing duplicate visitor counts for datasets that include both domains or channels. It is available on Web SDK versions 2.11.0 or later.
 

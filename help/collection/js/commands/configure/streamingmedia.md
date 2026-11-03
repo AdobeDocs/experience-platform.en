@@ -1,5 +1,5 @@
 ---
-title: streamingMedia
+title: streamingMedia (Web SDK)
 description: Configure the Web SDK to collect data related to media usage on your web properties.
 exl-id: f7733619-d35e-43eb-ac90-052717310c39
 TQID: 'https://experienceleague.adobe.com/p60r5QGs2W6uqX11MNuRA-9keaWhESwZxG3IIiu3Ak4'
@@ -27,7 +27,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# `streamingMedia`
+# `streamingMedia` (Web SDK)
 
 The `streamingMedia` component helps you collect data related to media sessions on your website. 
 

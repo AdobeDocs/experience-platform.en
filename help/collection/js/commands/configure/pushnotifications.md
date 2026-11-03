@@ -1,5 +1,5 @@
 ---
-title: pushNotifications
+title: pushNotifications (Web SDK)
 description: Configure push notifications for the Web SDK to enable browser-based push messaging.
 exl-id: a5cf4817-a4c2-4cf1-8f3a-7e92b807de8f
 TQID: 'https://experienceleague.adobe.com/9rbMQjUORLLES-KeaX1laWGFmilU3Triq6yGGgDiCzg'
@@ -26,7 +26,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# `pushNotifications` {#push-notifications}
+# `pushNotifications` (Web SDK) {#push-notifications}
 
 The `pushNotifications` property lets you configure push notifications for web applications. This feature allows your web app to receive messages pushed from a server, even when the website is not currently loaded in the browser.
 

@@ -93,7 +93,7 @@ Tags are fully integrated with your Adobe ID. User permissions are managed throu
 
 Tags have a rights-based user management system. This means that individual rights must be granted explicitly. These rights are assigned to groups, then users are added to the appropriate groups in order to gain access. Even if your organization has access to Data Collection, individual users cannot do anything until an administrator explicitly grants them some rights.
 
-For detailed instructions on how to create groups and add users for tags, see the [data collection permissions guide](../../collection/permissions.md).
+For detailed instructions on how to create groups and add users for tags, see the section on [configuring permissions in Admin Console](../ui/administration/user-permissions.md#admin-console).
 
 ## 2. Log in
 

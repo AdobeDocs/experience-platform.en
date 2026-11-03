@@ -250,7 +250,7 @@ When you delete a destination, all audiences and attributes mapped under the des
 ### Does the integration work using the Edge Network API? {#edge-network-api-integration}
 
 +++Answer
-Yes, the Edge Network API works with the Custom Personalization destination. Since profile attributes may contain sensitive data, to protect this data, the Custom Personalization destination requires you to use the Edge Network API for data collection. Furthermore, all API calls must be made in an [authenticated context](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
+Yes, the Edge Network API works with the Custom Personalization destination. Since profile attributes may contain sensitive data, to protect this data, the Custom Personalization destination requires you to use the Edge Network API for data collection. Furthermore, all API calls must be made in an [authenticated context](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication).
 +++
 
 ### I can only have one merge policy that is active-on-edge. Can I build audiences that use a different merge policy and still send them to [!DNL Adobe Target] as streaming audiences? {#edge-merge-policy}

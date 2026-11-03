@@ -24,7 +24,7 @@ topic_v2:
 ---
 # `logger`
 
-The `_satellite.logger` object contains methods that allow you to output diagnostic or informational messages to the browser console when [Debugging](../use-cases/debugging.md) is enabled. If debugging is not enabled, all `logger` method calls do nothing.
+The `_satellite.logger` object contains methods that allow you to output diagnostic or informational messages to the browser console when [debug logging](../debugging/logging.md#enable-logging) is enabled. If debugging is not enabled, all `logger` method calls do nothing.
 
 These methods allow developers, technical marketers, and testers to easily see what triggers within a tag property and when. Since these console messages only appear when debugging is enabled, you can leave `logger` messages in deployments to production without impacting the browser console of visitors to your site.
 

@@ -1,5 +1,5 @@
 ---
-title: datastreamId
+title: datastreamId (Web SDK)
 description: Determine the datastream ID that you want to send data to.
 exl-id: 2d709f70-c014-4868-b2f5-17e8b88343d1
 TQID: 'https://experienceleague.adobe.com/mKVKjTc3GpTx-AYw54rFETXaFRRoGA0l5EYtqy-UtBw'
@@ -22,7 +22,13 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# `datastreamId`
+# `datastreamId` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes `datastreamId` in the Web SDK `configure` command. For the Server SDK, see [`datastreamId`](/help/collection/server-js/methods/configure/datastreamid.md).*
+
+>[!ENDSHADEBOX]
 
 The `datastreamId` property is a string that determines which [datastream](/help/datastreams/overview.md) in Adobe Experience Platform you want to send data to. This property is required when sending data to Adobe. Web SDK versions 2.20.0 or earlier use `edgeConfigId` instead.
 

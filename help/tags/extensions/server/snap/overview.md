@@ -55,7 +55,7 @@ The [!DNL Snap] Conversion API Extension is a secure [Edge Network API](https://
 To use the [!DNL Snapchat] Conversions API:
 
 * You must have an [Event Forwarding property](/help/tags/ui/event-forwarding/getting-started.md) set up in Adobe Experience Platform.
-* You must also have the [required permissions](/help/collection/permissions.md) to edit the property. 
+* You must also have the [required permissions](/help/tags/ui/administration/user-permissions.md) to edit the property. 
 
 Create a [Datastream](/help/tags/ui/event-forwarding/getting-started.md) and add the [Event Forwarding service](/help/tags/ui/event-forwarding/getting-started.md#enable-event-forwarding) to it. 
 

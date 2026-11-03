@@ -41,7 +41,7 @@ Before you get started with your `extension_package`, you need to set up your te
 
 ## Configure user permissions for Experience Platform and Data Collection
 
-In order for a user to access tag features, an administrator must add their accounts to a product profile in Adobe Admin Console, which grants the user access to specific properties and Data Collection capabilities. For more information on how to grant permissions for Data Collection, see the [Data Collection permissions guide](../../../collection/permissions.md).
+In order for a user to access tag features, an administrator must add their accounts to a product profile in Adobe Admin Console, which grants the user access to specific properties and Data Collection capabilities. For more information on how to grant permissions for Data Collection, see the section on [configuring permissions in Admin Console](../../ui/administration/user-permissions.md#admin-console).
 
 ## Confirm provisioning
 

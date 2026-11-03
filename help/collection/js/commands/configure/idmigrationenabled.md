@@ -1,5 +1,5 @@
 ---
-title: idMigrationEnabled
+title: idMigrationEnabled (Web SDK)
 description: Allows the Web SDK to read AMCV cookies.
 exl-id: 33b9d645-0fbe-4fe4-8847-e6f9e78557b6
 TQID: 'https://experienceleague.adobe.com/hbyGQRiwdHakLAJboWijFbU7V7rdNb64W2-jJqwGB-s'
@@ -20,7 +20,13 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# `idMigrationEnabled`
+# `idMigrationEnabled` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes `idMigrationEnabled` in the Web SDK `configure` command. For the Server SDK, see [`idMigrationEnabled`](/help/collection/server-js/methods/configure/idmigrationenabled.md).*
+
+>[!ENDSHADEBOX]
 
 The `idMigrationEnabled` property allows the Web SDK to read AMCV cookies set by previous Adobe Visitor ID Service (ECID). If your organization upgrades your implementation to the Web SDK, this setting allows a smoother transition to the current Experience Platform Identity Service. This setting is valuable so that you don't see a sharp increase in unique visitors when upgrading to the Web SDK.
 

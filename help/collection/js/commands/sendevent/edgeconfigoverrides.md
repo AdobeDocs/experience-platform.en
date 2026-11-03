@@ -1,5 +1,5 @@
 ---
-title: edgeConfigOverrides
+title: edgeConfigOverrides (Web SDK, sendEvent)
 description: Configure datastream overrides for just the sendEvent command.
 exl-id: 8e327892-9520-43f5-abf4-d65a5ca34e6d
 TQID: 'https://experienceleague.adobe.com/bkTUWKjT3bqk90h84rGEeR2Uic8UHJwoWJaEkG-BrEg'
@@ -32,7 +32,13 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# `edgeConfigOverrides` (`sendEvent` command)
+# `edgeConfigOverrides` (Web SDK, `sendEvent`)
+
+>[!BEGINSHADEBOX]
+
+*This page describes `edgeConfigOverrides` in the Web SDK `sendEvent` command. For the Server SDK, see [`edgeConfigOverrides`](/help/collection/server-js/methods/sendevent/edgeconfigoverrides.md).*
+
+>[!ENDSHADEBOX]
 
 The `edgeConfigOverrides` object allows you to override configuration settings just for the current `sendEvent` command. This object is useful when you have specific commands on the same page that you want to run with different configuration settings than the rest of your Web SDK implementation. If you want to override configuration settings for all commands on a given page, consider using the [`edgeConfigOverrides` object in the `configure` command](../configure/edgeconfigoverrides.md).
 

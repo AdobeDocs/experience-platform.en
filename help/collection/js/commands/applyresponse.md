@@ -1,12 +1,18 @@
 ---
-title: applyResponse
+title: applyResponse (Web SDK)
 description: Use a response from the Edge Network to initialize the Web SDK.
 exl-id: 0653b8f7-33f0-43a1-97f5-59a51270f660
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
 ---
-# `applyResponse`
+# `applyResponse` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes the Web SDK `applyResponse` command. For the Server SDK, see [`applyResponse`](/help/collection/server-js/methods/applyresponse.md).*
+
+>[!ENDSHADEBOX]
 
 The `applyResponse` command allows you to perform various actions based on a response from the Edge Network. It is typically used in hybrid deployments where the server makes an initial call to the Edge Network. This command takes the response from that call and initializes the Web SDK in the browser.
 

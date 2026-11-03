@@ -1,5 +1,5 @@
 ---
-title: onBeforeLinkClickSend
+title: onBeforeLinkClickSend (Web SDK)
 description: Callback that runs just before link tracking data is sent.
 exl-id: 8c73cb25-2648-4cf7-b160-3d06aecde9b4
 TQID: 'https://experienceleague.adobe.com/YwogdzhVCX18A0mzpd1WfsIqyC6zGsUDTEH9O70-FXM'
@@ -20,7 +20,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# `onBeforeLinkClickSend`
+# `onBeforeLinkClickSend` (Web SDK)
 
 >[!IMPORTANT]
 >

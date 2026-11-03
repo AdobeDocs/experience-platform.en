@@ -18,6 +18,7 @@ nudge: true
   * [Overview](./solutions/overview.md)
   * [Adobe Target](./solutions/target.md)
 * [Logs tab](./logs.md)
+* [Edge Trace](./edge-trace.md)
 * [Network tab](./network.md)
 * [Events tab](./events.md)
 * Auditor tab {#auditor}

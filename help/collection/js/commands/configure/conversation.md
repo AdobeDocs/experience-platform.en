@@ -1,12 +1,12 @@
 ---
-title: conversation
+title: conversation (Web SDK)
 description: Configure Brand Concierge chat settings.
 exl-id: 0f64c7f1-2c28-4c67-af05-dc9ee688fdc0
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
 ---
-# `conversation`
+# `conversation` (Web SDK)
 
 >[!AVAILABILITY]
 >

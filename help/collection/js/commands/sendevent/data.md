@@ -1,5 +1,5 @@
 ---
-title: data
+title: data (Web SDK)
 description: Learn how to send non-XDM data to Adobe, through the data object.
 exl-id: 537fc34e-3cda-4aa7-ae0d-0d3ef4b89848
 TQID: 'https://experienceleague.adobe.com/42nSK16mE8kHI8pGzqHNlRgZl-XdvVP-wDrJAzosroU'
@@ -34,7 +34,13 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# `data`
+# `data` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes `data` in the Web SDK `sendEvent` command. For the Server SDK, see [`data`](/help/collection/server-js/methods/sendevent/data.md).*
+
+>[!ENDSHADEBOX]
 
 The `data` object allows you to send a payload to Adobe that does not match an XDM schema. It is useful in non-XDM scenarios, such as sending data directly to Adobe Analytics, Adobe Target, or Adobe Audience Manager. When data arrives at the datastream, you can use [Data Prep mapping](/help/data-prep/ui/mapping.md) to assign XDM fields to each field in the `data` object. If a product is already configured by Adobe to detect fields within the `data` object, you can send that data as-is to a datastream.
 
