@@ -11,7 +11,7 @@ Process Manager let you natively orchestrate end-to-end use cases by chaining to
 
 The **[!UICONTROL Process]** page displays a list of all the processes that have been created for your organization. This includes details such as name, number of tasks, schedule, cadence, last updated date, as well as actions for the process.
 
-IMAGE
+![The list of processes is displayed within Process Manager.](/help/process-manager/images/ui/process-list.png)
 
 | Field | Description |
 | ----- | ----------- |
@@ -24,21 +24,21 @@ IMAGE
 
 Additionally, you can filter the listed processes by the schedule status.
 
-IMAGE
+![The schedule area is highlighted. This lets you filter the processes by schedule.](/help/process-manager/images/ui/filter-by-schedule.png)
 
 To create a new process, select **[!UICONTROL Create process]**. For more information on creating a new process, read the [canvas section](#canvas).
 
-IMAGE
+![The Create process button is highlighted.](/help/process-manager/images/ui/select-create-process.png)
 
 ## Canvas {#canvas}
 
-The **Canvas** screen appears. On this page, you can create an end-to-end automated run flow.
+The **[!UICONTROL Canvas]** screen appears. On this page, you can create an end-to-end automated run flow.
 
-IMAGE
+![The Process Manager canvas is displayed.](/help/process-manager/images/ui/canvas.png)
 
-The left **Tasks** bar displays a full list of the available actions that you can add to your process.
+The left **[!UICONTROL Tasks]** bar displays a full list of the available actions that you can add to your process.
 
-IMAGE
+![The Tasks are highlighted within the canvas.](/help/process-manager/images/ui/tasks.png)
 
 | Task | Description |
 | ---- | ----------- |
@@ -46,6 +46,7 @@ IMAGE
 | Run Data Distiller | Run a Data Distiller query template. You can select which query template you want to execute. For more information, read the [run Data Distiller section](#run-data-distiller). |
 | Verify Profile Ingestion | Verifies that a Profile ingestion has completed. You can choose which batch ID you want to verify. For more information, read the [verify Profile ingestion section](#verify-profile-ingestion). |
 | Run Segmentation | Runs a segmentation job. You can choose which segment definition IDs to run segmentation on. For more information, read the [run segmentation section](#run-segmentation). |
+| Run Global Segmentation | Runs the sandbox's daily batch segmentation schedule. For more information, read the [run global segmentation section](#run-global-segmentation). |
 | Run Profile Export | Runs a profile export job, which lets you export audiences to a dataset. You can choose which segment definitions to export and which dataset to export to. For more information, read the [run Profile export section](#run-profile-export). |
 | Trigger Activation | Runs an activation job. This lets you activate audiences or a dataset to a destination. For more information, read the [trigger activation section](#trigger-activation).  |
 | Send Notification | Sends a notification to users on Experience Platform. For more information, read the [send notification section](#send-notification). |
@@ -55,40 +56,40 @@ For more information about the available tasks, read the [tasks section](#tasks)
 
 After you add tasks to the canvas, you can connect the tasks to chain them together for the process. To connect the tasks, select the plus icon that appears on the task while it's close to the task that you want to connect the task to.
 
-IMAGE
+![The process of connecting multiple tasks together is displayed.](/help/process-manager/images/ui/connect-tasks.gif)
 
 Within the canvas, you can also select from the following options to manipulate the canvas itself.
 
 | Option | Description |
 | ------ | ----------- |
-| Arrange Nodes ICON | Arranges the nodes, so they're more neatly arranged. |
-| Show Grid ICON | Shows the grid pattern in the canvas. |
-| Snap to Grid ICON | Snaps the nodes on to the grid. |
-| Download canvas image ICON | Takes a screenshot of the canvas and downloads it to your device. |
-| Zoom out ICON | Zooms out on the canvas. |
-| Zoom in ICON | Zooms in on the canvas. |
+| Arrange Nodes ![](/help/process-manager/images/icons/wand.png) | Arranges the nodes, so they're more neatly arranged. |
+| Show Grid ![](/help/process-manager/images/icons/grid.png) | Shows the grid pattern in the canvas. |
+| Snap to Grid ![](/help/process-manager/images/icons/snap-to-grid.png) | Snaps the nodes on to the grid. |
+| Download canvas image ![](/help/process-manager/images/icons/camera.png) | Takes a screenshot of the canvas and downloads it to your device. |
+| Zoom out ![](/help/process-manager/images/icons/zoom-out.png) | Zooms out on the canvas. |
+| Zoom in ![](/help/process-manager/images/icons/zoom-in.png) | Zooms in on the canvas. |
 
-IMAGE
+![](/help/process-manager/images/ui/toolbar.png)
 
 After adding all the tasks to the canvas, you can **Save** the process. Once you save the process, you can either immediately run the process or create a schedule for the process to run for.
 
-IMAGE
+![](/help/process-manager/images/ui/select-save.png)
 
 If you select **Run**, you can set the required inputs for the process to run. After inserting the inputs, select **Run** to start the process.
 
-IMAGE
+![](/help/process-manager/images/ui/select-run.png)
 
 >[!NOTE]
 >
 >For more information about cron schedules, read the [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation.
 
-If you select **Schedule**, the scheduling popover appears. On this screen, you can set the cron schedule for the process, as well as the required inputs for the process to run. For the cron schedule, you can open the dropdown to see a list of supported defaults.
+If you select **[!UICONTROL Schedule]**, the scheduling popover appears. On this screen, you can set the cron schedule for the process, as well as the required inputs for the process to run. For the cron schedule, you can open the dropdown to see a list of supported defaults.
 
-IMAGE
+![](/help/process-manager/images/ui/schedule-popover.png)
 
-Once you've added all the information, select **Create schedule** to create the schedule.
+Once you've added all the information, select **[!UICONTROL Create schedule]** to create the schedule.
 
-IMAGE
+![](/help/process-manager/images/ui/select-create-schedule.png)
 
 ### Tasks {#tasks}
 
@@ -147,6 +148,16 @@ The **Run Segmentation** task lets you run a segmentation job on the specified s
 | ------- | ----------- |
 | segmentIds | A dropdown that lists the available segment definitions in your organization and sandbox. You can select multiple segment definitions to be added to the task. |
 | maxDurationSeconds | The maximum amount of time, in seconds, that the task should wait for the segmentation job to finish running. By default, this is 86,400 seconds (24 hours). |
+| comment | An optional description that you can use to describe the task. |
+
+#### Run Global Segmentation {#run-global-segmentation}
+
+The Run Global Segmentation task lets you immediately run the sandbox's batch segmentation job. 
+
+| Setting | Description |
+| ------- | ----------- |
+| Wait for export to complete | A toggle that determines if the global segmentation job should complete before proceeding to the next step of the process. By default, this value is enabled. |
+| maxDurationSeconds | The maximum amount of time, in seconds, that the task should wait for the global segmentation job to finish running. By default, this is 86,400 seconds (24 hours). |
 | comment | An optional description that you can use to describe the task. |
 
 #### Run Profile export {#run-profile-export}
@@ -209,20 +220,20 @@ The **Wait** task causes the process execution to be paused for the specified am
 
 The **Runs** page displays a list of runs for the selected process. You can either see the runs in **Grid** view or **Graph** view. 
 
-IMAGE
+![The Runs page is displayed, showing a list of runs for the process.](/help/process-manager/images/ui/runs.png)
 
 Grid view displays a list of the tasks for the process, the state of those tasks, as well as how long the tasks took.
 
-IMAGE
+![The Grid view button is highlighted.](/help/process-manager/images/ui/grid-view.png)
 
 If you select the task, you can see further details about the run, including the specific error that caused the run to fail.
 
-IMAGE
+![Information about the failed task is displayed.](/help/process-manager/images/ui/failed-task.png)
 
 Graph view displays the selected run, with the tasks shown as individual blocks. You can see the location, state, and runtime of each of the tasks.
 
-IMAGE
+![The Graph view button is highlighted.](/help/process-manager/images/ui/graph-view.png)
 
 If you select a task within the run, you can see more details about the task's execution.
 
-IMAGE
+![Information about the failed task is displayed.](/help/process-manager/images/ui/select-task-graph.png)
