@@ -1,8 +1,8 @@
 ---
 audience: user
 user-guide-title: Process Manager
-user-guide-description: A
-feature: 
+user-guide-description: Process Manager provides an in-built orchestration system, which lets you chain together various Adobe Experience Platform services together to perform end-to-end flows.
+feature: Process Manager
 role: User
 ---
 

@@ -20,7 +20,7 @@ The **[!UICONTROL Process]** page displays a list of all the processes that have
 | Schedule | The state of the schedule for the process. Possible values include [!UICONTROL Paused], [!UICONTROL Active], [!UICONTROL Error], and [!UICONTROL None]. |
 | Cadence | The cadence which the process runs. This is written as a cron schedule. For more information about cron schedules, read the [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. |
 | Updated | The date and time the process was last updated. |
-| Actions | Available quick actions for the process. <ul><li>**Canvas**: Opens the canvas so you can edit the process. For more information on editing the process, read the [canvas section](#canvas).</li><li>**Runs**: Displays the runs associated with the process. For more information, read the [runs section](#runs).</li><li>**Schedule**:</li>Update the cadence in which the process runs. You can set the cron schedule for the process, as well as the required inputs for the process to run.</li><li>**Notifications**: Lets you add notifications for the process. You can send a notification upon the process failing and send the notification to everyone in the organization or specified users or user groups.</li><li>**Clone**: Duplicates the process.</li><li>**Delete**: Deletes the process.</li></ul> |
+| Actions | Available quick actions for the process. <ul><li>**[!UICONTROL Canvas]**: Opens the canvas so you can edit the process. For more information on editing the process, read the [canvas section](#canvas).</li><li>**[!UICONTROL Runs]**: Displays the runs associated with the process. For more information, read the [runs section](#runs).</li><li>**[!UICONTROL Schedule]**:</li>Update the cadence in which the process runs. You can set the cron schedule for the process, as well as the required inputs for the process to run.</li><li>**[!UICONTROL Notifications]**: Lets you add notifications for the process. You can send a notification upon the process failing and send the notification to everyone in the organization or specified users or user groups.</li><li>**[!UICONTROL Clone]**: Duplicates the process.</li><li>**[!UICONTROL Delete]**: Deletes the process.</li></ul> |
 
 Additionally, you can filter the listed processes by the schedule status.
 
@@ -42,15 +42,15 @@ The left **[!UICONTROL Tasks]** bar displays a full list of the available action
 
 | Task | Description |
 | ---- | ----------- |
-| Ingest Data | Ingest data into Experience Platform. You can choose which source to ingest data from. For more information, read the [ingest data section](#ingest-data). |
-| Run Data Distiller | Run a Data Distiller query template. You can select which query template you want to execute. For more information, read the [run Data Distiller section](#run-data-distiller). |
-| Verify Profile Ingestion | Verifies that a Profile ingestion has completed. You can choose which batch ID you want to verify. For more information, read the [verify Profile ingestion section](#verify-profile-ingestion). |
-| Run Segmentation | Runs a segmentation job. You can choose which segment definition IDs to run segmentation on. For more information, read the [run segmentation section](#run-segmentation). |
-| Run Global Segmentation | Runs the sandbox's daily batch segmentation schedule. For more information, read the [run global segmentation section](#run-global-segmentation). |
-| Run Profile Export | Runs a profile export job, which lets you export audiences to a dataset. You can choose which segment definitions to export and which dataset to export to. For more information, read the [run Profile export section](#run-profile-export). |
-| Trigger Activation | Runs an activation job. This lets you activate audiences or a dataset to a destination. For more information, read the [trigger activation section](#trigger-activation).  |
-| Send Notification | Sends a notification to users on Experience Platform. For more information, read the [send notification section](#send-notification). |
-| Wait | Makes the process wait for a specified amount of time. For more information, read the [wait section](#wait). |
+| [!UICONTROL Ingest Data] | Ingest data into Experience Platform. You can choose which source to ingest data from. For more information, read the [ingest data section](#ingest-data). |
+| [!UICONTROL Run Data Distiller] | Run a Data Distiller query template. You can select which query template you want to execute. For more information, read the [run Data Distiller section](#run-data-distiller). |
+| [!UICONTROL Verify Profile Ingestion] | Verifies that a Profile ingestion has completed. You can choose which batch ID you want to verify. For more information, read the [verify Profile ingestion section](#verify-profile-ingestion). |
+| [!UICONTROL Run Segmentation] | Runs a segmentation job. You can choose which segment definition IDs to run segmentation on. For more information, read the [run segmentation section](#run-segmentation). |
+| [!UICONTROL Run Global Segmentation] | Runs the sandbox's daily batch segmentation schedule. For more information, read the [run global segmentation section](#run-global-segmentation). |
+| [!UICONTROL Run Profile Export] | Runs a profile export job, which lets you export audiences to a dataset. You can choose which segment definitions to export and which dataset to export to. For more information, read the [run Profile export section](#run-profile-export). |
+| [!UICONTROL Trigger Activation] | Runs an activation job. This lets you activate audiences or a dataset to a destination. For more information, read the [trigger activation section](#trigger-activation).  |
+| [!UICONTROL Send Notification] | Sends a notification to users on Experience Platform. For more information, read the [send notification section](#send-notification). |
+| [!UICONTROL Wait] | Makes the process wait for a specified amount of time. For more information, read the [wait section](#wait). |
 
 For more information about the available tasks, read the [tasks section](#tasks).
 
@@ -62,22 +62,22 @@ Within the canvas, you can also select from the following options to manipulate 
 
 | Option | Description |
 | ------ | ----------- |
-| Arrange Nodes ![](/help/process-manager/images/icons/wand.png) | Arranges the nodes, so they're more neatly arranged. |
-| Show Grid ![](/help/process-manager/images/icons/grid.png) | Shows the grid pattern in the canvas. |
-| Snap to Grid ![](/help/process-manager/images/icons/snap-to-grid.png) | Snaps the nodes on to the grid. |
-| Download canvas image ![](/help/process-manager/images/icons/camera.png) | Takes a screenshot of the canvas and downloads it to your device. |
-| Zoom out ![](/help/process-manager/images/icons/zoom-out.png) | Zooms out on the canvas. |
-| Zoom in ![](/help/process-manager/images/icons/zoom-in.png) | Zooms in on the canvas. |
+| Arrange Nodes ![Arrange Nodes icon](/help/process-manager/images/icons/wand.png) | Arranges the nodes, so they're more neatly arranged. |
+| Show Grid ![Show Grid icon](/help/process-manager/images/icons/grid.png) | Shows the grid pattern in the canvas. |
+| Snap to Grid ![Snap to Grid icon](/help/process-manager/images/icons/snap-to-grid.png) | Snaps the nodes on to the grid. |
+| Download canvas image ![Download canvas image icon](/help/process-manager/images/icons/camera.png) | Takes a screenshot of the canvas and downloads it to your device. |
+| Zoom out ![Zoom out icon](/help/process-manager/images/icons/zoom-out.png) | Zooms out on the canvas. |
+| Zoom in ![Zoom in icon](/help/process-manager/images/icons/zoom-in.png) | Zooms in on the canvas. |
 
-![](/help/process-manager/images/ui/toolbar.png)
+![The toolbar within the canvas is highlighted.](/help/process-manager/images/ui/toolbar.png)
 
-After adding all the tasks to the canvas, you can **Save** the process. Once you save the process, you can either immediately run the process or create a schedule for the process to run for.
+After adding all the tasks to the canvas, you can **[!UICONTROL Save]** the process. Once you save the process, you can either immediately run the process or create a schedule for the process to run for.
 
-![](/help/process-manager/images/ui/select-save.png)
+![The Save button is highlighted within the canvas.](/help/process-manager/images/ui/select-save.png)
 
-If you select **Run**, you can set the required inputs for the process to run. After inserting the inputs, select **Run** to start the process.
+If you select **[!UICONTROL Run]**, you can set the required inputs for the process to run. After inserting the inputs, select **[!UICONTROL Run]** to start the process.
 
-![](/help/process-manager/images/ui/select-run.png)
+![The Run button is highlighted within the canvas.](/help/process-manager/images/ui/select-run.png)
 
 >[!NOTE]
 >
@@ -85,11 +85,11 @@ If you select **Run**, you can set the required inputs for the process to run. A
 
 If you select **[!UICONTROL Schedule]**, the scheduling popover appears. On this screen, you can set the cron schedule for the process, as well as the required inputs for the process to run. For the cron schedule, you can open the dropdown to see a list of supported defaults.
 
-![](/help/process-manager/images/ui/schedule-popover.png)
+![The Schedule popover is displayed, showing all the available options for scheduling a process.](/help/process-manager/images/ui/schedule-popover.png)
 
 Once you've added all the information, select **[!UICONTROL Create schedule]** to create the schedule.
 
-![](/help/process-manager/images/ui/select-create-schedule.png)
+![The Create schedule button is highlighted within the Schedule popover.](/help/process-manager/images/ui/select-create-schedule.png)
 
 ### Tasks {#tasks}
 
@@ -104,22 +104,22 @@ This section lists out all the available tasks that you can use with Process Man
 
 #### Ingest data {#ingest-data}
 
-The **Ingest data** task lets you trigger a flow ingestion run into Experience Platform. When you use this task, you can choose which source and flow you want to ingest data from.
+The **[!UICONTROL Ingest data]** task lets you trigger a flow ingestion run into Experience Platform. When you use this task, you can choose which source and flow you want to ingest data from.
 
 | Setting | Description |
 | ------- | ----------- |
 | Source | The name of the source that you want to ingest data from. You can select which source you want to choose from the dropdown. The number in parenthesis represents the number of available flows in the source. |
 | Flow | The name of the flow that you want to ingest data from. |
 | Flow ID | The ID of the flow that you want to ingest data from. This field is automatically filled out when you choose the flow in the previous dropdown. |
-| startTime | The start time for the flow run. If you set the option to **Relative**, you can set the start time to be relative to the full process. For example, if you want the flow run to start three minutes after the task runs, you can set this value to `now+3m`.<br/><br/>If you set the option to **Absolute**, you can use the calendar to set the date. |
-| windowStartTime | The start time for when data will be pulled for the flow. If you set the option to **Relative**, you can set the start time to be relative to the full process. For example, if you want the flow to look for data from 24 hours before the task runs, you can set this value to `now-24h`.<br/><br/>If you set the option to **Absolute**, you can use the calendar to set the date. |
-| windowEndTime | The end time for when data will be retrieved up to for the flow. If you set the option to **Relative**, you can set the start time to be relative to the full process. For example, if you want the flow to look for data up until the task runs, you can set this value to `now`.<br/><br/>If you set the option to **Absolute**, you can use the calendar to set the date. |
+| startTime | The start time for the flow run. If you set the option to **[!UICONTROL Relative]**, you can set the start time to be relative to the full process. For example, if you want the flow run to start three minutes after the task runs, you can set this value to `now+3m`.<br/><br/>If you set the option to **[!UICONTROL Absolute]**, you can use the calendar to set the date. |
+| windowStartTime | The start time for when data will be pulled for the flow. If you set the option to **[!UICONTROL Relative]**, you can set the start time to be relative to the full process. For example, if you want the flow to look for data from 24 hours before the task runs, you can set this value to `now-24h`.<br/><br/>If you set the option to **[!UICONTROL Absolute]**, you can use the calendar to set the date. |
+| windowEndTime | The end time for when data will be retrieved up to for the flow. If you set the option to **[!UICONTROL Relative]**, you can set the start time to be relative to the full process. For example, if you want the flow to look for data up until the task runs, you can set this value to `now`.<br/><br/>If you set the option to **[!UICONTROL Absolute]**, you can use the calendar to set the date. |
 
 For relative times, `now` represents no offset to the time. You can either use `+` or `-` to add or subtract from this zero offset. Supported units include `s` for seconds, `m` for minutes, `h` for hours, and `d` for days. 
 
 #### Run Data Distiller {#run-data-distiller}
 
-The **Run Data Distiller** task lets you run Data Distiller query. When you use this task, you choose the template as well as the associated parameters related to the template.
+The **[!UICONTROL Run Data Distiller]** task lets you run Data Distiller query. When you use this task, you choose the template as well as the associated parameters related to the template.
 
 | Setting | Description |
 | ------- | ----------- |
@@ -132,17 +132,17 @@ The **Run Data Distiller** task lets you run Data Distiller query. When you use 
 
 #### Verify Profile ingestion {#verify-profile-ingestion}
 
-The **Verify Profile ingestion** task lets you verify if the ingestion from the **Ingest data** task has successfully completed. When you use this task, you can choose which batch ID you want to verify has completed.
+The **[!UICONTROL Verify Profile ingestion]** task lets you verify if the ingestion from the **[!UICONTROL Ingest data]** task has successfully completed. When you use this task, you can choose which batch ID you want to verify has completed.
 
 | Setting | Description |
 | ------- | ----------- |
-| batchId | The ID of the batch you want to verify has been ingested. If you chain this task with a previous **Ingest data** task, this value is automatically filled. |
+| batchId | The ID of the batch you want to verify has been ingested. If you chain this task with a previous **[!UICONTROL Ingest data]** task, this value is automatically filled. |
 | maxDurationSeconds | The maximum amount of time, in seconds, that the task should wait for verification. By default, this is 86,400 seconds (24 hours). |
 | comment | An optional description that you can use to describe the task. |
 
 #### Run Segmentation {#run-segmentation}
 
-The **Run Segmentation** task lets you run a segmentation job on the specified segment definitions. 
+The **[!UICONTROL Run Segmentation]** task lets you run a segmentation job on the specified segment definitions. 
 
 | Setting | Description |
 | ------- | ----------- |
@@ -152,7 +152,7 @@ The **Run Segmentation** task lets you run a segmentation job on the specified s
 
 #### Run Global Segmentation {#run-global-segmentation}
 
-The Run Global Segmentation task lets you immediately run the sandbox's batch segmentation job. 
+The **[!UICONTROL Run Global Segmentation]** task lets you immediately run the sandbox's batch segmentation job. 
 
 | Setting | Description |
 | ------- | ----------- |
@@ -160,9 +160,9 @@ The Run Global Segmentation task lets you immediately run the sandbox's batch se
 | maxDurationSeconds | The maximum amount of time, in seconds, that the task should wait for the global segmentation job to finish running. By default, this is 86,400 seconds (24 hours). |
 | comment | An optional description that you can use to describe the task. |
 
-#### Run Profile export {#run-profile-export}
+#### Run Profile Export {#run-profile-export}
 
-The **Run Profile export** task lets you run a Profile export job on the specified segment definitions. When you use this task, you can choose which segment definitions you want to export, what merge policy you want to use, as well as which dataset you want to export the segment definitions to.
+The **[!UICONTROL Run Profile Export]** task lets you run a Profile export job on the specified segment definitions. When you use this task, you can choose which segment definitions you want to export, what merge policy you want to use, as well as which dataset you want to export the segment definitions to.
 
 | Setting | Description |
 | ------- | ----------- |
@@ -174,9 +174,9 @@ The **Run Profile export** task lets you run a Profile export job on the specifi
 
 #### Trigger activation {#trigger-activation}
 
-The **Trigger activation** task lets you activate either audiences or datasets to a specified destination. The available settings differ, depending on the Activation Type selected.
+The **[!UICONTROL Trigger activation]** task lets you activate either audiences or datasets to a specified destination. The available settings differ, depending on the Activation Type selected.
 
-If you select **Dataset**, the following settings are available:
+If you select **[!UICONTROL Dataset]**, the following settings are available:
 
 | Setting | Description |
 | ------- | ----------- |
@@ -184,7 +184,7 @@ If you select **Dataset**, the following settings are available:
 | Destination datasetId | The ID of the dataset you want to export to the destination. |
 | comment | An optional description that you can use to describe the task. |
 
-If you select **Audience**, the following settings are available:
+If you select **[!UICONTROL Audience]**, the following settings are available:
 
 | Setting | Description |
 | ------- | ----------- |
@@ -196,7 +196,7 @@ If you select **Audience**, the following settings are available:
 
 #### Send notification {#send-notification}
 
-The **Send notification** task lets you send a notification to specified users on Experience Platform.
+The **[!UICONTROL Send notification]** task lets you send a notification to specified users on Experience Platform.
 
 | Setting | Description |
 | ------- | ----------- |
@@ -209,7 +209,7 @@ The **Send notification** task lets you send a notification to specified users o
 
 #### Wait {#wait}
 
-The **Wait** task causes the process execution to be paused for the specified amount of time.
+The **[!UICONTROL Wait]** task causes the process execution to be paused for the specified amount of time.
 
 | Setting | Description |
 | ------- | ----------- |
@@ -218,7 +218,7 @@ The **Wait** task causes the process execution to be paused for the specified am
 
 ## Runs {#runs}
 
-The **Runs** page displays a list of runs for the selected process. You can either see the runs in **Grid** view or **Graph** view. 
+The **[!UICONTROL Runs]** page displays a list of runs for the selected process. You can either see the runs in **[!UICONTROL Grid]** view or **[!UICONTROL Graph]** view. 
 
 ![The Runs page is displayed, showing a list of runs for the process.](/help/process-manager/images/ui/runs.png)
 
