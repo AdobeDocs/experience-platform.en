@@ -93,7 +93,13 @@ Once you've added all the information, select **[!UICONTROL Create schedule]** t
 
 ### Tasks {#tasks}
 
-This section lists out all the available tasks that you can use with Process Manager. When adding a task to the canvas, the following settings are common to all tasks:
+>[!IMPORTANT]
+>
+>When adding tasks to your process, the underlying guardrails and limits still apply to the tasks.
+
+This section lists out all the currently available tasks that you can use with Process Manager. The available tasks list is constantly being updated. If a task you want to use is not available, contact Adobe Customer Care for more information.
+
+When adding a task to the canvas, the following settings are common to all tasks:
 
 | Setting | Description |
 | ------- | ----------- |
