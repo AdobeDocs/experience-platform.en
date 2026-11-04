@@ -177,11 +177,11 @@ For organizations without an Adobe Experience Platform application (such as Real
 
 ## Exploring the license usage dashboard {#explore}
 
-To view your organization's license entitlements and usage, use the **[!UICONTROL License usage]** dashboard.
+To view your organization's license entitlements and usage, use the **[!UICONTROL License Usage]** dashboard. If your organization is eligible for AI credits, you can also view its AI credit entitlement and consumption.
 
-The dashboard is not enabled by default. You must have the **[!UICONTROL View License Usage Dashboard]** permission to access it. To set up access, follow the guidance below that matches your organization's current and previous Experience Platform application licenses.
+The dashboard is not enabled by default. You must have the **[!UICONTROL View License Usage Dashboard]** permission to access it. To set up access, follow the guidance below based on whether your organization currently licenses, has never licensed, or previously licensed an Experience Platform application.
 
-After you have access, sign in to Adobe Experience Platform and navigate to **[!UICONTROL Administration]** > **[!UICONTROL License Usage]** in the left navigation. The dashboard displays the license usage metrics available to your organization.
+After you have access, sign in to Adobe Experience Platform and navigate to **[!UICONTROL Administration]** > **[!UICONTROL License Usage]** in the left navigation. The dashboard displays the metrics available to your organization.
 
 ### Your organization currently licenses an Experience Platform application {#current-aep-customers}
 
@@ -193,15 +193,13 @@ Administrators can grant this permission under **[!UICONTROL Dashboards]** in Ex
 
 If your organization does not currently license and has never licensed Adobe Real-Time Customer Data Platform, Adobe Journey Optimizer, or Customer Journey Analytics, an administrator must configure access through Adobe Admin Console.
 
-As an administrator, sign in to [Adobe Admin Console](https://adminconsole.adobe.com) and locate the **[!UICONTROL Adobe Experience Platform]** product card, if provisioned for your organization. [Add the permission to a product profile](../../access-control/ui/permissions.md), then [assign users to that product profile](../../access-control/ui/users.md). Use the **[!UICONTROL View License Usage Dashboard]** permission to grant access to users who need to view AI credit consumption.
-
-Users assigned to the configured product profile can then access the license usage dashboard to view AI credit consumption.
+As an administrator, sign in to [Adobe Admin Console](https://adminconsole.adobe.com) and locate the **[!UICONTROL Adobe Experience Platform]** product card, if provisioned for your organization. [Add the **[!UICONTROL View License Usage Dashboard]** permission to a product profile](../../access-control/ui/permissions.md), then [assign users to that product profile](../../access-control/ui/users.md).
 
 ### Your organization previously licensed an Experience Platform application {#former-aep-customers}
 
-If your organization previously licensed Adobe Real-Time Customer Data Platform, Adobe Journey Optimizer, or Customer Journey Analytics but no longer does, you can generally access AI credit reporting through the same license usage dashboard. Use the dashboard navigation described above to view your usage.
+If your organization previously licensed Adobe Real-Time Customer Data Platform, Adobe Journey Optimizer, or Customer Journey Analytics but no longer does, you can generally access AI credit reporting through the license usage dashboard.
 
-Historical entitlements can cause entitlement or access-control issues that prevent the dashboard or required permission from appearing correctly. If you cannot access the dashboard, do not see the **[!UICONTROL View License Usage Dashboard]** permission, or receive an access error, contact Adobe Support to investigate your organization's entitlement configuration.
+Historical entitlements can cause access issues that prevent the dashboard or required permission from appearing correctly. If you cannot access the dashboard, do not see the **[!UICONTROL View License Usage Dashboard]** permission, or receive an access error, contact Adobe Support to investigate your organization's entitlement configuration.
 
 ## [!UICONTROL Metrics] tab {#metrics-tab}
 
