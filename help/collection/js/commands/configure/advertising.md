@@ -47,8 +47,8 @@ alloy("configure", {
 Set `advertising.enabled` to `false` to turn off Adobe Advertising without removing the Advertising component from your library. When `enabled` is `false`, Web SDK:
 
 * Sends no click-through or view-through conversions.
-* Adds no advertising IDs to events, even when a `sendEvent` command sets [`handleAdvertisingData`](#handle-advertising-data).
-* Loads no advertising scripts or iframes.
+* Adds no advertising IDs to events, even when a `sendEvent` command sets [`handleAdvertisingData`](#handle-advertising-data) to `"auto"` or `"wait"`.
+* Makes no Surfer ID, ID5, or RampID calls, so no advertising scripts or iframes are loaded.
 * Does not read or write advertising cookies. Existing advertising cookies are left unchanged.
 
 Web SDK ignores the other properties in the `advertising` object while `enabled` is `false`.
