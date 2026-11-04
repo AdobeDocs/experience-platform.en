@@ -13,6 +13,17 @@ role_v2:
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.37.1 - November 4, 2026
+
+- Fixed an issue where npm installations of Web SDK reported `__VERSION__` instead of the library version in `xdm.implementationDetails.version`, the [`getLibraryInfo`](commands/getlibraryinfo.md) command, Media Analytics tracker metadata, and rule evaluation. The CDN-hosted library and the Web SDK tag extension were not affected.
+
+## Version 2.37.0 - November 2, 2026
+
+- Added the [`advertising.enabled`](commands/configure/advertising.md#enabled) configuration option, which turns off Adobe Advertising at runtime without removing the Advertising component from your build. When set to `false`, Web SDK sends no advertising conversions, adds no advertising IDs to events, loads no advertising scripts or iframes, and does not read or write advertising cookies.
+- Fixed an issue where event history operations from matching rules were not recorded for outgoing events that do not request personalization, such as content card display, interact, and dismiss events. For example, an Adobe Journey Optimizer content card that is disqualified on dismissal now stays hidden after a visitor dismisses it, without a manual `evaluateRulesets` call.
+- Fixed an issue where Web SDK created and stored an Assurance validation client ID even when no Assurance validation session was active.
+- Fixed an issue introduced in version 2.35.0 where [monitoring hooks](monitoring-hooks.md) did not fire for monitors added to `__alloyMonitors` after the Web SDK instance was created. This fix also applies to the Web SDK tag extension's [[!UICONTROL Monitoring hook triggered]](/help/tags/extensions/client/web-sdk/event-types.md#monitoring-hook-triggered) event type.
+
 ## Version 2.36.1 - October 14, 2026
 
 - Events sent with [`documentUnloading`](/help/collection/js/commands/sendevent/documentunloading.md) set to `true` now use `keepalive` when they are sent to the `interact` endpoint using `fetch`, such as before an identity is established. This change lets the request finish even if the visitor navigates away from the page. If the browser rejects the `keepalive` request because the page's in-flight `keepalive` data would exceed 64 KB, Web SDK retries it as a standard `fetch` request.

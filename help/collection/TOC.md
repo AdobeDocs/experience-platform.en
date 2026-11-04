@@ -38,6 +38,7 @@ nudge: true
     + [applyResponse](js/commands/applyresponse.md)
     + configure {#configure}
       + [Overview](js/commands/configure/overview.md)
+      + [advertising](js/commands/configure/advertising.md)
       + [autoCollectPropositionInteractions](js/commands/configure/autocollectpropositioninteractions.md)
       + [clickCollection](js/commands/configure/clickcollection.md)
       + [clickCollectionEnabled](js/commands/configure/clickcollectionenabled.md)
