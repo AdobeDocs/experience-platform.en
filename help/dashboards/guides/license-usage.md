@@ -177,7 +177,7 @@ For organizations without an Adobe Experience Platform application (such as Real
 
 ## Exploring the license usage dashboard {#explore}
 
-To view your organization's license entitlements and usage, use the **[!UICONTROL License Usage]** dashboard. If your organization is eligible for AI credits, you can also view its AI credit entitlement and consumption.
+To view your organization's license entitlements and usage, use the **[!UICONTROL License Usage]** dashboard. If your organization participates in the Adobe Experience Platform Agents usage-bound trial or licenses Adobe Experience Platform Agents, you can also view its AI credit entitlement and consumption.
 
 The dashboard is not enabled by default. You must have the **[!UICONTROL View License Usage Dashboard]** permission to access it. To set up access, follow the guidance below based on whether your organization currently licenses, has never licensed, or previously licensed an Experience Platform application.
 
@@ -193,7 +193,7 @@ Administrators can grant this permission under **[!UICONTROL Dashboards]** in Ex
 
 If your organization does not currently license and has never licensed Adobe Real-Time Customer Data Platform, Adobe Journey Optimizer, or Customer Journey Analytics, an administrator must configure access through Adobe Admin Console.
 
-As an administrator, sign in to [Adobe Admin Console](https://adminconsole.adobe.com) and locate the **[!UICONTROL Adobe Experience Platform]** product card, if provisioned for your organization. [Add the **[!UICONTROL View License Usage Dashboard]** permission to a product profile](../../access-control/ui/permissions.md), then [assign users to that product profile](../../access-control/ui/users.md).
+As an administrator, sign in to [Adobe Admin Console](https://adminconsole.adobe.com) and locate the **[!UICONTROL Adobe Experience Platform]** product card, if provisioned for your organization. [Add the **[!UICONTROL View License Usage Dashboard]** permission to a product profile](../../access-control/ui/permissions.md), then [assign users to that product profile](../../access-control/ui/users.md). After access is configured, use the dashboard navigation described above to view AI credit consumption.
 
 ### Your organization previously licensed an Experience Platform application {#former-aep-customers}
 
