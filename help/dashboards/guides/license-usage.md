@@ -177,11 +177,11 @@ For organizations without an Adobe Experience Platform application (such as Real
 
 ## Exploring the license usage dashboard {#explore}
 
-To view your organization's AI credit entitlement and consumption, use the [!UICONTROL License usage] dashboard. Eligible organizations can access AI credit reporting whether or not they currently license Adobe Real-Time Customer Data Platform, Adobe Journey Optimizer, or Customer Journey Analytics.
+To view your organization's license entitlements and usage, use the **[!UICONTROL License usage]** dashboard.
 
-The dashboard is not enabled by default. You must have the **[!UICONTROL View License Usage Dashboard]** permission to access it. Follow the access guidance below based on whether your organization currently licenses, has never licensed, or previously licensed any of these applications.
+The dashboard is not enabled by default. You must have the **[!UICONTROL View License Usage Dashboard]** permission to access it. To set up access, follow the guidance below that matches your organization's current and previous Experience Platform application licenses.
 
-After you have access, sign in to Adobe Experience Platform and navigate to **[!UICONTROL Administration]** > **[!UICONTROL License Usage]** in the left navigation. The dashboard opens with license usage metrics for your organization, including **[!UICONTROL AI credits]** when available. The following sections describe the **[!UICONTROL Metrics]** and **[!UICONTROL Products]** tabs.
+After you have access, sign in to Adobe Experience Platform and navigate to **[!UICONTROL Administration]** > **[!UICONTROL License Usage]** in the left navigation. The dashboard displays the license usage metrics available to your organization.
 
 ### Your organization currently licenses an Experience Platform application {#current-aep-customers}
 
