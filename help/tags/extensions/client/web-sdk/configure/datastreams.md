@@ -45,8 +45,14 @@ This configuration section allows you to determine which [datastream](/help/data
 
 When selecting datastreams, you can do so for each [environment](/help/tags/ui/publishing/environments.md) ([!UICONTROL Development], [!UICONTROL Staging], and [!UICONTROL Production]). These fields are valuable when you want to separate data sent between development, staging, and production environments. It enables a convenient workflow where you do not need to worry about sending data to the wrong datastream, as long as you install the correct tag loader in each respective environment.
 
-You can populate datastream IDs using one of the following methods:
+Each environment has its own field: **[!UICONTROL Production datastream]**, **[!UICONTROL Staging datastream]**, and **[!UICONTROL Development datastream]**. The production datastream is required. If you leave the staging or development field empty, that environment uses the production datastream.
 
-* **[!UICONTROL Choose from list]**: Each environment contains two drop-down menus, allowing you to select the sandbox and datastream for the selected environment. The values in each drop-down menu depend on your configured [datastreams](/help/datastreams/overview.md) within each respective [sandbox](/help/sandboxes/ui/overview.md).
+You can populate each field using any of the following methods:
 
-* **[!UICONTROL Enter values]**: As an alternative to using drop-down menus to select the desired datastream, you can manually specify the desired datastream ID directly. Each environment allows you to directly input a datastream ID, or populate this field using a [data element](/help/tags/ui/managing-resources/data-elements.md).
+* **Choose a datastream**: Select the field to view the [datastreams](/help/datastreams/overview.md) in every [sandbox](/help/sandboxes/ui/overview.md) that you have access to, grouped by sandbox. To filter the list, type part of a datastream name or ID.
+* **Enter a datastream ID**: Type or paste a datastream ID directly into the field.
+* **Use a data element**: Select the data element icon next to the field to choose a [data element](/help/tags/ui/managing-resources/data-elements.md) that returns a datastream ID.
+
+When you choose a datastream from the list, the extension saves the datastream ID along with its sandbox. Datastream IDs and data elements that you enter are saved exactly as entered. Next to each field, select the refresh icon to reload the list of datastreams, or the copy icon to copy the datastream ID to your clipboard.
+
+To choose datastreams from the list, your role must include the **[!UICONTROL View Datastreams]** permission, along with access to the relevant sandboxes. See the [resource permissions](/help/access-control/home.md#permissions) reference for more information. Datastream suggestions are also unavailable for additional Web SDK instances that use a different organization than the one that you are signed in to. In these cases, you can still enter a datastream ID or select a data element.
