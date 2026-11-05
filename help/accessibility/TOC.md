@@ -2,7 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform Accessibility
 user-guide-description: Learn about the Experience Platform commitment to provide accessible and inclusive features to all individuals.
-nudge: true
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+topic_v2:
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+    internal-label: Accessibility
 ---
 
 # Adobe Experience Platform Accessibility {#accessibility}

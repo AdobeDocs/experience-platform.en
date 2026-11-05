@@ -4,7 +4,6 @@ user-guide-title: Dataflows Guide
 user-guide-description: Learn about dataflows and how to configure them across different services.
 feature: Dataflows
 role: Developer
-nudge: true
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
