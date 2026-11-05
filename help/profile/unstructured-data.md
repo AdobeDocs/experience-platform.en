@@ -3,7 +3,7 @@ title: Real-Time Customer Profile with Unstructured Data
 description: Learn how to use Real-Time Customer Profile with unstructured data, which lets you have access to unprocessed data. This lets you better personalize conversations since the customer context can be shared across multiple platforms.
 ---
 
-# Personalize customer conversations using Real-Time Customer Profile with unstructured data
+# Personalize customer conversations and activate customer intent using Real-Time Customer Profile with unstructured data
 
 >[!AVAILABILITY]
 >
