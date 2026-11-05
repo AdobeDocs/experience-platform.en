@@ -1,5 +1,4 @@
 ---
-solution: Data Collection
 audience: user
 user-guide-title: Adobe Experience Platform Datastreams Help
 breadcrumb-title: Datastreams Guide
