@@ -454,6 +454,18 @@ Currently, two methods of evaluation are supported for audience compositions: sc
 | Dependency on batch segmentation | Runs immediately after batch segmentation | Does not depend on batch segmentation |
 | Maximum number of compositions evaluated per day | 200 | 500 |
 | Monitoring available | Yes | Yes |
+| Consumes on-demand runs | No | Yes |
+
+### Guardrails {#guardrails}
+
+The following section lays out the guardrails for scheduled evaluation and on-demand evaluation for audience composition.
+
+- The maximum number of scheduled compositions is **200**.
+- The maximum number of on-demand composition evaluations per day is **500**.
+- The **combined** daily evaluation capacity is **700** evaluations, with 200 scheduled evaluations and 500 on-demand evaluations.
+- The included amount of on-demand runs is **1000**.
+
+If you require more than 1000 on-demand runs, you can purchase additional runs if you have access to Experience Platform Growth Credits. For more information, read the [Capacity overview](/help/landing/license-usage-and-guardrails/capacity.md).
 
 ### Scheduled evaluation {#scheduled-evaluation}
 
@@ -463,9 +475,11 @@ To enable an audience composition for scheduled evaluation, after selecting **[!
 
 ![The Publish composition popover is displayed, letting you choose if you want to add the composition to the system schedule.](/help/segmentation/images/ui/audience-composition/publish-composition-scheduled.png)
 
+If an audience composition is added to a scheduled evaluation schedule, the composition **can** still be evaluated using [on-demand evaluation](#on-demand-evaluation).
+
 ### On-demand evaluation {#on-demand-evaluation}
 
-On-demand evaluation lets you explicitly request for an audience composition to be evaluated. As opposed to scheduled evaluation, on-demand evaluation does not require the composition to be evaluated every day. The maximum number of compositions that can be evaluated using on-demand evaluation per day is **500**.
+On-demand evaluation lets you explicitly request for an audience composition to be evaluated. As opposed to scheduled evaluation, on-demand evaluation does not require the composition to be evaluated every day. This evaluation job is **asynchronous**. The maximum number of compositions that can be evaluated using on-demand evaluation per day is **500**.
 
 To evaluate an audience composition with on-demand evaluation, go to the **[!UICONTROL Compositions]** section of Audiences, choose the composition you want to evaluate, and select **[!UICONTROL Run now]**. You can **only** select one composition at a time for on-demand evaluation.
 
@@ -474,6 +488,22 @@ To evaluate an audience composition with on-demand evaluation, go to the **[!UIC
 The **[!UICONTROL On-demand audience composition evaluation]** popover appears, confirming which composition you want to evaluate on, and the number of runs that will be consumed. Select **[!UICONTROL Run now]** to continue with the evaluation.
 
 ![The On-demand audience composition evaluation popover is displayed, showing ](/help/segmentation/images/ui/audience-composition/on-demand.png)
+
+After selecting **[!UICONTROL Run now]**, the on-demand evaluation is added to an asynchronous queue. If no on-demand evaluation job is currently running, the on-demand evaluation job will automatically start to evaluate.
+
++++ Example of queued evaluation requests
+
+At 10:00 AM, a customer requests on-demand evaluation of both Composition A and Composition B. These requests are now processed by the asynchronous evaluation job. While that evaluation job is running, the customer submits another request to evaluate Composition C. 
+
+Since an evaluation job is already running, the request to evaluate Composition C is queued. Once the previous evaluation job completes, the queued evaluation job for Composition C will automatically be eligible to run. 
+
++++
+
+After a composition has been evaluated using on-demand evaluation, the resulting **audience data** can then be activated to a downstream destination. This lets you use the evaluated audience the same day, since you don't need to wait for the next daily scheduled evaluation cycle. 
+
+However, the **audience membership data** is not written to the profiles upon the completion of the on-demand evaluation. The membership data is only written to profiles once every 24 hours, and is reconciled as part of the scheduled batch segmentation job. 
+
+For example, if a customer submits an on-demand evaluation request that successfully completes at 11:15AM, the resulting **audience** will be available to activate to downstream destinations. However, the corresponding **audience membership** will not be immediately reflected in the profile, as that information is reconciled with the next scheduled batch segmentation job, which occurs the next day.
 
 ## Next steps
 
