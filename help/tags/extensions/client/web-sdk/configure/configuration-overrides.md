@@ -40,6 +40,12 @@ To enable datastream overrides in the tag extension, select **[!UICONTROL Enable
 
 After you enable the datastream configuration overrides, you can configure the overrides for each service described below. These datastream override settings override any server-side datastream configurations and rules for the selected environment.
 
+## Datastream {#datastream}
+
+When you configure overrides in the [[!UICONTROL Send event]](../actions/send-event.md), [[!UICONTROL Send media event]](../actions/send-media-event.md), [[!UICONTROL Set consent]](../actions/set-consent.md), or [[!UICONTROL Redirect with identity]](../actions/redirect-with-identity.md) actions, a **[!UICONTROL Datastream]** field appears above the service overrides. Use this field to send the action's data to a different datastream than the one configured for the environment. This field is not available in the extension configuration.
+
+The **[!UICONTROL Datastream]** field works the same way as the fields in the [[!UICONTROL Datastreams]](datastreams.md) section. You can choose a datastream from any sandbox that you have access to, filter the list by datastream name or ID, enter a datastream ID, or select a data element. The field description shows the datastream currently configured for the environment.
+
 ## Adobe Analytics
 
 Override data routing to the Adobe Analytics service.

@@ -61,6 +61,18 @@ topic_v2:
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Adobe Experience Platform Web SDK release notes](/help/collection/js/release-notes.md).
 
+## Version 2.39.1 - November 4, 2026
+
+- Contains [version 2.37.1](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
+
+## Version 2.39.0 - November 2, 2026
+
+- Contains [version 2.37.0](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
+- Added an [[!UICONTROL Advertising]](configure/advertising.md#advertising-enabled) setting that turns off Advertising at runtime without removing it from your library. Select **[!UICONTROL Enabled]** (default), **[!UICONTROL Disabled]**, or a data element that returns a boolean.
+- Replaced the **[!UICONTROL Choose from list]** and **[!UICONTROL Enter values]** options and the sandbox drop-down menus in the [[!UICONTROL Datastreams]](configure/datastreams.md) section with a single field for each environment. Select a datastream from any sandbox that you have access to, enter a datastream ID, or select a data element. [Datastream overrides](configure/configuration-overrides.md#datastream) in actions use the same field, and existing settings are preserved.
+- Fixed an issue where the [!UICONTROL Development] and [!UICONTROL Staging] datastream fields disappeared when their saved sandbox was missing or no longer available.
+- Updated the extension's user interface to Spectrum 2.
+
 ## Version 2.38.2 - October 14, 2026
 
 - Contains [version 2.36.1](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.

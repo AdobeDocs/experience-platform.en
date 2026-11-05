@@ -1,6 +1,6 @@
 ---
 title: Adobe Advertising configuration settings
-description: Enable or disable Demand-side Platform functionality.
+description: Turn Adobe Advertising on or off and configure Demand-side Platform functionality.
 exl-id: 594fd75d-bb13-4146-9105-1398e24c4c16
 TQID: 'https://experienceleague.adobe.com/LgIPs8Gke0ApLPRaiegkbd-sFJUnHLQsqHqn0GfajNI'
 product_v2:
@@ -32,16 +32,12 @@ topic_v2:
 ---
 # Adobe Advertising configuration settings {#advertising}
 
->[!AVAILABILITY]
->
->Adobe Advertising for the Web SDK is currently in **beta**. The functionality and documentation are subject to change.
-
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_advertising"
 >title="Adobe Advertising"
 >abstract="Configure settings for Adobe Advertising integrations. Note that no advertising configuration is necessary to enable click-through measurement. Search, Social, and Commerce clients have no further action required; however, Demand-side Platform (DSP) users need to configure advertisers in this section to measure view-through conversions."
 
-The **[!UICONTROL Adobe Advertising]** section lets you enable or disable Demand-side Platform (DSP) functionality if used in your implementation. You only need to set this field if your implementation uses a DSP.
+The **[!UICONTROL Adobe Advertising]** section lets you turn Adobe Advertising on or off and enable or disable Demand-side Platform (DSP) functionality if used in your implementation.
 
 1. Log in to [CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
@@ -49,9 +45,21 @@ The **[!UICONTROL Adobe Advertising]** section lets you enable or disable Demand
 1. Navigate to **[!UICONTROL Extensions]**, then select **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
 1. Scroll down to the **[!UICONTROL Adobe Advertising]** section.
 
-Currently, there is one option available.
+The following options are available. For equivalent JavaScript library settings, see [`advertising`](/help/collection/js/commands/configure/advertising.md) in the Web SDK documentation.
+
+## [!UICONTROL Advertising] {#advertising-enabled}
+
+A combo box that turns Adobe Advertising on or off at runtime. This setting is available in the Web SDK tag extension version 2.39.0 or later.
+
+* **[!UICONTROL Enabled]**: The default value. Advertising features run as configured.
+* **[!UICONTROL Disabled]**: Turns off Advertising at runtime. Web SDK sends no click-through or view-through conversions, adds no advertising IDs to events, makes no Surfer ID, ID5, or RampID calls, and does not read or write advertising cookies. Existing advertising cookies are left unchanged. The other settings in this section are hidden, but their values are kept and are restored when you select **[!UICONTROL Enabled]** again.
+* **Data element**: Select the data element icon to choose a [data element](/help/tags/ui/managing-resources/data-elements.md) that returns `true` to turn on Advertising or `false` to turn it off. The data element must return a boolean value. Other values, such as the strings `"true"` or `"false"`, cause the Web SDK configuration to fail.
+
+Turning off Advertising with this setting keeps the Advertising code in your library. To remove the Advertising code from the library entirely, deselect **[!UICONTROL Advertising]** under [[!UICONTROL Build options]](custom-build-components.md). Use this setting instead of the build option when you want to turn off Advertising without rebuilding your library, or when you want to turn it on or off conditionally using a data element.
 
 ## [!UICONTROL Adobe Advertising DSP]
+
+You only need to set this field if your implementation uses a DSP. This field is hidden when **[!UICONTROL Advertising]** is set to **[!UICONTROL Disabled]**.
 
 A drop-down menu that enables or disables DSP functionality for Adobe Advertising.
 

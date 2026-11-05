@@ -85,7 +85,7 @@ The following is a side-by-side comparison showing birthday-related fields (with
   "xdm:birthDayAndMonth": {
     "title": "Birth Date",
     "type": "string",
-    "pattern": "[0-1][0-9]-[0-9][0-9]"
+    "pattern": "&#91;0-1&#93;&#91;0-9&#93;-&#91;0-9&#93;&#91;0-9&#93;"
   },
   "xdm:birthYear": {
     "title": "Birth year",
@@ -109,7 +109,7 @@ The following is a side-by-side comparison showing birthday-related fields (with
   "birthDayAndMonth": {
     "title": "Birth Date",
     "type": "string",
-    "pattern": "[0-1][0-9]-[0-9][0-9]",
+    "pattern": "&#91;0-1&#93;&#91;0-9&#93;-&#91;0-9&#93;&#91;0-9&#93;",
     "meta:xdmField": "xdm:birthDayAndMonth",
     "meta:xdmType": "string"
   },
