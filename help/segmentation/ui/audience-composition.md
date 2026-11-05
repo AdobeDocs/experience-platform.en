@@ -469,7 +469,7 @@ If you require more than 1000 on-demand runs, you can purchase additional runs i
 
 ### Scheduled evaluation {#scheduled-evaluation}
 
-Scheduled evaluation evaluates audience compositions once every 24 hours. The evaluation takes part of a system-initiated process that executes immediately after the scheduled batch segmentation job. The scheduled evaluation job can evaluate a maximum of **200** audience compositions at a time.
+Scheduled evaluation evaluates audience compositions once every 24 hours. The evaluation takes part of a system-initiated process that executes immediately after the scheduled batch segmentation job. The scheduled evaluation job can evaluate a maximum of **200** audience compositions.
 
 To enable an audience composition for scheduled evaluation, after selecting **[!UICONTROL Publish]**, enable **[!UICONTROL Schedule this composition]**, and select **[!UICONTROL Batch Segmentation]**.
 
