@@ -6,7 +6,6 @@ user-guide-description: Learn to deploy and manage analytics, marketing, and adv
 feature: Tags
 solution: Experience Platform
 role: Developer
-nudge: true
 ---
 
 # Tags {#tags}

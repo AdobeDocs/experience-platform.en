@@ -5,7 +5,17 @@ breadcrumb-title: Query Service Guide
 user-guide-description: Use standard SQL to query data within the data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-nudge: true
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: f5a6b7c8-5001-4001-9001-500000000001
+    internal-label: Queries
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 
 # Adobe Experience Platform Query Service {#query}
