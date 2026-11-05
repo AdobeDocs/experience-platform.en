@@ -183,13 +183,13 @@ The dashboard is not enabled by default. You must have the **[!UICONTROL View Li
 
 After access is configured, sign in to Adobe Experience Platform and navigate to **[!UICONTROL Administration]** > **[!UICONTROL License Usage]** in the left navigation. The dashboard displays the metrics available to your organization.
 
-### Your organization currently licenses an Experience Platform application {#current-aep-customers}
+### Your organization currently licenses an Experience Platform application {#current-platform-customers}
 
 If your organization currently licenses Adobe Real-Time Customer Data Platform, Adobe Journey Optimizer, or Customer Journey Analytics, ask your Adobe administrator to grant the **[!UICONTROL View License Usage Dashboard]** permission and the required sandbox access if you cannot see the dashboard.
 
 Administrators can grant this permission under **[!UICONTROL Dashboards]** in Experience Platform Permissions. For setup instructions, see the guides on [adding permissions to a role](../../access-control/abac/ui/roles.md#create-new-role), [assigning users to a role](../../access-control/abac/ui/permissions.md#manage-users-for-a-role), and [assigning sandbox access to a role](../../access-control/abac/ui/permissions.md#manage-sandboxes-for-a-role).
 
-### Your organization has never licensed an Experience Platform application {#non-aep-customers}
+### Your organization has never licensed an Experience Platform application {#non-platform-customers}
 
 If your organization does not currently license and has never licensed Adobe Real-Time Customer Data Platform, Adobe Journey Optimizer, or Customer Journey Analytics, an administrator must configure access through Adobe Admin Console.
 
@@ -197,13 +197,13 @@ As an administrator, sign in to [Adobe Admin Console](https://adminconsole.adobe
 
 Under **[!UICONTROL Sandboxes]**, configure sandbox access for the product profile. Under **[!UICONTROL dashboards]**, add the **[!UICONTROL View License Usage Dashboard]** permission. For instructions on editing these settings, see the guide on [managing permissions for a product profile](../../access-control/ui/permissions.md).
 
-<!-- REVIEW: Confirm which sandbox administrators should select for AI Credits reporting when the organization does not currently license an Experience Platform application. -->
+<!-- Question: Which sandbox should administrators select for AI Credits reporting when the organization does not currently license an Experience Platform application? -->
 
 Next, [assign users to the product profile](../../access-control/ui/users.md). After access is configured, use the dashboard navigation described above to view AI credit consumption.
 
-### Your organization previously licensed an Experience Platform application {#former-aep-customers}
+### Your organization previously licensed an Experience Platform application {#former-platform-customers}
 
-If your organization previously licensed Adobe Real-Time Customer Data Platform, Adobe Journey Optimizer, or Customer Journey Analytics but no longer does, administrators must configure sandbox access and the **[!UICONTROL View License Usage Dashboard]** permission through Adobe Admin Console. Follow the [product profile setup instructions above](#non-aep-customers).
+If your organization previously licensed Adobe Real-Time Customer Data Platform, Adobe Journey Optimizer, or Customer Journey Analytics but no longer does, administrators must configure sandbox access and the **[!UICONTROL View License Usage Dashboard]** permission through Adobe Admin Console. Follow the [product profile setup instructions above](#non-platform-customers).
 
 Historical entitlements can cause access issues that prevent the dashboard or required permission from appearing correctly. If you cannot access the dashboard, do not see the **[!UICONTROL View License Usage Dashboard]** permission, or receive an access error, contact Adobe Support to investigate your organization's entitlement configuration.
 
