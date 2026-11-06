@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
 title: Attribute-based Access Control Create a Role
-description: Manage roles through the Permissions interface in Adobe Experience Cloud.
+description: Manage roles through the Permissions interface in Adobe CX Enterprise.
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 TQID: 'https://experienceleague.adobe.com/PxhSLqPYfsF5HEGhV4Arqy9JM9aZfD05GDIRyfk4Rwg'
 product_v2:
@@ -28,7 +28,7 @@ topic_v2:
 
 <!-- UPDATE ROLES WITH A MORE COMPREHENSIVE EXPLANATION -->
 
-To begin managing roles, navigate to **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"} and select **[!UICONTROL Roles]** in the left panel.
+To begin managing roles, navigate to **[!UICONTROL Permissions]** in [Adobe CX Enterprise](https://experience.adobe.com/){target="_blank"} and select **[!UICONTROL Roles]** in the left panel.
 
 ![The Roles workspace within Permissions.](../../images/ui/roles/roles-overview.png)
 

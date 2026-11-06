@@ -2,9 +2,18 @@
 title: setDebug()
 description: Enable debugging on your site through the browser console.
 exl-id: c042d521-46b4-441b-a91f-685e0428e4dd
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `setDebug()`
 

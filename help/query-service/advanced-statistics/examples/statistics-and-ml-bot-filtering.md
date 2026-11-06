@@ -27,7 +27,7 @@ This document provides a comprehensive guide to identifying and filtering bot ac
 
 Bot activity can be identified by detecting spikes in user actions within specific time intervals. For example, excessive clicks performed by a single user in a short timeframe could indicate bot behavior. The two key attributes used in bot filtering are:
 
-- **ECID (Experience Cloud Visitor ID):** A universal, persistent ID that identifies visitors.
+- **ECID:** A universal, persistent ID that identifies visitors.
 - **Timestamp:** The time and date when an activity occurs on the website.
 
 The examples below demonstrate how to use SQL and machine learning techniques to identify, refine, and predict bot activity. Use these methods to improve your data integrity and ensure actionable analytics.

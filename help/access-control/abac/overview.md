@@ -76,9 +76,9 @@ Attribute-based access control involves the following components:
 
 >[!IMPORTANT]
 >
->Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe Experience Cloud, instead of Roles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
+>Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe CX Enterprise, instead of Roles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
 
-Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application. 
+Permissions is the area of CX Enterprise where administrators can define user roles and access policies to manage access permissions for features and objects within a product application.
 
 Through Permissions, you can create and manage roles, as well as assign the desired resource permissions for these roles. Permissions also allow you to manage the labels, sandboxes, and users associated with a specific role. For more information, see the [Permissions guide](ui/browse.md).
 
@@ -92,7 +92,7 @@ The following sections provide information on how attribute-based access control
 
 ### Access control
 
-Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) roles to link users with permissions and sandboxes. Permissions control access to a variety of Experience Platform capabilities, including data modeling, profile management, and sandbox administration. Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe Experience Cloud, instead of Roles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
+Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) roles to link users with permissions and sandboxes. Permissions control access to a variety of Experience Platform capabilities, including data modeling, profile management, and sandbox administration. Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe CX Enterprise, instead of Roles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
 
 There is limited availability to attribute-based access control for customers who purchase Healthcare and/or Privacy Shields. The features of this functionality include:
 

@@ -121,7 +121,7 @@ For more information, read the [Destinations overview](/help/destinations/home.m
 
 ## [!DNL Privacy Service] {#privacy}
 
-Several legal and organizational regulations give users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+Several legal and organizational regulations give users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe CX Enterprise applications, facilitating automated compliance with legal and organizational privacy regulations.
 
 **New features**
 

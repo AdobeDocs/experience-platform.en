@@ -2,18 +2,16 @@
 title: Remove Resources from a Library
 description: Learn how to remove resources from a tag library.
 exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-    internal-label: User
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-    internal-label: Admin
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-    internal-label: Leader
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+subfeature_v2:
+  - id: 1a2b3c4d-0004-4004-8004-000000000004
+    internal-label: Data collection tags publishing flow
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Remove resources from a library
 

@@ -4,37 +4,31 @@ description: Learn about the Adobe Experience Cloud ID Service tag extension in 
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
 TQID: 'https://experienceleague.adobe.com/p0fm5HTNKzXVXYxi2mvAhAIHG46WdcWApvuQ0eGnFLo'
 product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-    internal-label: Advertising
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
-    internal-label: Audience Manager
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
-    internal-label: Pass
+  - id: e1971122-7081-4556-9222-8a31bd71800c
+    internal-label: Experience Cloud Services
 feature_v2:
-  - id: c975b431-530e-4c29-9216-0301b9e204c1
-    internal-label: Authentication
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-    internal-label: User
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-    internal-label: Admin
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-    internal-label: Leader
+  - id: a50ad69b-1331-40e9-b634-531a085a6a54
+    internal-label: Identities
+  - id: 6f307efa-2798-5b6d-8079-f765b66875c1
+    internal-label: Cookies
+subfeature_v2:
+  - id: 1a2b3c4d-0003-4003-8003-000000000003
+    internal-label: Data collection tags extensions
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-    internal-label: Customer experience
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Adobe Experience Cloud ID Service extension overview
 
@@ -56,13 +50,13 @@ The following configuration options are available:
 
 ### Experience Cloud Organization ID
 
-The ID for your Experience Cloud Organization.
+The ID for your CX Enterprise Organization.
 
 Your ID is a 24-character, alphanumeric string followed by `@AdobeOrg`. If you do not know this ID, contact Customer Care.
 
 ### Exclude specific paths
 
-The Experience Cloud ID does not load if the URL matches any of the specified paths.
+The Visitor ID Service does not load if the URL matches any of the specified paths.
 
 (Optional) Enable Regex if this is a regular expression.
 
@@ -112,7 +106,7 @@ Define which categories are approved or denied when no preference has been set b
 
 ### Variables
 
-Set name-value pairs as Experience Cloud ID instance properties. Use the drop-down to select a variable, then type or select a value. For information about each variable, refer to the [Visitor ID Service documentation](https://experiencecloud.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html).
+Set name-value pairs as Visitor ID Service instance properties. Use the drop-down to select a variable, then type or select a value. For information about each variable, refer to the [Visitor ID Service documentation](https://experiencecloud.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html).
 
 ## Experience Cloud ID extension action types
 

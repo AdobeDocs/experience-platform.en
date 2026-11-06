@@ -74,7 +74,7 @@ Once subscribers have been added successfully, they will receiving email notific
 
 ## Enable email alerts {#enable-email}
 
-To have alert notifications delivered to your inbox, select the bell icon (![bell icon](/help/images/icons/bell.png)) in the upper-right toolbar to open notifications and announcements. From the dropdown, select the settings icon (![settings icon](/help/images/icons/settings.png)) to open Experience Cloud preferences.
+To have alert notifications delivered to your inbox, select the bell icon (![bell icon](/help/images/icons/bell.png)) in the upper-right toolbar to open notifications and announcements. From the dropdown, select the settings icon (![settings icon](/help/images/icons/settings.png)) to open CX Enterprise preferences.
 
 ![Notifications panel with the bell icon and settings icon highlighted.](../images/alerts/ui/edit-preferences.png)
 

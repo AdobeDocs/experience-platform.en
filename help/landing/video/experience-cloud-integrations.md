@@ -1,6 +1,6 @@
 ---
-title: Integrations with Experience Cloud Applications
-description: This video gives an overview of how Adobe Experience Platform integrates with Experience Cloud applications and capabilities such as Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, Customer Attributes, Audience Library, and tags.
+title: Integrations with CX Enterprise Applications
+description: This video gives an overview of how Adobe Experience Platform integrates with CX Enterprise applications and capabilities such as Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, Customer Attributes, Audience Library, and tags.
 kt: 4334
 audience: all
 doc-type: video
@@ -54,8 +54,8 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
     internal-label: Customer profiles
 ---
-# Integrations with Experience Cloud applications
+# Integrations with CX Enterprise applications {#integrations-with-experience-cloud-applications}
 
-This video provides an overview of how Adobe Experience Platform integrates with Adobe Experience Cloud applications and capabilities such as Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, Customer Attributes, Audience Library, and tags.
+This video provides an overview of how Adobe Experience Platform integrates with Adobe CX Enterprise applications and capabilities such as Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, Customer Attributes, Audience Library, and tags.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)

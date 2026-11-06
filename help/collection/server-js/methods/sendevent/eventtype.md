@@ -2,6 +2,18 @@
 title: eventType (Server SDK)
 description: Set the type of event that the Server SDK sends.
 badge: Alpha
+feature_v2:
+  - id: b7798bb6-f089-4907-8492-05fc80e10632
+    internal-label: Server API
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+    internal-label: Data modeling
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `eventType` (Server SDK)
 

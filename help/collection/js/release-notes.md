@@ -1,17 +1,31 @@
 ---
 title: Adobe Experience Platform Web SDK Release Notes
 description: The latest release notes for the Adobe Experience Platform Web SDK.
-keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 
 # Web SDK Release notes
 
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.37.1 - November 4, 2026
+
+- Fixed an issue where npm installations of Web SDK reported `__VERSION__` instead of the library version in `xdm.implementationDetails.version`, the [`getLibraryInfo`](commands/getlibraryinfo.md) command, Media Analytics tracker metadata, and rule evaluation. The CDN-hosted library and the Web SDK tag extension were not affected.
+
+## Version 2.37.0 - November 2, 2026
+
+- Added the [`advertising.enabled`](commands/configure/advertising.md#enabled) configuration option, which turns off Adobe Advertising at runtime without removing the Advertising component from your build. When set to `false`, Web SDK sends no advertising conversions, adds no advertising IDs to events, loads no advertising scripts or iframes, and does not read or write advertising cookies.
+- Fixed an issue where event history operations from matching rules were not recorded for outgoing events that do not request personalization, such as content card display, interact, and dismiss events. For example, an Adobe Journey Optimizer content card that is disqualified on dismissal now stays hidden after a visitor dismisses it, without a manual `evaluateRulesets` call.
+- Fixed an issue where Web SDK created and stored an Assurance validation client ID even when no Assurance validation session was active.
+- Fixed an issue introduced in version 2.35.0 where [monitoring hooks](monitoring-hooks.md) did not fire for monitors added to `__alloyMonitors` after the Web SDK instance was created. This fix also applies to the Web SDK tag extension's [[!UICONTROL Monitoring hook triggered]](/help/tags/extensions/client/web-sdk/event-types.md#monitoring-hook-triggered) event type.
 
 ## Version 2.36.1 - October 14, 2026
 

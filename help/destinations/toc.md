@@ -5,7 +5,6 @@ user-guide-description: Activate your known and unknown data for cross-channel m
 description: This document lists the table of contents for Adobe Experience Platform destinations
 feature: Destinations
 role: Admin,User
-nudge: true
 debug: true
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9

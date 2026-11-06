@@ -3,10 +3,23 @@ audience: user
 user-guide-title: Tags Help
 breadcrumb-title: Tags
 user-guide-description: Learn to deploy and manage analytics, marketing, and advertising tags to power customer experiences.
-feature: Tags
-solution: Data Collection
-role: Developer
-nudge: true
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 
 # Tags {#tags}

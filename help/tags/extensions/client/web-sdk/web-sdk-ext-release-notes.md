@@ -3,63 +3,34 @@ title: Adobe Experience Platform Web SDK Extension Release Notes
 description: Adobe Experience Platform Web SDK Tag Extension
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 TQID: 'https://experienceleague.adobe.com/eilTfCs5SF-W1P4Ik0HN5Biu8uVuWyy7-wJZ4CLrA9I'
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-    internal-label: Advertising
-  - id: cb954087-f4fc-4456-afb9-e939cabcdc79
-    internal-label: Journey Optimizer
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
-    internal-label: Audience Manager
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-    internal-label: Target
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
-  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
-    internal-label: Pass
 feature_v2:
-  - id: a8b0238e-1d43-4679-a3b4-5ba1bad83baa
-    internal-label: Implementation
-  - id: c814092e-2730-45e8-a12d-e084529f52cb
-    internal-label: Destinations
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-    internal-label: Implementation
-  - id: c975b431-530e-4c29-9216-0301b9e204c1
-    internal-label: Authentication
-  - id: d556b755-390a-43f0-be32-a08cf6236126
-    internal-label: Configuration
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
-  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
-    internal-label: Implementations
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-    internal-label: API
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
 subfeature_v2:
-  - id: d2e8a157-b3b0-4143-9ff3-809bf400be56
-    internal-label: Sandboxes
-  - id: df312454-73c4-43f6-a90e-18f5043f074c
-    internal-label: Tags
-  - id: e992d880-33bc-4949-a648-aa7d410276cd
-    internal-label: Validation
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-    internal-label: Implementation
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-    internal-label: Customer experience
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-    internal-label: Data collection
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-    internal-label: Personalization
+  - id: 1a2b3c4d-0003-4003-8003-000000000003
+    internal-label: Data collection tags extensions
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Web SDK tag extension release notes
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Adobe Experience Platform Web SDK release notes](/help/collection/js/release-notes.md).
+
+## Version 2.39.1 - November 4, 2026
+
+- Contains [version 2.37.1](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
+
+## Version 2.39.0 - November 2, 2026
+
+- Contains [version 2.37.0](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
+- Added an [[!UICONTROL Advertising]](configure/advertising.md#advertising-enabled) setting that turns off Advertising at runtime without removing it from your library. Select **[!UICONTROL Enabled]** (default), **[!UICONTROL Disabled]**, or a data element that returns a boolean.
+- Replaced the **[!UICONTROL Choose from list]** and **[!UICONTROL Enter values]** options and the sandbox drop-down menus in the [[!UICONTROL Datastreams]](configure/datastreams.md) section with a single field for each environment. Select a datastream from any sandbox that you have access to, enter a datastream ID, or select a data element. [Datastream overrides](configure/configuration-overrides.md#datastream) in actions use the same field, and existing settings are preserved.
+- Fixed an issue where the [!UICONTROL Development] and [!UICONTROL Staging] datastream fields disappeared when their saved sandbox was missing or no longer available.
+- Updated the extension's user interface to Spectrum 2.
 
 ## Version 2.38.2 - October 14, 2026
 
@@ -229,7 +200,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 **New features**
 
-- [Configuration overrides](configure/configuration-overrides.md) now includes settings to disable Experience Cloud solutions and Adobe Experience Platform services.
+- [Configuration overrides](configure/configuration-overrides.md) now includes settings to disable CX Enterprise solutions and Adobe Experience Platform services.
 - You can now create configuration overrides for media sessions.
 
 Contains version 2.24.0 of the Adobe Experience Platform Web SDK.
