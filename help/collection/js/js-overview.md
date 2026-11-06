@@ -35,13 +35,13 @@ On the server-side, a unified edge gateway and a common platform service framewo
 * Increasing innovation speed;
 * Creating sustained competitive advantages for Adobe customers.
 
-A consolidated edge system lets you manage advertising, marketing, and personalization campaigns across all channels. It reduces the total cost of ownership and supports various data types, enabling you to map your data model for use with multiple Experience Cloud products.
+A consolidated edge system lets you manage advertising, marketing, and personalization campaigns across all channels. It reduces the total cost of ownership and supports various data types, enabling you to map your data model for use with multiple CX Enterprise products.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
 ## Libraries replaced by the Web SDK {#sdks}
 
-The Web SDK is an open-source library built from scratch to integrate functionalities of existing libraries. It addresses issues with tag firing order, version inconsistencies, and dependency management, offering a way to implement many Experience Cloud products. The Web SDK replaces data collection for the following services:
+The Web SDK is an open-source library built from scratch to integrate functionalities of existing libraries. It addresses issues with tag firing order, version inconsistencies, and dependency management, offering a way to implement many CX Enterprise products. The Web SDK replaces data collection for the following services:
 
 * Adobe Visitor ID Service (`VisitorAPI.js`)
 * Adobe Analytics (`AppMeasurement.js`)

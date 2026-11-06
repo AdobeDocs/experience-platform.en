@@ -29,7 +29,7 @@ The `datastreamId` property is a string that determines which [datastream](/help
 
 To locate a datastream ID:
 
-1. Log in to [Adobe Experience Cloud](https://experience.adobe.com) using your Adobe ID credentials.
+1. Log in to [Adobe CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]**.
 1. Use the search field to locate the desired datastream, then copy the ID shown next to it. Alternatively, select the datastream name to see its ID in the right column.
 

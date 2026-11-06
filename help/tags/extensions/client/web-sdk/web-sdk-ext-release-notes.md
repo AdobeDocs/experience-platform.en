@@ -200,7 +200,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 **New features**
 
-- [Configuration overrides](configure/configuration-overrides.md) now includes settings to disable Experience Cloud solutions and Adobe Experience Platform services.
+- [Configuration overrides](configure/configuration-overrides.md) now includes settings to disable CX Enterprise solutions and Adobe Experience Platform services.
 - You can now create configuration overrides for media sessions.
 
 Contains version 2.24.0 of the Adobe Experience Platform Web SDK.

@@ -93,7 +93,7 @@ Company rights apply to permissions that span multiple properties.  These are ou
 | --- | --- |
 | **Manage Properties** | This allows you to perform the following actions for web, mobile, and edge (event forwarding) properties:<ul><li>Create new properties</li><li>Modify metadata and settings at the property level</li><li>Delete properties</li></ul>Administrators usually perform this role. See the [properties documentation](companies-and-properties.md) for more information. |
 | **Develop Extensions** | Grants the ability to create and modify extension packages that are owned by the company, including private releases and requests for public release. |
-| **Manage App Configurations** | This permission is only applicable if you have a license for Adobe Journey Optimizer or another solution that grants access to mobile in-app and push messaging. This allows you to manage the apps that Adobe Experience Cloud knows about along with the necessary push credentials needed to communicate with the Firebase Cloud Messaging service and the Apple Push Notification service. |
+| **Manage App Configurations** | This permission is only applicable if you have a license for Adobe Journey Optimizer or another solution that grants access to mobile in-app and push messaging. This allows you to manage the apps that Adobe CX Enterprise knows about along with the necessary push credentials needed to communicate with the Firebase Cloud Messaging service and the Apple Push Notification service. |
 
 {style="table-layout:auto"}
 

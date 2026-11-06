@@ -31,7 +31,7 @@ The **Logs** tab provides information specific to tags and Adobe Experience Plat
 
 The Logs tab shows information in four columns:
 
-**[!UICONTROL Solutions]:** Displays icons for the Experience Cloud solution affected by the logged item. Hover over the icon for a text description.
+**[!UICONTROL Solutions]:** Displays icons for the CX Enterprise solution affected by the logged item. Hover over the icon for a text description.
 
 **[!UICONTROL Occurred at]:** Shows when the logged issue occured during the session.
 

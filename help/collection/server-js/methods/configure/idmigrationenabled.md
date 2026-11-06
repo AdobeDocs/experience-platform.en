@@ -32,7 +32,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 >[!ENDSHADEBOX]
 
-The `idMigrationEnabled` property lets the Server SDK reuse Experience Cloud IDs (ECIDs) that the legacy Adobe Visitor ID Service (`VisitorAPI.js`) assigned to your visitors. The Visitor ID Service stores the ECID in a cookie named `AMCV_<orgId>`. Reusing these IDs prevents a sharp increase in unique visitors when you move from the Visitor ID Service to the Web SDK or the Server SDK.
+The `idMigrationEnabled` property lets the Server SDK reuse ECIDs that the legacy Adobe Visitor ID Service (`VisitorAPI.js`) assigned to your visitors. The Visitor ID Service stores the ECID in a cookie named `AMCV_<orgId>`. Reusing these IDs prevents a sharp increase in unique visitors when you move from the Visitor ID Service to the Web SDK or the Server SDK.
 
 ## How identity migration works on a server {#how-it-works}
 

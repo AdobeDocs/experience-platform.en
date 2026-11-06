@@ -53,7 +53,7 @@ For example, the Marketing Operations department at a global financial services 
 Before configuring the [!DNL Acxiom Real ID Audience Connection] destination, complete the following prerequisites.
 
 * **Confirm terms of use:** Read and sign [!DNL Acxiom]'s Terms of Use Agreement. You receive the link to the agreement once your executed sales order is complete. Until you sign the agreement, the [!DNL Acxiom Real ID Audience Connection] destination card does not appear in the [!DNL Experience Platform] destination catalog. After you accept and sign the agreement, [!DNL Adobe] completes your setup and the [!DNL Acxiom Real ID Audience Connection] destination card becomes visible.
-* **Know your [!DNL Adobe] organization ID:** Your [!DNL Adobe] organization ID is needed to complete your Terms of Use Agreement. See [!DNL Adobe]'s *Organizations in Experience Cloud* topic for details on how to [view your organization ID](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
+* **Know your [!DNL Adobe] organization ID:** Your [!DNL Adobe] organization ID is needed to complete your Terms of Use Agreement. See [!DNL Adobe]'s *Organizations in CX Enterprise* topic for details on how to [view your organization ID](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
 * **Obtain a license for [!DNL Acxiom]'s [!DNL Real ID] product:** After you obtain a license, make [!DNL Acxiom]'s [!DNL Real ID] available within [!DNL Real-Time CDP]. See [Acxiom Data Enhancement](/help/destinations/catalog/data-partner/acxiom-data-enhancement.md) for details.
 
 ## Supported identities {#supported-identities}

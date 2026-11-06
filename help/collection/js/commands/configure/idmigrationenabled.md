@@ -35,13 +35,13 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 >[!ENDSHADEBOX]
 
-The `idMigrationEnabled` property allows the Web SDK to read AMCV cookies set by previous Adobe Visitor ID Service (ECID). If your organization upgrades your implementation to the Web SDK, this setting allows a smoother transition to the current Experience Platform Identity Service. This setting is valuable so that you don't see a sharp increase in unique visitors when upgrading to the Web SDK.
+The `idMigrationEnabled` property allows the Web SDK to read AMCV cookies set by previous Adobe Visitor ID Service. If your organization upgrades your implementation to the Web SDK, this setting allows a smoother transition to the Web SDK. This setting is valuable so that you don't see a sharp increase in unique visitors when upgrading to the Web SDK.
 
 If your organization runs a fresh Web SDK implementation, enabling this setting has no impact on data collection or visitor identification. There are no downsides to leaving it enabled for all implementations.
 
 ## How identity migration works {#how-it-works}
 
-The Visitor ID Service stores the Experience Cloud ID (ECID) in a cookie called `AMCV_<ORG_ID>`. When `idMigrationEnabled` is `true` (the default), the Web SDK automatically reads the ECID from the AMCV cookie and uses it as the visitor's identity on the first Edge Network request.
+The Visitor ID Service stores the ECID in a cookie called `AMCV_<ORG_ID>`. When `idMigrationEnabled` is `true` (the default), the Web SDK automatically reads the ECID from the AMCV cookie and uses it as the visitor's identity on the first Edge Network request.
 
 1. A visitor arrives on a page that now uses the Web SDK instead of the Visitor ID Service.
 1. The Web SDK checks for an existing `kndctr_` identity cookie (its own cookie format). If none is found, it looks for an `AMCV_` cookie.
@@ -61,7 +61,7 @@ ID migration supports the following transition patterns:
 
 >[!IMPORTANT]
 >
->Do not load the Visitor ID Service (ECID) and the Web SDK on the same page at the same time unless you have confirmed that the AMCV cookie is already set. Running both libraries on a single page can cause race conditions where each library attempts to manage identity independently, potentially generating duplicate or conflicting ECIDs.
+>Do not load the Visitor ID Service and the Web SDK on the same page at the same time unless you have confirmed that the AMCV cookie is already set. Running both libraries on a single page can cause race conditions where each library attempts to manage identity independently, potentially generating duplicate or conflicting ECIDs.
 
 ## Turning off migration {#turn-off-migration}
 
@@ -107,6 +107,6 @@ alloy("configure", {
 });
 ```
 
-## Enable Visitor ID migration using the Web SDK tag extension
+## Enable ECID migration using the Web SDK tag extension {#enable-visitor-id-migration-using-the-web-sdk-tag-extension}
 
 These settings can be configured in the Web SDK tag extension using [Identity configuration settings](/help/tags/extensions/client/web-sdk/configure/identity.md).

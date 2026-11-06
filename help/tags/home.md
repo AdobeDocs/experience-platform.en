@@ -31,9 +31,9 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 Tags in Adobe Experience Platform (formerly known as Adobe Experience Platform Launch) are the next generation of tag management capabilities from Adobe. Tags give customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences.
 
-Tags empower anyone to build and maintain their own integrations, called *extensions*. These extensions are available to [!DNL Adobe Experience Cloud] customers in an app-store experience so they can quickly install, configure, and deploy their tags.
+Tags empower anyone to build and maintain their own integrations, called *extensions*. These extensions are available to [!DNL Adobe CX Enterprise] customers in an app-store experience so they can quickly install, configure, and deploy their tags.
 
-Tags are offered to [!DNL Adobe Experience Cloud] customers as an included value-add feature.
+Tags are offered to [!DNL Adobe CX Enterprise] customers as an included value-add feature.
 
 ## Key benefits {#key-benefits}
 

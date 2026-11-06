@@ -1,6 +1,6 @@
 ---
 title: getIdentity (Server SDK)
-description: Retrieve a visitor's Experience Cloud ID with the Server SDK without sending an event.
+description: Retrieve a visitor's ECID with the Server SDK without sending an event.
 badge: Alpha
 feature_v2:
   - id: b7798bb6-f089-4907-8492-05fc80e10632
@@ -25,7 +25,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 >[!ENDSHADEBOX]
 
-The `getIdentity` method returns the visitor's Experience Cloud ID (ECID) without sending event data. When you call [`sendEvent`](sendevent/overview.md), the Edge Network establishes the visitor's identity automatically, so use `getIdentity` only when your server needs the ECID itself. For example, use it to store the ECID with your own records or to pass it to another system.
+The `getIdentity` method returns the visitor's ECID without sending event data. When you call [`sendEvent`](sendevent/overview.md), the Edge Network establishes the visitor's identity automatically, so use `getIdentity` only when your server needs the ECID itself. For example, use it to store the ECID with your own records or to pass it to another system.
 
 Call `getIdentity` on the visitor's [`forRequest`](forrequest.md) handle:
 

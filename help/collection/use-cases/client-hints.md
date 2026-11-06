@@ -58,9 +58,9 @@ User agent strings have long been used to provide marketing and development team
 
 User agent strings are also used to block spam and filter bots that crawl sites for a variety of additional purposes.
 
-## User agent strings in Adobe Experience Cloud {#user-agent-in-adobe}
+## User agent strings in Adobe CX Enterprise {#user-agent-in-adobe}
 
-Adobe Experience Cloud solutions utilize the user agent strings in various ways.
+Adobe CX Enterprise solutions utilize the user agent strings in various ways.
 
 * Adobe Analytics utilizes the user agent string to augment and derive additional information related to operating systems, browsers, and devices used to visit a website.
 * Adobe Audience Manager and Adobe Target qualify end-users for segmentation and personalization campaigns, based on the information provided by the user agent string.
@@ -126,9 +126,9 @@ High entropy client hints are more detailed information about the client device,
 
 High entropy client hints are disabled by default in Web SDK. To enable them you must manually configure the Web SDK to request high entropy client hints.
 
-## High entropy client hints impact on Experience Cloud solutions {#impact-in-experience-cloud-solutions}
+## High entropy client hints impact on CX Enterprise solutions {#impact-in-experience-cloud-solutions}
 
-Some Adobe Experience Cloud solutions rely on information included in high entropy client hints when generating reports.
+Some Adobe CX Enterprise solutions rely on information included in high entropy client hints when generating reports.
 
 If you do not enable high entropy client hints in your environment, the Adobe Analytics and Audience Manager reports and traits described below will not work.
 

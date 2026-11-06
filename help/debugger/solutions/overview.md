@@ -25,7 +25,7 @@ topic_v2:
 ---
 # Solutions
 
-Adobe Experience Platform Debugger provides a list of **Solutions** in the left navigation. Select a solution to see the results for specific Adobe Experience Cloud technologies.
+Adobe Experience Platform Debugger provides a list of **Solutions** in the left navigation. Select a solution to see the results for specific Adobe CX Enterprise technologies.
 
 ![The list of available solutions shown in the Debugger UI](../images/solutions/overview/left-nav.png)
 

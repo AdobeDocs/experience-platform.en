@@ -30,7 +30,7 @@ Before you set up this destination, complete the following tasks:
 * Contact your [!DNL The Trade Desk] account team to confirm that your organization is enrolled as a data provider.
 * Get your data provider ID from your [!DNL The Trade Desk] account team.
 * Generate an API token in [!DNL Open TTD] with your [!DNL The Trade Desk] API credentials.
-* To activate TDID ([!DNL The Trade Desk] ID), make sure that a mapping between ECID (Experience Cloud ID) and TDID exists in [!DNL Adobe Experience Platform]. To set up the mapping, follow the [prerequisites for The Trade Desk connection](/help/destinations/catalog/advertising/tradedesk.md#prerequisites).
+* To activate TDID ([!DNL The Trade Desk] ID), make sure that a mapping between ECID and TDID exists in [!DNL Adobe Experience Platform]. To set up the mapping, follow the [prerequisites for The Trade Desk connection](/help/destinations/catalog/advertising/tradedesk.md#prerequisites).
 
 ## Supported identities {#supported-identities}
 

@@ -1,6 +1,6 @@
 ---
-title: Experience Cloud Organization Setup
-description: Learn how to register an Adobe Experience Cloud organization in order to start developing extensions for Adobe Experience Platform.
+title: CX Enterprise Organization Setup
+description: Learn how to register an Adobe CX Enterprise organization in order to start developing extensions for Adobe Experience Platform.
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
 TQID: 'https://experienceleague.adobe.com/RFpJ35gtqkOAYoPk4DrU-Akwe0YMqREtqLbh6F3uCsI'
 feature_v2:
@@ -19,11 +19,11 @@ topic_v2:
     internal-label: Administration
 autotag-review: '2026-11-05T22:08:57.077Z'
 ---
-# Experience Cloud organization setup
+# CX Enterprise organization setup {#experience-cloud-organization-setup}
 
-To develop tag extensions in Adobe Experience Platform it is necessary to register an Adobe Experience Cloud organization.
+To develop tag extensions in Adobe Experience Platform it is necessary to register an Adobe CX Enterprise organization.
 
-Experience Cloud customers are assigned an organization when contracts are signed. If you are an existing customer and already have an organization registered then you can skip this document and proceed to the guide on [granting user access for extension development](./access.md). If you are not an Experience Cloud customer, you can have an organization created by joining one of the Adobe partner programs listed below.
+CX Enterprise customers are assigned an organization when contracts are signed. If you are an existing customer and already have an organization registered then you can skip this document and proceed to the guide on [granting user access for extension development](./access.md). If you are not a CX Enterprise customer, you can have an organization created by joining one of the Adobe partner programs listed below.
 
 ## Exchange Partner Program
 
@@ -49,7 +49,7 @@ This program is for consulting firms that help Adobe customers make the most of 
 
 Once your company is in the Exchange Partner program, you can request access to Adobe Solutions by signing in to the [Exchange Partner Site](https://partners.adobe.com/exchangeprogram/experiencecloud) and following the steps below.
 
-If you have an Experience Cloud Account require access the Data Collection UI and Experience Platform UI, please see the [data collection permissions  guide](../../ui/administration/user-permissions.md).
+If you have a CX Enterprise Account require access the Data Collection UI and Experience Platform UI, please see the [data collection permissions  guide](../../ui/administration/user-permissions.md).
 
 ## For independent developers
 

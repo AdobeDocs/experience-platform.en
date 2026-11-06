@@ -201,8 +201,8 @@ The [End User ID Details](/help/xdm/field-groups/event/enduserids.md) field grou
 | `endUserIDs._experience.emailid.authenticatedState` | End user email address ID authenticated state. |
 | `endUserIDs._experience.emailid.id` | End user email address ID. |
 | `endUserIDs._experience.emailid.namespace.code` | End user email address ID namespace code. |
-| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Marketing Cloud ID (MCID) authenticated state. The MCID is now known as the Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID (MCID). The MCID is now known as the Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Marketing Cloud ID (MCID) authenticated state. The MCID is now known as the ECID. |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID (MCID). The MCID is now known as the ECID. |
 | `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Marketing Cloud ID (MCID) namespace code. |
 
 +++
@@ -317,8 +317,8 @@ The [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/event/analytics-ful
 | `endUserIDs._experience.emailid.authenticatedState` | End user email address ID authenticated state. |
 | `endUserIDs._experience.emailid.id` | End user email address ID. |
 | `endUserIDs._experience.emailid.namespace.code` | End user email address ID namespace code. |
-| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Marketing Cloud ID (MCID) authenticated state. The MCID is now known as the Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID (MCID). The MCID is now known as the Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Marketing Cloud ID (MCID) authenticated state. The MCID is now known as the ECID. |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID (MCID). The MCID is now known as the ECID. |
 | `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Marketing Cloud ID (MCID) namespace code. |
 
 +++

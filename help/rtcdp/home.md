@@ -183,7 +183,7 @@ Explore the product documentation links below to understand how the four core pi
 
 ## Featured introductory videos {#featured-videos}
 
-View these three introductory videos to get a deeper understanding of Real-Time CDP, its architecture, interface, and how it fits in within the larger Adobe Experience Cloud.
+View these three introductory videos to get a deeper understanding of Real-Time CDP, its architecture, interface, and how it fits in within the larger Adobe CX Enterprise.
 
 <table style="margin-top: 0 !important">
 <tr>

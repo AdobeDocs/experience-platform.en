@@ -75,7 +75,7 @@ To help you better understand how and when you should use the [!DNL Adobe Campai
 
   For example, a sports attire company wants to leverage the [!DNL Adobe Experience Platform] powered audiences and activate them using [!DNL Adobe Campaign] to reach out to their customer base across the different channels supported by [!DNL Adobe Campaign]. Once the messages are sent, they want to enhance the customer profile in [!DNL Adobe Experience Platform] with experience data from [!DNL Adobe Campaign] such as sends, open and clicks.
 
-  The result is cross channel campaigns that are more consistent across the Adobe Experience cloud ecosystem and a rich customer profile that is quickly adapting and learning.
+  The result is cross channel campaigns that are more consistent across the Adobe CX Enterprise ecosystem and a rich customer profile that is quickly adapting and learning.
 
 
 * In addition to audience activation in Campaign, you can leverage the [!DNL Adobe Campaign Managed Services] destination to bring in additional profile attributes which are tied to a profile on [!DNL Adobe Experience Platform] and have a sync process in place so that they are updated in the [!DNL Adobe Campaign] database. 
@@ -95,7 +95,7 @@ To help you better understand how and when you should use the [!DNL Adobe Campai
 |Target Identity|Description|Considerations|
 |---|---|---|
 |`external_id`|Custom profile IDs|Map a source profile attribute to this target identity, such as an email address or another string or number field. Use an attribute that identifies the corresponding profile in [!DNL Adobe Campaign], such as `loyalty_ID`, `account_ID`, or `customer_ID`. This target identity only accepts source profile attributes.|
-|ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
+|ECID|ECID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 |phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by [!DNL Adobe Experience Platform]. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 |GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|

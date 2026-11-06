@@ -28,7 +28,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Use first-party device IDs in Data Collection
 
-The Experience Platform Edge Network uses Experience Cloud IDs (ECIDs) to identify website visitors. To improve identity durability on owned properties, you can set and manage your own device identifiers, known as first-party device IDs (FPIDs). The Edge Network uses the FPID to seed the ECID that Adobe solutions use.
+The Experience Platform Edge Network uses ECIDs to identify website visitors. To improve identity durability on owned properties, you can set and manage your own device identifiers, known as first-party device IDs (FPIDs). The Edge Network uses the FPID to seed the ECID that Adobe solutions use.
 
 This page assumes that you are familiar with ECIDs and `identityMap`. See [Identity in Data Collection](./overview.md) for more information.
 
@@ -60,7 +60,7 @@ Tradeoffs to using FPIDs include:
 
 ## How FPIDs work {#how-fpids-work}
 
-The FPID passed to Adobe Experience Cloud is converted to an ECID using a deterministic algorithm. Each time the same FPID is sent to the Edge Network, the same ECID is seeded from the FPID. Once the FPID has been used to seed an ECID, it is dropped from the `identityMap` and replaced with the generated ECID. The FPID is not stored in Adobe Experience Platform or Experience Cloud solutions.
+The FPID passed to Adobe CX Enterprise is converted to an ECID using a deterministic algorithm. Each time the same FPID is sent to the Edge Network, the same ECID is seeded from the FPID. Once the FPID has been used to seed an ECID, it is dropped from the `identityMap` and replaced with the generated ECID. The FPID is not stored in Adobe Experience Platform or CX Enterprise solutions.
 
 When both an ECID and FPID exist, the ECID is always used to identify the user first. This prioritization ensures that when an existing ECID is present in the browser cookie store, it remains the primary identifier and existing visitor counts do not risk inflation. For existing users, the FPID does not become the primary identity until the ECID expires or is deleted as a result of browser policy or manual action.
 
@@ -218,6 +218,6 @@ If you are migrating to first-party device IDs from a previous implementation, i
 | --- | --- |
 | First visit | Assume you have not yet started setting the FPID cookie. The ECID contained in the [AMCV cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) is the identifier used to identify the visitor. |
 | Second visit | Rollout of the FPID solution has started. The existing ECID is still present and remains the primary identifier for visitor identification. |
-| Third visit | Between the second and third visit, enough time has elapsed that the ECID has been deleted due to browser policy. However, because the FPID was set using a DNS `A` record, the FPID persists. The FPID is now considered the primary ID and is used to seed the ECID, which is written to the end-user device. The user is now considered a new visitor in Adobe Experience Platform and Experience Cloud solutions. |
-| Fourth visit | Between the third and fourth visits, enough time has elapsed that the ECID has been deleted due to browser policy. Like the previous visit, the FPID remains due to the manner in which it was set. This time, the same ECID is generated as the previous visit. The user is seen throughout Adobe Experience Platform and Experience Cloud solutions as the same user as the previous visit. |
-| Fifth visit | Between the fourth and fifth visits, the end user cleared all the cookies in the browser. A new FPID is generated and used to seed the creation of a new ECID. The user is now considered a new visitor in Adobe Experience Platform and Experience Cloud solutions. |
+| Third visit | Between the second and third visit, enough time has elapsed that the ECID has been deleted due to browser policy. However, because the FPID was set using a DNS `A` record, the FPID persists. The FPID is now considered the primary ID and is used to seed the ECID, which is written to the end-user device. The user is now considered a new visitor in Adobe Experience Platform and CX Enterprise solutions. |
+| Fourth visit | Between the third and fourth visits, enough time has elapsed that the ECID has been deleted due to browser policy. Like the previous visit, the FPID remains due to the manner in which it was set. This time, the same ECID is generated as the previous visit. The user is seen throughout Adobe Experience Platform and CX Enterprise solutions as the same user as the previous visit. |
+| Fifth visit | Between the fourth and fifth visits, the end user cleared all the cookies in the browser. A new FPID is generated and used to seed the creation of a new ECID. The user is now considered a new visitor in Adobe Experience Platform and CX Enterprise solutions. |

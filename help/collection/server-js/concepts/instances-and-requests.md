@@ -113,7 +113,7 @@ Passing the `request` lets the SDK forward the visitor's headers, such as `User-
 
 ## Identity and consent across requests {#identity}
 
-The SDK stores the visitor's Experience Cloud ID (ECID) and consent preferences in cookies, the same way the Web SDK does. On a server, the SDK reads and writes these cookies through a **cookie service**, which you pass to `forRequest` as the `cookie` property.
+The SDK stores the visitor's ECID and consent preferences in cookies, the same way the Web SDK does. On a server, the SDK reads and writes these cookies through a **cookie service**, which you pass to `forRequest` as the `cookie` property.
 
 * **If you don't pass a `cookie` service**, each handle starts with an empty in-memory cookie store. The Edge Network assigns a new ECID on every request, and consent that you set with [`setConsent`](../methods/setconsent.md) isn't remembered for the visitor's next request.
 * **If you pass the same cookie data on each of a visitor's requests**, the SDK sends the stored identity to the Edge Network, so the visitor keeps the same ECID. Consent preferences also carry over.

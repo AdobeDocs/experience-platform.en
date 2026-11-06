@@ -44,7 +44,7 @@ Under the [!UICONTROL Adobe applications] category, select **[!UICONTROL Adobe D
 
 The Data Collection UI appears on the **[!UICONTROL Datastreams]** tab. 
 
-A datastream is a configuration that tells the Edge Network where you want your data to be sent. Specifically, a datastream specifies which Experience Cloud products you want to send the data to, and how you want the data to be handled and stored in each product.
+A datastream is a configuration that tells the Edge Network where you want your data to be sent. Specifically, a datastream specifies which CX Enterprise products you want to send the data to, and how you want the data to be handled and stored in each product.
 
 ![datastreams](./images/data-collection/datastreams.png)
 

@@ -56,7 +56,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 ### Adobe Target Extension 0.11.0
 
 * Updated at.js to v1.8.
-* Improved performance for integrations between Experience Cloud ID library (ECID) v4.4 and at.js 1.8.
+* Improved performance for integrations between ECID library v4.4 and at.js 1.8.
 * Previously, the ECID library made two blocking calls before at.js could fetch experiences. This has been reduced to a single call, which significantly improves performance.
 
 >[!NOTE]

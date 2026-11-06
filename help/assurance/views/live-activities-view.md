@@ -68,7 +68,7 @@ Use this section to verify that the selected client is configured for Live Activ
 
 When available, this section can display:
 
-* **[!UICONTROL ECID]** - The Experience Cloud ID (ECID) associated with the device.
+* **[!UICONTROL ECID]** - The ECID associated with the device.
 * **[!UICONTROL Push token]** - The device's push notification token.
 * **[!UICONTROL iOS version]** - The device's iOS version.
 * **[!UICONTROL Device type]** - For example, iPhone or iPad.

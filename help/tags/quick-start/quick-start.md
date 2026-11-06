@@ -47,7 +47,7 @@ The basic tags workflow:
 
 ## 1. Set up groups and users
 
-Tags are fully integrated with your Adobe ID. User permissions are managed through the Admin Console with other Adobe products and solutions from the [!DNL Creative Cloud], [!DNL Document Cloud], and Experience Cloud.
+Tags are fully integrated with your Adobe ID. User permissions are managed through the Admin Console with other Adobe products and solutions from the [!DNL Creative Cloud], [!DNL Document Cloud], and CX Enterprise.
 
 Tags have a rights-based user management system. This means that individual rights must be granted explicitly. These rights are assigned to groups, then users are added to the appropriate groups in order to gain access. Even if your organization has access to Data Collection, individual users cannot do anything until an administrator explicitly grants them some rights.
 
@@ -55,7 +55,7 @@ For detailed instructions on how to create groups and add users for tags, see th
 
 ## 2. Log in
 
-After tag rights have been added to your Adobe ID, you need to log in to the Experience Platform UI or Data Collection UI. You can do this by navigating directly to the [Experience Cloud login screen](https://experience.adobe.com/), and selecting either **[!UICONTROL Data Collection]** or **[!UICONTROL Experience Platform]**.
+After tag rights have been added to your Adobe ID, you need to log in to the Experience Platform UI or Data Collection UI. You can do this by navigating directly to the [CX Enterprise login screen](https://experience.adobe.com/), and selecting either **[!UICONTROL Data Collection]** or **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >

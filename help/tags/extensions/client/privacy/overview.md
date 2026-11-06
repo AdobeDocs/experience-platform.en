@@ -25,7 +25,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Adobe Privacy extension overview
 
-The Adobe Privacy tag extension allows you to collect and remove user IDs assigned to end users by Adobe solutions on client-side devices. Collected IDs can then be sent to [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) to access or delete the related individual's personal data in supported Adobe Experience Cloud applications.
+The Adobe Privacy tag extension allows you to collect and remove user IDs assigned to end users by Adobe solutions on client-side devices. Collected IDs can then be sent to [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) to access or delete the related individual's personal data in supported Adobe CX Enterprise applications.
 
 This guide covers how to install and configure the Adobe Privacy extension in the Experience Platform UI or Data Collection UI.
 

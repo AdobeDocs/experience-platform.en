@@ -50,13 +50,13 @@ The following configuration options are available:
 
 ### Experience Cloud Organization ID
 
-The ID for your Experience Cloud Organization.
+The ID for your CX Enterprise Organization.
 
 Your ID is a 24-character, alphanumeric string followed by `@AdobeOrg`. If you do not know this ID, contact Customer Care.
 
 ### Exclude specific paths
 
-The Experience Cloud ID does not load if the URL matches any of the specified paths.
+The Visitor ID Service does not load if the URL matches any of the specified paths.
 
 (Optional) Enable Regex if this is a regular expression.
 
@@ -106,7 +106,7 @@ Define which categories are approved or denied when no preference has been set b
 
 ### Variables
 
-Set name-value pairs as Experience Cloud ID instance properties. Use the drop-down to select a variable, then type or select a value. For information about each variable, refer to the [Visitor ID Service documentation](https://experiencecloud.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html).
+Set name-value pairs as Visitor ID Service instance properties. Use the drop-down to select a variable, then type or select a value. For information about each variable, refer to the [Visitor ID Service documentation](https://experiencecloud.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html).
 
 ## Experience Cloud ID extension action types
 

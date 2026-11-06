@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;overview;Overview;regulation;Regulation;regulations;Regulations;privacy;Privacy;
 solution: Experience Platform
 title: Privacy Regulations overview
-description: This document provides an overview of the different privacy regulations supported by Adobe Experience Cloud.
+description: This document provides an overview of the different privacy regulations supported by Adobe CX Enterprise.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
 TQID: 'https://experienceleague.adobe.com/26CQJvd74dLBVtlaB9xbBTIoYHIctKdv2UxQUuU47Ec'
 product_v2:
@@ -43,9 +43,9 @@ topic_v2:
 >
 >Update your integrations before this deadline to avoid request failures.
 
-This document provides an overview of the different privacy regulations supported by Adobe Experience Cloud.
+This document provides an overview of the different privacy regulations supported by Adobe CX Enterprise.
 
-Through the use of [Adobe Experience Platform Privacy Service](../home.md), Experience Cloud supports access and delete requests based on the following regulations:
+Through the use of [Adobe Experience Platform Privacy Service](../home.md), CX Enterprise supports access and delete requests based on the following regulations:
 
 | Regulation | `regulation_type` | Description |
 |-----------|-------------------|-------------|
@@ -89,4 +89,4 @@ For more information on supported regulations, refer to the following documents:
 * [Privacy regulation FAQ](./faq.md)
 * [Privacy regulation terminology](./terminology.md)
 
-To learn how to support customer access and delete requests for data stored on your Experience Cloud applications, refer to the guide on [Privacy Service and Experience Cloud applications](../experience-cloud-apps.md).
+To learn how to support customer access and delete requests for data stored on your CX Enterprise applications, refer to the guide on [Privacy Service and CX Enterprise applications](../experience-cloud-apps.md).

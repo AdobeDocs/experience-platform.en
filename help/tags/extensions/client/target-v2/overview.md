@@ -60,7 +60,7 @@ The client code is Target's account identifier. This should almost always be lef
 
 #### Organization ID
 
-This ID ties your implementation to your Adobe Experience Cloud account. This should almost always be left as the default value. It can be changed using data elements.
+This ID ties your implementation to your Adobe CX Enterprise account. This should almost always be left as the default value. It can be changed using data elements.
 
 #### Server Domain
 

@@ -23,7 +23,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Adobe Experience Platform Web SDK tag extension overview
 
-The Adobe Experience Platform Web SDK tag extension sends data to the Adobe Experience Cloud from web properties, through the Adobe Experience Platform Edge Network. The Experience Platform Web SDK extension allows for streaming data into platform, syncing identities, opt-in and automatically collecting context data. 
+The Adobe Experience Platform Web SDK tag extension sends data to the Adobe CX Enterprise from web properties, through the Adobe Experience Platform Edge Network. The Experience Platform Web SDK extension allows for streaming data into platform, syncing identities, opt-in and automatically collecting context data.
 
 See [Getting started](getting-started.md) to learn how to set up and deploy this tag extension to start collecting data.
 
