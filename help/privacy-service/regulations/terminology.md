@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;overview;Overview;regulation;Regulation;regulations;Regulations;privacy;Privacy;
 solution: Experience Platform
 title: Privacy Regulations Terminology
-description: This document provides definitions for key terms related to privacy regulations supported by Adobe Experience Cloud.
+description: This document provides definitions for key terms related to privacy regulations supported by Adobe CX Enterprise.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
 TQID: 'https://experienceleague.adobe.com/7Nm-1-rf4ovhgp61aYh2NoUEe5VreDU3cSmMMrG5sGU'
 product_v2:
@@ -36,7 +36,7 @@ topic_v2:
 ---
 # Privacy regulations terminology 
 
-This document provides definitions for key terms related to privacy regulations supported by Adobe Experience Cloud.
+This document provides definitions for key terms related to privacy regulations supported by Adobe CX Enterprise.
 
 ## A
 

@@ -18,7 +18,7 @@ Before you can use this source connector, ensure the following:
 
 * You are an existing [!DNL LAVA] customer and have been granted Adobe export rights.
 * You have a [LAVA Console](https://app.lava.ai/) account with either "Administrator" or "Export Manager" access.
-* (Recommended) You have sandbox manager permissions in Adobe Experience Cloud.
+* (Recommended) You have sandbox manager permissions in Adobe CX Enterprise.
 
 ## Data streams
 

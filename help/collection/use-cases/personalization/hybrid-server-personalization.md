@@ -1,8 +1,33 @@
 ---
 title: Hybrid personalization with the Server SDK
 description: Request personalization on your server with the Server SDK, then render it in the browser with the Web SDK.
-keywords: personalization;hybrid;server-side;applyPropositions;propositions;display events;
 badge: Alpha
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+  - id: b7798bb6-f089-4907-8492-05fc80e10632
+    internal-label: Server API
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: a94ced60-8199-4549-b453-ede2acb4101e
+    internal-label: Hybrid implementation
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e7840a7b-a94f-4256-aed0-4e94b08e157b
+    internal-label: System architecture
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Hybrid personalization with the Server SDK
 

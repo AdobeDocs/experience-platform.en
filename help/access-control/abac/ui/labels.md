@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control
 title: Attribute-based Access Control Manage Labels
-description: Manage labels through the Permissions interface in Adobe Experience Cloud.
+description: Manage labels through the Permissions interface in Adobe CX Enterprise.
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 TQID: 'https://experienceleague.adobe.com/Uj1V9nun-SPbJpAtTgr1iAW15cqG80FSxXhhuPR2ACU'
 product_v2:
@@ -26,7 +26,7 @@ For a comprehensive list of labels and their corresponding governance policies, 
 
 ## Explore labels {#explore-labels}
 
-To view all available labels, navigate to **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL Labels]** from the left panel. 
+To view all available labels, navigate to **[!UICONTROL Permissions]** in [Adobe CX Enterprise](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL Labels]** from the left panel.
 
 ![The labels workspace within Permissions with Labels highlighted in the left panel.](../../images/ui/labels/labels-home.png){zoomable="yes"}
 

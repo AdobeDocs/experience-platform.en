@@ -103,7 +103,7 @@ With your self-identification survey completed, select **[!UICONTROL Done]**.
 
 ## Update your survey responses
 
-Update your job functions and objects using the Experience Cloud preferences menu. To access the preferences menu, select your profile icon on the top navigation and then select **[!UICONTROL Preferences]**.
+Update your job functions and objects using the CX Enterprise preferences menu. To access the preferences menu, select your profile icon on the top navigation and then select **[!UICONTROL Preferences]**.
 
 ![The Experience Platform UI home page with the profile icon and the preferences buttons selected.](./images/survey/preferences.png)
 

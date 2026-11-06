@@ -1,6 +1,6 @@
 ---
 title: Auditor Tab
-description: Learn how to use the Auditor tab in Adobe Experience Platform Debugger to test your Adobe Experience Cloud implementations.
+description: Learn how to use the Auditor tab in Adobe Experience Platform Debugger to test your Adobe CX Enterprise implementations.
 keywords: debugger;experience platform debugger extension;chrome;extension;auditor;dtm;target
 exl-id: 409094f8-a7d9-45f7-ba12-b5e6250abc0f
 TQID: 'https://experienceleague.adobe.com/dZ9qYzzCOZr1KfnUSLk6fdFeXylDviKiHXRLZ80O8-s'
@@ -43,7 +43,7 @@ Each test is weighted, and your test score is equal to the assigned weight. If y
 | --- | --- |
 | 0 | Alerts you of issues you should be aware of, but don't affect your score. |
 | 1 | Recommends an optimization. No impact on data accuracy. |
-| 2 | Failing this test means you won't have access to the latest features and fixes in Adobe Experience Cloud. |
+| 2 | Failing this test means you won't have access to the latest features and fixes in Adobe CX Enterprise. |
 | 3 | Tests for efficiency and whether the implementation follows best practices. |
 | 4 | Failure means you may be collecting unreliable data. |
 | 5 | Failure means you may see data loss. |

@@ -31,11 +31,11 @@ topic_v2:
 ---
 # Network tab
 
-The **Network** tab aggregates all of the Adobe Experience Cloud solution calls made on the page and displays each request as a column, with the most recent request on the left. Standard parameters are automatically labeled with friendly names and arranged to group common parameters on the same row. Each column header shows the request type, such as `Analytics · Page view` or `Concierge · Voice conversation`, and the request number.
+The **Network** tab aggregates all of the Adobe CX Enterprise solution calls made on the page and displays each request as a column, with the most recent request on the left. Standard parameters are automatically labeled with friendly names and arranged to group common parameters on the same row. Each column header shows the request type, such as `Analytics · Page view` or `Concierge · Voice conversation`, and the request number.
 
 ![](images/network.jpg)
 
-This screen is useful for comparing key value pairs across hits. You can confirm that parameters used for integrations, such as the Experience Cloud Visitor ID or the Supplemental Data ID, are consistent across integrations.
+This screen is useful for comparing key value pairs across hits. You can confirm that parameters used for integrations, such as the ECID or the Supplemental Data ID, are consistent across integrations.
 
 >[!NOTE]
 >

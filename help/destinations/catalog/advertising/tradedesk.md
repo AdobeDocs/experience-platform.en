@@ -52,7 +52,7 @@ All identities in the table below are preconfigured and automatically mapped dur
 |---|---|---|
 |GAID|Google Advertising ID|Activated when a GAID is present on the profile.|
 |IDFA|Apple ID for Advertisers|Activated when an IDFA is present on the profile.|
-|ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". Read the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
+|ECID|ECID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". Read the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
 |[!DNL Tradedesk]|[!DNL TDID] in the [!DNL The Trade Desk] platform|Activated when a profile has an ECID and an ECID-to-Trade Desk ID mapping exists in Experience Platform.|
 
 {style="table-layout:auto"}
@@ -161,7 +161,7 @@ The following identity mappings are **preconfigured and automatically populated*
 
 * GAID (Google Advertising ID)
 * IDFA (Apple ID for Advertisers)
-* ECID (Experience Cloud ID)
+* ECID
 * [!DNL The Trade Desk ID]
 
 ![Screenshot showing the mandatory mappings](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)

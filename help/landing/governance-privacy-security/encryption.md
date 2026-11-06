@@ -52,7 +52,7 @@ All data in transit between Experience Platform and any external component is co
 In general, data is brought into Experience Platform in three ways:
 
 - [Data collection](../../collection/home.md) capabilities allow websites and mobile applications to send data to the Experience Platform Edge Network for staging and preparation for ingestion.
-- [Source connectors](../../sources/home.md) stream data directly to Experience Platform from Adobe Experience Cloud applications and other enterprise data sources.
+- [Source connectors](../../sources/home.md) stream data directly to Experience Platform from Adobe CX Enterprise applications and other enterprise data sources.
 - Non-Adobe ETL (extract, transform, load) tools send data to the [batch ingestion API](../../ingestion/batch-ingestion/overview.md) for consumption.
 
 After data has been brought into the system and [encrypted at rest](#at-rest), Experience Platform services enrich and export the data in the following ways:

@@ -173,7 +173,7 @@ topic_v2:
 
 **CPRA**: The [[!DNL California Consumer Privacy Rights Act (CPRA)]](https://cppa.ca.gov/regulations/consumer_privacy_act.html) expands and amends portions of the [!DNL California Consumer Privacy Act (CCPA)]. The [!DNL CPRA] establishes a new baseline for consumer data privacy in California by increasing consumer rights and expanding the type of data covered through a broader definition of sensitive personal information. In addition, the [!DNL CPRA] established the California Privacy Protection Agency, a new agency dedicated to implementing and enforcing data privacy rules.
 
-**C1 contract label**: A `C1` contract data usage label specifies data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
+**C1 contract label**: A `C1` contract data usage label specifies data can only be exported from Adobe CX Enterprise in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
 
 **C2 contract label**: A `C2` contract data usage label specifies data that cannot be exported to a third-party. Some data providers have terms in their contracts that prohibit the export of data from where it was originally collected. For example, social networks contracts often restrict the transfer of data you receive from them. C2 is more restrictive than C1, which only requires aggregation and anonymous data.
 
@@ -289,7 +289,7 @@ topic_v2:
 
 **Events**: Events are the behavior data associated with a profile.
 
-**Experience Data Model (XDM)** [!DNL Experience Data Model] (XDM) is an open-source framework that uses standard schemas to unify data for use with Experience Platform and Adobe Experience Cloud applications. XDM standardizes how data is structured and speeds up and simplifies the process of gaining insights from massive amounts of data.
+**Experience Data Model (XDM)** [!DNL Experience Data Model] (XDM) is an open-source framework that uses standard schemas to unify data for use with Experience Platform and Adobe CX Enterprise applications. XDM standardizes how data is structured and speeds up and simplifies the process of gaining insights from massive amounts of data.
 
 **Experiment**: An experiment is the process of creating a trained model by training the instance with a sample portion of live production data. This is different from a trained model that is tested against a holdout test dataset. This is also different from the concept of an experiment in some machine-learning frameworks where it actually means a sample modeling project.
 

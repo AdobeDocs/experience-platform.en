@@ -3,51 +3,25 @@ title: YouTube Video Tracking Extension Overview
 description: Learn about the YouTube Video Tracking tag extension in Adobe Experience Platform.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
 TQID: 'https://experienceleague.adobe.com/HbmbcElcFvRdvNAgLZaEavbH2Z6b5dlaAoxNmCf9oys'
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-    internal-label: Advertising
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-    internal-label: Acrobat Sign
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
 feature_v2:
-  - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
-    internal-label: Reports
-  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
-    internal-label: Analysis Workspace
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
-  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
-    internal-label: Implementations
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-    internal-label: API
 subfeature_v2:
-  - id: b0a1f9d5-5795-42a3-a6d0-bd0e2748fd06
-    internal-label: Components
-  - id: df312454-73c4-43f6-a90e-18f5043f074c
-    internal-label: Tags
-  - id: e7d92df1-c5ba-4e93-85df-f83171b889be
-    internal-label: Variables
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-    internal-label: User
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-    internal-label: Admin
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-    internal-label: Leader
+  - id: 1a2b3c4d-0003-4003-8003-000000000003
+    internal-label: Data collection tags extensions
+  - id: 1a2b3c4d-0006-4006-8006-000000000006
+    internal-label: Data collection tags rules
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+    internal-label: Data collection tags data elements
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-    internal-label: Implementation
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-    internal-label: Customer experience
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # YouTube Video Tracking extension overview
 

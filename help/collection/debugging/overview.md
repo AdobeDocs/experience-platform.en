@@ -1,8 +1,28 @@
 ---
 title: Debugging and troubleshooting data collection
 description: Choose a diagnostic workflow to investigate missing events, unexpected payloads, canceled requests, or duplicate data.
-keywords: debugging, troubleshooting, data collection, validation
-role: Developer
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+  - id: a8a79b8d-fdca-499c-a5ef-f88a099d8eb9
+    internal-label: Mobile SDK
+  - id: b7798bb6-f089-4907-8492-05fc80e10632
+    internal-label: Server API
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: Datastreams
+  - id: fab83459-d777-48a3-933c-16a15046f707
+    internal-label: Debugger
+  - id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4
+    internal-label: Assurance
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Debugging and troubleshooting data collection
 

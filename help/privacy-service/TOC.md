@@ -23,7 +23,7 @@ autotag-review: '2026-11-05T18:41:15.488Z'
 
 * [Privacy Service overview](./home.md)
 * [Manage permissions for Privacy Service](./permissions.md)
-* [Privacy Service and Experience Cloud applications](./experience-cloud-apps.md)
+* [Privacy Service and CX Enterprise applications](./experience-cloud-apps.md)
 * [Identity data for privacy requests](./identity-data.md)
 * [Privacy JS Library overview](./js-library.md)
 * Privacy Service API {#api}
