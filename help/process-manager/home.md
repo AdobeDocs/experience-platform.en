@@ -2,9 +2,14 @@
 solution: Experience Platform
 title: Process Manager Overview
 description: Learn how to use the Process Manager to orchestrate end-to-end automated workflows with Experience Platform services. 
+badgeBeta: label="Beta" type="Informative"
 ---
 
 # Process Manager overview
+
+>[!AVAILABILITY]
+>
+>Process Manager is currently in **Beta**. For more information, contact Adobe Customer Care.
 
 Process Manager provides an in-built orchestration system that lets you chain together various Adobe Experience Platform services together to perform end-to-end flows. Since Process Manager is directly created by Adobe, you don't need to maintain any custom code to manage your orchestrations, and will automatically take care of any API or service upgrades that may be required for your flows. 
 

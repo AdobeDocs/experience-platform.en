@@ -1,6 +1,7 @@
 ---
 title: Process Manager UI Guide
 description: Learn how to use the Process Manager to orchestrate end-to-end use cases by chaining together multiple Adobe Experience Platform services.
+badgeBeta: label="Beta" type="Informative"
 ---
 
 # Process Manager UI guide

@@ -1,9 +1,10 @@
 ---
 title: Process Manager API
 description: Learn how to list process definitions, review execution runs, and manage recurring schedules in Adobe Experience Platform.
+badgeBeta: label="Beta" type="Informative"
 ---
 
-# Process manager API
+# Process Manager API
 
 Use the Process Manager API in [!DNL Adobe Experience Platform] to list process definitions, review execution runs, and manage recurring schedules.
 
