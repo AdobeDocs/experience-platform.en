@@ -2,6 +2,18 @@
 title: Create a custom Web SDK build using the NPM package
 description: Create a custom Web SDK build which only contains the modules that you need.
 exl-id: 0ba5ae55-9ec0-41b6-9675-e76ade8ca4cd
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Create a custom Web SDK build
 

@@ -271,7 +271,7 @@ Consider the following prerequisites in your planning process:
   * Organizational policies regarding data retention and compliance
   * Business needs for data analytics and segmentation lookback windows
 
-### UI functionality, Experience Platform components, and Experience Cloud products that you will use
+### UI functionality, Experience Platform components, and CX Enterprise products that you will use {#ui-functionality-experience-platform-components-and-experience-cloud-products-that-you-will-use}
 
 To successfully implement this use case, you must use multiple areas of Adobe Experience Platform. Ensure you have the necessary attribute-based access control permissions for all these areas, or ask your system administrator to grant them.
 

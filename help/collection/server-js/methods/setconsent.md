@@ -2,6 +2,18 @@
 title: setConsent (Server SDK)
 description: Record a visitor's consent preferences with the Server SDK.
 badge: Alpha
+feature_v2:
+  - id: b7798bb6-f089-4907-8492-05fc80e10632
+    internal-label: Server API
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `setConsent` (Server SDK)
 

@@ -2,6 +2,29 @@
 title: thirdPartyCookiesEnabled (Server SDK)
 description: Control whether the Server SDK uses the Audience Manager third-party domain for identity requests.
 badge: Alpha
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
+    internal-label: Audience Manager
+  - id: e1971122-7081-4556-9222-8a31bd71800c
+    internal-label: Experience Cloud Services
+feature_v2:
+  - id: b7798bb6-f089-4907-8492-05fc80e10632
+    internal-label: Server API
+  - id: a50ad69b-1331-40e9-b634-531a085a6a54
+    internal-label: Identities
+  - id: 6f307efa-2798-5b6d-8079-f765b66875c1
+    internal-label: Cookies
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `thirdPartyCookiesEnabled` (Server SDK)
 

@@ -59,7 +59,7 @@ The [!DNL Kevel] destination supports activation for any identity that your appl
 
 | Identity namespace | Description                     | Typical usage                                                  |
 |--------------------|---------------------------------|----------------------------------------------------------------|
-| **ECID**           | Experience Cloud ID             | Used for onsite personalization and cross-Adobe identification.|
+| **ECID**           | ECID             | Used for onsite personalization and cross-Adobe identification.|
 | **GAID**           | Google Advertising ID           | Used for Android app/device traffic.                           |
 | **IDFA**           | Apple Advertising ID            | Used for iOS app/device traffic (subject to ATT consent).      |
 | **EXTERNAL_ID**    | External ID (custom identifier) | Passes proprietary or backend-generated IDs.                   |

@@ -38,7 +38,7 @@ The document below references the following features of Experience Platform:
   * [Identity namespaces](./namespaces.md): Identity namespaces are a component of Identity Service that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRMID.
 * [Catalog Service](../../catalog/home.md): Explore the data lineage, metadata, file descriptions, directories, and datasets within the data lake.
 * [Data hygiene](../../hygiene/home.md): Manage your stored consumer data by scheduling automated dataset expirations or or deleting individual records from one dataset or all datasets.
-* [Adobe Experience Platform Privacy Service](../../privacy-service/home.md): Manage customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
+* [Adobe Experience Platform Privacy Service](../../privacy-service/home.md): Manage customer requests for accessing, opting out of sale, or deleting their personal data across Adobe CX Enterprise applications.
 * [Real-Time Customer Profile](../../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
 
 ## Single identity deletions

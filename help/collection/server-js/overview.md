@@ -2,6 +2,20 @@
 title: Server SDK for JavaScript overview
 description: Send data to the Adobe Experience Platform Edge Network from your server using JavaScript.
 badge: Alpha
+feature_v2:
+  - id: b7798bb6-f089-4907-8492-05fc80e10632
+    internal-label: Server API
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: e7840a7b-a94f-4256-aed0-4e94b08e157b
+    internal-label: System architecture
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Server SDK for JavaScript overview
 

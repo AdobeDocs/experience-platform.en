@@ -66,7 +66,7 @@ Select the copy icon (![The copy icon.](../../../../images/icons/copy.png)) by t
 
 ![The [!UICONTROL Customer Managed Keys configuration] view with the Application authentication url section highlighted.](../../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 
-Copy and paste the [!UICONTROL Application authentication url] into a browser to open an authentication dialog. Select **[!DNL Accept]** to add the CMK app service principal to your [!DNL Azure] tenant. Confirming the authentication redirects you to the Experience Cloud landing page.
+Copy and paste the [!UICONTROL Application authentication url] into a browser to open an authentication dialog. Select **[!DNL Accept]** to add the CMK app service principal to your [!DNL Azure] tenant. Confirming the authentication redirects you to the CX Enterprise landing page.
 
 ![A Microsoft permission request dialog with [!UICONTROL Accept] highlighted.](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 

@@ -25,13 +25,13 @@ topic_v2:
 ---
 # Best practices for Privacy Service
 
-Use Privacy Service to automate compliance with data privacy regulations when customers wish to access or delete their personal data from your data stores. To address these evolving business needs, Privacy Service offers a RESTful API and UI to submit access and deletion requests for customer data across Adobe Experience Cloud applications.
+Use Privacy Service to automate compliance with data privacy regulations when customers wish to access or delete their personal data from your data stores. To address these evolving business needs, Privacy Service offers a RESTful API and UI to submit access and deletion requests for customer data across Adobe CX Enterprise applications.
 
 This guide outlines the best practices to efficiently process privacy requests and optimize completion response times when managing customer data requests.
 
 ## Getting started {#getting-started}
 
-This guide requires a working understanding of [Privacy Service](./home.md) and how it allows you to manage access and delete requests from your data subjects (customers) across Adobe Experience Cloud applications. You are also recommended to have read the guide on [creating a privacy job request in the UI](./ui/user-guide.md#create-a-new-privacy-job-request) or [the API](./api/overview.md), and understand how to perform these operations programmatically.
+This guide requires a working understanding of [Privacy Service](./home.md) and how it allows you to manage access and delete requests from your data subjects (customers) across Adobe CX Enterprise applications. You are also recommended to have read the guide on [creating a privacy job request in the UI](./ui/user-guide.md#create-a-new-privacy-job-request) or [the API](./api/overview.md), and understand how to perform these operations programmatically.
 
 ## Prerequisites {#prerequisites}
 

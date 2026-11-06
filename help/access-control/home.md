@@ -13,7 +13,7 @@ role_v2:
 ---
 # Access control overview
 
-Access control for Adobe Experience Platform is provided through the **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/). This functionality leverages roles and policies, which link users with permissions and sandboxes.
+Access control for Adobe Experience Platform is provided through the **[!UICONTROL Permissions]** in [Adobe CX Enterprise](https://experience.adobe.com/). This functionality leverages roles and policies, which link users with permissions and sandboxes.
 
 ## Access control hierarchy and workflow
 
@@ -311,4 +311,4 @@ The following table outlines the available permissions for Experience Platform i
 
 ## Next steps
 
-By reading this guide, you have been introduced to the main principles of access control in Experience Platform. You can now continue to the [attribute based access control user guide](./abac/overview.md) for detailed steps on how use Experience Cloud to create roles and assign permissions for Experience Platform.
+By reading this guide, you have been introduced to the main principles of access control in Experience Platform. You can now continue to the [attribute based access control user guide](./abac/overview.md) for detailed steps on how use CX Enterprise to create roles and assign permissions for Experience Platform.

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;intelligent services;popular topics;intelligent service;Intelligent service
 solution: Experience Platform
 title: Intelligent Services Overview
-description: Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in Adobe Experience Cloud, Adobe Experience Platform, and 3rd party applications.
+description: Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in Adobe CX Enterprise, Adobe Experience Platform, and 3rd party applications.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
 TQID: 'https://experienceleague.adobe.com/TVQ8jA-bH-EeCruUnmvx7-4Um0IYkr-HNCNxLmRPmiU'
 product_v2:
@@ -34,7 +34,7 @@ topic_v2:
 >title="Intelligent Services Overview"
 >abstract=""
 
-Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform], and 3rd party applications.
+Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in [!DNL Adobe CX Enterprise], [!DNL Adobe Experience Platform], and 3rd party applications.
 
 The following video is designed to support your understanding of Intelligent Services. Using example business use cases, this video explains a high level workflow and outlines the capabilities of both Attribution AI and Customer AI.
 
@@ -72,7 +72,7 @@ After the models have finished training and scoring, the scores are written back
 
 ### Take action 
 
-Lastly, you can decide what actions to take with the predictions, such as consuming insights, activating applications across the [!DNL Adobe Experience Cloud], and building custom dashboards.
+Lastly, you can decide what actions to take with the predictions, such as consuming insights, activating applications across the [!DNL Adobe CX Enterprise], and building custom dashboards.
 
 ## Next steps
 

@@ -178,7 +178,7 @@ To configure details for the destination, fill in the required and optional fiel
     
     >[!NOTE]
     >
-    >Marketo `Lead ID` and Experience Cloud IDs (`ECID`) are not supported for deduplication.
+    >Marketo `Lead ID` and `ECID` are not supported for deduplication.
 
 * **[!UICONTROL Person Action]**: Select the Marketo action that you want to perform when exporting data.
     * **[!UICONTROL Update existing and create new persons]**: Select this option to update existing Marketo leads and create new leads for audience members who aren't already in Marketo. New leads will be created in your selected partition. If you did not select a partition, new leads are created in the **[!UICONTROL Default]** partition.

@@ -29,7 +29,7 @@ There are currently four types of notifications related to the privacy job reque
 
 | Type | Description |
 | --- | --- |
-| Job Complete | All [!DNL Experience Cloud] applications have reported back and the overall or global status of the job has been marked as complete. |
+| Job Complete | All [!DNL CX Enterprise] applications have reported back and the overall or global status of the job has been marked as complete. |
 | Job Error | One or more applications have reported an error while processing the request. |
 | Product Complete | One of the applications associated with this job has completed its work. |
 | Product Error | One of the applications reported an error while processing the request. |
@@ -80,7 +80,7 @@ The following JSON is an example of a [!DNL Privacy Service Event] notification 
 | `id` | A unique, system-generated ID for the notification. |
 | `type` | The type of notification being sent, giving context to the information provided under `data`. Potential values include: <ul><li>`com.adobe.platform.gdpr.jobcomplete`</li><li>`com.adobe.platform.gdpr.joberror`</li><li>`com.adobe.platform.gdpr.productcomplete`</li><li>`com.adobe.platform.gdpr.producterror`</li></ul> |
 | `time` | A timestamp of when the event occurred. |
-| `data.value` | Contains additional information regarding what triggered the notification: <ul><li>`jobId`: The ID of the privacy job that triggered the notification.</li><li>`message`: A message regarding the specific status of the job. For `productcomplete` or `producterror` notifications, this field indicates the Experience Cloud application in question.</li></ul> |
+| `data.value` | Contains additional information regarding what triggered the notification: <ul><li>`jobId`: The ID of the privacy job that triggered the notification.</li><li>`message`: A message regarding the specific status of the job. For `productcomplete` or `producterror` notifications, this field indicates the CX Enterprise application in question.</li></ul> |
 
 ## Next steps
 

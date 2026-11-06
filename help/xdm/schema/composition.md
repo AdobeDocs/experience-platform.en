@@ -83,7 +83,7 @@ Schemas define the structure of data ingested into Experience Platform. That dat
 
 To help with this process, key fields within your schemas can be marked as identities. Upon data ingestion, the data in those fields is inserted into the "[!UICONTROL Identity Graph]" for that individual. The graph data can then be accessed by [[!DNL Real-Time Customer Profile]](../../profile/home.md) and other Experience Platform services to provide a stitched-together view of each individual customer.
 
-Fields that are commonly marked as "[!UICONTROL Identity]" include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID, or other unique ID fields. Consider any unique identifiers specific to your organization, as they may be good "[!UICONTROL Identity]" fields as well.
+Fields that are commonly marked as "[!UICONTROL Identity]" include: email address, phone number, [[!DNL ECID]](/help/identity-service/features/ecid.md), CRM ID, or other unique ID fields. Consider any unique identifiers specific to your organization, as they may be good "[!UICONTROL Identity]" fields as well.
 
 To learn more about how identity information can help you deliver digital experiences to your customers, see the [Identity Service overview](../../identity-service/home.md). See the data modeling best practices document for [tips on the use of identities when creating a schema](./best-practices.md#data-validation-fields). 
 
