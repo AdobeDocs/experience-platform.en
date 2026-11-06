@@ -2,6 +2,18 @@
 title: sendEvent (Server SDK)
 description: Send data to the Adobe Experience Platform Edge Network from your server.
 badge: Alpha
+feature_v2:
+  - id: b7798bb6-f089-4907-8492-05fc80e10632
+    internal-label: Server API
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+    internal-label: Behavioral data
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `sendEvent` (Server SDK)
 

@@ -3,65 +3,15 @@ title: Tags Troubleshooting Guide
 description: Get answers to frequently asked questions about tags in Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
 TQID: 'https://experienceleague.adobe.com/5PhBDR6zjR3mT3YLb1XNueEXReEzrpJHCnsCJV-Ehx8'
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-    internal-label: Advertising
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-    internal-label: Acrobat Sign
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
-  - id: f7bdf6be-dd3b-4d2d-ac52-0e62ed0d3102
-    internal-label: Admin Console
-feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection tags
-  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
-    internal-label: Implementations
-  - id: eb9732ab-8232-4b21-bc4c-89de86dbe4d7
-    internal-label: Integrations
-  - id: fc7979f3-56c3-43ca-9784-f1ea3dc69c4b
-    internal-label: Integrations
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-    internal-label: API
-  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-    internal-label: Dashboards
-subfeature_v2:
-  - id: c77ba355-6681-41fe-b719-563d3f507fdb
-    internal-label: Mobile SDK
-  - id: c8add8f2-4250-4fd9-9cde-9707036c567d
-    internal-label: Methods
-  - id: df312454-73c4-43f6-a90e-18f5043f074c
-    internal-label: Tags
-  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-    internal-label: Properties
-  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-    internal-label: Data collection tags data elements
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-    internal-label: User
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-    internal-label: Admin
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-    internal-label: Leader
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-    internal-label: Implementation
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-    internal-label: Customer experience
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-    internal-label: Troubleshooting
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-    internal-label: Security
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Tags troubleshooting guide
 

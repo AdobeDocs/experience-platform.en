@@ -2,6 +2,21 @@
 title: buildInfo
 description: Obtain information around the tag build implemented on your site.
 exl-id: 1bf9918c-aeb2-4c40-a166-25d209458aec
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+subfeature_v2:
+  - id: 1a2b3c4d-0004-4004-8004-000000000004
+    internal-label: Data collection tags publishing flow
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `buildInfo`
 

@@ -2,6 +2,20 @@
 title: appendIdentityToUrl (Server SDK)
 description: Add a visitor's identity to a URL with the Server SDK so that another domain can recognize the visitor.
 badge: Alpha
+feature_v2:
+  - id: b7798bb6-f089-4907-8492-05fc80e10632
+    internal-label: Server API
+  - id: a50ad69b-1331-40e9-b634-531a085a6a54
+    internal-label: Identities
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e9001ce2-5245-4a8e-8601-dd958009072f
+    internal-label: Web experience
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `appendIdentityToUrl` (Server SDK)
 

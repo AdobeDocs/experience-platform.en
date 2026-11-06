@@ -2,6 +2,20 @@
 title: Authentication
 description: Set up OAuth Server-to-Server credentials so that the Server SDK can send authenticated events to the Edge Network.
 badge: Alpha
+feature_v2:
+  - id: b7798bb6-f089-4907-8492-05fc80e10632
+    internal-label: Server API
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: Datastreams
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Authentication
 
