@@ -11,7 +11,7 @@ Process Manager let you natively orchestrate end-to-end use cases by chaining to
 
 The **[!UICONTROL Process]** page displays a list of all the processes that have been created for your organization. This includes details such as name, number of tasks, schedule, cadence, last updated date, as well as actions for the process.
 
-![The list of processes is displayed within Process Manager.](/help/process-manager/images/ui/process-list.png)
+![The list of processes is displayed within Process Manager.](/help/process-manager/images/ui/process-list.png){zoomable="yes"}
 
 | Field | Description |
 | ----- | ----------- |
@@ -20,25 +20,25 @@ The **[!UICONTROL Process]** page displays a list of all the processes that have
 | Schedule | The state of the schedule for the process. Possible values include [!UICONTROL Paused], [!UICONTROL Active], [!UICONTROL Error], and [!UICONTROL None]. |
 | Cadence | The cadence which the process runs. This is written as a cron schedule. For more information about cron schedules, read the [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. |
 | Updated | The date and time the process was last updated. |
-| Actions | Available quick actions for the process. <ul><li>**[!UICONTROL Canvas]**: Opens the canvas so you can edit the process. For more information on editing the process, read the [canvas section](#canvas).</li><li>**[!UICONTROL Runs]**: Displays the runs associated with the process. For more information, read the [runs section](#runs).</li><li>**[!UICONTROL Schedule]**:</li>Update the cadence in which the process runs. You can set the cron schedule for the process, as well as the required inputs for the process to run.</li><li>**[!UICONTROL Notifications]**: Lets you add notifications for the process. You can send a notification upon the process failing and send the notification to everyone in the organization or specified users or user groups.</li><li>**[!UICONTROL Clone]**: Duplicates the process.</li><li>**[!UICONTROL Delete]**: Deletes the process.</li></ul> |
+| Actions | Available quick actions for the process. <ul><li>**[!UICONTROL Canvas]**: Opens the canvas so you can edit the process. For more information on editing the process, read the [canvas section](#canvas).</li><li>**[!UICONTROL Runs]**: Displays the runs associated with the process. For more information, read the [runs section](#runs).</li><li>**[!UICONTROL Schedule]**:</li>Update the cadence in which the process runs. You can set the cron schedule for the process.<li>**[!UICONTROL Notifications]**: Lets you add notifications for the process. You can send a notification upon the process failing and send the notification to everyone in the organization or specified users or user groups.</li><li>**[!UICONTROL Clone]**: Duplicates the process.</li><li>**[!UICONTROL Delete]**: Deletes the process.</li></ul> |
 
 Additionally, you can filter the listed processes by the schedule status.
 
-![The schedule area is highlighted. This lets you filter the processes by schedule.](/help/process-manager/images/ui/filter-by-schedule.png)
+![The schedule area is highlighted. This lets you filter the processes by schedule.](/help/process-manager/images/ui/filter-by-schedule.png){zoomable="yes"}
 
 To create a new process, select **[!UICONTROL Create process]**. For more information on creating a new process, read the [canvas section](#canvas).
 
-![The Create process button is highlighted.](/help/process-manager/images/ui/select-create-process.png)
+![The Create process button is highlighted.](/help/process-manager/images/ui/select-create-process.png){zoomable="yes"}
 
 ## Canvas {#canvas}
 
 The **[!UICONTROL Canvas]** screen appears. On this page, you can create an end-to-end automated run flow.
 
-![The Process Manager canvas is displayed.](/help/process-manager/images/ui/canvas.png)
+![The Process Manager canvas is displayed.](/help/process-manager/images/ui/canvas.png){zoomable="yes"}
 
 The left **[!UICONTROL Tasks]** bar displays a full list of the available actions that you can add to your process.
 
-![The Tasks are highlighted within the canvas.](/help/process-manager/images/ui/tasks.png)
+![The Tasks are highlighted within the canvas.](/help/process-manager/images/ui/tasks.png){zoomable="yes"}
 
 | Task | Description |
 | ---- | ----------- |
@@ -56,7 +56,7 @@ For more information about the available tasks, read the [tasks section](#tasks)
 
 After you add tasks to the canvas, you can connect the tasks to chain them together for the process. To connect the tasks, select the plus icon that appears on the task while it's close to the task that you want to connect the task to.
 
-![The process of connecting multiple tasks together is displayed.](/help/process-manager/images/ui/connect-tasks.gif)
+![The process of connecting multiple tasks together is displayed.](/help/process-manager/images/ui/connect-tasks.gif){zoomable="yes"}
 
 Within the canvas, you can also select from the following options to manipulate the canvas itself.
 
@@ -69,27 +69,27 @@ Within the canvas, you can also select from the following options to manipulate 
 | Zoom out ![Zoom out icon](/help/process-manager/images/icons/zoom-out.png) | Zooms out on the canvas. |
 | Zoom in ![Zoom in icon](/help/process-manager/images/icons/zoom-in.png) | Zooms in on the canvas. |
 
-![The toolbar within the canvas is highlighted.](/help/process-manager/images/ui/toolbar.png)
+![The toolbar within the canvas is highlighted.](/help/process-manager/images/ui/toolbar.png){zoomable="yes"}
 
 After adding all the tasks to the canvas, you can **[!UICONTROL Save]** the process. Once you save the process, you can either immediately run the process or create a schedule for the process to run for.
 
-![The Save button is highlighted within the canvas.](/help/process-manager/images/ui/select-save.png)
+![The Save button is highlighted within the canvas.](/help/process-manager/images/ui/select-save.png){zoomable="yes"}
 
-If you select **[!UICONTROL Run]**, you can set the required inputs for the process to run. After inserting the inputs, select **[!UICONTROL Run]** to start the process.
+If you select **[!UICONTROL Run]**, you can immediately run the process.
 
-![The Run button is highlighted within the canvas.](/help/process-manager/images/ui/select-run.png)
+![The Run button is highlighted within the canvas.](/help/process-manager/images/ui/select-run.png){zoomable="yes"}
 
 >[!NOTE]
 >
 >For more information about cron schedules, read the [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation.
 
-If you select **[!UICONTROL Schedule]**, the scheduling popover appears. On this screen, you can set the cron schedule for the process, as well as the required inputs for the process to run. For the cron schedule, you can open the dropdown to see a list of supported defaults.
+If you select **[!UICONTROL Schedule]**, the scheduling popover appears. On this screen, you can set the cron schedule for the process. For the cron schedule, you can open the dropdown to see a list of supported defaults.
 
-![The Schedule popover is displayed, showing all the available options for scheduling a process.](/help/process-manager/images/ui/schedule-popover.png)
+![The Schedule popover is displayed, showing all the available options for scheduling a process.](/help/process-manager/images/ui/schedule-popover.png){zoomable="yes"}
 
 Once you've added all the information, select **[!UICONTROL Create schedule]** to create the schedule.
 
-![The Create schedule button is highlighted within the Schedule popover.](/help/process-manager/images/ui/select-create-schedule.png)
+![The Create schedule button is highlighted within the Schedule popover.](/help/process-manager/images/ui/select-create-schedule.png){zoomable="yes"}
 
 ### Tasks {#tasks}
 
@@ -112,6 +112,8 @@ When adding a task to the canvas, the following settings are common to all tasks
 
 The **[!UICONTROL Ingest data]** task lets you trigger a flow ingestion run into Experience Platform. When you use this task, you can choose which source and flow you want to ingest data from.
 
+![The settings for the Ingest data task are displayed.](/help/process-manager/images/ui/ingest-data.png){zoomable="yes"}
+
 | Setting | Description |
 | ------- | ----------- |
 | Source | The name of the source that you want to ingest data from. You can select which source you want to choose from the dropdown. The number in parenthesis represents the number of available flows in the source. |
@@ -127,6 +129,8 @@ For relative times, `now` represents no offset to the time. You can either use `
 
 The **[!UICONTROL Run Data Distiller]** task lets you run Data Distiller query. When you use this task, you choose the template as well as the associated parameters related to the template.
 
+![The settings for the Run Data Distiller task are displayed.](/help/process-manager/images/ui/run-data-distiller.png){zoomable="yes"}
+
 | Setting | Description |
 | ------- | ----------- |
 | templateId | The template ID for the Data Distiller query you want to run. |
@@ -138,6 +142,8 @@ The **[!UICONTROL Run Data Distiller]** task lets you run Data Distiller query. 
 
 #### Verify Profile ingestion {#verify-profile-ingestion}
 
+![The settings for the Verify Profile Ingestion task are displayed.](/help/process-manager/images/ui/verify-profile-ingestion.png){zoomable="yes"}
+
 The **[!UICONTROL Verify Profile ingestion]** task lets you verify if the ingestion from the **[!UICONTROL Ingest data]** task has successfully completed. When you use this task, you can choose which batch ID you want to verify has completed.
 
 | Setting | Description |
@@ -147,6 +153,8 @@ The **[!UICONTROL Verify Profile ingestion]** task lets you verify if the ingest
 | comment | An optional description that you can use to describe the task. |
 
 #### Run Segmentation {#run-segmentation}
+
+![The settings for the Run Segmentation task are displayed.](/help/process-manager/images/ui/run-segmentation.png){zoomable="yes"}
 
 The **[!UICONTROL Run Segmentation]** task lets you run a segmentation job on the specified segment definitions. 
 
@@ -158,6 +166,8 @@ The **[!UICONTROL Run Segmentation]** task lets you run a segmentation job on th
 
 #### Run Global Segmentation {#run-global-segmentation}
 
+![The settings for the Run Global Segmentation task are displayed.](/help/process-manager/images/ui/run-global-segmentation.png){zoomable="yes"}
+
 The **[!UICONTROL Run Global Segmentation]** task lets you immediately run the sandbox's batch segmentation job. 
 
 | Setting | Description |
@@ -167,6 +177,8 @@ The **[!UICONTROL Run Global Segmentation]** task lets you immediately run the s
 | comment | An optional description that you can use to describe the task. |
 
 #### Run Profile Export {#run-profile-export}
+
+![The settings for the Run Profile Export task are displayed.](/help/process-manager/images/ui/run-profile-export.png){zoomable="yes"}
 
 The **[!UICONTROL Run Profile Export]** task lets you run a Profile export job on the specified segment definitions. When you use this task, you can choose which segment definitions you want to export, what merge policy you want to use, as well as which dataset you want to export the segment definitions to.
 
@@ -184,6 +196,8 @@ The **[!UICONTROL Trigger activation]** task lets you activate either audiences 
 
 If you select **[!UICONTROL Dataset]**, the following settings are available:
 
+![The settings for the Trigger Activation for datasets task are displayed.](/help/process-manager/images/ui/trigger-activation-dataset.png){zoomable="yes"}
+
 | Setting | Description |
 | ------- | ----------- |
 | Destination flowId | The flow ID of the destination you want to export to. |
@@ -191,6 +205,8 @@ If you select **[!UICONTROL Dataset]**, the following settings are available:
 | comment | An optional description that you can use to describe the task. |
 
 If you select **[!UICONTROL Audience]**, the following settings are available:
+
+![The settings for the Trigger Activation for audiences task are displayed.](/help/process-manager/images/ui/trigger-activation-audience.png){zoomable="yes"}
 
 | Setting | Description |
 | ------- | ----------- |
@@ -201,6 +217,8 @@ If you select **[!UICONTROL Audience]**, the following settings are available:
 | comment | An optional description that you can use to describe the task. |
 
 #### Send notification {#send-notification}
+
+![The settings for the Send notification task are displayed.](/help/process-manager/images/ui/send-notification.png){zoomable="yes"}
 
 The **[!UICONTROL Send notification]** task lets you send a notification to specified users on Experience Platform.
 
@@ -215,6 +233,8 @@ The **[!UICONTROL Send notification]** task lets you send a notification to spec
 
 #### Wait {#wait}
 
+![The settings for the Wait task are displayed.](/help/process-manager/images/ui/wait.png){zoomable="yes"}
+
 The **[!UICONTROL Wait]** task causes the process execution to be paused for the specified amount of time.
 
 | Setting | Description |
@@ -226,20 +246,20 @@ The **[!UICONTROL Wait]** task causes the process execution to be paused for the
 
 The **[!UICONTROL Runs]** page displays a list of runs for the selected process. You can either see the runs in **[!UICONTROL Grid]** view or **[!UICONTROL Graph]** view. 
 
-![The Runs page is displayed, showing a list of runs for the process.](/help/process-manager/images/ui/runs.png)
+![The Runs page is displayed, showing a list of runs for the process.](/help/process-manager/images/ui/runs.png){zoomable="yes"}
 
 Grid view displays a list of the tasks for the process, the state of those tasks, as well as how long the tasks took.
 
-![The Grid view button is highlighted.](/help/process-manager/images/ui/grid-view.png)
+![The Grid view button is highlighted.](/help/process-manager/images/ui/grid-view.png){zoomable="yes"}
 
 If you select the task, you can see further details about the run, including the specific error that caused the run to fail.
 
-![Information about the failed task is displayed.](/help/process-manager/images/ui/failed-task.png)
+![Information about the failed task is displayed.](/help/process-manager/images/ui/failed-task.png){zoomable="yes"}
 
 Graph view displays the selected run, with the tasks shown as individual blocks. You can see the location, state, and runtime of each of the tasks.
 
-![The Graph view button is highlighted.](/help/process-manager/images/ui/graph-view.png)
+![The Graph view button is highlighted.](/help/process-manager/images/ui/graph-view.png){zoomable="yes"}
 
 If you select a task within the run, you can see more details about the task's execution.
 
-![Information about the failed task is displayed.](/help/process-manager/images/ui/select-task-graph.png)
+![Information about the failed task is displayed.](/help/process-manager/images/ui/select-task-graph.png){zoomable="yes"}
