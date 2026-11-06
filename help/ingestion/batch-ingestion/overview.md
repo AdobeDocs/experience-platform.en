@@ -35,8 +35,8 @@ The API endpoints used in this guide is part of the [Batch Ingestion API](https:
 
 ### Batch ingestion best practices
 
-- The recommended batch size is between 256 MB and 100 GB.
-- Each batch should contain below 10000 files.
+- The recommended batch size is below 100 GB.
+- Each batch should contain fewer than 10000 files.
 
 ### Batch ingestion constraints
 
@@ -46,6 +46,8 @@ Batch data ingestion has some constraints:
 - Maximum batch size: 1 TB
 - Maximum number of properties or fields per row: 10000
 - Maximum number of batches on data lake per minute, per user: 2000
+
+For performance recommendations and enforced limits for the batch ingestion API and batch sources, see the [data ingestion guardrails](../guardrails.md).
 
 >[!NOTE]
 >
