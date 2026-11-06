@@ -197,7 +197,7 @@ If your organization has never licensed Adobe Real-Time Customer Data Platform, 
 
 As an administrator, sign in to [Adobe Admin Console](https://adminconsole.adobe.com). If **[!UICONTROL Adobe Experience Platform]** is provisioned for your organization, locate the product card, open a product profile, and select the **[!UICONTROL Permissions]** tab.
 
-Under **[!UICONTROL Sandboxes]**, configure sandbox access for the product profile. Under **[!UICONTROL dashboards]**, add the **[!UICONTROL View License Usage Dashboard]** permission. For instructions on editing these settings, see the guide on [managing permissions for a product profile](../../access-control/ui/permissions.md).
+Under **[!UICONTROL Sandboxes]**, configure sandbox access for the product profile. Under **[!UICONTROL Dashboards]**, add the **[!UICONTROL View License Usage Dashboard]** permission. For instructions on editing these settings, see the guide on [managing permissions for a product profile](../../access-control/ui/permissions.md).
 
 Next, [assign users to the product profile](../../access-control/ui/users.md). After access is configured, use the dashboard navigation described above to view AI credit consumption.
 
