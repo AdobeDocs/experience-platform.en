@@ -1,6 +1,6 @@
 ---
 title: Adform
-description: Adform is a leading provider of programmatic media buying and selling solutions. By connecting Adform to the Adobe Experience Platform, you can activate your 1st party audiences through Adform based on the Experience Cloud ID (ECID).
+description: Adform is a leading provider of programmatic media buying and selling solutions. By connecting Adform to the Adobe Experience Platform, you can activate your 1st party audiences through Adform based on the ECID.
 last-substantial-update: 2025-10-23T00:00:00.000Z
 exl-id: b87fe57f-10e3-4c10-9156-f102244fbbe7
 TQID: 'https://experienceleague.adobe.com/b7hTTp6s5jQfv5haxMsCTdkG-wwZIn12G4l4uWOra3A'
@@ -24,7 +24,7 @@ topic_v2:
 
 ## Overview {#overview}
 
-Adform is a leading provider of programmatic media buying and selling solutions. By connecting Adform to the [!DNL Adobe Experience Platform], you can activate your first party audiences through Adform based on the Experience Cloud ID (ECID).
+Adform is a leading provider of programmatic media buying and selling solutions. By connecting Adform to the [!DNL Adobe Experience Platform], you can activate your first party audiences through Adform based on the ECID.
 
 >[!IMPORTANT]
 >
@@ -36,9 +36,9 @@ To help you better understand how and when you should use the Adform destination
 
 ### Adobe [!DNL Real-Time CDP] audience activation {#use-case-1}
 
-Use this destination to send Adobe [!DNL Real-Time CDP] audiences to Adform for activation based on the Experience Cloud ID (ECID) and Adform's ID Fusion. Adform's ID Fusion is Adform's ID resolution service for activating your first party audiences based on the Experience Cloud ID (ECID).
+Use this destination to send Adobe [!DNL Real-Time CDP] audiences to Adform for activation based on the ECID and Adform's ID Fusion. Adform's ID Fusion is Adform's ID resolution service for activating your first party audiences based on the ECID.
 
-A common case is re-targeting of your website visitors to your website or app based on the Experience Cloud ID (ECID). All you need to do is to send the Experience Cloud ID (ECID) to Adform via the readily available [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) or [client-side](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Adform extensions. After that you can share audiences with Adform via the Adform destination for activation - solely based on the Experience Cloud ID (ECID).
+A common case is re-targeting of your website visitors to your website or app based on the ECID. All you need to do is to send the ECID to Adform via the readily available [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) or [client-side](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Adform extensions. After that you can share audiences with Adform via the Adform destination for activation - solely based on the ECID.
 
 ## Prerequisites {#prerequisites}
 
@@ -56,7 +56,7 @@ Adform supports the activation of identities described in the table below. Learn
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
+|ECID|ECID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
 
 {style="table-layout:auto"}
 
@@ -141,7 +141,7 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 ### Map attributes and identities {#map}
 
-* **ECID** (Experience Cloud ID)
+* **ECID**
 
 During the mapping step, use only the [!DNL ECID] target identity mapping. Do not include any other identity fields, as this will prevent the activation from completing successfully.
 

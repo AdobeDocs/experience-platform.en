@@ -1,6 +1,6 @@
 ---
 title: Dynamic Datastream Configuration Overview
-description: Learn about [!DNL Dynamic Datastream Configurations], how it routes events to Experience Cloud services based on rules, and how it compares to other routing options.
+description: Learn about [!DNL Dynamic Datastream Configurations], how it routes events to CX Enterprise services based on rules, and how it compares to other routing options.
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -8,7 +8,7 @@ role_v2:
 
 # Dynamic datastream configuration overview
 
-By default, the [!DNL Adobe Experience Platform Edge Network] sends every event arriving on a [datastream](/help/datastreams/overview.md) to all [!DNL Experience Cloud] services you have enabled. Use [!DNL Dynamic Datastream Configurations] to define **rules** that control which services receive which events and/or which datasets store those events, without changing any client-side SDK code.
+By default, the [!DNL Adobe Experience Platform Edge Network] sends every event arriving on a [datastream](/help/datastreams/overview.md) to all [!DNL CX Enterprise] services you have enabled. Use [!DNL Dynamic Datastream Configurations] to define **rules** that control which services receive which events and/or which datasets store those events, without changing any client-side SDK code.
 
 Before [!DNL Dynamic Datastream Configurations], controlling event routing required either maintaining multiple datastreams or adding override logic in your client-side SDK implementation. [!DNL Dynamic Datastream Configurations] move that routing logic server-side into the datastream itself.
 

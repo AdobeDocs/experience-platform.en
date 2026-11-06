@@ -3,40 +3,29 @@ title: Zendesk event forwarding extension
 description: Zendesk event forwarding extension for Adobe Experience Platform.
 exl-id: 22e94699-5b84-4a73-b007-557221d3e223
 TQID: 'https://experienceleague.adobe.com/i3J1LovLJ8S2mPIc7RDC3fBZtg40JWEutnxdtRxLpuo'
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-    internal-label: Advertising
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-    internal-label: Acrobat Sign
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
     internal-label: Event forwarding
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-    internal-label: User
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-    internal-label: Admin
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-    internal-label: Leader
+subfeature_v2:
+  - id: e1f2a3b4-4027-4027-9027-400000000027
+    internal-label: Event forwarding extensions
+  - id: e1f2a3b4-4031-4031-9031-400000000031
+    internal-label: Secrets
+  - id: e1f2a3b4-4030-4030-9030-400000000030
+    internal-label: Event forwarding rules
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-    internal-label: Implementation
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-    internal-label: Customer experience
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-    internal-label: Troubleshooting
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+    internal-label: Data integration
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+    internal-label: Customer engagement
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # [!DNL Zendesk] Events API extension overview
 

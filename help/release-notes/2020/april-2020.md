@@ -59,7 +59,7 @@ Updates to existing features:
 
 ## [!DNL Intelligent Services] {#intelligent}
 
-[!DNL Intelligent Services] empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in Adobe Experience Cloud, Adobe Experience Platform, and 3rd party applications.
+[!DNL Intelligent Services] empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in Adobe CX Enterprise, Adobe Experience Platform, and 3rd party applications.
 
 **Key features**
 
@@ -134,7 +134,7 @@ For more information, please see the [Destinations overview](../../destinations/
 
 ## [!DNL Privacy Service] {#privacy}
 
-New legal and organizational regulations are giving users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+New legal and organizational regulations are giving users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe CX Enterprise applications, facilitating automated compliance with legal and organizational privacy regulations.
 
 **New features**
 

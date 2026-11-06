@@ -2,9 +2,21 @@
 title: getVar()
 description: Returns a value of a data element or a value set using setVar().
 exl-id: 8a496964-284a-4719-ac68-10368568db4f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+subfeature_v2:
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+    internal-label: Data collection tags data elements
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `getVar()`
 

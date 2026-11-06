@@ -35,13 +35,13 @@ topic_v2:
 ---
 # Adobe Experience Platform Assurance
 
-Adobe Experience Platform Assurance is a product from [Adobe Experience Cloud](https://www.adobe.com/experience-cloud.html) to help you inspect, proof, simulate, and validate how you collect data or serve experiences in your mobile app.
+Adobe Experience Platform Assurance is a product from [Adobe CX Enterprise](https://www.adobe.com/experience-cloud.html) to help you inspect, proof, simulate, and validate how you collect data or serve experiences in your mobile app.
 
 >[!IMPORTANT]
 >
 > Project Griffon is now known as **Assurance**!
 >
-> Project Griffon is now generally available to **all** Adobe Experience Cloud customers as Assurance. To learn more about this transition, please read the [user access guide](./user-access.md).
+> Project Griffon is now generally available to **all** Adobe CX Enterprise customers as Assurance. To learn more about this transition, please read the [user access guide](./user-access.md).
 
 >[!INFO]
 >
@@ -51,7 +51,7 @@ Adobe Experience Platform Assurance is a product from [Adobe Experience Cloud](h
 
 ## General Availability
 
-Starting on October 15th, 2022, Assurance is generally available to all Adobe Experience Cloud.
+Starting on October 15th, 2022, Assurance is generally available to all Adobe CX Enterprise.
 
 ### What's changing?
 
@@ -77,9 +77,9 @@ After connecting to Assurance, you can inspect live-streamed app events and acti
 
 ![](./images/index/real-time-insepction.png)
 
-### Integration with Adobe Experience Cloud
+### Integration with Adobe CX Enterprise {#integration-with-adobe-experience-cloud}
 
-Client-side data and experiences are given context by how users setup reporting rules, activities, and campaigns on our marketer-focused user interfaces. To help you connect the dots between the two, we're integrating with Adobe Experience Cloud solutions such as Adobe Experience Platform, Adobe Analytics, Adobe Target, Places Service, and more.
+Client-side data and experiences are given context by how users setup reporting rules, activities, and campaigns on our marketer-focused user interfaces. To help you connect the dots between the two, we're integrating with Adobe CX Enterprise solutions such as Adobe Experience Platform, Adobe Analytics, Adobe Target, Places Service, and more.
 
 ![](./images/index/integration.png)
 
@@ -106,7 +106,7 @@ The Location Services view is an on-device view that shows the user location ent
 Assurance has the following security measures in place:
 
 * Both Assurance and the Assurance Web UI have a secure, PIN-based handshake for a connection. The user has to explicitly create a handshake, which prevents "accidental" Assurance connections to be created by an end-user.
-* Only connections between Assurance and the Assurance web UI belonging to the same Adobe Experience Cloud Organization ID are supported.
+* Only connections between Assurance and the Assurance web UI belonging to the same Adobe CX Enterprise Organization ID are supported.
 * Adobe Experience Platform Mobile SDKs events are transported over HTTPS.
 * Assurance and Adobe Experience Platform Mobile SDKs use TLS 1.2
 * Assurance sessions are deleted after 30 days.

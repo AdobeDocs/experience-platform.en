@@ -41,12 +41,12 @@ This example uses [!DNL Jupyter Notebook] as a development environment. Although
 
 The two attributes used to extract data for bot detection are:
 
-* Experience Cloud Visitor ID (ECID, also known as MCID): This provides a universal, persistent ID that identifies your visitors across all Adobe solutions.
+* ECID (also known as MCID): This provides a universal, persistent ID that identifies your visitors across all Adobe solutions.
 * Timestamp: This provides the time and date in UTC format when an activity occurred on the website.  
 
 >[!NOTE]
 >
->The use of `mcid` is still found in namespace references to the Experience Cloud Visitor ID as seen in the example below.
+>The use of `mcid` is still found in namespace references to the ECID as seen in the example below.
 
 The following SQL statement provides an initial example to identify bot activity. The statement assumes that if a visitor performs 50 clicks within one minute, then the user is a bot.
 

@@ -3,22 +3,18 @@ title: orgId (Web SDK)
 description: The orgId property is a string that tells Adobe which organization that data is sent to.
 exl-id: 0e04e85a-800c-4927-a165-80a5a578f4c2
 TQID: 'https://experienceleague.adobe.com/7KRreqDcqK-Jpj2MB3AMUXkkvpcqD40pID3tyjEif4A'
-product_v2:
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-    internal-label: Acrobat Sign
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
 feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection tags
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `orgId` (Web SDK)
 
@@ -33,7 +29,7 @@ The `orgId` property is a string that tells Adobe which organization that data i
 To locate your `orgID`:
 
 1. Log in to [CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
-1. Anywhere within the Adobe Experience Cloud, press **`[Ctrl]`** + **`[I]`**. A [!UICONTROL User Data Debugger] window opens.
+1. Anywhere within the Adobe CX Enterprise, press **`[Ctrl]`** + **`[I]`**. A [!UICONTROL User Data Debugger] window opens.
 1. Click **[!UICONTROL Copy]** ![Copy](../../assets/copy.png) next to the [!UICONTROL Current Org ID], or click the **[!UICONTROL Assigned Orgs]** tab to see other org IDs that you can access.
 1. When you're finished locating the desired information, click **[!UICONTROL Close]**.
 

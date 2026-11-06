@@ -273,11 +273,11 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 | `hitid_low` | `_id` | string | Used with hitid_high to uniquely identify a hit. |
 | `ip` | `environment.ipV4` | string | The IP Address, based on the HTTP header of the image request. |
 | `j_jscript` | `environment.browserDetails.javaScriptEnabled` | boolean | The version of JavaScript used. |
-| `mcvisid_high` + `mcvisid_low` | identityMap | object | The Experience Cloud Visitor ID. |
-| `mcvisid_high` + `mcvisid_low` | endUserIDs._experience.mcid.id | string | The Experience Cloud ID (ECID) is also known as MCID and sometimes used in namespaces. |
-| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | boolean | The Experience Cloud ID (ECID) is also known as MCID and sometimes used in namespaces. |
-| `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | string | The Experience Cloud ID (ECID) is also known as MCID and sometimes used in namespaces. |
-| `mcvisid_low` | `identityMap` | object | The Experience Cloud Visitor ID. |
+| `mcvisid_high` + `mcvisid_low` | identityMap | object | The ECID. |
+| `mcvisid_high` + `mcvisid_low` | endUserIDs._experience.mcid.id | string | The ECID is also known as MCID and sometimes used in namespaces. |
+| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | boolean | The ECID is also known as MCID and sometimes used in namespaces. |
+| `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | string | The ECID is also known as MCID and sometimes used in namespaces. |
+| `mcvisid_low` | `identityMap` | object | The ECID. |
 | `sdid_high` + `sdid_low` | `_experience.target.supplementalDataID` | string | Hit Stitching ID. The analytics field sdid_high and sdid_low is the supplemental data id used to stitch two (or more) incoming hits together. |
 | `mobilebeaconproximity` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximity` | string | Mobile Services beacon proximity. |
 

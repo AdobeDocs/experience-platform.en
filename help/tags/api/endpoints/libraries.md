@@ -3,38 +3,18 @@ title: Libraries endpoint
 description: Learn how to make calls to the /libraries endpoint in the Reactor API.
 exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
 TQID: 'https://experienceleague.adobe.com/VBwKj-JMshL5aGiQoiyTOABsjitWZm0aiu-NjYY-Dc0'
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-    internal-label: Advertising
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-    internal-label: Acrobat Sign
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-    internal-label: Target
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-    internal-label: API
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-    internal-label: User
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-    internal-label: Admin
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-    internal-label: Leader
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-    internal-label: Customer experience
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-    internal-label: Data collection
+subfeature_v2:
+  - id: 1a2b3c4d-0005-4005-8005-000000000005
+    internal-label: Reactor API
+  - id: 1a2b3c4d-0004-4004-8004-000000000004
+    internal-label: Data collection tags publishing flow
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Libraries endpoint
 

@@ -53,7 +53,7 @@ When specifying a `namespace` value in the [!DNL Privacy Service] API, a **names
 | Qualifier | Definition |
 | --------- | ---------- |
 | `standard` | One of the standard namespaces defined globally, not tied to an individual organization data set (for example, email, phone number, etc.). Namespace ID is provided. |
-| `custom` | A unique namespace created in the context of an organization, not shared across the [!DNL Experience Cloud]. The value represents the friendly name ("name" field) to be searched for. Namespace ID is provided. |
+| `custom` | A unique namespace created in the context of an organization, not shared across the [!DNL CX Enterprise]. The value represents the friendly name ("name" field) to be searched for. Namespace ID is provided. |
 | `integrationCode` | Integration code - similar to "custom", but specifically defined as the integration code of a datasource to be searched for. Namespace ID is provided. |
 | `namespaceId` | Indicates the value is the actual ID of the namespace that was created or mapped through the namespace service. |
 | `unregistered` | A freeform string that is not defined in the namespace service and is taken "as is". Any application that handles these kinds of namespaces checks against them and handle if appropriate for the company context and data set. No namespace ID is provided. |
