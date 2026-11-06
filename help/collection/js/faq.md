@@ -49,7 +49,7 @@ The new Web SDK sends data for the following solutions to a single destination (
 * Adobe Analytics
 * Adobe Audience Manager
 * Adobe Target
-* Visitor ID
+* Visitor ID Service
 * Adobe Experience Platform
 
 Other solutions will follow.
@@ -60,7 +60,7 @@ Adobe Experience Platform Web SDK can also send data directly to Adobe Experienc
 
 **Performance:** The web SDK is smaller than using all of the current Adobe libraries and provides significantly faster page loads.
 
-**Simplicity:** The combination of XDM, Web SDK, tags, Edge Network, Adobe Experience Cloud solutions, and Adobe Experience Platform creates an easy-to-understand and simple-to-follow data collection story.
+**Simplicity:** The combination of XDM, Web SDK, tags, Edge Network, Adobe CX Enterprise solutions, and Adobe Experience Platform creates an easy-to-understand and simple-to-follow data collection story.
 
 * **XDM:** The solution-agnostic schema you use to send data to Adobe. No more tagging for evars or mboxes.
 * **Web SDK:** Makes it easy to send and receive data to Adobe Experience Platform Edge Network.
@@ -95,13 +95,13 @@ Adobe Experience Platform Web SDK has been developed for the following customers
   * If you need to send data directly from a device to Adobe Experience Platform, this is the officially recommended way.
   * Adobe is aware that using the Adobe Analytics connector is faster if you already have Adobe Analytics, but it is not the long-term strategy for data collection.
 
-* Adobe Experience Cloud solution customers
+* Adobe CX Enterprise solution customers
   * New Adobe Analytics, Adobe Audience Manager, and Adobe Target customers should start with the new Web SDK and not use legacy libraries.
   * Existing customers who want to get the most optimized implementation possible should use the new Web SDK.
 
 ## How do I get access to the Web SDK?
 
-The Web SDK is currently available to the general public and can be used to send data to Adobe Experience Cloud products. The ability to send data to third-party solutions is coming in the near future. 
+The Web SDK is currently available to the general public and can be used to send data to Adobe CX Enterprise products. The ability to send data to third-party solutions is coming in the near future.
 
 There is no charge for the SDK, and it is hosted by Adobe for free. If required, you can download it and host it on your own servers at no cost.
 
@@ -117,7 +117,7 @@ It depends. Adobe Experience Platform Web SDK can be deployed in two different s
 
 * **Just another tag:** If the site is already tagged for solutions and you can't retag, but you want to send data to Adobe Experience Platform Edge Network for Experience Platform use cases or the upcoming event forwarding features (see below), you can add the `alloy.js` tag to the site, where it works as "just another tag."
 
-* **The one and only tag:** If you want to use the Web SDK for an Experience Cloud solution, you must use it for _all_ of the solutions on that page. For example, if your site is already tagged for Adobe Analytics and you want to use it for Target, you need to use it for both, as well as for any others in the future.
+* **The one and only tag:** If you want to use the Web SDK for a CX Enterprise solution, you must use it for _all_ of the solutions on that page. For example, if your site is already tagged for Adobe Analytics and you want to use it for Target, you need to use it for both, as well as for any others in the future.
 
 In other words, if you decide to use Adobe Experience Platform Web SDK for non-solution use cases, you can tag the site with `alloy.js` and move on as if it's a new solution. If you want to use it for Adobe Analytics, Target, or Audience Manager, or for application use cases, you might have to remove any of the legacy code on your page.
 

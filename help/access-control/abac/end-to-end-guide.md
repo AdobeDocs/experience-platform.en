@@ -59,13 +59,13 @@ You will:
 
 ## Permissions
 
-[!UICONTROL Permissions] is the area of Experience Cloud where administrators can define user roles and policies to manage permissions for features and objects within a product application.
+[!UICONTROL Permissions] is the area of CX Enterprise where administrators can define user roles and policies to manage permissions for features and objects within a product application.
 
 Through [!UICONTROL Permissions], you can create and manage roles and assign the desired resource permissions for these roles. [!UICONTROL Permissions] also allow you to manage the labels, sandboxes, and users associated with a specific role.
 
 Contact your system administrator to gain access if you do not have admin privileges.
 
-Once you have admin privileges, go to [Adobe Experience Cloud](https://experience.adobe.com/) and sign in using your Adobe credentials. Once logged in, the **[!UICONTROL Overview]** page appears for your organization you have admin privileges for. This page shows the products your organization is subscribed to, along with other controls to add users and admins to the organization. Select **[!UICONTROL Permissions]** to open the workspace for your Experience Platform integration.
+Once you have admin privileges, go to [Adobe CX Enterprise](https://experience.adobe.com/) and sign in using your Adobe credentials. Once logged in, the **[!UICONTROL Overview]** page appears for your organization you have admin privileges for. This page shows the products your organization is subscribed to, along with other controls to add users and admins to the organization. Select **[!UICONTROL Permissions]** to open the workspace for your Experience Platform integration.
 
 ![Image showing the Permissions product being selected in Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 

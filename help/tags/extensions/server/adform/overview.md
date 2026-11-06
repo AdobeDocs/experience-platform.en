@@ -32,7 +32,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 The [[!DNL Adform]](https://www.adformhelp.com/hc/en-us/articles/29635608709137-Use-the-Adform-S2S-Site-Tracking-Extension-With-Adobe-Experience-Cloud) extension enables server-side event forwarding in Adobe Experience Platform, allowing advertisers, media agencies and publishers to synchronize data directly with Adform's ID Fusion system. This integration enables businesses to engage audiences across multiple channels, improving campaign performance and provides tailored solutions to refine digital advertising strategies and maximize ad spend effectiveness.
 
-Unlike traditional client-side tracking, this extension eliminates the need for third-party cookies by leveraging first-party IDs - specifically, the ECID (Experience Cloud ID) which is synchronized with Adform. This allows for seamless audience retargeting without requiring client-side JavaScript deployment. 
+Unlike traditional client-side tracking, this extension eliminates the need for third-party cookies by leveraging first-party IDs - specifically, the ECID which is synchronized with Adform. This allows for seamless audience retargeting without requiring client-side JavaScript deployment.
 
 This guide covers how to install, configure and deploy the extension to forward events from a brand's digital properties via Adobe's Edge Network to Adform to enable seamless retargeting of visitors. 
 

@@ -27,8 +27,8 @@ The `orgId` property is a string that tells Adobe which organization the data be
 
 To locate your organization ID:
 
-1. Log in to [Adobe Experience Cloud](https://experience.adobe.com) using your Adobe ID credentials.
-1. Anywhere within Adobe Experience Cloud, press **`[Ctrl]`** + **`[I]`** (Windows) or **`[Cmd]`** + **`[I]`** (macOS). A **[!UICONTROL User Data Debugger]** window opens.
+1. Log in to [Adobe CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
+1. Anywhere within Adobe CX Enterprise, press **`[Ctrl]`** + **`[I]`** (Windows) or **`[Cmd]`** + **`[I]`** (macOS). A **[!UICONTROL User Data Debugger]** window opens.
 1. Copy the **[!UICONTROL Current Org ID]**, or select the **[!UICONTROL Assigned Orgs]** tab to see other organizations that you can access.
 
 Organization IDs are 24-character alphanumeric strings that end in `@AdobeOrg`.

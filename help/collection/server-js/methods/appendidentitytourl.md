@@ -25,7 +25,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 >[!ENDSHADEBOX]
 
-The `appendIdentityToUrl` method adds the visitor's identity to a URL as a query string parameter named `adobe_mc`. When the visitor follows the URL to another domain that you own, the Web SDK or the Server SDK on that domain reads the parameter and keeps the same Experience Cloud ID (ECID). This prevents the visitor from being counted twice in datasets that include both domains.
+The `appendIdentityToUrl` method adds the visitor's identity to a URL as a query string parameter named `adobe_mc`. When the visitor follows the URL to another domain that you own, the Web SDK or the Server SDK on that domain reads the parameter and keeps the same ECID. This prevents the visitor from being counted twice in datasets that include both domains.
 
 On a server, a common use is to add the visitor's identity to a redirect to another domain:
 

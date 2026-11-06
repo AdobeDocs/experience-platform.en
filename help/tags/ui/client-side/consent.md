@@ -35,7 +35,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 Legal privacy regulations like the General Data Protection Regulation (GDPR) require companies to be able to manage consent for their users. Adobe customers may require visitors to opt-in before Adobe solutions execute for any given visitor. Visitors should have the ability to manage their opt-in and opt-out status.
 
-Adobe Experience Cloud customers require a variety of implementations of these requirements. Some use enterprise-level consent managers and others build their own.
+Adobe CX Enterprise customers require a variety of implementations of these requirements. Some use enterprise-level consent managers and others build their own.
 
 Adobe Experience Platform extension developers use extensions and the rule builder to define opt-in and opt-out solutions.
 
@@ -66,9 +66,9 @@ DIL is currently set to fire automatically if it is placed on a customer page. P
 
 [!DNL Adobe] recommends that you use server-side forwarding within [!DNL Analytics].
 
-## Experience Cloud ID
+## Visitor ID Service {#experience-cloud-id}
 
-[!DNL Experience Cloud ID] currently fires automatically if it is placed on a customer page. 
+[!DNL Visitor ID Service] currently fires automatically if it is placed on a customer page. 
 
 Please consider using the [Adobe opt-in object](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html) to control the firing of this tag in concert with your consent management platform.
 

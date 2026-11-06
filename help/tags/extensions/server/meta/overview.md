@@ -219,4 +219,4 @@ This guide covered how to send server-side event data to [!DNL Meta] using the [
 * Connect any other [!DNL Pixels] that are not yet connected to a [!DNL Conversions API] integration.
 * If you are sending certain events exclusively through [!DNL Meta Pixel] on the client side, send these same events to the [!DNL Conversions API] from the server side as well.
 
-See the [!DNL Meta] documentation on [best practices for the [!DNL Conversions API]](https://www.facebook.com/business/help/308855623839366?id=818859032317965) for more guidance on how to effectively implement your integration. For more general information on tags and event forwarding in Adobe Experience Cloud, refer to the [tags overview](../../../home.md).
+See the [!DNL Meta] documentation on [best practices for the [!DNL Conversions API]](https://www.facebook.com/business/help/308855623839366?id=818859032317965) for more guidance on how to effectively implement your integration. For more general information on tags and event forwarding in Adobe CX Enterprise, refer to the [tags overview](../../../home.md).

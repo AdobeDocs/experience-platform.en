@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
 title: Attribute-based Access Control Manage Role Permissions
-description: Learn how to configure  roles through the Permissions interface in Adobe Experience Cloud.
+description: Learn how to configure  roles through the Permissions interface in Adobe CX Enterprise.
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 TQID: 'https://experienceleague.adobe.com/u5fOuck-jOjw0a1x44Eq1vLPBk01yX8jIYOXdUYm-d8'
 product_v2:
@@ -42,7 +42,7 @@ topic_v2:
 >
 >Access control uses user ID (an internal unique id assigned to a user) for granting permissions. When an organization is migrated from Adobe ID to Business ID, all permissions set for its users will be lost because the user ID changes and access control will use the newly generated user ID. If your organization is migrated to Business ID, please contact your Adobe representative to migrate your user ID from Adobe ID to Business ID.
 
-Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application.
+Permissions is the area of CX Enterprise where administrators can define user roles and access policies to manage access permissions for features and objects within a product application.
 
 Through Permissions, you can create and manage roles, as well as assign the desired resource permissions for these roles. Permissions also allow you to manage the labels, sandboxes, and users associated with a specific role.
 

@@ -26,7 +26,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 >[!ENDSHADEBOX]
 
-When you run the [`sendEvent`](sendevent/overview.md) command, the Web SDK automatically obtains the visitor's identity if one is not already present. The `getIdentity` command allows you to obtain a visitor ID without sending event data. If you require separate calls to generate a visitor ID and send data, you can use this command.
+When you run the [`sendEvent`](sendevent/overview.md) command, the Web SDK automatically obtains the visitor's identity if one is not already present. The `getIdentity` command allows you to obtain an ECID without sending event data. If you require separate calls to generate an ECID and send data, you can use this command.
 
 >[!IMPORTANT]
 >

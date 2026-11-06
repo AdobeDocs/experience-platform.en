@@ -37,7 +37,7 @@ The value that you use for `edgeDomain` depends on your participation in the [Ad
 **If your organization does not participate in the certificate program**, set the value to a subdomain of `data.adobedc.net`. Adobe recommends using your organization's Adobe-assigned IMS company ID for consistency. For example, `example.data.adobedc.net`. Use the following steps to determine your IMS company ID:
 
 1. Log in to [CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
-1. Anywhere in the Experience Cloud interface, press `[Cmd]` + `[I]` (macOS) or `[Ctrl]` + `[I]` (Windows).
+1. Anywhere in the CX Enterprise interface, press `[Cmd]` + `[I]` (macOS) or `[Ctrl]` + `[I]` (Windows).
 1. A **[!UICONTROL User data debugger]** appears. Select the **[!UICONTROL Assigned orgs]** tab.
 1. Expand the desired IMS organization.
 1. Locate the **[!UICONTROL Tenant]** field. This value is the recommended subdomain of `data.adobedc.net` to use.

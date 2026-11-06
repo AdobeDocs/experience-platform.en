@@ -205,7 +205,7 @@ In this example, you can assume that the following event was sent to Experience 
 
 ## Set permissions {#set-permissions}
 
-The first step in the implementation process for Identity Service is to ensure that your Experience Platform account is added to a role that is provisioned with the necessary permissions. Your administrator can configure permissions for your account by navigating to the Permissions UI in Adobe Experience Cloud. From there, your account must be added to a role with the following permissions:
+The first step in the implementation process for Identity Service is to ensure that your Experience Platform account is added to a role that is provisioned with the necessary permissions. Your administrator can configure permissions for your account by navigating to the Permissions UI in Adobe CX Enterprise. From there, your account must be added to a role with the following permissions:
 
 * [!UICONTROL View Identity Settings]: apply this permission to be able to view unique namespaces and namespace priority in the identity namespace browse page.
 * [!UICONTROL Edit Identity Settings]: apply this permission to be able to edit and save your identity settings.

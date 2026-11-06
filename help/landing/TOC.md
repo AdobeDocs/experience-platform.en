@@ -58,7 +58,7 @@ role_v2:
   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
-  * [Experience Platform integrations with Experience Cloud (Video)](video/experience-cloud-integrations.md)
+  * [Experience Platform integrations with CX Enterprise (Video)](video/experience-cloud-integrations.md)
 * Governance, privacy, and security {#governance-privacy-security}
   * [Overview](./governance-privacy-security/overview.md)
   * Consent management {#consent}

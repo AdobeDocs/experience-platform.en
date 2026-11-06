@@ -1,5 +1,5 @@
 ---
-keywords: Experience Cloud;getting started;content tagging;popular topics;Intelligent Services
+keywords: CX Enterprise;getting started;content tagging;popular topics;Intelligent Services
 solution: Experience Platform
 title: Content Tagging Overview
 description: Content Tagging is a set of AI services that allows you to extract intelligent features from your content, organize, streamline content flow, and deliver more impactful, personalized experiences to your customers.

@@ -1,6 +1,6 @@
 ---
 title: Implementation Guides for Tags and Event Forwarding
-description: Learn how to use tags and event forwarding to implement Adobe Experience Cloud products in your websites and mobile applications.
+description: Learn how to use tags and event forwarding to implement Adobe CX Enterprise products in your websites and mobile applications.
 exl-id: fe39cff2-2b0a-405b-aa89-0a3330f40ca1
 TQID: 'https://experienceleague.adobe.com/FFjPTCiHsP78aXkfxRd9VfzGCAaobMsRFAHELHggBDY'
 feature_v2:
@@ -20,7 +20,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Implementation guides for tags and event forwarding
 
-The following is a list of end-to-end implementation guides for tags and event forwarding. These guides are designed for front-end developers and technical marketers who want to learn how to implement Adobe Experience Cloud products in their websites and mobile applications.
+The following is a list of end-to-end implementation guides for tags and event forwarding. These guides are designed for front-end developers and technical marketers who want to learn how to implement Adobe CX Enterprise products in their websites and mobile applications.
 
 * [Implement tags for a website](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html)
 * [Implement tags for an Android application](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-android-apps/overview.html)

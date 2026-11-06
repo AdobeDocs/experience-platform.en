@@ -101,7 +101,7 @@ The extension offers also the possibility to select a target schema field using 
 
 ### Identity fields inside the Adobe Experience Platform
 
-Record data schemas and time-series data schemas may contain one or more identity fields. Identity fields stitch together to form a single identity representation of a subject and include information such as a CRM identifier, Experience Cloud ID (ECID), browser cookie, AdvertisingId, or other IDs in different domains.
+Record data schemas and time-series data schemas may contain one or more identity fields. Identity fields stitch together to form a single identity representation of a subject and include information such as a CRM identifier, ECID, browser cookie, AdvertisingId, or other IDs in different domains.
 
 Identity fields can be defined in two ways inside the schema:
 

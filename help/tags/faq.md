@@ -29,7 +29,7 @@ Tags are an advanced code and configuration delivery system that evaluates condi
 
 ## How much do tags cost?
 
-There is no additional charge for tags. They are available for any [!DNL Adobe Experience Cloud] customer.
+There is no additional charge for tags. They are available for any [!DNL Adobe CX Enterprise] customer.
 
 ## I heard there are plug-ins now. What's that about?
 

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
 title: Manage Access Control Policies
-description: Manage access control policies through the Permissions interface in Adobe Experience Cloud.
+description: Manage access control policies through the Permissions interface in Adobe CX Enterprise.
 exl-id: 66820711-2db0-4621-908d-01187771de14
 TQID: 'https://experienceleague.adobe.com/CrH7bsZHNIWU3Q7SZyd3k-dUFrSVqlY12OAnnByQx3Y'
 product_v2:
@@ -28,7 +28,7 @@ Access control policies are statements that bring attributes together to establi
 >
 >The **[!UICONTROL Default-Label-Based-Access-Control-Policy]** policy is currently the only one available for configuration.
 
-To begin configuring a policy, navigate to **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL Policies]** from the left panel. Select the **[!UICONTROL Default-Label-Based-Access-Control-Policy]** from the list.
+To begin configuring a policy, navigate to **[!UICONTROL Permissions]** in [Adobe CX Enterprise](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL Policies]** from the left panel. Select the **[!UICONTROL Default-Label-Based-Access-Control-Policy]** from the list.
 
 ![The policies workspace showing a list of existing policies.](../../images/ui/policies/policies-home.png){zoomable="yes"}
 
@@ -109,7 +109,7 @@ With a policy activated, you can proceed to the next step to [manage permissions
 <!--
 Policies are applied at the sandbox level to control which sandboxes enforce label-based access control. By default, the **[!UICONTROL Auto-include]** feature is turned on, which means all current and future sandboxes are automatically added to the policy. When **[!UICONTROL Auto-include]** is turned off, only the sandboxes you manually add will be subject to the policy's access control rules.
 
-To begin configuring a policy's sandboxes, navigate to **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL Policies]** from the left panel, then select the **[!UICONTROL Default-Label-Based-Access-Control-Policy]** from the list.
+To begin configuring a policy's sandboxes, navigate to **[!UICONTROL Permissions]** in [Adobe CX Enterprise](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL Policies]** from the left panel, then select the **[!UICONTROL Default-Label-Based-Access-Control-Policy]** from the list.
 
 The policy's details workspace appears. Select the **[!UICONTROL Sandboxes]** tab to view the list of sandboxes associated with the policy and access the sandbox configuration options.
 

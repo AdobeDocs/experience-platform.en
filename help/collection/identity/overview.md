@@ -26,7 +26,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Identity in Data Collection
 
-Adobe Data Collection uses identity signals to recognize returning visitors and carry context across experiences. When a visitor reaches your site, the Edge Network generates an Experience Cloud ID (ECID) and persists it in a first-party cookie. That ECID is the primary device identifier used across Adobe Experience Cloud applications and is the foundation that analytics, personalization, and audience activation build on. In your implementation, you can access the visitor's ECID on the client side through the [`getIdentity`](/help/collection/js/commands/getidentity.md) command. At the datastream level, you can use [Data Prep for Data Collection](/help/datastreams/data-prep.md) to map the ECID into a custom XDM field before it reaches downstream services.
+Adobe Data Collection uses identity signals to recognize returning visitors and carry context across experiences. When a visitor reaches your site, the Edge Network generates an ECID and persists it in a first-party cookie. That ECID is the primary device identifier used across Adobe CX Enterprise applications and is the foundation that analytics, personalization, and audience activation build on. In your implementation, you can access the visitor's ECID on the client side through the [`getIdentity`](/help/collection/js/commands/getidentity.md) command. At the datastream level, you can use [Data Prep for Data Collection](/help/datastreams/data-prep.md) to map the ECID into a custom XDM field before it reaches downstream services.
 
 The ECID identifies a device, not a person. To tie activity to a known person, you can send additional identifiers, such as a CRM ID or hashed email, alongside the ECID using the XDM [`identityMap`](./identity-map.md). Adobe recommends setting a person-level namespace as the [primary identity](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) whenever one is available.
 
@@ -35,7 +35,7 @@ Beyond the default ECID, Data Collection supports additional identity signals de
 * **First-party device IDs (FPIDs)**: Device identifiers that you generate and manage on infrastructure you control. The Edge Network uses an FPID to [seed the ECID](./fpid.md), giving you stronger cookie persistence on owned properties when browser restrictions shorten the life of Adobe-managed cookies.
 * **CORE IDs**: A separate, demdex-based identifier that participates in third-party identity workflows when third-party cookies are available. The CORE ID is distinct from the ECID and can be retrieved through [`getIdentity`](/help/collection/js/commands/getidentity.md). For details on how first-party and third-party identity contexts work together, see [Unified identity support](./unified-identity-support.md).
 
-If you are upgrading from the Visitor API or reconciling older identity behavior, see [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md) to migrate existing AMCV cookies.
+If you are upgrading from the Visitor ID Service or reconciling older identity behavior, see [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md) to migrate existing AMCV cookies.
 
 ## First-party and third-party collection {#first-party-and-third-party-collection}
 

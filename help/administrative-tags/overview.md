@@ -33,7 +33,7 @@ Tagging involves the following components:
 | Terminology | Definition |
 | --- | --- |
 | Archived | A state for a tag that keeps current associations with objects but restricts the tag from being applied to further objects.  Archived tags are hidden from the tag picker. |
-| Object | An Experience Cloud item that can have a tag applied.  Examples: Segment, Journey, Dataset. |
+| Object | A CX Enterprise item that can have a tag applied.  Examples: Segment, Journey, Dataset. |
 | Tag | Tags are metadata and may be thought of as keywords that can be attached to a segment, dataset, journey, or other objects to enable searches to find that object and related objects. |
 | Tag Category | Tag Categories group tags into meaningful sets to provide greater context or describe the purpose of the tag.  Administrators manage tag categories and tags within categories. |
 | Uncategorized Tag | A new tag that is created in-line where tags are applied. These tags can be created and applied by any user, but they are not bound to a category.  Administrators may move these tags to a category to align with other similar tags. |
@@ -58,7 +58,7 @@ The following actions are possible when using tag categories:
 
 >[!NOTE]
 >
->In order to manage tags for Experience Cloud, you must be a system administrator or a product administrator for Adobe Experience Platform for your organization, which has a subscription to Experience Cloud.
+>In order to manage tags for CX Enterprise, you must be a system administrator or a product administrator for Adobe Experience Platform for your organization, which has a subscription to CX Enterprise.
 
 Within a category (or the default "Uncategorized" group), you can create and manage tags. The following actions are possible when managing tags:
 

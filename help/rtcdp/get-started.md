@@ -158,7 +158,7 @@ The team at Luma has all of their behavioral and customer data in a single place
 
 They can ingest data from all of the following sources:
 
-* Existing Adobe Experience Cloud solutions data
+* Existing Adobe CX Enterprise solutions data
 * Non-Adobe sources, such as Luma's loyalty program, call center, and point-of-sale system data
 * Real-time streaming data from Luma data sources
 * Real-time data from Adobe solutions (no new tags required)

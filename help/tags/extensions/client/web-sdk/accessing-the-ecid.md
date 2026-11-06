@@ -1,6 +1,6 @@
 ---
 title: Accessing the ECID
-description: Learn how to access the Experience Cloud ID from Data Prep or Tags
+description: Learn how to access the ECID from Data Prep or Tags
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
 TQID: 'https://experienceleague.adobe.com/4k6I22EfvjFzCd1ypMIgDYibE7lMxf7P-XJZ-kFKnCc'
 feature_v2:
@@ -29,7 +29,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Accessing the ECID
 
-The [!DNL Experience Cloud Identity (ECID)] is a persistent identifier assigned to a user when they visit your website. In certain circumstances, you might prefer to access the [!DNL ECID] (to send it to a third party, for example). Another use case is setting the [!DNL ECID] in a custom XDM field, in addition to having it in the identity map.
+The [!DNL ECID] is a persistent identifier assigned to a user when they visit your website. In certain circumstances, you might prefer to access the [!DNL ECID] (to send it to a third party, for example). Another use case is setting the [!DNL ECID] in a custom XDM field, in addition to having it in the identity map.
 
 You can access the ECID either via [Data Prep for Data Collection](/help/datastreams/data-prep.md) (recommended) or via tags.
 
