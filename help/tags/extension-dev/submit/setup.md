@@ -1,6 +1,6 @@
 ---
-title: CX Enterprise Organization Setup
-description: Learn how to register an Adobe CX Enterprise organization in order to start developing extensions for Adobe Experience Platform.
+title: Adobe Organization Setup
+description: Learn how to register an Adobe organization in order to start developing extensions for Adobe Experience Platform.
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
 TQID: 'https://experienceleague.adobe.com/RFpJ35gtqkOAYoPk4DrU-Akwe0YMqREtqLbh6F3uCsI'
 feature_v2:
@@ -19,9 +19,9 @@ topic_v2:
     internal-label: Administration
 autotag-review: '2026-11-05T22:08:57.077Z'
 ---
-# CX Enterprise organization setup {#experience-cloud-organization-setup}
+# Adobe organization setup {#experience-cloud-organization-setup}
 
-To develop tag extensions in Adobe Experience Platform it is necessary to register an Adobe CX Enterprise organization.
+To develop tag extensions in Adobe Experience Platform it is necessary to register an Adobe organization.
 
 CX Enterprise customers are assigned an organization when contracts are signed. If you are an existing customer and already have an organization registered then you can skip this document and proceed to the guide on [granting user access for extension development](./access.md). If you are not a CX Enterprise customer, you can have an organization created by joining one of the Adobe partner programs listed below.
 

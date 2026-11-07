@@ -155,7 +155,7 @@ topic_v2:
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
-You can view important information about your organization's license usage through the **[!UICONTROL License usage]** dashboard. The dashboard is available to eligible CX Enterprise organizations, including those that license Adobe Experience Platform and those that do not. The information displayed is captured during a daily snapshot of your organization's environment and is not updated in real time.
+You can view important information about your organization's license usage through the **[!UICONTROL License usage]** dashboard. The dashboard is available to eligible Adobe organizations, including those that license Adobe Experience Platform and those that do not. The information displayed is captured during a daily snapshot of your organization's environment and is not updated in real time.
 
 License usage reports provide a high degree of granularity. Most metrics are shared across multiple products and reflect aggregated usage across all products that use them, not per-product totals.
 

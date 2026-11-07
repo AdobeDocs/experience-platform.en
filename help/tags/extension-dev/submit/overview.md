@@ -20,7 +20,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 Submitting an extension to the data collection catalog in Adobe Experience Platform can appear to be a daunting task. This document provides a step by step guide to submitting your extension through the use of individual sequential guides. In order to submit your extension, you will need to complete the following steps:
 
-1. [Set up an Adobe CX Enterprise organization](./setup.md)
+1. [Set up an Adobe organization](./setup.md)
 1. [Grant user access for extension development](./access.md)
 1. [Develop an extension](./develop.md)
 1. [Create an exchange listing](./create-listing.md)
