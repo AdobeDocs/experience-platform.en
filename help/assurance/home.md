@@ -106,7 +106,7 @@ The Location Services view is an on-device view that shows the user location ent
 Assurance has the following security measures in place:
 
 * Both Assurance and the Assurance Web UI have a secure, PIN-based handshake for a connection. The user has to explicitly create a handshake, which prevents "accidental" Assurance connections to be created by an end-user.
-* Only connections between Assurance and the Assurance web UI belonging to the same Adobe CX Enterprise Organization ID are supported.
+* Only connections between Assurance and the Assurance web UI belonging to the same organization ID are supported.
 * Adobe Experience Platform Mobile SDKs events are transported over HTTPS.
 * Assurance and Adobe Experience Platform Mobile SDKs use TLS 1.2
 * Assurance sessions are deleted after 30 days.

@@ -44,8 +44,8 @@ A media agency with a DSP account is running a retargeting campaign on behalf of
 ## Prerequisites {#prerequisites}
 
 * DSP account-level and campaign-level settings to enable audience sharing with [!DNL LiveRamp RampID], which will translate customer data to [!DNL RampIDs] to create targetable segments. Your DSP account team will perform this configuration. [!DNL RampID] is available via a partnership between DSP and [!DNL LiveRamp], and you don't need your own [!DNL LiveRamp] membership to use it.
-* The CX Enterprise organization ID for the Experience Platform account. You can find your ID on your [!DNL Real-Time CDP] user profile page.
-* A [[!DNL Real-Time CDP] source in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) to receive audiences for campaign activation. Your DSP account team will create the source using your CX Enterprise organization ID.
+* The organization ID for the Experience Platform account. You can find your ID on your [!DNL Real-Time CDP] user profile page.
+* A [[!DNL Real-Time CDP] source in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) to receive audiences for campaign activation. Your DSP account team will create the source using your organization ID.
 * The source key for the DSP account or advertiser, which is generated when a [[!DNL Real-Time CDP] source is created in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Your DSP account team will share this key with you. You'll use it within Experience Platform to create a destination connection to the Advertising DSP destination, as [explained below](#authenticate).
 * Customer data consisting of emails or hashed emails.
 

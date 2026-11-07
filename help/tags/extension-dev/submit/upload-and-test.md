@@ -61,7 +61,7 @@ For information on creating a technical account for use with tags in Adobe Exper
 
 >[!IMPORTANT]
 >
->In order to create an integration in Adobe I/O you must be an Experience Cloud Organization Administrator or an Experience Cloud Org Developer.
+>In order to create an integration in Adobe I/O you must be an administrator or a developer in your Adobe organization.
 
 If you cannot create an integration, it is likely that you do not have the correct permissions. This will require either an Org Admin to complete the steps for you or to assign you as a developer.
 
