@@ -65,9 +65,9 @@ Advertisers have the choice to share audiences either with authenticated first-p
 
     * For each IDFA, include the value `IDFA` in an IdentityMap column.
 
-* The CX Enterprise organization ID for the Experience Platform account. You can find your ID on your Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) user profile page.
+* The organization ID for the Experience Platform account. You can find your ID on your Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) user profile page.
 
-* A [[!DNL Real-Time CDP] source in DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) to receive audiences for campaign activation. Your Adobe Account Team will create the source using your CX Enterprise organization ID.
+* A [[!DNL Real-Time CDP] source in DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) to receive audiences for campaign activation. Your Adobe Account Team will create the source using your organization ID.
 
 * The source key for the [!DNL DSP] account or advertiser, which is generated when a [[!DNL Real-Time CDP] source is created in [!DNL DSP]](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). Your [!DNL DSP] account team will share this key with you. You will use it within Experience Platform to create a destination connection to the Advertising DSP destination, as explained below.
 
