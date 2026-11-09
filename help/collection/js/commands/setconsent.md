@@ -3,34 +3,18 @@ title: setConsent (Web SDK)
 description: Used on each page to track your users' consent preferences.
 exl-id: d01a6ef1-4fa7-4a60-a3a1-19568b4e0d23
 TQID: 'https://experienceleague.adobe.com/kQQB8KbJRWZvviQB-8hQ5dsdBio411lMiKugggJRDRQ'
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-    internal-label: Advertising
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
-  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
-    internal-label: Pass
 feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection tags
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-    internal-label: Metadata
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-    internal-label: Implementation
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-    internal-label: Governance
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-    internal-label: Security
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
     internal-label: Privacy
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `setConsent` (Web SDK)
 

@@ -32,7 +32,7 @@ Note the following prerequisites to complete before you start using this functio
 
 ### Access to the permissions UI {#access-permissions-ui}
 
-[!UICONTROL Permissions] is the area of Experience Cloud where administrators can define user roles and policies to manage permissions for features and objects within a product application. Read the [permissions section](/help/access-control/abac/end-to-end-guide.md#permissions) to get started.
+[!UICONTROL Permissions] is the area of CX Enterprise where administrators can define user roles and policies to manage permissions for features and objects within a product application. Read the [permissions section](/help/access-control/abac/end-to-end-guide.md#permissions) to get started.
 
 ### Create roles, labels, and assign users {#create-roles-labels-assign-users}
 

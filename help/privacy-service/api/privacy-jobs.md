@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Jobs API Endpoint
-description: Learn how to manage privacy jobs for Experience Cloud applications using the Privacy Service API.
+description: Learn how to manage privacy jobs for CX Enterprise applications using the Privacy Service API.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 TQID: 'https://experienceleague.adobe.com/BKO-vCxXCw-Hfcz6ew37BdcwwTGgjpJ1pENArJ-ztTc'
@@ -104,7 +104,7 @@ Before creating a new job request, you must first collect identifying informatio
 
 >[!NOTE]
 >
->Compatible Adobe Experience Cloud applications use different values for identifying data subjects. See the guide on [Privacy Service and Experience Cloud applications](../experience-cloud-apps.md) for more information on required identifiers for your application(s). For more general guidance on determining which IDs to send to [!DNL Privacy Service], see the document on [identity data in privacy requests](../identity-data.md).
+>Compatible Adobe CX Enterprise applications use different values for identifying data subjects. See the guide on [Privacy Service and CX Enterprise applications](../experience-cloud-apps.md) for more information on required identifiers for your application(s). For more general guidance on determining which IDs to send to [!DNL Privacy Service], see the document on [identity data in privacy requests](../identity-data.md).
 
 The [!DNL Privacy Service] API supports two kinds of job requests for personal data:
 
@@ -360,7 +360,7 @@ A successful response returns the details of the specified job.
 
 | Property | Description |
 | --- | --- |
-| `productStatusResponse` | Each object within the `productResponses` array contains information about the current status of the job with respect to a specific [!DNL Experience Cloud] application.|
+| `productStatusResponse` | Each object within the `productResponses` array contains information about the current status of the job with respect to a specific [!DNL CX Enterprise] application.|
 | `productStatusResponse.status` | The job's current status category. See the table below for a list of [available status categories](#status-categories) and their corresponding meanings. |
 | `productStatusResponse.message` | The job's specific status, corresponding to the status category. |
 | `productStatusResponse.responseMsgCode` | A standard code for product response messages received by [!DNL Privacy Service]. The details of the message are provided under `responseMsgDetail`. |

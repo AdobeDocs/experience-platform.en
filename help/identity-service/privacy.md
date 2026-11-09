@@ -30,13 +30,13 @@ This document covers essential concepts related to processing privacy requests f
 >
 >This guide only covers how to make privacy requests for the Identity data store in Experience Platform. If you also plan to make privacy requests for the Experience Platform data lake or [!DNL Real-Time Customer Profile], refer to the guide on [privacy request processing in the data lake](../catalog/privacy.md) and to the guide on [privacy request processing for Profile](../profile/privacy.md) in addition to this tutorial.
 >
->For steps on how to make privacy requests for other Adobe Experience Cloud applications, refer to the [Privacy Service documentation](../privacy-service/experience-cloud-apps.md).
+>For steps on how to make privacy requests for other Adobe CX Enterprise applications, refer to the [Privacy Service documentation](../privacy-service/experience-cloud-apps.md).
 
 ## Getting started
 
 It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
-* [[!DNL Privacy Service]](../privacy-service/home.md): Manages customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
+* [[!DNL Privacy Service]](../privacy-service/home.md): Manages customer requests for accessing, opting out of sale, or deleting their personal data across Adobe CX Enterprise applications.
 * [[!DNL Identity Service]](../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
 * [[!DNL Real-Time Customer Profile]](home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
@@ -129,4 +129,4 @@ Refer to the [[!DNL Privacy Service] documentation](../privacy-service/home.md#m
 
 ## Next steps
 
-By reading this document, you have been introduced to the important concepts involved with processing privacy requests in [!DNL Identity Service]. For information on processing privacy requests for other [!DNL Experience Cloud] applications, see the document on [[!DNL Privacy Service] and [!DNL Experience Cloud] applications](../privacy-service/experience-cloud-apps.md).
+By reading this document, you have been introduced to the important concepts involved with processing privacy requests in [!DNL Identity Service]. For information on processing privacy requests for other [!DNL CX Enterprise] applications, see the document on [[!DNL Privacy Service] and [!DNL CX Enterprise] applications](../privacy-service/experience-cloud-apps.md).

@@ -2,15 +2,26 @@
 title: Share identity across domains
 description: Maintain identity continuity across domains that your organization owns to improve personalization and reporting.
 exl-id: 5856eef0-81a6-4f16-ac93-1057ba05c3e6
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+  - id: a50ad69b-1331-40e9-b634-531a085a6a54
+    internal-label: Identities
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e9001ce2-5245-4a8e-8601-dd958009072f
+    internal-label: Web experience
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Share identity across domains
 
 When visitors move between domains that your organization owns, each domain maintains its own visitor identity by default. Without an explicit handoff, a visitor who clicks from one of your domains to another is treated as a new, unknown person on the destination site. This type of implementation fragments reporting and restarts personalization.
 
-Cross-domain identity sharing solves this issue by appending an `adobe_mc` query-string parameter to the destination URL when a visitor clicks a link or is redirected. This parameter carries the visitor's [Experience Cloud ID (ECID)](./overview.md), your organization ID, and a timestamp. When the destination page loads with a valid `adobe_mc` parameter, the Web SDK automatically reads it and applies the handed-off identity on its first Edge Network request, so both domains share the same visitor. The `adobe_mc` parameter expires after five minutes, so the destination page must load promptly after the redirect.
+Cross-domain identity sharing solves this issue by appending an `adobe_mc` query-string parameter to the destination URL when a visitor clicks a link or is redirected. This parameter carries the visitor's [ECID](./overview.md), your organization ID, and a timestamp. When the destination page loads with a valid `adobe_mc` parameter, the Web SDK automatically reads it and applies the handed-off identity on its first Edge Network request, so both domains share the same visitor. The `adobe_mc` parameter expires after five minutes, so the destination page must load promptly after the redirect.
 
 This use case covers identity sharing between websites on different domains. If you want to pass identity from a mobile app into a WebView or mobile web page, use [mobile-to-web identity sharing](./mobile-to-web.md) instead.
 

@@ -84,7 +84,7 @@ Privacy is a critical issue for your business, lawmakers, and your customers. Si
 
 Legal privacy regulations such as the European Union's General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA) grant citizens within their jurisdictions the right to access and delete the personal data you collect and store from them.
 
-Adobe Experience Platform Privacy Service provides a RESTful API and user interface to help manage these requests. With Privacy Service, you can submit requests to access or delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+Adobe Experience Platform Privacy Service provides a RESTful API and user interface to help manage these requests. With Privacy Service, you can submit requests to access or delete private or personal customer data from Adobe CX Enterprise applications, facilitating automated compliance with legal and organizational privacy regulations.
 
 See the [Privacy Service overview](../../privacy-service/home.md) for more information.
 

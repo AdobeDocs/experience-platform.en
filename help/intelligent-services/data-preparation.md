@@ -126,7 +126,7 @@ You must determine the best field to use as a primary identity based on the sour
 
 >[!NOTE]
 >
->The Experience Cloud ID (ECID) is also known as MCID and continues to be used in namespaces.
+>The ECID is also known as MCID and continues to be used in namespaces.
 
 * "email"
 * "phone"

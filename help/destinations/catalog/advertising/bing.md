@@ -49,7 +49,7 @@ All identities in the table below are preconfigured and automatically mapped dur
 |Identity|Description|Considerations|
 |---|---|---|
 |MAID|Microsoft Advertising ID|Activated when a Microsoft Advertising ID is present on the profile.|
-|ECID|Experience Cloud ID|**Required.** All profiles must have an ECID with a corresponding Microsoft Advertising ID mapping to be exported.|
+|ECID|ECID|**Required.** All profiles must have an ECID with a corresponding Microsoft Advertising ID mapping to be exported.|
 
 {style="table-layout:auto"}
 
@@ -154,7 +154,7 @@ In the [Audience schedule](../../ui/activate-segment-streaming-destinations.md#s
 The following identity mappings are **preconfigured and automatically populated** during the audience activation workflow:
 
 * **MAID** (Microsoft Advertising ID)
-* **ECID** (Experience Cloud ID)
+* **ECID**
 
 These mappings are grayed out and read-only. You do not need to configure anything in this step. Select **[!UICONTROL Next]** to continue.
 

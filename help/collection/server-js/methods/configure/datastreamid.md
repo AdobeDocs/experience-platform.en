@@ -2,6 +2,20 @@
 title: datastreamId (Server SDK)
 description: Determine which datastream the Server SDK sends data to.
 badge: Alpha
+feature_v2:
+  - id: b7798bb6-f089-4907-8492-05fc80e10632
+    internal-label: Server API
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: Datastreams
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `datastreamId` (Server SDK)
 
@@ -15,7 +29,7 @@ The `datastreamId` property is a string that determines which [datastream](/help
 
 To locate a datastream ID:
 
-1. Log in to [Adobe Experience Cloud](https://experience.adobe.com) using your Adobe ID credentials.
+1. Log in to [Adobe CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]**.
 1. Use the search field to locate the desired datastream, then copy the ID shown next to it. Alternatively, select the datastream name to see its ID in the right column.
 

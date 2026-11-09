@@ -35,7 +35,7 @@ As third-party cookies lose effectiveness, businesses are transitioning to cooki
 
 ## Why to consider retargeting unauthenticated visitors {#why-use-case}
 
-By integrating Adobe Experience Platform's Web SDK and server-side event forwarding, you can streamline event streaming and data forwarding. This enables seamless retargeting of unauthenticated users using ECIDs (Experience Cloud IDs), ensuring consistent engagement across platforms. With this solution, you can increase conversion opportunities by effectively retargeting unauthenticated users based on their past interactions.
+By integrating Adobe Experience Platform's Web SDK and server-side event forwarding, you can streamline event streaming and data forwarding. This enables seamless retargeting of unauthenticated users using ECIDs, ensuring consistent engagement across platforms. With this solution, you can increase conversion opportunities by effectively retargeting unauthenticated users based on their past interactions.
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 

@@ -4,21 +4,28 @@ description: Allows the Web SDK to read AMCV cookies.
 exl-id: 33b9d645-0fbe-4fe4-8847-e6f9e78557b6
 TQID: 'https://experienceleague.adobe.com/hbyGQRiwdHakLAJboWijFbU7V7rdNb64W2-jJqwGB-s'
 product_v2:
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
+  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
+    internal-label: Audience Manager
+  - id: e1971122-7081-4556-9222-8a31bd71800c
+    internal-label: Experience Cloud Services
 feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection tags
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+  - id: a50ad69b-1331-40e9-b634-531a085a6a54
+    internal-label: Identities
+  - id: 6f307efa-2798-5b6d-8079-f765b66875c1
+    internal-label: Cookies
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-    internal-label: Implementation
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `idMigrationEnabled` (Web SDK)
 
@@ -28,13 +35,13 @@ topic_v2:
 
 >[!ENDSHADEBOX]
 
-The `idMigrationEnabled` property allows the Web SDK to read AMCV cookies set by previous Adobe Visitor ID Service (ECID). If your organization upgrades your implementation to the Web SDK, this setting allows a smoother transition to the current Experience Platform Identity Service. This setting is valuable so that you don't see a sharp increase in unique visitors when upgrading to the Web SDK.
+The `idMigrationEnabled` property allows the Web SDK to read AMCV cookies set by previous Adobe Visitor ID Service. If your organization upgrades your implementation to the Web SDK, this setting allows a smoother transition to the Web SDK. This setting is valuable so that you don't see a sharp increase in unique visitors when upgrading to the Web SDK.
 
 If your organization runs a fresh Web SDK implementation, enabling this setting has no impact on data collection or visitor identification. There are no downsides to leaving it enabled for all implementations.
 
 ## How identity migration works {#how-it-works}
 
-The Visitor ID Service stores the Experience Cloud ID (ECID) in a cookie called `AMCV_<ORG_ID>`. When `idMigrationEnabled` is `true` (the default), the Web SDK automatically reads the ECID from the AMCV cookie and uses it as the visitor's identity on the first Edge Network request.
+The Visitor ID Service stores the ECID in a cookie called `AMCV_<ORG_ID>`. When `idMigrationEnabled` is `true` (the default), the Web SDK automatically reads the ECID from the AMCV cookie and uses it as the visitor's identity on the first Edge Network request.
 
 1. A visitor arrives on a page that now uses the Web SDK instead of the Visitor ID Service.
 1. The Web SDK checks for an existing `kndctr_` identity cookie (its own cookie format). If none is found, it looks for an `AMCV_` cookie.
@@ -54,7 +61,7 @@ ID migration supports the following transition patterns:
 
 >[!IMPORTANT]
 >
->Do not load the Visitor ID Service (ECID) and the Web SDK on the same page at the same time unless you have confirmed that the AMCV cookie is already set. Running both libraries on a single page can cause race conditions where each library attempts to manage identity independently, potentially generating duplicate or conflicting ECIDs.
+>Do not load the Visitor ID Service and the Web SDK on the same page at the same time unless you have confirmed that the AMCV cookie is already set. Running both libraries on a single page can cause race conditions where each library attempts to manage identity independently, potentially generating duplicate or conflicting ECIDs.
 
 ## Turning off migration {#turn-off-migration}
 
@@ -100,6 +107,6 @@ alloy("configure", {
 });
 ```
 
-## Enable Visitor ID migration using the Web SDK tag extension
+## Enable ECID migration using the Web SDK tag extension {#enable-visitor-id-migration-using-the-web-sdk-tag-extension}
 
 These settings can be configured in the Web SDK tag extension using [Identity configuration settings](/help/tags/extensions/client/web-sdk/configure/identity.md).

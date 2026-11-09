@@ -103,7 +103,7 @@ Note, however, that you have the flexibility to use data from either [private gr
 
 ### Third-party cookie destinations {#third-party-cookie-destinations}
 
-Advertising destinations relying on third party cookies (for example: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) do not require customers to select IDs in the activation workflow. For these destinations, when setting up an activation workflow, [!DNL Experience Platform] automatically looks up the identity match table constructed by the [Experience Cloud ID Service](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) and exports all identities that are available for a profile and supported by the destination.
+Advertising destinations relying on third party cookies (for example: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) do not require customers to select IDs in the activation workflow. For these destinations, when setting up an activation workflow, [!DNL Experience Platform] automatically looks up the identity match table constructed by the [Visitor ID Service](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) and exports all identities that are available for a profile and supported by the destination.
 
 These destinations require an ID sync to happen through either the [!UICONTROL Experience Cloud ID Service] or through [!UICONTROL [!DNL Experience Platform] Web SDK]. 
 

@@ -5,7 +5,17 @@ breadcrumb-title: Experience Platform Identity Service Guide
 user-guide-description: Bridge customer identities across devices and systems to deliver personalized digital experiences.
 feature: Identities
 role: Admin,Developer
-nudge: true
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a50ad69b-1331-40e9-b634-531a085a6a54
+    internal-label: Identities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 
 # Adobe Experience Platform Identity Service {#identity}

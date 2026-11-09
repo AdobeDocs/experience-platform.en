@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy Service and Experience Cloud Applications
-description: This document provides a reference for how to configure different Experience Cloud applications for privacy-related operations.
+title: Privacy Service and CX Enterprise Applications
+description: This document provides a reference for how to configure different CX Enterprise applications for privacy-related operations.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
 TQID: 'https://experienceleague.adobe.com/rsACkGRMFDuqvp3uK3Psg-8pqJDxSyPUlcQC4919FYk'
 product_v2:
@@ -34,20 +34,20 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
     internal-label: Privacy
 ---
-# [!DNL Privacy Service] and [!DNL Experience Cloud] applications
+# [!DNL Privacy Service] and [!DNL CX Enterprise] applications {#privacy-service-and-experience-cloud-applications}
 
-Adobe Experience Platform [!DNL Privacy Service] is built to support privacy requests for several Adobe Experience Cloud applications. Each application supports different product values and IDs for identifying data subjects.
+Adobe Experience Platform [!DNL Privacy Service] is built to support privacy requests for several Adobe CX Enterprise applications. Each application supports different product values and IDs for identifying data subjects.
 
-This document serves as a reference for [!DNL Experience Cloud] application documentation that outlines how to configure that application for privacy-related operations. This includes how to format and label your data. Two categories of applications are covered:
+This document serves as a reference for [!DNL CX Enterprise] application documentation that outlines how to configure that application for privacy-related operations. This includes how to format and label your data. Two categories of applications are covered:
 
 * [Applications integrated with Privacy Service](#integrated): Applications that are able to send access, delete, or opt-out requests to [!DNL Privacy Service].
 * [Self-serve applications](#self-serve): Applications that must manage their privacy requests internally, and cannot communicate with [!DNL Privacy Service] directly.
 
-Please review the documentation for your [!DNL Experience Cloud] applications to learn how to format your privacy requests, and which values are supported for those requests.
+Please review the documentation for your [!DNL CX Enterprise] applications to learn how to format your privacy requests, and which values are supported for those requests.
 
 ## Applications integrated with [!DNL Privacy Service] {#integrated}
 
-The following is a list of [!DNL Experience Cloud] applications that are integrated with [!DNL Privacy Service], including the [!DNL Privacy Service] capabilities they are compatible with, their protocols for processing delete requests, and links to documentation for more information.
+The following is a list of [!DNL CX Enterprise] applications that are integrated with [!DNL Privacy Service], including the [!DNL Privacy Service] capabilities they are compatible with, their protocols for processing delete requests, and links to documentation for more information.
 
 >[!NOTE]
 >
@@ -70,7 +70,7 @@ The following is a list of [!DNL Experience Cloud] applications that are integra
 
 ## Self-serve applications {#self-serve}
 
-The following is a list of [!DNL Experience Cloud] applications that are not integrated with [!DNL Privacy Service] and must manage their privacy concerns internally. Links to each application's documentation are provided, along with descriptions of the documentation's contents.
+The following is a list of [!DNL CX Enterprise] applications that are not integrated with [!DNL Privacy Service] and must manage their privacy concerns internally. Links to each application's documentation are provided, along with descriptions of the documentation's contents.
 
 | Application | Documentation description |
 | ------- | ----------- |
