@@ -15,7 +15,7 @@ In Adobe Experience Platform, you can consolidate your customer data into a unif
 
 Real-Time Customer Profile currently combines structured data from multiple channels, including online, offline, CRM, and third party, consolidating this data into a unified view that offers an actionable and timestamped account of every customer interaction. However, this doesn't cover unstructured data ingestion, meaning data from conversations, transcripts, or other multi-modal data (such as PDFs or images) are unavailable to be used with Profile.
 
-Profile with unstructured data lets you have access to unprocessed data, which lets you better personalize conversations since the customer context will continue to be shared across multiple platforms, including Brand Concierge. 
+Profile with unstructured data lets you have access to unprocessed data, including conversational and other text-based customer data. This can be used for both customer context and signal extraction, letting you better personalize interactions across supported agents and channels.
 
 Profile with unstructured data provides the following capabilities to Experience Platform customers:
 
@@ -39,7 +39,7 @@ In this scenario, one of your clients asks an agent about equities. Since this c
 
 This client then continues the conversation by stating "I've also been meaning to sit down and really review my retirement savings, just haven't gotten around to scheduling it.". By using Profile with unstructured data, Brand Concierge and Experience Platform can extract intent from these conversations, which lets you send personalized responses through the agent.
 
-As a result, Experience Platform can make this client enter the "Financial Planning Interest" audience, and immediately personalize the agent to reply with "Let's make sure your retirement plan is on track — book a free check-in with Alex Agent."
+The detected "retirement planning" signal can be used to qualify this client to the "Financial Planning Interest" audience. Once processed and available to the relevant application, the audience membership can support subsequent personalization. For example, the agent can be personalized to reply with "Let's make sure your retirement plan is on track — book a free check-in with Alex Agent."
 
 Additionally, since this context is shared between all Experience Platform applications, you can continue the retirement conversation in multiple forms. For example, Adobe Journey Optimizer can automatically send the client an email with a retirement check-in invitation with Alex Agent.
 
@@ -47,7 +47,7 @@ Additionally, since this context is shared between all Experience Platform appli
 
 To use Profile with unstructured data, you **must** meet the following prerequisites:
 
-- Already an existing Adobe Experience Platform user
+- Already an existing Adobe Experience Platform or Adobe Journey Optimizer user
 - Do **not** have the Healthcare Shield add-on
 
 If you fulfill all of these prerequisites, contact Adobe Customer Care for more information on requesting enablement for Profile with unstructured data.
@@ -57,7 +57,7 @@ If you fulfill all of these prerequisites, contact Adobe Customer Care for more 
 Before continuing Profile with unstructured data set up, you'll need to complete the following steps:
 
 - Enable [Identity Graph Linking Rules](/help/identity-service/identity-graph-linking-rules/overview.md)
-- Create a profile-enabled dataset
+- Create a profile-enabled dataset for customer attributes
   - Ingest at least one profile into this dataset
 
 Once Profile with unstructured data has been enabled, you can start using this feature by setting up the following steps:
@@ -82,7 +82,7 @@ For the standard simple identity with raw text use case, you can use an Experien
 
 >[!IMPORTANT]
 >
->When you create the schema and dataset, do **not** enable it for either Profile or Identity.
+>When you create the schema and dataset for unstructured data, do **not** enable it for either Profile or Identity.
 
 You'll first need to create an XDM ExperienceEvent schema for the dataset. This schema needs to include the following information:
 
@@ -100,7 +100,7 @@ Once you've created the dataset, you can make a PATCH request to the `v2/dataSet
 +++Sample patch request and response to enable the dataset for Profile with unstructured data.
 
 ```shell
-curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3077efa10d92ab7a71858
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3077efa10d92ab7a71858 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -159,7 +159,7 @@ To enable these datasets for Profile with unstructured data, you need to make a 
 +++Sample patch request and response to enable the dataset for Profile with unstructured data.
 
 ```shell
-curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3077efa10d92ab7a71858
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3077efa10d92ab7a71858 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -234,7 +234,7 @@ The following request retrieves a list of all the available categories and their
 +++A sample request to retrieve the available categories.
 
 ```shell
-curl -X GET https://platform.adobe.io.data/core/semanticprofile/config/category \
+curl -X GET https://platform.adobe.io/data/core/semanticprofile/config/category \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -312,7 +312,7 @@ curl -X POST https://platform.adobe.io/data/core/semanticprofile/config/configur
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
     "data": {
-        "name": "CustomerSummary":,
+        "name": "CustomerSummary",
         "configurationDetails": {
             "category": [
                 {
@@ -358,7 +358,7 @@ curl -X POST https://platform.adobe.io/data/core/semanticprofile/config/configur
 | `segments.selection_mode` | No | String | The method which the audiences are chosen. At this time, only `inclusion` is supported. |
 | `segments.inclusion` | No | Array | An array that contains the audiences you want to include. The audiences are written as objects that contain both the segment definition ID and the priority, where a lower number means a higher priority (so "1" is the highest priority). |
 | `marketingActions` | No | Array | An array that contains the marketing actions you want to apply to the configuration. For more information on marketing actions, read the [marketing actions endpoint guide](/help/data-governance/api/marketing-actions.md). |
-| `narrativePrecision` | No | String | The level of precision that the configuration narrative will be. Supported values include `precise`, `fuzzy`, and `value_only`. |
+| `narrative_precision` | No | String | The level of precision that the configuration narrative will be. Supported values include `precise`, `fuzzy`, and `value_only`. <ul><li>`precise`: Literal values with descriptive content.</li><li>`fuzzy`: Ranges or percentiles.</li></ul> |
 | `personNamespace` | No | Object | An object that contains details of the identity namespace for the configuration. If this field is left blank, the sandbox's default namespace will be used. |
 | `personNamespace.isPersonNamespaceEnabled` | No | Boolean | If set to `true`, the namespaces listed in `personNamespace.code` are used. Otherwise, the sandbox's default namespace will be used. |
 | `personNamespace.code` | No | Array | An array that lists the identity namespace codes you want the narrative to use. |
@@ -444,7 +444,7 @@ In Brand Concierge, select the concierge you want to apply the profile configura
 
 ![Brand Concierge is displayed, showing a list of concierges.](/help/profile/images/unstructured-data/select-concierge.png)
 
-Once you've selected the concierge, go the **Personalization** tab and select the previously created configuration.
+Once you've selected the concierge, go to the **Personalization** tab, choose the previously created configuration, and select **Save** to apply the profile configuration. 
 
 ![The personalization tab is displayed in Brand Concierge.](/help/profile/images/unstructured-data/select-configuration.png)
 
