@@ -73,9 +73,9 @@ topic_v2:
 
 **Activity**: In [!DNL Offer Decisioning], an activity contains the logic that informs the selection of an offer.
 
-**Administrator**: One or more individuals in your organization who can configure and customize permissions for Experience Platform in Adobe Admin Console. 
+**Administrator**: A person in your organization who manages roles, permissions, and sandbox access through [!UICONTROL Permissions] in Experience Platform.
 
-**Adobe Admin Console**: Adobe Admin Console provides a central location for managing Adobe product entitlements and access for your organization. Through the console, administrators can grant groups of users access permissions for various Experience Platform capabilities, such as "Manage Datasets", "View Datasets", or "Manage Profiles".
+**[!DNL Adobe Admin Console]**: Use [!DNL Adobe Admin Console] to manage Adobe product entitlements and grant users access to Adobe Experience Platform. Manage roles, permissions, and sandbox access through [!UICONTROL Permissions] in Experience Platform.
 
 **Adobe AI ML Framework**: Adobe AI ML Framework is a unified machine-learning (ML) framework that leverages Experience Platform data to empower data scientists to development of ML-driven intelligence services in a faster, scalable, and reusable manner.
 
