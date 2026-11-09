@@ -76,7 +76,7 @@ Attribute-based access control involves the following components:
 
 >[!IMPORTANT]
 >
->Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe CX Enterprise, instead of Roles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
+>Use [!UICONTROL Permissions] in Experience Platform to manage roles, permissions, labels, and sandbox access. Use [!DNL Adobe Admin Console] to grant users access to Experience Platform.
 
 Permissions is the area of CX Enterprise where administrators can define user roles and access policies to manage access permissions for features and objects within a product application.
 
@@ -92,7 +92,7 @@ The following sections provide information on how attribute-based access control
 
 ### Access control
 
-Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) roles to link users with permissions and sandboxes. Permissions control access to a variety of Experience Platform capabilities, including data modeling, profile management, and sandbox administration. Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe CX Enterprise, instead of Roles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
+Use [Adobe Admin Console](https://adminconsole.adobe.com) to grant users access to Adobe Experience Platform. Use [!UICONTROL Permissions] in Experience Platform to assign roles, permissions, and sandbox access. These permissions control access to capabilities such as data modeling, profile management, and sandbox administration.
 
 There is limited availability to attribute-based access control for customers who purchase Healthcare and/or Privacy Shields. The features of this functionality include:
 
@@ -100,13 +100,7 @@ There is limited availability to attribute-based access control for customers wh
 
 * Labeling: Add, edit, remove labels to user roles, schema fields, audiences, and other supported objects in order to leverage access control policies. **Note:** Any audience that utilizes a labeled attribute must likewise be labeled if you want the same access restrictions to apply to it.
 
-The administration workflows for all Experience Platform-powered applications from Admin Console to the new Permissions interface are being switched.
-
->[!IMPORTANT]
->
->Your roles are automatically migrated to the Permissions interface when your organization is enabled. The roles in Admin Console will remain as is for the time being. Please **do not** modify your roles after your organization has been enabled.
-
-For more information on access control, see the [access control overview](../home.md).
+For more information on access control, read the [access control overview](/help/access-control/home.md).
 
 ### Destinations {#destinations}
 
