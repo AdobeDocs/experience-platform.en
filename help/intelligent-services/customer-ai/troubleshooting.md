@@ -51,7 +51,7 @@ Loading errors in Google Chrome's incognito mode are present because of updates 
 
 To workaround this issue you need to add experience.adobe.com as a site that can always use cookies. Start by navigating to **chrome://settings/cookies**. Next, scroll down to the **Customized behaviors** section followed by selecting the **Add** button next to "sites that can always use cookies". In the popover that appears, copy and paste `[*.]experience.adobe.com` then select the **Including third-party cookies** on this site checkbox. Once complete, select **Add** and reload Customer AI in incognito.
 
-<!-- ![Animation showing the steps to add experience.adobe.com as a site that can always use cookies in Chrome settings.](./images/errors/cookies2.gif) -->
+![Animation showing the steps to add experience.adobe.com as a site that can always use cookies in Chrome settings.](./images/errors/cookies2.gif)
 
 ## Model quality is poor
 
