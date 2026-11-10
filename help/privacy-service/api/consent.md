@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Consent API Endpoint
-description: Learn how to manage customer consent requests for Experience Cloud applications using the Privacy Service API.
+description: Learn how to manage customer consent requests for CX Enterprise applications using the Privacy Service API.
 role: Developer
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 TQID: https://experienceleague.adobe.com/P9SG8xvWJrIX2qo6hZrrK4SrSTTk0dBK8VHBA2WxLJM

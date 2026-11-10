@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
 title: Attribute-based Access Control Manage Users
-description: Manage users and user groups through the Permissions interface in Adobe Experience Cloud.
+description: Manage users and user groups through the Permissions interface in Adobe CX Enterprise.
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
 TQID: 'https://experienceleague.adobe.com/gx2ofZdCqxJ0EkL118OrTUoK4FCyDyMXsNVi958vBF8'
 product_v2:
@@ -36,7 +36,7 @@ ADD LINKS INTO IMPORTANT NOTE BELOW
 >[!UICONTROL Permissions] manages access control for existing Experience Platform users. To add users to Experience Platform, navigate to Adobe Admin Console through the **[!UICONTROL Edit in admin console]** option. To learn how to add users through the Admin Console, follow the [adding users to Experience Platform](...){#target="_blank"} guide.
 -->
 
-To view your organization's users, navigate to **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL Users]** in the left panel.
+To view your organization's users, navigate to **[!UICONTROL Permissions]** in [Adobe CX Enterprise](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL Users]** in the left panel.
 
 ![The Users workspace within Permissions.](../../images/ui/users/users-overview.png){zoomable="yes"}
 
@@ -89,7 +89,7 @@ ADD LINKS INTO IMPORTANT NOTE BELOW
 >[!UICONTROL Permissions] manages access control for existing Experience Platform user groups. To add user groups to Experience Platform, navigate to Admin Console through the **[!UICONTROL Edit in admin console]** option. To learn how to add user groups in the Admin Console, follow the [adding user groups to Experience Platform](...){#target="_blank"} guide.
 -->
 
-To view your organization's users, navigate to **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}.Select **[!UICONTROL Groups]** from the **[!UICONTROL Users]** section in the left panel.
+To view your organization's users, navigate to **[!UICONTROL Permissions]** in [Adobe CX Enterprise](https://experience.adobe.com/){target="_blank"}.Select **[!UICONTROL Groups]** from the **[!UICONTROL Users]** section in the left panel.
 
 ![The User groups workspace within Permissions.](../../images/ui/users/user-groups-overview.png){zoomable="yes"}
 
@@ -135,7 +135,7 @@ A confirm dialog appears. Select **[!UICONTROL Confirm]** to finish removing the
 
 To use Experience Platform APIs as a user or developer, a system administrator needs to add API credentials in addition to a role's given set of permissions. Permissions allows you to assign previously created API credentials assigned to the Experience Platform product to roles. For a complete guide on creating and assigning API credentials, as well as the permissions needed, refer to the step-by-step tutorial in [authenticate and access Experience Platform APIs](/help/landing/api-authentication.md){target="_blank"}.
 
-To view your organizations API credentials associated with Experience Platform, navigate to **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL API Credentials]** from the **[!UICONTROL Users]** section in the left panel.
+To view your organizations API credentials associated with Experience Platform, navigate to **[!UICONTROL Permissions]** in [Adobe CX Enterprise](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL API Credentials]** from the **[!UICONTROL Users]** section in the left panel.
 
 ![The API Credentials workspace within Permissions.](../../images/ui/users/api-credentials-overview.png){zoomable="yes"}
 

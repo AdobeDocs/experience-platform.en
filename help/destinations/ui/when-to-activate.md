@@ -1,7 +1,6 @@
 ---
 title: When to activate
 description: Learn about the When to activate feature for streaming destinations and how to use it to control which profile changes trigger exports to your destinations.
-nudge: true
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform

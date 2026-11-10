@@ -60,7 +60,7 @@ Contract "C" labels are used to categorize data that has contractual obligations
 
 | Label | Definition |
 | --- | --- |
-| [C1](#c1) | Data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. |
+| [C1](#c1) | Data can only be exported from Adobe CX Enterprise in an aggregated form without including individual or device identifiers. |
 | [C2](#c2) | Data cannot be exported to a third-party. |
 | [C3](#c3) | Data cannot be combined or otherwise used with directly identifiable information. |
 | [C4](#c4) | Data cannot be used for targeting any ads or content, either on-site or cross-site. |
@@ -117,7 +117,7 @@ The following sections provide detailed information related to the implementatio
 
 #### C1 {#c1}
 
-Some data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
+Some data can only be exported from Adobe CX Enterprise in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
 
 #### C2 {#c2}
 

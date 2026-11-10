@@ -2,18 +2,25 @@
 title: Extension Package Usage Authorizations Endpoint
 description: Learn how to make calls to the /extension_package_usage authorizations endpoint in the Reactor API.
 exl-id: ad3fb704-7d2f-45ec-b80b-ea4d327f2205
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-    internal-label: User
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-    internal-label: Admin
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-    internal-label: Leader
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+  - id: f5a6b7c8-5005-4005-9005-500000000005
+    internal-label: Extension management
+subfeature_v2:
+  - id: 1a2b3c4d-0005-4005-8005-000000000005
+    internal-label: Reactor API
+  - id: a1b2c3d4-6002-4002-9002-600000000002
+    internal-label: Usage authorizations
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Extension package usage authorizations endpoint
 

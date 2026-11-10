@@ -2,9 +2,18 @@
 title: cookie
 description: Manually write, edit, or delete cookies for the tag property.
 exl-id: d9de504b-de5d-4b82-b72c-327cdf386cd8
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e9001ce2-5245-4a8e-8601-dd958009072f
+    internal-label: Web experience
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `cookie`
 

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;export;Export
 solution: Experience Platform
 title: Manage Privacy Jobs in the Privacy Service UI
-description: Learn how to use the Privacy Service user interface to coordinate and monitor privacy requests across various Experience Cloud applications.
+description: Learn how to use the Privacy Service user interface to coordinate and monitor privacy requests across various CX Enterprise applications.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 TQID: 'https://experienceleague.adobe.com/qy-QKSjRlKcgvQ-Sjkp0wh-JE7XFS9nYq1gTIkL1Q1w'
 product_v2:
@@ -147,7 +147,7 @@ To view the details of a particular job request, select the request's job ID fro
 
 ![GDPR UI Job Details](../images/user-guide/job-details.png)
 
-This dialog contains status information about each [!DNL Experience Cloud] solution and its current state in relation to the overall job. As every privacy job is asynchronous, the page displays the latest communication date and time (GMT) from each solution, as some require more time than others to process the request.
+This dialog contains status information about each [!DNL CX Enterprise] solution and its current state in relation to the overall job. As every privacy job is asynchronous, the page displays the latest communication date and time (GMT) from each solution, as some require more time than others to process the request.
 
 If a solution has provided any additional data, it is viewable in this dialog. You can view this data by selecting individual product rows.
 

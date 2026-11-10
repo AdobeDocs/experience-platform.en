@@ -34,6 +34,19 @@ topic_v2:
 ---
 # Adobe Experience Platform Debugger release notes
 
+## Version 1.8.0 - October 29, 2026
+
+* Fixed an issue where Analytics report suite details and configured variable names did not load after the retirement of Analytics API 1.4. The Debugger now uses Analytics API 2.0.
+* The [Analytics tab](solutions/overview.md#section-f71dfcc22bb44c86bec328491606a482) now shows when report suite details are loading or fail to load, and lets you retry or refresh them.
+* The **[!UICONTROL Show post processed hits]** toggle now requires a valid sign-in session and consent to personal data collection. You can turn it off at any time.
+* Added support for Streaming Media and Brand Concierge requests, including Brand Concierge voice conversations, in request tables and Assurance sessions.
+* Improved request tables in the [[!UICONTROL Network] tab](network.md#filter-search) and solution tabs, including:
+  * Filtering by request type.
+  * Search that highlights matches without hiding other requests, with navigation between matches.
+  * Counts of captured, shown, and matching requests.
+  * Buttons to jump to the oldest or most recent request.
+* Fixed an issue where the Debugger could continue adding Assurance validation headers to requests after you disconnected from an Assurance session.
+
 ## Version 1.7.1 - June 24, 2026
 
 * Fixed an issue where overriding the datastream ID could fail to take effect.

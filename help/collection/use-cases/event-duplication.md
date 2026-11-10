@@ -4,35 +4,24 @@ description: Learn how Adobe Experience Platform handles event duplication
 exl-id: ac8c3ee8-52cf-459c-b283-16ed32d2976d
 TQID: 'https://experienceleague.adobe.com/P7G0XROFmmnm0Z9VEAxt-lSw6UhenD4g7SBeV-5T7FY'
 product_v2:
-  - id: cb954087-f4fc-4456-afb9-e939cabcdc79
-    internal-label: Journey Optimizer
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-    internal-label: Acrobat Sign
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
-  - id: e98b7246-966c-4318-9e95-cad2f7a17dc7
-    internal-label: Customer Journey Analytics
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-    internal-label: Real-Time Customer Data Platform
+  - id: e98b7246-966c-4318-9e95-cad2f7a17dc7
+    internal-label: Customer Journey Analytics
 feature_v2:
-  - id: ba929a52-9339-4154-9487-317dc875a3c7
-    internal-label: Use cases
-  - id: df64005d-8f9a-422e-ba4d-c6f6dc3454b4
-    internal-label: Use cases
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection tags
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-    internal-label: Sources
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+  - id: a8a79b8d-fdca-499c-a5ef-f88a099d8eb9
+    internal-label: Mobile SDK
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
+  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
+    internal-label: Data quality
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Event duplication handling in Adobe Experience Platform
 

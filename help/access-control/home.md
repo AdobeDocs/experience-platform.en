@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;access control;adobe admin console
 solution: Experience Platform
 title: Access control overview
-description: Access control for Adobe Experience Platform is provided through the Adobe Admin Console. This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes.
+description: Learn about access control in Adobe Experience Platform. Use Permissions to manage roles, assign permissions, and control sandbox access for your organization.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
@@ -13,7 +13,7 @@ role_v2:
 ---
 # Access control overview
 
-Access control for Adobe Experience Platform is provided through the **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/). This functionality leverages roles and policies, which link users with permissions and sandboxes.
+Use [Adobe Admin Console](https://adminconsole.adobe.com) to grant users access to Adobe Experience Platform. Use [!UICONTROL Permissions] in Experience Platform to assign roles, permissions, and sandbox access.
 
 ## Access control hierarchy and workflow
 
@@ -311,4 +311,4 @@ The following table outlines the available permissions for Experience Platform i
 
 ## Next steps
 
-By reading this guide, you have been introduced to the main principles of access control in Experience Platform. You can now continue to the [attribute based access control user guide](./abac/overview.md) for detailed steps on how use Experience Cloud to create roles and assign permissions for Experience Platform.
+By reading this guide, you have been introduced to the main principles of access control in Experience Platform. You can now continue to the [attribute based access control user guide](./abac/overview.md) for detailed steps on how use CX Enterprise to create roles and assign permissions for Experience Platform.
