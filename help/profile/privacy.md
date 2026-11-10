@@ -122,7 +122,9 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Experience Platform processes privacy requests across all [sandboxes](../sandboxes/home.md) belonging to your organization. As a result, any `x-sandbox-name` header included in the request is ignored by the system.
+>Privacy Service processes Profile requests across all [sandboxes](../sandboxes/home.md) belonging to your organization. The `x-sandbox-name` header is ignored and does not limit Profile processing.
+>
+>The optional `sandboxIds` request property limits processing only for the Experience Platform data lake (`aepDataLake`). If a privacy request includes both the Profile store and data lake, the specified sandbox IDs limit the data lake portion of the request, while Profile store processing remains organization-wide.
 
 **Product response**
 
