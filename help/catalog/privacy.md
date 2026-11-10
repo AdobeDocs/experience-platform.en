@@ -167,7 +167,13 @@ IDs for the data lake must use `unregistered` for their `type` value, and a `nam
 
 In addition, the `include` array of the request payload must include the product values for the different data stores the request is being made to. When making requests to the data lake, the array must include the value `aepDataLake`.
 
-The following request creates a new privacy job for the data lake, using the unregistered `email_label` namespace. It also includes the product value for the data lake in the `include` array:
+To limit data lake processing to specific sandboxes, provide the optional `sandboxIds` property as an array containing one or more sandbox IDs. Each ID must be a UUID and belong to your organization. If you omit `sandboxIds` or set it to `null`, data lake processing applies across the organization. 
+
+>[!NOTE]
+>
+>Sandbox scoping applies only to data lake data. Other products included in the same privacy request are not scoped by the specified sandbox.
+
+The following request creates a new privacy job for the data lake, using the unregistered `email_label` namespace. It includes `aepDataLake` in the `include` array and limits data lake processing to the specified sandbox:
 
 ```shell
 curl -X POST \
@@ -191,17 +197,18 @@ curl -X POST \
           {
             "namespace": "email_label",
             "value": "ajones@acme.com",
-            "type": "custom"
+            "type": "unregistered"
           },
           {
             "namespace": "email_label",
             "value": "jdoe@example.com",
-            "type": "custom"
+            "type": "unregistered"
           }
         ]
       }
     ],
     "include": ["aepDataLake"],
+    "sandboxIds": ["{SANDBOX_ID}"],
     "expandIds": false,
     "priority": "normal",
     "regulation": "ccpa"
@@ -210,7 +217,9 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Experience Platform processes privacy requests across all [sandboxes](../sandboxes/home.md) belonging to your organization. As a result, any `x-sandbox-name` header included in the request is ignored by the system.
+>Each value in `sandboxIds` must be a valid sandbox ID in UUID format and must belong to your organization. The array cannot be empty, and `aepDataLake` must be present in `include`. Invalid values or an invalid product combination cause the request to be rejected with HTTP status 400. See the [Privacy jobs endpoint guide](../privacy-service/api/privacy-jobs.md#sandbox-scope) for the complete validation behavior.
+>
+>The `x-sandbox-name` request header is ignored by Privacy Service and does not limit data lake processing. Use `sandboxIds` in the request body to set the data lake scope.
 
 ## Delete request processing
 

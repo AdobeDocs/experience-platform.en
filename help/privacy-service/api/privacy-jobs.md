@@ -5,19 +5,21 @@ title: Privacy Jobs API Endpoint
 description: Learn how to manage privacy jobs for CX Enterprise applications using the Privacy Service API.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-TQID: 'https://experienceleague.adobe.com/BKO-vCxXCw-Hfcz6ew37BdcwwTGgjpJ1pENArJ-ztTc'
+autotag-review: '2026-11-10T20:13:15.781Z'
+TQID: https://experienceleague.adobe.com/IZHMZF0nftBBX-LWXqjczNiPXeNpLkwvSMgmQ4Kprak
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-    internal-label: Dashboards
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+    internal-label: Sandboxes
+  - id: f5a6b7c8-5002-4002-9002-500000000002
+    internal-label: Requests
 subfeature_v2:
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+  - id: cb38b9a1-a4ba-4696-803f-96152b4ea1b0
+    internal-label: Privacy service API
+  - id: fe0317fe-741f-44ed-b812-d9e7efcb8781
+    internal-label: Jobs
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
     internal-label: Troubleshooting
@@ -191,6 +193,7 @@ curl -X POST \
 | `companyContexts` **(Required)** | An array containing authentication information for your organization. Each listed identifier includes the following attributes: <ul><li>`namespace`: The namespace of an identifier.</li><li>`value`: The value of the identifier.</li></ul>It is **required** that one of the identifiers uses `imsOrgId` as its `namespace`, with its `value` containing the unique ID for your organization. <br/><br/>Additional identifiers can be product-specific company qualifiers (for example, `Campaign`), which identify an integration with an Adobe application belonging to your organization. Potential values include account names, client codes, tenant IDs, or other application identifiers. |
 | `users` **(Required)** | An array containing a collection of at least one user whose information you would like to access or delete. A maximum of 1000 users can be provided in a single request. Each user object contains the following information: <ul><li>`key`: An identifier for a user that is used to qualify the separate job IDs in the response data. It is best practice to choose a unique, easily identifiable string for this value so it can easily be referenced or looked up later.</li><li>`action`: An array that lists desired actions to take on the user's data. Depending on the actions you want to take, this array must include `access`, `delete`, or both.</li><li>`userIDs`: A collection of identities for the user. The number of identities a single user can have is limited to nine. Each identity consists of a `namespace`, a `value`, and a namespace qualifier (`type`). See the [appendix](appendix.md) for more details on these required properties.</li></ul> For a more detailed explanation of `users` and `userIDs`, see the [troubleshooting guide](../troubleshooting-guide.md#user-ids). |
 | `include` **(Required)** | An array of Adobe products to include in your processing. If this value is missing or otherwise empty, the request will be rejected. Only include products that your organization has an integration with. See the section on [accepted product values](appendix.md) in the appendix for more information. |
+| `sandboxIds` | An optional array of one or more sandbox UUIDs that belong to your organization. This property limits processing only for the Experience Platform data lake (`aepDataLake`). It does not limit processing for other products in the request. If you provide `sandboxIds`, the `include` array must contain `aepDataLake`. If you omit `sandboxIds` or set it to `null`, data lake processing applies across your organization. |
 | `expandIDs` | An optional property that, when set to `true`, represents an optimization for processing the IDs in the applications (currently only supported by [!DNL Analytics]). If omitted, this value defaults to `false`. |
 | `priority` | An optional property used by Adobe Analytics that sets the priority for processing requests. Accepted values are `normal` and `low`. If `priority` is omitted, the default behavior is `normal`. |
 | `mergePolicyId` | When making privacy requests for Real-Time Customer Profile (`profileService`), you can optionally provide the ID of the specific [merge policy](../../profile/merge-policies/overview.md) that you want to use for ID stitching. By specifying a merge policy, privacy requests can include audience information when returning data on a customer. Only one merge policy can be specified per request. If no merge policy is provided, segmentation information is not included in the response. |
@@ -251,6 +254,61 @@ A successful response returns the details of the newly created jobs.
 {style="table-layout:auto"}
 
 Once you have successfully submitted the job request, you can proceed to the next step of [checking the job's status](#check-status).
+
+### Scope data lake processing to sandboxes {#sandbox-scope}
+
+Use the optional `sandboxIds` property to limit Experience Platform data lake privacy processing to specific sandboxes in your organization. Provide at least one sandbox UUID and include `aepDataLake` in the `include` array. The `sandboxIds` property applies only to data lake processing. If the same request includes other products, those products process the request according to their own scope requirements.
+
+The `x-sandbox-name` request header does not control the scope of a Privacy Service job. To scope data lake processing, use `sandboxIds` in the request body.
+
+The following request creates an access and delete job and limits data lake processing to the specified sandbox:
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/privacy/jobs \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -d '{
+    "companyContexts": [
+      {
+        "namespace": "imsOrgID",
+        "value": "{ORG_ID}"
+      }
+    ],
+    "users": [
+      {
+        "key": "user12345",
+        "action": ["access", "delete"],
+        "userIDs": [
+          {
+            "namespace": "email_label",
+            "value": "ajones@acme.com",
+            "type": "unregistered"
+          }
+        ]
+      }
+    ],
+    "include": ["aepDataLake"],
+    "sandboxIds": ["{SANDBOX_ID}"],
+    "regulation": "ccpa"
+  }'
+```
+
+Privacy Service validates `sandboxIds` before accepting the request.
+
+| Condition | Result |
+| --- | --- |
+| `sandboxIds` is omitted or set to `null` | The request is accepted and data lake processing applies across the organization. |
+| `sandboxIds` is an empty array | The request is rejected with HTTP status 400. Omit the property or provide at least one sandbox ID. |
+| A value is not a valid UUID | The request is rejected with HTTP status 400. |
+| At least one UUID does not belong to the organization | The request is rejected with HTTP status 400. |
+| `sandboxIds` is provided without `aepDataLake` in `include` | The request is rejected with HTTP status 400. |
+
+{style="table-layout:auto"}
+
+For data lake-specific identity and dataset requirements, see [privacy request processing in the data lake](../../catalog/privacy.md).
 
 ## Check the status of a job {#check-status}
 
