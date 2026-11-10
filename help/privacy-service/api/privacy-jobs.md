@@ -5,23 +5,21 @@ title: Privacy Jobs API Endpoint
 description: Learn how to manage privacy jobs for Experience Cloud applications using the Privacy Service API.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-TQID: https://experienceleague.adobe.com/BKO-vCxXCw-Hfcz6ew37BdcwwTGgjpJ1pENArJ-ztTc
+autotag-review: '2026-11-10T20:13:15.781Z'
+TQID: https://experienceleague.adobe.com/IZHMZF0nftBBX-LWXqjczNiPXeNpLkwvSMgmQ4Kprak
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+    internal-label: Sandboxes
+  - id: f5a6b7c8-5002-4002-9002-500000000002
+    internal-label: Requests
 subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+  - id: cb38b9a1-a4ba-4696-803f-96152b4ea1b0
+    internal-label: Privacy service API
+  - id: fe0317fe-741f-44ed-b812-d9e7efcb8781
+    internal-label: Jobs
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
     internal-label: Troubleshooting
