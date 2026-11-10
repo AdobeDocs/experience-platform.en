@@ -308,7 +308,9 @@ The Analytics source connector does not provide the fully processed POST dataset
 
 You can optionally use Query Service to calculate sessionization or attribution on the ingested Experience Event data. These calculations do not recreate all Analytics post-processing. For examples, see [Adobe-defined functions](/help/query-service/sql/adobe-defined-functions.md) in the Query Service user guide.
 
-+++Select to view a table of deprecated advanced mapping fields
++++Select to view a historical reference table of deprecated advanced mapping fields
+
+This table is for historical reference only; it does not describe fields currently supplied by the Analytics source connector.
 
 | Data feed | XDM field | XDM type | Description |
 | --- | --- | --- | --- |
