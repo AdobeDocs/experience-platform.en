@@ -24,7 +24,7 @@ topic_v2:
 ---
 # Analytics field mappings
 
-Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics source. Some of the data ingested through ADC can be mapped directly from Analytics fields to Experience Data Model (XDM) fields, while other data requires transformations and specific functions to be successfully mapped.
+Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics source. Some of the data ingested through Analytics source connector can be mapped directly from Analytics fields to Experience Data Model (XDM) fields, while other data requires transformations and specific functions to be successfully mapped.
 
 ![An illustration of the Adobe Analytics data journey from Analytics to Experience Platform.](../images/analytics-data-experience-platform.png)
 
@@ -65,7 +65,7 @@ Read the following table for information on streaming media parameters.
 | `videoprogress50` | `mediaReporting.sessionDetails.hasProgress50` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 50% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
 | `videoprogress75` | `mediaReporting.sessionDetails.hasProgress75` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 75% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted.|
 | `videoprogress95` | `mediaReporting.sessionDetails.hasProgress95` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 95% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
-| `videopause` | `mediaReporting.sessionDetails.hasPauseImpactedStreams` | boolean | A boolean value hat indicates if one or more pauses occurred during the playback of a single media item. |
+| `videopause` | `mediaReporting.sessionDetails.hasPauseImpactedStreams` | boolean | A boolean value that indicates if one or more pauses occurred during the playback of a single media item. |
 | `videopausecount` | `mediaReporting.sessionDetails.pauseCount` | integer | The number of pause periods that occurred during playback. |
 | `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | integer | The total duration (in seconds) in which playback was paused by a user. |
 | `videomvpd` | `mediaReporting.sessionDetails.mvpd` | string | An MVPD identifier provided via Adobe authentication. |
@@ -96,7 +96,7 @@ Read the following table for information on advertising parameters.
 | `videoadadvertiser` | `mediaReporting.advertisingDetails.advertiser` | string | The company or brand whose product is featured in the ad. |
 | `videoadcampaign` | `mediaReporting.advertisingDetails.campaignID` | string | The ID of the ad campaign. |
 | `videoadstart` | `mediaReporting.advertisingDetails.isStarted` | boolean | A boolean value that indicates whether the ad has been started or not. |
-| `videoadcomplete` | `mediaReporting.advertisingDetails.isCompleted` | boolean | A boolean value that indicates whether the had has been completed or not. |
+| `videoadcomplete` | `mediaReporting.advertisingDetails.isCompleted` | boolean | A boolean value that indicates whether the ad has been completed or not. |
 | `videoadtime` | `mediaReporting.advertisingDetails.timePlayed` | integer | The total amount of time, measured in seconds, spent watching the ad. |
 
 {style="table-layout:auto"}
@@ -304,76 +304,6 @@ These fields have a single source, but map to **multiple** XDM locations.
 
 Select fields (known as "post values") contain data after Adobe has adjusted their values using Processing rules, VISTA rules, and lookup tables. Most post values have a pre-processed counterpart. 
 
-The Analytics source connector sends pre-processed data into a dataset in Experience Platform. You can transform this data to its post-processed counterpart using transformations. To learn more about performing these transformations using Query Service, see [Adobe-defined functions](/help/query-service/sql/adobe-defined-functions.md) in the Query Service user guide.
+The Analytics source connector does not provide the fully processed POST dataset from the report suite. Instead, it streams mid-values: a partially processed copy of each hit captured after pre-processing (such as Processing rules) but before visit- and visitor-level processing. As a result, the ingested dataset does not include post-processed context such as visit number.
 
-To learn more about performing these transformations using Query Service, see [Adobe-defined functions](/help/query-service/sql/adobe-defined-functions.md) in the Query Service user guide.
-
-+++Select to view a table of deprecated advanced mapping fields
-
-| Data feed | XDM field | XDM type | Description |
-| --- | --- | --- | --- |
-| `post_evar1`<br/>`[...]`<br/>`post_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | string | Custom Analytics eVars. Each organization can use eVars differently. |
-| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | string | Custom Analytics props. Each organization can use props differently. |
-| `post_browser_height` | `environment.browserDetails.viewportHeight` | integer | The height of the browser, in pixels. |
-| `post_browser_width` | `environment.browserDetails.viewportWidth` | integer | The width of the browser, in pixels. |
-| `post_campaign` | `marketing.trackingCode` | string | The variable used in the Tracking Code dimension. |
-| `post_channel` | `web.webPageDetails.siteSection` | string | The variable used in the Site Sections dimension. |
-| `post_cust_visid` | `endUserIDs._experience.aacustomid.id` | string | The custom visitor ID, if set. |
-| `post_first_hit_page_url` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.URL` | string | The URL of the first page the visitor reaches. |
-| `post_first_hit_pagename` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.name` | string | A variable used in the Entry Page Original dimension. The page name of the entry page of the visitor. |
-| `post_keywords` | `search.keywords` | string | The keywords that were collected for the hit. |
-| `post_page_url` | `web.webPageDetails.URL` | string | The URL of the page hit. |
-| `post_pagename` | `web.webPageDetails.pageViews.value` | string | Equals 1 on hits that have a page name. This is similar to the Adobe Analytics Page Views metric. |
-| `post_purchaseid` | `commerce.order.purchaseID` | string | Variable that is used to uniquely identify purchases. |
-| `post_referrer` | `web.webReferrer.URL` | string | The URL of the previous page. |
-| `post_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | string |  State variable. |
-| `post_user_server` | `web.webPageDetails.server` | string | A variable used in the Server dimension. |
-| `post_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | string | A variable used to populate the Zip Code dimension. |
-| `browser` | `_experience.analytics.environment.`<br/>`browserID` | integer | The numeric ID of the browser. |
-| `domain` | `environment.domain` | string | The variable used in the Domain dimension. It is based on the user's internet service provider (ISP). |
-| `first_hit_referrer` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.URL` | string | The first referring URL for the visitor. |
-| `geo_city` | `placeContext.geo.city` | string | The name of the city of the hit. This is based off the hit's IP address. |
-| `geo_dma` | `placeContext.geo.dmaID` | integer | The numeric ID of the demographic area for the hit. This is based off the hit's IP address. |
-| `geo_region` | `placeContext.geo.stateProvince` | string | The name of either the state or region of the hit. This is based off the hit's IP address. |
-| `geo_zip` | `placeContext.geo.postalCode` | string | The ZIP code of the hit. This is based off the hit's IP address. |
-| `os` | `_experience.analytics.environment.`<br/>`operatingSystemID` | integer | The numeric ID representing the operating system of the visitor. This is based on the user_agent column. |
-| `search_page_num` | `search.pageDepth` | integer | This variable is used by the All Search Page Rank dimension, and indicates which page of search results your site \| appeared on before the user clicked through to your site. |
-| `visit_keywords` | `_experience.analytics.session.`<br/>`search.keywords` | string | A variable used in the Search Keywords dimension. |
-| `visit_num` | `_experience.analytics.session.`<br/>`num` | integer | A variable used in the Visit Number dimension. This starts at 1, and increments each time a new visit starts (per user). |
-| `visit_page_num` | `_experience.analytics.session.`<br/>`depth` | integer | A variable used in the Hit Depth dimension. This value increases by 1 for each hit the user generates, and resets after each visit. |
-| `visit_referrer` | `_experience.analytics.session.`<br/>`web.webReferrer.URL` | string | The first referrer of the visit. |
-| `visit_search_page_num` | `_experience.analytics.session.`<br/>`search.pageDepth` | integer | The first Page Name of the visit. |
-| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Object | Custom Analytics props, configured to be list props. It contains a delimited list of values. |
-| `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Used by hierarchy variables and contains a delimited list of values. \| `{values (array), delimiter (string)}` |
-| `post_mvvar1`<br/>`[...]`<br/>`post_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | A list of variable values. Contains a delimited list of custom values, depending on implementation. \| `{value (string), key (string)}` |
-| `post_cookies` | `environment.browserDetails.cookiesEnabled` | boolean | Variable used in the Cookie Support dimension. |
-| `post_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | Standard commerce events triggered on the hit. \| `{id (string), value (number)}` |
-| `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit.\| `{id (Object), value (Object)}` |
-| `post_java_enabled` | `environment.browserDetails.javaEnabled` | boolean | A flag indicating whether Java&trade; is enabled. |
-| `post_latitude` | `placeContext.geo._schema.latitude` | number |   |
-| `post_longitude` | `placeContext.geo._schema.longitude` | number |   |
-| `post_page_event` | `web.webInteraction.type` | string | The type of hit that is sent in the image request (standard hit, download link, exit link, or custom link clicked). |
-| `post_page_event` | `web.webInteraction.linkClicks.value` | number | Equals 1 if the hit is a link click. This is similar to the Page Events metric in Adobe Analytics. |
-| `post_page_event_var1` | `web.webInteraction.URL` | string | This variable is only used in link tracking image requests. It is the URL of the download link, exit link, or custom link clicked. |
-| `post_page_event_var2` | `web.webInteraction.name` | string | This variable is only used in link tracking image requests. It is the custom name of the link. |
-| `post_page_type` | `web.webPageDetails.isErrorPage` | boolean | This is used to populate the Pages Not Found dimension. This variable should either be empty or contain "ErrorPage" |
-| `post_pagename_no_url` | `web.webPageDetails.name` | number | The name of the page (if set). If no page is specified, this value is left empty. |
-| `post_product_list` | `productListItems[].items` | array | The product list, as passed in through the products variable. \| `{SKU (string), quantity (integer), priceTotal (number)}` |
-| `post_search_engine` | `search.searchEngine` | string | The numeric ID representing the search engine that referred the visitor to your site. |
-| `mvvar1_instances` | `.list.items[]` | Object | List of variable values. Contains a delimited list of custom values, depending on implementation. |
-| `mvvar2_instances` | `.list.items[]` | Object | List of variable values. Contains a delimited list of custom values, depending on implementation. |
-| `mvvar3_instances` | `.list.items[]` | Object | List of variable values. Contains a delimited list of custom values, depending on implementation. |
-| `color` | `device.colorDepth` | integer | Color depth ID, based on the value of the c_color column. |
-| `first_hit_ref_type` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.type` | string | The numeric ID, representing the referrer type of the first referrer of the visitor. |
-| `first_hit_time_gmt` | `_experience.analytics.endUser.`<br/>`firstTimestamp` | integer | Timestamp of the first hit of the visitor in UNIX&reg; time. |
-| `geo_country` | `placeContext.geo.countryCode` | string | Abbreviation of the country the hit came from, based on IP. |
-| `geo_latitude` | `placeContext.geo._schema.latitude` | number |  |
-| `geo_longitude` | `placeContext.geo._schema.longitude` | number |  |
-| `paid_search` | `search.isPaid` | boolean | A flag that is set if the hit matches paid search detection. |
-| `ref_type` | `web.webReferrer.type` | string | A numeric ID representing the type of referral for the hit. |
-| `visit_paid_search` | `_experience.analytics.session.`<br/>`search.isPaid` | boolean | A flag (1=paid, 0=not paid) indicating if the first hit of the visit was from a paid search hit. |
-| `visit_ref_type` | `_experience.analytics.session.`<br/>`web.webReferrer.type` | string | Numeric ID representing the referrer type of the first referrer of the visit. |
-| `visit_search_engine` | `_experience.analytics.session.`<br/>`search.searchEngine` | string | Numeric ID of the first search engine of the visit. |
-| `visit_start_time_gmt` | `_experience.analytics.session.`<br/>`timestamp` | integer | Timestamp of the first hit of the visit in UNIX&reg; time. |
-
-+++
+You can optionally use Query Service to calculate sessionization or attribution on the ingested Experience Event data. These calculations do not recreate all Analytics post-processing. For examples, see [Adobe-defined functions](/help/query-service/sql/adobe-defined-functions.md) in the Query Service user guide.
