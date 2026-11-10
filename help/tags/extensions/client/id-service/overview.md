@@ -50,7 +50,7 @@ The following configuration options are available:
 
 ### Experience Cloud Organization ID
 
-The ID for your CX Enterprise Organization.
+The ID for your Adobe organization.
 
 Your ID is a 24-character, alphanumeric string followed by `@AdobeOrg`. If you do not know this ID, contact Customer Care.
 

@@ -23,7 +23,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 When a visitor moves from a mobile app into a WebView or mobile web page, the app and web contexts each maintain their own identity. Without an explicit handoff, the web experience treats the visitor as a new, unknown person, which fragments reporting and restarts personalization.
 
-Mobile-to-web identity sharing solves this by passing the visitor's [ECID](./overview.md) from the mobile app to the web destination through an `adobe_mc` query-string parameter. The parameter carries the ECID, your CX Enterprise organization ID, and a timestamp. When the web destination loads with a valid `adobe_mc` parameter, the Web SDK automatically reads it and applies the handed-off identity on its first Edge Network request, so both contexts share the same visitor.
+Mobile-to-web identity sharing solves this by passing the visitor's [ECID](./overview.md) from the mobile app to the web destination through an `adobe_mc` query-string parameter. The parameter carries the ECID, your organization ID, and a timestamp. When the web destination loads with a valid `adobe_mc` parameter, the Web SDK automatically reads it and applies the handed-off identity on its first Edge Network request, so both contexts share the same visitor.
 
 Use this pattern when your mobile app opens a WebView or mobile web page that your organization controls and you want app activity and web activity to remain tied to the same visitor. If your goal is identity continuity between websites on different domains, use [cross-domain sharing](cross-domain-sharing.md) instead.
 
@@ -34,7 +34,7 @@ Before you begin, make sure that your implementation meets the following require
 * **Mobile app**: The Adobe Experience Platform Mobile SDK with the [Identity for Edge Network](https://developer.adobe.com/client-sdks/edge/identity-for-edge-network/) extension version **1.1.0 or later** (iOS and Android).
 * **Web destination**: The [Web SDK](/help/collection/js/js-overview.md) version **2.11.0 or later**, or the Web SDK tag extension.
 * **URL control**: Your code controls the URL that the app passes to the WebView or browser so that you can append query-string parameters to it.
-* **Matching configuration**: The same CX Enterprise organization ID is configured in both the mobile and web implementations.
+* **Matching configuration**: The same organization ID is configured in both the mobile and web implementations.
 
 ## Retrieve identity from the mobile app {#retrieve-identity}
 
@@ -45,7 +45,7 @@ The returned string contains the following URL-encoded parameters:
 | Parameter | Description |
 | --- | --- |
 | `MCID` | The ECID. |
-| `MCORGID` | Your CX Enterprise organization ID. This parameter must match the organization configured in the Web SDK on the destination page. |
+| `MCORGID` | Your organization ID. This parameter must match the organization configured in the Web SDK on the destination page. |
 | `TS` | A timestamp. The destination must receive this value within **five minutes** or the handoff is rejected. |
 
 The following code examples show what a handoff might look like in your mobile app:
