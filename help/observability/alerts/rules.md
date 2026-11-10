@@ -90,7 +90,7 @@ The following alert rules apply to [Data Ingestion](../../ingestion/home.md) and
 
 | I/O Event subscription | Alert rule | Description |
 | --- | --- | --- |
-| Sources Flow Run Success | Sources Flow Run Success | This alert triggers when data is successfully ingested from a source connection. | 
+| Sources Flow Run Success | Sources Flow Run Success | This alert triggers when data is successfully ingested from a source connection. |
 
 {style="table-layout:auto"}
 
@@ -419,7 +419,7 @@ The following alert rules apply to [Identity Service](../../identity-service/hom
 
 | I/O Event subscription | Alert rule | Description |
 | --- | --- | --- |
-| Identity Service Flow Run Success | Identity Service Flow Run Success | This alert triggers when data is successfully loaded from the Data Lake into Identity Service. | 
+| Identity Service Flow Run Success | Identity Service Flow Run Success | This alert triggers when data is successfully loaded from the Data Lake into Identity Service. |
 
 {style="table-layout:auto"}
 
@@ -2227,6 +2227,8 @@ The following alert rules apply to [capacity management](../../landing/license-u
 ```
 
 +++
+
+>[!ENDTABS]
 
 ## Journey Optimizer {#journey-optimizer}
 
