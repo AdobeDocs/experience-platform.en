@@ -52,6 +52,7 @@ New features and updates to existing features in Adobe Experience Platform:
 
 - [CX Enterprise Coworker](#cx-enterprise-coworker)
 - [Destinations](#destinations)
+- [Process Manager](#process-manager)
 - [Privacy Service](#privacy-service)
 - [Query Service](#query-service)
 - [Real-Time Customer Profile](#profile)
@@ -103,7 +104,6 @@ Use destinations to activate audiences and export data from Experience Platform 
 
 For more information, read the [destinations overview](/help/destinations/home.md).
 
-<!--
 ## Process Manager {#process-manager}
 
 Use [!DNL Process Manager] to define and coordinate data workflows across Experience Platform services.
@@ -113,7 +113,8 @@ Use [!DNL Process Manager] to define and coordinate data workflows across Experi
 >[!DNL Process Manager] is in beta. The feature and documentation are subject to change.
 
 Create workflows that connect data ingestion, [!DNL Data Distiller] queries, segmentation, profile exports, and destination activation. Schedule workflows and monitor execution across the connected tasks.
--->
+
+To learn more about Process Manager, read the [Process Manager overview](/help/process-manager/home.md).
 
 ## Privacy Service {#privacy-service}
 
