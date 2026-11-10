@@ -52,6 +52,7 @@ New features and updates to existing features in Adobe Experience Platform:
 
 - [CX Enterprise Coworker](#cx-enterprise-coworker)
 - [Destinations](#destinations)
+- [Privacy Service](#privacy-service)
 - [Query Service](#query-service)
 - [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
@@ -113,6 +114,19 @@ Use [!DNL Process Manager] to define and coordinate data workflows across Experi
 
 Create workflows that connect data ingestion, [!DNL Data Distiller] queries, segmentation, profile exports, and destination activation. Schedule workflows and monitor execution across the connected tasks.
 -->
+
+## Privacy Service {#privacy-service}
+
+Use [!DNL Privacy Service] to manage privacy requests and ensure compliance with data protection regulations. The service allows you to handle requests such as data access, deletion, and consent management across your organization.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| [India Digital Personal Data Protection Act support](../../privacy-service/regulations/overview.md) | [!DNL Privacy Service] now supports requests under the India Digital Personal Data Protection Act. You can select India when you create a privacy request in the [!DNL Privacy Service] UI or API. |
+| [Sandbox-specific data lake privacy requests](../../privacy-service/api/privacy-jobs.md#sandbox-scope) | You can now use the optional `sandboxIds` property to limit Experience Platform data lake privacy processing to specific sandboxes in your organization. If you omit the property, data lake processing continues to apply across the organization. Sandbox scoping applies only to the data lake product. |
+
+{style="table-layout:auto"}
 
 ## Query Service {#query-service}
 
