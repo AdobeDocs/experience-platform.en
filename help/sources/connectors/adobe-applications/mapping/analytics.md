@@ -24,7 +24,7 @@ topic_v2:
 ---
 # Analytics field mappings
 
-Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics source. Some of the data ingested through ADC can be mapped directly from Analytics fields to Experience Data Model (XDM) fields, while other data requires transformations and specific functions to be successfully mapped.
+Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics source. Some of the data ingested through Analytics soure connector can be mapped directly from Analytics fields to Experience Data Model (XDM) fields, while other data requires transformations and specific functions to be successfully mapped.
 
 ![An illustration of the Adobe Analytics data journey from Analytics to Experience Platform.](../images/analytics-data-experience-platform.png)
 
