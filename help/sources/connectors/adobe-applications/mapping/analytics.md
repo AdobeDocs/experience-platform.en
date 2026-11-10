@@ -24,7 +24,7 @@ topic_v2:
 ---
 # Analytics field mappings
 
-Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics source. Some of the data ingested through Analytics soure connector can be mapped directly from Analytics fields to Experience Data Model (XDM) fields, while other data requires transformations and specific functions to be successfully mapped.
+Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics source. Some of the data ingested through Analytics source connector can be mapped directly from Analytics fields to Experience Data Model (XDM) fields, while other data requires transformations and specific functions to be successfully mapped.
 
 ![An illustration of the Adobe Analytics data journey from Analytics to Experience Platform.](../images/analytics-data-experience-platform.png)
 
@@ -65,7 +65,7 @@ Read the following table for information on streaming media parameters.
 | `videoprogress50` | `mediaReporting.sessionDetails.hasProgress50` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 50% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
 | `videoprogress75` | `mediaReporting.sessionDetails.hasProgress75` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 75% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted.|
 | `videoprogress95` | `mediaReporting.sessionDetails.hasProgress95` | boolean | A boolean value that indicates whether the playhead of a given video has passed the 95% marker of the total video length. The marker is only counted once, even if seeking backwards. If seeking forward, markers that are skipped are not counted. |
-| `videopause` | `mediaReporting.sessionDetails.hasPauseImpactedStreams` | boolean | A boolean value hat indicates if one or more pauses occurred during the playback of a single media item. |
+| `videopause` | `mediaReporting.sessionDetails.hasPauseImpactedStreams` | boolean | A boolean value that indicates if one or more pauses occurred during the playback of a single media item. |
 | `videopausecount` | `mediaReporting.sessionDetails.pauseCount` | integer | The number of pause periods that occurred during playback. |
 | `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | integer | The total duration (in seconds) in which playback was paused by a user. |
 | `videomvpd` | `mediaReporting.sessionDetails.mvpd` | string | An MVPD identifier provided via Adobe authentication. |
@@ -96,7 +96,7 @@ Read the following table for information on advertising parameters.
 | `videoadadvertiser` | `mediaReporting.advertisingDetails.advertiser` | string | The company or brand whose product is featured in the ad. |
 | `videoadcampaign` | `mediaReporting.advertisingDetails.campaignID` | string | The ID of the ad campaign. |
 | `videoadstart` | `mediaReporting.advertisingDetails.isStarted` | boolean | A boolean value that indicates whether the ad has been started or not. |
-| `videoadcomplete` | `mediaReporting.advertisingDetails.isCompleted` | boolean | A boolean value that indicates whether the had has been completed or not. |
+| `videoadcomplete` | `mediaReporting.advertisingDetails.isCompleted` | boolean | A boolean value that indicates whether the ad has been completed or not. |
 | `videoadtime` | `mediaReporting.advertisingDetails.timePlayed` | integer | The total amount of time, measured in seconds, spent watching the ad. |
 
 {style="table-layout:auto"}
