@@ -38,7 +38,7 @@ topic_v2:
 
 Adobe Experience Platform provides predefined alert rules that you can enable for your organization. This document describes the Adobe-provided alert rules available in Experience Platform. For general information about alerts, see the [alerts overview](./overview.md).
 
-When you [view alert rules in the Experience Platform UI](./ui.md), you subscribe to each rule individually. When you subscribe through [I/O Events notifications](./subscribe.md), Experience Platform groups alert rules into subscription packages. The tables below list each alert rule and its corresponding I/O Events subscription package.
+When you [view alert rules](./ui.md) in Experience Platform, you subscribe to each rule individually. When you subscribe through [I/O Events notifications](./subscribe.md), Experience Platform groups alert rules into subscription packages. The tables below list each alert rule and its corresponding I/O Events subscription package.
 
 ## Sources {#sources}
 
@@ -860,7 +860,7 @@ The following alert rules apply to [Segmentation Service](../../segmentation/hom
 
 >[!BEGINTABS]
 
->[!TAB Segment job alerts]
+>[!TAB Job alerts]
 
 +++Segment Job Start
 
@@ -1075,7 +1075,7 @@ The following alert rules apply to [Segmentation Service](../../segmentation/hom
 
 +++
 
->[!TAB Segment definition alerts]
+>[!TAB Definition alerts]
 
 +++Segment Definition Disabled
 
