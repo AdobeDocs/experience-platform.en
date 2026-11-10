@@ -25,23 +25,44 @@ Profile with unstructured data provides the following capabilities to Experience
 
 ## Use cases {#use-cases}
 
-Profile with unstructured data lets you use conversational data as an activation signal for further engagements, which allows you to more easily drive inbound personalizations and outbound activations. As a result, you can use these profiles in a variety of use cases:
+Profile with unstructured data lets you use conversational data as an activation signal for further engagements, which allows you to more easily drive inbound personalizations and outbound activations. As a result, you can use these profiles in a variety of use cases.
 
-- **Interest-based activation**: As a retail business, an authenticated shopper mentions a dietary preference in conversation. The extracted signal qualifies them for a "gluten-free" interest audience, which can be used for inbound and outbound activation such as tailored offers and journeys.
-- **Negative-experience suppression**: As a big-box retail company, frustration is detected in a customer's conversation. This customer is then suppressed from a promotional audience to avoid sending a tone-deaf outbound message.
-- **Intent-based routing and next-session personalization**: As a financial service or fintech company, a customer mentions a life event (such as "married", "moved states", or "new job") in a conversation. These keywords are extracted and used to personalize their next session to match the customer to an advisor who has the relevant domain expertise.
+### Conversational personalization
+
+- **Retail**: A shopper asks for workout clothing. The conversational AI agent can leverage Profile with unstructured data to tailor their recommendations based off of the shopper's loyalty tier, activewear preferences, and known interests.
+- **Travel and hospitality**: A traveler asks what trip would best suit them. The conversational AI agent can leverage Profile with unstructured data to tailor their recommendations based off of the user's preferred departure airport, loyalty status, and travel preferences.
+- **Financial services**: A customer asks about credit cards. The conversational AI agent can leverage Profile with unstructured data to tailor their recommendations based off of their relationship tier and existing card holdings to compare different cards.
+- **Telecommunications**: A subscriber asks about phones and plans. The conversational AI agent can leverage Profile with unstructured data to tailor their recommendations based off of their current plan, existing device, and loyalty status.
+- **Automotive**: A visitor to a car dealership has previously shown interest in financing options. The conversational AI agent can leverage Profile with unstructured data to use that known interest and bring in relevant loan and leasing options to the conversation.
+- **B2B**: A visitor previously showed interest in tax-advisory services. The conversational AI agent can leverage Profile with unstructured data to tailor their recommendations and recommend relevant services.
+
+### Signal extraction and activation
+
+- **Retail**: A shopper mentions training for a trail half-marathon in freezing, windy conditions. Profile with unstructured data can extract the outdoor-performance intent for audience qualification, and send relevant apparel offers on the website and by email for cold-weather training apparel.
+- **Travel and hospitality**: A traveler describes an anniversary trip to Japan, including interest in a traditional ryokan, onsen, and tea ceremony. Profile with unstructured data can extract this Japan interest for audience qualification and present relevant travel offers, including a personalized website banner and an anniversary "getaway" email.
+- **Financial services**: A customer mentions wanting to review their retirement savings. Profile with unstructured data can extract this "retirement planning" intent for audience qualification, and set up personalized follow ups including a website invitation or email encouraging an appointment with their assigned advisor.
+- **Telecommunications**: A subscriber describes their phone with poor battery life and a cracked screen, mentioning that they're ready to upgrade their phone. Profile with unstructured data can extract the intent of "ready to upgrade their device", and set up personalized offers including trade-in opportunities through the website or by email.
+- **Automotive**: A visitor mentions that their lease for their car ends soon, so they need to get a new car. Profile with unstructured data can extract the car replacement intent, and offer personalized financial offers when the visitor returns to the site.
+- **B2B**: A visitor says that their business needs to close its annual books and file taxes. Profile with unstructured data can extract the intent of year-end-close and offer recommendations of relevant accounting and tax services.
+
+### Continuity
+
+- **Retail (Cross-agent)** A shopper mentions to a shopping assistant that he needs a jacket for cold weather trail running. Later, he asks a customer service AI agent about sizing. The service agent can use Profile with unstructured data to make the prior conversation history and customer context known, and provide relevant guidance without having to ask about the jacket again.
+- **Travel and hospitality (Cross-channel)**: A traveler discusses an anniversary trip to Japan with a website's conversational AI agent, sharing his preferred dates and an interest in a traditional ryokan. Later, the traveler contacts the brand through WhatsApp. The WhatsApp agent can use Profile with unstructured data to share conversation history between the two agents, and refine the trip details without re-starting discovery.
+- **Retail (Cross-device)**: A customer chats anonymously with a conversational AI agent on his laptop about clothing for cold weather trail running. This user subsequently logs in before leaving. Later, the user signs in on their phone. The conversational agent can use Profile with unstructured data to make this anonymous conversation available across devices once it's linked to the user's signed in identity, and the agent can remember the earlier discussion to continue to help choose the suitable apparel.
+- **Automotive (Cross-session)**: A customer discusses vehicle options, budget, and an upcoming lease expiration to a conversational AI agent. The user then returns a few days later and starts a new conversation. The conversational AI agent can use Profile with unstructured data to look up the previous conversation's history so the agent can resume the discussion.
 
 ## Sample flow {#sample-flow}
 
-Consider a company that offers financial services to clients. 
+Consider a retailer that sells clothing and outdoor apparel.
 
-In this scenario, one of your clients asks an agent about equities. Since this client is logged in, your agent knows about this user by reading their Real-Time Customer Profile. 
+In this scenario, a customer, John, visits the retailer's site and starts a conversational AI agent to ask for workout clothing recommendations. Since John is signed in, Profile with unstructured data can provide the configured customer context, including his Gold loyalty tier, activewear preferences, and interest in outdoor sports. The agent can then use this context to further tailor its recommendations.
 
-This client then continues the conversation by stating "I've also been meaning to sit down and really review my retirement savings, just haven't gotten around to scheduling it.". By using Profile with unstructured data, Brand Concierge and Experience Platform can extract intent from these conversations, which lets you send personalized responses through the agent.
+John then states "I am training for a half marathon, and mornings are freezing and windy. I need something that can keep me warm without overheating." The agent can now combine John's stated needs with his existing preferences to recommend a suitable apparel, such as a lightweight, wind-resistant running jacket.
 
-The detected "retirement planning" signal can be used to qualify this client to the "Financial Planning Interest" audience. Once processed and available to the relevant application, the audience membership can support subsequent personalization. For example, the agent can be personalized to reply with "Let's make sure your retirement plan is on track — book a free check-in with Alex Agent."
+Additionally, Experience Platform uses Profile with unstructured data to detect a marketer-defined "Outdoor performance" intent signal from the conversations. As a result, this signal lets John qualify for an "Outdoor Performance Intent" audience, and support subsequent personalized experiences.
 
-Additionally, since this context is shared between all Experience Platform applications, you can continue the retirement conversation in multiple forms. For example, Adobe Journey Optimizer can automatically send the client an email with a retirement check-in invitation with Alex Agent.
+For example, the retailer can use the "Outdoor Performance Intent" audience to show John a cold weather training offer when he returns to the website, or send a personalized email through an application such as Adobe Journey Optimizer. With the appropriate audience and journey configured, this email can feature both relevant running apparel as well as a Gold member double points offer.
 
 ## Beta prerequisites {#prerequisites}
 
@@ -467,7 +488,7 @@ curl -X GET "https://platform.adobe.io/data/core/semanticprofile/lookup/narrativ
 | Query parameter | Description |
 | --------------- | ----------- |
 | `entityIdNS` | The identity namespace. This must be a namespace that is defined in your sandbox. Possible values include `Email`, `ECID`, and `CRMID`. |
-| `entityId` | The identity value within the namespace. You **must** URL encode reserved characters. |
+| `entityId` | The identity value within the namespace. You **must** URL encode reserved characters. For example, if the email you're looking up is `john+1@example.com`, this must be written as `john%2B1@example.com`. |
 | `configurationName` | The name of the previously created configuration. |
 
 A successful response returns HTTP status 200 with information about the profile context.
