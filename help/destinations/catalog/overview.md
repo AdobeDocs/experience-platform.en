@@ -3,7 +3,7 @@ keywords: Catalog;catalog
 title: Destinations catalog overview
 description: The Destinations catalog provides a list of available destinations that are ready to receive data. These destinations include Adobe solutions, advertising platforms, survey platforms, email marketing platforms, and more.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-TQID: https://experienceleague.adobe.com/lhVYKypGOkzBzR-PEv3OD2zoof1PSeYKOhyk1F4Se7M
+TQID: 'https://experienceleague.adobe.com/lhVYKypGOkzBzR-PEv3OD2zoof1PSeYKOhyk1F4Se7M'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -12,6 +12,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: beb7a3c1-66ab-4786-b879-7621375b3c40
     internal-label: Email marketing

@@ -2,13 +2,10 @@
 title: Create A Dataflow To Ingest Data From a CRM Into Experience Platform
 description: Learn how to use the Flow Service API to create a dataflow and ingest source data into Experience Platform.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-TQID: https://experienceleague.adobe.com/yPP9iyQc98tlLWwr24pPyrnwKWwD-yttgcIPa-utAuk
+TQID: 'https://experienceleague.adobe.com/yPP9iyQc98tlLWwr24pPyrnwKWwD-yttgcIPa-utAuk'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

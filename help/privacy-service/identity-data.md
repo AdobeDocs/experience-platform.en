@@ -4,21 +4,19 @@ solution: Experience Platform
 title: Identity Data for Privacy Requests
 description: This document provides general guidance on how to configure your data operations and leverage Adobe technologies to effectively retrieve the appropriate identity information for customer privacy requests.
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-TQID: https://experienceleague.adobe.com/jmF4PEyHm18ZQDdiFx93ZuUjT8np8kV87JR4I8CcVNs
+TQID: 'https://experienceleague.adobe.com/jmF4PEyHm18ZQDdiFx93ZuUjT8np8kV87JR4I8CcVNs'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
-subfeature_v2:
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation
@@ -27,13 +25,13 @@ topic_v2:
 ---
 # Identity data for privacy requests
 
-In order for Adobe Experience Platform [!DNL Privacy Service] to process customer requests for their private data (including access, delete, or opt-out-of-sale requests), it must be provided with unique identifiers that link a specific customer to their stored private data in your Adobe Experience Cloud enabled applications. [!DNL Privacy Service] then uses these identifiers to gather all data stored under the customer's identity within [!DNL Experience Cloud], and process it according to the customer's request.
+In order for Adobe Experience Platform [!DNL Privacy Service] to process customer requests for their private data (including access, delete, or opt-out-of-sale requests), it must be provided with unique identifiers that link a specific customer to their stored private data in your Adobe CX Enterprise enabled applications. [!DNL Privacy Service] then uses these identifiers to gather all data stored under the customer's identity within [!DNL CX Enterprise], and process it according to the customer's request.
 
 This document provides general guidance on how to configure your data operations and leverage Adobe technologies to effectively retrieve the appropriate identity information for customer privacy requests.
 
 ## Identities and namespaces
 
-When a customer can interact with your brand through several different channels, it can be challenging to reconcile the disparate identifiers that are recorded from those many interactions. This in turn can make it difficult to determine which data belongs to a particular person in your [!DNL Experience Cloud] applications.
+When a customer can interact with your brand through several different channels, it can be challenging to reconcile the disparate identifiers that are recorded from those many interactions. This in turn can make it difficult to determine which data belongs to a particular person in your [!DNL CX Enterprise] applications.
 
 For example, when handling customer data requests in [!DNL Privacy Service], an identity may represent a cookie value set under an Adobe-controlled domain, a cookie value under a third-party domain and shared with Adobe, or a custom identifier that you explicitly define within your organization.
 
@@ -43,7 +41,7 @@ Adobe Experience Platform Identity Service maintains a store of globally defined
 
 ## ECID and Opt-in Service
 
-The Adobe [!DNL Visitor ID Service] serves as a common identification framework for [!DNL Experience Cloud], and assigns a unique, persistent ID to each site visitor. The [!DNL Experience Cloud] ID (ECID) tracks a customer's activity through the use of a first-party cookie, can uniquely identify a device across multiple applications, and allows you to identify the same site visitor and their data in different [!DNL Experience Cloud] applications. See the [Visitor ID Service overview](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) for more information.
+The Adobe [!DNL Visitor ID Service] serves as a common identification framework for [!DNL CX Enterprise], and assigns a unique, persistent ID to each site visitor. The [!DNL ECID] tracks a customer's activity through the use of a first-party cookie, can uniquely identify a device across multiple applications, and allows you to identify the same site visitor and their data in different [!DNL CX Enterprise] applications. See the [Visitor ID Service overview](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) for more information.
 
 Opt-in Service, an extension of the [!DNL Visitor ID Service], allows you set up protocols on your application to let visitors determine whether you can set a cookie on the visitor's device or browser. For more detailed information on the Opt-in Service, including how to set up the service for your application, please refer [Opt-in Service documentation](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html).
 

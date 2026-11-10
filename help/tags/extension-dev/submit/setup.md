@@ -1,45 +1,29 @@
 ---
-title: Experience Cloud Organization Setup
-description: Learn how to register an Adobe Experience Cloud organization in order to start developing extensions for Adobe Experience Platform.
+title: Adobe Organization Setup
+description: Learn how to register an Adobe organization in order to start developing extensions for Adobe Experience Platform.
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
-TQID: https://experienceleague.adobe.com/RFpJ35gtqkOAYoPk4DrU-Akwe0YMqREtqLbh6F3uCsI
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-    internal-label: Advertising
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-    internal-label: Acrobat Sign
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
+TQID: 'https://experienceleague.adobe.com/RFpJ35gtqkOAYoPk4DrU-Akwe0YMqREtqLbh6F3uCsI'
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
-  - id: fc7979f3-56c3-43ca-9784-f1ea3dc69c4b
-    internal-label: Integrations
+    internal-label: Data collection tags
 subfeature_v2:
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+  - id: 1a2b3c4d-0003-4003-8003-000000000003
+    internal-label: Data collection tags extensions
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-    internal-label: Customer experience
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
-# Experience Cloud organization setup
+# Adobe organization setup {#experience-cloud-organization-setup}
 
-To develop tag extensions in Adobe Experience Platform it is necessary to register an Adobe Experience Cloud organization.
+To develop tag extensions in Adobe Experience Platform it is necessary to register an Adobe organization.
 
-Experience Cloud customers are assigned an organization when contracts are signed. If you are an existing customer and already have an organization registered then you can skip this document and proceed to the guide on [granting user access for extension development](./access.md). If you are not an Experience Cloud customer, you can have an organization created by joining one of the Adobe partner programs listed below.
+CX Enterprise customers are assigned an organization when contracts are signed. If you are an existing customer and already have an organization registered then you can skip this document and proceed to the guide on [granting user access for extension development](./access.md). If you are not a CX Enterprise customer, you can have an organization created by joining one of the Adobe partner programs listed below.
 
 ## Exchange Partner Program
 
@@ -65,7 +49,7 @@ This program is for consulting firms that help Adobe customers make the most of 
 
 Once your company is in the Exchange Partner program, you can request access to Adobe Solutions by signing in to the [Exchange Partner Site](https://partners.adobe.com/exchangeprogram/experiencecloud) and following the steps below.
 
-If you have an Experience Cloud Account require access the Data Collection UI and Experience Platform UI, please see the [data collection permissions  guide](../../../collection/permissions.md).
+If you have a CX Enterprise Account require access the Data Collection UI and Experience Platform UI, please see the [data collection permissions  guide](../../ui/administration/user-permissions.md).
 
 ## For independent developers
 

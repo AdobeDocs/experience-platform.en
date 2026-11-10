@@ -2,66 +2,19 @@
 title: Adobe Experience Platform Web SDK FAQ
 description: Get answers to frequently asked questions about the Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-TQID: https://experienceleague.adobe.com/BYHDdbH5bkjkmokYEgmmAbI3hyVtaV0iKu1n03ZAFUw
-product_v2:
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-    internal-label: Acrobat Sign
-  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
-    internal-label: Audience Manager
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-    internal-label: Target
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-    internal-label: Real-Time Customer Data Platform
+TQID: 'https://experienceleague.adobe.com/BYHDdbH5bkjkmokYEgmmAbI3hyVtaV0iKu1n03ZAFUw'
 feature_v2:
-  - id: a8b0238e-1d43-4679-a3b4-5ba1bad83baa
-    internal-label: Implementation
-  - id: ba929a52-9339-4154-9487-317dc875a3c7
-    internal-label: Use cases
-  - id: baaa0dd2-d27e-4921-aae3-7888623a5fa5
-    internal-label: APIs and SDKs
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-    internal-label: Implementation
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-    internal-label: API
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
-  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
-    internal-label: Datastreams
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-    internal-label: Event forwarding
-  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-    internal-label: Schemas
-  - id: e8a4c7eb-7254-4984-ac46-e651a57c7e39
-    internal-label: SDKs
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
-  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-    internal-label: Properties
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-    internal-label: Implementation
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-    internal-label: Personalization
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Frequently asked questions
 
@@ -96,7 +49,7 @@ The new Web SDK sends data for the following solutions to a single destination (
 * Adobe Analytics
 * Adobe Audience Manager
 * Adobe Target
-* Visitor ID
+* Visitor ID Service
 * Adobe Experience Platform
 
 Other solutions will follow.
@@ -107,7 +60,7 @@ Adobe Experience Platform Web SDK can also send data directly to Adobe Experienc
 
 **Performance:** The web SDK is smaller than using all of the current Adobe libraries and provides significantly faster page loads.
 
-**Simplicity:** The combination of XDM, Web SDK, tags, Edge Network, Adobe Experience Cloud solutions, and Adobe Experience Platform creates an easy-to-understand and simple-to-follow data collection story.
+**Simplicity:** The combination of XDM, Web SDK, tags, Edge Network, Adobe CX Enterprise solutions, and Adobe Experience Platform creates an easy-to-understand and simple-to-follow data collection story.
 
 * **XDM:** The solution-agnostic schema you use to send data to Adobe. No more tagging for evars or mboxes.
 * **Web SDK:** Makes it easy to send and receive data to Adobe Experience Platform Edge Network.
@@ -132,7 +85,7 @@ No. Any Adobe Digital Experience customer can use the Adobe Experience Platform 
 * Customers who do *not* have access to Experience Platform or Real-time CDP and wish to use the [!DNL Web SDK] will need to configure the right permissions to create schemas and datastreams in the Data Collection UI or Experience Platform UI.
 * Customers who have access to Experience Platform or Real-time CDP and wish to use the [!DNL Web SDK] will need to configure the right permissions to create schemas, datasets, identity namespaces, and datastreams in the Data Collection UI or Experience Platform UI.
 
-For more information on configuring these permissions see our documentation on [data collection permissions management](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
+For more information on configuring these permissions, see the [Experience Platform resource permissions](../../access-control/home.md#permissions) reference.
 
 ## Who should use the Web SDK?
 
@@ -142,13 +95,13 @@ Adobe Experience Platform Web SDK has been developed for the following customers
   * If you need to send data directly from a device to Adobe Experience Platform, this is the officially recommended way.
   * Adobe is aware that using the Adobe Analytics connector is faster if you already have Adobe Analytics, but it is not the long-term strategy for data collection.
 
-* Adobe Experience Cloud solution customers
+* Adobe CX Enterprise solution customers
   * New Adobe Analytics, Adobe Audience Manager, and Adobe Target customers should start with the new Web SDK and not use legacy libraries.
   * Existing customers who want to get the most optimized implementation possible should use the new Web SDK.
 
 ## How do I get access to the Web SDK?
 
-The Web SDK is currently available to the general public and can be used to send data to Adobe Experience Cloud products. The ability to send data to third-party solutions is coming in the near future. 
+The Web SDK is currently available to the general public and can be used to send data to Adobe CX Enterprise products. The ability to send data to third-party solutions is coming in the near future.
 
 There is no charge for the SDK, and it is hosted by Adobe for free. If required, you can download it and host it on your own servers at no cost.
 
@@ -164,7 +117,7 @@ It depends. Adobe Experience Platform Web SDK can be deployed in two different s
 
 * **Just another tag:** If the site is already tagged for solutions and you can't retag, but you want to send data to Adobe Experience Platform Edge Network for Experience Platform use cases or the upcoming event forwarding features (see below), you can add the `alloy.js` tag to the site, where it works as "just another tag."
 
-* **The one and only tag:** If you want to use the Web SDK for an Experience Cloud solution, you must use it for _all_ of the solutions on that page. For example, if your site is already tagged for Adobe Analytics and you want to use it for Target, you need to use it for both, as well as for any others in the future.
+* **The one and only tag:** If you want to use the Web SDK for a CX Enterprise solution, you must use it for _all_ of the solutions on that page. For example, if your site is already tagged for Adobe Analytics and you want to use it for Target, you need to use it for both, as well as for any others in the future.
 
 In other words, if you decide to use Adobe Experience Platform Web SDK for non-solution use cases, you can tag the site with `alloy.js` and move on as if it's a new solution. If you want to use it for Adobe Analytics, Target, or Audience Manager, or for application use cases, you might have to remove any of the legacy code on your page.
 

@@ -1,8 +1,19 @@
 ---
 title: Manually render propositions
 description: Render proposition content using your own UI logic (HTML, JSON, or custom schemas), then record display events.
-keywords: personalization;propositions;manual rendering;sendEvent;decisionScopes;display events;
 exl-id: 9ea82c47-c272-4fa3-a067-4119d325aef5
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Manually render propositions
 

@@ -2,6 +2,18 @@
 title: Delegate Descriptor IDs
 description: Learn about delegate descriptor IDs in the Reactor API, and how they link resources with extensions.
 exl-id: 2c2b9b31-0618-4b93-97ec-0798fc06aac0
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+subfeature_v2:
+  - id: 1a2b3c4d-0005-4005-8005-000000000005
+    internal-label: Reactor API
+  - id: 1a2b3c4d-0003-4003-8003-000000000003
+    internal-label: Data collection tags extensions
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Delegate descriptor IDs
 

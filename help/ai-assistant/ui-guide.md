@@ -2,15 +2,13 @@
 title: AI Assistant in Adobe Experience Platform
 description: Learn how to use AI Assistant to navigate and understand Experience Platform and Real-Time Customer Data Platform concepts, and usage information about your objects.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-TQID: https://experienceleague.adobe.com/r9yOpAOFZ65A7GgG77kuNlZzU1jIBU384s6zO07J7yE
+TQID: 'https://experienceleague.adobe.com/r9yOpAOFZ65A7GgG77kuNlZzU1jIBU384s6zO07J7yE'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-    internal-label: AI Assistant
+    internal-label: AI assistant
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
@@ -36,7 +34,7 @@ topic_v2:
 
 >[!IMPORTANT]
 >
->This document applies to AI Assistant (Legacy). For information on AI Assistant (Next-Gen), read the [AI Assistant UI guide](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) in the [AI in Experience Cloud](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home) documentation.
+>This document applies to AI Assistant (Legacy). For information on AI Assistant (Next-Gen), read the [AI Assistant UI guide](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) in the [AI in CX Enterprise](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home) documentation.
 
 Refer to the following table for a comparison of AI Assistant (Legacy) and AI Assistant (Next-Gen):
 
@@ -45,7 +43,7 @@ Refer to the following table for a comparison of AI Assistant (Legacy) and AI As
 | User experience | AI Assistant (Legacy) is available in a right-rail panel only. | AI Assistant (Next-Gen) is available in both right-rail panel and immersive full-screen experience. |
 | Scope of capabilities | You can use AI Assistant (Legacy) for both product knowledge and operational insights. | You can use  AI Assistant (Next-Gen) for product knowledge, operational insights, as well as advanced agentic skills and multi-step task execution. |
 | Platform architecture | AI Assistant (Legacy) is not built on the Agent Orchestrator stack. | AI Assistant (Next-Gen) is powered by [Adobe Experience Platform Agent Orchestrator](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator), enabling extensibility and advanced coordination across capabilities. |
-| Application coverage | AI Assistant (Legacy) is an application-specific implementation. | You can use AI Assistant (Next-Gen) for a unified AI Assistant experience across all Adobe Experience Cloud applications. |
+| Application coverage | AI Assistant (Legacy) is an application-specific implementation. | You can use AI Assistant (Next-Gen) for a unified AI Assistant experience across all Adobe CX Enterprise applications. |
 | Access and permission model | Application-scoped access model aligned to individual product boundaries. | All users get access to AI Assistant (Next-Gen) and associated Experience Platform agents. **Note**: <ul><li>**Adobe Experience Manager**: Your administrator must grant you the permission to access AI Assistant (Next-Gen) through the [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html).</li><li>**Customer Journey Analytics**: Your administrator must grant you the permission to access AI Assistant through [Customer Journey Analytics Access Control](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control?lang=en). This allows you to ask product knowledge and data insights questions. |
 
 Read this guide to learn how you can use AI Assistant in the Adobe Experience Platform UI.

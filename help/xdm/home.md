@@ -4,22 +4,10 @@ solution: Experience Platform
 title: XDM System Overview
 description: Standardization and interoperability are key concepts behind Adobe Experience Platform. Experience Data Model (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-TQID: https://experienceleague.adobe.com/NXyPYfDSHPzo44pB4C3oN1tRS2kn1srSHcppYQss860
+TQID: 'https://experienceleague.adobe.com/NXyPYfDSHPzo44pB4C3oN1tRS2kn1srSHcppYQss860'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -51,7 +39,7 @@ Standardization and interoperability are key concepts behind Adobe Experience Pl
 
 XDM is a publicly documented specification designed to improve the power of digital experiences. It provides common structures and definitions that allow any application to use to communicate with Experience Platform services. By adhering to XDM standards, all customer experience data can be incorporated into a common representation that can deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and express customer attributes for personalization purposes.
 
-XDM is the foundational framework that allows Adobe Experience Cloud, powered by Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Experience Platform services.
+XDM is the foundational framework that allows Adobe CX Enterprise, powered by Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Experience Platform services.
 
 Learn about the role of XDM System within Experience Platform.
 

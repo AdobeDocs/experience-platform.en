@@ -2,21 +2,22 @@
 keywords: Experience Platform;home;popular topics;ECID;ecid
 solution: Experience Platform
 title: ECID Overview
-description: The Experience Cloud Identifier (ECID) is the client side module providing access to identity management, serving three primary functions.
+description: The ECID is the client side module providing access to identity management, serving three primary functions.
 hide: true
 exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
-TQID: https://experienceleague.adobe.com/NdtbYIxEjAmKBZ50IVhphyFgsog7vUDdM-MwidBFeyo
+TQID: 'https://experienceleague.adobe.com/NdtbYIxEjAmKBZ50IVhphyFgsog7vUDdM-MwidBFeyo'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation
@@ -25,7 +26,7 @@ topic_v2:
 ---
 # ECID overview
 
-Experience Cloud ID (ECID) is a shared identity namespace used across Adobe Experience Platform and Adobe Experience Cloud applications.
+ECID is a shared identity namespace used across Adobe Experience Platform and Adobe CX Enterprise applications.
 
 ECID provides the foundation for customer identity. With the context of [[!DNL Identity Service]](../home.md), ECID is used as the primary ID for devices and as a base node for identity graphs.
 
@@ -35,14 +36,12 @@ With ECID, you can:
 * Provide synchronization with partners.
 * Feed pairwise links to connect with offline or other IDs to the graph.
 
-Identifying your online users requires instrumentizing your site or mobile app with ECID, which provides a universal and persistent ID that identifies your visitors across all applications in Adobe Experience Cloud.
+Identifying your online users requires instrumentizing your site or mobile app with ECID, which provides a universal and persistent ID that identifies your visitors across all applications in Adobe CX Enterprise.
 
 ## Next steps and additional resources
 
-The following documentation provides further resources on understanding ECID across different Experience Platform and Experience Cloud applications:
+The following documentation provides further resources on understanding ECID across different Experience Platform and CX Enterprise applications:
 
-* To use ECID with website implementation, see the documentation for the [Visitor ID Service (ECID)](https://experienceleague.adobe.com/docs/id-service/using/home.html).
-* To see how ECID is used with apps and mobile web content, see the documentation for [visitor tracking between an app and mobile web](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios).
 * Deploying these tools can be simple and easy to manage if you use [tags](../../tags/home.md).
 * See the [Privacy Service documentation](../../privacy-service/identity-data.md) for information on using ECID to facilitate compliance with privacy regulations like GDPR.
 * For more information on ECID with the context of Experience Platform, see the [Identity Service overview](../home.md) and the [identity namespaces overview](./namespaces.md).

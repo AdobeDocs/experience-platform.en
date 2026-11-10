@@ -3,26 +3,20 @@ keywords: Experience Platform;home;popular topics;sources;source;data collection
 title: Adobe Data Collection
 description: This document provides an overview of the Adobe Data Collection source.
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-TQID: https://experienceleague.adobe.com/h1Mzb6y24mWJoHqq4yuZHID5WiMLmc-PwpQ9aoOihSQ
+TQID: 'https://experienceleague.adobe.com/h1Mzb6y24mWJoHqq4yuZHID5WiMLmc-PwpQ9aoOihSQ'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
+    internal-label: Data collection tags
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
     internal-label: Sources
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
-  - id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13
-    internal-label: Data prep
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
   - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
     internal-label: Datastreams
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+subfeature_v2:
+  - id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13
+    internal-label: Datastreams data prep
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -50,7 +44,7 @@ Under the [!UICONTROL Adobe applications] category, select **[!UICONTROL Adobe D
 
 The Data Collection UI appears on the **[!UICONTROL Datastreams]** tab. 
 
-A datastream is a configuration that tells the Edge Network where you want your data to be sent. Specifically, a datastream specifies which Experience Cloud products you want to send the data to, and how you want the data to be handled and stored in each product.
+A datastream is a configuration that tells the Edge Network where you want your data to be sent. Specifically, a datastream specifies which CX Enterprise products you want to send the data to, and how you want the data to be handled and stored in each product.
 
 ![datastreams](./images/data-collection/datastreams.png)
 

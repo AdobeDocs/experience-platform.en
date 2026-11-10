@@ -3,6 +3,12 @@ title: Use The Delta Sharing Source Connector In The UI
 description: Learn how to use the Delta Sharing source connector in the Experience Platform user interface.
 badge: Beta
 exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Use the [!DNL Databricks Delta Sharing] source connector in the UI {#use-deltashare-in-the-ui}
 

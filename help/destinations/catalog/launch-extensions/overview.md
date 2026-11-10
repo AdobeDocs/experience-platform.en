@@ -3,18 +3,19 @@ keywords: tag extensions;tag extension;launch destinations; platform tag extensi
 title: Tag Extensions in Adobe Experience Platform
 description: Adobe Experience Platform provides the next generation of tag-management capabilities from Adobe. Experience Platform gives you a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-TQID: https://experienceleague.adobe.com/tFy2sNkSxq88Rga5OlFMJmvYYQilW2ZFtnGrD6wcfFc
+TQID: 'https://experienceleague.adobe.com/tFy2sNkSxq88Rga5OlFMJmvYYQilW2ZFtnGrD6wcfFc'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
     internal-label: Customer experience
@@ -48,7 +49,7 @@ It is important to differentiate between tag and event forwarding extensions. Th
 
 ## Benefits of using tag extensions {#extensions-benefits}
 
-Experience Platform's tag capabilities are free for existing Experience Cloud customers. The system simplifies tag deployment on your website via easy-to-use extensions that you can install, configure, update, and delete. Tags leave a small footprint on your website and keep your pages loading quickly.
+Experience Platform's tag capabilities are free for existing CX Enterprise customers. The system simplifies tag deployment on your website via easy-to-use extensions that you can install, configure, update, and delete. Tags leave a small footprint on your website and keep your pages loading quickly.
 
 While you cannot activate audiences to tag extensions, you can set up rules to only forward event data in certain situations. This powerful functionality enables you to forward event data only in certain situations as opposed to sending event data on every interaction. For more information, read about rules in the [tags documentation](../../../tags/ui/managing-resources/rules.md).
 

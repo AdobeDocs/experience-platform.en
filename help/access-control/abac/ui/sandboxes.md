@@ -1,15 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
 title: Attribute-based Access Control Manage Sandboxes
-description: Manage sandboxes through the Permissions interface in Adobe Experience Cloud.
+description: Manage sandboxes through the Permissions interface in Adobe CX Enterprise.
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-TQID: https://experienceleague.adobe.com/NDFuG3d0nIbKtf0UbndNUZXKNfWqsEOCNxvBAZA16FU
+TQID: 'https://experienceleague.adobe.com/NDFuG3d0nIbKtf0UbndNUZXKNfWqsEOCNxvBAZA16FU'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
@@ -26,7 +23,7 @@ Sandboxes are virtual partitions within a single instance of Adobe Experience Pl
 
 ## Explore sandboxes {#explore-sandboxes}
 
-To view a sandbox's details and associated roles, navigate to **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL Sandboxes]** from the **[!UICONTROL Resources]** section in the left panel.
+To view a sandbox's details and associated roles, navigate to **[!UICONTROL Permissions]** in [Adobe CX Enterprise](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL Sandboxes]** from the **[!UICONTROL Resources]** section in the left panel.
 
 A list of your organization's sandboxes appears. Select the sandbox you would like to view from the list. Alternatively, search for a sandbox by entering the sandbox's name into the search bar, or filter sandboxes by type by selecting the filter icon (![Filter icon](../../../images/icons/filter.png)) and using the **[!UICONTROL Sandbox Type]** dropdown menu.
 

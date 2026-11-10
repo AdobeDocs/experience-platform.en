@@ -3,7 +3,7 @@ keywords: voice destinations;Voice destinations
 title: Voice of the Customer destinations overview
 description: Voice platforms gather and collate data from various sources including voice messages, call data and chat conversations. The collated information can be filtered and analyzed to enable companies to optimize their website to meet their requirements.
 exl-id: f4e9ffea-5429-42ca-9075-562686ba3179
-TQID: https://experienceleague.adobe.com/kej-h-1elQRg6-XTBkqvtIErD85i0AQlnOgYOIs-cak
+TQID: 'https://experienceleague.adobe.com/kej-h-1elQRg6-XTBkqvtIErD85i0AQlnOgYOIs-cak'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -12,6 +12,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Voice of the Customer destinations overview {#voice-of-customer-destinations}
 

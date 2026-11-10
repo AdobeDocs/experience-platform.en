@@ -4,24 +4,11 @@ solution: Experience Platform
 title: Experience Platform UI Overview
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-TQID: https://experienceleague.adobe.com/tKBCxQeNLontE9tNPZ7OxIjd28cAg-ICqVAbfW6eRdc
+TQID: 'https://experienceleague.adobe.com/tKBCxQeNLontE9tNPZ7OxIjd28cAg-ICqVAbfW6eRdc'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
   - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
     internal-label: Sandboxes
 role_v2:

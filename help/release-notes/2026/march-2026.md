@@ -2,6 +2,18 @@
 title: Adobe Experience Platform Release Notes March 2026
 description: The March 2026 release notes for Adobe Experience Platform.
 exl-id: 66b948fd-caa0-4e5e-83dd-3b15b77c09fa
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Adobe Experience Platform release notes
 
@@ -74,7 +86,7 @@ A datastream represents the server-side configuration when implementing the Adob
 
 | Feature | Description |
 | --- | --- |
-| Dynamic datastream configurations general availability | Dynamic datastream configurations are now generally available. With dynamic datastream configurations, you can define user-configurable sets of rules for each service enabled for your datastream, which dictate what Experience Cloud solution should receive each type of data. See the [dynamic datastream configurations guide](../../datastreams/configure-dynamic-datastream.md) for more information. |
+| Dynamic datastream configurations general availability | Dynamic datastream configurations are now generally available. With dynamic datastream configurations, you can define user-configurable sets of rules for each service enabled for your datastream, which dictate what CX Enterprise solution should receive each type of data. See the [dynamic datastream configurations guide](../../datastreams/configure-dynamic-datastream.md) for more information. |
 
 {style="table-layout:auto"}
 

@@ -1,15 +1,32 @@
 ---
 title: Unified identity support in Data Collection
 description: Learn how unified identity support brings first-party persistence and supported third-party activation together in web data collection.
-hide: true
-badge: Beta
 exl-id: 8a755b61-6280-47f9-87a1-2d1da331a1c6
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+  - id: e1971122-7081-4556-9222-8a31bd71800c
+    internal-label: Experience Cloud Services
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+  - id: a50ad69b-1331-40e9-b634-531a085a6a54
+    internal-label: Identities
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: Datastreams
+  - id: 6f307efa-2798-5b6d-8079-f765b66875c1
+    internal-label: Cookies
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: a492a671-d5f6-46ee-b832-2efbca14ddd8
+    internal-label: Activation and channels
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Unified identity support in Data Collection
-
->[!AVAILABILITY]
->
->This feature is currently in beta. Availability, behavior, and documentation can change.
 
 Unified identity support lets the Edge Network work across both first-party and third-party identity contexts. It brings together durable first-party identification on your owned properties with third-party activation workflows in browsers that support third-party cookies. For background on how the Web SDK handles ECIDs, FPIDs, and other identity signals, see [Identity in Data Collection](./overview.md).
 
@@ -19,30 +36,23 @@ With unified identity support, you can:
 * **Maintain measurement accuracy**: Keep consistent visitor identification across your owned properties and advertising platforms.
 * **Future-proof your implementation**: Use first-party device IDs as your foundation while maintaining compatibility with third-party activation workflows.
 
-When a visitor arrives on your site, the Edge Network evaluates available identity signals—linking first-party and third-party contexts automatically when conditions allow. Browsers that block third-party cookies continue to operate in first-party mode with no disruption to your implementation.
+When a visitor without an ECID lands on a site, the Edge Network evaluates the available identity signals and seeds the ECID from the highest-priority one. Browsers that block third-party cookies continue to operate in first-party mode with no disruption to your implementation.
 
 ## How it works
 
-The Edge Network generates ECIDs by evaluating the available identity signals in the following priority order:
+When a visitor has no ECID, the Edge Network seeds one by evaluating identity signals in this priority order:
 
 | Priority | Source | Context | Behavior |
 | --- | --- | --- | --- |
-| 1 | **Demdex ID** | Third-party | If a Demdex ID is present, the ECID is seeded from it. This seed produces a consistent ECID across domains that share the same third-party cookie. |
+| 1 | **Demdex ID** | Third-party | If a Demdex ID is present, the ECID is seeded from it. This seed produces a consistent ECID across domains that share the same third-party cookie. In a third-party context, the Demdex ID takes priority over the FPID. |
 | 2 | **FPID** | First-party | If no Demdex ID is present but an FPID exists, the ECID is seeded from the FPID and a Demdex ID is derived from it. |
 | 3 | **Random** | First-party | If neither a Demdex ID nor an FPID is available, a new random ECID is generated and a Demdex ID is derived from it. |
+
+This priority applies only to visitors who do not yet have an ECID. An existing ECID is never replaced or re-seeded.
 
 ECIDs and Demdex IDs are cryptographically linked through a deterministic algorithm, meaning one can be derived from the other. This relationship is what allows the Edge Network to translate between first-party and third-party identity contexts without requiring separate visitor handling logic in your implementation.
 
 Because the relationship is deterministic, audiences built on first-party ECIDs can be activated through third-party infrastructure when the corresponding Demdex ID is available.
-
-For visitors who already have an FPID-derived ECID, the Edge Network can automatically link their first-party identity to the third-party identity context. This happens transparently when the browser supports third-party cookies and requires no changes to your implementation. When automatic linking occurs:
-
-1. The Edge Network detects that the visitor's ECID was not derived from a Demdex ID.
-1. If the visitor's browser supports third-party cookies, a lightweight identity synchronization is triggered.
-1. The system creates a link between the visitor's first-party ECID and their third-party identity.
-1. The link is stored in the identity store, enabling audience activation on third-party destinations.
-
-Automatic linking preserves existing ECIDs and prevents visitor cliffing. Over time, more of your audience gradually becomes eligible for third-party activation as visitors return and linking occurs.
 
 Third-party audience activation relies on ID synchronization (ID sync). When the Edge Network establishes or refreshes a third-party identity, it returns ID sync instructions in the response. These instructions direct the browser to synchronize the visitor's identity with partner domains (DSPs, ad networks, and other activation platforms), so that your Experience Platform audiences can be matched and delivered on those platforms.
 
@@ -141,4 +151,4 @@ For browsers that block third-party cookies, first-party identification continue
 ## Limitations
 
 * Third-party identity behavior depends entirely on the visitor's browser allowing third-party cookies. There is no fallback for third-party activation in browsers that block them.
-* Automatic linking requires the visitor to return to the site. The share of your audience eligible for third-party activation increases gradually over time.
+* The ECID seeding priority applies only to new visitors. Visitors who already have an FPID-derived ECID keep it, so their eligibility for third-party activation does not change.

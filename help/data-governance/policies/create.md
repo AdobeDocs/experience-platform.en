@@ -5,13 +5,10 @@ title: Create a Data Governance Policy in the API
 type: Tutorial
 description: Learn how to create a data governance policy using the Policy Service API.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-TQID: https://experienceleague.adobe.com/RQVZTt8LCceVQMyUVMgbMShIx9ReQp6xtT2mSIQCFxk
+TQID: 'https://experienceleague.adobe.com/RQVZTt8LCceVQMyUVMgbMShIx9ReQp6xtT2mSIQCFxk'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

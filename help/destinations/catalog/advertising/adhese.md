@@ -2,6 +2,18 @@
 title: Adhese connection
 description: Send audiences to Adhese for targeted ad delivery on your own publisher or retailer advertising inventory. Files export to Adhese's secure Amazon S3 bucket.
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Adhese connection {#adhese}
 
@@ -43,7 +55,7 @@ Use the identity that you also use to identify users on your website or app, so 
 |---|---|---|
 |GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
 |IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". Read the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
+|ECID|ECID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". Read the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 |extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace, for example, your own first-party user ID that is also available to Adhese at ad-delivery time.|
 

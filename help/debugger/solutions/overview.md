@@ -6,35 +6,46 @@ seo-title: Solution Tabs in Adobe Experience Platform Debugger
 title: Solution Tabs
 uuid: 5e999ef2-6399-4ab5-a841-3a839d081728
 exl-id: 2cb49f78-4a4b-4410-8a4b-6f9009c51d58
-TQID: https://experienceleague.adobe.com/kImZqBrNuYYv5nJh8fhgC-Lgn6-SyW5sg8yOuxlK0gQ
+TQID: 'https://experienceleague.adobe.com/kImZqBrNuYYv5nJh8fhgC-Lgn6-SyW5sg8yOuxlK0gQ'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation
 ---
 # Solutions
 
-Adobe Experience Platform Debugger provides a list of **Solutions** in the left navigation. Select a solution to see the results for specific Adobe Experience Cloud technologies.
+Adobe Experience Platform Debugger provides a list of **Solutions** in the left navigation. Select a solution to see the results for specific Adobe CX Enterprise technologies.
 
 ![The list of available solutions shown in the Debugger UI](../images/solutions/overview/left-nav.png)
+
+The request tables in each solution tab include the same filter, search, and navigation controls as the [[!UICONTROL Network] tab](../network.md#filter-search).
 
 ## Adobe Experience Platform Web SDK {#aep}
 
 The Adobe Experience Platform Web SDK screen shows information about the Adobe Experience Platform Web SDK. Select **[!UICONTROL Configure]** to toggle console logging on or off.
 
+Starting in Debugger version 1.8.0, this screen also shows Streaming Media requests and Brand Concierge requests, including Brand Concierge voice conversations and streamed responses. During an Assurance session, these requests are also sent to the session.
+
 ## [!UICONTROL Analytics] {#section-f71dfcc22bb44c86bec328491606a482}
 
 The [!UICONTROL Analytics] tab provides information about your [Adobe Analytics implementation](https://experienceleague.adobe.com/docs/analytics/implementation/home.html).
+
+When you are signed in, the Debugger loads report suite details and the configured names of your eVars, props, and list variables, and shows those names in the request table. Starting in Debugger version 1.8.0, these details are loaded using Analytics API 2.0. To load them, you must be signed in with a valid session and have an organization selected.
+
+A status message appears above the request table when report suite details or configured names are loading, unavailable, or fail to load. Select **[!UICONTROL Retry report suite details]** or **[!UICONTROL Refresh report suite details]** to reload them. If a reload fails, previously loaded configured names are still shown.
+
+To view post-processed hits, turn on **[!UICONTROL Show post processed hits]**. This toggle requires a valid sign-in session and consent to personal data collection. You can turn off the toggle at any time, even after your session expires or you withdraw consent.
 
 ## [!UICONTROL Target] {#section-988873ba5ede4317953193bd7ac5474c}
 

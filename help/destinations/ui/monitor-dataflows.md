@@ -5,13 +5,14 @@ solution: Experience Platform
 title: Monitor Dataflows
 type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
-TQID: https://experienceleague.adobe.com/dMdtSi01ADjwI2-5KyPkq-CApXcoCvK6Y94UpysBmQc
+TQID: 'https://experienceleague.adobe.com/dMdtSi01ADjwI2-5KyPkq-CApXcoCvK6Y94UpysBmQc'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
 role_v2:
@@ -19,6 +20,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Monitor dataflows
 

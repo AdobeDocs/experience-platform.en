@@ -1,29 +1,30 @@
 ---
-title: xdm
+title: xdm (Web SDK)
 description: Learn how to send data to Adobe through the XDM schema-aligned object.
 exl-id: 1d8ef191-aed6-4c8b-a1fd-614bd8ed73da
-TQID: https://experienceleague.adobe.com/DO-YHT1JYbAdu6HIOmUEN4cNKE3ZSEtFhFWb4XXEhcA
-product_v2:
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-    internal-label: Commerce
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
+TQID: 'https://experienceleague.adobe.com/DO-YHT1JYbAdu6HIOmUEN4cNKE3ZSEtFhFWb4XXEhcA'
 feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+    internal-label: Schemas
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+    internal-label: Data modeling
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
-# `xdm`
+# `xdm` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes `xdm` in the Web SDK `sendEvent` command. For the Server SDK, see [`xdm`](/help/collection/server-js/methods/sendevent/xdm.md).*
+
+>[!ENDSHADEBOX]
 
 The `xdm` object contains the data payload sent to Adobe. Fields set within this object map directly to elements defined in the dataset's schema.
 

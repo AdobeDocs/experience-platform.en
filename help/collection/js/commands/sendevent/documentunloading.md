@@ -1,13 +1,27 @@
 ---
-title: documentUnloading
-description: Use the JavaScript sendBeacon API to send data to Adobe.
+title: documentUnloading (Web SDK)
+description: Use the browser's sendBeacon method to send data to Adobe.
 exl-id: 7683c0c4-ae2e-46ec-8471-628a10e17afc
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+    internal-label: Behavioral data
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
-# `documentUnloading`
+# `documentUnloading` (Web SDK)
 
-The `documentUnloading` property allows you to use JavaScript's [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) method to send data to Adobe. If a typical request takes too long, the browser can cancel the request. You can tell the Web SDK to use `sendBeacon` so that the request runs in the background after you navigate away from the page. Enable this property to help prevent data requests from getting canceled by the browser when unloading.
+The `documentUnloading` property allows you to use the browser's [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) method to send data to Adobe. This method is part of the browser's Web APIs, not the JavaScript language itself. If a typical request takes too long, the browser can cancel the request. You can tell the Web SDK to use `sendBeacon` so that the request runs in the background after you navigate away from the page. Enable this property to help prevent data requests from getting canceled by the browser when unloading.
 
-Several browsers impose a limit of 64 KB to the amount of data that can be sent with `sendBeacon` at one time. If the browser rejects the event because the payload is too large, the Web SDK falls back to using its normal transport method. Even if a given browser allows larger payloads, Adobe data collection servers truncate payloads down to 64 KB.
+Web SDK uses `sendBeacon` only after a visitor identity is established. Before an identity is established (for example, on a new visitor's first event), Web SDK sends the event to the Edge Network using `fetch` so that it can receive the identity in the response. Starting in [version 2.36.1](/help/collection/js/release-notes.md), these `fetch` requests use the [`keepalive`](https://developer.mozilla.org/en-US/docs/Web/API/RequestInit#keepalive) option so that the browser finishes sending the request even if the visitor navigates away from the page.
+
+Several browsers impose a limit of 64 KB to the amount of data that can be sent with `sendBeacon` at one time. The same limit applies to `fetch` requests that use `keepalive`. If the browser rejects the event because the payload is too large, the Web SDK falls back to using its normal transport method. Even if a given browser allows larger payloads, Adobe data collection servers truncate payloads down to 64 KB.
 
 Set the `documentUnloading` boolean when running the `sendEvent` command. Its default value is `false`. Set this property to `true` if you want to use the `sendBeacon` method to send data to Adobe.
 
@@ -21,6 +35,18 @@ alloy("sendEvent", {
   "documentUnloading": true
 });
 ```
+
+## Validate events sent with `documentUnloading` {#validate}
+
+If the page navigates away before a `sendBeacon` request finishes, Chrome developer tools can show the request (type `ping`) as **(canceled)** even when the browser continues sending it. Requests sent using `fetch` with `keepalive` can show as canceled in the same way. This label alone does not establish whether data was lost.
+
+Web SDK debug logs can't confirm delivery either. Browsers don't return a response for `sendBeacon` requests, so the log shows only that Web SDK sent the request using `sendBeacon`.
+
+Open an inspection tool before reproducing navigation. Look for a captured server response or, in a connected Edge Trace/Assurance session, the incoming request at the Edge Network. See [Aborted requests](/help/collection/debugging/inspect-requests.md#aborted-requests) for the shared inspection workflow and its evidence limits. Confirmation of Edge receipt does not by itself establish downstream processing.
+
+### When events can be lost {#data-loss}
+
+The `documentUnloading` property can't help with events that Web SDK hasn't sent yet when the page unloads. For example, Web SDK holds events while consent is `pending` (see [`defaultConsent`](../configure/defaultconsent.md)), or while it waits for an in-progress identity request to finish. In the second case, the debug log shows `Delaying request while retrieving ECID from server.`
 
 ## Document unloading using the Web SDK tag extension
 

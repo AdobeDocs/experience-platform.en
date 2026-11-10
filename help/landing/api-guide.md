@@ -6,34 +6,22 @@ description: Adobe Experience Platform provides API services that are closely li
 role: Developer
 feature: API
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-TQID: https://experienceleague.adobe.com/HZc00JZcbSNcB3grMH-LKhLVKA-ZsOUYqqIS4KoMi7U
+TQID: 'https://experienceleague.adobe.com/HZc00JZcbSNcB3grMH-LKhLVKA-ZsOUYqqIS4KoMi7U'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: a230274e-7e6e-49eb-b817-514495a710ac
-    internal-label: query service
+    internal-label: Data collection tags
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
     internal-label: Sources
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
-  - id: d1a87129-ba05-4f15-98b1-233618f1774a
-    internal-label: Data ingestion
   - id: de9975b2-c43a-4287-9698-4f4cad92b83f
     internal-label: Schemas
+subfeature_v2:
+  - id: 01a3139f-2204-4e1b-bd65-5437f7d5a5bd
+    internal-label: API credentials
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -178,7 +166,7 @@ For more information on specific endpoints in Experience Platform APIs, includin
 | [[!DNL MTLS Service API guide]](../data-governance/mtls-api/overview.md) | The [!DNL MTLS Service] API allows you to securely retrieve public certificates issued by Adobe for your organization. |
 | [[!DNL Observability Insights] API guide](.././observability/api/overview.md) | [!DNL Observability Insights] is a RESTful API that allows developers to expose key observability metrics in Adobe Experience Platform. These metrics provide insights into Experience Platform usage statistics, health-checks for Experience Platform services, historical trends, and performance indicators for various Experience Platform functionalities. |
 | [[!DNL Policy Service] API guide](.././data-governance/api/overview.md) <br> (Data Governance) | The [!DNL Policy Service] API allows you to create and manage data usage labels and policies to determine what marketing actions can be taken against data that contains certain data usage labels. To apply labels to datasets and fields, refer to the [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) guide |
-| [[!DNL Privacy Service] API guide](.././privacy-service/api/getting-started.md) | The [!DNL Privacy Service] API allows developers to create and manage customer requests to access or delete their personal data across Experience Cloud applications, in compliance with legal privacy regulations. |
+| [[!DNL Privacy Service] API guide](.././privacy-service/api/getting-started.md) | The [!DNL Privacy Service] API allows developers to create and manage customer requests to access or delete their personal data across CX Enterprise applications, in compliance with legal privacy regulations. |
 | [[!DNL Query Service] API guide](.././query-service/api/getting-started.md) | The [!DNL Query Service] API allows developers to query their Adobe Experience Platform data using standard SQL. |
 | [[!DNL Real-Time Customer Profile] API guide](.././profile/api/overview.md) | The Real-Time Customer Profile API allows developers to explore and work with Profile data, including viewing profiles, creating and updating merge policies, exporting or sampling Profile data, and deleting Profile data that is no longer required or was added in error. |
 | [Sandbox API guide](.././sandboxes/api/getting-started.md) | The Sandbox API allows developers to programmatically manage isolated virtual sandbox environments in Adobe Experience Platform. |

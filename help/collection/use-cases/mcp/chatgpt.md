@@ -1,8 +1,25 @@
 ---
 title: Collect analytics and apply personalization in ChatGPT Apps (MCP data collection)
 description: Use a hybrid MCP server + Web SDK applyResponse pattern to send events to the Adobe Experience Platform Edge Network and render personalization inside a ChatGPT App UI.
-keywords: Adobe Experience Platform, Web SDK, Edge Network, MCP, ChatGPT Apps, applyResponse, interact endpoint, personalization, analytics
 exl-id: 9ab611c7-7595-46c6-b990-433e59bffe48
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+  - id: b7798bb6-f089-4907-8492-05fc80e10632
+    internal-label: Server API
+  - id: a50ad69b-1331-40e9-b634-531a085a6a54
+    internal-label: Identities
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+    internal-label: Artificial intelligence
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Collect analytics and apply personalization in ChatGPT Apps (MCP data collection)
 

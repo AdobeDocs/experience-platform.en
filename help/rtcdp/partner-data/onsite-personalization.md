@@ -3,16 +3,24 @@ title: Personalize onsite experiences for unknown visitors using partner-aided v
 description: Learn how to use partner-aided visitor recognition to deliver personalized onsite experiences to your visitors.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-TQID: https://experienceleague.adobe.com/AleI6qHVwbtVSa48LDXatkW4LlpwyySJ2eSjl6FraPo
+TQID: 'https://experienceleague.adobe.com/AleI6qHVwbtVSa48LDXatkW4LlpwyySJ2eSjl6FraPo'
 product_v2:
   - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
     internal-label: Real-Time Customer Data Platform
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
 feature_v2:
   - id: ba929a52-9339-4154-9487-317dc875a3c7
     internal-label: Use cases
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
     internal-label: Customer engagement
@@ -41,7 +49,7 @@ topic_v2:
 >
 >This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
 
-Learn how to use partner-aided recognition to deliver personalized experiences to your web property visitors. Use this tutorial to understand the implementation sequence of various elements in Experience Platform and other Experience Cloud solutions to display a personalized experience to authenticated and unauthenticated visitors.
+Learn how to use partner-aided recognition to deliver personalized experiences to your web property visitors. Use this tutorial to understand the implementation sequence of various elements in Experience Platform and other CX Enterprise solutions to display a personalized experience to authenticated and unauthenticated visitors.
 
 ![An infographic that describes how to use partner-provided attributes to deliver personalized experiences to your visitors.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png)
 
@@ -67,9 +75,9 @@ When planning to use partner-provided attributes to deliver personalized experie
 * To what extent are you comfortable delivering personalization in different channels and for different use cases based on probabilistically derived datasets, versus deterministically confirmed attributes?
 * How should the experience for a pre-authenticated but recognized visitor change when they authenticate?
 
-### UI functionality, Experience Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}
+### UI functionality, Experience Platform components, and CX Enterprise products that you will use {#ui-functionality-and-elements}
 
-To successfully implement this use case, you must use multiple areas of Real-Time Customer Data Platform and other Experience Cloud solutions. Make sure that you have the necessary [attribute-based access control permissions](/help/access-control/abac/overview.md) for all these areas, or ask your system administrator to grant you the necessary permissions. 
+To successfully implement this use case, you must use multiple areas of Real-Time Customer Data Platform and other CX Enterprise solutions. Make sure that you have the necessary [attribute-based access control permissions](/help/access-control/abac/overview.md) for all these areas, or ask your system administrator to grant you the necessary permissions.
 
 * Data Collection
   * [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)
@@ -204,7 +212,7 @@ Get complete information on [how to install Web SDK](https://experienceleague.ad
 
 #### Install Experience Cloud ID Service extension
 
-Use the [Experience Cloud ID Service extension](/help/tags/extensions/client/id-service/overview.md) to create a unique device-based first-party identity for visitors across all Experience Cloud solutions. Search for **[!UICONTROL ID Service]** in the extension catalog, and install it. Keep all the default settings when installing the extension.
+Use the [Experience Cloud ID Service extension](/help/tags/extensions/client/id-service/overview.md) to create a unique device-based first-party identity for visitors across all CX Enterprise solutions. Search for **[!UICONTROL ID Service]** in the extension catalog, and install it. Keep all the default settings when installing the extension.
   
 ![View of the ID Service extension in the extensions catalog.](/help/rtcdp/assets/partner-data/onsite-personalization/id-service-extension.png)
 
@@ -216,7 +224,7 @@ Select the box icon on the right for the development environment, and copy the s
 
 ![Select box icon highlighted in the Environments section of the Data Collection UI.](/help/rtcdp/assets/partner-data/onsite-personalization/select-box-icon.png)
 
-You must add this code snippet to the very top of your website. As a result, your website will make a call to the Adobe Edge Network to retrieve JavaScript logic that will be loaded and executed on the page. This allows for functionality like visitor ID generation, data collection, and real-time experience personalization to work.
+You must add this code snippet to the very top of your website. As a result, your website will make a call to the Adobe Edge Network to retrieve JavaScript logic that will be loaded and executed on the page. This allows for functionality like ECID generation, data collection, and real-time experience personalization to work.
 
 #### Set up data elements
 

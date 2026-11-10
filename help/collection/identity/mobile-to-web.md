@@ -2,12 +2,28 @@
 title: Share identity from mobile apps to mobile web/WebViews
 description: Pass identity from a mobile app into mobile web content or a WebView so reporting and personalization can continue in the web context.
 exl-id: 08441a5d-3d6f-41d4-aa4e-061bddc5df6f
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+  - id: a8a79b8d-fdca-499c-a5ef-f88a099d8eb9
+    internal-label: Mobile SDK
+  - id: a50ad69b-1331-40e9-b634-531a085a6a54
+    internal-label: Identities
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
+    internal-label: Mobile experience
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Share identity from mobile apps to mobile web/WebViews
 
 When a visitor moves from a mobile app into a WebView or mobile web page, the app and web contexts each maintain their own identity. Without an explicit handoff, the web experience treats the visitor as a new, unknown person, which fragments reporting and restarts personalization.
 
-Mobile-to-web identity sharing solves this by passing the visitor's [Experience Cloud ID (ECID)](./overview.md) from the mobile app to the web destination through an `adobe_mc` query-string parameter. The parameter carries the ECID, your Experience Cloud organization ID, and a timestamp. When the web destination loads with a valid `adobe_mc` parameter, the Web SDK automatically reads it and applies the handed-off identity on its first Edge Network request, so both contexts share the same visitor.
+Mobile-to-web identity sharing solves this by passing the visitor's [ECID](./overview.md) from the mobile app to the web destination through an `adobe_mc` query-string parameter. The parameter carries the ECID, your organization ID, and a timestamp. When the web destination loads with a valid `adobe_mc` parameter, the Web SDK automatically reads it and applies the handed-off identity on its first Edge Network request, so both contexts share the same visitor.
 
 Use this pattern when your mobile app opens a WebView or mobile web page that your organization controls and you want app activity and web activity to remain tied to the same visitor. If your goal is identity continuity between websites on different domains, use [cross-domain sharing](cross-domain-sharing.md) instead.
 
@@ -18,7 +34,7 @@ Before you begin, make sure that your implementation meets the following require
 * **Mobile app**: The Adobe Experience Platform Mobile SDK with the [Identity for Edge Network](https://developer.adobe.com/client-sdks/edge/identity-for-edge-network/) extension version **1.1.0 or later** (iOS and Android).
 * **Web destination**: The [Web SDK](/help/collection/js/js-overview.md) version **2.11.0 or later**, or the Web SDK tag extension.
 * **URL control**: Your code controls the URL that the app passes to the WebView or browser so that you can append query-string parameters to it.
-* **Matching configuration**: The same Experience Cloud organization ID is configured in both the mobile and web implementations.
+* **Matching configuration**: The same organization ID is configured in both the mobile and web implementations.
 
 ## Retrieve identity from the mobile app {#retrieve-identity}
 
@@ -28,8 +44,8 @@ The returned string contains the following URL-encoded parameters:
 
 | Parameter | Description |
 | --- | --- |
-| `MCID` | The Experience Cloud ID (ECID). |
-| `MCORGID` | Your Experience Cloud organization ID. This parameter must match the organization configured in the Web SDK on the destination page. |
+| `MCID` | The ECID. |
+| `MCORGID` | Your organization ID. This parameter must match the organization configured in the Web SDK on the destination page. |
 | `TS` | A timestamp. The destination must receive this value within **five minutes** or the handoff is rejected. |
 
 The following code examples show what a handoff might look like in your mobile app:

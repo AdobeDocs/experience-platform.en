@@ -4,13 +4,10 @@ solution: Experience Platform
 title: Data Access in Jupyterlab Notebooks
 description: This guide focuses on how to use Jupyter Notebooks, built within Data Science Workspace to access your data.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-TQID: https://experienceleague.adobe.com/wEFukj-yqADUcVeVJKkWCFuAUetP5mSOnus0Iq-Wlwk
+TQID: 'https://experienceleague.adobe.com/wEFukj-yqADUcVeVJKkWCFuAUetP5mSOnus0Iq-Wlwk'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

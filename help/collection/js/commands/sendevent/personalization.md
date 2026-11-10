@@ -1,59 +1,48 @@
 ---
-title: personalization
+title: personalization (Web SDK)
 description: Render different content to different users, creating a personalized experience for them.
 exl-id: 4bd370c8-8d8d-469e-9666-b5b6d0e3a660
-TQID: https://experienceleague.adobe.com/8i3XgBUE5aqnvgELSwmcfd4NBcLVf0QobRRiDa32hfM
+TQID: 'https://experienceleague.adobe.com/8i3XgBUE5aqnvgELSwmcfd4NBcLVf0QobRRiDa32hfM'
 product_v2:
-  - id: cb954087-f4fc-4456-afb9-e939cabcdc79
-    internal-label: Journey Optimizer
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-    internal-label: Acrobat Sign
-  - id: dfc56824-e8b9-499e-85d4-21aedb507314
-    internal-label: Campaign
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-    internal-label: Target
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+  - id: cb954087-f4fc-4456-afb9-e939cabcdc79
+    internal-label: Journey Optimizer
 feature_v2:
-  - id: a075b2c1-7748-4328-b7f6-343aa314616a
-    internal-label: Campaigns
-  - id: a653cc2e-bc85-4353-a306-399e5b247978
-    internal-label: Journey Optimizer campaigns
-  - id: b82389f8-9b5e-4083-8e3b-3cef299fb8b9
-    internal-label: Schemas
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-    internal-label: Implementation
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
-    internal-label: Implementations
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-    internal-label: API
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
+  - id: a984631b-2bae-4860-9b15-69c41a799dcb
+    internal-label: APIs and SDKs
+  - id: d0a62d3c-b79e-47e4-929e-40ef3cffa037
+    internal-label: Communication channels
 subfeature_v2:
-  - id: cfc95e9b-b035-4403-a6a9-b27a8a053a37
-    internal-label: PI
-  - id: df312454-73c4-43f6-a90e-18f5043f074c
-    internal-label: Tags
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
+  - id: d056adbe-402d-4f42-9746-f3d424e598b1
+    internal-label: Web SDK
+  - id: f88eedcc-cf3e-46b8-9e94-0293589325f3
+    internal-label: Code based channel
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-    internal-label: Implementation
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-    internal-label: Measurement
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
     internal-label: Personalization
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
-# `personalization`
+# `personalization` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes `personalization` in the Web SDK `sendEvent` command. For the Server SDK, see [`personalization`](/help/collection/server-js/methods/sendevent/personalization.md).*
+
+>[!ENDSHADEBOX]
 
 The `personalization` object configures what personalization decisions (offers or propositions) are requested and how they are handled in the request and response. It is especially valuable in Adobe Target or Adobe Journey Optimizer implementations, as it is the driving force that allows you to customize displayed content per user.
 

@@ -2,23 +2,21 @@
 keywords: Experience Platform;home;popular topics;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;faq;FAQ;regulation;Regulation;regulations;Regulations;privacy;Privacy;
 solution: Experience Platform
 title: Privacy Regulations FAQ
-description: This document provides answers to frequently asked questions about supported legal privacy regulations and their implementation in Adobe Experience Cloud.
+description: This document provides answers to frequently asked questions about supported legal privacy regulations and their implementation in Adobe CX Enterprise.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-TQID: https://experienceleague.adobe.com/8VLNtjZPdsv3HnY46jLLCw84M2EpUSBw32CS-Y66U9c
+TQID: 'https://experienceleague.adobe.com/8VLNtjZPdsv3HnY46jLLCw84M2EpUSBw32CS-Y66U9c'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
-subfeature_v2:
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation
@@ -33,7 +31,7 @@ topic_v2:
 ---
 # Privacy regulations FAQ
 
-This document provides answers to frequently asked questions about supported legal privacy regulations and their implementation in Adobe Experience Cloud.
+This document provides answers to frequently asked questions about supported legal privacy regulations and their implementation in Adobe CX Enterprise.
 
 >[!NOTE]
 >
@@ -41,17 +39,17 @@ This document provides answers to frequently asked questions about supported leg
 
 ## General questions
 
-The following questions relate to all privacy regulations supported by Experience Cloud.
+The following questions relate to all privacy regulations supported by CX Enterprise.
 
 ### Who do the supported privacy regulations affect?
 
-The [privacy regulations supported by Experience Cloud](./overview.md) apply to all organizations that store and process the personal data of citizens within the regulations' respective jurisdictions, regardless of the organization's geographic location.
+The [privacy regulations supported by CX Enterprise](./overview.md) apply to all organizations that store and process the personal data of citizens within the regulations' respective jurisdictions, regardless of the organization's geographic location.
 
 ### What constitutes personal data?
 
 Personal data is any information related to a natural person or data subject that can be used to directly or indirectly identify the person. It can be anything from a name, a photo, an email address, bank details, posts on social networking websites, medical information, or a computer IP address.
 
-The following identifiers are commonly used in Experience Cloud applications and could be subject to privacy regulation requirements:
+The following identifiers are commonly used in CX Enterprise applications and could be subject to privacy regulation requirements:
 
 * Name
 * Postal address
@@ -67,7 +65,7 @@ Personal information can also include internet or other electronic network activ
 * Search history
 * Information regarding a consumer's interaction with a website, application, or advertisement
 
-Even though privacy regulations cover a wide set of personal information, Adobe's standard contract terms dictate that sensitive personal information (such as SSN, driver's license information, financial account information, and biometric data) is generally prohibited from import and use in Experience Cloud applications.  
+Even though privacy regulations cover a wide set of personal information, Adobe's standard contract terms dictate that sensitive personal information (such as SSN, driver's license information, financial account information, and biometric data) is generally prohibited from import and use in CX Enterprise applications.
 
 ### What is the difference between a data controller and a data processor?
 
@@ -150,7 +148,7 @@ If your organization's data operations fall under the legal jurisdictions of the
 
 ### How can I support consumer privacy requests if I maintain data that is covered by privacy regulations?
 
-Once you have taken the necessary steps to authenticate consumers that fall within the appropriate legal jurisdictions, Adobe Experience Platform Privacy Service allows you to submit consumer privacy requests to compatible Experience Cloud applications. See the [[!DNL Privacy Service] overview](../home.md) for more information. For information on how your particular Experience Cloud applications can honor privacy requests, please refer to the guide on [Privacy Service and Experience Cloud applications](../experience-cloud-apps.md).
+Once you have taken the necessary steps to authenticate consumers that fall within the appropriate legal jurisdictions, Adobe Experience Platform Privacy Service allows you to submit consumer privacy requests to compatible CX Enterprise applications. See the [[!DNL Privacy Service] overview](../home.md) for more information. For information on how your particular CX Enterprise applications can honor privacy requests, please refer to the guide on [Privacy Service and CX Enterprise applications](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
@@ -160,7 +158,7 @@ Once you have taken the necessary steps to authenticate consumers that fall with
 
 The following questions relate specifically to the CCPA.
 
-### How do CCPA's different roles and responsibilities apply to Experience Cloud?
+### How do CCPA's different roles and responsibilities apply to CX Enterprise? {#how-do-ccpas-different-roles-and-responsibilities-apply-to-experience-cloud}
 
 As defined by CCPA, the following roles apply to Adobe and its customers:
 
@@ -175,7 +173,7 @@ However, Adobe services may be used to enable certain data sharing and transfers
 
 ### Does Adobe offer other tools that may be helpful in addressing CCPA requirements?
 
-Adobe Experience Cloud applications provide data management and governance functions that can be helpful for companies' privacy needs. Among these tools are data usage labeling, role-based access controls, IP obfuscation, and hashing capabilities.
+Adobe CX Enterprise applications provide data management and governance functions that can be helpful for companies' privacy needs. Among these tools are data usage labeling, role-based access controls, IP obfuscation, and hashing capabilities.
 
 Adobe has received various certifications of its privacy and security practices, such as an ISO 27001 certification and a TrustArc GDPR validation.
 

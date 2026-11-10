@@ -1,12 +1,32 @@
 ---
 title: Mailchimp Extension Overview
 description: Use event forwarding to trigger Mailchimp emails.
-type: Documentation
-feature: Data Collection, Event Forwarding
-level: Beginner
-role: User, Developer, Admin
-topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+    internal-label: Event forwarding
+subfeature_v2:
+  - id: e1f2a3b4-4027-4027-9027-400000000027
+    internal-label: Event forwarding extensions
+  - id: e1f2a3b4-4031-4031-9031-400000000031
+    internal-label: Secrets
+  - id: e1f2a3b4-4025-4025-9025-400000000025
+    internal-label: Event forwarding data elements
+  - id: e1f2a3b4-4030-4030-9030-400000000030
+    internal-label: Event forwarding rules
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: a492a671-d5f6-46ee-b832-2efbca14ddd8
+    internal-label: Activation and channels
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Mailchimp event forwarding extension overview
 

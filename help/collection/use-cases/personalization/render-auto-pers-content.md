@@ -1,8 +1,21 @@
 ---
 title: Automatically render DOM action propositions
 description: Use Web SDK to automatically render eligible DOM action propositions and handle common SPA re-render scenarios.
-keywords: personalization;renderDecisions;dom-action;sendEvent;applyPropositions;single page application;
 exl-id: 61729fb6-f449-4521-b073-7678939d1426
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e9001ce2-5245-4a8e-8601-dd958009072f
+    internal-label: Web experience
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Render DOM action propositions automatically
 

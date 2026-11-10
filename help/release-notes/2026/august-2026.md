@@ -1,7 +1,19 @@
 ---
 title: Adobe Experience Platform Release Notes August 2026
 description: The August 2026 release notes for Adobe Experience Platform.
-last-update: 2026-08-18
+last-update: 2026-08-18T00:00:00.000Z
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Adobe Experience Platform release notes
 
@@ -19,27 +31,12 @@ last-update: 2026-08-18
 
 New features and updates to existing features in Adobe Experience Platform:
 
-- [Access control](#access-control)
 - [Data Governance](#data-governance)
 - [Data Ingestion](#data-ingestion)
 - [Destinations](#destinations)
 - [Run and Operate](#run-and-operate)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
-
-## Access control {#access-control}
-
-Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Experience Platform capabilities, including data modeling, profile management, and sandbox administration.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Object-Level Access Control for Datasets | You can now apply access labels to entire datasets to control which users and applications can read or write dataset data. Use the same Adobe-defined and custom access labels available throughout Adobe Experience Platform to enforce dataset-level access restrictions. For information about applying and managing dataset labels, see the [end to end guide](/help/access-control/abac/end-to-end-guide.md) |
-
-{style="table-layout:auto"}
-
-For more information, read the [Access control overview](/help/access-control/home.md). 
 
 ## Data Governance {#data-governance}
 

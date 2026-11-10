@@ -1,39 +1,26 @@
 ---
 title: Experience Cloud Audiences
-description: Learn how to share audiences from Real-Time Customer Data Platform to various Experience Cloud apps.
+description: Learn how to share audiences from Real-Time Customer Data Platform to various CX Enterprise apps.
 last-substantial-update: 2023-09-28T00:00:00.000Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-TQID: https://experienceleague.adobe.com/2W5j-HTIS416Tlrk5TmTseIyvBiPGYIEaAX9rf7MAvk
+TQID: 'https://experienceleague.adobe.com/2W5j-HTIS416Tlrk5TmTseIyvBiPGYIEaAX9rf7MAvk'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
-subfeature_v2:
-  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-    internal-label: Access control
   - id: a7150a74-b8a9-4042-b066-147c5f0ca505
     internal-label: Alerts
   - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
     internal-label: Permissions
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
     internal-label: Metadata
@@ -62,9 +49,9 @@ To send audiences to other Adobe solutions, use the direct connections from [!DN
 
 >[!IMPORTANT]
 >
->This destination replaces the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) from [!DNL Real-Time Customer Data Platform] to various Experience Cloud solutions.
+>This destination replaces the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) from [!DNL Real-Time Customer Data Platform] to various CX Enterprise solutions.
 > 
->If you are already sharing audiences from [!DNL Real-Time CDP] to Audience Manager and other Experience Cloud solutions via the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), you must contact Customer Care to disable the legacy integration before using this destination.
+>If you are already sharing audiences from [!DNL Real-Time CDP] to Audience Manager and other CX Enterprise solutions via the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), you must contact Customer Care to disable the legacy integration before using this destination.
 
 ![The Experience Cloud Audiences destination, highlighted in the destinations catalog.](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
 
@@ -82,7 +69,7 @@ In Audience Manager, you can use [!DNL Real-Time CDP] audiences for Data Managem
 
 ### Granular control of exported audiences {#segments-control}
 
-To select which audiences to export to Audience Manager and beyond, use the new self-service audience-sharing integration via the Experience Cloud Audiences destination.  Use this to determine which audiences you want to share with other Experience Cloud solutions and which audiences you want to keep in [!DNL Real-Time CDP] exclusively.
+To select which audiences to export to Audience Manager and beyond, use the new self-service audience-sharing integration via the Experience Cloud Audiences destination.  Use this to determine which audiences you want to share with other CX Enterprise solutions and which audiences you want to keep in [!DNL Real-Time CDP] exclusively.
 
 The legacy audience-sharing integration did not allow for a granular control of which audiences should be exported to Audience Manager and beyond.
 
@@ -96,9 +83,9 @@ Before you can send audiences to [!DNL Adobe Analytics], you must [implement the
 >
 >To send audiences from [!DNL Real-Time CDP] to [!DNL Adobe Analytics] through the Experience Cloud Audiences destination, you must have an Audience Manager license.
 
-### Share [!DNL Real-Time CDP] audiences with other Experience Cloud solutions {#share-segments-with-other-solutions}
+### Share [!DNL Real-Time CDP] audiences with other CX Enterprise solutions {#share-segments-with-other-solutions}
 
-You can use the [!DNL Real-Time CDP] Audiences destination card to share audiences with other Experience Cloud solutions.
+You can use the [!DNL Real-Time CDP] Audiences destination card to share audiences with other CX Enterprise solutions.
 
 However, Adobe strongly recommends using the following dedicated destination cards if you want to share audiences with these solutions:
 
@@ -113,11 +100,11 @@ However, Adobe strongly recommends using the following dedicated destination car
 >
 > * You need an Audience Manager license to enable the [Data Management Platform use cases](#dmp-use-cases) mentioned further above.
 > * You *do* need an Audience Manager license to share [!DNL Real-Time CDP] audiences with [!DNL Adobe Analytics].
-> * You *do not need* an Audience Manager license to share [!DNL Real-Time CDP] audiences with [!DNL Adobe Advertising], [!DNL Adobe Target], Marketo, and other Experience Cloud solutions, mentioned in the [section above](#share-segments-with-other-solutions).
+> * You *do not need* an Audience Manager license to share [!DNL Real-Time CDP] audiences with [!DNL Adobe Advertising], [!DNL Adobe Target], Marketo, and other CX Enterprise solutions, mentioned in the [section above](#share-segments-with-other-solutions).
 
 ### For customers who are using the legacy audience-sharing solution {#legacy-audience-sharing}
 
-If you are already sharing audiences from [!DNL Real-Time CDP] to Audience Manager and other Experience Cloud solutions via the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), you must contact Customer Care to disable the legacy integration.
+If you are already sharing audiences from [!DNL Real-Time CDP] to Audience Manager and other CX Enterprise solutions via the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), you must contact Customer Care to disable the legacy integration.
 
 The turnaround time to resolve the deprovisioning ticket is six business days or less. After the existing legacy integration has been disabled, you can proceed to [create a connection](#connect) via the self-service destination card. 
 
@@ -131,12 +118,12 @@ Note the following known limitations and important callouts while using the Expe
 
 * Currently, you can configure the Experience Cloud Audiences destination on a single sandbox per organization. Attempting to configure a second destination connection in another sandbox results in an error.
 * When connecting to the destination, you can see an option to [enable dataflow alerts](../../ui/alerts.md). Though visible in the UI, the **enable alerts option is not currently supported**.
-* **Audience backfill support**: The first export to Audience Manager or other Experience Cloud solutions includes a historical population of the audiences. Users of the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) who are configuring this destination should expect a backfill difference of approximately six hours.
+* **Audience backfill support**: The first export to Audience Manager or other CX Enterprise solutions includes a historical population of the audiences. Users of the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) who are configuring this destination should expect a backfill difference of approximately six hours.
 * Audiences originating from [Audience Composition](../../../segmentation/ui/audience-composition.md) are not supported directly. To activate composite audiences to this destination you must create an audience definition through [Audience Builder](../../../segmentation/ui/audience-builder.md) based on your composite audience, and activate the newly created audience.
 
 ### Latency when activating audiences {#audience-activation-latency}
 
-There is a four-hour latency between the time that audiences are first activated in [!DNL Real-Time CDP] and the time they are ready to be used in Audience Manager and other Experience Cloud solutions.
+There is a four-hour latency between the time that audiences are first activated in [!DNL Real-Time CDP] and the time they are ready to be used in Audience Manager and other CX Enterprise solutions.
 
 It can take up to 24 hours for audiences to be fully available in Audience Manager for all use-cases. It can take up to 48 hours for audiences from Experience Cloud Audiences to appear in Audience Manager reports.
 
@@ -148,7 +135,7 @@ The profiles that are exported to the [!UICONTROL Experience Cloud Audiences] de
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|ECID|Experience Cloud ID| A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
+|ECID|ECID| A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
 |GAID|Google Advertising ID| Profiles ingested into [!DNL Real-Time CDP] with a primary identity of Google Advertising ID (GAID) can be exported to this destination.|
 |IDFA|Apple ID for Advertisers| Profiles ingested into [!DNL Real-Time CDP] with a primary identity of Apple ID for Advertisers (IDFA) can be exported to this destination.|
 |email_lc_sha256| Email addresses hashed with the SHA256 algorithm|Profiles ingested into [!DNL Real-Time CDP] with a primary identity of hashed email address can be exported to this destination.|
@@ -224,7 +211,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ## Validate data export {#exported-data}
 
-To validate successful data export, you can check that your audiences have successfully made it through to your desired Experience Cloud solution.
+To validate successful data export, you can check that your audiences have successfully made it through to your desired CX Enterprise solution.
 
 ### Validate data in Audience Manager {#validate-audience-manager}
 

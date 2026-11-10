@@ -1,9 +1,32 @@
 ---
-title: edgeConfigOverrides
+title: edgeConfigOverrides (Web SDK, configure)
 description: Configure datastream overrides for your implementation.
 exl-id: 9c5dde06-ae73-4cad-b8b4-4cb5cd00988c
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: Datastreams
+subfeature_v2:
+  - id: 1a2b3c4d-0019-4019-8019-000000000019
+    internal-label: Datastreams services
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
-# `edgeConfigOverrides` (`configure` command)
+# `edgeConfigOverrides` (Web SDK, `configure`)
+
+>[!BEGINSHADEBOX]
+
+*This page describes `edgeConfigOverrides` in the Web SDK `configure` command. For the Server SDK, see [`edgeConfigOverrides`](/help/collection/server-js/methods/configure/edgeconfigoverrides.md).*
+
+>[!ENDSHADEBOX]
 
 The `edgeConfigOverrides` object allows you to override configuration settings for commands run on the current page. This object is useful when you have different websites or subdomains for different countries, or if you have multiple Experience Platform sandboxes to store data specific to different business units. If you want to override configuration settings for only a single command on the page, consider using the [`edgeConfigOverrides` object in the `sendEvent` command](../sendevent/edgeconfigoverrides.md).
 

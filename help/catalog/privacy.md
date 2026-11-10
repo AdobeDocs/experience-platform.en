@@ -4,13 +4,10 @@ solution: Experience Platform
 title: Privacy Request Processing in the Data Lake
 description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by legal and organizational privacy regulations. This document covers essential concepts related to processing privacy requests for customer data stored in the data lake.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-TQID: https://experienceleague.adobe.com/R5hflyJlXOOucH2ieJ8nM13ygPK6-JEW8wn6g4vptyk
+TQID: 'https://experienceleague.adobe.com/R5hflyJlXOOucH2ieJ8nM13ygPK6-JEW8wn6g4vptyk'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -32,13 +29,13 @@ This document covers essential concepts related to processing privacy requests f
 >
 >This guide only covers how to make privacy requests for the data lake in Experience Platform. If you also plan to make privacy requests for the Real-Time Customer Profile data store, refer to the guide on [privacy request processing for Profile](../profile/privacy.md) in addition to this tutorial.
 >
->For steps on how to make privacy requests for other Adobe Experience Cloud applications, refer to the [Privacy Service documentation](../privacy-service/experience-cloud-apps.md).
+>For steps on how to make privacy requests for other Adobe CX Enterprise applications, refer to the [Privacy Service documentation](../privacy-service/experience-cloud-apps.md).
 
 ## Getting started
 
 It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
-* [[!DNL Privacy Service]](../privacy-service/home.md): Manages customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
+* [[!DNL Privacy Service]](../privacy-service/home.md): Manages customer requests for accessing, opting out of sale, or deleting their personal data across Adobe CX Enterprise applications.
 * [[!DNL Catalog Service]](home.md): The system of record for data location and lineage within [!DNL Experience Platform]. Provides an API that can be used to update dataset metadata.
 * [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 * [[!DNL Identity Service]](../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.

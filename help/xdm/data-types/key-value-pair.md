@@ -2,13 +2,19 @@
 title: Key Value Pair Data Type
 description: Learn about the Key Value Pair Experience Data Model (XDM) data type.
 exl-id: 2a1a7537-9019-4cf2-bfa1-9c760f9656dd
-TQID: https://experienceleague.adobe.com/D1O4T-bH4evkFSMsMByQ0LunEIhkN8Ho2hfNeFM--Bs
+TQID: 'https://experienceleague.adobe.com/D1O4T-bH4evkFSMsMByQ0LunEIhkN8Ho2hfNeFM--Bs'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # [!UICONTROL Key Value Pair] data type
 

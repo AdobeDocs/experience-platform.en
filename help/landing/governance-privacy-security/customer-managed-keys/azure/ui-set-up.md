@@ -4,18 +4,14 @@ description: Learn how to set up your CMK app with your Azure tenant and send yo
 role: Developer
 feature: Privacy
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-TQID: https://experienceleague.adobe.com/gzpPs7ty7fp45AkutX59-4zEUq55T1zYw2-hc7-5ZQo
+TQID: 'https://experienceleague.adobe.com/gzpPs7ty7fp45AkutX59-4zEUq55T1zYw2-hc7-5ZQo'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
-subfeature_v2:
-  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-    internal-label: Access control
   - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
     internal-label: Permissions
+subfeature_v2:
   - id: d175cb4c-5781-454e-a826-bf6dff786265
     internal-label: Roles
 role_v2:
@@ -70,7 +66,7 @@ Select the copy icon (![The copy icon.](../../../../images/icons/copy.png)) by t
 
 ![The [!UICONTROL Customer Managed Keys configuration] view with the Application authentication url section highlighted.](../../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 
-Copy and paste the [!UICONTROL Application authentication url] into a browser to open an authentication dialog. Select **[!DNL Accept]** to add the CMK app service principal to your [!DNL Azure] tenant. Confirming the authentication redirects you to the Experience Cloud landing page.
+Copy and paste the [!UICONTROL Application authentication url] into a browser to open an authentication dialog. Select **[!DNL Accept]** to add the CMK app service principal to your [!DNL Azure] tenant. Confirming the authentication redirects you to the CX Enterprise landing page.
 
 ![A Microsoft permission request dialog with [!UICONTROL Accept] highlighted.](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 

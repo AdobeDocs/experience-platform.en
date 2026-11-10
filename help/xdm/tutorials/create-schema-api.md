@@ -5,13 +5,10 @@ title: Create a Schema Using the Schema Registry API
 type: Tutorial
 description: This tutorial uses the Schema Registry API to walk you through the steps to compose a schema using a standard class.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-TQID: https://experienceleague.adobe.com/gXtWRb4BLfmtveJKf1zH6nnh5pNyjxlbM876kmdjliY
+TQID: 'https://experienceleague.adobe.com/gXtWRb4BLfmtveJKf1zH6nnh5pNyjxlbM876kmdjliY'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -1123,7 +1120,7 @@ If you perform a GET request to lookup the schema now, the `loyaltyTier` propert
 
 Schemas are used for ingesting data into [!DNL Experience Platform]. This data is ultimately used across multiple services to create a single, unified view of an individual. To help with this process, key fields can be marked as "Identity" and, upon data ingestion, the data in those fields is inserted into the "Identity Graph" for that individual. The graph data can then be accessed by [[!DNL Real-Time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched together view of each individual customer.
 
-Fields that are commonly marked as "Identity" include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID, or other unique ID fields. Consider any unique identifiers specific to your organization, as they may be good Identity fields as well.
+Fields that are commonly marked as "Identity" include: email address, phone number, [[!DNL ECID]](/help/identity-service/features/ecid.md), CRM ID, or other unique ID fields. Consider any unique identifiers specific to your organization, as they may be good Identity fields as well.
 
 Identity descriptors signal that the `sourceProperty` of the `sourceSchema` is a unique identifier that should be considered an identity. 
 

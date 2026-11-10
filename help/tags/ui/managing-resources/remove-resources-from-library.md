@@ -2,6 +2,16 @@
 title: Remove Resources from a Library
 description: Learn how to remove resources from a tag library.
 exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+subfeature_v2:
+  - id: 1a2b3c4d-0004-4004-8004-000000000004
+    internal-label: Data collection tags publishing flow
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Remove resources from a library
 

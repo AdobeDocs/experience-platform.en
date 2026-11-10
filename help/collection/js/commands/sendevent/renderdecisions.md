@@ -1,9 +1,21 @@
 ---
-title: renderDecisions
+title: renderDecisions (Web SDK)
 description: Render personalized content that is eligible for automatic rendering.
 exl-id: 6f7a3531-c2b6-4e90-a7ad-9f0fe4dc39e9
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
-# `renderDecisions`
+# `renderDecisions` (Web SDK)
 
 The `renderDecisions` property allows you to force the Web SDK to render any personalized content that is eligible for automatic rendering.
 

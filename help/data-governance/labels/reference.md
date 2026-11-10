@@ -4,17 +4,10 @@ solution: Experience Platform
 title: Data Usage Labels Glossary
 description: This document outlines all data usage labels currently supported by Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-TQID: https://experienceleague.adobe.com/epTsSc9-CmGVAlYcvZpmhkoYjMktsueh5Q4tBVfNysM
+TQID: 'https://experienceleague.adobe.com/epTsSc9-CmGVAlYcvZpmhkoYjMktsueh5Q4tBVfNysM'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
@@ -54,9 +47,12 @@ Data usage labels allow you to categorize datasets and fields according to [gove
 
 This document outlines the core data usage labels currently provided by Experience Platform.
 
+<!-- 
+January safe OLAC for datasets note PLAT-294991
 >[!NOTE]
 >
 >These same labels are also used as `core/` labels when restricting access to an entire dataset using `accessLabels`. See [Update array fields](../../catalog/api/update-object.md#array-fields) for more information on setting `accessLabels`.
+-->
 
 ## Contract labels {#contract}
 
@@ -64,7 +60,7 @@ Contract "C" labels are used to categorize data that has contractual obligations
 
 | Label | Definition |
 | --- | --- |
-| [C1](#c1) | Data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. |
+| [C1](#c1) | Data can only be exported from Adobe CX Enterprise in an aggregated form without including individual or device identifiers. |
 | [C2](#c2) | Data cannot be exported to a third-party. |
 | [C3](#c3) | Data cannot be combined or otherwise used with directly identifiable information. |
 | [C4](#c4) | Data cannot be used for targeting any ads or content, either on-site or cross-site. |
@@ -121,7 +117,7 @@ The following sections provide detailed information related to the implementatio
 
 #### C1 {#c1}
 
-Some data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
+Some data can only be exported from Adobe CX Enterprise in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
 
 #### C2 {#c2}
 

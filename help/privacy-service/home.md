@@ -2,9 +2,9 @@
 keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA;pdpa;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
 title: Privacy Service Overview
-description: Discover how Privacy Service can facilitate automated compliance with legal privacy regulations in your Experience Cloud data operations.
+description: Discover how Privacy Service can facilitate automated compliance with legal privacy regulations in your CX Enterprise data operations.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-TQID: https://experienceleague.adobe.com/Y-VDhBnsrSr-sFRAD8BHquyIt2BFAwKa6tjCoYHLkhI
+TQID: 'https://experienceleague.adobe.com/Y-VDhBnsrSr-sFRAD8BHquyIt2BFAwKa6tjCoYHLkhI'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -13,6 +13,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
     internal-label: Customer experience
@@ -25,7 +29,7 @@ To deliver better customer experiences, you must collect and store your customer
 
 Adobe Experience Platform Privacy Service was developed in response to a fundamental shift in how businesses are required to manage the personal data of their customers. The central purpose of Privacy Service is to automate compliance with data privacy regulations which, when violated, can result in major fines and disrupt data operations for your business.
 
-Privacy Service provides a RESTful API and user interface to help you manage customer data requests. You can use Privacy Service to submit requests to access and delete personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+Privacy Service provides a RESTful API and user interface to help you manage customer data requests. You can use Privacy Service to submit requests to access and delete personal customer data from Adobe CX Enterprise applications, facilitating automated compliance with legal and organizational privacy regulations.
 
 >[!IMPORTANT]
 >
@@ -62,13 +66,13 @@ In addition to legal regulations, any organizational or industry standards appli
 
 ### Label data for privacy requests {#label}
 
-Depending on the [!DNL Experience Cloud] applications that you are using, you must label the specific data fields that should be accessed or deleted in response to privacy requests. The process for labeling data varies between applications. To learn how to label data for each supported Adobe application, see the document on [Experience Cloud applications](./experience-cloud-apps.md).
+Depending on the [!DNL CX Enterprise] applications that you are using, you must label the specific data fields that should be accessed or deleted in response to privacy requests. The process for labeling data varies between applications. To learn how to label data for each supported Adobe application, see the document on [CX Enterprise applications](./experience-cloud-apps.md).
 
 ### Determine the types of identity data to send to Privacy Service {#identity}
 
-In order for Privacy Service to process a privacy request from a customer, at least one unique identity value for that customer must be provided in the request itself. A unique identity value is any piece of information that can be used to identify an individual person and their stored personal data within your [!DNL Experience Cloud] data stores. Privacy Service uses this identity information to locate and process the customer's personal data according to the nature of the request (access, delete, or opt-out).
+In order for Privacy Service to process a privacy request from a customer, at least one unique identity value for that customer must be provided in the request itself. A unique identity value is any piece of information that can be used to identify an individual person and their stored personal data within your [!DNL CX Enterprise] data stores. Privacy Service uses this identity information to locate and process the customer's personal data according to the nature of the request (access, delete, or opt-out).
 
-Depending on the [!DNL Experience Cloud] applications your CRM system uses, the type and number of identity values you must provide for each customer will vary. Some applications use their own internal customer ID values (such as Adobe Target IDs), while other solutions rely on global identifiers from the Adobe [!DNL Visitor ID Service] (ECID) which track customer activity across all [!DNL Experience Cloud] applications. In addition, generic personal information like an email address or phone number can also serve as valid identity data.
+Depending on the [!DNL CX Enterprise] applications your CRM system uses, the type and number of identity values you must provide for each customer will vary. Some applications use their own internal customer ID values (such as Adobe Target IDs), while other solutions rely on global identifiers from the Adobe [!DNL Visitor ID Service] which track customer activity across all [!DNL CX Enterprise] applications. In addition, generic personal information like an email address or phone number can also serve as valid identity data.
 
 Read the document on [identity data for privacy requests](./identity-data.md) for more detailed information on the types of identity information that are accepted for Privacy Service. The document also provides guidance on how to apply Adobe technologies to effectively retrieve the appropriate identity information from your customers as they interact with your website, and send that data to Privacy Service in API requests.
 
@@ -86,15 +90,15 @@ There is **no download URL** in the response for a **delete request**, as no cus
 
 >[!IMPORTANT]
 >
->The sections below provide links to documentation that cover how to make generic privacy requests in the API or UI. However, depending on the [!DNL Experience Cloud] applications you are using, the fields you must send in the request payload may be different from the examples shown in these guides.
+>The sections below provide links to documentation that cover how to make generic privacy requests in the API or UI. However, depending on the [!DNL CX Enterprise] applications you are using, the fields you must send in the request payload may be different from the examples shown in these guides.
 >
->As you follow along with the API or UI guides, refer to the document on [Privacy Service and Experience Cloud applications](./experience-cloud-apps.md) for further documentation on how to format privacy requests for your particular [!DNL Experience Cloud] applications.
+>As you follow along with the API or UI guides, refer to the document on [Privacy Service and CX Enterprise applications](./experience-cloud-apps.md) for further documentation on how to format privacy requests for your particular [!DNL CX Enterprise] applications.
 >
->It is also important to note that privacy requests are processed asynchronously across Experience Cloud applications. Once a request is received by Privacy Service, each application can take anywhere from minutes to weeks to complete the request. The amount of time it takes to complete each request is specific to the application you are working with, and the amount of data that needs to be processed.
+>It is also important to note that privacy requests are processed asynchronously across CX Enterprise applications. Once a request is received by Privacy Service, each application can take anywhere from minutes to weeks to complete the request. The amount of time it takes to complete each request is specific to the application you are working with, and the amount of data that needs to be processed.
 
 #### Using the API {#api}
 
-To programmatically approach privacy regulation compliance for your [!DNL Experience Cloud] applications, you can use RESTful API calls to [[!DNL Privacy Service API]](https://developer.adobe.com/experience-platform-apis/references/privacy-service/) endpoints to create and manage privacy jobs. For detailed steps on how to use the API, see the [Privacy Service API guide](api/overview.md).
+To programmatically approach privacy regulation compliance for your [!DNL CX Enterprise] applications, you can use RESTful API calls to [[!DNL Privacy Service API]](https://developer.adobe.com/experience-platform-apis/references/privacy-service/) endpoints to create and manage privacy jobs. For detailed steps on how to use the API, see the [Privacy Service API guide](api/overview.md).
 
 #### Using the UI {#ui}
 

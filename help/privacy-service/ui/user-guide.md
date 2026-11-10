@@ -2,9 +2,9 @@
 keywords: Experience Platform;home;popular topics;export;Export
 solution: Experience Platform
 title: Manage Privacy Jobs in the Privacy Service UI
-description: Learn how to use the Privacy Service user interface to coordinate and monitor privacy requests across various Experience Cloud applications.
+description: Learn how to use the Privacy Service user interface to coordinate and monitor privacy requests across various CX Enterprise applications.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-TQID: https://experienceleague.adobe.com/qy-QKSjRlKcgvQ-Sjkp0wh-JE7XFS9nYq1gTIkL1Q1w
+TQID: 'https://experienceleague.adobe.com/qy-QKSjRlKcgvQ-Sjkp0wh-JE7XFS9nYq1gTIkL1Q1w'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -13,6 +13,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
@@ -143,7 +147,7 @@ To view the details of a particular job request, select the request's job ID fro
 
 ![GDPR UI Job Details](../images/user-guide/job-details.png)
 
-This dialog contains status information about each [!DNL Experience Cloud] solution and its current state in relation to the overall job. As every privacy job is asynchronous, the page displays the latest communication date and time (GMT) from each solution, as some require more time than others to process the request.
+This dialog contains status information about each [!DNL CX Enterprise] solution and its current state in relation to the overall job. As every privacy job is asynchronous, the page displays the latest communication date and time (GMT) from each solution, as some require more time than others to process the request.
 
 If a solution has provided any additional data, it is viewable in this dialog. You can view this data by selecting individual product rows.
 

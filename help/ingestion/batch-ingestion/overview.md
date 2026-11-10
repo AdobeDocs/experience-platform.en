@@ -4,13 +4,10 @@ solution: Experience Platform
 title: Batch Ingestion API Overview
 description: The Adobe Experience Platform Batch Ingestion API allows you to ingest data into Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a Parquet file), or data that conforms to a known schema in the Experience Data Model (XDM) registry.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-TQID: https://experienceleague.adobe.com/tEpXMJkU-0HQD3FyI02pbPBSO9By9dCiwj7BmjvCzWY
+TQID: 'https://experienceleague.adobe.com/tEpXMJkU-0HQD3FyI02pbPBSO9By9dCiwj7BmjvCzWY'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -31,6 +28,8 @@ The API endpoints used in this guide is part of the [Batch Ingestion API](https:
 
 ### [!DNL Data Ingestion] prerequisites
 
+Before uploading batch data, ensure that you meet the following prerequisites:
+
 - Data to upload must be either in Parquet or JSON formats.
 - A dataset created in the [[!DNL Catalog services]](../../catalog/home.md).
 - Contents of the Parquet file must match a subset of the schema of the dataset being uploaded into.
@@ -38,17 +37,23 @@ The API endpoints used in this guide is part of the [Batch Ingestion API](https:
 
 ### Batch ingestion best practices
 
-- The recommended batch size is between 256 MB and 100 GB.
-- Each batch should contain at most 1500 files.
+For efficient batch ingestion, follow these recommendations for batch size and file count:
+
+- Keep the size of each batch below 100 GB.
+- Keep each batch to fewer than 10000 files.
 
 ### Batch ingestion constraints
 
-Batch data ingestion has some constraints:
+The following limits apply to batch ingestion through the API and batch sources:
 
-- Maximum number of files per batch: 1500
-- Maximum batch size: 100 GB
+- Maximum number of files per batch: 25000
+- Maximum batch size: 1 TB
 - Maximum number of properties or fields per row: 10000
 - Maximum number of batches on data lake per minute, per user: 2000
+- Maximum ingestion throughput via the batch ingestion API: 20 GB per hour
+- Maximum ingestion throughput via batch sources: 200 GB per hour
+
+For performance recommendations and ingestion limits, see the [data ingestion guardrails](../guardrails.md).
 
 >[!NOTE]
 >

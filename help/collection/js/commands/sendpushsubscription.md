@@ -1,26 +1,29 @@
 ---
-title: sendPushSubscription
+title: sendPushSubscription (Web SDK)
 description: Register push notification subscriptions with Adobe Experience Platform.
 exl-id: 7cb13834-46f4-481c-bd9d-600083eb6cfb
-TQID: https://experienceleague.adobe.com/3acin90o8JdMA6LS-s7tHnf2-qcRn7XDO1aw-Zx3QyU
+TQID: 'https://experienceleague.adobe.com/3acin90o8JdMA6LS-s7tHnf2-qcRn7XDO1aw-Zx3QyU'
 product_v2:
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
+  - id: cb954087-f4fc-4456-afb9-e939cabcdc79
+    internal-label: Journey Optimizer
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+  - id: 66e1fd99-672d-5d64-aa58-eca107f0fbae
+    internal-label: Push
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
+  - id: a492a671-d5f6-46ee-b832-2efbca14ddd8
+    internal-label: Activation and channels
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
-# `sendPushSubscription` {#send-push-subscription}
+# `sendPushSubscription` (Web SDK) {#send-push-subscription}
 
 The `sendPushSubscription` command registers push notification subscriptions with Adobe Experience Platform. This command handles the retrieval of push subscription details from the browser and sends them to your configured datastream. It is available in Web SDK versions 2.29.0 or later.
 

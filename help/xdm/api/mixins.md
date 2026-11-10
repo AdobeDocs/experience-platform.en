@@ -4,15 +4,10 @@ solution: Experience Platform
 title: Mixins API Endpoint
 description: The /mixins endpoint in the Schema Registry API allows you to programmatically manage XDM mixins within your experience application.
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
-TQID: https://experienceleague.adobe.com/qghnMoW6k-ET8T8rSIFM0yszkgh-WYeWWfPe9nWpp68
+TQID: 'https://experienceleague.adobe.com/qghnMoW6k-ET8T8rSIFM0yszkgh-WYeWWfPe9nWpp68'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

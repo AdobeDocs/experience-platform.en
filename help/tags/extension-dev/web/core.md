@@ -2,6 +2,16 @@
 title: Core Library Modules for Web Extensions
 description: Learn about the core library modules you can use within your web extensions.
 exl-id: 7fb63208-aed0-4add-b6da-8e4aea063d0a
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+subfeature_v2:
+  - id: 1a2b3c4d-0003-4003-8003-000000000003
+    internal-label: Data collection tags extensions
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Core library modules for web extensions
 

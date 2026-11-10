@@ -5,7 +5,13 @@ user-guide-title: Intelligent Services Help
 breadcrumb-title: Intelligent Services Guide
 user-guide-description: Use intelligent AI services to generate scores, discover insights, and create segments from your marketing events data.
 role: User
-nudge: true
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+autotag-review: '2026-11-05T18:36:52.594Z'
 ---
 
 # Adobe Intelligent Services {#intelligent-services}

@@ -2,27 +2,25 @@
 title: Adobe Experience Platform Assurance Overview
 description: Adobe Experience Platform Assurance lets you inspect, proof, simulate, and validate how you collect data or serve experiences within your mobile applications.
 exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
-TQID: https://experienceleague.adobe.com/bxwsI4VYuDMsRRG8jEYcZyB-nvl5qYxVm0CbHgBis3o
+TQID: 'https://experienceleague.adobe.com/bxwsI4VYuDMsRRG8jEYcZyB-nvl5qYxVm0CbHgBis3o'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-    internal-label: Troubleshooting
-  - id: e0c8953a-a203-4291-bef3-3560160d3041
-    internal-label: Get started
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
     internal-label: Metadata
@@ -37,13 +35,13 @@ topic_v2:
 ---
 # Adobe Experience Platform Assurance
 
-Adobe Experience Platform Assurance is a product from [Adobe Experience Cloud](https://www.adobe.com/experience-cloud.html) to help you inspect, proof, simulate, and validate how you collect data or serve experiences in your mobile app.
+Adobe Experience Platform Assurance is a product from [Adobe CX Enterprise](https://www.adobe.com/experience-cloud.html) to help you inspect, proof, simulate, and validate how you collect data or serve experiences in your mobile app.
 
 >[!IMPORTANT]
 >
 > Project Griffon is now known as **Assurance**!
 >
-> Project Griffon is now generally available to **all** Adobe Experience Cloud customers as Assurance. To learn more about this transition, please read the [user access guide](./user-access.md).
+> Project Griffon is now generally available to **all** Adobe CX Enterprise customers as Assurance. To learn more about this transition, please read the [user access guide](./user-access.md).
 
 >[!INFO]
 >
@@ -53,7 +51,7 @@ Adobe Experience Platform Assurance is a product from [Adobe Experience Cloud](h
 
 ## General Availability
 
-Starting on October 15th, 2022, Assurance is generally available to all Adobe Experience Cloud.
+Starting on October 15th, 2022, Assurance is generally available to all Adobe CX Enterprise.
 
 ### What's changing?
 
@@ -79,9 +77,9 @@ After connecting to Assurance, you can inspect live-streamed app events and acti
 
 ![](./images/index/real-time-insepction.png)
 
-### Integration with Adobe Experience Cloud
+### Integration with Adobe CX Enterprise {#integration-with-adobe-experience-cloud}
 
-Client-side data and experiences are given context by how users setup reporting rules, activities, and campaigns on our marketer-focused user interfaces. To help you connect the dots between the two, we're integrating with Adobe Experience Cloud solutions such as Adobe Experience Platform, Adobe Analytics, Adobe Target, Places Service, and more.
+Client-side data and experiences are given context by how users setup reporting rules, activities, and campaigns on our marketer-focused user interfaces. To help you connect the dots between the two, we're integrating with Adobe CX Enterprise solutions such as Adobe Experience Platform, Adobe Analytics, Adobe Target, Places Service, and more.
 
 ![](./images/index/integration.png)
 
@@ -108,7 +106,7 @@ The Location Services view is an on-device view that shows the user location ent
 Assurance has the following security measures in place:
 
 * Both Assurance and the Assurance Web UI have a secure, PIN-based handshake for a connection. The user has to explicitly create a handshake, which prevents "accidental" Assurance connections to be created by an end-user.
-* Only connections between Assurance and the Assurance web UI belonging to the same Adobe Experience Cloud Organization ID are supported.
+* Only connections between Assurance and the Assurance web UI belonging to the same organization ID are supported.
 * Adobe Experience Platform Mobile SDKs events are transported over HTTPS.
 * Assurance and Adobe Experience Platform Mobile SDKs use TLS 1.2
 * Assurance sessions are deleted after 30 days.

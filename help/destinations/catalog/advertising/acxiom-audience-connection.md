@@ -2,18 +2,11 @@
 title: Acxiom Audience Connection
 description: Use the [!DNL Acxiom Audience Connection] destination to enhance audiences with [!DNL Acxiom]'s [!DNL Real ID] technology and activate them across ad platforms.
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-TQID: https://experienceleague.adobe.com/DbA9ApNmY5Fi0C9JcQVV9MRxhnPOzxkDS4m6mHuKHGc
+TQID: 'https://experienceleague.adobe.com/DbA9ApNmY5Fi0C9JcQVV9MRxhnPOzxkDS4m6mHuKHGc'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-subfeature_v2:
-  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-    internal-label: Access control
   - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
     internal-label: Permissions
 role_v2:
@@ -21,6 +14,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
     internal-label: Customer experience
@@ -56,7 +53,7 @@ For example, the Marketing Operations department at a global financial services 
 Before configuring the [!DNL Acxiom Audience Connection] destination, complete the following prerequisites.
 
 * **Confirm terms of use:** Read and sign [!DNL Acxiom]'s Terms of Use Agreement. You receive the link to the agreement once your executed sales order is complete. Until you sign the agreement, the [!DNL Acxiom Audience Connection] destination card does not appear in the [!DNL Experience Platform] destination catalog. After you accept and sign the agreement, [!DNL Adobe] completes your setup and the [!DNL Acxiom Audience Connection] destination card becomes visible.
-* **Know your [!DNL Adobe] organization ID:** Your [!DNL Adobe] organization ID is needed to complete your Terms of Use Agreement. See [!DNL Adobe]'s *Organizations in Experience Cloud* topic for details on how to [view your organization ID](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
+* **Know your [!DNL Adobe] organization ID:** Your [!DNL Adobe] organization ID is needed to complete your Terms of Use Agreement. See [!DNL Adobe]'s *Organizations in CX Enterprise* topic for details on how to [view your organization ID](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
 
 ## Supported audiences {#supported-audiences}
 

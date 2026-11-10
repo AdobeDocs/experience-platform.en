@@ -1,8 +1,19 @@
 ---
 title: Personalization use cases overview
 description: Learn how to implement personalization use cases using the Adobe Experience Platform Web SDK, including patterns for rendering content and tracking display.
-keywords: personalization;sendEvent;renderDecisions;applyPropositions;decisionScopes;display events;flicker;
 exl-id: 6beccbfd-fddb-4e19-8a56-caba276e1643
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Personalization use cases overview
 
@@ -21,6 +32,10 @@ Choose the pattern that matches the proposition items you receive:
 >[!TIP]
 >
 >These patterns can be combined. For example, you can enable automatic DOM action rendering while also manually rendering content from specific decision scopes.
+
+## Request personalization on your server
+
+If your server builds the page, it can request propositions before the page reaches the browser, and the Web SDK can then render them. See [Hybrid personalization with the Server SDK](hybrid-server-personalization.md).
 
 ## Common companion topics
 

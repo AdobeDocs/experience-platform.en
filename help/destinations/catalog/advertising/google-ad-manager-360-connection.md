@@ -2,27 +2,19 @@
 title: Google Ad Manager 360 connection
 description: Google Ad Manager 360 is an ad serving platform from Google that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-TQID: https://experienceleague.adobe.com/6pREBXUQNz-oRZCyyPcZq4zgAjqErxYaZo98mOL6F5k
+TQID: 'https://experienceleague.adobe.com/6pREBXUQNz-oRZCyyPcZq4zgAjqErxYaZo98mOL6F5k'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
     internal-label: Metadata
@@ -55,6 +47,13 @@ For more details on how publisher provided identifiers work in Google Ad Manager
 
 The [!DNL Google Ad Manager 360] destination exports [!DNL CSV] files to your [!DNL Google Cloud Storage] bucket. Once you've exported the [!DNL CSV] files, you must import them into your [!DNL Google Ad Manager 360] account.
 
+## Supported applications {#supported-applications}
+
+Use the [!DNL Google Ad Manager 360] destination in the following applications:
+
+* [Adobe Real-Time CDP](/help/rtcdp/home.md)
+* [Adobe Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home){target="_blank"}
+
 ## Destination specifics {#specifics}
 
 Note the following details that are specific to [!DNL Google Ad Manager 360] destinations.
@@ -74,7 +73,11 @@ Note the following details that are specific to [!DNL Google Ad Manager 360] des
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which types of audiences you can export to this destination.
+Audience support depends on the application from which you activate audiences to [!DNL Google Ad Manager 360].
+
+### Real-Time CDP {#supported-audiences-rtcdp}
+
+You can export the following audiences from [!DNL Real-Time CDP].
 
 | Audience origin | Supported | Description |
 |---------|----------|----------|
@@ -93,6 +96,24 @@ Supported audiences by audience data type:
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
 | [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
+### Real-Time CDP Collaboration {#supported-audiences-collaboration}
+
+You can activate audiences with match keys from [!DNL Real-Time CDP Collaboration] to [!DNL Google Ad Manager 360].
+
+| Audience origin | Supported | Description |
+|---------|----------|----------|
+| [!DNL Real-Time CDP Collaboration] | Yes | Audiences sourced in [!DNL Real-Time CDP Collaboration]. |
+
+{style="table-layout:auto"}
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| Collaboration audiences | Yes | Audiences made up of [match keys](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections#match-keys){target="_blank"} in [!DNL Real-Time CDP Collaboration]. | Paid media activation |
 
 {style="table-layout:auto"}
 

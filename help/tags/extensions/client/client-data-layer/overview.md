@@ -2,42 +2,26 @@
 title: Adobe Client Data Layer Extension
 description: Learn about the Adobe Client Data Layer tag extension in Adobe Experience Platform.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-TQID: https://experienceleague.adobe.com/Cz-9amk86ZTY-OE-9TDzjuFFiQ4s6snU3y-mDfeAX-s
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-    internal-label: Advertising
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
+TQID: 'https://experienceleague.adobe.com/Cz-9amk86ZTY-OE-9TDzjuFFiQ4s6snU3y-mDfeAX-s'
 feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-    internal-label: Data collection UI
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+  - id: 1a2b3c4d-0003-4003-8003-000000000003
+    internal-label: Data collection tags extensions
+  - id: 1a2b3c4d-0006-4006-8006-000000000006
+    internal-label: Data collection tags rules
   - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-    internal-label: Data elements
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+    internal-label: Data collection tags data elements
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-    internal-label: Implementation
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-    internal-label: Customer experience
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+    internal-label: Behavioral data
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Adobe Client Data Layer extension
 

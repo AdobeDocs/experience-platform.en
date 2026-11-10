@@ -5,6 +5,16 @@ breadcrumb-title: Source Connectors Guide
 user-guide-description: Ingest data from a variety of sources. Learn how to structure, label, and enhance already ingested data.
 feature: Sources
 role: Developer
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+    internal-label: Sources
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+autotag-review: '2026-11-05T19:00:07.740Z'
 ---
 
 # Sources {#sources}
@@ -36,6 +46,7 @@ role: Developer
     - [Meta Ads connector](connectors/advertising/meta-ads.md)
     - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
     - [Snapchat Ads](connectors/advertising/snapchat-ads.md)
+    - {hide-from-toc} [TikTok Ads](connectors/advertising/tiktok-ads.md)
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
     - [Pendo](connectors/analytics/pendo-webhook.md)
@@ -259,6 +270,7 @@ role: Developer
       - [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
       - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
       - [Snapchat Ads](tutorials/ui/create/advertising/snapchat-ads.md)
+      - {hide-from-toc} [TikTok Ads](tutorials/ui/create/advertising/tiktok-ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)

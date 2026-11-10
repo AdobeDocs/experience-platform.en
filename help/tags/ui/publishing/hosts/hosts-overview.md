@@ -2,6 +2,16 @@
 title: Hosts Overview
 description: Learn about the different hosting options available in Adobe Experience Platform.
 exl-id: 7968fc64-2022-4503-a45a-82942c6dd9d3
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+subfeature_v2:
+  - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
+    internal-label: Data collection tags hosts
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Hosts overview
 

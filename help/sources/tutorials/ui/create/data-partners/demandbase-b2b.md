@@ -5,9 +5,6 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-subfeature_v2:
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
     internal-label: Sources
 role_v2:

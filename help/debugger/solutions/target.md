@@ -2,29 +2,25 @@
 title: Test an Adobe Target Implementation with Adobe Experience Platform Debugger
 description: Learn how to use Adobe Experience Platform Debugger to test and debug a website that is enabled with Adobe Target.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-TQID: https://experienceleague.adobe.com/0rONlTRlBMQqPKeAhd8-mq62xqVwgH4jFjr5dcirr3o
+TQID: 'https://experienceleague.adobe.com/0rONlTRlBMQqPKeAhd8-mq62xqVwgH4jFjr5dcirr3o'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-    internal-label: Troubleshooting
   - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
-    internal-label: Hosts
+    internal-label: Data collection tags hosts
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
     internal-label: Metadata
@@ -103,8 +99,8 @@ The following values are captured:
 | [!DNL context] | An object that contains contextual information about the browser used to make the request, including screen dimensions and client platform. |
 | [!DNL prefetch] | The parameters that are used in during `prefetch` processing. |
 | [!DNL execute] | The parameters that are used during `execute` processing. |
-| [!DNL Experience Cloud Visitor ID] | If one is detected, provides information on the [Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) that is assigned to the current site visitor. |
-| [!DNL experienceCloud] | Holds the Experience Cloud IDs for this specific user session: an A4T [supplemental data ID](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?#section_2C1F745A2B7D41FE9E30915539226E3A), and a [visitor ID (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html). |
+| [!DNL Experience Cloud Visitor ID] | If one is detected, provides information on the [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) that is assigned to the current site visitor. |
+| [!DNL experienceCloud] | Holds the ECIDs for this specific user session: an A4T [supplemental data ID](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?#section_2C1F745A2B7D41FE9E30915539226E3A), and a [visitor ID (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html). |
 | [!DNL id] | The [Target ID](https://developers.adobetarget.com/api/delivery-api/#section/Identifying-Visitors/Target-ID) for the visitor. |
 | [!DNL Mbox Host] | The [host](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) that the Target request was made to. |
 | [!DNL Mbox PC] | A string that encapsulates the [`mbox`](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/) session ID and the [Adobe Target Edge](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#concept_0AE2ED8E9DE64288A8B30FCBF1040934) location hint. This value is used by at.js to ensure that the session and Edge location remain sticky.  |

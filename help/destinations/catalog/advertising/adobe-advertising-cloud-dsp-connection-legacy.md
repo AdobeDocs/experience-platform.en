@@ -2,6 +2,18 @@
 title: Legacy Adobe Advertising DSP connection
 description: Adobe Advertising DSP is an integrated destination for Adobe Real-Time Customer Data Platform, allowing you to share authenticated first-party audiences with approved advertisers and users for campaign activation.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 # Legacy [!DNL Adobe Advertising] DSP connection
 
@@ -32,8 +44,8 @@ A media agency with a DSP account is running a retargeting campaign on behalf of
 ## Prerequisites {#prerequisites}
 
 * DSP account-level and campaign-level settings to enable audience sharing with [!DNL LiveRamp RampID], which will translate customer data to [!DNL RampIDs] to create targetable segments. Your DSP account team will perform this configuration. [!DNL RampID] is available via a partnership between DSP and [!DNL LiveRamp], and you don't need your own [!DNL LiveRamp] membership to use it.
-* The Experience Cloud organization ID for the Experience Platform account. You can find your ID on your [!DNL Real-Time CDP] user profile page.
-* A [[!DNL Real-Time CDP] source in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) to receive audiences for campaign activation. Your DSP account team will create the source using your Experience Cloud organization ID.
+* The organization ID for the Experience Platform account. You can find your ID on your [!DNL Real-Time CDP] user profile page.
+* A [[!DNL Real-Time CDP] source in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) to receive audiences for campaign activation. Your DSP account team will create the source using your organization ID.
 * The source key for the DSP account or advertiser, which is generated when a [[!DNL Real-Time CDP] source is created in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Your DSP account team will share this key with you. You'll use it within Experience Platform to create a destination connection to the Advertising DSP destination, as [explained below](#authenticate).
 * Customer data consisting of emails or hashed emails.
 

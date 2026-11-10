@@ -4,7 +4,13 @@ user-guide-title: Catalog and Datasets Guide
 user-guide-description: Explore data lineage, metadata, file descriptions, directories, and datasets within the Data Lake and learn more about the Catalog Service system.
 feature: Catalog
 role: Developer
-nudge: true
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+autotag-review: '2026-11-05T19:03:43.778Z'
 ---
 
 # Catalog and Datasets {#catalog}

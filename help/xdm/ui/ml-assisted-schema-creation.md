@@ -3,13 +3,19 @@ title: Machine Learning-Assisted Schema Creation
 description: Learn how to create a schemas in the Experience Platform user interface.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 6b14caed-a3ad-4834-8fa8-8d67dce6290e
-TQID: https://experienceleague.adobe.com/ggeVBgjnSkWxOoI-K1Ntr-RpmcXnB6T6c7Wdwv-2o9w
+TQID: 'https://experienceleague.adobe.com/ggeVBgjnSkWxOoI-K1Ntr-RpmcXnB6T6c7Wdwv-2o9w'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
     internal-label: Insights

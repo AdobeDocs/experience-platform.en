@@ -3,13 +3,10 @@ title: Adobe Commerce Source Connector
 description: Learn how to use the Adobe Commerce source to bring your commerce data to Experience Platform.
 last-substantial-update: 2023-12-13T00:00:00.000Z
 exl-id: 8313e3d5-5c3d-448c-883c-b9386dbbb2f5
-TQID: https://experienceleague.adobe.com/-46-2uS8thVwvxKdGrpzp7gI5BeIjmxc-MeqAYRqr4k
+TQID: 'https://experienceleague.adobe.com/-46-2uS8thVwvxKdGrpzp7gI5BeIjmxc-MeqAYRqr4k'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -21,7 +18,7 @@ topic_v2:
 
 Adobe Commerce is an agile B2B and B2C commerce platform that enables merchants and brands to accelerate revenue through customer-centric digital commerce experiences across online and physical spaces. 
 
-Adobe Experience Platform Sources supports the integration of Adobe Commerce to allow merchants to send storefront and back office data to the Experience Platform Edge Network, so other Adobe Experience Cloud products like Adobe Analytics and Adobe Target can use [!DNL Commerce] data.
+Adobe Experience Platform Sources supports the integration of Adobe Commerce to allow merchants to send storefront and back office data to the Experience Platform Edge Network, so other Adobe CX Enterprise products like Adobe Analytics and Adobe Target can use [!DNL Commerce] data.
 
 * **Storefront events**: Capture shopper interactions such as `View Page`, `View Product`, and `Add to Cart`. For B2B merchants, storefront events also captures [requisition lists](https://experienceleague.adobe.com/docs/commerce-admin/b2b/requisition-lists/requisition-lists.html).
 * **Back office events**: Capture information on the status of an order, such as whether an order was placed, canceled, refunded, shipped, or completed.
@@ -44,7 +41,7 @@ In order to connect Adobe Commerce to Experience Platform, you must have the fol
 To fully onboard your Adobe Commerce source account, follow the steps outlined below along with their corresponding documentation.
 
 * [Install the [!DNL Data Connection] extension](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/install.html) for Adobe Commerce. You can download the connector extension from [Adobe Marketplace](https://commercemarketplace.adobe.com/magento-experience-platform-connector.html).
-* Once you have successfully installed the connector extension, sign in to your Adobe account in Experience Cloud and [confirm your organization ID](https://experienceleague.adobe.com/docs/core-services/interface/administration/organizations.html#concept_EA8AEE5B02CF46ACBDAD6A8508646255). This ID is associated with your provisioned Experience Cloud company. It is formatted as a 24-character alphanumeric string and includes a mandatory `@AdobeOrg`.
+* Once you have successfully installed the connector extension, sign in to your Adobe account in CX Enterprise and [confirm your organization ID](https://experienceleague.adobe.com/docs/core-services/interface/administration/organizations.html#concept_EA8AEE5B02CF46ACBDAD6A8508646255). This ID is associated with your provisioned CX Enterprise company. It is formatted as a 24-character alphanumeric string and includes a mandatory `@AdobeOrg`.
 * Next, create or update your Experience Data Model (XDM) schema with your Commerce-specific field groups. For detailed steps on how to add Commerce-specific field groups to your XDM schema, read the guide on [adding field groups to an XDM schema](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html).
 * Once your schema is configured, you must then create a dataset based off of your new schema. This dataset will then contain the [!DNL Commerce] data that you send. For detailed steps on how to create a dataset for [!DNL Commerce] data, read the guide on [sending data to Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/experience-cloud/platform.html#create-a-dataset).
 * Next, create a datastream and select the XDM schema that contains your Commerce-specific field groups. For more information on datastreams, read the [datastreams overview](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html).

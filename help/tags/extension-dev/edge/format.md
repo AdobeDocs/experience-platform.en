@@ -2,6 +2,20 @@
 title: Library Modules in Edge Extensions
 description: Format library modules for tag extensions in an edge property.
 exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+    internal-label: Event forwarding
+subfeature_v2:
+  - id: 1a2b3c4d-0003-4003-8003-000000000003
+    internal-label: Data collection tags extensions
+  - id: e1f2a3b4-4027-4027-9027-400000000027
+    internal-label: Event forwarding extensions
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Library modules in edge extensions
 

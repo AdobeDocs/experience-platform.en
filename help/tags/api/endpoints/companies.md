@@ -2,6 +2,18 @@
 title: Companies endpoint
 description: Learn how to make calls to the /companies endpoint in the Reactor API.
 exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+subfeature_v2:
+  - id: 1a2b3c4d-0005-4005-8005-000000000005
+    internal-label: Reactor API
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+    internal-label: Properties
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Companies endpoint
 

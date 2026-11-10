@@ -3,6 +3,12 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 title: Configure source specifications for Self-Serve Sources (Batch SDK)
 description: This document provides an overview of the configurations you need to prepare in order to use Self-Serve Sources (Batch SDK).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Configure source specification for Self-Serve Sources (Batch SDK)
 

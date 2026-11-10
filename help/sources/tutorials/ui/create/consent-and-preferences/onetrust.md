@@ -21,6 +21,10 @@ role_v2:
 
 This tutorial provides steps for creating a [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) source connection to ingest both historic and scheduled consent data into Adobe Experience Platform using the Experience Platform user interface.
 
+>[!IMPORTANT]
+>
+>For [!DNL OneTrust Integration], each scheduled run ingests data after the previous run, even if that run failed. The next scheduled run does not automatically recover data for the failed run's time window.
+
 ## Prerequisites
 
 >[!IMPORTANT]

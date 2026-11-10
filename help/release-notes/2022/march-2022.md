@@ -2,34 +2,22 @@
 title: Adobe Experience Platform Release Notes March 2022
 description: The March 2022 release notes for Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-TQID: https://experienceleague.adobe.com/JIGkvdV7sN3OV5xdl7fyoBeXUBcP88EdzNNPo10NVTA
+TQID: 'https://experienceleague.adobe.com/JIGkvdV7sN3OV5xdl7fyoBeXUBcP88EdzNNPo10NVTA'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
   - id: eec185bd-7d60-4193-ba3f-da427569936a
-    internal-label: Destinations dashboard
-subfeature_v2:
-  - id: a230274e-7e6e-49eb-b817-514495a710ac
-    internal-label: query service
+    internal-label: Destinations
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
     internal-label: Sources
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
-  - id: b08f50f9-9135-4961-a21e-47e56473ae77
-    internal-label: Profiles dashboard
   - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
     internal-label: Datastreams
-  - id: d1a87129-ba05-4f15-98b1-233618f1774a
-    internal-label: Data ingestion
   - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
     internal-label: Dashboards
+subfeature_v2:
   - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
     internal-label: Properties
 role_v2:

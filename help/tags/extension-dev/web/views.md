@@ -2,42 +2,17 @@
 title: Views in Web Extensions
 description: Learn how to define views for library modules in your Adobe Experience Platform web extensions.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-TQID: https://experienceleague.adobe.com/Vx3huRlBr6dfUapFD7Axam-l7RpCKAgLb6Q3xK-5qY8
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-    internal-label: Advertising
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-    internal-label: Acrobat Sign
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-    internal-label: Target
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
-  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
-    internal-label: Pass
+TQID: 'https://experienceleague.adobe.com/Vx3huRlBr6dfUapFD7Axam-l7RpCKAgLb6Q3xK-5qY8'
 feature_v2:
-  - id: bef6f891-2e8a-425e-8f99-7ddf22070daa
-    internal-label: APIs
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
 subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
-  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-    internal-label: Properties
-  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-    internal-label: Data elements
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-    internal-label: Customer experience
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-    internal-label: Data collection
+  - id: 1a2b3c4d-0003-4003-8003-000000000003
+    internal-label: Data collection tags extensions
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Views in web extensions
 
@@ -93,17 +68,17 @@ The content of each of the methods will need to be modified to accommodate your 
 
 The `init` method will be called by tags as soon as the view has been loaded into the iframe. It will be passed a single argument (`info`) which must be an object containing the following properties:
 
-| Property            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `settings`          | An object containing settings that were previously saved from this view. If `settings` is `null`, it indicates that the user is creating the initial settings rather than loading a saved version. If `settings` is an object, you should use it to populate your view since the user is choosing to edit the previously persisted settings.                                                                                                                     |
-| `extensionSettings` | Settings saved from the extension configuration view. This can be useful to access extension settings in views that are not the extension configuration view. If the current view is the extension configuration view, use `settings`.                                                                                                                                                                                                                           |
-| `propertySettings`  | An object containing settings for the property. See the [turbine object guide](../turbine.md#property-settings) for details on what is contained in this object.                                                                                                                                                                                                                                                                                                 |
-| `tokens`            | An object containing API tokens. For accessing Adobe APIs from inside the view you will need to usually use an IMS token under `tokens.imsAccess`. This token will be made available only for extensions developed by Adobe. If you are an Adobe employee representing an extension authored by Adobe, please [email the data collection engineering team](mailto:reactor@adobe.com) and provide the name of the extension so we can add it to the allowed list. |
-| `company`           | An object containing the `orgId` (your 24-character Adobe Experience Cloud ID), `id` (Your company's unique identifier within the Reactor API), and `tenantId` (the unique identifier for an organization within Adobe's Identity Management System).                                                                                                                                                                                                            |
-| `schema`            | An object in [JSON Schema](https://json-schema.org/) format. This object will come from the [extension manifest](../manifest.md) and may be helpful in validating your form.                                                                                                                                                                                                                                                                                     |
-| `apiEndpoints`      | An object containing `reactor` which contains a reference to the web address of the Reactor API.                                                                                                                                                                                                                                                                                                                                                                 |
-| `userConsentPermissions`      | An Object containing consent flags from Adobe's [Product Usage Data](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data). Use the stored in `globalDataCollectionAndUsage` flag to understand if your extension is allowed to collect *any* customer data.                                                                                                                                       |
-| `preferredLanguages`      | An array of language strings.                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Property | Description |
+| --- | --- |
+| `settings` | An object containing settings that were previously saved from this view. If `settings` is `null`, it indicates that the user is creating the initial settings rather than loading a saved version. If `settings` is an object, you should use it to populate your view since the user is choosing to edit the previously persisted settings. |
+| `extensionSettings` | Settings saved from the extension configuration view. This can be useful to access extension settings in views that are not the extension configuration view. If the current view is the extension configuration view, use `settings`. |
+| `propertySettings` | An object containing settings for the property. See the [turbine object guide](../turbine.md#property-settings) for details on what is contained in this object. |
+| `tokens` | An object containing API tokens. For accessing Adobe APIs from inside the view you will need to usually use an IMS token under `tokens.imsAccess`. This token will be made available only for extensions developed by Adobe. If you are an Adobe employee representing an extension authored by Adobe, please [email the data collection engineering team](mailto:reactor@adobe.com) and provide the name of the extension so we can add it to the allowed list. |
+| `company` | An object containing the `orgId` (your 24-character organization ID), `id` (Your company's unique identifier within the Reactor API), and `tenantId` (the unique identifier for an organization within Adobe's Identity Management System). |
+| `schema` | An object in [JSON Schema](https://json-schema.org/) format. This object will come from the [extension manifest](../manifest.md) and may be helpful in validating your form. |
+| `apiEndpoints` | An object containing `reactor` which contains a reference to the web address of the Reactor API. |
+| `userConsentPermissions` | An Object containing consent flags from Adobe's [Product Usage Data](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data). Use the stored in `globalDataCollectionAndUsage` flag to understand if your extension is allowed to collect *any* customer data. |
+| `preferredLanguages` | An array of language strings. |
 
 Your view should use this information to render and manage its form. It is likely you will only need to deal with `info.settings`, but the other information is provided in case it is necessary.
 

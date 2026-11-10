@@ -3,13 +3,14 @@ title: Authenticate and access the Privacy Service API
 description: Learn how to authenticate to the Privacy Service API and how to interpret example API calls in the documentation.
 role: Developer
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-TQID: https://experienceleague.adobe.com/qDlbSic6BGkU-guPQirXmVXlandmsoq5LIY48Rlk7g4
+TQID: 'https://experienceleague.adobe.com/qDlbSic6BGkU-guPQirXmVXlandmsoq5LIY48Rlk7g4'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
 role_v2:
@@ -25,7 +26,7 @@ This guide provides an introduction to the core concepts you must know before at
 
 ## Prerequisites {#prerequisites}
 
-This guide requires a working understanding of [Privacy Service](../home.md) and how it allows you to manage access and delete requests from your data subjects (customers) across Adobe Experience Cloud applications.
+This guide requires a working understanding of [Privacy Service](../home.md) and how it allows you to manage access and delete requests from your data subjects (customers) across Adobe CX Enterprise applications.
 
 In order to create access credentials for the API, an administrator within your organization must have previously set up product profiles for Privacy Service within Adobe Admin Console. The product profile that you assign to an API integration determines what permissions that integration has when accessing Privacy Service capabilities. See the guide on [managing Privacy Service permissions](../permissions.md) for more information.
 

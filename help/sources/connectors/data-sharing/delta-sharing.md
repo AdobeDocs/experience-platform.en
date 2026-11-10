@@ -2,6 +2,12 @@
 title: Delta Sharing
 description: Learn how to use the Delta Sharing source on Adobe Experience Platform.
 exl-id: 69c4e250-aa9b-4db1-b44b-6056bdddb637
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL Delta Sharing]
 

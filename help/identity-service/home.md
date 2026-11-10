@@ -4,24 +4,20 @@ solution: Experience Platform
 title: Identity Service Overview
 description: Adobe Experience Platform Identity Service helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-TQID: https://experienceleague.adobe.com/O-13-zAfVcgv6XP8Wg7buEqiKzR-aSNvk3pnBty9rog
+TQID: 'https://experienceleague.adobe.com/O-13-zAfVcgv6XP8Wg7buEqiKzR-aSNvk3pnBty9rog'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-    internal-label: Integrations
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-    internal-label: Catalog
+    internal-label: Data collection tags
   - id: de9975b2-c43a-4287-9698-4f4cad92b83f
     internal-label: Schemas
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin

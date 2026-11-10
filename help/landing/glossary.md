@@ -4,26 +4,16 @@ solution: Experience Platform
 title: Adobe Experience Platform Glossary
 description: A glossary of important terminology in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-TQID: https://experienceleague.adobe.com/BamtoDSzzhu0E1flZK7kaWvPXgD-xq9Qv2iQfBdaTt4
+TQID: 'https://experienceleague.adobe.com/BamtoDSzzhu0E1flZK7kaWvPXgD-xq9Qv2iQfBdaTt4'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+subfeature_v2:
   - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
     internal-label: Integrations
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-    internal-label: Guardrails
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
@@ -83,9 +73,9 @@ topic_v2:
 
 **Activity**: In [!DNL Offer Decisioning], an activity contains the logic that informs the selection of an offer.
 
-**Administrator**: One or more individuals in your organization who can configure and customize permissions for Experience Platform in Adobe Admin Console. 
+**Administrator**: A person in your organization who manages roles, permissions, and sandbox access through [!UICONTROL Permissions] in Experience Platform.
 
-**Adobe Admin Console**: Adobe Admin Console provides a central location for managing Adobe product entitlements and access for your organization. Through the console, administrators can grant groups of users access permissions for various Experience Platform capabilities, such as "Manage Datasets", "View Datasets", or "Manage Profiles".
+**[!DNL Adobe Admin Console]**: Use [!DNL Adobe Admin Console] to manage Adobe product entitlements and grant users access to Adobe Experience Platform. Manage roles, permissions, and sandbox access through [!UICONTROL Permissions] in Experience Platform.
 
 **Adobe AI ML Framework**: Adobe AI ML Framework is a unified machine-learning (ML) framework that leverages Experience Platform data to empower data scientists to development of ML-driven intelligence services in a faster, scalable, and reusable manner.
 
@@ -183,7 +173,7 @@ topic_v2:
 
 **CPRA**: The [[!DNL California Consumer Privacy Rights Act (CPRA)]](https://cppa.ca.gov/regulations/consumer_privacy_act.html) expands and amends portions of the [!DNL California Consumer Privacy Act (CCPA)]. The [!DNL CPRA] establishes a new baseline for consumer data privacy in California by increasing consumer rights and expanding the type of data covered through a broader definition of sensitive personal information. In addition, the [!DNL CPRA] established the California Privacy Protection Agency, a new agency dedicated to implementing and enforcing data privacy rules.
 
-**C1 contract label**: A `C1` contract data usage label specifies data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
+**C1 contract label**: A `C1` contract data usage label specifies data can only be exported from Adobe CX Enterprise in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
 
 **C2 contract label**: A `C2` contract data usage label specifies data that cannot be exported to a third-party. Some data providers have terms in their contracts that prohibit the export of data from where it was originally collected. For example, social networks contracts often restrict the transfer of data you receive from them. C2 is more restrictive than C1, which only requires aggregation and anonymous data.
 
@@ -299,7 +289,7 @@ topic_v2:
 
 **Events**: Events are the behavior data associated with a profile.
 
-**Experience Data Model (XDM)** [!DNL Experience Data Model] (XDM) is an open-source framework that uses standard schemas to unify data for use with Experience Platform and Adobe Experience Cloud applications. XDM standardizes how data is structured and speeds up and simplifies the process of gaining insights from massive amounts of data.
+**Experience Data Model (XDM)** [!DNL Experience Data Model] (XDM) is an open-source framework that uses standard schemas to unify data for use with Experience Platform and Adobe CX Enterprise applications. XDM standardizes how data is structured and speeds up and simplifies the process of gaining insights from massive amounts of data.
 
 **Experiment**: An experiment is the process of creating a trained model by training the instance with a sample portion of live production data. This is different from a trained model that is tested against a holdout test dataset. This is also different from the concept of an experiment in some machine-learning frameworks where it actually means a sample modeling project.
 

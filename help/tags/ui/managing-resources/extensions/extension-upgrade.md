@@ -2,6 +2,16 @@
 title: Extension Upgrades
 description: Learn how extension upgrades are packaged and represented in the extension catalog.
 exl-id: 4a7e0c5c-4bd1-4fb8-8509-f88a0aa42ac4
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+subfeature_v2:
+  - id: 1a2b3c4d-0003-4003-8003-000000000003
+    internal-label: Data collection tags extensions
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Extension upgrades
 

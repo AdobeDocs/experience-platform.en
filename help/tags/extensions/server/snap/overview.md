@@ -3,48 +3,30 @@ title: Snapchat Conversions API extension overview
 description: Use the Snapchat conversion to send server-side event data to Snap.
 last-substantial-update: 2025-01-20T00:00:00.000Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-TQID: https://experienceleague.adobe.com/SbZbjD4PtmqMTLZfAFTB1FgNd1o90Xudfjc3EdETWvE
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-    internal-label: Advertising
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-    internal-label: Acrobat Sign
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
+TQID: 'https://experienceleague.adobe.com/SbZbjD4PtmqMTLZfAFTB1FgNd1o90Xudfjc3EdETWvE'
 feature_v2:
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-    internal-label: API
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
+    internal-label: Data collection tags
   - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
     internal-label: Event forwarding
-  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-    internal-label: Properties
-  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-    internal-label: Data elements
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+subfeature_v2:
+  - id: e1f2a3b4-4027-4027-9027-400000000027
+    internal-label: Event forwarding extensions
+  - id: e1f2a3b4-4025-4025-9025-400000000025
+    internal-label: Event forwarding data elements
+  - id: e1f2a3b4-4030-4030-9030-400000000030
+    internal-label: Event forwarding rules
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-    internal-label: Reporting
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-    internal-label: Customer experience
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-    internal-label: Troubleshooting
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
+  - id: a492a671-d5f6-46ee-b832-2efbca14ddd8
+    internal-label: Activation and channels
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # [!DNL Snapchat] Conversions API extension overview
 
@@ -55,7 +37,7 @@ The [!DNL Snap] Conversion API Extension is a secure [Edge Network API](https://
 To use the [!DNL Snapchat] Conversions API:
 
 * You must have an [Event Forwarding property](/help/tags/ui/event-forwarding/getting-started.md) set up in Adobe Experience Platform.
-* You must also have the [required permissions](/help/collection/permissions.md) to edit the property. 
+* You must also have the [required permissions](/help/tags/ui/administration/user-permissions.md) to edit the property. 
 
 Create a [Datastream](/help/tags/ui/event-forwarding/getting-started.md) and add the [Event Forwarding service](/help/tags/ui/event-forwarding/getting-started.md#enable-event-forwarding) to it. 
 

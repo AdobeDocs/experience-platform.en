@@ -2,54 +2,28 @@
 title: Send event
 description: Send data to the Adobe Experience Platform Edge Network.
 exl-id: 4ac7750e-48ab-4eb6-873d-bb2556dbf788
-TQID: https://experienceleague.adobe.com/wigmBsoROqaLGEVNIgAn2b6BJ3lhAAKFBW9cj12iZZs
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-    internal-label: Advertising
-  - id: cb954087-f4fc-4456-afb9-e939cabcdc79
-    internal-label: Journey Optimizer
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-    internal-label: Target
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
-  - id: e98b7246-966c-4318-9e95-cad2f7a17dc7
-    internal-label: Customer Journey Analytics
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
+TQID: 'https://experienceleague.adobe.com/wigmBsoROqaLGEVNIgAn2b6BJ3lhAAKFBW9cj12iZZs'
 feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-    internal-label: Implementation
-  - id: d556b755-390a-43f0-be32-a08cf6236126
-    internal-label: Configuration
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
 subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: b3a93754-a8b8-46eb-9421-7eccaeeb3dff
-    internal-label: Best practices
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-    internal-label: Best practices
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+  - id: 1a2b3c4d-0003-4003-8003-000000000003
+    internal-label: Data collection tags extensions
+  - id: 1a2b3c4d-0006-4006-8006-000000000006
+    internal-label: Data collection tags rules
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-    internal-label: Implementation
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-    internal-label: Customer experience
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+    internal-label: Behavioral data
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
     internal-label: Personalization
-  - id: e9001ce2-5245-4a8e-8601-dd958009072f
-    internal-label: Web experience
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Send event
 
@@ -83,7 +57,7 @@ The **[!UICONTROL Send event]** action sends a payload to a datastream on the Ad
 * **[!UICONTROL XDM]**: The XDM payload that you want to send to Adobe. You can use either an [XDM object](../data-element-types.md#xdm-object) or [Variable](../data-element-types.md#variable) in this field. If you have rules that populate multiple XDM objects, you can use [Merged objects](../../core/overview.md#merged-objects) to combine them.
 * **[!UICONTROL Data]**: The data payload that you want to send to Adobe. Some apps and services do not require adhering to an XDM schema, such as Adobe Analytics or Adobe Target. Use a [Variable](../data-element-types.md#variable) data element type for this field.
 * **[!UICONTROL Include rendered propositions]**: Enable this checkbox to use this event as a display event, including the propositions that rendered when "automatically send a display event" was unchecked. The `_experience.decisioning` XDM field populates with information about rendered personalization.
-* **[!UICONTROL Document will unload]**: Enable this checkbox to make sure that the event reaches the server even if the user navigates away from the page. This setting allows events to reach the server, but responses from the Edge Network are ignored.
+* **[!UICONTROL Document will unload]**: Enable this checkbox to make sure that the event reaches the server even if the user navigates away from the page. Browser developer tools can show these requests as **(canceled)** even when the Edge Network receives them. The JavaScript library equivalent to this field is [`documentUnloading`](/help/collection/js/commands/sendevent/documentunloading.md). See [Validate events sent with `documentUnloading`](/help/collection/js/commands/sendevent/documentunloading.md#validate) to learn how to confirm delivery.
 * **[!UICONTROL Merge ID]** _(Deprecated)_: Populates the `eventMergeId` XDM field.
 
 ## Personalization fields

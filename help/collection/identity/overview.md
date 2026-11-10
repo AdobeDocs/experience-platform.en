@@ -2,10 +2,31 @@
 title: Identity in Data Collection
 description: Learn how Data Collection uses ECIDs, CORE IDs, first-party persistence, and identityMap across web implementations.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+  - id: e1971122-7081-4556-9222-8a31bd71800c
+    internal-label: Experience Cloud Services
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+  - id: a50ad69b-1331-40e9-b634-531a085a6a54
+    internal-label: Identities
+  - id: 6f307efa-2798-5b6d-8079-f765b66875c1
+    internal-label: Cookies
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Identity in Data Collection
 
-Adobe Data Collection uses identity signals to recognize returning visitors and carry context across experiences. When a visitor reaches your site, the Edge Network generates an Experience Cloud ID (ECID) and persists it in a first-party cookie. That ECID is the primary device identifier used across Adobe Experience Cloud applications and is the foundation that analytics, personalization, and audience activation build on. In your implementation, you can access the visitor's ECID on the client side through the [`getIdentity`](/help/collection/js/commands/getidentity.md) command. At the datastream level, you can use [Data Prep for Data Collection](/help/datastreams/data-prep.md) to map the ECID into a custom XDM field before it reaches downstream services.
+Adobe Data Collection uses identity signals to recognize returning visitors and carry context across experiences. When a visitor reaches your site, the Edge Network generates an ECID and persists it in a first-party cookie. That ECID is the primary device identifier used across Adobe CX Enterprise applications and is the foundation that analytics, personalization, and audience activation build on. In your implementation, you can access the visitor's ECID on the client side through the [`getIdentity`](/help/collection/js/commands/getidentity.md) command. At the datastream level, you can use [Data Prep for Data Collection](/help/datastreams/data-prep.md) to map the ECID into a custom XDM field before it reaches downstream services.
 
 The ECID identifies a device, not a person. To tie activity to a known person, you can send additional identifiers, such as a CRM ID or hashed email, alongside the ECID using the XDM [`identityMap`](./identity-map.md). Adobe recommends setting a person-level namespace as the [primary identity](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) whenever one is available.
 
@@ -14,7 +35,7 @@ Beyond the default ECID, Data Collection supports additional identity signals de
 * **First-party device IDs (FPIDs)**: Device identifiers that you generate and manage on infrastructure you control. The Edge Network uses an FPID to [seed the ECID](./fpid.md), giving you stronger cookie persistence on owned properties when browser restrictions shorten the life of Adobe-managed cookies.
 * **CORE IDs**: A separate, demdex-based identifier that participates in third-party identity workflows when third-party cookies are available. The CORE ID is distinct from the ECID and can be retrieved through [`getIdentity`](/help/collection/js/commands/getidentity.md). For details on how first-party and third-party identity contexts work together, see [Unified identity support](./unified-identity-support.md).
 
-If you are upgrading from the Visitor API or reconciling older identity behavior, see [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md) to migrate existing AMCV cookies.
+If you are upgrading from the Visitor ID Service or reconciling older identity behavior, see [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md) to migrate existing AMCV cookies.
 
 ## First-party and third-party collection {#first-party-and-third-party-collection}
 

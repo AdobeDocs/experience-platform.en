@@ -3,13 +3,10 @@ title: Use access labels to manage user access to destination dataflows
 description: Learn how to use access labels to manage user access to destination dataflows so only a subset of users in your organization get access to specific destination dataflows.
 role: Developer, Admin, User
 exl-id: 85944720-8551-491c-8991-dd9668beb0ca
-TQID: https://experienceleague.adobe.com/i5TpbwfUKR06q-HN-cW1YzatETbCwVIc1fZWBGsZ6-E
+TQID: 'https://experienceleague.adobe.com/i5TpbwfUKR06q-HN-cW1YzatETbCwVIc1fZWBGsZ6-E'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
@@ -35,7 +32,7 @@ Note the following prerequisites to complete before you start using this functio
 
 ### Access to the permissions UI {#access-permissions-ui}
 
-[!UICONTROL Permissions] is the area of Experience Cloud where administrators can define user roles and policies to manage permissions for features and objects within a product application. Read the [permissions section](/help/access-control/abac/end-to-end-guide.md#permissions) to get started.
+[!UICONTROL Permissions] is the area of CX Enterprise where administrators can define user roles and policies to manage permissions for features and objects within a product application. Read the [permissions section](/help/access-control/abac/end-to-end-guide.md#permissions) to get started.
 
 ### Create roles, labels, and assign users {#create-roles-labels-assign-users}
 

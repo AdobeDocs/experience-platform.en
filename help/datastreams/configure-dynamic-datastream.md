@@ -1,8 +1,8 @@
 ---
 title: Create [!DNL Dynamic Datastream Configurations]
-description: "Learn how to add routing rules to a [!DNL Dynamic Datastream Configuration] and route events to specific datasets and Experience Cloud services based on event data."
+description: Learn how to add routing rules to a [!DNL Dynamic Datastream Configuration] and route events to specific datasets and CX Enterprise services based on event data.
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-TQID: https://experienceleague.adobe.com/9wUD6vPq5i-OsBDqy57fa2j5QD2-wZiiOpAVgMnGIp4
+TQID: 'https://experienceleague.adobe.com/9wUD6vPq5i-OsBDqy57fa2j5QD2-wZiiOpAVgMnGIp4'
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
     internal-label: CX Enterprise
@@ -18,8 +18,7 @@ product_v2:
     internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
+    internal-label: Data collection tags
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
     internal-label: Sources
   - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
@@ -36,9 +35,9 @@ topic_v2:
 
 # Create [!DNL Dynamic Datastream Configurations]
 
-By default, the [!DNL Adobe Experience Platform Edge Network] sends all events that reach a datastream to all [!DNL Experience Cloud] [services](/help/datastreams/configure.md#add-services) you have enabled for your datastreams. Depending on your use cases, this may not always be the ideal workflow.
+By default, the [!DNL Adobe Experience Platform Edge Network] sends all events that reach a datastream to all [!DNL CX Enterprise] [services](/help/datastreams/configure.md#add-services) you have enabled for your datastreams. Depending on your use cases, this may not always be the ideal workflow.
 
-Dynamic datastream configurations address this through sets of rules that you define for each service enabled for your datastream, which control what [!DNL Experience Cloud] solution receives each type of data.
+Dynamic datastream configurations address this through sets of rules that you define for each service enabled for your datastream, which control what [!DNL CX Enterprise] solution receives each type of data.
 
 ## [!DNL Dynamic Datastream Configurations] guide {#guide}
 
@@ -58,9 +57,9 @@ If you are new to [!DNL Dynamic Datastream Configurations] or are planning a pro
 To create a dynamic configuration for your datastream, there are two conditions you must meet:
 
 * You must have created *at least* one datastream to work with. See the documentation on how to [create a datastream](/help/datastreams/configure.md) for detailed information.
-* You must have *at least* one [!DNL Experience Cloud] service added to your datastream. See the documentation on how to [add a service](/help/datastreams/configure.md#add-services) to a datastream for detailed information.
+* You must have *at least* one [!DNL CX Enterprise] service added to your datastream. See the documentation on how to [add a service](/help/datastreams/configure.md#add-services) to a datastream for detailed information.
 
-After you have created a datastream and added an Experience Cloud service to it, you can then [create a dynamic configuration](#create-dynamic-configuration).
+After you have created a datastream and added a CX Enterprise service to it, you can then [create a dynamic configuration](#create-dynamic-configuration).
 
 ## Guardrails {#guardrails}
 

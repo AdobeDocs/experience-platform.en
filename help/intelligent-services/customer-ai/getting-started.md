@@ -5,22 +5,18 @@ feature: Customer AI
 title: Getting Started in Customer AI
 description: This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-TQID: https://experienceleague.adobe.com/nzQw-ni1l1pjMsfpaCkTVovuu2fYSRzy8hjPYjAWTmI
+TQID: 'https://experienceleague.adobe.com/nzQw-ni1l1pjMsfpaCkTVovuu2fYSRzy8hjPYjAWTmI'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
   - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
     internal-label: Real-Time Customer Data Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: f5a6b7c8-5003-4003-9003-500000000003
+    internal-label: Services
 subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
+  - id: af7d4edc-6e6b-4176-bf14-907faf40ebd4
+    internal-label: Customer AI
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
@@ -38,7 +34,7 @@ topic_v2:
 
 The guides for Customer AI require a working understanding of the various Experience Platform services involved in using Customer AI. Before you start, please review the following documents:
 
-- [Experience Data Model (XDM) System overview](../../xdm/home.md): XDM is the foundational framework that allows [!DNL Adobe Experience Cloud], powered by Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Experience Platform services.
+- [Experience Data Model (XDM) System overview](../../xdm/home.md): XDM is the foundational framework that allows [!DNL Adobe CX Enterprise], powered by Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Experience Platform services.
 - [Basics of schema composition](../../xdm/schema/composition.md): This document provides an introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in [!DNL Adobe Experience Platform].
 - [Building schemas](../../xdm/tutorials/create-schema-ui.md): This tutorial covers the steps for creating a schema using the Schema Editor within Experience Platform.
 - [Real-Time Customer Profile overview](../../rtcdp/overview.md): Built on [!DNL Adobe Experience Platform], Adobe Real-Time Customer Data Platform (Real-Time CDP) helps companies bring together known and unknown data to activate customer profiles with intelligent decisioning throughout the customer journey. Real-Time CDP combines multiple enterprise data sources to create unified profiles in real time that can be used to provide one-to-one personalized customer experiences across all channels and devices.

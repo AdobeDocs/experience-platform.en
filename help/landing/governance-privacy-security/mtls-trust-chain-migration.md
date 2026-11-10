@@ -2,6 +2,14 @@
 title: Update your trust store for Adobe's new mTLS certificate hierarchy
 description: Learn how to update your trust store to trust Adobe's new mTLS certificate authority hierarchy ahead of an upcoming certificate migration.
 role: Developer, Admin
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Update your trust store for Adobe's new mTLS certificate hierarchy {#update-your-trust-store-for-adobes-new-mtls-certificate-hierarchy}
 

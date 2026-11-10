@@ -4,10 +4,18 @@ description: Audit Query is a RESTful API that allows developers to see who did 
 role: Developer
 feature: Audits, API
 exl-id: 9ed291c6-ff8b-4d9b-9fed-d1e3fa8f92fb
-TQID: https://experienceleague.adobe.com/vLh0ElepKDmpAAhvlc3e5XvBSgvjqfkdGqI3ELKgZkg
+TQID: 'https://experienceleague.adobe.com/vLh0ElepKDmpAAhvlc3e5XvBSgvjqfkdGqI3ELKgZkg'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
+feature_v2:
+  - id: face57a7-855c-40fe-be2c-28bd0ce4a311
+    internal-label: Audits
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
+subfeature_v2:
+  - id: 01a3139f-2204-4e1b-bd65-5437f7d5a5bd
+    internal-label: API credentials
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

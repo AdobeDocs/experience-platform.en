@@ -4,28 +4,20 @@ description: View audiences that customers qualify for in Customer Journey Analy
 badgeLimitedAvailability: label="Limited availability" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
 hide: true
-hidefromtoc: yes
-TQID: https://experienceleague.adobe.com/BvEkD8a3iIoQsfdSd4MyBDjEkKofmmHpkdHEL14LPv0
+hidefromtoc: 'yes'
+TQID: 'https://experienceleague.adobe.com/BvEkD8a3iIoQsfdSd4MyBDjEkKofmmHpkdHEL14LPv0'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
     internal-label: Reporting
@@ -52,13 +44,13 @@ The following are required before using this destination:
 
 ## Supported identities {#supported-identities}
 
-Audience Analysis supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md). Experience Cloud ID (ECID) is typically used.
+Audience Analysis supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md). ECID is typically used.
 
 |Target Identity|Description|Considerations|
 |---|---|---|
 |GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
 |IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
+|ECID|ECID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
 |phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by [!DNL Adobe Experience Platform]. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 |extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|

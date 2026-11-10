@@ -1,8 +1,31 @@
 ---
 title: Nextdoor Conversion API Extension
 description: Learn how to use the Nextdoor Conversion API extension to send conversion events to track the performance of your advertising campaigns.
-last-substantial-update: 2025-12-18
+last-substantial-update: 2025-12-18T00:00:00.000Z
 exl-id: fbab477d-a865-4a35-94ba-6e887d7d28db
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+    internal-label: Event forwarding
+subfeature_v2:
+  - id: e1f2a3b4-4027-4027-9027-400000000027
+    internal-label: Event forwarding extensions
+  - id: e1f2a3b4-4030-4030-9030-400000000030
+    internal-label: Event forwarding rules
+  - id: e1f2a3b4-4025-4025-9025-400000000025
+    internal-label: Event forwarding data elements
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: a492a671-d5f6-46ee-b832-2efbca14ddd8
+    internal-label: Activation and channels
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # [!DNL Nextdoor] Conversion API Extension - User Guide
 

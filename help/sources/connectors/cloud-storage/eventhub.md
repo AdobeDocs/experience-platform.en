@@ -42,9 +42,11 @@ To increase the rate of speed of ingestion on the Experience Platform side, Expe
 
 ## Use a virtual network to connect to [!DNL Event Hubs] to Experience Platform
 
-Experience Platform supports connecting to [!DNL Event Hubs] via a virtual network. This lets you transfer data over a secure, private connection instead of the public internet. You can allowlist the Experience Platform VNet to securely route [!DNL Event Hubs] traffic through the [!DNL Azure] private backbone while maintaining your existing firewall protections.
+>[!IMPORTANT]
+>
+>Allowlisting the Experience Platform virtual network is deprecated. [!DNL Azure] no longer supports adding the Experience Platform subnet as a virtual network rule for new [!DNL Event Hubs] namespaces. This restriction also applies when you update the network rules of an existing namespace. If you need firewall restrictions or cannot allow public network access to your namespace, contact Adobe Customer Care.
 
-To set up a virtual network, head to this [[!DNL Event Hubs] network rule set document](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) and follow the steps listed below:
+The following steps describe the deprecated virtual network configuration. For the API reference, see the [Event Hubs network rule set documentation](https://learn.microsoft.com/en-us/azure/event-hubs/network-security).
 
 * Select **Try It** from the REST API panel; 
 * Authenticate your [!DNL Azure] account using your credentials in the same browser;

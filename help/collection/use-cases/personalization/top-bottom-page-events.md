@@ -2,34 +2,21 @@
 title: Configure top and bottom of page events in Web SDK
 description: This article explains how to use top and bottom of page events in Web SDK.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-TQID: https://experienceleague.adobe.com/eKp-6NGGcWLlW1ZwCQfjnU9ZpIDpcgrW-jNXdxtNBqI
-product_v2:
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-    internal-label: Target
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
-  - id: e98b7246-966c-4318-9e95-cad2f7a17dc7
-    internal-label: Customer Journey Analytics
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
+TQID: 'https://experienceleague.adobe.com/eKp-6NGGcWLlW1ZwCQfjnU9ZpIDpcgrW-jNXdxtNBqI'
 feature_v2:
-  - id: b3f03848-ae12-48b2-8aab-cad18567eb32
-    internal-label: Metrics
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
-    internal-label: Events
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
     internal-label: Personalization
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Configure top and bottom of page events in Web SDK
 

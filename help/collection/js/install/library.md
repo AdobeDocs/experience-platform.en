@@ -2,6 +2,18 @@
 title: Install the Web SDK JavaScript library
 description: Reference the Web SDK library using a standalone CDN file.
 exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Install the Web SDK JavaScript library
 

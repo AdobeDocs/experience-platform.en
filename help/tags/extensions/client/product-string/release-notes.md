@@ -2,30 +2,28 @@
 title: Release Notes for the Adobe Analytics Product String Extension
 description: The latest release notes for the Adobe Analytics Product String tag extension in Adobe Experience Platform.
 exl-id: 3ddc3e6f-412c-42d5-8cbf-25273c1794d5
-TQID: https://experienceleague.adobe.com/QdQtXvFA5vVFjYWmR-IqgMQzFBzuGyUAuq6MpoQzRSs
+TQID: 'https://experienceleague.adobe.com/QdQtXvFA5vVFjYWmR-IqgMQzFBzuGyUAuq6MpoQzRSs'
 product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-    internal-label: Advertising
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
+  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
+    internal-label: Implementations
 subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: 1a2b3c4d-0003-4003-8003-000000000003
+    internal-label: Data collection tags extensions
+  - id: df312454-73c4-43f6-a90e-18f5043f074c
     internal-label: Tags
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-    internal-label: Customer experience
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-    internal-label: Data collection
+  - id: e7d92df1-c5ba-4e93-85df-f83171b889be
+    internal-label: Variables
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Adobe Analytics Product String extension release notes
 

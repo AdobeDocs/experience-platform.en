@@ -2,13 +2,10 @@
 title: Acxiom Data Ingestion
 description: Learn how to ingest [!DNL Acxiom] data to Real-Time Customer Data Platform, enrich first-party profiles, and improve audiences and activate across marketing channels.
 exl-id: 3bbbe4e1-5e34-4104-bf39-2c452865b807
-TQID: https://experienceleague.adobe.com/CXUiuxopsjGdNQSG32MqwoJrYWkaGJw9XNPBb0FRxyE
+TQID: 'https://experienceleague.adobe.com/CXUiuxopsjGdNQSG32MqwoJrYWkaGJw9XNPBb0FRxyE'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

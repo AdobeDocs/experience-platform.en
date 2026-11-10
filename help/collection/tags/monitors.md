@@ -2,6 +2,21 @@
 title: _monitors
 description: Add event listeners to debug your tag implementation.
 exl-id: 046094c1-afeb-48e6-8649-590e5116421b
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+subfeature_v2:
+  - id: 1a2b3c4d-0006-4006-8006-000000000006
+    internal-label: Data collection tags rules
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `_monitors`
 

@@ -4,6 +4,14 @@ description: Learn about the schemas and identities health checks in Adobe Exper
 solution: Experience Platform
 type: Documentation
 role: Admin, User
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 # Schemas and identities health checks
 
@@ -135,7 +143,7 @@ When you select the **[!UICONTROL Identity Namespace Not in Use]** card, a detai
 
 ![Identity Namespace Not in Use detail panel showing description, impact, and affected namespaces list](../assets/health-checks/deprecated-namespace-detail.png){zoomable="yes"}
 
-For more information, see the [Experience Cloud knowledge base article on obsolete namespaces](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
+For more information, see the [CX Enterprise knowledge base article on obsolete namespaces](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
 ## Non-person identity on relationship field {#non-person-identity-relationship-field}
 

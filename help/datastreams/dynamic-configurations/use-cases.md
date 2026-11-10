@@ -1,11 +1,14 @@
 ---
 title: Dynamic Datastream Configuration Use Cases
-description: "Learn how to use [!DNL Dynamic Datastream Configurations] to separate events by value, manage data retention, suppress system events, and filter bot traffic."
+description: Learn how to use [!DNL Dynamic Datastream Configurations] to separate events by value, manage data retention, suppress system events, and filter bot traffic.
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 
 # Dynamic datastream configuration use cases
 
-This page covers six common use cases for [!DNL Dynamic Datastream Configurations]: event separation by value, tiered data retention strategy, system event suppression, bot traffic filtering, selective Experience Cloud solution routing, and Analytics source connector migration.
+This page covers six common use cases for [!DNL Dynamic Datastream Configurations]: event separation by value, tiered data retention strategy, system event suppression, bot traffic filtering, selective CX Enterprise solution routing, and Analytics source connector migration.
 
 Each use case is independent. Implement only the ones that apply to your implementation.
 
@@ -193,9 +196,9 @@ You can also disable other services for bot traffic in separate rules:
 
 Place the bot filtering rule **first** in your rule list, before any **Actionable** or **Analytical** rules. Because the Edge Network uses first-match-wins evaluation, placing this rule first ensures the Edge Network catches and discards bot traffic before any other routing logic runs. Routing a bot event to a profile-enabled dataset consumes unnecessary Profile store capacity.
 
-## Use case 5: Selective Experience Cloud solution routing {#uc5}
+## Use case 5: Selective CX Enterprise solution routing {#uc5}
 
-**Goal:** Control which Experience Cloud solutions ([!DNL Adobe Analytics], [!DNL Adobe Target], [!DNL Adobe Audience Manager]) receive specific event types, and override solution-level settings such as report suites or property tokens based on event conditions.
+**Goal:** Control which CX Enterprise solutions ([!DNL Adobe Analytics], [!DNL Adobe Target], [!DNL Adobe Audience Manager]) receive specific event types, and override solution-level settings such as report suites or property tokens based on event conditions.
 
 **When to use:** You want to consolidate multiple datastreams into one, different event types should go to different [!DNL Adobe Analytics] report suites, or certain events should not reach [!DNL Adobe Target] or [!DNL Adobe Audience Manager].
 

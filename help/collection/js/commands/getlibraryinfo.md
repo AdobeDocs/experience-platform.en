@@ -1,9 +1,27 @@
 ---
-title: getLibraryInfo
+title: getLibraryInfo (Web SDK)
 description: Retrieve information around the current Web SDK library version.
 exl-id: f2bc0185-71c9-4d77-b9d2-b777a41a20e5
+feature_v2:
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
-# `getLibraryInfo`
+# `getLibraryInfo` (Web SDK)
+
+>[!BEGINSHADEBOX]
+
+*This page describes the Web SDK `getLibraryInfo` command. For the Server SDK, see [`getLibraryInfo`](/help/collection/server-js/methods/getlibraryinfo.md).*
+
+>[!ENDSHADEBOX]
 
 The `getLibraryInfo` command provides you with information around the version of the Web SDK library currently used. You can use this command to track which versions of the Web SDK that you deploy to different web properties.
 

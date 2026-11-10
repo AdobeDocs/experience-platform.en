@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Subscribe to Privacy Service Events
 description: Learn how to subscribe to Privacy Service events using a preconfigured webhook.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
-TQID: https://experienceleague.adobe.com/J05-9wr8DJ49kDAkn21TNhtiT-Yr-PogcK-aGrnr2ik
+TQID: 'https://experienceleague.adobe.com/J05-9wr8DJ49kDAkn21TNhtiT-Yr-PogcK-aGrnr2ik'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
@@ -13,6 +13,10 @@ role_v2:
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
     internal-label: Privacy
@@ -25,7 +29,7 @@ There are currently four types of notifications related to the privacy job reque
 
 | Type | Description |
 | --- | --- |
-| Job Complete | All [!DNL Experience Cloud] applications have reported back and the overall or global status of the job has been marked as complete. |
+| Job Complete | All [!DNL CX Enterprise] applications have reported back and the overall or global status of the job has been marked as complete. |
 | Job Error | One or more applications have reported an error while processing the request. |
 | Product Complete | One of the applications associated with this job has completed its work. |
 | Product Error | One of the applications reported an error while processing the request. |
@@ -76,7 +80,7 @@ The following JSON is an example of a [!DNL Privacy Service Event] notification 
 | `id` | A unique, system-generated ID for the notification. |
 | `type` | The type of notification being sent, giving context to the information provided under `data`. Potential values include: <ul><li>`com.adobe.platform.gdpr.jobcomplete`</li><li>`com.adobe.platform.gdpr.joberror`</li><li>`com.adobe.platform.gdpr.productcomplete`</li><li>`com.adobe.platform.gdpr.producterror`</li></ul> |
 | `time` | A timestamp of when the event occurred. |
-| `data.value` | Contains additional information regarding what triggered the notification: <ul><li>`jobId`: The ID of the privacy job that triggered the notification.</li><li>`message`: A message regarding the specific status of the job. For `productcomplete` or `producterror` notifications, this field indicates the Experience Cloud application in question.</li></ul> |
+| `data.value` | Contains additional information regarding what triggered the notification: <ul><li>`jobId`: The ID of the privacy job that triggered the notification.</li><li>`message`: A message regarding the specific status of the job. For `productcomplete` or `producterror` notifications, this field indicates the CX Enterprise application in question.</li></ul> |
 
 ## Next steps
 

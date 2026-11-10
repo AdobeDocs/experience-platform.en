@@ -4,27 +4,24 @@ description: The latest release notes for Adobe Experience Platform Debugger.
 keywords: debugger;experience Platform Debugger extension;chrome;extension;release notes
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-TQID: https://experienceleague.adobe.com/0e-7UfIMyZvMEsptkp3VmNDPDWL0dsTCgMTwR93ngoo
+TQID: 'https://experienceleague.adobe.com/0e-7UfIMyZvMEsptkp3VmNDPDWL0dsTCgMTwR93ngoo'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
+    internal-label: Data collection tags
   - id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4
     internal-label: Assurance
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation
@@ -36,6 +33,19 @@ topic_v2:
     internal-label: Privacy
 ---
 # Adobe Experience Platform Debugger release notes
+
+## Version 1.8.0 - October 29, 2026
+
+* Fixed an issue where Analytics report suite details and configured variable names did not load after the retirement of Analytics API 1.4. The Debugger now uses Analytics API 2.0.
+* The [Analytics tab](solutions/overview.md#section-f71dfcc22bb44c86bec328491606a482) now shows when report suite details are loading or fail to load, and lets you retry or refresh them.
+* The **[!UICONTROL Show post processed hits]** toggle now requires a valid sign-in session and consent to personal data collection. You can turn it off at any time.
+* Added support for Streaming Media and Brand Concierge requests, including Brand Concierge voice conversations, in request tables and Assurance sessions.
+* Improved request tables in the [[!UICONTROL Network] tab](network.md#filter-search) and solution tabs, including:
+  * Filtering by request type.
+  * Search that highlights matches without hiding other requests, with navigation between matches.
+  * Counts of captured, shown, and matching requests.
+  * Buttons to jump to the oldest or most recent request.
+* Fixed an issue where the Debugger could continue adding Assurance validation headers to requests after you disconnected from an Assurance session.
 
 ## Version 1.7.1 - June 24, 2026
 

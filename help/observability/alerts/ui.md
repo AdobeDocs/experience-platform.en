@@ -4,16 +4,22 @@ title: Alerts UI Guide
 description: Learn how to manage alerts in the Experience Platform user interface.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-TQID: https://experienceleague.adobe.com/X1LmSIA3VvcE4j6XH2p4oRKZwDVz24HPuRwwqijiPHU
+TQID: 'https://experienceleague.adobe.com/X1LmSIA3VvcE4j6XH2p4oRKZwDVz24HPuRwwqijiPHU'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
+  - id: a7150a74-b8a9-4042-b066-147c5f0ca505
+    internal-label: Alerts
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
     internal-label: Insights
@@ -68,7 +74,7 @@ Once subscribers have been added successfully, they will receiving email notific
 
 ## Enable email alerts {#enable-email}
 
-To have alert notifications delivered to your inbox, select the bell icon (![bell icon](/help/images/icons/bell.png)) in the upper-right toolbar to open notifications and announcements. From the dropdown, select the settings icon (![settings icon](/help/images/icons/settings.png)) to open Experience Cloud preferences.
+To have alert notifications delivered to your inbox, select the bell icon (![bell icon](/help/images/icons/bell.png)) in the upper-right toolbar to open notifications and announcements. From the dropdown, select the settings icon (![settings icon](/help/images/icons/settings.png)) to open CX Enterprise preferences.
 
 ![Notifications panel with the bell icon and settings icon highlighted.](../images/alerts/ui/edit-preferences.png)
 

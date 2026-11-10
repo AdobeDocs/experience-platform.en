@@ -2,6 +2,16 @@
 title: Filtering responses in the Reactor API
 description: Learn how to filter results when listing resources in the Reactor API.
 exl-id: 8a91f3dd-4ead-4a10-abb1-e71acb0d73b6
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection tags
+subfeature_v2:
+  - id: 1a2b3c4d-0005-4005-8005-000000000005
+    internal-label: Reactor API
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Filtering responses in the Reactor API
 

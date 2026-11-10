@@ -5,30 +5,13 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-TQID: https://experienceleague.adobe.com/EKDdp3hjLuAo17WGURXgyo0vXxKw56-xbvHqoxEhT1I
+TQID: 'https://experienceleague.adobe.com/EKDdp3hjLuAo17WGURXgyo0vXxKw56-xbvHqoxEhT1I'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
-  - id: a230274e-7e6e-49eb-b817-514495a710ac
-    internal-label: query service
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: d1a87129-ba05-4f15-98b1-233618f1774a
-    internal-label: Data ingestion
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
-  - id: f5efb499-54f9-432b-ac5c-599dbac103af
-    internal-label: Data management
+    internal-label: Data collection tags
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User

@@ -4,22 +4,10 @@ title: Attribute-Based Access Control End-to-End Guide
 description: This document provides an end-to-end guide on attribute-based access control in Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-TQID: https://experienceleague.adobe.com/2Pb2COgXO195Flde-cU-t-TWdgsSlcmJIVAtUZJQGm4
+TQID: 'https://experienceleague.adobe.com/2Pb2COgXO195Flde-cU-t-TWdgsSlcmJIVAtUZJQGm4'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -71,13 +59,13 @@ You will:
 
 ## Permissions
 
-[!UICONTROL Permissions] is the area of Experience Cloud where administrators can define user roles and policies to manage permissions for features and objects within a product application.
+[!UICONTROL Permissions] is the area of CX Enterprise where administrators can define user roles and policies to manage permissions for features and objects within a product application.
 
 Through [!UICONTROL Permissions], you can create and manage roles and assign the desired resource permissions for these roles. [!UICONTROL Permissions] also allow you to manage the labels, sandboxes, and users associated with a specific role.
 
 Contact your system administrator to gain access if you do not have admin privileges.
 
-Once you have admin privileges, go to [Adobe Experience Cloud](https://experience.adobe.com/) and sign in using your Adobe credentials. Once logged in, the **[!UICONTROL Overview]** page appears for your organization you have admin privileges for. This page shows the products your organization is subscribed to, along with other controls to add users and admins to the organization. Select **[!UICONTROL Permissions]** to open the workspace for your Experience Platform integration.
+Once you have admin privileges, go to [Adobe CX Enterprise](https://experience.adobe.com/) and sign in using your Adobe credentials. Once logged in, the **[!UICONTROL Overview]** page appears for your organization you have admin privileges for. This page shows the products your organization is subscribed to, along with other controls to add users and admins to the organization. Select **[!UICONTROL Permissions]** to open the workspace for your Experience Platform integration.
 
 ![Image showing the Permissions product being selected in Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
@@ -164,6 +152,8 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 >
 > Assign labels created in the [!UICONTROL Permissions] workspace (such as the audience labels above) to various objects in Adobe Journey Optimizer using [Object Level Access Control](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access)." 
 
+<!-- 
+January safe OLAC for datasets note PLAT-294991
 ## Apply labels to datasets
 
 >[!IMPORTANT]
@@ -184,7 +174,8 @@ Select the ellipsis (`...`) next to the dataset, then select **[!UICONTROL Manag
 
 The **[!UICONTROL Apply access labels]** page appears, allowing you to choose the labels that you want to apply to the dataset. For this use case, select the **[!UICONTROL PHI/ Regulated Health Data]** label, then select **[!UICONTROL Save]**.
 
-![Apply access labels with PHI/Regulated health data selected and highlighting Save.](../images/abac-end-to-end-user-guide/abac-dataset-select-labels.png)
+![Apply access labels with PHI/Regulated health data selected and highlighting Save.](../images/abac-end-to-end-user-guide/abac-dataset-select-labels.png) 
+-->
 
 ## Activate the access control policy {#policy}
 

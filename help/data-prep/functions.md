@@ -4,13 +4,10 @@ solution: Experience Platform
 title: Data Prep Mapping Functions
 description: This document introduces the mapping functions used with Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-TQID: https://experienceleague.adobe.com/GdQ3BXSXU3Josmr2L0hgyzy1InLAB1O5J3Ytk5YeOUk
+TQID: 'https://experienceleague.adobe.com/GdQ3BXSXU3Josmr2L0hgyzy1InLAB1O5J3Ytk5YeOUk'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -265,7 +262,7 @@ For information on the object copy feature, see the section [below](#object-copy
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Generates a pseudo-random ID. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
-| `fpid_to_ecid`| This function takes an FPID string and converts it into an ECID to be used in Adobe Experience Platform and Adobe Experience Cloud applications. | <ul><li>STRING: **Required** The FPID string to be converted into ECID.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
+| `fpid_to_ecid`| This function takes an FPID string and converts it into an ECID to be used in Adobe Experience Platform and Adobe CX Enterprise applications. | <ul><li>STRING: **Required** The FPID string to be converted into ECID.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
 
 {style="table-layout:auto"}
 

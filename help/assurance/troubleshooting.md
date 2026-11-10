@@ -2,16 +2,19 @@
 title: Adobe Experience Platform Assurance troubleshooting guide
 description: This document outlines solutions to common issues when using Adobe Experience Platform Assurance.
 exl-id: 8078e6f6-ca18-4939-a417-40ebf5a52e24
-TQID: https://experienceleague.adobe.com/aePE9uZ-W7DVgPw-g-Wg7oLpOoDhaQEYcIX0RKgxXak
+TQID: 'https://experienceleague.adobe.com/aePE9uZ-W7DVgPw-g-Wg7oLpOoDhaQEYcIX0RKgxXak'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation

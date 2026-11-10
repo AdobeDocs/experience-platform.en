@@ -5,7 +5,21 @@ user-guide-description: Learn how to use AI Assistant to expedite your workflow 
 description: This document lists the table of contents for AI Assistant in Adobe Experience Platform.
 feature: AI Assistant
 role: Admin,User,Developer,Leader
-nudge: true
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+    internal-label: AI assistant
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 ---
 
 # AI Assistant in Adobe Experience Platform {#ai-assistant}

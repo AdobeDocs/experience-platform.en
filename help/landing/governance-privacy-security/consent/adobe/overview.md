@@ -6,28 +6,20 @@ description: Learn how to process customer consent signals in Adobe Experience P
 role: Developer
 feature: Consent
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-TQID: https://experienceleague.adobe.com/7Bz9gXvBHLFLZ2100KmwjJxquxDRaqJWxsL4khIkT-U
+TQID: 'https://experienceleague.adobe.com/7Bz9gXvBHLFLZ2100KmwjJxquxDRaqJWxsL4khIkT-U'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
-subfeature_v2:
+    internal-label: Data collection tags
+  - id: b4cdce0b-478e-4da1-bd14-9772484a2151
+    internal-label: Policies
   - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
     internal-label: Sources
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-    internal-label: XDM
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
+subfeature_v2:
+  - id: a3b3152b-4985-4b09-b52d-53d4801bd726
+    internal-label: Consent
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer

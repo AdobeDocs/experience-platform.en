@@ -4,20 +4,10 @@ title: Segment Export Jobs API Endpoint
 description: Export jobs are asynchronous processes that are used to persist audience members to datasets. You can use the /export/jobs endpoint in the Adobe Experience Platform Segmentation Service API, which allows you to programmatically retrieve, create, and cancel export jobs.
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-TQID: https://experienceleague.adobe.com/2JJ7os9adwfeed-vKOYR8L9rlScxeBtbWcyqyfpUq88
+TQID: 'https://experienceleague.adobe.com/2JJ7os9adwfeed-vKOYR8L9rlScxeBtbWcyqyfpUq88'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
@@ -304,7 +294,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `fields` | A list of the exported fields, separated by commas. If left blank, all fields will be exported. |
 | `mergePolicy` | Specifies the merge policy to govern the exported data. Include this parameter when there are multiple segment definitions being exported. If not provided, the export will take the same merge policy as the given segment definition. |
 | `filter` | An object that specifies the segment definitions that are going to be included in the export job by ID, qualification time, or ingest time, depending on the subproperties listed below. If left blank, all the data will be exported. |
-| `filter.segments` | Specifies the segment definitions to export. Omitting this value will result in all data from all profiles being exported. Accepts an array of segment objects, each containing the following fields:<ul><li>`segmentId`: **(Required if using `segments`)** Segment ID for profiles to be exported.</li><li>`segmentNs` *(Optional)* Segment namespace for the given `segmentID`.</li><li>`status` *(Optional)* An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized"]` which represents all profiles that fall into the segment definition at the current time. Possible values include: `realized` and `exited`.  A value of `realized` means the profile qualifies for the segment definition. A value of `exiting` means the profile is exiting the segment definition.</li></ul> |
+| `filter.segments` | Specifies the segment definitions to export. Omitting this value will result in all data from all profiles being exported. Accepts an array of segment objects, each containing the following fields:<ul><li>`segmentId`: **(Required if using `segments`)** Segment ID for profiles to be exported.</li><li>`segmentNs` *(Optional)* Segment namespace for the given `segmentID`. If you're creating an export job for an audience that is not created with Segmentation Service, use the [audiences API](/help/segmentation/api/audiences.md) to retrieve the namespace.</li><li>`status` *(Optional)* An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized"]` which represents all profiles that fall into the segment definition at the current time. Possible values include: `realized` and `exited`.  A value of `realized` means the profile qualifies for the segment definition. A value of `exiting` means the profile is exiting the segment definition.</li></ul> |
 | `filter.segmentQualificationTime` | Filter based on qualification time for the segment definition. The start time and/or end time can be provided. |
 | `filter.segmentQualificationTime.startTime` | Qualification start time for a segment definition ID for a given status. It not provided, there will be no filter on the start time for a segment definition ID qualification. The timestamp must be provided in [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format. |
 | `filter.segmentQualificationTime.endTime` | Segment qualification end time for a segment definition ID for a given status. It not provided, there will be no filter on the end time for a segment definition ID qualification. The timestamp must be provided in [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format. |

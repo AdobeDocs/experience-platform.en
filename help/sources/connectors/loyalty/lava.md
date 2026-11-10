@@ -1,6 +1,12 @@
 ---
 title: LAVA
 description: Learn about the LAVA source on Adobe Experience Platform
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL LAVA]
 
@@ -12,7 +18,7 @@ Before you can use this source connector, ensure the following:
 
 * You are an existing [!DNL LAVA] customer and have been granted Adobe export rights.
 * You have a [LAVA Console](https://app.lava.ai/) account with either "Administrator" or "Export Manager" access.
-* (Recommended) You have sandbox manager permissions in Adobe Experience Cloud.
+* (Recommended) You have sandbox manager permissions in Adobe CX Enterprise.
 
 ## Data streams
 

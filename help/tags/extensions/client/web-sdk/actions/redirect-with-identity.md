@@ -2,44 +2,28 @@
 title: Redirect with identity
 description: Allows sharing a visitor identifier across your organization's domains.
 exl-id: 81ef1361-20eb-48d7-83c4-e77f459eeade
-TQID: https://experienceleague.adobe.com/A2xsYOGctKKKfr91oLiHlN5Rbp9YhZu-s6UQfjCOWO8
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-    internal-label: Advertising
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-    internal-label: Acrobat Sign
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
+TQID: 'https://experienceleague.adobe.com/A2xsYOGctKKKfr91oLiHlN5Rbp9YhZu-s6UQfjCOWO8'
 feature_v2:
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-    internal-label: Reporting
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-    internal-label: Implementation
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-    internal-label: Data collection
+    internal-label: Data collection tags
+  - id: d5947817-d24b-4ba3-8126-2c3d66e9422b
+    internal-label: Web SDK
+  - id: a50ad69b-1331-40e9-b634-531a085a6a54
+    internal-label: Identities
 subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-    internal-label: Tags
-  - id: ee602049-8a18-43df-9299-a689a025a371
-    internal-label: Use cases
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
+  - id: 1a2b3c4d-0003-4003-8003-000000000003
+    internal-label: Data collection tags extensions
+  - id: 1a2b3c4d-0006-4006-8006-000000000006
+    internal-label: Data collection tags rules
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-    internal-label: Reporting
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-    internal-label: Implementation
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-    internal-label: Customer experience
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-    internal-label: Personalization
+  - id: e9001ce2-5245-4a8e-8601-dd958009072f
+    internal-label: Web experience
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Redirect with identity
 

@@ -2,33 +2,22 @@
 title: Acxiom Real ID&trade; Audience Connection
 description: Use the [!DNL Acxiom Real ID&trade; Audience Connection] destination to enhance and activate audiences across platforms such as [!DNL Altice], [!DNL Ampersand], and [!DNL Comcast].
 exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
-TQID: https://experienceleague.adobe.com/PmcpDEdEVvNyzaCjV59blq246oiBfDCY5zn68lqDFhs
+TQID: 'https://experienceleague.adobe.com/PmcpDEdEVvNyzaCjV59blq246oiBfDCY5zn68lqDFhs'
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
 feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-    internal-label: Segmentation
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-    internal-label: Administration
-  - id: c132d929-fa62-4271-803e-b823be07b914
-    internal-label: Profile
-subfeature_v2:
-  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-    internal-label: Access control
   - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
     internal-label: Permissions
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-    internal-label: Federated Audience Composition
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-    internal-label: Segments
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-    internal-label: Audiences
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
     internal-label: Customer experience
@@ -64,7 +53,7 @@ For example, the Marketing Operations department at a global financial services 
 Before configuring the [!DNL Acxiom Real ID Audience Connection] destination, complete the following prerequisites.
 
 * **Confirm terms of use:** Read and sign [!DNL Acxiom]'s Terms of Use Agreement. You receive the link to the agreement once your executed sales order is complete. Until you sign the agreement, the [!DNL Acxiom Real ID Audience Connection] destination card does not appear in the [!DNL Experience Platform] destination catalog. After you accept and sign the agreement, [!DNL Adobe] completes your setup and the [!DNL Acxiom Real ID Audience Connection] destination card becomes visible.
-* **Know your [!DNL Adobe] organization ID:** Your [!DNL Adobe] organization ID is needed to complete your Terms of Use Agreement. See [!DNL Adobe]'s *Organizations in Experience Cloud* topic for details on how to [view your organization ID](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
+* **Know your [!DNL Adobe] organization ID:** Your [!DNL Adobe] organization ID is needed to complete your Terms of Use Agreement. See [!DNL Adobe]'s *Organizations in CX Enterprise* topic for details on how to [view your organization ID](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
 * **Obtain a license for [!DNL Acxiom]'s [!DNL Real ID] product:** After you obtain a license, make [!DNL Acxiom]'s [!DNL Real ID] available within [!DNL Real-Time CDP]. See [Acxiom Data Enhancement](/help/destinations/catalog/data-partner/acxiom-data-enhancement.md) for details.
 
 ## Supported identities {#supported-identities}
