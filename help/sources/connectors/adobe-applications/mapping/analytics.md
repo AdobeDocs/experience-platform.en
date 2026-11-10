@@ -304,9 +304,9 @@ These fields have a single source, but map to **multiple** XDM locations.
 
 Select fields (known as "post values") contain data after Adobe has adjusted their values using Processing rules, VISTA rules, and lookup tables. Most post values have a pre-processed counterpart. 
 
-The Analytics source connector sends pre-processed data into a dataset in Experience Platform. You can transform this data to its post-processed counterpart using transformations. To learn more about performing these transformations using Query Service, see [Adobe-defined functions](/help/query-service/sql/adobe-defined-functions.md) in the Query Service user guide.
+The Analytics source connector does not provide the fully processed POST dataset from the report suite. Instead, it streams mid-values: a partially processed copy of each hit captured after pre-processing (such as Processing rules) but before visit- and visitor-level processing. As a result, the ingested dataset does not include post-processed context such as visit number.
 
-To learn more about performing these transformations using Query Service, see [Adobe-defined functions](/help/query-service/sql/adobe-defined-functions.md) in the Query Service user guide.
+You can optionally use Query Service to calculate sessionization or attribution on the ingested Experience Event data. These calculations do not recreate all Analytics post-processing. For examples, see [Adobe-defined functions](/help/query-service/sql/adobe-defined-functions.md) in the Query Service user guide.
 
 +++Select to view a table of deprecated advanced mapping fields
 
