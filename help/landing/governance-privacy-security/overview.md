@@ -106,7 +106,7 @@ All Experience Platform data is encrypted in transit and at rest. See the docume
 
 ### Access control {#access-control}
 
-Experience Platform uses the Adobe Admin Console to provide role-based access control to various Experience Platform capabilities. This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes.
+Use [Adobe Admin Console](https://adminconsole.adobe.com) to grant users access to Adobe Experience Platform. Use [!UICONTROL Permissions] in Experience Platform to assign roles, permissions, and sandbox access.
 
 See the [access control overview](../../access-control/home.md) for more information.
 
