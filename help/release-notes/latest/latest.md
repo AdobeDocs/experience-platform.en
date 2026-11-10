@@ -123,8 +123,8 @@ Use [!DNL Privacy Service] to manage privacy requests and ensure compliance with
 
 | Feature | Description |
 | --- | --- |
-| [India Digital Personal Data Protection Act support](help/privacy-service/regulations/overview.md) | [!DNL Privacy Service] now supports requests under the India Digital Personal Data Protection Act. You can select India when you create a privacy request in the [!DNL Privacy Service] UI or API. |
-| [Sandbox-specific data lake privacy requests](/help/privacy-service/api/privacy-jobs.md#sandbox-scope) | You can now use the optional `sandboxIds` property to limit Experience Platform data lake privacy processing to specific sandboxes in your organization. If you omit the property, data lake processing continues to apply across the organization. Sandbox scoping applies only to the data lake product. |
+| [India Digital Personal Data Protection Act support](../../privacy-service/regulations/overview.md) | [!DNL Privacy Service] now supports requests under the India Digital Personal Data Protection Act. You can select India when you create a privacy request in the [!DNL Privacy Service] UI or API. |
+| [Sandbox-specific data lake privacy requests](../../privacy-service/api/privacy-jobs.md#sandbox-scope) | You can now use the optional `sandboxIds` property to limit Experience Platform data lake privacy processing to specific sandboxes in your organization. If you omit the property, data lake processing continues to apply across the organization. Sandbox scoping applies only to the data lake product. |
 
 {style="table-layout:auto"}
 
