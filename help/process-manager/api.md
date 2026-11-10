@@ -263,7 +263,7 @@ A successful request returns HTTP status 200 with information about the process 
             "taskId": "sample-task",
             "taskType": "wait",
             "attempt": 1,
-            "occurredAt": "2026-10-23T18:33:07.402Z",
+            "occurredAt": "2026-10-23T18:33:07.402Z"
         }
     ],
     "triggeredBy": "MANUAL"
@@ -338,7 +338,7 @@ A successful request returns HTTP status 200 with information about the specifie
             "taskId": "sample-task",
             "taskType": "wait",
             "attempt": 1,
-            "occurredAt": "2026-10-23T18:33:07.402Z",
+            "occurredAt": "2026-10-23T18:33:07.402Z"
         }
     ],
     "triggeredBy": "MANUAL"
@@ -412,7 +412,7 @@ A successful request returns HTTP status 202 Accepted with the accepted run deta
     "imsOrg": "{ORG_ID}",
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "prod",
-    "state": "RUNNING",
+    "state": "PENDING",
     "submittedAt": "2026-10-23T18:32:52.402Z",
     "startedAt": "2026-10-23T18:32:52.402Z",
     "events": [
@@ -421,7 +421,7 @@ A successful request returns HTTP status 202 Accepted with the accepted run deta
             "taskId": "sample-task",
             "taskType": "wait",
             "attempt": 1,
-            "occurredAt": "2026-10-23T18:33:07.402Z",
+            "occurredAt": "2026-10-23T18:33:07.402Z"
         }
     ],
     "triggeredBy": "MANUAL"
