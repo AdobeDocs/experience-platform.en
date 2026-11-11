@@ -1139,7 +1139,7 @@ For information about alert rules available in Adobe Journey Optimizer, includin
 
 ## Profile {#profile}
 
-The following alert rules are apply to [Real-Time Customer Profile](../../profile/home.md).
+The following alert rules apply to [Real-Time Customer Profile](../../profile/home.md).
 
 >[!BEGINTABS]
 
