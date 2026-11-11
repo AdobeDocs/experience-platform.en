@@ -1,12 +1,19 @@
 ---
-product: adobe experience platform
 solution: Experience Platform
 audience: user
 user-guide-title: Run and Operate Guide
 user-guide-description: Inspect, troubleshoot, and optimize your Adobe Experience Platform implementations with the Run and Operate tools. Gain visibility into scheduled batch activations, identify configuration issues, and improve system reliability.
 description: This document lists the table of contents for Adobe Experience Platform Run and Operate tools
 role: Admin, User
-nudge: true
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+autotag-review: '2026-11-05T18:40:02.188Z'
 ---
 
 # Run and Operate guide help {#run-and-operate}

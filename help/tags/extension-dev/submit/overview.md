@@ -3,38 +3,24 @@ title: Extension Submission Process Overview
 description: Learn the steps for submitting your extension in Adobe Experience Platform from development to release.
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
 TQID: 'https://experienceleague.adobe.com/MQRu-Cm-jvJwp7XGI26OLzsITouYdP7cAeKRQ-OLH-U'
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-    internal-label: Advertising
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-    internal-label: CX Enterprise
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-    internal-label: Analytics
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-    internal-label: Experience Platform
 feature_v2:
   - id: e08599ea-8888-4294-ba74-3ba0a7762a46
     internal-label: Data collection tags
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-    internal-label: Developer
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-    internal-label: User
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-    internal-label: Admin
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-    internal-label: Leader
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-    internal-label: Customer experience
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-    internal-label: Data collection
+  - id: f5a6b7c8-5005-4005-9005-500000000005
+    internal-label: Extension management
+subfeature_v2:
+  - id: 1a2b3c4d-0003-4003-8003-000000000003
+    internal-label: Data collection tags extensions
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Extension submission process overview
 
 Submitting an extension to the data collection catalog in Adobe Experience Platform can appear to be a daunting task. This document provides a step by step guide to submitting your extension through the use of individual sequential guides. In order to submit your extension, you will need to complete the following steps:
 
-1. [Set up an Adobe Experience Cloud organization](./setup.md)
+1. [Set up an Adobe organization](./setup.md)
 1. [Grant user access for extension development](./access.md)
 1. [Develop an extension](./develop.md)
 1. [Create an exchange listing](./create-listing.md)

@@ -30,7 +30,7 @@ This document covers essential concepts related to processing privacy requests f
 >
 >This guide only covers how to make privacy requests for the Profile data store in Experience Platform. If you also plan to make privacy requests for the Experience Platform data lake, refer to the guide on [privacy request processing in the data lake](../catalog/privacy.md) in addition to this tutorial.
 >
->For steps on how to make privacy requests for other Adobe Experience Cloud applications, refer to the [Privacy Service documentation](../privacy-service/experience-cloud-apps.md).
+>For steps on how to make privacy requests for other Adobe CX Enterprise applications, refer to the [Privacy Service documentation](../privacy-service/experience-cloud-apps.md).
 
 >[!IMPORTANT]
 >
@@ -40,7 +40,7 @@ This document covers essential concepts related to processing privacy requests f
 
 This guide requires a working understanding of the following [!DNL Experience Platform] components:
 
-* [[!DNL Privacy Service]](../privacy-service/home.md): Manages customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
+* [[!DNL Privacy Service]](../privacy-service/home.md): Manages customer requests for accessing, opting out of sale, or deleting their personal data across Adobe CX Enterprise applications.
 * [[!DNL Identity Service]](../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
 * [[!DNL Real-Time Customer Profile]](home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
@@ -122,7 +122,9 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Experience Platform processes privacy requests across all [sandboxes](../sandboxes/home.md) belonging to your organization. As a result, any `x-sandbox-name` header included in the request is ignored by the system.
+>Privacy Service processes Profile requests across all [sandboxes](../sandboxes/home.md) belonging to your organization. The `x-sandbox-name` header is ignored and does not limit Profile processing.
+>
+>The optional `sandboxIds` request property limits processing only for the Experience Platform data lake (`aepDataLake`). If a privacy request includes both the Profile store and data lake, the specified sandbox IDs limit the data lake portion of the request, while Profile store processing remains organization-wide.
 
 **Product response**
 

@@ -6,7 +6,17 @@ user-guide-description: Use machine learning to develop, train, and score models
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-nudge: true
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: b931a258-cc05-45d6-9273-a623a5670cdd
+    internal-label: Data science workspace
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 
 # Data Science Workspace {#data-science-workspace}

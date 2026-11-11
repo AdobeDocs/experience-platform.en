@@ -44,7 +44,7 @@ This tutorial workflow relies on several Adobe Experience Platform services as p
 
 ## Create schemas for your data
 
-As part of the initial setup, Bodea's IT department needs to create an XDM schema to ensure that their data follows a standard format when being brought into Experience Platform, and is actionable across different Experience Platform services and Adobe Experience Cloud products (such as Adobe Analytics and Adobe Target). 
+As part of the initial setup, Bodea's IT department needs to create an XDM schema to ensure that their data follows a standard format when being brought into Experience Platform, and is actionable across different Experience Platform services and Adobe CX Enterprise products (such as Adobe Analytics and Adobe Target).
 
 >[!WARNING]
 >

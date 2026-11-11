@@ -1,6 +1,6 @@
 ---
 title: Privacy Service API Guide
-description: Learn how to use the Privacy Service API to programmatically manage privacy jobs for supported Adobe Experience Cloud applications.
+description: Learn how to use the Privacy Service API to programmatically manage privacy jobs for supported Adobe CX Enterprise applications.
 role: Developer
 exl-id: 665466ac-2447-4a9d-a8cf-62092c09e431
 TQID: https://experienceleague.adobe.com/R3W8RDh35UrxTL-ZQAHrRC6nr1Ix3snMEBD8v87nUY8
@@ -28,7 +28,7 @@ To view all available endpoints and CRUD operations, visit the [Privacy Service 
 
 ## Privacy jobs
 
-When Privacy Service receives a request to access or delete the personal data of a subject, the system creates privacy jobs to fulfill that request. Each privacy job contains identity information related to the data subject, metadata about the Adobe Experience Cloud product that the job applies to, and the job's processing status. 
+When Privacy Service receives a request to access or delete the personal data of a subject, the system creates privacy jobs to fulfill that request. Each privacy job contains identity information related to the data subject, metadata about the Adobe CX Enterprise product that the job applies to, and the job's processing status.
 
 The `/jobs` endpoint allows you to create and retrieve privacy jobs for your organization. To learn how to use this endpoint, see the [privacy jobs endpoint guide](./privacy-jobs.md).
 

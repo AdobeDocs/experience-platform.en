@@ -121,13 +121,14 @@ For more information, read the [Destinations overview](/help/destinations/home.m
 
 ## [!DNL Privacy Service] {#privacy}
 
-Several legal and organizational regulations give users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+Several legal and organizational regulations give users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe CX Enterprise applications, facilitating automated compliance with legal and organizational privacy regulations.
 
 **New features**
 
 | Feature | Description |
 | --- | --- |
 | India Digital Personal Data Protection Act support | [!DNL Privacy Service] now supports requests under the India Digital Personal Data Protection Act. You can select India when you create a privacy request in the [!DNL Privacy Service] UI or API. |
+| [Sandbox-specific data lake privacy requests](/help/privacy-service/api/privacy-jobs.md#sandbox-scope) | You can now use the optional `sandboxIds` property to limit Experience Platform data lake privacy processing to specific sandboxes in your organization. If you omit the property, data lake processing continues to apply across the organization. Sandbox scoping applies only to the data lake product. |
 
 {style="table-layout:auto"}
 

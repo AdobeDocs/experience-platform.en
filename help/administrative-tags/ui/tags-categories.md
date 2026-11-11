@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;tags categories;tags;
 title: Tags Categories
-description: This document provides information on managing unified tags categories in Adobe Experience Cloud
+description: This document provides information on managing unified tags categories in Adobe CX Enterprise
 exl-id: 0369d4e1-c091-4702-890a-3882a4916217
 TQID: https://experienceleague.adobe.com/jJ5OFJ-NtmnH8NGmsmP2OAYKJZAf-gK0sYlrieLlaWU
 product_v2:

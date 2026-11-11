@@ -97,7 +97,7 @@ Each dataset in Experience Platform supports only one primary identity type.
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Primary identity namespace"
->abstract="The primary identity namespace is the attribute that uniquely ties a record to a consumer's profile in Experience Platform. The primary identity field for a dataset is defined by the schema that the dataset is based on. In this column, you must provide the primary identity namespace (such as `email` for email addresses or `ecid` for Experience Cloud IDs) that matches the dataset's schema. To learn more, see the Data lifecycle UI guide."
+>abstract="The primary identity namespace is the attribute that uniquely ties a record to a consumer's profile in Experience Platform. The primary identity field for a dataset is defined by the schema that the dataset is based on. In this column, you must provide the primary identity namespace (such as `email` for email addresses or `ecid` for ECIDs) that matches the dataset's schema. To learn more, see the Data lifecycle UI guide."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"

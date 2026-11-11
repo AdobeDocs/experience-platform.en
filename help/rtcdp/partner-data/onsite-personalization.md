@@ -49,7 +49,7 @@ topic_v2:
 >
 >This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
 
-Learn how to use partner-aided recognition to deliver personalized experiences to your web property visitors. Use this tutorial to understand the implementation sequence of various elements in Experience Platform and other Experience Cloud solutions to display a personalized experience to authenticated and unauthenticated visitors.
+Learn how to use partner-aided recognition to deliver personalized experiences to your web property visitors. Use this tutorial to understand the implementation sequence of various elements in Experience Platform and other CX Enterprise solutions to display a personalized experience to authenticated and unauthenticated visitors.
 
 ![An infographic that describes how to use partner-provided attributes to deliver personalized experiences to your visitors.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png)
 
@@ -75,9 +75,9 @@ When planning to use partner-provided attributes to deliver personalized experie
 * To what extent are you comfortable delivering personalization in different channels and for different use cases based on probabilistically derived datasets, versus deterministically confirmed attributes?
 * How should the experience for a pre-authenticated but recognized visitor change when they authenticate?
 
-### UI functionality, Experience Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}
+### UI functionality, Experience Platform components, and CX Enterprise products that you will use {#ui-functionality-and-elements}
 
-To successfully implement this use case, you must use multiple areas of Real-Time Customer Data Platform and other Experience Cloud solutions. Make sure that you have the necessary [attribute-based access control permissions](/help/access-control/abac/overview.md) for all these areas, or ask your system administrator to grant you the necessary permissions. 
+To successfully implement this use case, you must use multiple areas of Real-Time Customer Data Platform and other CX Enterprise solutions. Make sure that you have the necessary [attribute-based access control permissions](/help/access-control/abac/overview.md) for all these areas, or ask your system administrator to grant you the necessary permissions.
 
 * Data Collection
   * [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)
@@ -212,7 +212,7 @@ Get complete information on [how to install Web SDK](https://experienceleague.ad
 
 #### Install Experience Cloud ID Service extension
 
-Use the [Experience Cloud ID Service extension](/help/tags/extensions/client/id-service/overview.md) to create a unique device-based first-party identity for visitors across all Experience Cloud solutions. Search for **[!UICONTROL ID Service]** in the extension catalog, and install it. Keep all the default settings when installing the extension.
+Use the [Experience Cloud ID Service extension](/help/tags/extensions/client/id-service/overview.md) to create a unique device-based first-party identity for visitors across all CX Enterprise solutions. Search for **[!UICONTROL ID Service]** in the extension catalog, and install it. Keep all the default settings when installing the extension.
   
 ![View of the ID Service extension in the extensions catalog.](/help/rtcdp/assets/partner-data/onsite-personalization/id-service-extension.png)
 
@@ -224,7 +224,7 @@ Select the box icon on the right for the development environment, and copy the s
 
 ![Select box icon highlighted in the Environments section of the Data Collection UI.](/help/rtcdp/assets/partner-data/onsite-personalization/select-box-icon.png)
 
-You must add this code snippet to the very top of your website. As a result, your website will make a call to the Adobe Edge Network to retrieve JavaScript logic that will be loaded and executed on the page. This allows for functionality like visitor ID generation, data collection, and real-time experience personalization to work.
+You must add this code snippet to the very top of your website. As a result, your website will make a call to the Adobe Edge Network to retrieve JavaScript logic that will be loaded and executed on the page. This allows for functionality like ECID generation, data collection, and real-time experience personalization to work.
 
 #### Set up data elements
 

@@ -29,7 +29,7 @@ This destination allows customers to share first-party audiences with any or all
 
 * Hashed email ID, which is converted to a [!DNL LiveRamp RampID] or [!DNL Unified ID 2.0] (UID2.0) for targeting in DSP
 
-* Experience Cloud ID (ECID) and Adobe Advertising third-party cookies
+* ECID and Adobe Advertising third-party cookies
 
 * Mobile advertising IDs (MAIDs):
 
@@ -65,9 +65,9 @@ Advertisers have the choice to share audiences either with authenticated first-p
 
     * For each IDFA, include the value `IDFA` in an IdentityMap column.
 
-* The Experience Cloud organization ID for the Experience Platform account. You can find your ID on your Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) user profile page.
+* The organization ID for the Experience Platform account. You can find your ID on your Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) user profile page.
 
-* A [[!DNL Real-Time CDP] source in DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) to receive audiences for campaign activation. Your Adobe Account Team will create the source using your Experience Cloud organization ID.
+* A [[!DNL Real-Time CDP] source in DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) to receive audiences for campaign activation. Your Adobe Account Team will create the source using your organization ID.
 
 * The source key for the [!DNL DSP] account or advertiser, which is generated when a [[!DNL Real-Time CDP] source is created in [!DNL DSP]](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). Your [!DNL DSP] account team will share this key with you. You will use it within Experience Platform to create a destination connection to the Advertising DSP destination, as explained below.
 
@@ -90,7 +90,7 @@ The Adobe Advertising DSP destination supports the activation of identities desc
 | Target Identity | Description | Considerations |
 | --------------- | ----------- | -------------- |
 | `email_lc_sha256` | Email addresses hashed with the SHA256 algorithm | Experience Platform supports both plain text and SHA256-hashed email addresses. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option to have Experience Platform automatically hash the data on activation. |
-| `ECID` | First-party cookie for Experience Cloud | Required to create cookie-based audiences. |
+| `ECID` | First-party cookie for CX Enterprise | Required to create cookie-based audiences. |
 | `adcloud` | Third-party cookie for Adobe Advertising | Required to create cookie-based audiences. |
 | `GAID` | [!DNL Android] device ID | Required for targeting [!DNL Android] devices. |
 | `IDFA` | [!DNL iOS] device ID | Required for targeting [!DNL iOS] devices. |
@@ -184,7 +184,7 @@ The identity mappings for this destination are partially preconfigured. Review t
 
 The following identity mappings are **preconfigured and automatically populated** during the audience activation workflow:
 
-* **`ECID`** (Experience Cloud ID)
+* **`ECID`**
 * **`adcloud`** (Adobe Advertising third-party cookie)
 
 ![Screenshot of the identity mapping section showing cookie identifiers, Hashed Email, IDFA, and GAID options.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/identity-mapping.png)

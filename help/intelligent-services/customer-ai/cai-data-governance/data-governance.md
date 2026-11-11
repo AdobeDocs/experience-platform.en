@@ -50,4 +50,4 @@ You can learn more about this feature here:
 
 [Getting Started in Customer AI](../../customer-ai/getting-started.md)
 [Adobe Experience Platform & Applications](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
-[Adobe Experience Cloud architecture diagrams](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html)
+[Adobe CX Enterprise architecture diagrams](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html)
