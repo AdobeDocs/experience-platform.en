@@ -17,7 +17,7 @@ role_v2:
 
 >[!IMPORTANT]
 >
->Flexible audience evaluation will be transitioning to Flexible Batch Schedules in March 2027. As a result, if you have access to both Flexible Batch Schedules and flexible audience evaluation, flexible audience evaluation access will be disabled.
+>Flexible audience evaluation will be transitioning to Flexible Batch Schedules in March 2027. As a result, if you have access to both Flexible Batch Schedules and flexible audience evaluation, access to flexible audience evaluation be disabled.
 
 Batch segmentation is an evaluation method that lets you move profile data all at once to create a corresponding audience. Previously, these batch audiences relied on a single, fixed segmentation job that ran once a day.
 
