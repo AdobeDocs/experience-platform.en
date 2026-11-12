@@ -136,7 +136,7 @@ Before continuing Profile with unstructured data set up, you'll need to complete
 
 - Enable [Identity Graph Linking Rules](/help/identity-service/identity-graph-linking-rules/overview.md)
 - Create a profile-enabled dataset and ingest at least one profile into this dataset
-  - This lets Profile with unstructured data create the profile narrative. This dataset is **separate** from the dataset where the unstructured data is ingested.
+  - This lets Profile with unstructured data create the profile narrative. This dataset is **separate** from the dataset where conversations and other unstructured data is ingested.
 
 Once Profile with unstructured data has been enabled, you can start using this feature by setting up the following steps:
 
