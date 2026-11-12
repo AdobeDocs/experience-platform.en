@@ -15,9 +15,13 @@ role_v2:
 >
 >Flexible Batch Schedules are currently available under **Limited Availability**. For more information, contact Adobe Customer Care.
 
+>[!IMPORTANT]
+>
+>Flexible audience evaluation will be transitioning to Flexible Batch Schedules in March 2027. As a result, if you have access to both Flexible Batch Schedules and flexible audience evaluation, flexible audience evaluation access will be disabled.
+
 Batch segmentation is an evaluation method that lets you move profile data all at once to create a corresponding audience. Previously, these batch audiences relied on a single, fixed segmentation job that ran once a day.
 
-With Flexible Batch Schedules, you control when your audiences are evaluated, giving you more flexibility to prioritize your evaluation timings so you can better scale to larger audience volumes.
+With Flexible Batch Schedules, you control when your audiences are evaluated, giving you more flexibility to prioritize your evaluation timings, including running multiple schedules a day, so you can better scale to larger audience volumes.
 
 ## Create a schedule {#create-schedule}
 
