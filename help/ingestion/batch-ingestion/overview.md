@@ -28,6 +28,8 @@ The API endpoints used in this guide is part of the [Batch Ingestion API](https:
 
 ### [!DNL Data Ingestion] prerequisites
 
+Before uploading batch data, ensure that you meet the following prerequisites:
+
 - Data to upload must be either in Parquet or JSON formats.
 - A dataset created in the [[!DNL Catalog services]](../../catalog/home.md).
 - Contents of the Parquet file must match a subset of the schema of the dataset being uploaded into.
@@ -35,17 +37,23 @@ The API endpoints used in this guide is part of the [Batch Ingestion API](https:
 
 ### Batch ingestion best practices
 
-- The recommended batch size is between 256 MB and 100 GB.
-- Each batch should contain at most 1500 files.
+For efficient batch ingestion, follow these recommendations for batch size and file count:
+
+- Keep the size of each batch below 100 GB.
+- Keep each batch to fewer than 10000 files.
 
 ### Batch ingestion constraints
 
-Batch data ingestion has some constraints:
+The following limits apply to batch ingestion through the API and batch sources:
 
-- Maximum number of files per batch: 1500
-- Maximum batch size: 100 GB
+- Maximum number of files per batch: 25000
+- Maximum batch size: 1 TB
 - Maximum number of properties or fields per row: 10000
 - Maximum number of batches on data lake per minute, per user: 2000
+- Maximum ingestion throughput via the batch ingestion API: 20 GB per hour
+- Maximum ingestion throughput via batch sources: 200 GB per hour
+
+For performance recommendations and ingestion limits, see the [data ingestion guardrails](../guardrails.md).
 
 >[!NOTE]
 >
