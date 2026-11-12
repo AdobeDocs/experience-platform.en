@@ -135,8 +135,8 @@ If you fulfill all of these prerequisites, contact Adobe Customer Care for more 
 Before continuing Profile with unstructured data set up, you'll need to complete the following steps:
 
 - Enable [Identity Graph Linking Rules](/help/identity-service/identity-graph-linking-rules/overview.md)
-- Create a profile-enabled dataset for customer attributes
-  - Ingest at least one profile into this dataset
+- Create a profile-enabled dataset and ingest at least one profile into this dataset
+  - This lets Profile with unstructured data create the profile narrative. This dataset is **separate** from the dataset where the unstructured data is ingested.
 
 Once Profile with unstructured data has been enabled, you can start using this feature by setting up the following steps:
 
@@ -160,7 +160,7 @@ For the standard simple identity with raw text use case, you can use an Experien
 
 >[!IMPORTANT]
 >
->Do **not** enable either the unstructured data schema or the unstructured data dataset for Profile or Identity.
+>Do **not** enable the unstructured data schema for Profile. or the unstructured data dataset for Profile and Identity.
 
 You'll first need to create an XDM ExperienceEvent schema for the dataset. This schema needs to include the following information:
 
@@ -170,6 +170,10 @@ You'll first need to create an XDM ExperienceEvent schema for the dataset. This 
 To learn how to create a schema, read the [create a schema guide](/help/xdm/tutorials/create-schema-ui.md).
 
 ### Create a dataset
+
+>[!IMPORTANT]
+>
+>Do **not** enable the unstructured data dataset for Profile or Identity.
 
 After you create the schema, you can create a dataset that uses this schema. To learn how to create a dataset based off of an existing schema, read the [create a dataset guide](/help/catalog/datasets/user-guide.md#schema).
 
