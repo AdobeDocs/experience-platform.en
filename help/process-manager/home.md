@@ -34,3 +34,5 @@ In the following scenario, you can ingest data from a dataset, run it through Da
 ## Next steps
 
 To learn how to use the Process Manager UI, read the [Process Manager UI guide](/help/process-manager/ui.md). To learn how to use the API to monitor your processes, read the [Process Manager API guide](/help/process-manager/api.md).
+
+Additionally, Process Manager skills are available for use in Coworker. For more information on available skills in Coworker, read the [Coworker Chat workflows guide](https://experienceleague.adobe.com/en/docs/coworker/content/chat/use-cases/workflows).
