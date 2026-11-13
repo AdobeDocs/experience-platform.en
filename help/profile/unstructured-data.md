@@ -3,19 +3,19 @@ title: Real-Time Customer Profile with Unstructured Data
 description: Learn how to use Real-Time Customer Profile with unstructured data, which lets you have access to unprocessed data. This lets you better personalize conversations since the customer context can be shared across multiple platforms.
 ---
 
-# Personalize customer conversations using Real-Time Customer Profile with unstructured data
+# Personalize customer conversations and activate customer intent using Real-Time Customer Profile with unstructured data
 
 >[!AVAILABILITY]
 >
 >This feature is currently in **beta**. The functionality and documentation are subject to change. To participate in this beta, contact Adobe Customer Care or your account representative.
 
-In Adobe Experience Platform, you can consolidate your customer data into a unified view by combining data from multiple channels with Real-Time Customer Profile. With support for unstructured data, Experience Platform extends these capabilities, semantically letting you use conversational and other unstructured customer data as part of the profile building blocks.
+In Adobe Experience Platform, you can consolidate your customer data into a unified view by combining data from multiple channels with Real-Time Customer Profile. Real-Time Customer Profile with unstructured data extends existing customer profiles with conversational and other text-based customer data. This lets customer-facing agents use configured profile context and conversation history, and lets marketers define signals for audience qualification and downstream personalization.
 
 ## Understanding Profile with unstructured data {#understanding}
 
 Real-Time Customer Profile currently combines structured data from multiple channels, including online, offline, CRM, and third party, consolidating this data into a unified view that offers an actionable and timestamped account of every customer interaction. However, this doesn't cover unstructured data ingestion, meaning data from conversations, transcripts, or other multi-modal data (such as PDFs or images) are unavailable to be used with Profile.
 
-Profile with unstructured data lets you have access to unprocessed data, which lets you better personalize conversations since the customer context will continue to be shared across multiple platforms, including Brand Concierge. 
+Profile with unstructured data makes conversational and other text-based customer data available for customer context and signal extraction, letting you personalize interactions across supported agents and channels.
 
 Profile with unstructured data provides the following capabilities to Experience Platform customers:
 
@@ -25,29 +25,107 @@ Profile with unstructured data provides the following capabilities to Experience
 
 ## Use cases {#use-cases}
 
-Profile with unstructured data lets you use conversational data as an activation signal for further engagements, which allows you to more easily drive inbound personalizations and outbound activations. As a result, you can use these profiles in a variety of use cases:
+Profile with unstructured data lets you use conversational data as an activation signal for further engagements, which allows you to more easily drive inbound personalizations and outbound activations. As a result, you can use these profiles in a variety of use cases.
 
-- **Interest-based activation**: As a retail business, an authenticated shopper mentions a dietary preference in conversation. The extracted signal qualifies them for a "gluten-free" interest audience, which can be used for inbound and outbound activation such as tailored offers and journeys.
-- **Negative-experience suppression**: As a big-box retail company, frustration is detected in a customer's conversation. This customer is then suppressed from a promotional audience to avoid sending a tone-deaf outbound message.
-- **Intent-based routing and next-session personalization**: As a financial service or fintech company, a customer mentions a life event (such as "married", "moved states", or "new job") in a conversation. These keywords are extracted and used to personalize their next session to match the customer to an advisor who has the relevant domain expertise.
+### Conversational personalization
+
+>[!BEGINTABS]
+
+>[!TAB Retail]
+
+A shopper asks for workout clothing. The conversational AI agent can leverage Profile with unstructured data to tailor their recommendations based off of the shopper's loyalty tier, activewear preferences, and known interests.
+
+>[!TAB Travel and hospitality]
+
+A traveler asks what trip would best suit them. The conversational AI agent can leverage Profile with unstructured data to tailor their recommendations based off of the user's preferred departure airport, loyalty status, and travel preferences.
+
+>[!TAB Financial services]
+
+A customer asks about credit cards. The conversational AI agent can leverage Profile with unstructured data to tailor their recommendations based off of their relationship tier and existing card holdings to compare different cards.
+
+>[!TAB Telecommunications]
+
+A subscriber asks about phones and plans. The conversational AI agent can leverage Profile with unstructured data to tailor their recommendations based off of their current plan, existing device, and loyalty status.
+
+>[!TAB Automotive]
+
+A visitor to a car dealership has previously shown interest in financing options. The conversational AI agent can leverage Profile with unstructured data to use that known interest and bring in relevant loan and leasing options to the conversation.
+
+>[!TAB B2B]
+
+A visitor previously showed interest in tax-advisory services. The conversational AI agent can leverage Profile with unstructured data to tailor their recommendations and recommend relevant services.
+
+>[!ENDTABS]
+
+### Signal extraction and activation
+
+>[!BEGINTABS]
+
+>[!TAB Retail]
+
+A shopper mentions training for a trail half-marathon in freezing, windy conditions. Profile with unstructured data can extract the outdoor-performance intent for audience qualification, and send relevant apparel offers on the website and by email for cold-weather training apparel.
+
+>[!TAB Travel and hospitality]
+
+A traveler describes an anniversary trip to Japan, including interest in a traditional ryokan, onsen, and tea ceremony. Profile with unstructured data can extract this Japan interest for audience qualification and present relevant travel offers, including a personalized website banner and an anniversary "getaway" email.
+
+>[!TAB Financial services]
+
+A customer mentions wanting to review their retirement savings. Profile with unstructured data can extract this "retirement planning" intent for audience qualification, and set up personalized follow ups including a website invitation or email encouraging an appointment with their assigned advisor.
+
+>[!TAB Telecommunications]
+
+A subscriber describes their phone with poor battery life and a cracked screen, mentioning that they're ready to upgrade their phone. Profile with unstructured data can extract the intent of "ready to upgrade their device", and set up personalized offers including trade-in opportunities through the website or by email.
+
+>[!TAB Automotive]
+
+A visitor mentions that their lease for their car ends soon, so they need to get a new car. Profile with unstructured data can extract the car replacement intent, and offer personalized financial offers when the visitor returns to the site.
+
+>[!TAB B2B]
+
+A visitor says that their business needs to close its annual books and file taxes. Profile with unstructured data can extract the intent of year-end-close and offer recommendations of relevant accounting and tax services.
+
+>[!ENDTABS]
+
+### Continuity
+
+>[!BEGINTABS]
+
+>[!TAB Cross-agent (Retail)]
+
+A shopper mentions to a shopping assistant that they needs a jacket for cold weather trail running. Later, they ask a customer service AI agent about sizing. Profile with unstructured data lets the service agent use data from prior conversation history and customer context, so the shopper doesn't need to repeat their requirements.
+
+>[!TAB Cross-channel (Travel and hospitality)]
+
+A traveler discusses an anniversary trip to Japan with a website's conversational AI agent, sharing preferred dates and an interest in a traditional ryokan. Later, the traveler contacts the brand through WhatsApp. When both interactions are linked to the traveler's identity, the WhatsApp agent can use Profile with unstructured data shares the website conversation with the WhatsApp agent, letting it continue planning rather than restart discovery.
+
+>[!TAB Cross-device (Retail)]
+
+A shopper chats anonymously with a conversational AI agent on his laptop about clothing for cold weather trail running, then logs in before leaving. Later, the user signs in on their phone. Once the anonymous conversation is linked to their signed-in identity, Profile with unstructured data makes this anonymous conversation available across devices, letting the agent continue the discussion.
+
+>[!TAB Cross-session (automotive)]
+
+A customer discusses vehicle options, budget, and an upcoming lease expiration to a conversational AI agent. The user then returns a few days later and starts a new conversation. Profile with unstructured data makes the previous conversation's history available, so the agent can resume the search based off of the discussion.
+
+>[!ENDTABS]
 
 ## Sample flow {#sample-flow}
 
-Consider a company that offers financial services to clients. 
+Consider a retailer that sells clothing and outdoor apparel.
 
-In this scenario, one of your clients asks an agent about equities. Since this client is logged in, your agent knows about this user by reading their Real-Time Customer Profile. 
+In this scenario, a customer, John, visits the retailer's site and starts a conversational AI agent to ask for workout clothing recommendations. Since John is signed in, Profile with unstructured data can provide the configured customer context, including his Gold loyalty tier, activewear preferences, and interest in outdoor sports. The agent can then use this context to further tailor its recommendations.
 
-This client then continues the conversation by stating "I've also been meaning to sit down and really review my retirement savings, just haven't gotten around to scheduling it.". By using Profile with unstructured data, Brand Concierge and Experience Platform can extract intent from these conversations, which lets you send personalized responses through the agent.
+John then states "I am training for a half marathon, and mornings are freezing and windy. I need something that can keep me warm without overheating." The agent can now combine John's stated needs with his existing preferences to recommend a suitable apparel, such as a lightweight, wind-resistant running jacket.
 
-As a result, Experience Platform can make this client enter the "Financial Planning Interest" audience, and immediately personalize the agent to reply with "Let's make sure your retirement plan is on track — book a free check-in with Alex Agent."
+Additionally, Experience Platform uses Profile with unstructured data to detect a marketer-defined "Outdoor performance" intent signal from the conversations. As a result, this signal lets John qualify for an "Outdoor Performance Intent" audience, and support subsequent personalized experiences.
 
-Additionally, since this context is shared between all Experience Platform applications, you can continue the retirement conversation in multiple forms. For example, Adobe Journey Optimizer can automatically send the client an email with a retirement check-in invitation with Alex Agent.
+For example, the retailer can use the "Outdoor Performance Intent" audience to show John a cold weather training offer when he returns to the website, or send a personalized email through an application such as Adobe Journey Optimizer. With the appropriate audience and journey configured, this email can feature both relevant running apparel as well as a Gold member double points offer.
 
 ## Beta prerequisites {#prerequisites}
 
 To use Profile with unstructured data, you **must** meet the following prerequisites:
 
-- Already an existing Adobe Experience Platform user
+- Already an existing Real-Time CDP or Adobe Journey Optimizer user
 - Do **not** have the Healthcare Shield add-on
 
 If you fulfill all of these prerequisites, contact Adobe Customer Care for more information on requesting enablement for Profile with unstructured data.
@@ -57,8 +135,8 @@ If you fulfill all of these prerequisites, contact Adobe Customer Care for more 
 Before continuing Profile with unstructured data set up, you'll need to complete the following steps:
 
 - Enable [Identity Graph Linking Rules](/help/identity-service/identity-graph-linking-rules/overview.md)
-- Create a profile-enabled dataset
-  - Ingest at least one profile into this dataset
+- Create a profile-enabled dataset and ingest at least one profile into this dataset
+  - This lets Profile with unstructured data create the profile narrative. This dataset is **separate** from the dataset where conversations and other unstructured data is ingested.
 
 Once Profile with unstructured data has been enabled, you can start using this feature by setting up the following steps:
 
@@ -82,7 +160,7 @@ For the standard simple identity with raw text use case, you can use an Experien
 
 >[!IMPORTANT]
 >
->When you create the schema and dataset, do **not** enable it for either Profile or Identity.
+>Do **not** enable the unstructured data schema for Profile. or the unstructured data dataset for Profile and Identity.
 
 You'll first need to create an XDM ExperienceEvent schema for the dataset. This schema needs to include the following information:
 
@@ -93,6 +171,10 @@ To learn how to create a schema, read the [create a schema guide](/help/xdm/tuto
 
 ### Create a dataset
 
+>[!IMPORTANT]
+>
+>Do **not** enable the unstructured data dataset for Profile or Identity.
+
 After you create the schema, you can create a dataset that uses this schema. To learn how to create a dataset based off of an existing schema, read the [create a dataset guide](/help/catalog/datasets/user-guide.md#schema).
 
 Once you've created the dataset, you can make a PATCH request to the `v2/dataSets` endpoint while providing the ID of the newly created dataset. This lets you update the dataset for usage with Profile with unstructured data.
@@ -100,7 +182,7 @@ Once you've created the dataset, you can make a PATCH request to the `v2/dataSet
 +++Sample patch request and response to enable the dataset for Profile with unstructured data.
 
 ```shell
-curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3077efa10d92ab7a71858
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3077efa10d92ab7a71858 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -159,7 +241,7 @@ To enable these datasets for Profile with unstructured data, you need to make a 
 +++Sample patch request and response to enable the dataset for Profile with unstructured data.
 
 ```shell
-curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3077efa10d92ab7a71858
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/v2/dataSets/67b3077efa10d92ab7a71858 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -204,10 +286,12 @@ Coworker will guide you through the steps to set up Profile with unstructured da
 
 - Coworker will ask "What is your use case"?
 - After describing your use case, Coworker will provide a list of relevant attributes, based on the use case
-- Once you confirm the attributes look fine, Coworker will confirm the following actions. By default, Coworker will have **no** audience descriptions, **precise** profile narrative, **no** data governance labels, and the **default** person namespace.
+- Once you confirm the attributes look fine, Coworker will guide you through the remaining configuration options. By default, the configuration will have **no** audience descriptions, use **precise** profile narrative, have **no** marketing action labels, and uses the **default** person namespace.
   - If you want to add the audience descriptions to the profile narrative
+    - Including the audience description adds context to the profile narrative when the profile qualifies for that audience. Adding audience descriptions does **not** filter which customers receive personalization.
   - The preciseness of the profile narrative
-  - Adding data governance labels and setting the person namespace
+  - The marketing actions
+  - The person namespace used
 
 After going through these steps, your Profile with unstructured data context is created.
 
@@ -234,7 +318,7 @@ The following request retrieves a list of all the available categories and their
 +++A sample request to retrieve the available categories.
 
 ```shell
-curl -X GET https://platform.adobe.io.data/core/semanticprofile/config/category \
+curl -X GET https://platform.adobe.io/data/core/semanticprofile/config/category \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -312,7 +396,7 @@ curl -X POST https://platform.adobe.io/data/core/semanticprofile/config/configur
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
     "data": {
-        "name": "CustomerSummary":,
+        "name": "CustomerSummary",
         "configurationDetails": {
             "category": [
                 {
@@ -358,7 +442,7 @@ curl -X POST https://platform.adobe.io/data/core/semanticprofile/config/configur
 | `segments.selection_mode` | No | String | The method which the audiences are chosen. At this time, only `inclusion` is supported. |
 | `segments.inclusion` | No | Array | An array that contains the audiences you want to include. The audiences are written as objects that contain both the segment definition ID and the priority, where a lower number means a higher priority (so "1" is the highest priority). |
 | `marketingActions` | No | Array | An array that contains the marketing actions you want to apply to the configuration. For more information on marketing actions, read the [marketing actions endpoint guide](/help/data-governance/api/marketing-actions.md). |
-| `narrativePrecision` | No | String | The level of precision that the configuration narrative will be. Supported values include `precise`, `fuzzy`, and `value_only`. |
+| `narrative_precision` | No | String | The level of precision that the configuration narrative will be. Supported values include `precise`, `fuzzy`, and `value_only`. <ul><li>`precise`: Literal values with descriptive content.</li><li>`fuzzy`: Ranges or percentiles.</li><li>`value_only`: Precise values without a range or percentile representation.</li></ul> |
 | `personNamespace` | No | Object | An object that contains details of the identity namespace for the configuration. If this field is left blank, the sandbox's default namespace will be used. |
 | `personNamespace.isPersonNamespaceEnabled` | No | Boolean | If set to `true`, the namespaces listed in `personNamespace.code` are used. Otherwise, the sandbox's default namespace will be used. |
 | `personNamespace.code` | No | Array | An array that lists the identity namespace codes you want the narrative to use. |
@@ -436,7 +520,7 @@ A successful response returns HTTP status 200 with a unique request ID and the d
 
 >[!ENDTABS]
 
-Now that the profile context has been created, you can save the configuration against Brand Concierge or any other customer-facing agent.
+Now that the profile context has been created, you can save the configuration against Brand Concierge or any other customer-facing agent.  
 
 ### Profile context in Brand Concierge {#profile-context-brand-concierge}
 
@@ -444,7 +528,7 @@ In Brand Concierge, select the concierge you want to apply the profile configura
 
 ![Brand Concierge is displayed, showing a list of concierges.](/help/profile/images/unstructured-data/select-concierge.png)
 
-Once you've selected the concierge, go the **Personalization** tab and select the previously created configuration.
+Once you've selected the concierge, go to the **Personalization** tab, choose the previously created configuration, and select **Save** to apply the profile configuration. 
 
 ![The personalization tab is displayed in Brand Concierge.](/help/profile/images/unstructured-data/select-configuration.png)
 
@@ -467,7 +551,7 @@ curl -X GET "https://platform.adobe.io/data/core/semanticprofile/lookup/narrativ
 | Query parameter | Description |
 | --------------- | ----------- |
 | `entityIdNS` | The identity namespace. This must be a namespace that is defined in your sandbox. Possible values include `Email`, `ECID`, and `CRMID`. |
-| `entityId` | The identity value within the namespace. You **must** URL encode reserved characters. |
+| `entityId` | The identity value within the namespace. You **must** URL encode reserved characters. For example, if the email you're looking up is `john+1@example.com`, this must be written as `john%2B1@example.com`. |
 | `configurationName` | The name of the previously created configuration. |
 
 A successful response returns HTTP status 200 with information about the profile context.
@@ -491,7 +575,7 @@ To look up a customer's previous conversation history, you'll need to make a POS
 +++ Sample request and response
 
 ```shell
-curl -X POST "https://platform.adobe.io.data/core/semanticprofile/query/v1/profile?entityIdNS=Email&entityId=jane.doe%2B1@example.com" \
+curl -X POST "https://platform.adobe.io/data/core/semanticprofile/query/v1/profile?entityIdNS=Email&entityId=jane.doe%2B1@example.com" \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -573,6 +657,16 @@ You can then confirm if the above steps look accurate, and if you want to procee
 The signal creation begins. Coworker then creates a signal that  automatically gets added to Experience Platform.
 
 ![Coworker lists what you need to copy and paste to insert the signal.](/help/profile/images/unstructured-data/signal-criteria.png)
+
+After the signal is created, you can add the signal to an audience using Audience Builder. The signals appear as Experience Events.
+
+![The location to add a signal for Profile with unstructured data is displayed within Audience Builder.](/help/profile/images/unstructured-data/add-semantic-signal.png)
+
+For more information on using Audience Builder, read the [Audience Builder documentation](/help/segmentation/ui/audience-builder.md).
+
+Once you've created an audience with a signal, you can extract profiles that use this signal. Detected signals are experience events, with the event type of `semantic.signalDetected`. 
+
+![The extracted signal for the profile is displayed.](/help/profile/images/unstructured-data/extracted-signal.png)
 
 ## Frequently asked questions {#faq}
 
