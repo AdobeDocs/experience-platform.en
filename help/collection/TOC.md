@@ -126,6 +126,22 @@ autotag-review: '2026-11-05T22:08:57.077Z'
     + [setConsent](server-js/methods/setconsent.md)
     + [setDebug](server-js/methods/setdebug.md)
   + [Differences from Web SDK](server-js/differences.md)
++ Adobe Client Data Layer {#acdl}
+  + [Overview](acdl/overview.md)
+  + [Release notes](https://github.com/adobe/adobe-client-data-layer/releases)
+  + [Install](acdl/install.md)
+  + Concepts {#acdl-concepts}
+    + [Data and the computed state](acdl/concepts/computed-state.md)
+    + [Events](acdl/concepts/events.md)
+    + [Queue and history](acdl/concepts/queue.md)
+  + Methods {#acdl-methods}
+    + [Overview](acdl/methods/overview.md)
+    + [addEventListener](acdl/methods/addeventlistener.md)
+    + [getState](acdl/methods/getstate.md)
+    + [push](acdl/methods/push.md)
+    + [removeEventListener](acdl/methods/removeeventlistener.md)
+  + [Send data with the Web SDK](acdl/web-sdk.md)
+  + [Troubleshooting](acdl/troubleshooting.md)
 + Tags client-side JavaScript {#tags}
   + [Overview](tags/overview.md)
   + [buildInfo](tags/buildinfo.md)

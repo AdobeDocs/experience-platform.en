@@ -27,7 +27,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 The Google Data Layer extension allows you to use a Google data layer in your Tags implementation. The extension can be used independently or simultaneously with Google solutions and with Google's open source [Data Layer Helper Library](https://github.com/google/data-layer-helper).
 
-The Helper Library provides similar event-driven functionality to the Adobe Client Data Layer (ACDL). The data elements, rules, and actions of the Google Data Layer extension provide similar functionality to those in the [ACDL extension](../client-data-layer/overview.md).
+The Helper Library provides similar event-driven functionality to the [Adobe Client Data Layer](/help/collection/acdl/overview.md) (ACDL). The data elements, rules, and actions of the Google Data Layer extension provide similar functionality to those in the [ACDL extension](../client-data-layer/overview.md).
 
 ## Installation
 

@@ -217,7 +217,7 @@ topic_v2:
 
 **Data ingestion**: Data ingestion is the process of adding data from a source to Experience Platform. Data can be ingested into Experience Platform in a number of ways including streaming, batches, or added via source connectors.
 
-**Data layer**: In the context of tags, a data layer is a data structure that exists on the client device that contains metadata about the context in which a page or screen is viewed.
+**Data layer**: In the context of tags, a data layer is a data structure that exists on the client device that contains metadata about the context in which a page or screen is viewed. Adobe recommends the [Adobe Client Data Layer](../collection/acdl/overview.md) for websites.
 
 **Data governance**: Data governance encompasses the strategies and technologies used to ensure data is in compliance with regulations and organizational policies with respect to data usage.
 

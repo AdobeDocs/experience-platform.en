@@ -64,6 +64,8 @@ The existing data layer must be sent using the [`data`](/help/collection/js/comm
 
 If you are using [!DNL Tags], you must use the **[!UICONTROL Data]** field of the [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md) action type.
 
+If your site uses the Adobe Client Data Layer, send its computed state in the `data` object. See [Send the data layer for mapping in the datastream](/help/collection/acdl/web-sdk.md#data).
+
 The rest of this guide covers how to map the data layer to XDM standards after it has been sent by the Web SDK.
 
 >[!NOTE]

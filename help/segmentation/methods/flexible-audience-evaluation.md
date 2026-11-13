@@ -24,6 +24,10 @@ topic_v2:
 >
 >Additionally, flexible audience evaluation is **only** available for use with Real-Time CDP B2C Edition and Adobe Journey Optimizer.
 
+>[!IMPORTANT]
+>
+>Flexible audience evaluation will be transitioning to Flexible Batch Schedules in March 2027. As a result, flexible audience evaluation will be deprecated and will no longer be available. For more information about Flexible Batch Schedules, read the [Flexible Batch Schedules overview](/help/segmentation/methods/flexible-batch-schedules.md).
+
 Flexible audience evaluation lets you run a batch segmentation job on demand. With flexible audience evaluation, you can run ad-hoc campaign launches, just-in-time communications, or other time-sensitive activities.
 
 ## Guardrails {#guardrails}
