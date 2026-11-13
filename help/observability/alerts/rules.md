@@ -40,6 +40,10 @@ Adobe Experience Platform provides predefined alert rules that you can enable fo
 
 When you [view alert rules](./ui.md) in Experience Platform, you subscribe to each rule individually. When you subscribe through [I/O Events notifications](./subscribe.md), Experience Platform groups alert rules into subscription packages. The tables below list each alert rule and its corresponding I/O Events subscription package.
 
+## Adobe Journey Optimizer {#journey-optimizer}
+
+For information about alert rules available in Adobe Journey Optimizer, including journey execution, message delivery, campaign, and channel-specific alerts, see the [Adobe Journey Optimizer available alerts documentation](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/monitor/alerts#available-alerts).
+
 ## Audit {#audit}
 
 The following alert rules apply to [Audit events](../../landing/governance-privacy-security/audit-logs/overview.md).
@@ -1131,11 +1135,6 @@ The following alert rules apply to [Identity Service](../../identity-service/hom
 +++
 
 >[!ENDTABS]
-
-## Journey Optimizer {#journey-optimizer}
-
-For information about alert rules available in Adobe Journey Optimizer, including journey execution, message delivery, campaign, and channel-specific alerts, see the [Adobe Journey Optimizer available alerts documentation](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/monitor/alerts#available-alerts).
-
 
 ## Profile {#profile}
 
