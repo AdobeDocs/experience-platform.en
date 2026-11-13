@@ -97,6 +97,10 @@ autotag-review: '2026-11-05T22:08:57.077Z'
       * [Overview](./extensions/client/audience-manager/overview.md)
     * Adobe Client Data Layer {#client-data-layer}
       * [Overview](./extensions/client/client-data-layer/overview.md)
+      * [Configure](./extensions/client/client-data-layer/configure.md)
+      * [Event types](./extensions/client/client-data-layer/event-types.md)
+      * [Action types](./extensions/client/client-data-layer/action-types.md)
+      * [Data element types](./extensions/client/client-data-layer/data-element-types.md)
       * [Release notes](./extensions/client/client-data-layer/release-notes.md)
     * Adobe Content Analytics {#content-analytics}
       * [Overview](./extensions/client/content-analytics/overview.md)

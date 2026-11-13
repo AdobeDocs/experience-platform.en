@@ -85,10 +85,10 @@ Although the order is always enforced, some rules might be executed immediately 
 
 When applying these principles to your own website, consider the following:
 
-* **A rule using the Library Loaded event type might execute before your data layer is fully loaded.**  This can result in the rule's actions executing with missing data because the data was not yet available on the page. These types of issues can be mitigated by tweaking your rule configuration. As an example, instead of having a rule triggered by the Library Loaded event type, you could instead use the Custom Event or Direct Call event type that are triggered by your page code as soon as your data layer finishes loading.
+* **A rule using the Library Loaded event type might execute before your data layer is fully loaded.**  This can result in the rule's actions executing with missing data because the data was not yet available on the page. These types of issues can be mitigated by tweaking your rule configuration. As an example, instead of having a rule triggered by the Library Loaded event type, have your page code push an event to the [Adobe Client Data Layer](/help/collection/acdl/overview.md) when its data is ready, and trigger the rule with the [**[!UICONTROL Data layer push]**](/help/tags/extensions/client/client-data-layer/event-types.md) event. With its default time scope, the rule also runs for events that were pushed before the tag library loaded.
 * **The Page Bottom event type doesn't particularly provide value when the library is loaded asynchronously.**  Instead, consider the Library Loaded, DOM Ready, Window Loaded, or other event types.
 
-If you see things occurring out of order, it is likely that you have some timing issues to work through. Deployments requiring precise timing might need to use event listeners and the Custom Event or Direct Call event type to make their implementations more robust and consistent.
+If you see things occurring out of order, it is likely that you have some timing issues to work through. Deployments requiring precise timing might need to use event listeners, such as the **[!UICONTROL Data layer push]** event, to make their implementations more robust and consistent.
 
 ## Loading the tags embed code asynchronously
 

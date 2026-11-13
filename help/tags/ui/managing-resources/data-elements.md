@@ -184,6 +184,10 @@ You must provide the path to that variable when you create the data element.
 
 If you use a data collector object as part of your data layer, simply use dot notation in the path to reference the object and property you want to capture into the data element, like `_myData.pageName`, or `digitalData.pageName`, etc.
 
+>[!NOTE]
+>
+>This data element type can't read the [Adobe Client Data Layer](/help/collection/acdl/overview.md), which stores its data in a computed state instead of in object properties. To read values from `adobeDataLayer`, use the [**[!UICONTROL Data layer computed state]**](/help/tags/extensions/client/client-data-layer/data-element-types.md#computed-state) data element type from the Adobe Client Data Layer extension.
+
 #### Example:
 
 `window.document.title`

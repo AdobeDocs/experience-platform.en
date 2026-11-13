@@ -39,6 +39,7 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Privacy Service](#privacy-service)
 - [Query Service](#query-service)
 - [Real-Time Customer Profile](#profile)
+- [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
 ## CX Enterprise Coworker {#cx-enterprise-coworker}
@@ -139,6 +140,20 @@ Use [!DNL Real-Time Customer Profile] to combine customer data from online and o
 {style="table-layout:auto"}
 
 For more information, read the [Real-Time Customer Profile overview](/help/profile/home.md).
+
+## Segmentation Service {#segmentation-service}
+
+Use Segmentation Service to create audiences from your customer data and manage their full lifecycle in Experience Platform.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} Evaluation for Audience Compositions | Audience Composition now supports scheduled evaluation and on-demand evaluation. Scheduled evaluation evaluates audience compositions once every 24 hours as part of a system-generated schedule, while on-demand evaluation lets you explicitly request for an audience composition to be evaluated. For more information, read the [Audience Composition guide](/help/segmentation/ui/audience-composition.md#evaluation). |
+
+{style="table-layout:auto"}
+
+For more information, read the [Segmentation Service overview](/help/segmentation/home.md).
 
 ## Sources {#sources}
 

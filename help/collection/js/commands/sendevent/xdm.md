@@ -38,6 +38,8 @@ alloy("sendEvent", {
 });
 ```
 
+In this example, [`adobeDataLayer.getState()`](/help/collection/acdl/methods/getstate.md) reads data from the Adobe Client Data Layer. See [Send Adobe Client Data Layer data with the Web SDK](/help/collection/acdl/web-sdk.md).
+
 The following example uses the [Commerce Details schema field group](/help/xdm/field-groups/event/commerce-details.md):
 
 ```javascript

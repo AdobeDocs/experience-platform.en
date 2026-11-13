@@ -29,6 +29,8 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 The **[!UICONTROL Update variable]** action allows you to make partial or incremental changes to a [variable data element](../data-element-types.md#variable). You can use this action to build up an object that can later be referenced in a [[!UICONTROL Send event]](send-event.md) action. Populating data elements and assigning them to properties within an XDM object fits most use cases; this action provides more flexibility to allow you to conditionally set properties to different data elements based on rule conditions.
 
+If you use the Adobe Client Data Layer, you can fill in a variable from data layer pushes. See [Send Adobe Client Data Layer data with the Web SDK](/help/collection/acdl/web-sdk.md).
+
 Before using this action, you must already have a variable data element created. Once you select a variable data element to modify, an editor appears, allowing you to set any desired fields for this action.
 
 ![Screenshot of the update variable action within the action configuration interface](../assets/update-variable.png)

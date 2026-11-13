@@ -89,7 +89,7 @@ For the full list of standard namespaces and their definitions, see [Identity na
 
 The identifier you need is rarely available directly on the page. Common collection strategies include:
 
-* **Data layer**: Read the identifier from your site's data layer after the visitor signs in. This location is the most reliable approach because the data layer is populated by your application's backend and reflects the authenticated session state.
+* **Data layer**: Read the identifier from your site's data layer after the visitor signs in. This location is the most reliable approach because the data layer is populated by your application's backend and reflects the authenticated session state. If you use the [Adobe Client Data Layer](/help/collection/acdl/overview.md), have your site push the identifier with a sign-in event, then read it with [`getState()`](/help/collection/acdl/methods/getstate.md) when you build the identity map.
 * **Auth token or session cookie**: Decode or look up the identifier from a JWT or session cookie that your authentication system sets. Validate that the token is still active before using the value.
 * **Server-side enrichment**: Use [Data Prep for Data Collection](/help/datastreams/data-prep.md) or an [event forwarding rule](/help/tags/ui/event-forwarding/overview.md) to map or transform the identifier at the Edge before it reaches downstream services. This location is useful when the client only has an opaque session token that maps to an internal ID on the server side.
 
