@@ -1,6 +1,6 @@
 ---
-title: Adobe Client Data Layer Extension
-description: Learn about the Adobe Client Data Layer tag extension in Adobe Experience Platform.
+title: Adobe Client Data Layer extension overview
+description: Learn how the Adobe Client Data Layer tag extension loads the data layer, triggers rules from data layer pushes, and reads and writes data layer data.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
 TQID: 'https://experienceleague.adobe.com/Cz-9amk86ZTY-OE-9TDzjuFFiQ4s6snU3y-mDfeAX-s'
 feature_v2:
@@ -23,130 +23,71 @@ topic_v2:
     internal-label: Behavioral data
 autotag-review: '2026-11-05T22:08:57.077Z'
 ---
-# Adobe Client Data Layer extension
+# Adobe Client Data Layer extension overview
 
-This documentation provides examples and best practices on how to use the Adobe Client Data Layer extension.
-
-<!-- 
-(Missing document?)
-If you would like to have more details on development consideration, [please reach this page](./dev.md). 
--->
-
-## Installation
-
-In order to install the extension, navigate to the extension catalog in the Experience Platform UI or Data Collection UI and select Adobe Client Data Layer.
-
-![ACDL Extension view in Catalog](./images/catalog.png)
-
-<!-- 
-(GitHub link?)
-There is also the possibility to fork this project. You can download this github project, realize the change that you deem required for your specific use-case and re-upload it on your Organization as a private extension.
-This installation will not be supported on our end.<br>
->[!NOTE]
->
-> _Consider renaming the extension name in the extension.json file_ 
--->
-
-## Extension View
-
-By default the ACDL script creates a new data layer with the variable name `adobeDataLayer`. The extension view provides you with the possibility to change this name if you wish. The name that you have set will be instantiated when tags are loaded.
-
->[!NOTE]
->
->When changing the object name, the original `adobeDataLayer` object is still being instantiated and then being duplicated to the new variable name you have selected.
-
-## Events
-
-The extension provides you with the possibility to listen to events on the Data Layer. The following events are available:
-
-### Listen to all data changes
-
-If you select this option, your event listener listens to any change made to the data layer.
+The Adobe Client Data Layer (ACDL) tag extension connects the [Adobe Client Data Layer](/help/collection/acdl/overview.md) to your tag property. It can load the ACDL library, trigger rules when your site pushes data or events, read the computed state in data elements, and push data or clear the history from rule actions.
 
 >[!IMPORTANT]
 >
->Pushing events does not change data layer itself.
+>The extension doesn't describe your pages for you. Your site code, or a platform such as Adobe Experience Manager Core Components, still needs to push data and events to the data layer. See [Install the Adobe Client Data Layer](/help/collection/acdl/install.md).
 
-The following example push events would be tracked by the listener:
+## Capabilities {#capabilities}
 
-* `adobeDataLayer.push({"data":"something"})`
-* `adobeDataLayer.push({"event":"myevent","data":"something"})`
+The extension provides the following components:
 
-The following example push event would not be tracked by the listener:
+| Component | Type | Description |
+| --- | --- | --- |
+| [Extension configuration](configure.md) | Configuration | Sets the data layer name and whether the extension loads the ACDL library. |
+| [[!UICONTROL Data layer push]](event-types.md#data-layer-push) | Event | Triggers a rule when data or events are pushed to the data layer. |
+| [[!UICONTROL Push to data layer]](action-types.md#push-to-data-layer) | Action | Pushes an object, which can include data element values, to the data layer. |
+| [[!UICONTROL Clear data layer history]](action-types.md#clear-history) | Action | Removes past entries from the data layer array without changing the computed state. |
+| [[!UICONTROL Data layer computed state]](data-element-types.md#computed-state) | Data element | Returns the computed state, or the value at a path in it. |
+| [[!UICONTROL Data layer size]](data-element-types.md#size) | Data element | Returns the number of entries in the data layer array. |
 
-* `adobeDataLayer.push({"event":"myevent"})`
+To send data layer data to Adobe Experience Platform, combine these components with the Web SDK extension. See [Send Adobe Client Data Layer data with the Web SDK](/help/collection/acdl/web-sdk.md).
 
-### Listen to all events
+## Install the extension {#install}
 
-If you select this option, your event listener listens to any event pushed to the data layer.
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**, and open your tag property.
+1. Select **[!UICONTROL Extensions]**, then select the **[!UICONTROL Catalog]** tab.
+1. Search for **[!UICONTROL Adobe Client Data Layer]**.
+1. Select the extension card, then select **[!UICONTROL Install]**.
+1. Review the [extension configuration](configure.md), then select **[!UICONTROL Save]**.
 
-The following example push events would be tracked by the listener:
+Add the extension to a library and build it to deploy it to your site. See [Libraries](/help/tags/ui/publishing/libraries.md).
 
-* `adobeDataLayer.push({"event":"myevent"})`
-* `adobeDataLayer.push({"event":"myevent","data":"something"})`
+## Requirements {#requirements}
 
-The following example push event would not be tracked by the listener:
+* **Browsers**: The extension includes ACDL 3.0.1. When the extension loads the library, the [browser requirements](/help/collection/acdl/overview.md#browser-requirements) of ACDL 3.x apply.
+* **Content Security Policy**: The extension loads the library as a separate file from the same host as your tag library. If your site uses a Content Security Policy, make sure that it allows that host. See [Hosted library file](configure.md#hosted-file).
 
-* ` adobeDataLayer.push({"data":"something"}) `
+## Upgrade from version 2.0.x {#upgrade}
 
-### Listen to specific event
+Version 2.1 is an update of the same extension. When you [upgrade the extension](/help/tags/ui/managing-resources/extensions/extension-upgrade.md), your existing rules, data elements, and settings keep working without changes. Some components have new display names, but the rules that use them don't change.
 
-In the case that you specify an event, then the event listener tracks any events that match a specific string.
+The following table summarizes the changes:
 
-For example, setting `myEvent` when using this configuration results in the listener only tracking the following push event:
+| Area | Version 2.0.x | Version 2.1 |
+| --- | --- | --- |
+| ACDL library | ACDL 2.0.2, included in the tag library's code | ACDL 3.0.1, loaded as a separate file after the tag library loads. See [Load the Adobe Client Data Layer library if absent](configure.md#load-library). |
+| ACDL behavior | ACDL 2.x | ACDL 3.x, which changes how arrays merge and how paths are written. See [Upgrade from 2.x to 3.x](/help/collection/acdl/install.md#upgrade). |
+| Custom data layer name | The page had to create the array with the custom name before the tag library loaded. Otherwise, the extension logged a warning and didn't use the name. | The extension creates the name if it doesn't exist, and both names always refer to the same array. See [Data layer name](configure.md#data-layer-name). |
+| Event | **[!UICONTROL Data Pushed]**, with one specific event name | **[!UICONTROL Data layer push]**, with one or more event names, or a data element that returns them |
+| Push action | **[!UICONTROL Push to Data Layer]**, with JSON text | **[!UICONTROL Push to data layer]**, with a data element, an object builder, or JSON. Values from data elements keep their type. |
+| Reset action | **[!UICONTROL Reset Data Layer]**, which didn't wait for ACDL to load | **[!UICONTROL Clear data layer history]**, which waits for ACDL to load |
+| Computed state data element | An empty path returned the entire computed state | An explicit choice between the entire computed state and a specific path |
 
-* `adobeDataLayer.push({"event":"myEvent"})`
+After you upgrade, check the following:
 
-You can also change the scope of your event listener. The different options are summarized below:
+1. **Browser support**: Make sure that ACDL 3.x supports the browsers that your visitors use. If you need ACDL 2.x, load it on your pages yourself and clear the [**[!UICONTROL Load the Adobe Client Data Layer library if absent]**](configure.md#load-library) option.
+1. **Rules that run when the tag library loads**: Because the extension now loads ACDL after the tag library, the **[!UICONTROL Data layer computed state]** data element can return `undefined` in rules that use events such as **[!UICONTROL Library Loaded (Page Top)]**. Trigger these rules with a [**[!UICONTROL Data layer push]**](event-types.md) event instead, which runs after ACDL is ready. This change doesn't apply if your page loads ACDL before the tag library.
+1. **Custom code**: Review custom code that pushes arrays, changes a value from a string or number to an object, or uses bracket notation in paths. See [Upgrade from 2.x to 3.x](/help/collection/acdl/install.md#upgrade).
 
-* `all`: This is the default option and triggers the rule every time the condition you have selected above has been met in the past, or will be pushed in the future. This is the safest option if you are using an asynchronous implementation.
-* `future`: This option triggers the rule only when new push events matching your condition will be sent to the Data Layer.
-* `past`: This option triggers the rule only for old push events matching your condition. New pushes matching your condition are ignored and do not trigger the rule anymore.
+For a complete list of changes, see the [release notes](release-notes.md).
 
-## Actions
+## Next steps {#next-steps}
 
-The following sections outline the actions supported by the extension.
-
-### Reset Data Layer
-
-The extension provides you with a way to reset the data layer length, which can help keep a limited size for a single-page application (SPA).
-
-However, there is currently no possibility to completely remove information set previously during the push methods.
-
-The **Reset & Set Computed State** action copies the last computed state, empties the data layer object, and re-pushes the last state.
-
-### Push to Data Layer
-
-The extension provides you with an action to push JSON content to the Data Layer itself.This action makes it possible to use data elements directly in the JSON. Within the JSON editor, data elements should be referenced using percent notation (for example, `%dataElementName%`).
-
-```json
-{
-    "page": {
-        "url": "%url%",
-        "previous_url": "%previous_url%",
-        "concatenated_values": "static string %dataElement%"
-    }
-}
-```
-
-## Data elements
-
-The sections below cover the unique data element types provided by the extension.
-
-### Computed state
-
-The Data Layer Computed State data element can return one of two things, depending on how you configure it:
-
-* The complete Data Layer state: By default, the complete Data Layer Computed State is returned.
-* A specific path: You can specify the path that you want to return in your Data Layer. Paths are specified using dot notation (for example, `data.foo`).
-
-### Data Layer size
-
-This data element returns the size of the Data Layer. The Data Layer's size is represented by the number of elements that have been pushed to this object.
-
-Given the following list of push events, this data element would return the integer `2`:
-
-```js
-adobeDataLayer.push({"event":"myEvent"})
-adobeDataLayer.push({"data":{"foo":"bar"}})
-```
+* [Configure the extension](configure.md)
+* [Trigger rules with the Data layer push event](event-types.md)
+* [Send Adobe Client Data Layer data with the Web SDK](/help/collection/acdl/web-sdk.md)
+* [Learn about the Adobe Client Data Layer library](/help/collection/acdl/overview.md)

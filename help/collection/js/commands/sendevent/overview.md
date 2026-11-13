@@ -40,6 +40,8 @@ alloy("sendEvent", {
 });
 ```
 
+In this example, [`adobeDataLayer.getState()`](/help/collection/acdl/methods/getstate.md) reads data from the Adobe Client Data Layer. See [Send Adobe Client Data Layer data with the Web SDK](/help/collection/acdl/web-sdk.md).
+
 ## Response object
 
 If you decide to [handle responses](../command-responses.md) with this command, the following properties are available in the response object:

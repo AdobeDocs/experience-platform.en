@@ -24,7 +24,7 @@ The `_satellite` object exposes several supported entry points that help you int
 
 * Usage within your tag library in custom code blocks, giving you full access to the tag library itself.
 * Debugging your deployed implementation within any environment (development, staging, or production)
-* Direct implementation on your website, giving you full control over when events or tag rules trigger. For new implementations, Adobe recommends using a more flexible strategy like the [Adobe Client Data Layer](/help/tags/extensions/client/client-data-layer/overview.md).
+* Direct implementation on your website, giving you full control over when events or tag rules trigger. For new implementations, Adobe recommends using a more flexible strategy like the [Adobe Client Data Layer](/help/collection/acdl/overview.md).
 
 >[!IMPORTANT]
 >

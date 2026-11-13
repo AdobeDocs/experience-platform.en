@@ -110,5 +110,5 @@ This action must be accompanied by an "Adobe Analytics - Set Variables" action t
 
 ### Requirements
 
-* An object-based [data layer](https://theblog.adobe.com/data-layers-buzzword-best-practice/) with variables for all product related data (such as product ID, quantity, price). This extension does not work with array-based data layers.
+* An object-based [data layer](https://theblog.adobe.com/data-layers-buzzword-best-practice/) with variables for all product related data (such as product ID, quantity, price). This extension does not work with array-based data layers, including the [Adobe Client Data Layer](/help/collection/acdl/overview.md).
 * The [Adobe Analytics](../analytics/overview.md) extension must be installed.
