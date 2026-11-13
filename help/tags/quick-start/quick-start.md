@@ -79,7 +79,7 @@ What makes tags in Experience Platform truly unique is that these extensions can
 
 **Data elements** are pointers to the information that you want to collect and send to different places on your page:
 
-* A defined data layer in JSON
+* A data layer, such as the [Adobe Client Data Layer](/help/collection/acdl/overview.md)
 * DOM elements
 * Cookies
 * Session and local storage

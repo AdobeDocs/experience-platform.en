@@ -42,6 +42,8 @@ Adobe supports the following code languages with dedicated libraries for data co
 
 The tags UI in Adobe Experience Platform Data Collection include a Web SDK and Mobile SDK extension.
 
+On websites, you can use the [Adobe Client Data Layer](acdl/overview.md) to expose page data and events in a standard way. Tags, the Web SDK, and other scripts can then read that data and react to those events.
+
 If none of the above SDKs accommodate your project's needs, you can use the [Adobe Experience Platform Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) to send data directly to Adobe.
 
 ## Data collection process

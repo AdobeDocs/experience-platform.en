@@ -61,7 +61,7 @@ Yes. Tags have the capabilities to give users and extension developers flexibili
 
 ## Do tags support dynamic data layers?
 
-Yes. Tags include an extension that specializes in listening for changes in dynamic data layers.
+Yes. The [Adobe Client Data Layer extension](./extensions/client/client-data-layer/overview.md) triggers rules when data or events are pushed to the [Adobe Client Data Layer](/help/collection/acdl/overview.md), and reads its computed state in data elements. The [Google Data Layer extension](./extensions/client/google-data-layer/overview.md) provides similar capabilities for Google data layers.
 
 ## Which event types do tags support?
 
