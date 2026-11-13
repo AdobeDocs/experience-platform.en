@@ -77,6 +77,8 @@ Data lineage plays a key role in how policies are enforced in Experience Platfor
 
 In the context of Data Governance, lineage enables data usage labels to propagate from schemas to downstream services that consume their data, such as Real-Time Customer Profile and Destinations. This allows policies to be evaluated and enforced at several key points in the data's journey through Experience Platform, and provides context to data consumers as to why a policy violation occurred.
 
+Computed attributes inherit data usage labels from the source fields and datasets used to define them. These inherited labels contribute to automatic policy enforcement when computed attributes are used in audiences or configured as projected attributes for a destination. For more information, see [how data usage labels are applied to computed attributes](https://experienceleague.adobe.com/en/docs/experience-platform/profile/computed-attributes/faq#how-are-data-usage-labels-applied-on-computed-attributes).
+
 In Experience Platform, policy enforcement is concerned with the following lineage:
 
 1. Data is ingested into Experience Platform and stored in **datasets**.
