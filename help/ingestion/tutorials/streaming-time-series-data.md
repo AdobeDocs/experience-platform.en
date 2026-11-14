@@ -296,13 +296,11 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 **Request**
 
-Ingesting time series data to a streaming connection can be done either with or without the source name.
+Specify the dataflow ID in the `x-adobe-flow-id` HTTP request header and include only the XDM JSON record in the request body. The `header`, `body`, `xdmMeta`, and `xdmEntity` wrapper objects are not required.
 
-The example request below ingests time series data with a missing source name to Experience Platform. If the data is missing the source name, it will add the source ID from the streaming connection definition.
+Both `_id` and `timestamp` are required fields for time-series data. The `_id` attribute represents a unique identifier for the record itself, **not** a unique ID of the person or device whose record it is.
 
-Both `xdmEntity._id` and `xdmEntity.timestamp` are required fields for time-series data. The `xdmEntity._id` attribute represents a unique identifier for the record itself, **not** a unique ID of the person or device whose record it is.
-
-You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp` for the record in a way that remains consistent if the record ever needs to be re-ingested. Ideally, your source system will contain these values. If an ID is not available, consider concatenating values of other fields in the record to create a unique value that can be consistently regenerated from the record on re-ingestion.
+You will need to generate your own `_id` and `timestamp` for the record in a way that remains consistent if the record ever needs to be re-ingested. Ideally, your source system will contain these values. If an ID is not available, consider concatenating values of other fields in the record to create a unique value that can be consistently regenerated from the record on re-ingestion.
 
 >[!NOTE]
 >
