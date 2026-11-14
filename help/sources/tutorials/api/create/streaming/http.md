@@ -574,12 +574,12 @@ Now that you've created your flow, you can send your JSON message to the streami
 **API format**
 
 ```http
-POST /collection/{INLET_URL}
+POST /collection/{INLET_ID}
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{INLET_URL}` | Your streaming endpoint URL. You can retrieve this URL by making a GET request to the `/connections` endpoint while providing your base connection ID. |
+| `{INLET_ID}` | Your streaming endpoint URL. You can retrieve this URL by making a GET request to the `/connections` endpoint while providing your base connection ID. |
 | `{FLOW_ID}` | The ID of your HTTP API streaming dataflow. This ID is required for both XDM and RAW data. |
 
 **Request**
