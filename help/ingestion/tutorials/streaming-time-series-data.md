@@ -352,19 +352,6 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 }'
 ```
 
-If you want to include a source name, the following example shows how you would include it.
-
-```json
-    "header": {
-    "datasetId": "{DATASET_ID}",
-    "flowId": "{FLOW_ID}",
-    "imsOrgID": "{ORG_ID}",
-      "source": {
-        "name": "ACME source"
-      }
-    }
-```
-
 **Response**
 
 An successful response returns HTTP status 200 with details of the newly streamed [!DNL Profile].
