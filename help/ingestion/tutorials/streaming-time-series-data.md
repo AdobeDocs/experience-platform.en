@@ -291,7 +291,8 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | The `id` value of your newly created streaming connection. |
+| `{CONNECTION_ID}` | The `inletId` value of your newly created streaming connection. |
+| `{FLOW_ID}` | The ID of the dataflow configured for your target dataset. This value is returned when you [create a dataflow](../../sources/tutorials/api/create/streaming/http.md#create-a-dataflow). |
 | `syncValidation`| An optional query parameter intended for development purposes. If set to `true`, it can be used for immediate feedback to determine if the request was successfully sent. By default, this value is set to `false`. Please note that if you set this query parameter to `true` that the request will be rate limited to 60 times per minute per `CONNECTION_ID`.  |
 
 **Request**
