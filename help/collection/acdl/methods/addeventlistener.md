@@ -117,7 +117,7 @@ window.adobeDataLayer.push({ page: { title: "Products" } });    // Called
 window.adobeDataLayer.push({ page: null });                     // Called
 ```
 
-The path filters on the pushed object, not on whether the value in the computed state actually changed. Pushing the same title twice calls the listener twice.
+The path filters on the pushed object, not on whether the value in the computed state changed. Pushing the same title twice calls the listener twice.
 
 ## The listener function {#listener}
 
@@ -141,7 +141,7 @@ Keep the following behavior in mind:
 * **The computed state is already updated** when the listener runs.
 * **Listeners run synchronously** during `push()`. Keep them short.
 * **Errors propagate.** If a listener throws an error, the error propagates to the code that called `push()`, the remaining listeners for that push aren't called, and the pushed item isn't added to the history. The computed state is still updated. Catch errors inside your listeners.
-* **Avoid endless loops.** A listener that pushes something that triggers itself calls itself without end. See [Avoid endless loops](../concepts/events.md#loops).
+* **Avoid infinite loops.** A listener that pushes something that triggers itself calls itself infinitely. See [Avoid infinite loops](../concepts/events.md#loops).
 
 ## Use named functions {#named-functions}
 

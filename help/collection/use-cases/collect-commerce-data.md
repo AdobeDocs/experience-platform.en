@@ -82,7 +82,7 @@ alloy("sendEvent", {
 
 ## The `order` object {#order-object}
 
-The `commerce` object contains a dedicated object for collecting order details. This is called the `order` object.
+The `commerce` object contains a dedicated object for collecting order details. This object is called the `order` object.
 
 This section describes all the fields supported by the `order` object.
 

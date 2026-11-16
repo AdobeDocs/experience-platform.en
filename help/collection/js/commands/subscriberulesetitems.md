@@ -37,7 +37,7 @@ Rulesets are evaluated each time a [`sendEvent`](sendevent/overview.md) command 
 
 >[!IMPORTANT]
 >
->The `subscribeRulesetItems` command is the only way to get propositions that come from rulesets, since they are not returned alongside [`sendEvent`](sendevent/overview.md) results. You must set up your subscription before calling `sendEvent` to ensure that propositions are captured.
+>The `subscribeRulesetItems` command is the only way to get propositions that come from rulesets, since they are not returned alongside [`sendEvent`](sendevent/overview.md) results. Set up your subscription before calling `sendEvent` to ensure that propositions are captured.
 
 
 ```js
@@ -79,7 +79,7 @@ The callback function receives the two parameters described in the table below w
 
 ### `collectEvent` function {#collectevent-function}
 
-The `collectEvent` function is a convenience function that you can use to send Edge Network events to track interactions, displays and other events. It accepts the two parameters described in the table below.
+The `collectEvent` function is a convenience function that you can use to send Edge Network events to track interactions, displays, and other events. It accepts the two parameters described in the table below.
 
 | Parameter | Type | Description |
 | --- | --- | --- |

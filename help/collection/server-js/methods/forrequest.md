@@ -51,7 +51,7 @@ The handle never reuses the `cookie` or `storage` services that you passed to `c
 
 ## Return value {#return}
 
-Unlike other methods, `forRequest` doesn't return a promise. It returns a handle right away. The handle has the following methods, which work the same way as on the top-level instance:
+Unlike other methods, `forRequest` doesn't return a promise. It returns a handle immediately. The handle has the following methods, which work the same way as on the top-level instance:
 
 * [`sendEvent`](sendevent/overview.md)
 * [`getIdentity`](getidentity.md)

@@ -20,7 +20,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `buildInfo`
 
-The `_satellite.buildInfo` object contains information around the build of the tag property implemented. This object is most useful when debugging frequent builds to ensure that you're using the latest version.
+The `_satellite.buildInfo` object contains information about the build of the tag property implemented. This object is most useful when debugging frequent builds to ensure that you're using the latest version.
 
 ```ts
 readonly _satellite.buildInfo: BuildInfo

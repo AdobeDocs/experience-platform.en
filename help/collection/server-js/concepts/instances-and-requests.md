@@ -44,7 +44,7 @@ await alloy.configure({
 
 If `configure` rejects, for example because an option is invalid, the instance stays unconfigured and `forRequest` keeps throwing until a call to `configure` succeeds.
 
-## Call forRequest for each request {#for-request}
+## Call `forRequest` for each request {#for-request}
 
 For each incoming request, call `forRequest` and pass the incoming request object. The returned handle has the same methods as the instance, except `configure` and `forRequest`.
 

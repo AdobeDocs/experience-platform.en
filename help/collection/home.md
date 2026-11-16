@@ -40,7 +40,7 @@ Adobe supports the following code languages with dedicated libraries for data co
 * **Flutter**: For Android + iOS applications using Flutter
 * **React Native**: For Android + iOS applications using React Native
 
-The tags UI in Adobe Experience Platform Data Collection include a Web SDK and Mobile SDK extension.
+The tags UI in Adobe Experience Platform Data Collection includes a Web SDK and Mobile SDK extension.
 
 On websites, you can use the [Adobe Client Data Layer](acdl/overview.md) to expose page data and events in a standard way. Tags, the Web SDK, and other scripts can then read that data and react to those events.
 
@@ -52,7 +52,7 @@ Instead of installing and implementing separate individual libraries for each Ad
 
 ![Data collection diagram](assets/tags-sdks.png)
 
-The Adobe Experience Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at a tremendous scale. When a datastream receives data, it distributes that data to each respective solution that you have configured. The data is passed along in a format that each individual product understands.
+The Adobe Experience Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at a large scale. When a datastream receives data, it distributes that data to each respective solution that you have configured. The data is passed along in a format that each individual product understands.
 
 ![Adobe solutions diagram](assets/adobe-solutions.png)
 

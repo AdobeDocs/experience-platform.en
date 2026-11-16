@@ -94,7 +94,7 @@ First-party cookies are most effective when they are set using a server that use
 >
 >Cookies set using JavaScript's `document.cookie` method (including using the tag method [`cookie.set()`](../tags/cookie.md)) are almost never protected from browser policies that restrict cookie duration.
 
-Note that `A` or `AAAA` records are only supported for setting and tracking cookies. The primary method for data collection is through a DNS `CNAME`. FPIDs are set using an `A` or `AAAA` record and sent to Adobe using a `CNAME`. The [Adobe-Managed Certificate Program](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) allows you to configure a `CNAME` for data collection.
+Note that `A` or `AAAA` records are only supported for setting and tracking cookies. The primary method for data collection is through a DNS `CNAME`. FPIDs are set using an `A` or `AAAA` record and sent to Adobe using a `CNAME`. The [Adobe-Managed Certificate Program](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) allows you to configure a `CNAME` for data collection.
 
 ### When to set the cookie {#when-to-set-cookie}
 

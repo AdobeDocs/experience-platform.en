@@ -39,7 +39,7 @@ The `thirdPartyCookiesEnabled` property is a boolean that determines if the Web 
 
 The `thirdPartyCookiesEnabled` property also controls whether a [`CORE ID`](/help/collection/identity/overview.md#core-id-and-third-party-identity) can be requested on [`getIdentity`](../getidentity.md) calls.
 
-When this option is enabled, the Web SDK uses Adobe Audience Manager to help identify a visitor. When this option is disabled, the call to Audience Manager is disabled. See [Understanding calls to the Demdex domain](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html) in the Audience Manager user guide for more information.
+When this option is enabled, the Web SDK uses Adobe Audience Manager to help identify a visitor. When this option is disabled, the call to Audience Manager is disabled. See [Understanding calls to the Demdex domain](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/reference/demdex-calls) in the Audience Manager user guide for more information.
 
 Set the `thirdPartyCookiesEnabled` boolean when running the `configure` command. If you omit this property when configuring the Web SDK, it defaults to `true`. Set this value to `false` if you do not want the Web SDK to use Audience Manager to help identify visitors.
 

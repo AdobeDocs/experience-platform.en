@@ -18,7 +18,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Tags client-side JavaScript overview (`_satellite`)
 
-_These pages outline how to use the `_satellite` object, which allow you to manage and customize your tag logic using JavaScript. See [Adobe Experience Platform Web SDK tag extension](/help/tags/extensions/client/web-sdk/overview.md) for details on how to set up your implementation in the Data Collection UI._
+_These pages outline how to use the `_satellite` object, which allows you to manage and customize your tag logic using JavaScript. See [Adobe Experience Platform Web SDK tag extension](/help/tags/extensions/client/web-sdk/overview.md) for details on how to set up your implementation in the Data Collection UI._
 
 The `_satellite` object exposes several supported entry points that help you interact with the tag library published on your site. All tag deployments expose `_satellite` if the loader tag is implemented correctly. There are several primary use cases for this object:
 

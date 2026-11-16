@@ -35,7 +35,7 @@ Before you begin, make sure that your implementation meets the following require
 
 ## Implement cross-domain sharing
 
-You must configure identity sharing on every domain that acts as a source in a cross-domain handoff. If visitors can navigate in both directions between two domains, configure both domains as sources.
+Configure identity sharing on every domain that acts as a source in a cross-domain handoff. If visitors can navigate in both directions between two domains, configure both domains as sources.
 
 >[!BEGINTABS]
 

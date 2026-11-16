@@ -26,7 +26,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `_container`
 
-The `_satellite._container` object contains the full configuration and runtime context of the tag property loaded on the page. All information, such as rules, data elements, extensions, and environments are available within this object. Its primary use is to assist with debugging your implementation so that you can see exactly what logic is exposed or published.
+The `_satellite._container` object contains the full configuration and runtime context of the tag property loaded on the page. All information, such as rules, data elements, extensions, and environments is available within this object. Its primary use is to assist with debugging your implementation so that you can see exactly what logic is exposed or published.
 
 ```ts
 readonly _satellite._container: {

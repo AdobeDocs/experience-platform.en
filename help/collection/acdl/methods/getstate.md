@@ -85,7 +85,7 @@ adobeDataLayer.getState("page.title");  // Still "Getting started"
 
 To change the computed state, push the change with [`push()`](push.md).
 
-Each call copies the entire computed state, even when you pass a path. On pages with a large data layer, avoid calling `getState()` in code that runs very often, such as a scroll handler. Read the value once and reuse it.
+Each call copies the entire computed state, even when you pass a path. On pages with a large data layer, avoid calling `getState()` in code that runs often, such as a scroll handler. Read the value once and reuse it.
 
 ## Read the state in an event listener {#in-listener}
 

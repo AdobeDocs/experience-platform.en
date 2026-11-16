@@ -51,8 +51,8 @@ _satellite.logger.warn('Incorrect rule trigger detected');
 
 When calling this method, debug mode uses the following scope:
 
-* **Local storage**: debug mode is stored in the browser's local storage, so it persists across page loads and browser restarts. It remains enabled until you explicitly disable it or clear the site's data.
-* **Origin-scoped**: debug mode persists only for the same site (domain + port + protocol).
-* **Per browser profile**: debug mode is not cross-profile.
+* **Local storage**: Debug mode is stored in the browser's local storage, so it persists across page loads and browser restarts. It remains enabled until you explicitly disable it or clear the site's data.
+* **Origin-scoped**: Debug mode persists only for the same site (domain + port + protocol).
+* **Per browser profile**: Debug mode is not cross-profile.
 
 For the relationship between tag debug mode and Web SDK logging controls, see [Enable debug logging](../debugging/logging.md#enable-logging).

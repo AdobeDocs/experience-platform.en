@@ -74,7 +74,7 @@ alloy("sendEvent", {
 });
 ```
 
-See [Manage display events](display-events.md) for alternate options that meets your implementation's needs, such as when using [Top and bottom page events](top-bottom-page-events.md).
+See [Manage display events](display-events.md) for alternate options that meet your implementation's needs, such as when using [Top and bottom page events](top-bottom-page-events.md).
 
 ## 4. SPA view changes and re-rendering
 

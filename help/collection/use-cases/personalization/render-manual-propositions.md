@@ -101,4 +101,4 @@ See [Manage display events](display-events.md) for more information.
 
 ## 4. Re-rendering
 
-When UI changes require a re-render, rerun your manual rendering logic against the proposition data that you cached (or fetch again, if needed). If you need to record a display for re-render scenarios, see [Manage display events](display-events.md).
+When UI changes require a re-render, rerun your manual rendering logic against the proposition data that you cached (or fetch again, if needed). If you need to record a display event for re-render scenarios, see [Manage display events](display-events.md).

@@ -84,7 +84,7 @@ In Adobe Target, each decision scope maps to an mbox or activity. In Adobe Journ
 
 ## `personalization.surfaces`
 
-The `surfaces` property is an array of [surface URI](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/code-based-experience/configure-code-based-channel/code-based-surface#surface-uri) strings that manually define the channel, device, or context for which personalization is requested from. They allow you to distinguish between different digital experiences, such as domains, apps, or device platform within your cross-channel ecosystem. By default, the library infers the default surface from the current page. You can use this property to override the automatically-inferred surface for the current page.
+The `surfaces` property is an array of [surface URI](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/code-based-experience/configure-code-based-channel/code-based-surface#surface-uri) strings that manually define the channel, device, or context for which personalization is requested. They allow you to distinguish between different digital experiences, such as domains, apps, or device platforms within your cross-channel ecosystem. By default, the library infers the default surface from the current page. You can use this property to override the automatically-inferred surface for the current page.
 
 This property is valuable when you want to use cross-channel personalization and must distinguish how personalization works between separate channels. It allows you to create distinct offers for different sites under the same Adobe Experience Platform organization.
 
@@ -100,7 +100,7 @@ This property is foundationally used with Adobe Journey Optimizer, as it matches
 
 The `schemas` property is an array of schema URI strings that filter the types of personalization content requested from the Edge Network. Setting this property restricts the response that you receive from Adobe to only include offers that match the content type definitions that you specify. If omitted, the library requests offers of all available schemas for the matched scopes or surfaces.
 
-This property helps optimize response size and makes sure that your web site or application only receives offer types that it can handle. It is also helpful when used with single-page applications that renders personalized content in a specific way (such as using only DOM actions or only JSON objects).
+This property helps optimize response size and makes sure that your web site or application only receives offer types that it can handle. It is also helpful when used with single-page applications that render personalized content in a specific way (such as using only DOM actions or only JSON objects).
 
 ```js
 personalization: {
@@ -121,8 +121,8 @@ The following schema URIs are supported:
 * **`https://ns.adobe.com/personalization/message/in-app`**: Offers formatted specifically for Adobe Journey Optimizer in-app messages, typically rendered as modals, banners, pop-ups, or overlays.
 * **`https://ns.adobe.com/personalization/message/content-card`**: Offers formatted specifically for Adobe Journey Optimizer content cards, designed for persistent or inbox-style feeds in web or mobile apps.
 * **`https://ns.adobe.com/personalization/message/native-alert`**: Offers formatted specifically for Adobe Journey Optimizer native alerts, triggering platform-native notification dialogs.
-* **`https://ns.adobe.com/personalization/measurement`**: Used to tracks clicks and interactions on personalized offers. Does not contain content that can be rendered.
-* **`https://ns.adobe.com/personalization/eventHistoryOperation`**: Schema for altering a visitor's event history in local storage. Used internally by SDKs for tracking which experiences that have been delivered or blocked. Does not contain content that can be rendered.
+* **`https://ns.adobe.com/personalization/measurement`**: Used to track clicks and interactions on personalized offers. Does not contain content that can be rendered.
+* **`https://ns.adobe.com/personalization/eventHistoryOperation`**: Schema for altering a visitor's event history in local storage. Used internally by SDKs for tracking which experiences have been delivered or blocked. Does not contain content that can be rendered.
 * **`https://ns.adobe.com/personalization/default-content-item`**: Fallback or default content, typically when no personalized offer is eligible. It ensures that non-qualifying users still receive content, keeping the experience consistent.
 
 ## `personalization.sendDisplayEvent`
@@ -145,7 +145,7 @@ personalization: {
 
 The `includePendingDisplayNotifications` property is a boolean that controls if any pending display notifications are bundled into the current `sendEvent` call. Pending display notifications are impressions for personalized content that have been rendered but not yet reported to the Edge Network as a display event. This property is helpful when using single-page applications, as rendering personalized content and `sendEvent` calls might be asynchronous to each other.
 
-The default value for this property is `false`. Set this property to `true` if you want to batch and flush any pending display notifications so their impressions are accurately recorded. Synchronous implementation, such as traditional websites, typically do not need to set this property.
+The default value for this property is `false`. Set this property to `true` if you want to batch and flush any pending display notifications so their impressions are accurately recorded. Synchronous implementations, such as traditional websites, typically do not need to set this property.
 
 ```js
 personalization: {

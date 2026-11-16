@@ -82,7 +82,7 @@ Each authenticated request includes the following headers:
 Datastreams have an **[!UICONTROL Access Type]** setting that controls whether the Edge Network accepts unauthenticated requests. See [Configure advanced options](/help/datastreams/configure.md#advanced-options) in the datastreams guide.
 
 * **[!UICONTROL Mixed Authentication]**: Accepts both authenticated and unauthenticated requests. Use this setting if you call `getIdentity`, `appendIdentityToUrl`, or `setConsent`, or if your browser pages send data to the same datastream with the Web SDK.
-* **[!UICONTROL Authenticated Only]**: Accepts only authenticated requests. Use this setting only if you call nothing but `sendEvent` with this datastream.
+* **[!UICONTROL Authenticated Only]**: Accepts only authenticated requests. Use this setting only if you call only `sendEvent` with this datastream.
 
 ## Include a primary identity in events {#primary-identity}
 

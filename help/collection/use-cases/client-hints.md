@@ -71,7 +71,7 @@ In recent years, site owners and marketing vendors have used user agent strings 
 
 Despite the important purpose that user agent strings serve for site owners, browser developers have decided to change how user agent strings operate, to limit potential privacy issues for end-users.
 
-The solution they developed is called [user agent client hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Client hints still allow websites to collect necessary browser, operating system and device information, while also providing increased protection against covert tracking methods, such as fingerprinting.
+The solution they developed is called [user agent client hints](https://privacysandbox.google.com/protections/user-agent). Client hints still allow websites to collect necessary browser, operating system and device information, while also providing increased protection against covert tracking methods, such as fingerprinting.
 
 Client hints allow website owners to access much of the same information available in the user agent string, but in a more privacy-preserving way.
 
@@ -79,7 +79,7 @@ When modern browsers send a user to a web server, the entire user agent string i
 
 ## Browser support {#browser-support}
 
-[User agent client hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) were introduced with [!DNL Google Chrome] version 89.
+[User agent client hints](https://privacysandbox.google.com/protections/user-agent) were introduced with [!DNL Google Chrome] version 89.
 
 Additional Chromium-based browsers support the Client Hints API, such as:
 
@@ -130,17 +130,17 @@ High entropy client hints are disabled by default in Web SDK. To enable them you
 
 Some Adobe CX Enterprise solutions rely on information included in high entropy client hints when generating reports.
 
-If you do not enable high entropy client hints in your environment, the Adobe Analytics and Audience Manager reports and traits described below will not work.
+If you do not enable high entropy client hints in your environment, the Adobe Analytics and Audience Manager reports and traits described below do not work.
 
 ### Adobe Analytics reports relying on high entropy client hints {#analytics}
 
-The [Operating system](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) dimension includes operating system version which is stored as a high entropy client hint. If high entropy clients hints is not enabled, operating system version may be inaccurate for hits collected from Chromium browsers.
+The [Operating system](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/operating-systems) dimension includes operating system version which is stored as a high entropy client hint. If high entropy client hints are not enabled, operating system version may be inaccurate for hits collected from Chromium browsers.
 
 ### Audience Manager traits relying on high entropy client hints {#aam}
 
-[!DNL Google] has updated the [!DNL Chrome] browser functionality to minimize the information collected via the `User-Agent` header. As a result, Audience Manager customers using [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html) will no longer receive reliable information for traits based on [platform-level keys](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
+[!DNL Google] has updated the [!DNL Chrome] browser functionality to minimize the information collected via the `User-Agent` header. As a result, Audience Manager customers using [DIL](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/dil-api/dil-overview) no longer receive reliable information for traits based on [platform-level keys](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/traits/trait-device-targeting).
 
-Audience Manager customers who use platform-level keys for targeting must switch to [Adobe Experience Platform Data Collection](/help/collection/home.md) instead of [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html), and enable [High Entropy Client Hints](#enabling-high-entropy-client-hints) to continue receiving reliable trait data.
+Audience Manager customers who use platform-level keys for targeting must switch to [Adobe Experience Platform Data Collection](/help/collection/home.md) instead of [DIL](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/dil-api/dil-overview), and enable [High Entropy Client Hints](#enabling-high-entropy-client-hints) to continue receiving reliable trait data.
 
 ## Enabling high entropy client hints {#enabling-high-entropy-client-hints}
 
@@ -152,7 +152,7 @@ For example, to retrieve high entropy client hints from web properties, your con
 
 ## Example {#example}
 
-Client hints contained in the headers of the first request made by the browser to a web server will contain the browser brand, the major version of the browser, and an indicator of whether the client is a mobile device. Each piece of data will have its own header value rather than being grouped into a single user agent string, as shown below:
+Client hints contained in the headers of the first request made by the browser to a web server contain the browser brand, the major version of the browser, and an indicator of whether the client is a mobile device. Each piece of data has its own header value rather than being grouped into a single user agent string, as shown below:
 
 ```shell
 Sec-CH-UA: "Chromium";v="101", "Google Chrome";v="101", " Not;A Brand";v="99"

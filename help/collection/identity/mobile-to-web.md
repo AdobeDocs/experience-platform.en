@@ -38,7 +38,7 @@ Before you begin, make sure that your implementation meets the following require
 
 ## Retrieve identity from the mobile app {#retrieve-identity}
 
-Use the [`getUrlVariables`](https://developer.adobe.com/client-sdks/edge/identity-for-edge-network/api-reference/#geturlvariables) API from the Identity for Edge Network extension to retrieve the visitor's identity as a query string. You can then append that string to the URL before opening the WebView or browser.
+Use the [`getUrlVariables`](https://developer.adobe.com/client-sdks/edge/identity-for-edge-network/api-reference#geturlvariables) API from the Identity for Edge Network extension to retrieve the visitor's identity as a query string. You can then append that string to the URL before opening the WebView or browser.
 
 The returned string contains the following URL-encoded parameters:
 

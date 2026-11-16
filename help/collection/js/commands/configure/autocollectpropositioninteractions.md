@@ -36,7 +36,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `autoCollectPropositionInteractions` (Web SDK)
 
-The `autoCollectPropositionInteractions` property is an optional setting that determines if the Web SDK automatically collects proposition interactions. The value is a map of decision providers, each with value that indicates how automatic proposition interactions should be handled.
+The `autoCollectPropositionInteractions` property is an optional setting that determines if the Web SDK automatically collects proposition interactions. The value is a map of decision providers, each with a value that indicates how automatic proposition interactions should be handled.
 
 When you enable automatic proposition interaction tracking, any clicks within a proposition element rendered to the DOM are automatically collected by the Web SDK. This collection includes any experiences automatically rendered to the DOM by the Web SDK and experiences rendered to the DOM using the [`applyPropositions`](../applypropositions.md) command.
 
@@ -111,7 +111,7 @@ You can use data attributes on elements to add specificity to an interaction.
 
 ### Using `autoCollectPropositionInteractions` with the `applyPropositions` command {#apply-propositions}
 
-The [`applyPropositions`](../applypropositions.md) command is a convenient way to render propositions to the DOM. However, in the case of code-based campaigns with JSON, you can use this command to correlate an existing DOM element (or the one your application code rendered to the screen based on the JSON values) with a proposition.
+The [`applyPropositions`](../applypropositions.md) command is a convenient way to render propositions to the DOM. However, for code-based campaigns with JSON, you can use this command to correlate an existing DOM element (or the one your application code rendered to the screen based on the JSON values) with a proposition.
 
 This correlation activates automatic interaction tracking for that element and assigns that element the appropriate proposition. To achieve this, set the `actionType` to `track`.
 

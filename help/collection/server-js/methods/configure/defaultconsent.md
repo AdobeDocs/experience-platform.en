@@ -27,7 +27,7 @@ The `defaultConsent` property determines whether the Server SDK collects data fo
 
 Set the `defaultConsent` string property when you call `configure`. It supports the following values:
 
-* **`"in"`**: The SDK sends data until the visitor opts out. This is the default value.
+* **`"in"`**: The SDK sends data until the visitor opts out. This value is the default value.
 * **`"out"`**: The SDK doesn't send data until the visitor opts in. Methods such as [`sendEvent`](../sendevent/overview.md) resolve with an empty object without contacting Adobe.
 
 ```js

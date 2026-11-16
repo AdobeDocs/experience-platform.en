@@ -45,9 +45,9 @@ Synchronous flicker management is split into three phases:
 1. Preprocessing
 1. Rendering
 
-During the **prehiding phase**, the SDK uses the [`prehidingStyle`](../../js/commands/configure/prehidingstyle.md) configuration property to create an HTML style tag and append it to the DOM to make sure that the desired sections of the page are hidden. If you are unsure which portions of the page will be personalized, it is recommended to set `prehidingStyle` to `body { opacity: 0 !important }`. This ensures that the whole page is hidden. This, however has the downside of leading to worse page rendering performance reported by tools like Lighthouse, Web Page Tests, etc. To have the best page rendering performance, it is recommended to set `prehidingStyle` to a list of container elements that contain the portions of the page that will be personalized.
+During the **prehiding phase**, the SDK uses the [`prehidingStyle`](../../js/commands/configure/prehidingstyle.md) configuration property to create an HTML style tag and append it to the DOM to make sure that the desired sections of the page are hidden. If you are unsure which portions of the page are personalized, it is recommended to set `prehidingStyle` to `body { opacity: 0 !important }`. This ensures that the whole page is hidden. This, however, has the downside of leading to worse page rendering performance reported by tools like Lighthouse, Web Page Tests, etc. To have the best page rendering performance, it is recommended to set `prehidingStyle` to a list of container elements that contain the portions of the page that are personalized.
 
-Assuming you have an HTML page like the one below and you know that only `bar` and `bazz` container elements will be ever personalized:
+Assuming you have an HTML page like the one below and you know that only `bar` and `bazz` container elements are ever personalized:
 
 ```html
 <html>
@@ -77,7 +77,7 @@ After all the personalization content has been rendered successfully, or if ther
 
 ## Manage flicker for asynchronous deployments
 
-The recommendation is to always load the SDK asynchronously to get the best page rendering performance. However, this has some implications for the rendering of personalized content. When the SDK is loaded asynchronously, it is required to use the prehiding snippet. The prehiding snippet must be added before the SDK in the HTML page. Here is an example snippet that hides the entire body:
+The recommendation is to always load the SDK asynchronously to get the best page rendering performance. However, this approach has some implications for the rendering of personalized content. When the SDK is loaded asynchronously, it is required to use the prehiding snippet. The prehiding snippet must be added before the SDK in the HTML page. Here is an example snippet that hides the entire body:
 
 ```html
 <script>

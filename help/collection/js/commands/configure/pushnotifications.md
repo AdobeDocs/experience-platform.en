@@ -34,8 +34,8 @@ Before configuring push notifications, ensure that you have:
 1. **User permission**: Users must explicitly grant permission for notifications
 2. **Service worker**: A registered service worker is required for push notifications to function
 3. **VAPID keys**: Generate VAPID (Voluntary Application Server Identification) keys for secure communication
-4. **Application ID**: The app ID used when saving the VAPID keys inside Adobe Journey Optimizer -> Channels -> Push Settings -> Push Credentials
-5. **Tracking dataset ID**: The ID of the system dataset with the name "AJO Push Tracking Experience Event Dataset". Get this from Adobe Journey Optimizer -> Datasets
+4. **Application ID**: The app ID used when saving the VAPID keys inside Adobe Journey Optimizer > Channels > Push Settings > Push Credentials
+5. **Tracking dataset ID**: The ID of the system dataset with the name "AJO Push Tracking Experience Event Dataset." Get this from Adobe Journey Optimizer > Datasets
 
 ## Generate VAPID keys {#generate-vapid-keys}
 

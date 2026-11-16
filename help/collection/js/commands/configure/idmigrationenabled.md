@@ -35,7 +35,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 >[!ENDSHADEBOX]
 
-The `idMigrationEnabled` property allows the Web SDK to read AMCV cookies set by previous Adobe Visitor ID Service. If your organization upgrades your implementation to the Web SDK, this setting allows a smoother transition to the Web SDK. This setting is valuable so that you don't see a sharp increase in unique visitors when upgrading to the Web SDK.
+The `idMigrationEnabled` property allows the Web SDK to read AMCV cookies set by the previous Adobe Visitor ID Service. If your organization upgrades your implementation to the Web SDK, this setting allows a smoother transition to the Web SDK. This setting is valuable so that you don't see a sharp increase in unique visitors when upgrading to the Web SDK.
 
 If your organization runs a fresh Web SDK implementation, enabling this setting has no impact on data collection or visitor identification. There are no downsides to leaving it enabled for all implementations.
 
@@ -71,7 +71,7 @@ As a guideline, wait until the AMCV cookie's maximum lifetime has elapsed after 
 
 ## Audience Manager trait updates
 
-When XDM-formatted data is sent into Audience Manager during migration, that data must be converted into signals. Your traits must be updated to reflect the new keys provided by XDM. This process is made easier by using the [BAAAM tool](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management).
+When XDM-formatted data is sent into Audience Manager during migration, that data must be converted into signals. Your traits must be updated to reflect the new keys provided by XDM. This process is made easier by using the [BAAAM tool](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro#getting-started-with-bulk-management).
 
 ## Third-party ID migration {#third-party-id}
 

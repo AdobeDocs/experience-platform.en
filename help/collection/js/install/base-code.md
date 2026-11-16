@@ -17,7 +17,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Base code
 
-The base code enables bootstrapping by queuing commands while the Adobe Experience Platform Web SDK loads asynchronously. After the base code runs, you can immediately call any command like [`configure`](../commands/configure/overview.md) or [`sendEvent`](../commands/sendevent/overview.md) without worrying about race conditions or the timing of the library when it is finished loading. When the Web SDK finishes loading, queued commands execute in a first-in, first-out order (the same order that they were queued).
+The base code enables bootstrapping by queuing commands while the Adobe Experience Platform Web SDK loads asynchronously. After the base code runs, you can immediately call any command like [`configure`](../commands/configure/overview.md) or [`sendEvent`](../commands/sendevent/overview.md) without worrying about race conditions or the timing of the library when it is finished loading. When the Web SDK finishes loading, queued commands execute in a first-in, first-out order (the same order in which they were queued).
 
 Commands return Promises, even when queued. If a command is queued, the Promise resolves or rejects after the command runs when the Web SDK finishes loading. If the Web SDK never finishes loading (for example, the library fails to load), queued Promises remain pending.
 

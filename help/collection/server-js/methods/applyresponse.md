@@ -34,7 +34,7 @@ const { propositions = [] } = await visitor.applyResponse({
 });
 ```
 
-In the Web SDK, `applyResponse` lets a browser take over a response that a server requested. With the Server SDK, you usually don't need it, because `sendEvent` already returns the results of each request.
+In the Web SDK, `applyResponse` lets a browser take over a response that a server requested. With the Server SDK, you usually don't need it, because `sendEvent` already returns the result of each request.
 
 ## Options {#options}
 

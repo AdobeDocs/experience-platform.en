@@ -38,7 +38,7 @@ Although tags in Experience Platform make it as easy as possible to deploy and m
 * Waiting for ECID return before personalization calls (causes lag)
 * Fractured data collection (what is an evar?)
 * Schema confusion between solutions (A4T)
-* Lots of other less optimal things
+* Many other less optimal things
 
 Also, there is currently no JavaScript library that sends data directly to Adobe Experience Platform.
 
@@ -82,8 +82,8 @@ Adobe Experience Platform Web SDK can also send data directly to Adobe Experienc
 
 No. Any Adobe Digital Experience customer can use the Adobe Experience Platform Web SDK free of charge.
 
-* Customers who do *not* have access to Experience Platform or Real-time CDP and wish to use the [!DNL Web SDK] will need to configure the right permissions to create schemas and datastreams in the Data Collection UI or Experience Platform UI.
-* Customers who have access to Experience Platform or Real-time CDP and wish to use the [!DNL Web SDK] will need to configure the right permissions to create schemas, datasets, identity namespaces, and datastreams in the Data Collection UI or Experience Platform UI.
+* Customers who do *not* have access to Experience Platform or Real-time CDP and wish to use the [!DNL Web SDK] need to configure the right permissions to create schemas and datastreams in the Data Collection UI or Experience Platform UI.
+* Customers who have access to Experience Platform or Real-time CDP and wish to use the [!DNL Web SDK] need to configure the right permissions to create schemas, datasets, identity namespaces, and datastreams in the Data Collection UI or Experience Platform UI.
 
 For more information on configuring these permissions, see the [Experience Platform resource permissions](../../access-control/home.md#permissions) reference.
 
@@ -92,7 +92,7 @@ For more information on configuring these permissions, see the [Experience Platf
 Adobe Experience Platform Web SDK has been developed for the following customers:
 
 * Adobe Experience Platform users
-  * If you need to send data directly from a device to Adobe Experience Platform, this is the officially recommended way.
+  * If you need to send data directly from a device to Adobe Experience Platform, this method is the officially recommended way.
   * Adobe is aware that using the Adobe Analytics connector is faster if you already have Adobe Analytics, but it is not the long-term strategy for data collection.
 
 * Adobe CX Enterprise solution customers
@@ -141,13 +141,13 @@ However:
 
 * Adobe Experience Platform Web SDK requires something called a Datastream ID so the edge network can identify the stream and determine what to do with the data. This ID is created within Experience Platform. This doesn't mean you have to use the UI to create properties or deploy the JavaScript code, but you do need to use tags to create a configuration ID.
 
-* Tags are not only the best available tag and SDK manager, it makes it very easy to deploy `alloy.js` and map data to XDM schemas. If you decide not to use tags, you will have to manage deploying `alloy.js`, eventing, and mapping your data into XDM before sending it. This is a _much_ more difficult process than using tags.
+* Tags are not only the best available tag and SDK manager, they make it very easy to deploy `alloy.js` and map data to XDM schemas. If you decide not to use tags, you have to manage deploying `alloy.js`, eventing, and mapping your data into XDM before sending it. This is a _much_ more difficult process than using tags.
 
 * It is recommended that you use tags to deploy `alloy.js`, even if it's the only tag you use it for.
 
 ## What is event forwarding?
 
-If you use our SDKs and send XDM to the Edge Network, these new features event forwarding allows you to install new server-side extensions and map that data to anything--and send it anywhere--from our edge network. Think of it as "data collection as a service". This will be available for a cost, as well as being bundled as part of Adobe Experience Platform.
+If you use our SDKs and send XDM to the Edge Network, these new features of event forwarding allow you to install new server-side extensions and map that data to anything--and send it anywhere--from our edge network. Think of it as "data collection as a service." This will be available for a cost, as well as being bundled as part of Adobe Experience Platform.
 
 ## What is a CNAME or First Party Domain and why does it matter?
 

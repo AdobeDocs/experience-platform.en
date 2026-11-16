@@ -15,7 +15,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # `company`
 
-The `_satellite.company` object displays information around the IMS organization that owns the tag property.
+The `_satellite.company` object displays information about the IMS organization that owns the tag property.
 
 ```ts
 readonly _satellite.company: Company
