@@ -18,7 +18,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Install the Web SDK using the NPM package
 
-Adobe Experience Platform Web SDK is available as an [NPM package](https://www.npmjs.com). Installing the NPM package allows you to have control of the build process for the Adobe Experience Platform Web SDK JavaScript library. The NPM package exposes EcmaScript version 5 modules or EcmaScript version 2015 (ES6) modules meant to be run in the browser.
+Adobe Experience Platform Web SDK is available as an [NPM package](https://www.npmjs.com). Installing the NPM package allows you to have control of the build process for the Adobe Experience Platform Web SDK JavaScript library. The NPM package exposes ECMAScript version 5 modules or ECMAScript version 2015 (ES6) modules meant to be run in the browser.
 
 ```bash
 npm install @adobe/alloy

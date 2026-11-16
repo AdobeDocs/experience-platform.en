@@ -34,7 +34,7 @@ Use the `sendMediaEvent` command to track media playbacks, pauses, completions, 
 
 Web SDK can handle media events based on the type of media session tracking:
 
-* **Event handling for automatically-tracked sessions**. In this mode you don't need to pass the `sessionID` to the media event, or the playhead value. The Web SDK will handle this for you, based on the player ID provided and the `getPlayerDetails` callback function provided when starting the media session.
+* **Event handling for automatically-tracked sessions**. In this mode you don't need to pass the `sessionID` to the media event, or the playhead value. The Web SDK handles this for you, based on the player ID provided and the `getPlayerDetails` callback function provided when starting the media session.
 * **Event handling for manually-tracked sessions**. In this mode you need to pass the `sessionID` to the media event, along with the playhead value (integer value). You could also pass the Quality of Experience data details, if needed.
 
 ## Handle media events by type {#handle-by-type}
@@ -688,7 +688,7 @@ sessionPromise.then(sessionID => {
 
 The `media.sessionEnd` event type is used to notify the Media Analytics backend to immediately close the session when the user has abandoned their viewing of the content and they are unlikely to return.
 
-If you do not send a `sessionEnd` event, an abandoned session will time-out after no events are received for 10 minutes, or when no playhead movement occurs for 30 minutes. The session is automatically deleted.
+If you do not send a `sessionEnd` event, an abandoned session times out after no events are received for 10 minutes, or when no playhead movement occurs for 30 minutes. The session is automatically deleted.
 
 >[!BEGINTABS]
 

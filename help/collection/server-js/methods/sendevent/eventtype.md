@@ -23,7 +23,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 >[!ENDSHADEBOX]
 
-The `type` option of `sendEvent` sets the type of the event that you send. It populates the `xdm.eventType` field. Use it to tell different kinds of events apart in Adobe applications.
+The `type` option of `sendEvent` sets the type of the event that you send. It populates the `xdm.eventType` field. Use it to distinguish different kinds of events in Adobe applications.
 
 Adobe provides predefined event types that you can use. See [Accepted values for `eventType`](/help/xdm/classes/experienceevent.md#eventType) in the XDM guide for the full list. You can also use your own values.
 

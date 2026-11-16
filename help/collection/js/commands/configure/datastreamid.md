@@ -38,7 +38,7 @@ Alternatively, you can select the desired datastream name and the datastream ID 
 
 ## Code example
 
-Set the `datastreamID` string property when running the `configure` command. This property is required for all Web SDK implementations. If you omit this property, the Web SDK does not know which datastream to send data to, causing that data to be permanently lost.
+Set the `datastreamId` string property when running the `configure` command. This property is required for all Web SDK implementations. If you omit this property, the Web SDK does not know which datastream to send data to, causing that data to be permanently lost.
 
 ```js
 alloy("configure", {

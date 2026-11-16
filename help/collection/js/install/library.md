@@ -24,7 +24,7 @@ The Web SDK library is available using the following URL structure:
 * **Minified**: `https://cdn1.adoberesources.net/alloy/<VERSION>/alloy.min.js`
 * **Full**: `https://cdn1.adoberesources.net/alloy/<VERSION>/alloy.js`
 
-See the [Web SDK release notes](../release-notes.md) for the latest version to include in the URL. For example, the URL for the full version of version 2.19.1 is `https://cdn1.adoberesources.net/alloy/2.19.1/alloy.js`.
+See the [Web SDK release notes](../release-notes.md) for the latest version to include in the URL. For example, the URL for the full version 2.19.1 is `https://cdn1.adoberesources.net/alloy/2.19.1/alloy.js`.
 
 ## Adding the base code and library loader
 

@@ -28,12 +28,12 @@ The Adobe Experience Platform Edge Network provides low-latency data collection,
 
 On the server-side, a unified edge gateway and a common platform service framework simplify the deployment of new capabilities, while providing the following benefits:
 
-* Decreasing customer time to value;
-* Ending the need for "point" integrations;
-* Improving performance compared to the old libraries;
-* Decreasing operating costs;
-* Increasing innovation speed;
-* Creating sustained competitive advantages for Adobe customers.
+* Decreasing customer time to value
+* Ending the need for "point" integrations
+* Improving performance compared to the old libraries
+* Decreasing operating costs
+* Increasing innovation speed
+* Creating sustained competitive advantages for Adobe customers
 
 A consolidated edge system lets you manage advertising, marketing, and personalization campaigns across all channels. It reduces the total cost of ownership and supports various data types, enabling you to map your data model for use with multiple CX Enterprise products.
 

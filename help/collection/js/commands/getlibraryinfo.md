@@ -47,4 +47,4 @@ If you decide to [handle responses](command-responses.md) with this command, the
 
 The tag extension does not provide an interface to send this command. Use the custom code editor, following JavaScript library syntax.
 
-If you run this command using the tag extension, both the tag extension version and library version are included, concatenatated with a `+` symbol. The Web SDK library version is listed first, followed by the tag extension version.
+If you run this command using the tag extension, both the tag extension version and library version are included, concatenated with a `+` symbol. The Web SDK library version is listed first, followed by the tag extension version.

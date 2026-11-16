@@ -30,7 +30,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 ---
 # Configuring a CSP
 
-A [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) is used to restrict the resources a browser is allowed to use. The CSP can also limit the functionality of script and style resources. Adobe Experience Platform Web SDK does not require a CSP, but adding one can reduce the attack surface to prevent against malicious attacks.
+A [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) (CSP) is used to restrict the resources a browser is allowed to use. The CSP can also limit the functionality of script and style resources. Adobe Experience Platform Web SDK does not require a CSP, but adding one can reduce the attack surface to protect against malicious attacks.
 
 The CSP needs to reflect how [!DNL Experience Platform Web SDK] is deployed and configured. The following CSP shows what changes may be necessary for the SDK to function properly. Additional CSP settings will likely be required, depending on your specific environment.
 
@@ -49,7 +49,7 @@ In the above example, `EDGE-DOMAIN` should be replaced with the first-party doma
 
 ### Use NONCE to allow inline script and style elements
 
-[!DNL Experience Platform Web SDK] can modify page content and must be approved to create inline script and style tags. To accomplish this, Adobe recommends using a nonce for the [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) CSP directive. A nonce is a server-generated cryptographically strong random token that is generated once per each unique page view.
+[!DNL Experience Platform Web SDK] can modify page content and must be approved to create inline script and style tags. To accomplish this, Adobe recommends using a nonce for the [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) CSP directive. A nonce is a server-generated cryptographically strong random token that is generated once per each unique page view.
 
 ```
 default-src 'nonce-SERVER-GENERATED-NONCE'

@@ -37,7 +37,7 @@ The collected data can include information about media playbacks, pauses, comple
 To use the `streamingMedia` component of the Web SDK, you must meet the following prerequisites:
 
 * Make sure that you have access to Adobe Experience Platform or Adobe Analytics.
-* You must use Web SDK version 2.20.0 or later. See the [Web SDK installation overview](../../install/overview.md) to learn how to install the latest version.
+* Use Web SDK version 2.20.0 or later. See the [Web SDK installation overview](../../install/overview.md) to learn how to install the latest version.
 * Enable the **[[!UICONTROL Media Analytics]](/help/datastreams/configure.md#advanced-options)** option for the datastream you are using.
 * Ensure that the schema used by your datastream includes the Media Collection schema fields.
 * Configure the Streaming Media feature in the Web SDK, as shown on this page.

@@ -60,7 +60,7 @@ Run the `setConsent` command when calling your configured instance of the Web SD
 
 ### Adobe 2.0 standard `consent` object
 
-If you send data to Adobe Experience Platform, you will want to include a privacy schema field group in your profile schema. See [Governance, privacy, and security in Adobe Experience Platform](/help/landing/governance-privacy-security/overview.md) for more information on the Adobe 2.0 standard. You can add data inside the value object below corresponding to the schema of the `consents` field of the [!UICONTROL Consents and Preferences] profile field group.
+If you send data to Adobe Experience Platform, include a privacy schema field group in your profile schema. See [Governance, privacy, and security in Adobe Experience Platform](/help/landing/governance-privacy-security/overview.md) for more information on the Adobe 2.0 standard. You can add data inside the value object below corresponding to the schema of the `consents` field of the [!UICONTROL Consents and Preferences] profile field group.
 
 * **`standard`**: The consent standard that you choose. Set this property to `"Adobe"` for the Adobe 2.0 standard.
 * **`version`**: A string representing the version of the consent standard. Set this property to `"2.0"` for the Adobe 2.0 standard.
@@ -189,7 +189,7 @@ alloy("setConsent", {
 
 ## Persistence of consent preferences {#persistence}
 
-After you have communicated user preferences to the Web SDK using the `setConsent` command, the SDK persists user preferences to a cookie. The next time the user loads your website in the browser, the Web SDK retrieves and use these persisted preferences to determine whether or not events can be sent to Adobe.
+After you have communicated user preferences to the Web SDK using the `setConsent` command, the SDK persists user preferences to a cookie. The next time the user loads your website in the browser, the Web SDK retrieves and uses these persisted preferences to determine whether or not events can be sent to Adobe.
 
 Store the user's preferences independently so you can show the consent dialog with the current preferences. There is no way to retrieve the user preferences from the Web SDK. To make sure that the user preferences stay in sync with the SDK, you can call the `setConsent` command on every page load. The Web SDK only makes a server call if the preferences change.
 

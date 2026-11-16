@@ -27,7 +27,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 Adobe Experience Platform is a highly distributed system designed to maximize reliability while scaling to ever-increasing volumes of data.
 
-For real-time data collection, [Experience Events](/help/xdm/classes/experienceevent.md) are collected via the Edge Network, from client-side sources, such as Web SDK or [Mobile SDK](https://developer.adobe.com/client-sdks/home/), and delivered to Experience Platform processing and storage layers. These layers compose solutions such as Experience Platform, [Real-Time CDP](/help/rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html), and [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html).
+For real-time data collection, [Experience Events](/help/xdm/classes/experienceevent.md) are collected via the Edge Network, from client-side sources, such as Web SDK or [Mobile SDK](https://developer.adobe.com/client-sdks/home/), and delivered to Experience Platform processing and storage layers. These layers compose solutions such as Experience Platform, [Real-Time CDP](/help/rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-b2c-overview/cja-overview), and [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home).
 
 To minimize Experience Event loss, client-side SDKs and the internal Experience Platform delivery service expect a confirmation that an event was successfully collected.
 
@@ -53,7 +53,7 @@ To learn more about "at-least-once" processing, see this article on [message del
 For business scenarios sensitive to duplicate events, Experience Platform uses multiple event deduplication methods in its downstream storage systems, such as the ones described below.
 
 * Real-Time CDP Profile store drops events if an event with the same `_id` already exists in the [!DNL Profile store]. See the documentation on [XDM ExperienceEvent class](/help/xdm/classes/experienceevent.md) for more details.
-* Customer Journey Analytics allows users to configure a metric to only count values non-repetitively. To learn how to do this, see the documentation on [metric deduplication component settings](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/component-settings/metric-deduplication.html?lang=en).
+* Customer Journey Analytics allows users to configure a metric to only count values non-repetitively. To learn how to do this, see the documentation on [metric deduplication component settings](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/component-settings/metric-deduplication).
 * Experience Platform Query Service supports data deduplication when it is required to remove an entire row from a calculation or ignore a specific set of fields because only part of the data in the row is duplicate information. See the documentation around [data deduplication in Query Service](/help/query-service/key-concepts/deduplication.md) for more information.
 
 >[!NOTE]

@@ -19,7 +19,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 If you enable automatic link tracking using [`clickCollectionEnabled`](clickcollectionenabled.md), the `downloadLinkQualifier` property helps determine the criteria for a URL to be considered a download link.
 
-This property is a regex string. If the clicked URL matches this regex, `xdm.web.webInteraction.type` is set to `"download"`. Links are also immediately classified as a download link if they include a `download` HTML attribute. If `clickCollectionEnabled` is not enabled, this property does nothing.
+This property is a regex string. If the clicked URL matches this regex, `xdm.web.webInteraction.type` is set to `"download"`. Links are also immediately classified as download links if they include a `download` HTML attribute. If `clickCollectionEnabled` is not enabled, this property does nothing.
 
 Set the `downloadLinkQualifier` string when running the `configure` command. If you omit this property, it defaults to the following value:
 

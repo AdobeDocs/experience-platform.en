@@ -29,7 +29,7 @@ The `identityMap` payload object is how you tell the Edge Network who a visitor 
 * **Stitch activity to a person across devices and channels.** [Identity Service](/help/identity-service/home.md) links the identities you send into an [identity graph](/help/identity-service/features/identity-graph-viewer.md), connecting anonymous device-level behavior to a known person.
 * **Build unified customer profiles.** [Real-Time Customer Profile](/help/profile/home.md) uses the primary identity that you set to anchor events and attributes to a single profile, enabling person-level segmentation and audience building.
 * **Activate audiences on downstream destinations.** Many [Destinations](/help/destinations/home.md) require resolved person-level identities (hashed emails, phone numbers, etc.) to match your audiences to their user bases.
-* **Orchestrate cross-channel journeys.** [Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) uses resolved identities to trigger and personalize journeys across email, push, and in-app channels based on a visitor's authenticated behavior.
+* **Orchestrate cross-channel journeys.** [Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home) uses resolved identities to trigger and personalize journeys across email, push, and in-app channels based on a visitor's authenticated behavior.
 
 This page covers how to construct `identityMap` payloads, choose the right settings for each identity, and handle common implementation scenarios.
 
@@ -277,7 +277,7 @@ Key behaviors to be aware of:
 
 * **Identities sent on the same event are linked together.** If you include a CRMID and an Email namespace on the same `sendEvent` call, Identity Service creates a link between those two identities. Spreading identifiers across separate events produces weaker links and can result in fragmented graphs.
 * **The `primary` identity anchors the event in Real-Time Customer Profile.** Profile uses the primary identity to determine which profile the event belongs to. Marking the wrong identity as primary (for example, setting ECID as primary when a person-level ID is available) can cause events to be stored against device-level profiles rather than person-level profiles.
-* **The `authenticatedState` influences graph confidence.** Sending `authenticated` for an identity that has not actually been verified can create incorrect cross-device links that are difficult to undo. Use `authenticated` only when the visitor has actively proven their identity during the current session.
+* **The `authenticatedState` influences graph confidence.** Sending `authenticated` for an identity that has not been verified can create incorrect cross-device links that are difficult to undo. Use `authenticated` only when the visitor has actively proven their identity during the current session.
 
 If your implementation uses [identity graph linking rules](/help/identity-service/identity-graph-linking-rules/overview.md) (such as namespace priority or the identity optimization algorithm), review the [implementation guide](/help/identity-service/identity-graph-linking-rules/implementation-guide.md) to understand how those rules interact with the identities you send through `identityMap`.
 

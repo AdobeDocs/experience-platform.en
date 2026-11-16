@@ -42,11 +42,11 @@ This callback function fires when an event triggers a rule before the rule's con
 
 ## `ruleCompleted`
 
-The `ruleCompleted` callback function fires after `ruleTriggered` when the rule's condition criteria succeeds and all the rule's actions are executed.
+The `ruleCompleted` callback function fires after `ruleTriggered` when the rule's condition criteria succeed and all the rule's actions are executed.
 
 ## `ruleConditionFailed`
 
-The `ruleConditionFailed` callback function fires after `ruleTriggered` when at least one of the rule's conditions fail.
+The `ruleConditionFailed` callback function fires after `ruleTriggered` when at least one of the rule's conditions fails.
 
 ## `Rule` object
 

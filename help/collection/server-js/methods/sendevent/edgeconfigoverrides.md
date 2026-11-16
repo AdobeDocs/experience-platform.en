@@ -39,7 +39,7 @@ If you set `edgeConfigOverrides` in both `configure` and `sendEvent`, the SDK co
 
 ## Example
 
-The following example sends one event to a different datastream, and overrides its Analytics report suite and Target property:
+The following example sends one event to a different datastream and overrides its Analytics report suite and Target property:
 
 ```js
 await visitor.sendEvent({

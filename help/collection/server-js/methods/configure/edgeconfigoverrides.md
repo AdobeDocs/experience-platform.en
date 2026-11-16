@@ -28,7 +28,7 @@ autotag-review: '2026-11-05T22:08:57.077Z'
 
 >[!ENDSHADEBOX]
 
-The `edgeConfigOverrides` object lets you override datastream settings for every request that an instance sends. For example, you can send data to a different Experience Platform dataset, Analytics report suite, or Target property than the datastream's defaults. This is useful when one server handles several websites or business units that share a datastream. To override settings for a single event, use the [`edgeConfigOverrides` object in `sendEvent`](../sendevent/edgeconfigoverrides.md) instead.
+The `edgeConfigOverrides` object lets you override datastream settings for every request that an instance sends. For example, you can send data to a different Experience Platform dataset, Analytics report suite, or Target property than the datastream's defaults. This capability is useful when one server handles several websites or business units that share a datastream. To override settings for a single event, use the [`edgeConfigOverrides` object in `sendEvent`](../sendevent/edgeconfigoverrides.md) instead.
 
 Overriding datastream settings takes two steps:
 

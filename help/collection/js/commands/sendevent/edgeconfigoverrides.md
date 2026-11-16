@@ -36,7 +36,7 @@ The overarching datastream configuration override process consists of two main s
 1. First, you must define your datastream configuration override when [configuring a datastream](/help/datastreams/configure.md) in the Datastreams UI. See [Datastream configuration overrides](/help/datastreams/overrides.md) in the datastreams documentation for instructions on how to configure overrides.
 1. After you have configured the datastream override in the datastreams UI, you can configure the `edgeConfigOverrides` object.
 
-Note that the `configure` command also supports a `edgeConfigOverrides` object; see [`edgeConfigOverrides`](../configure/edgeconfigoverrides.md) under the `configure` command. The `edgeConfigOverrides` object in the `sendEvent` command takes precedence over the `edgeConfigOverrides` object in the `configure` command if both are set.
+Note that the `configure` command also supports an `edgeConfigOverrides` object; see [`edgeConfigOverrides`](../configure/edgeconfigoverrides.md) under the `configure` command. The `edgeConfigOverrides` object in the `sendEvent` command takes precedence over the `edgeConfigOverrides` object in the `configure` command if both are set.
 
 ## Example
 

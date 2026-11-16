@@ -122,7 +122,7 @@ adobeDataLayer.getState("product");
 // { sku: "a-100", price: 25 }
 ```
 
-The best way to avoid this situation is to keep each key's type consistent in your data layer design.
+To avoid this situation, keep each key's type consistent in your data layer design.
 
 ## Value types {#value-types}
 

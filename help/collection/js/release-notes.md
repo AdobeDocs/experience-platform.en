@@ -74,7 +74,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 - Added Adobe Advertising `stitchId` to outgoing experience events when Advertising is configured.
 - Improved performance of `sendEvent` commands by removing a block on ID destination processing.
 - Fixed an issue where advertising identity resolution was loading 3rd party scripts and iframes, even when advertising was not configured.
-- Added the ability to read `adobe_mc` identity transfer parameter from the hash (previously was just in the query parameters).
+- Added the ability to read `adobe_mc` identity transfer parameter from the hash (previously in the query parameters).
 - Fixed an issue where `adobe_mc` was unable to be read when URL encoded multiple times.
 - Include XDM on all outgoing Brand Concierge events.
 
@@ -140,7 +140,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 - Fixed an error in the [Media Analytics tracker](commands/getmediaanalyticstracker.md) where the `length` property of the media object incorrectly accepted invalid data types.
 - Improved [identity management](../identity/overview.md) error handling to properly process promise rejections when identity lookup fails.
 - Resolved an issue where personalization content with HTML content items failed to render with an error relating to a missing `renderStatusHandler`.
-- Fixed activity map [URL collection](commands/configure/clickcollectionenabled.md) to properly handle non-HTTP URLs.
+- Fixed Activity Map [URL collection](commands/configure/clickcollectionenabled.md) to properly handle non-HTTP URLs.
 
 **Known issues**
 
@@ -151,7 +151,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **Fixes and improvements**
 
 - Fixed an issue with in-app messages where the custom styling was not applied correctly.
-- Changed the format of event history. This change will cause in-app messages and content cards to be re-shown as the old history data is deleted.
+- Changed the format of event history. This change causes in-app messages and content cards to be re-shown as the old history data is deleted.
 - Fixed an issue where propositions would be reapplied in SPA use cases.
 - Fixed an issue with click tracking on shadow DOM elements.
 
@@ -169,7 +169,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.25.0 - January 23, 2025
 
-**Fixed and improvements**
+**Fixes and improvements**
 
 - Added option validation to the `setDebug` command.
 - Added a warning when configuring either an `onBeforeLinkClickSend` function or a download link qualifier when click collection is disabled.
@@ -181,7 +181,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.24.1 - December 6, 2024
 
-**Fixed and improvements**
+**Fixes and improvements**
 
 - Resolved a dependency issue related to [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/), which was causing errors in some customer integrations. The Web SDK now requires [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) version 2.0.3 or later.
 
@@ -224,7 +224,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **Fixes and improvements**
 
 - Removed support for Internet Explorer, reducing the library gzip size by 9%.
-- Fixed an issue where activity map link details were not initialized when the `onInstanceConfigured` monitor hook was called.
+- Fixed an issue where Activity Map link details were not initialized when the `onInstanceConfigured` monitor hook was called.
 - Fixed an issue where cookies destinations were not set to the correct path.
 - Fixed customer issue with call to has.
 - Fixed an issue where an invalid url encoding in the `adobe_mc` parameter caused [sendEvent](commands/sendevent/overview.md) calls to fail.
@@ -296,7 +296,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **Fixes and improvements**
 
-- The Web SDK now encodes the Audience Manager cookie destination values, similar to the [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html).
+- The Web SDK now encodes the Audience Manager cookie destination values, similar to the [Data Integration Library (DIL)](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/dil-api/dil-overview).
 
 ## Version 2.16.0 - April 25, 2023
 
@@ -336,7 +336,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-- Added support for Page by Page Full Migration. The Adobe Target profile will now be preserved as a visitor moves between at.js and Web SDK pages.
+- Added support for Page by Page Full Migration. The Adobe Target profile is preserved as a visitor moves between at.js and Web SDK pages.
 - Added configurable support for [high entropy User-Agent Client Hints](../use-cases/client-hints.md).
 - Added support for the [`applyResponse`](commands/applyresponse.md) command. This command enables hybrid personalization via the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/).
 - QA mode links now work across multiple pages.
@@ -382,7 +382,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 - Added support for tracking [!DNL control (default)] Adobe Target experiences.
 - Optimized the view-change events for single page applications. The display notification is now included with the view-change event when personalized experiences are rendered.
 - Removed console warning when no `eventType` is present.
-- Fixed an issue where the `propositions` property was only returned from a `sendEvent` command when experiences were requested or retrieved from the cache. The `propositions` property will now always be defined as an array.
+- Fixed an issue where the `propositions` property was only returned from a `sendEvent` command when experiences were requested or retrieved from the cache. The `propositions` property is always defined as an array.
 - Fixed an issue where hidden containers were not shown when there was an error returned from the Edge Network.
 - Fixed an issue where the interact events were not being counted in Adobe Target. This issue was fixed by adding the view name to the XDM at web.webPageDetails.viewName.
 - Fix broken documentation links in console messages.
@@ -407,7 +407,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.6.2 - August 4, 2021
 
-- Fixed an issue where a warning about the deprecation of `result.decisions` (provided by the `sendEvent` command) would be logged to the console even when the `result.decisions` property wasn't being accessed. No warning will be logged when accessing the `result.decisions` property, but the property is still deprecated.
+- Fixed an issue where a warning about the deprecation of `result.decisions` (provided by the `sendEvent` command) would be logged to the console even when the `result.decisions` property wasn't being accessed. No warning is logged when accessing the `result.decisions` property, but the property is still deprecated.
 
 ## Version 2.6.1 - July 29, 2021
 
@@ -420,7 +420,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 ## Version 2.5.0 - June 2021
 
 - Added support for redirect personalization offers.
-- Automatically collected viewport widths and heights that are negative values will no longer be sent to the server.
+- Automatically collected viewport widths and heights that are negative values are no longer sent to the server.
 - When an event is canceled by returning `false` from an `onBeforeEventSend` callback, a message is now logged.
 - Fixed an issue where specific pieces of XDM data intended for a single event was included across multiple events.
 

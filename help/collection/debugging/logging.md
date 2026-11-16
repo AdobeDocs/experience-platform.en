@@ -142,7 +142,7 @@ Messages identify the instance in square brackets, such as `[alloy]`, and includ
 
 +++**Mobile SDK**
 
-Use Mobile Core's [`setLogLevel`](https://developer.adobe.com/client-sdks/home/base/mobile-core/api-reference/#setloglevel) API to select diagnostic verbosity. Android defaults to `LoggingMode.ERROR`; iOS defaults to `LogLevel.error`. Set the desired level during app initialization before reproducing the issue.
+Use Mobile Core's [`setLogLevel`](https://developer.adobe.com/client-sdks/home/base/mobile-core/api-reference#setloglevel) API to select diagnostic verbosity. Android defaults to `LoggingMode.ERROR`; iOS defaults to `LogLevel.error`. Set the desired level during app initialization before reproducing the issue.
 
 **Android**: Enable verbose logging in your development app:
 
@@ -176,7 +176,7 @@ MobileCore.setLogLevel(.error)
 
 Returning to error level reduces diagnostic output; it does not suppress errors. These calls change logging in the running app, not other installations. Ensure your initialization code does not re-enable verbose logging on the next launch or in a production build.
 
-See the [Mobile Core API reference](https://developer.adobe.com/client-sdks/home/base/mobile-core/api-reference/#setloglevel) for Java, Objective-C, supported levels, and version-specific details. For React Native or Flutter, use the API exposed by your [Mobile SDK wrapper](https://developer.adobe.com/client-sdks/home/) rather than copying native calls directly into wrapper code. For connected event inspection rather than runtime console output, see [Assurance](inspect-requests.md#mobile-server).
+See the [Mobile Core API reference](https://developer.adobe.com/client-sdks/home/base/mobile-core/api-reference#setloglevel) for Java, Objective-C, supported levels, and version-specific details. For React Native or Flutter, use the API exposed by your [Mobile SDK wrapper](https://developer.adobe.com/client-sdks/home/) rather than copying native calls directly into wrapper code. For connected event inspection rather than runtime console output, see [Assurance](inspect-requests.md#mobile-server).
 
 +++
 

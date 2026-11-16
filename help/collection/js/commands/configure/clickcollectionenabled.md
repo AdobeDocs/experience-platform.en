@@ -30,7 +30,7 @@ Internal links, download links, and exit links are all automatically tracked by 
 
 ## Automatic link tracking logic
 
-The Web SDK tracks all clicks on `<a>` and `<area>` HTML elements if it doesn't have an `onClick` attribute. Clicks are captured with a [capture](https://www.w3.org/TR/uievents/#capture-phase) click event listener that is attached to the document. When a valid link is clicked, the following logic is run in order:
+The Web SDK tracks all clicks on `<a>` and `<area>` HTML elements if they don't have an `onClick` attribute. Clicks are captured with a [capture](https://www.w3.org/TR/uievents/#capture-phase) click event listener that is attached to the document. When a valid link is clicked, the following logic is run in order:
 
 1. If the link matches criteria based on values in [`downloadLinkQualifier`](downloadlinkqualifier.md), or if the link contains a `download` HTML attribute, `xdm.web.webInteraction.type` is set to `"download"` (if `clickCollection.downloadLinkEnabled` is enabled).
 1. If the link target domain differs from the current `window.location.hostname`, `xdm.web.webInteraction.type` is set to `"exit"` (if `clickCollection.exitLinkEnabled` is enabled).
@@ -66,7 +66,7 @@ alloy(configure, {
 
 The Web SDK supports automatic click tracking for links inside **open Shadow DOM** elements.
 
-Many modern websites use [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) to build reusable and encapsulated user interface elements. These components often use a technology called [**Shadow DOM**](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) to keep their internal structure and styles separate from the rest of the page.
+Many modern websites use [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) to build reusable and encapsulated user interface elements. These components often use a technology called [**Shadow DOM**](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) to keep their internal structure and styles separate from the rest of the page.
 
 There are two types of Shadow DOM:
 
