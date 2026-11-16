@@ -291,18 +291,17 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | The `id` value of your newly created streaming connection. |
-| `syncValidation`| An optional query parameter intended for development purposes. If set to `true`, it can be used for immediate feedback to determine if the request was successfully sent. By default, this value is set to `false`. Please note that if you set this query parameter to `true` that the request will be rate limited to 60 times per minute per `CONNECTION_ID`.  |
+| `{CONNECTION_ID}` | The `inletId` value of your newly created streaming connection. |
+| `{FLOW_ID}` | The ID of the dataflow configured for your target dataset. This value is returned when you [create a dataflow](../../sources/tutorials/api/create/streaming/http.md#create-a-dataflow). |
+| `syncValidation` | An optional query parameter intended for development purposes. If set to `true`, it can be used for immediate feedback to determine if the request was successfully sent. By default, this value is set to `false`. Please note that if you set this query parameter to `true` that the request will be rate limited to 60 times per minute per `CONNECTION_ID`. |
 
 **Request**
 
-Ingesting time series data to a streaming connection can be done either with or without the source name.
+Specify the dataflow ID in the `x-adobe-flow-id` HTTP request header and include only the XDM JSON record in the request body. The `header`, `body`, `xdmMeta`, and `xdmEntity` wrapper objects are not required.
 
-The example request below ingests time series data with a missing source name to Experience Platform. If the data is missing the source name, it will add the source ID from the streaming connection definition.
+Both `_id` and `timestamp` are required fields for time-series data. The `_id` attribute represents a unique identifier for the record itself, **not** a unique ID of the person or device whose record it is.
 
-Both `xdmEntity._id` and `xdmEntity.timestamp` are required fields for time-series data. The `xdmEntity._id` attribute represents a unique identifier for the record itself, **not** a unique ID of the person or device whose record it is.
-
-You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp` for the record in a way that remains consistent if the record ever needs to be re-ingested. Ideally, your source system will contain these values. If an ID is not available, consider concatenating values of other fields in the record to create a unique value that can be consistently regenerated from the record on re-ingestion.
+You will need to generate your own `_id` and `timestamp` for the record in a way that remains consistent if the record ever needs to be re-ingested. Ideally, your source system will contain these values. If an ID is not available, consider concatenating values of other fields in the record to create a unique value that can be consistently regenerated from the record on re-ingestion.
 
 >[!NOTE]
 >
@@ -311,82 +310,47 @@ You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp` for
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
   -H "Content-Type: application/json" \
+  -H "x-adobe-flow-id: {FLOW_ID}" \
   -d '{
-    "header": {
-    "datasetId": "{DATASET_ID}",
-    "flowId": "{FLOW_ID}",
-    "imsOrgID": "{ORG_ID}"
-    },
-    "body": {
-        "xdmMeta": {
-            "schemaRef": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-                "contentType": "application/vnd.adobe.xed-full+json;version=1"
-            },
-        "identityMap": {
-                "Email": [
-                  {
-                    "id": "acme_user@gmail.com",
-                    "primary": true
-                  }
-                ]
-              },
+    "_id": "9af5adcc-db9c-4692-b826-65d3abe68c22",
+    "timestamp": "2019-02-23T22:07:01Z",
+    "environment": {
+        "browserDetails": {
+            "userAgent": "Mozilla\/5.0 (Windows NT 5.1) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/29.0.1547.57 Safari\/537.36 OPR\/16.0.1196.62",
+            "acceptLanguage": "en-US",
+            "cookiesEnabled": true,
+            "javaScriptVersion": "1.6",
+            "javaEnabled": true
         },
-        "xdmEntity":{
-            "_id": "9af5adcc-db9c-4692-b826-65d3abe68c22",
-            "timestamp": "2019-02-23T22:07:01Z",
-            "environment": {
-                "browserDetails": {
-                    "userAgent": "Mozilla\/5.0 (Windows NT 5.1) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/29.0.1547.57 Safari\/537.36 OPR\/16.0.1196.62",
-                    "acceptLanguage": "en-US",
-                    "cookiesEnabled": true,
-                    "javaScriptVersion": "1.6",
-                    "javaEnabled": true
-                },
-                "colorDepth": 32,
-                "viewportHeight": 799,
-                "viewportWidth": 414
-            },
-            "productListItems": [
-                {
-                    "SKU": "CC",
-                    "name": "Fernie Snow",
-                    "quantity": 30,
-                    "priceTotal": 7.8
-                }
-            ],
-            "commerce": {
-                "productViews": {
-                    "value": 1
-                }
-            },
-            "_experience": {
-                "campaign": {
-                    "message": {
-                        "profileSnapshot": {
-                            "workEmail":{
-                                "address": "janedoe@example.com"
-                            }
-                        }
+        "colorDepth": 32,
+        "viewportHeight": 799,
+        "viewportWidth": 414
+    },
+    "productListItems": [
+        {
+            "SKU": "CC",
+            "name": "Fernie Snow",
+            "quantity": 30,
+            "priceTotal": 7.8
+        }
+    ],
+    "commerce": {
+        "productViews": {
+            "value": 1
+        }
+    },
+    "_experience": {
+        "campaign": {
+            "message": {
+                "profileSnapshot": {
+                    "workEmail":{
+                        "address": "janedoe@example.com"
                     }
                 }
             }
         }
     }
 }'
-```
-
-If you want to include a source name, the following example shows how you would include it.
-
-```json
-    "header": {
-    "datasetId": "{DATASET_ID}",
-    "flowId": "{FLOW_ID}",
-    "imsOrgID": "{ORG_ID}",
-      "source": {
-        "name": "ACME source"
-      }
-    }
 ```
 
 **Response**
@@ -408,7 +372,7 @@ An successful response returns HTTP status 200 with details of the newly streame
 | -------- | ----------- |
 | `{CONNECTION_ID}` | The `inletId` of the previously created streaming connection. |
 | `xactionId` | A unique identifier generated server-side for the record you just sent. This ID helps Adobe trace this record's lifecycle through various systems and with debugging. |
-| `receivedTimeMs`: A timestamp (epoch in milliseconds) that shows what time the request was received. ||
+| `receivedTimeMs` | A timestamp (epoch in milliseconds) that shows what time the request was received. |
 | `syncValidation.status` | Since the query parameter `syncValidation=true` was added, this value will appear. If the validation has succeeded, the status will be `pass`. |
 
 ## Retrieve the newly ingested time series data
