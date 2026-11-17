@@ -62,6 +62,14 @@ In order to create a merge policy using **[!UICONTROL Dataset precedence]**, you
 
 As profile records are ingested into Experience Platform, a system timestamp is obtained at the time of ingestion and added to the record. When **[!UICONTROL Timestamp ordered]** is selected as the merge method for a merge policy, profiles are merged based on the system timestamp. In other words, merging is done based on the timestamp for when the record was ingested into Experience Platform.
 
+#### Records with identical ingestion timestamps {#identical-ingestion-timestamps}
+
+Multiple profile fragments for the same identity within a single batch can share the same system ingestion timestamp. This is expected behavior.
+
+When these timestamps are identical, an internal deterministic tie-breaker determines which fragment takes priority. The result is repeatable for the same inputs, but might not reflect the order of updates in the source system.
+
+To ensure that the intended record takes priority, deduplicate your source data before ingestion so that each batch contains only one record per identity. Use the source system's last-updated field to select the most recent record during deduplication.
+
 ## Identity stitching {#id-stitching}
 
 Identity stitching ([!UICONTROL ID stitching]) is the process of identifying data fragments and combining them together to form a complete profile record. To help illustrate the different stitching behaviors, consider a single customer who interacts with a brand using two different email addresses.
