@@ -39,7 +39,7 @@ The API endpoint used in this guide is part of the [[!DNL Audit Query] API](http
 
 >[!NOTE]
 >
->OAuth Server-to-Server access tokens expire after 24 hours, and their lifetime cannot be extended through Adobe Developer Console. For scheduled or long-running integrations, implement automatic token regeneration. See [Generating access tokens programmatically](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation#generating-access-tokens-programmatically) for instructions.
+OAuth Server-to-Server access tokens expire after 24 hours. You cannot extend their lifetime through Adobe Developer Console. For scheduled or long-running integrations, generate new access tokens automatically. For instructions, see [Generating access tokens programmatically](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation#generating-access-tokens-programmatically).
 
 ## List audit events
 
