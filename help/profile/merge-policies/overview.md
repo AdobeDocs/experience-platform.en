@@ -66,9 +66,9 @@ As profile records are ingested into Experience Platform, a system timestamp is 
 
 Multiple profile fragments for the same identity within a single batch can share the same system ingestion timestamp. This is expected behavior.
 
-When these timestamps are identical, an internal deterministic tie-breaker determines which fragment takes priority. The result is repeatable for the same inputs, but might not reflect the order of updates in the source system.
+When ingestion timestamps are identical, the system determines which fragment takes priority. For the same inputs, the system selects the same fragment, but that fragment might not contain the most recent update from your source system.
 
-To ensure that the intended record takes priority, deduplicate your source data before ingestion so that each batch contains only one record per identity. Use the source system's last-updated field to select the most recent record during deduplication.
+To prevent multiple records for the same identity from sharing an ingestion timestamp within a batch, deduplicate your source data before ingestion. Use the source system's last-updated field to select the most recent record during deduplication.
 
 ## Identity stitching {#id-stitching}
 
