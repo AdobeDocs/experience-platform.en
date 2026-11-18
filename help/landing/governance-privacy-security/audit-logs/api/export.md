@@ -32,8 +32,7 @@ topic_v2:
 You can retrieve events data by making a GET request to the `/audit/export` endpoint, specifying the events you wish to retrieve in the payload.
 
 >[!NOTE]
->
-OAuth Server-to-Server access tokens expire after 24 hours. You cannot extend their lifetime through Adobe Developer Console. For scheduled or long-running integrations, generate new access tokens automatically. For instructions, see [Generating access tokens programmatically](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation#generating-access-tokens-programmatically).
+>OAuth Server-to-Server access tokens expire after 24 hours. You cannot extend their lifetime through Adobe Developer Console. For scheduled or long-running integrations, generate new access tokens automatically. For instructions, see [Generating access tokens programmatically](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation#generating-access-tokens-programmatically).
 
 
 **API format**

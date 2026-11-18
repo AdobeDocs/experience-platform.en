@@ -38,8 +38,7 @@ Audit logs are used to provide details of user activity for various services and
 The API endpoint used in this guide is part of the [[!DNL Audit Query] API](https://developer.adobe.com/experience-platform-apis/references/audit-query/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 >[!NOTE]
->
-OAuth Server-to-Server access tokens expire after 24 hours. You cannot extend their lifetime through Adobe Developer Console. For scheduled or long-running integrations, generate new access tokens automatically. For instructions, see [Generating access tokens programmatically](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation#generating-access-tokens-programmatically).
+>OAuth Server-to-Server access tokens expire after 24 hours. You cannot extend their lifetime through Adobe Developer Console. For scheduled or long-running integrations, generate new access tokens automatically. For instructions, see [Generating access tokens programmatically](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation#generating-access-tokens-programmatically).
 
 ## List audit events
 
