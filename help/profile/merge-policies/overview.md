@@ -66,7 +66,7 @@ As profile records are ingested into Experience Platform, a system timestamp is 
 
 Multiple profile fragments for the same identity within a single batch can share the same system ingestion timestamp. This is expected behavior.
 
-When ingestion timestamps are identical, the system determines which fragment takes priority. For the same inputs, the system selects the same fragment, but that fragment might not contain the most recent update from your source system.
+When ingestion timestamps are identical, the system determines which fragment takes priority. If those same fragments are evaluated again with unchanged ingestion timestamps, the same fragment takes priority. However, that fragment might not contain the most recent update from your source system.
 
 To prevent multiple records for the same identity from sharing an ingestion timestamp within a batch, deduplicate your source data before ingestion. Use the source system's last-updated field to select the most recent record during deduplication.
 
