@@ -75,7 +75,7 @@ In the initial dataset `final_subscription_test2`, the struct data type is used 
 After the `final_subscription_test2` dataset has been created, the `INSERT INTO` statement is used to append additional data to the table. When copying data, the data types in source and target must match. Alternatively, the source data type must be `CAST` to the target data type. The incremental data is then added into the target dataset using the following SQL.
 
 ```sql
-INSERT INTO final_subscription_test
+INSERT INTO final_subscription_test2
       SELECT struct(userid, collect_set(subscription) AS subscription) AS _lumaservices3 FROM(
             SELECT user AS userid,
                    struct( last(eventtime) AS last_eventtime,
