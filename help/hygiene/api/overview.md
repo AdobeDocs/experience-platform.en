@@ -1,6 +1,6 @@
 ---
 title: Data Hygiene API Guide
-description: Learn how to programmatically correct or delete your customers' stored personal data in Adobe Experience Platform.
+description: Learn how to programmatically delete your customers' stored personal data in Adobe Experience Platform.
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
 TQID: https://experienceleague.adobe.com/39GR2d-gFP45tkCMfEk1-bkZ30XSdNov-ud4D1fm4wQ
@@ -50,7 +50,7 @@ A dataset expiration is a time-delayed "delete a dataset" action. By creating a 
 >
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
-The Data Hygiene API allows you delete all records associated with a identity across one or all datasets. All data lifecycle tasks that delete identities are repesented by a construct called a work order. See the [work order endpoint guide](./workorder.md) for details on working with record deletes in the API.
+Use the Data Hygiene API to programmatically delete your customers' stored personal data in Adobe Experience Platform, as well as schedule expiration dates for datasets. All data lifecycle tasks that delete identities are repesented by a construct called a work order. See the [work order endpoint guide](./workorder.md) for details on working with record deletes in the API.
 
 ## Quota
 
