@@ -74,7 +74,7 @@ The following JSON is an example of a typical mapping set:
 | -------- | ----------- |
 | `id` | A unique identifier for the mapping set. |
 | `name` | The name of the mapping set. |
-| `inputSchema` | The XDM schema for the incoming data. |
+| `inputSchema` | The schema that describes the structure and fields of the incoming data before transformation. The input schema does not have to be an XDM schema. The `inputSchema.id` value is the identifier assigned to the schema by Mapper, not an XDM schema URI from Schema Registry. For information on creating and retrieving Mapper schemas, see the [schemas endpoint guide](./api/schemas.md). |
 | `outputSchema` | The XDM schema that the input data has will be transformed to conform to. |
 | `mappings` | An array of field-to-field mappings from the source schema to the destination schema. |
 | `sourceType` | For each listed mapping, its `sourceType` attribute indicates the type of source that is to be mapped. Can be one of `ATTRIBUTE`, `STATIC`, or `EXPRESSION`: <ul><li> `ATTRIBUTE` is used for any value found in the source path. </li><li>`STATIC` is used for values injected into the destination path. This value remains constant and is not affected by the source schema.</li><li> `EXPRESSION` is used for an expression, which will be resolved during runtime. A list of available expressions can be found in the [mapping functions guide](./functions.md).</li> </ul> |

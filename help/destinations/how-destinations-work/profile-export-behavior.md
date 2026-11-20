@@ -103,7 +103,7 @@ From a profile attributes point of view, any changes to the four attributes mapp
 
 ## Streaming API-based destinations {#streaming-api-based-destinations}
 
-The profile export behavior for streaming destinations such as Facebook, Trade Desk, and other API-based integrations is very similar to the behavior described above for enterprise destinations.
+The profile export behavior for streaming destinations such as Facebook, Trade Desk, and other API-based integrations is similar to the behavior described above for enterprise destinations.
 
 Examples of streaming destinations are the destinations belonging to the [social and advertising categories](/help/destinations/destination-types.md#categories) in the catalog.
 
@@ -118,13 +118,13 @@ In all the cases described above, only the profiles where relevant updates have 
 
 >[!NOTE]
 >
->All the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
+>All the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above, all the mapped attributes for those five new profiles are exported even if the attributes themselves have not changed.
 
 [!DNL Experience Platform] monitors attributes for changes at the sandbox and [merge policy](/help/profile/merge-policies/overview.md) level, not per destination. If audiences that use the same merge policy are mapped to two different destinations in the same sandbox, and one of those destinations maps an [object field](/help/xdm/ui/fields/object.md) (a field that contains its own sub-fields, also called child fields), that object field is added to the shared set of monitored attributes for the merge policy.
 
 As a result, a change to a child field of that object field can trigger an export to the other destination, even when that destination's own mapping does not include the object field or child field. An overwrite of a field with the same value also counts as a change, and can trigger an export.
 
-Customers with several streaming destinations in the same sandbox, where the mapped audiences share a merge policy, might see more exports than expected for this reason. To reduce unnecessary exports, review which destinations have audiences mapped to them that share a merge policy, and limit object field mappings to only the child fields each destination needs.
+If you have several streaming destinations in the same sandbox, and the mapped audiences share a merge policy, you might see more exports than expected. To reduce unnecessary exports, review which destinations have audiences mapped to them that share a merge policy, and limit object field mappings to only the child fields each destination needs.
 
 For example, consider two streaming destinations, Destination A and Destination B, in the same sandbox. Audiences that use the same merge policy are mapped to each destination.
 
@@ -135,13 +135,15 @@ These two fields are otherwise unrelated. The only connection is that the audien
 
 If `loyaltyId` is overwritten with the same value, this still counts as a change. Both Destination A and Destination B can receive an export as a result.
 
+Every change event counts toward the **[!UICONTROL Profiles received]** metric for a dataflow run. **[!UICONTROL Identities activated]** shows the identities that result from processing those change events. Both metrics are often higher than the number of profiles in your audiences. To review these metrics, read [Monitor dataflows for destinations](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations). To control which types of profile changes trigger exports, use [When to activate](/help/destinations/ui/when-to-activate.md).
+
 ### What each streaming export includes {#streaming-behavior}
 
 Regarding the data that is exported for a given profile, it is important to understand the two different concepts of what determines a data export to your streaming API destination and which data is included in the export.
 
 |What determines a destination export | What is included in the destination export |
 |---------|----------|
-|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>A change in the identity map is defined as an identity that is added / removed for the [identity graph](/help/identity-service/features/identity-graph-viewer.md) of the profile, for identity namespaces that are mapped for export.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li><li>Attributes are monitored for changes at the sandbox and merge policy level, not per destination. If the audiences mapped to another destination use the same merge policy as the audiences mapped to yours, a change to an attribute mapped by that other destination can trigger an export to yours, even if your destination does not map that attribute.</li></ul> | <ul><li>The segments that are mapped to the destination and have changed will be included in the `segmentMembership` object. In some scenarios they might be exported using multiple calls. Also, in some scenarios, some segments that have not changed might be included in the call as well. In any case, only mapped segments will be exported.</li><li>All identities from the namespaces that are mapped to the destination in the `identityMap` object are included as well .</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
+|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes to `realized` or `exiting` or any mapped attributes are updated, a destination export starts.</li><li>A change in the identity map is defined as an identity that is added to or removed from the [identity graph](/help/identity-service/features/identity-graph-viewer.md) of the profile, for identity namespaces that are mapped for export.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li><li>Attributes are monitored for changes at the sandbox and merge policy level, not per destination. If the audiences mapped to another destination use the same merge policy as the audiences mapped to yours, a change to an attribute mapped by that other destination can trigger an export to yours, even if your destination does not map that attribute.</li></ul> | <ul><li>The segments that are mapped to the destination and have changed will be included in the `segmentMembership` object. In some scenarios they might be exported using multiple calls. Also, in some scenarios, some segments that have not changed might be included in the call as well. In any case, only mapped segments will be exported.</li><li>All identities from the namespaces that are mapped to the destination in the `identityMap` object are also included.</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -153,11 +155,11 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 For example, consider this dataflow to a streaming destination where three audiences are selected in the dataflow.
 
-![streaming destination dataflow](/help/destinations/assets/how-destinations-work/streaming-destination-example-dataflow.png)
+![Two steps of the activation workflow. In the Select segments step, the Basic Site Active, City - Dallas, and Customers with DeLorean cars audiences are selected. In the Mapping step, three source fields are mapped to email identity target fields.](/help/destinations/assets/how-destinations-work/streaming-destination-example-dataflow.png)
 
-A profile export to the destination can be determined by a profile qualifying for or exiting one of the three mapped segments. If a profile qualified for the **Customer with DeLorean Cars** segment, this will trigger an export. The other audiences (**City - Dallas** and **Basic Site Active**) might be exported as well in case the profile has that audience present with one of the possible statuses (`realized` or `exited`). Unmapped audiences (like **Science fiction fans**) will not be exported.
+A profile export to the destination can be determined by a profile qualifying for or exiting one of the three mapped segments. If a profile qualified for the **Customer with DeLorean Cars** segment, this qualification triggers an export. The other audiences (**City - Dallas** and **Basic Site Active**) might be exported as well in case the profile has that audience present with one of the possible statuses (`realized` or `exited`). Unmapped audiences (like **Science fiction fans**) are not exported.
 
-From a profile attributes point of view, any changes to the three attributes mapped above will determine a destination export.
+From a profile attributes point of view, any changes to the three attributes mapped above determine a destination export.
 
 >[!ENDSHADEBOX]
 
@@ -165,7 +167,7 @@ From a profile attributes point of view, any changes to the three attributes map
 
 When exporting profiles to [file-based destinations](/help/destinations/destination-types.md#file-based) in [!DNL Experience Platform], there are three types of schedules (listed below) and two file export options (full or incremental files) that you can use. All these settings are set on an audience level, even when multiple audiences are mapped to a single destination dataflow.
 
-* Scheduled exports: Configure a destination, add one or more segments, select if you want to export full or incremental files and select a set time each day or several times per day when files should be exported. For example, a 5 PM export time means that whichever profiles are qualified for the audiencewill be exported at 5PM. 
+* Scheduled exports: Configure a destination, add one or more segments, select if you want to export full or incremental files and select a set time each day or several times per day when files should be exported. For example, a 5 PM export time means that whichever profiles are qualified for the audience will be exported at 5 PM. 
 * After segment evaluation: The export is triggered immediately after the daily audience evaluation job runs. This means that the exported profile numbers in the file are as close as possible to the latest evaluated population of the segment.
 * On demand exports ([export file now](/help/destinations/ui/export-file-now.md)): Based on the latest audience evaluation job, a full file is exported one-time on top of regularly scheduled exports.
 
@@ -230,4 +232,4 @@ In the first file export after setting up the activation workflow, the entire po
 
 After reading this document, you now know what to expect to see in profile exports to streaming, enterprise, and file-based destinations. 
 
-Next, you can read about how [identities are handled](/help/destinations/how-destinations-work/identity-handling.md) in the activation workflow.
+Next, you can read about how [identities are handled](/help/destinations/how-destinations-work/identity-handling.md) in the activation workflow. To control which profile changes trigger exports to streaming destinations, read [When to activate](/help/destinations/ui/when-to-activate.md). To review export metrics for your dataflow runs, read [Monitor dataflows for destinations](/help/dataflows/ui/monitor-destinations.md).

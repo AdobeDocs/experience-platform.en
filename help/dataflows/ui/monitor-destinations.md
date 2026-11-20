@@ -37,7 +37,7 @@ topic_v2:
 
 Use the various destinations in the Experience Platform catalog to activate your data from Experience Platform to countless external partners. Experience Platform makes the process of tracking the flow of data to your destinations easier by providing transparency with dataflows.
 
-The monitoring dashboard provides you with a visual representation of the journey of a dataflow, including the destination that the data is being activated to, the type of data that you are viewing, exported data per dataflow run, and much more. 
+The monitoring dashboard provides you with a visual representation of the journey of a dataflow, including the destination that the data is being activated to, the type of data that you are viewing, exported data per dataflow run, and much more.
 
 This tutorial provides instructions on how you can either monitor dataflows directly in the destinations workspace or use the monitoring dashboard to monitor dataflows for your destinations using the Experience Platform user interface.
 
@@ -77,7 +77,7 @@ See the following table for more information on statuses:
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
 >title="Profiles received"
->abstract="The total number of profiles received in the dataflow. This value is updated every 60 minutes."
+>abstract="The total number of change events that occur on profiles during the dataflow run. Every attribute, audience membership, or identity change is counted, so this number can be higher than the number of profiles in your audiences. This value is updated every 60 minutes."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
@@ -94,31 +94,42 @@ See the following table for more information on statuses:
 >title="Identities failed"
 >abstract="The count of individual profile identities that failed for the selected destination. Check error diagnostics for details."
 
-For streaming destinations, the [!UICONTROL Dataflow runs] tab provides an hourly update for metric data on your dataflow runs. The most prominent statistics labelled are for identities.
+For streaming destinations, the [!UICONTROL Dataflow runs] tab provides an hourly update for metric data on your dataflow runs. The most prominent statistics labeled are for identities.
 
 Identities represent the different facets of a profile. For example, if a profile contains both a phone number and an email address, that profile has two identities.
 
 A list of individual runs and their particular metrics is displayed, along with the following totals for identities:
 
 - **[!UICONTROL Identities activated]**: The total number of profile identities successfully activated to the selected destination. This metric includes identities that are created, updated, and removed from exported audiences.
-- **[!UICONTROL Identities excluded]**:  The total number of profile identities that are skipped for activation based on missing attributes and consent violation.
+- **[!UICONTROL Identities excluded]**: The total number of profile identities that are skipped for activation based on missing attributes and consent violation.
 - **[!UICONTROL Identities failed]**: The total number of profile identities that are not activated to the destination due to errors.
 
 >[!NOTE]
 >
->The totals for identities activated, excluded, and failed represent a sum of all individual dataflow run counts. Since dataflow runs have a time-to-live (TTL) of 90 days, these totals typically cover approximately the last 3 months. As older dataflow runs expire and are removed from the system, you may observe a decrease in the total counts displayed.
+>The totals for identities activated, excluded, and failed represent a sum of all individual dataflow run counts. Dataflow runs expire after 90 days, so these totals typically cover approximately the last three months. As older dataflow runs expire and are removed from the system, you may observe a decrease in the total counts displayed.
 
 ![Dataflow runs details for streaming destinations.](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
 
 Each individual dataflow run shows the following details:
 
-- **[!UICONTROL Dataflow run start]**: The time when the dataflow run started. For streaming dataflow runs, Experience Platform captures metrics based on the start of the dataflow run, in the form of hourly metrics. This means that for streaming dataflow runs, if a dataflow run started for example at 10:30PM, the metric shows the start time as 10:00 PM in the UI.
+- **[!UICONTROL Dataflow run start]**: The time when the dataflow run started. For streaming dataflow runs, Experience Platform captures metrics based on the start of the dataflow run, in the form of hourly metrics. This means that for streaming dataflow runs, if a dataflow run started, for example, at 10:30 PM, the metric shows the start time as 10:00 PM in the UI.
 - **[!UICONTROL Audience]**: The number of audiences associated with each dataflow run.
 - **[!UICONTROL Processing duration]**: The amount of time that it took for the dataflow run to process.
   - For **[!UICONTROL completed]** runs, the processing time metric always shows one hour.
-  - For dataflow runs that are still in a **[!UICONTROL processing]** state, the window to capture all the metrics stays open for more than an hour, to process all metrics that correspond to the dataflow run. For example, a dataflow run that started at 9:30 AM might stay in a processing state for one hour and thirty minutes to capture and process all the metrics. The length of the processing time is directly affected by the retries done as a result of the destination's failed response. Then, once the processing window closes and the status of the dataflow run updates to **completed**, the displayed processing time is changed to one hour.
-- **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow.
+  - For dataflow runs that are still in a **[!UICONTROL processing]** state, the window to capture all the metrics stays open for more than an hour, to process all metrics that correspond to the dataflow run. For example, a dataflow run that started at 9:30 AM might stay in a processing state for one hour and thirty minutes to capture and process all the metrics. The length of the processing time is directly affected by the retries done as a result of the destination's failed response. Then, once the processing window closes and the status of the dataflow run updates to **[!UICONTROL completed]**, the displayed processing time is changed to one hour.
+- **[!UICONTROL Profiles received]**: The total number of change events that occur on profiles during the dataflow run.
 - **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination as part of the dataflow run. This metric includes identities that are created, updated, and removed from exported audiences.
+
+  >[!NOTE]
+  >
+  >**[!UICONTROL Profiles received]** counts the *change events* that occur on profiles during the dataflow run. A change event is an attribute update, an audience qualification or exit, or an identity graph change. A single profile can have several change events in the same run, so it can be counted more than once.
+  >
+  >**[!UICONTROL Identities activated]** counts the identities that result from processing all change events during the dataflow run.
+  >
+  >Neither metric shows the number of profiles that currently qualify for your audiences. These counts are often higher than the number of profiles in your audiences. This difference is expected and does not indicate an error.
+  >
+  >For streaming API-based and streaming profile export destinations, you can reduce export volume by turning off specific trigger types with [When to activate](/help/destinations/ui/when-to-activate.md). For details on what triggers a streaming export, read [Profile export behavior by destination type](/help/destinations/how-destinations-work/profile-export-behavior.md#streaming-api-based-destinations).
+
 - **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded from activation based on missing attributes and consent violation.
 - **[!UICONTROL Identities failed]**: The total number of profile identities that are not activated to the destination due to errors.
 
@@ -127,16 +138,16 @@ Each individual dataflow run shows the following details:
   > Starting in March 2025, Adobe is rolling out an update to increase reporting accuracy for streaming destinations. This enhancement ensures a better alignment between the reporting in Experience Platform and the destination platforms.
   >
   > Before this update, **[!UICONTROL Identities failed]** included all activation retries. After this update, only the last activation retry is included in the total count.
-  > 
+  >
   > This enhancement applies to all streaming destinations.
-  > Following this enhancement, users of streaming destinations may see an expected drop in their **[!UICONTROL Identities failed]** count.
- 
+  > Following this enhancement, you may see an expected drop in the **[!UICONTROL Identities failed]** count for your streaming destinations.
+
 
 - **[!UICONTROL Activation rate]**: The percentage of received identities that have been successfully activated. The following formula demonstrates how this value is calculated:
 ![Activation rate formula.](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL Status]**: Represents the state the dataflow is in: either [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all the identities for the corresponding dataflow run were exported within the one-hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
 
-To view the details of a particular dataflow run, select the run's start time from the list. 
+To view the details of a particular dataflow run, select the run's start time from the list.
 
 The details page for a dataflow run contains additional information such as the number of profiles received, the number of identities activated, the number of identities failed, and the number of identities excluded.
 
@@ -156,7 +167,7 @@ Audience-level monitoring for streaming destinations is only available for certa
 
 >[!NOTE]
 >
->The **[!UICONTROL Profiles received]** number in the **[!UICONTROL Audiences]** tab may not always match with the number of profiles received for the dataflow run. This is because a given profile might be part of more than one audience being activated in the dataflow run. 
+>The **[!UICONTROL Profiles received]** number in the **[!UICONTROL Audiences]** tab may not always match with the number of profiles received for the dataflow run. This is because a given profile might be part of more than one audience being activated in the dataflow run.
 
 ### Dataflow runs for batch destinations {#dataflow-runs-for-batch-destinations}
 
@@ -170,6 +181,7 @@ Audience-level monitoring for streaming destinations is only available for certa
 >id="platform_monitoring_profiles_received_batch"
 >title="Profiles received"
 >abstract="The total number of profiles received in the dataflow run. For scheduled exports, this includes profiles from the latest audience snapshot plus any profiles whose audience membership or identity changed between the snapshot creation time and the export time. As a result, this count may be higher than the number of profiles in the audience."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-behavior" text="Scheduled export behavior"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
@@ -195,6 +207,13 @@ Each individual dataflow run shows the following details:
 - **[!UICONTROL Processing duration]**: The amount of time it took for the dataflow run to be processed.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow. This value is updated every 60 minutes.
 - **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination as part of the dataflow run. This metric includes identities that are created, updated, and removed from exported audiences.
+
+  >[!NOTE]
+  >
+  >**[!UICONTROL Profiles received]** does not show the number of profiles that currently qualify for your audiences. For scheduled exports, this count includes profiles from the latest [audience snapshot](/help/destinations/ui/activate-batch-profile-destinations.md#export-behavior), which is the result of the most recent audience evaluation. It also includes profiles whose audience membership or identity changed between the snapshot creation time and the export time. **[!UICONTROL Identities activated]** counts each identity separately, so a profile with several identities is counted more than once.
+  >
+  >These counts can be higher than the number of profiles in your audiences. This difference is expected and does not indicate an error. For details on what triggers a file export, read [Profile export behavior by destination type](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
+
 - **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded from activation based on missing attributes and consent violation.
 - **[!UICONTROL Status]**: Represents the state the dataflow is in. This can be one of three states: [!UICONTROL Success], [!UICONTROL Failed], and [!UICONTROL Processing]. [!UICONTROL Success] means that the dataflow is active and is exporting data according to its provided schedule. [!UICONTROL Failed] means that the activation of data has been suspended due to errors. [!UICONTROL Processing] means that the dataflow is not yet active and is generally encountered when a new dataflow is created.
 
@@ -220,7 +239,7 @@ The details page also displays a list of identities that failed and identities t
 
 You can also select to view rich information about a certain dataflow and its dataflow runs in the monitoring dashboard. To view information about a dataflow in the monitoring dashboard:
 
-1. Navigate to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** tab
+1. Navigate to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** tab.
 2. Navigate to the dataflow that you want to inspect.
 3. Select the ellipsis symbol and ![monitoring icon](/help/images/icons/monitoring.png) **[!UICONTROL View in monitoring]**.
 
@@ -228,7 +247,7 @@ You can also select to view rich information about a certain dataflow and its da
 
 >[!SUCCESS]
 >
->You can now view information about the dataflow and its associated dataflow runs in the monitoring dashboard. Read the section below for further information. 
+>You can now view information about the dataflow and its associated dataflow runs in the monitoring dashboard. Read the section below for further information.
 
 ## Monitoring destinations dashboard {#monitoring-destinations-dashboard}
 
@@ -245,14 +264,13 @@ To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring
 
 Use the [!UICONTROL Destinations] dashboard to get an overall idea of the health of your activation flows. Start by getting insights on an aggregated level for all batch and streaming destinations and then drill down into detailed views for dataflows, dataflow runs, and activated audiences for an in-depth look at your activation data. The screens in the [!UICONTROL Monitoring] dashboard provide actionable insights through metrics and error descriptions to help you troubleshoot any problems that might arise in your activation scenarios.
 
-You can filter the displayed information by data type - customers, accounts (for the Adobe Real-Time CDP B2B edition only), prospects, and account enrichment. Read more about these options in the [monitoring dashboard guide](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview). 
+You can filter the displayed information by data type: customers, accounts (for the Adobe Real-Time CDP B2B Edition only), prospects, and account enrichment. Read more about these options in the [monitoring dashboard guide](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
 
 ![Data type filter highlighted in the monitoring dashboard view.](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
 
 At the center of the dashboard is the [!UICONTROL Activation] panel, which contains metrics and graphs that display data on the activation rate of the data which is exported to streaming destinations, as well as on the failed batch dataflow runs to batch destinations.
 
 ![Streaming and batch activation graphs highlighted in the monitoring view.](../assets/ui/monitor-destinations/dashboard-graph.png)
-
 
 By default, the data displayed contains the activation information from the last 24 hours. Select **[!UICONTROL Last 24 hours]** to adjust the time frame of records displayed. Available options include **[!UICONTROL Last 24 hours]**, **[!UICONTROL Last 7 days]**, and **[!UICONTROL Last 30 days]**. Alternatively, you can select the dates on the calendar pop-up window that appears. Once you have selected dates, select **[!UICONTROL Apply]** to adjust the time frame of the information shown.
 
@@ -262,7 +280,7 @@ By default, the data displayed contains the activation information from the last
 
 ![Change lookback date range control highlighted for activated destinations](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
-Use the arrow icon (![arrow icon](/help/images/icons/chevron-up.png)) to expand or dismiss the cards at the top of the screen, which show at-a-glance information about the activation details, based on the destination type - streaming or batch:
+Use the arrow icon (![arrow icon](/help/images/icons/chevron-up.png)) to expand or dismiss the cards at the top of the screen, which show at-a-glance information about the activation details, based on the destination type (streaming or batch):
 
 - **[!UICONTROL Streaming activation rate]**: Represents the percentage of received identities that have either been successfully activated or skipped. The formula used to calculate this percentage is described further above on this page, in the [Dataflow runs for streaming destinations](#dataflow-runs-for-streaming-destinations) section.
 - **[!UICONTROL Batch failed dataflow runs]**: Represents the number of failed dataflow runs in the selected time interval.

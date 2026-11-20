@@ -17,20 +17,22 @@ role_v2:
 
 # When to activate
 
-By default, [!DNL Adobe Experience Platform] exports data to a destination whenever any change occurs to a profile: an *attribute update*, an *audience qualification or disqualification*, or an *identity change*. This can generate a large volume of exports, many of which carry no meaningful change for downstream systems.
+By default, [!DNL Adobe Experience Platform] exports data to a destination whenever any change occurs to a profile: an *attribute update*, an *audience qualification or disqualification*, or an *identity change*. This default behavior can generate a large volume of exports, many of which carry no meaningful change for downstream systems.
 
 With the **[!UICONTROL When to activate]** feature, you get fine-grained control over which types of profile changes trigger exports for a given destination dataflow. You can enable or disable the attribute changes and identity changes triggers independently. The segmentation changes trigger is always on. Disabling a trigger type suppresses exports caused only by that type of change.
 
 >[!NOTE]
 >
 >For detailed information about how each profile change type triggers activation, see [Profile export behavior](/help/destinations/how-destinations-work/profile-export-behavior.md).
+>
+>Every change event counts toward the **[!UICONTROL Profiles received]** metric for a dataflow run. **[!UICONTROL Identities activated]** shows the identities that result from processing those change events. To review these metrics, see [Monitor dataflows for destinations](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations).
 
 ## Supported destination types {#supported-destinations}
 
 The **[!UICONTROL When to activate]** feature is supported for the following destination types:
 
 - [Streaming API-based destinations](/help/destinations/how-destinations-work/profile-export-behavior.md#streaming-api-based-destinations)
-- [Streaming profile export (enterprise) destinations](/help/destinations/how-destinations-work/profile-export-behavior.md#streaming-profile-destinations): [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [[!DNL Snowflake Streaming]](/help/destinations/catalog/warehouses/snowflake.md).
+- [Streaming profile export (enterprise) destinations](/help/destinations/how-destinations-work/profile-export-behavior.md#enterprise-streaming-export): [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [Snowflake Streaming](/help/destinations/catalog/warehouses/snowflake.md).
 
 ## Activation trigger types {#trigger-types}
 

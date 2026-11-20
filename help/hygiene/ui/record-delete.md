@@ -63,7 +63,7 @@ The request creation workflow appears. By default, the **[!UICONTROL Delete reco
 
 >[!IMPORTANT] 
 > 
->To improve efficiency and make dataset operations less expensive, organizations who have been moved to the Delta format can delete data from the Identity Service, Real-Time Customer Profile, and the data lake. This type of user is referred to as delta-migrated. Users from organizations who have been delta-migrated can choose to delete records from either a single or all datasets. Users from organizations that have not undergone delta migration are unable to selectively delete records from either a single dataset or all datasets, as shown in the image below. In this case, continue to the [Provide identities](#provide-identities) section of the guide.
+>Organizations that have migrated to the Delta format, referred to as delta-migrated organizations, can choose to delete records from a single dataset or all datasets. Users from organizations that have not undergone delta migration are unable to selectively delete records from either a single dataset or all datasets, as shown in the image below. In this case, continue to the [Provide identities](#provide-identities) section of the guide.
 
 ![The request creation workflow with the [!UICONTROL Delete record] option selected and highlighted.](../images/ui/record-delete/delete-record.png)
 
