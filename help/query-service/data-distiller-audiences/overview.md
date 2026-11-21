@@ -113,7 +113,7 @@ Use the `INSERT OVERWRITE INTO` command to replace all existing profiles in an a
 
 >[!AVAILABILITY]
 >
->The `INSERT OVERWRITE INTO` command is only available to Data Distiller customers. To learn more about the Data Distiller add-on, contact your Adobe representative.
+>The `INSERT OVERWRITE INTO` command is only available to Data Distiller customers and is supported only for audience datasets in the data lake. To learn more about the Data Distiller add-on, contact your Adobe representative.
 
 Unlike [`INSERT INTO`](#add-profiles-to-audience), which adds to the current audience, `INSERT OVERWRITE INTO` removes all existing audience members and inserts only those returned by the query. This provides greater control and flexibility when managing audiences that require frequent or complete updates.
 
