@@ -72,7 +72,7 @@ In the initial dataset `final_subscription_test2`, the struct data type is used 
 
 ## Use INSERT INTO to update nested data fields
 
-After the `final_subscription_test2` dataset has been created, the `INSERT INTO` statement is used to append additional data to the table. When copying data, the data types in source and target must match. Alternatively, the source data type must be `CAST` to the target data type. The incremental data is then added into the target dataset using the following SQL.
+After the `final_subscription_test2` dataset has been created, the `INSERT INTO` statement is used to append additional data to the table. When copying data, the data types in source and target must match. Alternatively, the source data type must be `CAST` to the target data type. The incremental data is then added into the target dataset using the following SQL. 
 
 ```sql
 INSERT INTO final_subscription_test2
