@@ -68,6 +68,10 @@ To edit the labels for the entire schema, in the **[!UICONTROL Labels]** tab, se
 
 A dialog appears that allows you to edit the labels for the selected field. If you selected an individual object-type field, the right rail lists the sub-fields that the applied labels will propagate to.
 
+>[!NOTE]
+>
+>Labels inherited from a parent field cannot be removed directly from a child field. To remove an inherited label, edit the labels on the parent field where it was applied.
+
 ![The Apply Access and Data Governance Labels dialog with the selected fields highlighted.](../images/tutorials/labels/edit-labels.png)
 
 >[!NOTE]
