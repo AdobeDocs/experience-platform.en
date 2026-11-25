@@ -39,7 +39,7 @@ To begin an on-demand evaluation within the Experience Platform UI, open Audienc
 
 The Audience Portal is displayed, showing a list of all the people audiences for the organization. In Audience Portal, select the audience you want to have evaluated, and select **[!UICONTROL Run now]**.
 
-![The Run now button is highlighted within the more actions.](/help/segmentation/images/methods/run-now/select-run-now.png)
+![The Run now button is highlighted within the more actions.](/help/segmentation/images/methods/run-now/select-run-now.png){width="750" zoomable="yes"}
 
 The following table displays the types of audiences that support on-demand evaluation:
 
@@ -54,23 +54,23 @@ The following table displays the types of audiences that support on-demand evalu
 
 The **[!UICONTROL Immediate audience evaluation]** popover appears. This popover displays a list of the audiences that will be evaluated, as well as the total number of consumed runs. If the correct audiences are displayed, select **[!UICONTROL Proceed]**.
 
-![The Immediate audience evaluation popover is displayed.](/help/segmentation/images/methods/run-now/immediate-audience-evaluation.png)
+![The Immediate audience evaluation popover is displayed.](/help/segmentation/images/methods/run-now/immediate-audience-evaluation.png){width="500" zoomable="yes"}
 
 The list of **[!UICONTROL Mapped destinations]** are displayed. If the listed destinations are valid to be exported to, you'll be able to select **[!UICONTROL Run now]** to continue.
 
-![The Mapped destinations are displayed within the popover.](/help/segmentation/images/methods/run-now/mapped-destinations.png)
+![The Mapped destinations are displayed within the popover.](/help/segmentation/images/methods/run-now/mapped-destinations.png){width="500" zoomable="yes"}
 
 The evaluation immediately begins. While the evaluation runs, a loading screen is displayed. You **must** keep this popup open while the evaluation is running.
 
-![The processing screen is displayed, which is shown after beginning the immediate evaluation.](/help/segmentation/images/methods/run-now/processing.png)
+![The processing screen is displayed, which is shown after beginning the immediate evaluation.](/help/segmentation/images/methods/run-now/processing.png){width="500" zoomable="yes"}
 
 Once the evaluation completes, a summary is displayed. This includes the segmentation job ID, the number of profiles evaluated, the number of runs, and the mapped destinations. 
 
-![The evaluation complete section is displayed, showing information about the run.](/help/segmentation/images/methods/run-now/evaluation-complete.png)
+![The evaluation complete section is displayed, showing information about the run.](/help/segmentation/images/methods/run-now/evaluation-complete.png){width="500" zoomable="yes"}
 
 If you select **[!UICONTROL Top 20 results]**, you can see a preview of qualified profiles for the destination, with up to twenty profiles displayed. For the sample profiles, the profile ID and name are shown.
 
-![The Audience preview is displayed.](/help/segmentation/images/methods/run-now/audience-preview.png)
+![The Audience preview is displayed.](/help/segmentation/images/methods/run-now/audience-preview.png){width="500" zoomable="yes"}
 
 ## Frequently asked questions {#faq}
 
