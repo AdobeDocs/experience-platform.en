@@ -101,17 +101,17 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![The Reddit Custom Audience destination authentication screen showing fields required to connect.](../../assets/catalog/advertising/redditcustomaudience/configure_new_destination_fields.png)
+![The Reddit Custom Audience destination authentication screen showing fields required to connect.](../../assets/catalog/advertising/redditcustomaudience/configure_new_destination_fields.png){width="750" zoomable="yes"}
 
 You are redirected to sign in with [!DNL Reddit]. After reviewing the requested permissions, select **[!UICONTROL Allow]** so that [!DNL Experience Platform] can create audiences and update membership on behalf of your ad account.
 
-![The Reddit OAuth permission screen.](../../assets/catalog/advertising/redditcustomaudience/reddit_oauth.png)
+![The Reddit OAuth permission screen.](../../assets/catalog/advertising/redditcustomaudience/reddit_oauth.png){width="750" zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![The Reddit Custom Audience destination details screen.](../../assets/catalog/advertising/redditcustomaudience/reddit_account_details.png)
+![The Reddit Custom Audience destination details screen.](../../assets/catalog/advertising/redditcustomaudience/reddit_account_details.png){width="750" zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you recognize this destination.
 * **[!UICONTROL Description]**: A description that helps you identify this destination.
@@ -143,7 +143,7 @@ The following target identity namespaces must be mapped depending on the use cas
 
 You must map at least one of the identities.
 
-![The identity mapping screen showing source and target fields configured for Reddit Custom Audience.](../../assets/catalog/advertising/redditcustomaudience/mapping.png)
+![The identity mapping screen showing source and target fields configured for Reddit Custom Audience.](../../assets/catalog/advertising/redditcustomaudience/mapping.png){width="750" zoomable="yes"}
 
 ## Exported data / Validate data export {#exported-data}
 
@@ -151,7 +151,7 @@ After activating your audiences, you can see them in your [!DNL Reddit] Ads Mana
 
 Audiences newly created in [!DNL Reddit] appear in a pending state. Once your dataflow runs and profiles are exported, [!DNL Reddit] matches the profiles against [!DNL Reddit] users. Once data is processed, the audience status changes to **[!UICONTROL Valid]**. Audience size must reach [1,000 users or more](https://ads-api.reddit.com/docs/v3/manage-customer-lists) to be considered valid. Audiences that do not meet the required size are shown as **[!UICONTROL Invalid]**.
 
-![The Reddit Ads Manager showing an exported audience and its status.](../../assets/catalog/advertising/redditcustomaudience/see_audience_in_reddit.png)
+![The Reddit Ads Manager showing an exported audience and its status.](../../assets/catalog/advertising/redditcustomaudience/see_audience_in_reddit.png){width="750" zoomable="yes"}
 
 The following is an example of the payload sent to [!DNL Reddit]:
 

@@ -52,7 +52,7 @@ This document requires a working understanding of the following components of [!
 
 You can enable alerts for your dataflows during the [!UICONTROL Configure new destination] step of the [destination connection](connect-destination.md) workflow.
 
-![UI image showing the destination alerts section.](../assets/ui/alerts/destination-alerts.png)
+![UI image showing the destination alerts section.](../assets/ui/alerts/destination-alerts.png){width="500" zoomable="yes"}
 
 Select the alerts you would like to subscribe to and then select **[!UICONTROL Next]** to review and finish your dataflow.
 
@@ -79,27 +79,27 @@ Once your destination dataflow runs, you can receive alerts through the UI or by
 
 Alerts are represented in the UI by a notification icon in the top header of the Experience Platform UI. Select the notification icon to see specific alert messages regarding your dataflows.
 
-![UI image showing the notification icon in Experience Platform](../assets/ui/alerts/notification.png)
+![UI image showing the notification icon in Experience Platform](../assets/ui/alerts/notification.png){width="750" zoomable="yes"}
 
 The notifications panel appears, displaying a list of status updates on the dataflow that you created.
 
-![UI image showing the notification panel](../assets/ui/alerts/alert-window.png)
+![UI image showing the notification panel](../assets/ui/alerts/alert-window.png){width="750" zoomable="yes"}
 
 You can hover on an alert message to mark them as read or you can select the clock icon to set future reminders on the status of your dataflow.
 
-![UI image showing the notification reminder options](../assets/ui/alerts/remind-me.png)
+![UI image showing the notification reminder options](../assets/ui/alerts/remind-me.png){width="750" zoomable="yes"}
 
 Select the alert message to see specific information on your dataflow.
 
-![UI image showing how to select a notification](../assets/ui/alerts/select-alert-message.png)
+![UI image showing how to select a notification](../assets/ui/alerts/select-alert-message.png){width="750" zoomable="yes"}
 
 The [!UICONTROL Dataflow run details] page appears. The upper half of the screen displays an overview on your dataflow, including information on its attributes, corresponding dataflow run ID, and high-level error summary.
 
-![UI image showing the dataflow run details page.](../assets/ui/alerts/dataflow-overview.png)
+![UI image showing the dataflow run details page.](../assets/ui/alerts/dataflow-overview.png){width="750" zoomable="yes"}
 
 The lower half of the page displays any [!UICONTROL Dataflow run errors] that occurred during the dataflow run stage. From here, you can preview error diagnostics or use the [[!DNL Data Access] API](https://developer.adobe.com/experience-platform-apis/references/data-access) to download error diagnostics or the file manifest that corresponds to your dataflow.
 
-![UI image showing the dataflow run details page, with a highlight on the errors section.](../assets/ui/alerts/dataflow-run-error.png)
+![UI image showing the dataflow run details page, with a highlight on the errors section.](../assets/ui/alerts/dataflow-run-error.png){width="750" zoomable="yes"}
 
 For more information on handling dataflow errors, see the guide on [monitoring destinations dataflows in the UI](../../dataflows/ui/monitor-destinations.md).
 
@@ -107,25 +107,25 @@ For more information on handling dataflow errors, see the guide on [monitoring d
 
 Alerts for your dataflows are also delivered to you by email. Select the dataflow name in the email body to see more information on your dataflow.
 
-![Screenshot of an alert email](../assets/ui/alerts/email.png)
+![Screenshot of an alert email](../assets/ui/alerts/email.png){zoomable="yes"}
 
 Similar to the UI alert, the [!UICONTROL Dataflow run overview] page appears, providing you with an interface to investigate any errors associated with your dataflow.
 
-![dataflow-overview](../assets/ui/alerts/dataflow-overview.png)
+![dataflow-overview](../assets/ui/alerts/dataflow-overview.png){width="750" zoomable="yes"}
 
 ## Subscribe and unsubscribe to alerts {#subscribe-and-unsubscribe}
 
 You can subscribe to more alerts or unsubscribe from established alerts for an existing destination dataflow in the destinations [!UICONTROL Browse] page.
 
-![UI image showing the Destinations Browse page](../assets/ui/alerts/destination-list.png)
+![UI image showing the Destinations Browse page](../assets/ui/alerts/destination-list.png){width="750" zoomable="yes"}
 
 Locate the destination connection that you want to receive alerts for and select the ellipses (`...`) to see a dropdown menu of options. Next, select **[!UICONTROL Subscribe to alerts]** to modify the alert settings of your destination dataflow.
 
-![UI image showing the destination options](../assets/ui/alerts/destination-alerts-subscribe.png)
+![UI image showing the destination options](../assets/ui/alerts/destination-alerts-subscribe.png){width="750" zoomable="yes"}
 
 A pop-up window appears, providing you with a list of destination alerts. Select any alerts you want to subscribe to or deselect alerts that you want to unsubscribe from. When finished, select **[!UICONTROL Save]**.
 
-![UI image showing the destination alerts subscriptions page](../assets/ui/alerts/destination-alerts-list.png)
+![UI image showing the destination alerts subscriptions page](../assets/ui/alerts/destination-alerts-list.png){zoomable="yes"}
 
 ## Next steps {#next-steps}
 

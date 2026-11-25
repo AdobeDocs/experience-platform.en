@@ -110,11 +110,11 @@ To generate the client credentials, follow these steps:
 1. Select the appropriate product profiles, then select **[!UICONTROL Save configured API]**.
 1. After the API configuration is saved, the connected credentials are generated and a credential is shown.
 
-   ![Adobe Developer Console showing the connected OAuth Server-to-Server credential for the Delta Sharing project.](../../assets/catalog/warehouses/databricks-delta-sharing/db-connected-credentials.png){zoomable="yes"}
+   ![Adobe Developer Console showing the connected OAuth Server-to-Server credential for the Delta Sharing project.](../../assets/catalog/warehouses/databricks-delta-sharing/db-connected-credentials.png){width="750" zoomable="yes"}
 
 1. Select the **[!UICONTROL OAuth Server-to-Server]** link on the credential card to view the credential details.
 
-   ![Adobe Developer Console credential details screen showing the client ID, scopes, and organization ID for the OAuth Server-to-Server credential.](../../assets/catalog/warehouses/databricks-delta-sharing/db-oauth-credential-details.png){zoomable="yes"}
+   ![Adobe Developer Console credential details screen showing the client ID, scopes, and organization ID for the OAuth Server-to-Server credential.](../../assets/catalog/warehouses/databricks-delta-sharing/db-oauth-credential-details.png){width="750" zoomable="yes"}
 
 1. Collect the following items, which you need to create the credentials file:
     * **[!UICONTROL Client ID]**
@@ -160,11 +160,11 @@ Next, create the destination connection in [!DNL Adobe Experience Platform] and 
 
 In the [!DNL Experience Platform] UI, go to the destinations catalog and search for the **[!UICONTROL Databricks Delta Sharing]** destination. Select **[!UICONTROL Set up]** on the destination card to start the configuration workflow.
 
-![Destinations catalog search results showing the Databricks Delta Sharing destination card with the Set up button.](../../assets/catalog/warehouses/databricks-delta-sharing/db-catalog-card.png){zoomable="yes"}
+![Destinations catalog search results showing the Databricks Delta Sharing destination card with the Set up button.](../../assets/catalog/warehouses/databricks-delta-sharing/db-catalog-card.png){width="500" zoomable="yes"}
 
 To create the destination connection, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, provide the account and destination details.
 
-![Configure new destination screen showing the account details and destination details fields.](../../assets/catalog/warehouses/databricks-delta-sharing/configure-destination-details.png){zoomable="yes"}
+![Configure new destination screen showing the account details and destination details fields.](../../assets/catalog/warehouses/databricks-delta-sharing/configure-destination-details.png){width="400" zoomable="yes"}
 
 Under **[!UICONTROL Account details]**, provide the following, then connect your account:
 
@@ -181,7 +181,7 @@ Under **[!UICONTROL Destination details]**, provide the following:
 
 In the **[!UICONTROL Select datasets]** step, select the datasets that you want to share. Use the search field to find datasets by name. Select the checkbox next to each dataset to add it to the share. The selected datasets appear in the summary panel.
 
-![Select datasets step showing a searchable dataset list with checkboxes and a summary of selected items.](../../assets/catalog/warehouses/databricks-delta-sharing/select-datasets.png){zoomable="yes"}
+![Select datasets step showing a searchable dataset list with checkboxes and a summary of selected items.](../../assets/catalog/warehouses/databricks-delta-sharing/select-datasets.png){width="750" zoomable="yes"}
 
 When you are finished, select **[!UICONTROL Next]**.
 
@@ -189,7 +189,7 @@ When you are finished, select **[!UICONTROL Next]**.
 
 In the **[!UICONTROL Review]** step, confirm the connection and dataset selection. The **[!UICONTROL Connection]** card shows the destination name, destination platform, and account. The **[!UICONTROL Setup and dataset selection]** card shows the number of selected datasets and their names.
 
-![Review step showing the connection details and the selected datasets before finishing.](../../assets/catalog/warehouses/databricks-delta-sharing/review.png){zoomable="yes"}
+![Review step showing the connection details and the selected datasets before finishing.](../../assets/catalog/warehouses/databricks-delta-sharing/review.png){width="750" zoomable="yes"}
 
 To complete the workflow, select **[!UICONTROL Finish]**. Note the share name that you entered, because you use it again when you install the share in [!DNL Databricks].
 
@@ -203,17 +203,17 @@ Finally, install the share in your [!DNL Databricks] workspace and import your c
 
 1. Open your [!DNL Databricks] workspace and select **[!UICONTROL Catalog]**.
 
-   ![Databricks Catalog pane showing the shares received under the organization.](../../assets/catalog/warehouses/databricks-delta-sharing/db-catalog-pane.png){zoomable="yes"}
+   ![Databricks Catalog pane showing the shares received under the organization.](../../assets/catalog/warehouses/databricks-delta-sharing/db-catalog-pane.png){width="750" zoomable="yes"}
 
 1. Select **[!UICONTROL Share]**, then select **[!UICONTROL OpenSharing]**.
 1. Select **[!UICONTROL Install share]**.
 
-   ![Databricks Import using open OpenSharing credentials dialog with fields for the provider name and the activation credential file.](../../assets/catalog/warehouses/databricks-delta-sharing/db-install-share.png){zoomable="yes"}
+   ![Databricks Import using open OpenSharing credentials dialog with fields for the provider name and the activation credential file.](../../assets/catalog/warehouses/databricks-delta-sharing/db-install-share.png){width="750" zoomable="yes"}
 
 1. Enter a provider name (for example, `Adobe-Delta-Share`). Select **[!UICONTROL browse]** to locate the `.share` credentials file that you created, then select **[!UICONTROL import]**.
 1. If the import is successful, a confirmation screen shows the share and the catalog to be mounted.
 
-   ![Databricks provider page showing the imported share and the Mount to catalog option.](../../assets/catalog/warehouses/databricks-delta-sharing/db-share-confirmation.png){zoomable="yes"}
+   ![Databricks provider page showing the imported share and the Mount to catalog option.](../../assets/catalog/warehouses/databricks-delta-sharing/db-share-confirmation.png){width="750" zoomable="yes"}
 
 1. Select **[!UICONTROL Mount to catalog]**, then select **[!UICONTROL Create a new catalog]**. When you enter the catalog name, use a name that is **exactly identical** to the name of the share. Select **[!UICONTROL Create]**.
 
@@ -235,7 +235,7 @@ SELECT * FROM `<catalog>`.`<sandbox>`.`<dataset>`;
 
 The query returns the dataset's columns. Each row also includes the `_ACP_BATCHID` column, which identifies the batch that the record belongs to.
 
-![Databricks SQL Editor showing a SELECT query against a shared dataset and the returned rows.](../../assets/catalog/warehouses/databricks-delta-sharing/query-shared-data.png){zoomable="yes"}
+![Databricks SQL Editor showing a SELECT query against a shared dataset and the returned rows.](../../assets/catalog/warehouses/databricks-delta-sharing/query-shared-data.png){width="750" zoomable="yes"}
 
 ## Known limitations {#known-limitations}
 

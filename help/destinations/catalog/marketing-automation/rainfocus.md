@@ -112,7 +112,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![Provide authentication details for the RainFocus Destination Connector](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-authentication.png)
+![Provide authentication details for the RainFocus Destination Connector](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-authentication.png){width="750" zoomable="yes"}
 
 * **[!UICONTROL Client ID]**: Fill in the [!DNL Client ID] provided by RainFocus API Profile.
 * **[!UICONTROL Client secret]**: Fill in the [!DNL Client Secret] provided by RainFocus API Profile.
@@ -123,7 +123,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Provide connection details for the RainFocus Destination Connector](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-configure-destination-details.png)
+![Provide connection details for the RainFocus Destination Connector](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-configure-destination-details.png){width="750" zoomable="yes"}
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -149,7 +149,7 @@ The following target identity namespace(s) must be mapped depending on the use c
 
 * **Email** must be mapped as a target field using **Target field > Select identity namespace > email**
 
-![How to map profile and identity fields](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-mapping.png)
+![How to map profile and identity fields](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-mapping.png){width="750" zoomable="yes"}
 
 It is recommended to map additional profile fields, as this will ensure the attendee profile in [!DNL RainFocus] is fully populated. The following target fields are available from [!DNL RainFocus]:
 
@@ -174,9 +174,9 @@ It is recommended to map additional profile fields, as this will ensure the atte
 
 Once a set of profiles has been sent to [!DNL RainFocus], use the API Profile logging in [!DNL RainFocus] to validate that the profiles have been ingested successfully. 
 
-![View logs in the API Profile in RainFocus](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-profile.png)
+![View logs in the API Profile in RainFocus](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-profile.png){width="750" zoomable="yes"}
 
-![Validate that profiles have been successfully ingested](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-logging.png)
+![Validate that profiles have been successfully ingested](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-logging.png){width="750" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 

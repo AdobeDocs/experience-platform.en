@@ -30,7 +30,7 @@ There are several destination types in [!DNL Experience Platform], as shown in t
 >
 >This documentation page only describes the profile export behavior for the connections highlighted at the bottom of the diagram.
 
-![Types of destinations diagram](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
+![Types of destinations diagram](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png){width="750" zoomable="yes"}
 
 ## Message aggregation in streaming destinations {#message-aggregation}
 
@@ -89,7 +89,7 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 For example, consider this dataflow to an HTTP destination where three audiences are selected in the dataflow, and four attributes are mapped to the destination.  
 
-![enterprise destination dataflow](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![enterprise destination dataflow](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png){width="750" zoomable="yes"}
 
 A profile export to the destination can be determined by a profile qualifying for or exiting one of the *three mapped segments*. However, in the data export, in the `segmentMembership` object, other unmapped audiences might appear, if that particular profile is a member of them and if these share the same merge policy as the audience that triggered the export. If a profile qualifies for the **Customer with DeLorean Cars** audience but is also a member of the **Watched "Back to the Future" movie** and **Science fiction fans** segments, then these other two audiences will also be present in the `segmentMembership` object of the data export, even though these are not mapped in the dataflow, if these share the same merge policy with the **Customer with DeLorean Cars** segment.
 
@@ -155,7 +155,7 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 For example, consider this dataflow to a streaming destination where three audiences are selected in the dataflow.
 
-![Two steps of the activation workflow. In the Select segments step, the Basic Site Active, City - Dallas, and Customers with DeLorean cars audiences are selected. In the Mapping step, three source fields are mapped to email identity target fields.](/help/destinations/assets/how-destinations-work/streaming-destination-example-dataflow.png)
+![Two steps of the activation workflow. In the Select segments step, the Basic Site Active, City - Dallas, and Customers with DeLorean cars audiences are selected. In the Mapping step, three source fields are mapped to email identity target fields.](/help/destinations/assets/how-destinations-work/streaming-destination-example-dataflow.png){width="750" zoomable="yes"}
 
 A profile export to the destination can be determined by a profile qualifying for or exiting one of the three mapped segments. If a profile qualified for the **Customer with DeLorean Cars** segment, this qualification triggers an export. The other audiences (**City - Dallas** and **Basic Site Active**) might be exported as well in case the profile has that audience present with one of the possible statuses (`realized` or `exited`). Unmapped audiences (like **Science fiction fans**) are not exported.
 
@@ -191,7 +191,7 @@ If a new audience is added to a destination mapping, that does not affect qualif
 
 For example, in the export setting illustrated below, where an audience is exporting incremental file updates, note the following circumstances where a profile is included in an incremental file export or not: 
 
-![Export setting with several selected attributes.](/help/destinations/assets/how-destinations-work/export-selection-batch-destination.png)
+![Export setting with several selected attributes.](/help/destinations/assets/how-destinations-work/export-selection-batch-destination.png){width="750" zoomable="yes"}
 
 * A profile *is* included in an incremental file export when it qualifies or disqualifies for the segment.
 * A profile *is* included in an incremental file export when a new phone number is added to the identity graph.

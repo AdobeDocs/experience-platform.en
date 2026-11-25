@@ -26,7 +26,7 @@ topic_v2:
 
 [!DNL Adobe Experience Platform] can deliver your audiences as data files to your cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV files for [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage], and SFTP. For [!DNL Amazon Kinesis] and [!DNL Azure Event Hubs] destinations, data is streamed out of Experience Platform in [!DNL JSON] format.
 
-![Adobe cloud storage destinations](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
+![Adobe cloud storage destinations](../../assets/catalog/cloud-storage/cloud-storage-destinations.png){width="750" zoomable="yes"}
 
 ## Supported cloud storage destinations {#supported-destinations}
 
@@ -54,7 +54,7 @@ To send audiences to cloud storage destinations for your campaigns, Experience P
 
 To create a custom folder per audience file in your storage location, you can use macros in the folder path input field. Insert the macros at the end of the input field, as shown below.
 
-![How to use macros to create a folder in your storage](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)  
+![How to use macros to create a folder in your storage](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png){width="750" zoomable="yes"}  
 
 The examples below reference a sample audience `Luxury Audience` with ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
 

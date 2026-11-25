@@ -45,7 +45,7 @@ See the [table on the UI tutorial page](/help/destinations/ui/export-datasets.md
 
 Currently, you can export datasets to the cloud storage destinations highlighted in the screenshot and listed below. 
 
-![Destinations which support dataset exports](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+![Destinations which support dataset exports](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png){width="750" zoomable="yes"}
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -63,7 +63,7 @@ Note the following prerequisites to export datasets:
 
 ## Getting started {#get-started}
 
-![Overview - the steps to create a destination and export datasets](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
+![Overview - the steps to create a destination and export datasets](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png){width="750" zoomable="yes"}
 
 This guide requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
@@ -340,7 +340,7 @@ Follow the steps below to set up a dataset dataflow to a cloud storage destinati
 
 ## Retrieve a list of datasets {#retrieve-list-of-available-datasets}
 
-![Diagram showing step 1 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-retrieve-datasets.png)
+![Diagram showing step 1 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-retrieve-datasets.png){width="750" zoomable="yes"}
 
 To retrieve a list of datasets eligible for activation, start by making an API call to the below endpoint. 
 
@@ -450,7 +450,7 @@ For information about the various response parameters for each returned dataset,
 
 ## Create a source connection {#create-source-connection}
 
-![Diagram showing step 2 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
+![Diagram showing step 2 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png){width="750" zoomable="yes"}
 
 After retrieving the list of datasets that you want to export, you can create a source connection using those dataset IDs.
 
@@ -516,7 +516,7 @@ Please also remember that:
 
 ## Create a (target) base connection {#create-base-connection}
 
-![Diagram showing step 3 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
+![Diagram showing step 3 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png){width="750" zoomable="yes"}
 
 A base connection securely stores the credentials to your destination. Depending on the destination type, the credentials needed to authenticate against that destination can vary. To find these authentication parameters, first retrieve the [!DNL connection spec] for your desired destination as described in the section [Gather connection specs and flow specs](#gather-connection-spec-flow-spec) and then look at the `authSpec` of the response. Reference the tabs below for the `authSpec` properties of all supported destinations.
 
@@ -1169,7 +1169,7 @@ Note the connection ID from the response. This ID will be required in the next s
 
 ## Create a target connection {#create-target-connection}
 
-![Diagram showing step 4 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
+![Diagram showing step 4 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png){width="750" zoomable="yes"}
 
 Next, you need to create a target connection which stores the export parameters for your datasets. Export parameters include location, file format, compression, and other details. See the `targetSpec` properties provided in the destination's connection spec to understand the supported properties for each destination type. Reference the tabs below for the `targetSpec` properties of all supported destinations.
 
@@ -1943,7 +1943,7 @@ Note the Target Connection ID from the response. This ID will be required in the
 
 ## Create a dataflow {#create-dataflow}
 
-![Diagram showing step 5 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png)
+![Diagram showing step 5 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png){width="750" zoomable="yes"}
 
 The final step in the destination configuration is to set up a dataflow. A dataflow ties together previously created entities and also provides options for configuring the dataset export schedule. To create the dataflow, use the payloads below, depending on your desired cloud storage destination, and replace the entity IDs from previous steps.
 
@@ -2373,7 +2373,7 @@ Note the Dataflow ID from the response. This ID will be required in the next ste
 
 ## Get the dataflow runs {#get-dataflow-runs}
 
-![Diagram showing step 6 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-validate-dataflow.png)
+![Diagram showing step 6 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-validate-dataflow.png){width="750" zoomable="yes"}
 
 To check the executions of a dataflow, use the Dataflow Runs API:
 

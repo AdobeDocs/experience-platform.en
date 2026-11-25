@@ -39,7 +39,7 @@ You can create a real-time outbound connection to your [!DNL Azure Event Hubs] s
 * To connect to [!DNL Azure Event Hubs] programmatically, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
 * To connect to [!DNL Azure Event Hubs] using the Experience Platform user interface, see the sections below.
 
-![Azure Event Hubs destination card in the Experience Platform catalog](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
+![Azure Event Hubs destination card in the Experience Platform catalog](../../assets/catalog/cloud-storage/event-hubs/catalog.png){width="750" zoomable="yes"}
 
 ## Use cases {#use-cases}
 
@@ -108,7 +108,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 #### Standard authentication {#standard-authentication}
 
-![Image of the UI screen showing completed fields for the Azure Event Hubs standard authentication details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
+![Image of the UI screen showing completed fields for the Azure Event Hubs standard authentication details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png){width="500" zoomable="yes"}
 
 If you select the **[!UICONTROL Standard authentication]** type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
 
@@ -118,7 +118,7 @@ If you select the **[!UICONTROL Standard authentication]** type to connect to yo
 
 #### SAS authentication {#sas-authentication}
 
-![Image of the UI screen showing completed fields for the Azure Event Hubs SAS authentication details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
+![Image of the UI screen showing completed fields for the Azure Event Hubs SAS authentication details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png){width="500" zoomable="yes"}
 
 If you select the **[!UICONTROL SAS authentication]** type to connect to your HTTP endpoint, [!DNL Azure Event Hubs] uses a Shared Access Signature (SAS) to authenticate the connection. Input the fields below and select **[!UICONTROL Connect to destination]**:
 
@@ -129,7 +129,7 @@ If you select the **[!UICONTROL SAS authentication]** type to connect to your HT
 
 #### Service principal authentication {#service-principal-authentication}
 
-![Image of the UI screen showing completed fields for the Azure Event Hubs service principal authentication details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-service-principal-authentication.png)
+![Image of the UI screen showing completed fields for the Azure Event Hubs service principal authentication details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-service-principal-authentication.png){width="500" zoomable="yes"}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_tenantid"
@@ -179,7 +179,7 @@ If you select the **[!UICONTROL Service principal authentication]** type to conn
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Image of the UI screen showing completed fields for the Azure Event Hubs destination details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
+![Image of the UI screen showing completed fields for the Azure Event Hubs destination details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png){zoomable="yes"}
 
 * **[!UICONTROL Name]**: Fill in a name for the connection to [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Provide a description of the connection. Examples: "Premium tier customers", "Customers interested in kitesurfing".
@@ -229,7 +229,7 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 For example, consider this dataflow to an [!DNL Azure Event Hubs] destination where three audiences are selected in the dataflow, and four attributes are mapped to the destination.  
 
-![Amazon Kinesis destination dataflow](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![Amazon Kinesis destination dataflow](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png){width="750" zoomable="yes"}
 
 A profile export to the destination can be determined by a profile qualifying for or exiting one of the *three mapped audiences*. When the **[!UICONTROL Include mapped audiences only]** option is turned on, the `segmentMembership` object (see [Exported Data](#exported-data) section below) includes only the three mapped audiences. When this option is turned off, other unmapped audiences might also appear in the `segmentMembership` object, if that particular profile is a member of them and if these share the same merge policy as the audience that triggered the export. For example, if a profile qualifies for the **Customer with DeLorean Cars** audience and is also a member of the **Basic Site Active and City - Dallas** audiences, then these other two audiences also appear in the `segmentMembership` object when **[!UICONTROL Include mapped audiences only]** is turned off, provided they share the same merge policy with the **Customer with DeLorean Cars** audience.
 

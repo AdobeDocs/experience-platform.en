@@ -59,7 +59,7 @@ To get the ID of a destination instance, you must first create a connection in t
 >* To use this API, you must have an existing connection to your destination in the Experience Platform UI. Read [connect to destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) and [activate profiles and audiences to a destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) for more information.
 >* After establishing the connection to your destination, get the destination instance ID that you should use in API calls to this endpoint when [browsing a connection with your destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
 >
->![UI image showing how to get destination instance ID from the URL.](../../assets/testing-api/get-destination-instance-id.png)
+>![UI image showing how to get destination instance ID from the URL.](../../assets/testing-api/get-destination-instance-id.png){width="750" zoomable="yes"}
 
 **API format**
 

@@ -31,7 +31,7 @@ You can configure the functionality described in this document by using the `/au
 
 Depending on your API configuration, you may or may not need to use the audience metadata management endpoint as you configure your destination in Experience Platform. Use the decision tree diagram below to understand when to use the audience metadata endpoint and how to configure an audience metadata template for your destination.
 
-![Decision tree diagram](../assets/functionality/audience-metadata-decision-tree.png)
+![Decision tree diagram](../assets/functionality/audience-metadata-decision-tree.png){width="750" zoomable="yes"}
 
 ## Use cases supported by audience metadata management {#use-cases}
 
@@ -47,7 +47,7 @@ When activating audiences to your destination in the Experience Platform user in
 
 If audiences and other metadata need to be created by partners or users manually in your destination, then users must manually fill in the audience mapping ID field in the activation workflow to sync the audience metadata between your destination and Experience Platform.
 
-![Input mapping ID](../assets/functionality/input-mapping-id.png)
+![Input mapping ID](../assets/functionality/input-mapping-id.png){width="750" zoomable="yes"}
 
 ### Use case 3: Native audience ID support {#use-case-3}
 

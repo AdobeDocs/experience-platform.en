@@ -45,11 +45,11 @@ Follow the steps below to activate data to your destinations from the **[!UICONT
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Browse]** tab.
 
-    ![Browse tab](../assets/ui/activation-overview/browse-tab.png)
+    ![Browse tab](../assets/ui/activation-overview/browse-tab.png){width="750" zoomable="yes"}
 
 1. Find the destination connection that you want to use to activate your segments, select the three dots in the [!UICONTROL Name] column, then select **[!UICONTROL Activate audiences]**.
 
-    ![Activate audiences button](../assets/ui/activation-overview/activate-segments.png)
+    ![Activate audiences button](../assets/ui/activation-overview/activate-segments.png){width="750" zoomable="yes"}
 
 1. Depending on the selected destination, follow the steps described in the articles below, starting with the **[!UICONTROL Select segments]** step, to finish the activation workflow:
 

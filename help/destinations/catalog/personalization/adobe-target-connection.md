@@ -236,7 +236,7 @@ Read [Activate audiences to edge personalization destinations](../../ui/activate
 
 There are extra steps required to remove an audience from an existing [!DNL Adobe Target] connection when that audience is already being used in an [!DNL Adobe Target] [activity](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Trying to remove an audience from an [!DNL Adobe Target] connection results in an error if the audience is used by an [!DNL Adobe Target] activity.
 
-![Experience Platform UI image showing an error caused by attempting to remove an audience that is used by a Target activity.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+![Experience Platform UI image showing an error caused by attempting to remove an audience that is used by a Target activity.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png){width="750" zoomable="yes"}
 
 To remove an audience from a Target destination when the audience is being used in an activity, you must first either remove the audience from the Target activity which is using it, or delete the activity altogether. Then, you can remove the audience from your Target connection.
 

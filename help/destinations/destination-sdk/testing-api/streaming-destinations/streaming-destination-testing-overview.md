@@ -24,7 +24,7 @@ To **test if your destination is configured correctly and to verify the integrit
 
 Illustrated below is how testing your destination fits into the [destination configuration workflow](../../guides/configure-destination-instructions.md) in Destination SDK:
 
-![Graphic of where the destination testing step fits into the destination configuration workflow](../../assets/testing-api/test-destination-step.png)
+![Graphic of where the destination testing step fits into the destination configuration workflow](../../assets/testing-api/test-destination-step.png){width="750" zoomable="yes"}
 
 ## Destination testing tool purpose and prerequisites {#destination-testing-tool}
 

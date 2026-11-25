@@ -97,7 +97,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 * **[!UICONTROL Service principal key]**: The application's key.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
-    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png){zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 

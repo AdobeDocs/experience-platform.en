@@ -32,7 +32,7 @@ topic_v2:
 
 Use the [!DNL Merkury Enterprise Connections] destination to securely deliver audiences to [!DNL Merkury]. [!DNL Merkury] provides marketers easy matching and delivery of person-based audiences to [!DNL Merkury]'s 80+ premium addressable TV/CTV, publisher, and ad-tech connections. [!DNL Merkury] is powered by a comprehensive US adult consumer identity graph of 268+ million people.
 
-![A diagram showing the interconnection between Merkury and Experience Platform, including ingestion and activation](../../assets/catalog/data-partners/merkury-connections/media/image1.png)
+![A diagram showing the interconnection between Merkury and Experience Platform, including ingestion and activation](../../assets/catalog/data-partners/merkury-connections/media/image1.png){width="750" zoomable="yes"}
 
 Follow the steps in this documentation page to create a [!DNL Merkury Connections] destination connection and activate audiences using the [!DNL Adobe Experience Platform] user interface. 
 
@@ -40,7 +40,7 @@ Follow the steps in this documentation page to create a [!DNL Merkury Connection
 >
 >If you are looking to activate audiences to media destinations with your [!DNL Merkury Connect] account, use the [!DNL Merkury Connections] destination instead.
 
-![The Merkury Enterprise Conections destination card highlighted in the Experience Platform destinations catalog.](../../assets/catalog/data-partners/merkury-connections/media/image2.png)
+![The Merkury Enterprise Conections destination card highlighted in the Experience Platform destinations catalog.](../../assets/catalog/data-partners/merkury-connections/media/image2.png){width="750" zoomable="yes"}
 
 ## Use Cases {#use-cases}
 
@@ -52,7 +52,7 @@ Follow the steps in this documentation page to create a [!DNL Merkury Connection
 >[!IMPORTANT]
 >
 >* To connect to the destination, you need the **View Destinations** and **Manage Destinations**, **Activate Destinations**, **View Profiles**, and **View Segments** [[access control permissions]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Read the [[access control overview]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) or contact your product administrator to obtain the required permissions.
->* To export *identities*, you need the **View Identity Graph** [[access control permission]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).\![Select identity namespace highlighted in the workflow to activate audiences to destinations.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
+>* To export *identities*, you need the **View Identity Graph** [[access control permission]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](../../assets/catalog/data-partners/merkury-connections/media/image3.png){zoomable="yes"}
 
 ## Supported identities {#supported-identities}
 
@@ -126,13 +126,13 @@ To access your bucket on Experience Platform, you need to provide valid values f
 
 {style="table-layout:auto"}
 
-![new destination creation screen](../../assets/catalog/data-partners/merkury-connections/media/image4.png)
+![new destination creation screen](../../assets/catalog/data-partners/merkury-connections/media/image4.png){width="750" zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![A screenshot of destination details](../../assets/catalog/data-partners/merkury-connections/media/image6.png)
+![A screenshot of destination details](../../assets/catalog/data-partners/merkury-connections/media/image6.png){width="750" zoomable="yes"}
 
 * **Name (Required)** - The name the destination will be saved under
 * **Description** - Short explanation of the destination's purpose
@@ -144,13 +144,13 @@ To configure details for the destination, fill in the required and optional fiel
 >
 >When selecting the CSV option, Delimiter, Quote Character, Escape Character, Empty Value, Null Value, Compression format, and Include manifest file options will be presented, consult your Merkury team for the appropriate settings for your account.
 
-![image of csv options](../../assets/catalog/data-partners/merkury-connections/media/image8.png)
+![image of csv options](../../assets/catalog/data-partners/merkury-connections/media/image8.png){width="400" zoomable="yes"}
 
 ### Existing Account {#existing-account}
 
 Accounts already defined using the Merkury Enterprise Connections destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **Destinations** > **Accounts**:
 
-![A screenshot of destination account in destination accounts page.](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
+![A screenshot of destination account in destination accounts page.](../../assets/catalog/data-partners/merkury-connections/media/image5.png){width="750" zoomable="yes"}
 
 ## Enable alerts {#enable-alerts}
 

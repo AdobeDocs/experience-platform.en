@@ -39,7 +39,7 @@ You can create a real-time outbound connection to your [!DNL Amazon Kinesis] sto
 * To connect to [!DNL Amazon Kinesis] programmatically, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
 * To connect to [!DNL Amazon Kinesis] using the Experience Platform user interface, see the sections below.
 
-![Amazon Kinesis in the UI](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
+![Amazon Kinesis in the UI](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png){width="750" zoomable="yes"}
 
 ## Use cases {#use-cases}
 
@@ -137,7 +137,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 Input the fields below and select **[!UICONTROL Connect to destination]**:
 
-![Image of the UI screen showing completed fields for the Amazon Kinesis authentication details](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
+![Image of the UI screen showing completed fields for the Amazon Kinesis authentication details](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png){width="750" zoomable="yes"}
 
 * **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Experience Platform access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Region]**: Indicate which [!DNL Amazon Web Services] region to stream data to.
@@ -162,7 +162,7 @@ Input the fields below and select **[!UICONTROL Connect to destination]**:
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Image of the UI screen showing completed fields for the Amazon Kinesis destination details](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
+![Image of the UI screen showing completed fields for the Amazon Kinesis destination details](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png){zoomable="yes"}
 
 * **[!UICONTROL Name]**: Provide a name for your connection to [!DNL Amazon Kinesis]
 * **[!UICONTROL Description]**: Provide a description for your connection to [!DNL Amazon Kinesis].
@@ -212,7 +212,7 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 For example, consider this dataflow to an [!DNL Amazon Kinesis] destination where three audiences are selected in the dataflow, and four attributes are mapped to the destination.  
 
-![Amazon Kinesis destination dataflow](../../assets/catalog/http/profile-export-example-dataflow.png)
+![Amazon Kinesis destination dataflow](../../assets/catalog/http/profile-export-example-dataflow.png){width="750" zoomable="yes"}
 
 A profile export to the destination can be determined by a profile qualifying for or exiting one of the *three mapped audiences*. When the **[!UICONTROL Include mapped audiences only]** option is turned on, the `segmentMembership` object (see [Exported Data](#exported-data) section below) includes only the three mapped audiences. When this option is turned off, other unmapped audiences might also appear in the `segmentMembership` object, if that particular profile is a member of them and if these share the same merge policy as the audience that triggered the export. For example, if a profile qualifies for the **Customer with DeLorean Cars** audience and is also a member of the **Basic Site Active and City - Dallas** audiences, then these other two audiences also appear in the `segmentMembership` object when **[!UICONTROL Include mapped audiences only]** is turned off, provided they share the same merge policy with the **Customer with DeLorean Cars** audience.
 

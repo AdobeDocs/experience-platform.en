@@ -143,14 +143,14 @@ Fill in the required fields below. See the [Gather the [!DNL HubSpot] private ap
 * **[!UICONTROL Bearer token]**: The access token for your [!DNL HubSpot] private app.
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
-![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/hubspot/authenticate-destination.png)
+![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/hubspot/authenticate-destination.png){width="750" zoomable="yes"}
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/crm/hubspot/destination-details.png)
+![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/crm/hubspot/destination-details.png){width="750" zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -180,29 +180,29 @@ To correctly map your XDM fields to the [!DNL HubSpot] destination fields, follo
 The `Email` identity is a mandatory mapping for this destination. Follow the steps below to map it:
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
-![Experience Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+![Experience Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png){width="750" zoomable="yes"}
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity.
-![Experience Platform UI screenshot selecting email as a source attribute to map as identity.](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
+![Experience Platform UI screenshot selecting email as a source attribute to map as identity.](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png){width="750" zoomable="yes"}
 1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select attributes]** and select `email`.
-![Experience Platform UI screenshot selecting email as a target attribute to map as identity.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
+![Experience Platform UI screenshot selecting email as a target attribute to map as identity.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png){width="750" zoomable="yes"}
 
 | Source Field | Target Field | Mandatory |
 | --- | --- | --- |
 | `IdentityMap: Email` | `Identity: email` | Yes |
 
 An example with the identity mapping is shown below:
-![Experience Platform UI screenshot example with email identity mapping.](../../assets/catalog/crm/hubspot/mapping-identities.png)
+![Experience Platform UI screenshot example with email identity mapping.](../../assets/catalog/crm/hubspot/mapping-identities.png){width="750" zoomable="yes"}
 
 #### Mapping **optional** attributes {#mapping-optional-attributes}
 
 To add any other attributes you want to update between your XDM profile schema and your [!DNL HubSpot] account repeat the steps below:
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
-![Experience Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+![Experience Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png){width="750" zoomable="yes"}
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute.
-![Experience Platform UI screenshot selecting First Name as a source attribute.](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
+![Experience Platform UI screenshot selecting First Name as a source attribute.](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png){width="750" zoomable="yes"}
 1. In the **[!UICONTROL Select target field]** window, choose **[!UICONTROL Select attributes]** category and select from the list of attributes which are automatically populated from your [!DNL HubSpot] account. The destination uses the [[!DNL HubSpot] Properties](https://developers.hubspot.com/docs/api/crm/properties) API to retrieve this information. Both [!DNL HubSpot] [default properties](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties) and any custom properties are retrieved for selection as target fields.
-![Experience Platform UI screenshot selecting First Name as a target attribute.](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
+![Experience Platform UI screenshot selecting First Name as a target attribute.](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png){width="750" zoomable="yes"}
   
 A few available mappings between your XDM profile schema and [!DNL Hubspot] are shown below:
 
@@ -215,7 +215,7 @@ A few available mappings between your XDM profile schema and [!DNL Hubspot] are 
 | `xdm: workAddress.country` | `Attribute: country` |
 
 An example using these attributes mappings is shown below:
-![Experience Platform UI screenshot example with attribute mappings.](../../assets/catalog/crm/hubspot/mapping-attributes.png)
+![Experience Platform UI screenshot example with attribute mappings.](../../assets/catalog/crm/hubspot/mapping-attributes.png){width="750" zoomable="yes"}
 
 When you are finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
@@ -224,10 +224,10 @@ When you are finished providing the mappings for your destination connection, se
 To validate that you have correctly set up the destination, follow the steps below:
 
 1. Go to the [!DNL HubSpot] website, then navigate to the **[!UICONTROL Contacts]** page to check the audience statuses. This list can be configured to display columns for the custom properties created with the audience name with their value being the audience statuses.
-![HubSpot UI screenshot showing the Contacts page with column headers showing the audience name and cells audience statuses](../../assets/catalog/crm/hubspot/contacts.png)
+![HubSpot UI screenshot showing the Contacts page with column headers showing the audience name and cells audience statuses](../../assets/catalog/crm/hubspot/contacts.png){width="750" zoomable="yes"}
 
 1. You can alternatively drill down into an individual **[!UICONTROL Person]** page and navigate to the properties displaying the audience name and audience statuses.
-![HubSpot UI screenshot showing the Contact page with custom properties displaying the audience name and audience statuses.](../../assets/catalog/crm/hubspot/contact.png)
+![HubSpot UI screenshot showing the Contact page with custom properties displaying the audience name and audience statuses.](../../assets/catalog/crm/hubspot/contact.png){width="500" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 

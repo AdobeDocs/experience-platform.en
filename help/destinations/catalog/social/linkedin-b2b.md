@@ -33,7 +33,7 @@ Use this destination to activate your [account audiences](/help/segmentation/typ
 >
 >For individual-level (or business-to-consumer) use cases, Adobe recommends that you use the [LinkedIn Matched Audience](/help/destinations/catalog/social/linkedin.md) destination. 
 
-![LinkedIn account destination displayed in the Experience Platform UI.](/help/destinations/assets/catalog/social/linkedin-b2b/linkedin-b2b-destination.png)
+![LinkedIn account destination displayed in the Experience Platform UI.](/help/destinations/assets/catalog/social/linkedin-b2b/linkedin-b2b-destination.png){width="500" zoomable="yes"}
 
 ## Supported audiences {#supported-audiences}
 
@@ -93,7 +93,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 1. Find the [!DNL (Companies) LinkedIn Matched Audiences] destination in the destination catalog and select **[!UICONTROL Set Up]**.
 2. Select **[!UICONTROL Connect to destination]**. 
-  ![Authenticate to LinkedIn](/help/destinations/assets/catalog/social/linkedin-b2b/authenticate-linkedin-destination.png)
+  ![Authenticate to LinkedIn](/help/destinations/assets/catalog/social/linkedin-b2b/authenticate-linkedin-destination.png){width="750" zoomable="yes"}
 3. Enter your LinkedIn credentials and select **Log In**. 
 
 After completing the sign-in process with LinkedIn, you can proceed to the next step.
@@ -121,7 +121,7 @@ Read [Activate account audiences](/help/destinations/ui/activate-account-audienc
 
 When activating account audiences to the **[!UICONTROL (Companies) LinkedIn Matched Audiences]** destination, note that the following two mapping pairs are mandatory to successfully export data:
 
-![LinkedIn mapping required fields.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
+![LinkedIn mapping required fields.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png){width="750" zoomable="yes"}
 
 |Source field | Target field |
 |---------|----------|

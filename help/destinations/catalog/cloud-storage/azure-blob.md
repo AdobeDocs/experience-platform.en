@@ -161,17 +161,17 @@ To authenticate to the destination, select an authentication type, fill in the r
 
 #### Account key authentication {#account-key-authentication}
 
-![Image of the UI screen showing completed fields for the Azure Blob account key authentication details](../../assets/catalog/cloud-storage/blob/blob-account-key-authentication.png)
+![Image of the UI screen showing completed fields for the Azure Blob account key authentication details](../../assets/catalog/cloud-storage/blob/blob-account-key-authentication.png){width="500" zoomable="yes"}
 
 * **[!UICONTROL Connection string]**: the connection string is required to access data in your Blob storage. The [!DNL Blob] connection string pattern starts with: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. 
     * For more information about configuring your [!DNL Blob] connection string, see [Configure a connection string for an Azure storage account](https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) in the Microsoft documentation.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
-  ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png){zoomable="yes"}
 
 #### Service principal authentication {#service-principal-authentication}
 
-![Image of the UI screen showing completed fields for the Azure Blob service principal authentication details](../../assets/catalog/cloud-storage/blob/blob-service-principal-authentication.png)
+![Image of the UI screen showing completed fields for the Azure Blob service principal authentication details](../../assets/catalog/cloud-storage/blob/blob-service-principal-authentication.png){width="500" zoomable="yes"}
 
 Use **[!UICONTROL Service principal authentication]** if your organization prohibits shared access keys or connection strings. [!DNL Microsoft Entra ID] Service Principal authentication uses a client ID, client secret, and tenant ID instead.
 
@@ -185,7 +185,7 @@ Use **[!UICONTROL Service principal authentication]** if your organization prohi
 * **[!UICONTROL Storage account name]**: The name of the Azure storage account that hosts your Blob container.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
-  ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png){zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 

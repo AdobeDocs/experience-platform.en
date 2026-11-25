@@ -51,7 +51,7 @@ You can configure UI attributes via the `/authoring/destinations` endpoint. See 
 
 This article describes all the supported UI attributes that you can use for your destination, and shows what customers will see in the [!DNL Experience Platform] UI.
 
-![A destination card in the Experience Platform interface showing the configured UI attributes, including the logo, category, and connection type.](../../assets/functionality/destination-configuration/ui-attributes.png)
+![A destination card in the Experience Platform interface showing the configured UI attributes, including the logo, category, and connection type.](../../assets/functionality/destination-configuration/ui-attributes.png){width="750" zoomable="yes"}
 
 >[!IMPORTANT]
 >
@@ -88,7 +88,7 @@ Use the following format: `http://www.adobe.com/go/destinations-YOURDESTINATION-
 
 Users can see and visit your documentation link from the destinations catalog page in the UI. They need to browse to your destination card, then select **[!UICONTROL More actions]**, and then **[!UICONTROL View documentation]**, as shown in the following image.
 
-![The More actions menu open on a destination card in the Experience Platform UI, with the View documentation option available.](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
+![The More actions menu open on a destination card in the Experience Platform UI, with the View documentation option available.](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png){width="750" zoomable="yes"}
 
 >[!NOTE]
 >
@@ -100,7 +100,7 @@ Users can see and visit your documentation link from the destinations catalog pa
 
 Users can see the list of destination categories in the filters panel of the destination catalog, as shown in the following image.
 
-![The destination catalog in the Experience Platform UI with the list of destination categories shown in the filters panel.](../../assets/functionality/destination-configuration/ui-attributes-category.png)
+![The destination catalog in the Experience Platform UI with the list of destination categories shown in the filters panel.](../../assets/functionality/destination-configuration/ui-attributes-category.png){width="500" zoomable="yes"}
 
 ### `connectionType` {#connection-type}
 
@@ -108,7 +108,7 @@ Users can see the list of destination categories in the filters panel of the des
 
 Users can see the destination connection type in the [Browse](../../../ui/destinations-workspace.md#browse) tab of the destinations workspace.
 
-![The Browse tab of the destinations workspace in the Experience Platform UI showing the connection type for a destination.](../../assets/functionality/destination-configuration/ui-attributes-connection.png)
+![The Browse tab of the destinations workspace in the Experience Platform UI showing the connection type for a destination.](../../assets/functionality/destination-configuration/ui-attributes-connection.png){width="750" zoomable="yes"}
 
 ### `frequency` {#frequency}
 
@@ -116,7 +116,7 @@ Users can see the destination connection type in the [Browse](../../../ui/destin
 
 Users can see the frequency type in the **[!UICONTROL Dataflow runs]** page of each destination connection.
 
-![The Dataflow runs page of a destination connection in the Experience Platform UI showing the data export frequency type.](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
+![The Dataflow runs page of a destination connection in the Experience Platform UI showing the data export frequency type.](../../assets/functionality/destination-configuration/ui-attributes-frequency.png){width="750" zoomable="yes"}
 
 ### `isBeta` {#isbeta}
 
@@ -124,13 +124,13 @@ If the destination that you are creating with Destination SDK is available to a 
 
 To do this, you can use the `isBeta: "true"` parameter in the UI attributes section of the destination configuration to mark the destination card appropriately.
 
-![A destination card in the destination catalog marked with a beta badge in the Experience Platform UI.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
+![A destination card in the destination catalog marked with a beta badge in the Experience Platform UI.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png){zoomable="yes"}
 
 ### `icon` {#icon}
 
 You can add a logo icon to your destination, as shown in the following image.
 
-![A destination card in the Experience Platform UI displaying a custom logo icon.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+![A destination card in the Experience Platform UI displaying a custom logo icon.](../../assets/functionality/destination-configuration/ui-attributes-icon.png){width="750" zoomable="yes"}
 
 To add a logo to your destination card, you need to share the desired image with the Adobe team when you [submit the destination for review](../../guides/submit-destination.md#logo).
 

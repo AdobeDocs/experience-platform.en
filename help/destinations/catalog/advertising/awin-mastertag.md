@@ -38,7 +38,7 @@ The [!DNL MasterTag] is a JavaScript library containing all functions required f
 
 This destination is a tag extension. For more information about how extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Awin Advertiser Mastertag extension in the UI](../../assets/catalog/advertising/awin-mastertag/catalog.png)
+![Awin Advertiser Mastertag extension in the UI](../../assets/catalog/advertising/awin-mastertag/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

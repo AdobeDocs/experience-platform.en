@@ -140,11 +140,11 @@ To authenticate to the destination, fill in the required fields and select **[!U
 * **[!UICONTROL Account name]**: Enter a name that helps you identify this destination account. This is especially useful if you have multiple connections to the same destination.
 * **[!UICONTROL Description]** (optional): Add details that help you or your team distinguish between accounts, such as the purpose of the connection or relevant business context.
 
-![Connect to destination dialog in Experience Platform for Amazon Ads](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-connect-to-destination.png)
+![Connect to destination dialog in Experience Platform for Amazon Ads](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-connect-to-destination.png){width="750" zoomable="yes"}
 
 You are redirected to the [!DNL Amazon Ads] interface. Select **[!UICONTROL Allow]** to sign in to your Amazon Account.
 
-![Amazon Ads OAuth authorization prompt asking the user to Allow](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-allow.png)
+![Amazon Ads OAuth authorization prompt asking the user to Allow](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-allow.png){width="750" zoomable="yes"}
 
 After authentication, you are redirected back to [!DNL Adobe Experience Platform] with your new connection.
 
@@ -152,7 +152,7 @@ After authentication, you are redirected back to [!DNL Adobe Experience Platform
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Amazon Ads destination configuration fields in Experience Platform](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-configure-destination.png)
+![Amazon Ads destination configuration fields in Experience Platform](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-configure-destination.png){width="750" zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you recognize this destination.
 * **[!UICONTROL Description]**: A description that helps you identify this destination.
@@ -184,7 +184,7 @@ The [!DNL Amazon Ads] destination requires you to configure the following mappin
 | `IdentityMap: Email_LC_SHA256` or `IdentityMap: Email`| `Identity: email` | When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option to have [!DNL Experience Platform] automatically hash the data on activation.|
 | `xdm: homeAddress.countryCode` | `Identity: countryCode` | Country of the user (2-character ISO code) |
 
-![Identity field mapping configuration for the Amazon Ads destination](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-mapping.png)
+![Identity field mapping configuration for the Amazon Ads destination](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-mapping.png){width="750" zoomable="yes"}
 
 ### Mapping best practices {#mapping-best-practices}
 

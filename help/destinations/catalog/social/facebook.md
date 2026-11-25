@@ -42,7 +42,7 @@ Activate profiles for your [!DNL Facebook] campaigns for audience targeting, per
 
 You can use this destination for audience targeting across [!DNL Facebook's] family of apps that are supported by [!DNL Custom Audiences], including [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], and [!DNL Messenger]. Selection of the app that you want to run campaign against is indicated at the placement level in [!DNL Facebook Ads Manager].
 
-![Facebook destination in the Adobe Experience Platform UI.](../../assets/catalog/social/facebook/catalog.png)
+![Facebook destination in the Adobe Experience Platform UI.](../../assets/catalog/social/facebook/catalog.png){width="750" zoomable="yes"}
 
 ## Use cases {#use-cases}
 
@@ -187,7 +187,7 @@ If you select to hash the email addresses yourself, make sure to comply with the
 > Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
 > The **[!UICONTROL Apply transformation]** option is only displayed when you select attributes as source fields. It is not displayed when you choose namespaces.
 
-![Apply transformation control highlighted in the mapping step.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![Apply transformation control highlighted in the mapping step.](../../assets/ui/activate-destinations/identity-mapping-transformation.png){width="750" zoomable="yes"}
 
 ## Using custom namespaces {#custom-namespaces}
 
@@ -213,7 +213,7 @@ The video below also demonstrates the steps to configure a [!DNL Facebook] desti
 
 1. Find the Facebook destination in the destination catalog and select **[!UICONTROL Set Up]**.
 2. Select **[!UICONTROL Connect to destination]**. 
-  ![Authenticate to Facebook step shown in the activation workflow.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+  ![Authenticate to Facebook step shown in the activation workflow.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png){width="750" zoomable="yes"}
 3. Enter your Facebook credentials and select **Log In**.
 
 ### Refresh authentication credentials {#refresh-authentication-credentials}
@@ -270,7 +270,7 @@ See [Activate audience data to streaming audience export destinations](../../ui/
 
 In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL Origin of audience] when sending audiences to [!DNL Facebook Custom Audiences].
 
-![Origin of Audience dropdown shown in the Facebook activation step.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Origin of Audience dropdown shown in the Facebook activation step.](../../assets/catalog/social/facebook/facebook-origin-audience.png){width="750" zoomable="yes"}
 
 ### Mapping example: activating audience data in [!DNL Facebook Custom Audience] {#example-facebook}
 
@@ -299,7 +299,7 @@ Selecting target fields:
 > 
 >Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
 
-![Apply transformation control highlighted in the mapping step.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![Apply transformation control highlighted in the mapping step.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png){width="750" zoomable="yes"}
 
 ## Exported data {#exported-data}
 

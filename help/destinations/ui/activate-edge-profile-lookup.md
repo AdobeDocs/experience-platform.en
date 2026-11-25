@@ -74,7 +74,7 @@ Follow the steps in the [datastream configuration](../../datastreams/configure.m
 * **[!UICONTROL Personalization Destinations]**: Enabled
 * **[!UICONTROL Edge Segmentation]**: If you require edge segmentation, enable this option. If you are only interested in looking up profile attributes on the edge, but do not want to perform any segmentation based on the edge profiles, then leave this option disabled.
 
-![Experience Platform UI image showing the datastream configuration screen.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+![Experience Platform UI image showing the datastream configuration screen.](../assets/ui/activate-edge-profile-lookup/datastream-config.png){zoomable="yes"}
 
 ## Step 2: Configure your audiences for edge evaluation {#audience-edge-evaluation}
 
@@ -98,7 +98,7 @@ Follow the [destination connection creation tutorial](../ui/connect-destination.
 
 When configuring the new destination, select the datastream which you created in [step 1](#create-datastream) in the **[!UICONTROL Datastream ID]** field. For **[!UICONTROL Integration alias]** you can use any value that helps you identify this destination connection in the future, like the destination name.
 
-![Experience Platform UI image showing the Custom Personalization With Attributes configuration screen.](../assets/ui/activate-edge-profile-lookup/destination-config.png)
+![Experience Platform UI image showing the Custom Personalization With Attributes configuration screen.](../assets/ui/activate-edge-profile-lookup/destination-config.png){width="400" zoomable="yes"}
 
 +++
 
@@ -114,17 +114,17 @@ After you have created a **[!UICONTROL Custom Personalization With Attributes]**
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     
-    ![Destination Catalog tab highlighted in the Experience Platform UI.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
+    ![Destination Catalog tab highlighted in the Experience Platform UI.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png){width="750" zoomable="yes"}
 
 1. Find the **[!UICONTROL Custom Personalization With Attributes]** destination card, then select **[!UICONTROL Activate audiences]**, as shown in the image below.
 
-    ![Activate audience control highlighted on a destination card in the catalog.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
+    ![Activate audience control highlighted on a destination card in the catalog.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png){width="750" zoomable="yes"}
 
 1. (Optional) Use the search box to find a destination connection by name, or select the filter icon to narrow down the results based on your preferred criteria.
 
 1. Select the destination connection that you previously configured, then select **[!UICONTROL Next]**.
 
-    ![Search box and filter icon highlighted above the list of destination connections in the Select destination step of the activation workflow.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
+    ![Search box and filter icon highlighted above the list of destination connections in the Select destination step of the activation workflow.](../assets/ui/activate-edge-personalization-destinations/select-destination.png){width="750" zoomable="yes"}
 
 1. Select your audiences. Use the checkboxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
 
@@ -134,7 +134,7 @@ After you have created a **[!UICONTROL Custom Personalization With Attributes]**
     >
     >You can filter by the same tags you use on the audience browse screen. Any tags you added to an audience there carry over to this screen.
 
-    ![Expanded filters panel showing the origin and tags filters, alongside the search box and checkboxes for selecting one or multiple audiences to activate.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
+    ![Expanded filters panel showing the origin and tags filters, alongside the search box and checkboxes for selecting one or multiple audiences to activate.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png){width="750" zoomable="yes"}
 
     You can select from multiple types of audiences, depending on their origin:
     
@@ -146,17 +146,17 @@ After you have created a **[!UICONTROL Custom Personalization With Attributes]**
 
     * **Select source attributes**. To add source attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Source field]** column and search or navigate to your desired XDM attribute field, as shown below.
     
-      ![Screen recording showing how to select a target attribute in the mapping step.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
+      ![Screen recording showing how to select a target attribute in the mapping step.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif){width="750" zoomable="yes"}
 
     * **Select target attributes**. To add target attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Target field]** column and type in the custom attribute name that you want to map the source attribute to.
     
-      ![Screen recording showing how to select an XDM attribute in the mapping step](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
+      ![Screen recording showing how to select an XDM attribute in the mapping step](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif){width="750" zoomable="yes"}
 
 When you are finished mapping profile attributes, select **[!UICONTROL Next]**.
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending profile data to the Edge Network.
 
-![Selection summary in the review step.](../assets/ui/activate-edge-personalization-destinations/review.png)
+![Selection summary in the review step.](../assets/ui/activate-edge-personalization-destinations/review.png){width="750" zoomable="yes"}
 
 +++
 
@@ -168,7 +168,7 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 In the **[!UICONTROL Review]** step, Experience Platform also checks for any data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the audience activation workflow until you have resolved the violation. For information on how to resolve policy violations, read about [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in the data governance documentation section.
  
-![An example of a data policy violation.](../assets/common/data-policy-violation.png)
+![An example of a data policy violation.](../assets/common/data-policy-violation.png){width="500" zoomable="yes"}
 
 +++
 
@@ -176,7 +176,7 @@ In the **[!UICONTROL Review]** step, Experience Platform also checks for any dat
 
 In the **[!UICONTROL Review]** step you can use the available filters on the page to display only the audiences whose schedule or mapping has been updated as part of this workflow. You can also toggle which table columns you want to see. 
 
-![Screen recording showing the available audience filters in the review step.](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
+![Screen recording showing the available audience filters in the review step.](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif){width="750" zoomable="yes"}
 
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection.
 

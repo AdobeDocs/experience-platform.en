@@ -114,11 +114,11 @@ Once the token expires, data exports to the destination stop working. To prevent
 
 1. Navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
 2. (Optional) Use the available filters on the page to display Pinterest accounts only.
-    ![Filter to show Pinterest accounts only](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
+    ![Filter to show Pinterest accounts only](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png){width="750" zoomable="yes"}
 3. Select the account that you want to refresh, select the ellipsis and select **[!UICONTROL Edit details]**. 
-    ![Select Edit details control](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
+    ![Select Edit details control](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png){width="750" zoomable="yes"}
 4. In the modal window, select **[!UICONTROL Reconnect OAuth]** and reauthenticate with your Pinterest credentials.
-    ![Modal window with Reconnect OAuth option](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
+    ![Modal window with Reconnect OAuth option](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png){width="750" zoomable="yes"}
 
 >[!SUCCESS]
 >

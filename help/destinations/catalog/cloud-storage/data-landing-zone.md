@@ -49,7 +49,7 @@ Experience Platform automatically deletes all files in a [!DNL Data Landing Zone
 
 The [!DNL Data Landing Zone] destination connector is available for Experience Platform running on Azure or Amazon Web Services (AWS). The authentication mechanism depends on the cloud in which the destination is provisioned. Everything else about the destination and its use cases is the same. Read more about the two authentication mechanisms in the sections [Authenticate to the Data Landing Zone provisioned in Azure Blob](#authenticate-dlz-azure) and [Authenticate to the AWS-provisioned Data Landing Zone](#authenticate-dlz-aws).
 
-![Diagram showing how the implementation of the Data Landing Zone destination is different based on the cloud support.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png "Data Landing Zone destination implementation by cloud support"){zoomable="yes"}
+![Diagram showing how the implementation of the Data Landing Zone destination is different based on the cloud support.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png "Data Landing Zone destination implementation by cloud support"){width="750" zoomable="yes"}
 
 ## Connect to your [!UICONTROL Data Landing Zone] storage through API or UI {#connect-api-or-ui}
 
@@ -131,11 +131,11 @@ Use [Azure Storage Explorer](https://azure.microsoft.com/en-us/products/storage/
 
 In [!DNL Azure Storage Explorer], open the connect dialog. The **Select Resource** window appears, listing the resources you can connect to. Select **[!DNL Blob container]** to connect to your [!DNL Data Landing Zone] storage.
 
-![Select resource highlighted in the Azure UI.](/help/sources/images/tutorials/create/dlz/select-resource.png)
+![Select resource highlighted in the Azure UI.](/help/sources/images/tutorials/create/dlz/select-resource.png){width="750" zoomable="yes"}
 
 Next, select **Shared access signature URL (SAS)** as your connection method, and then select **Next**.
 
-![Select connection method highlighted in the Azure UI.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
+![Select connection method highlighted in the Azure UI.](/help/sources/images/tutorials/create/dlz/select-connection-method.png){width="750" zoomable="yes"}
 
 After you select your connection method, provide a **display name** and the **[!DNL Blob] container SAS URL** that corresponds with your [!DNL Data Landing Zone] container.
 
@@ -240,15 +240,15 @@ The following response returns updated values for your `SASToken` and `SASUri`.
 
 Provide your display name (`containerName`) and [!DNL Data Landing Zone] SAS URL, as returned in the API call described above, and then select **Next**.
 
-![Enter connection info highlighted in the Azure UI.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
+![Enter connection info highlighted in the Azure UI.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png){width="750" zoomable="yes"}
 
 The **Summary** window appears, providing you with an overview of your settings, including information on your [!DNL Blob] endpoint and permissions. When ready, select **Connect**.
 
-![Summary of settings shown in the Azure UI.](/help/sources/images/tutorials/create/dlz/summary.png)
+![Summary of settings shown in the Azure UI.](/help/sources/images/tutorials/create/dlz/summary.png){width="750" zoomable="yes"}
 
 A successful connection updates your [!DNL Azure Storage Explorer] UI with your [!DNL Data Landing Zone] container.
 
-![Summary of the DLZ user container highlighted in the Azure UI.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
+![Summary of the DLZ user container highlighted in the Azure UI.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png){width="750" zoomable="yes"}
 
 With your [!DNL Data Landing Zone] container connected to [!DNL Azure Storage Explorer], you can start exporting files from Experience Platform to your [!DNL Data Landing Zone] container. To export files, connect to the [!DNL Data Landing Zone] destination in the Experience Platform UI, as described in [Connect to the destination](#connect).
 
@@ -339,7 +339,7 @@ If your [!DNL Data Landing Zone] is provisioned in Azure, make sure that you hav
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
-    ![Image showing an example of a correctly formatted PGP key in the UI.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+    ![Image showing an example of a correctly formatted PGP key in the UI.](../../assets/catalog/cloud-storage/sftp/pgp-key.png){zoomable="yes"}
 * **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 * **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
 * **[!UICONTROL Folder path]**: Enter the path to the destination folder that will host the exported files.

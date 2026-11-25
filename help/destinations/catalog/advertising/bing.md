@@ -147,7 +147,7 @@ See [Activate audience data to streaming audience export destinations](../../ui/
 
 In the [Audience schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map the audience name in the [!UICONTROL Mapping ID] field. This ensures that audience metadata is correctly passed through to [!DNL Bing]. 
 
-![UI image showing the audience schedule screen with an example of how to map the audience name to the Bing Mapping ID.](../../assets/catalog/advertising/bing/mapping-id.png)
+![UI image showing the audience schedule screen with an example of how to map the audience name to the Bing Mapping ID.](../../assets/catalog/advertising/bing/mapping-id.png){width="750" zoomable="yes"}
 
 ### Preconfigured mappings {#preconfigured-mappings}
 

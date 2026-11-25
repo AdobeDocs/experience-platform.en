@@ -42,7 +42,7 @@ The following items are required before you start configuring the destination.
     * Refer to the [SendGrid documentation](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key), if you need guidance on what actions to perform. 
     * If you would like to programmatically generate your API Key, see the [SendGrid documentation](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
 
-![SendGrid API Keys settings page showing the Create API Key button.](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
+![SendGrid API Keys settings page showing the Create API Key button.](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg){width="750" zoomable="yes"}
 
 Before activating data to the SendGrid destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) created in [!DNL Experience Platform]. Refer also to the [limits](#limits) section further below on this page.
 
@@ -119,17 +119,17 @@ To connect to this destination, follow the steps described in the [destination c
 1. Within the [!DNL Adobe Experience Platform] console, navigate to **Destinations**.
 
 1. Select the **Catalog** tab and search for *SendGrid*. Then select **Set up**. After you have established a connection to the destination, the UI label changes to **Activate Segments**.
-![SendGrid destination card in the Experience Platform destinations catalog with the Set up button highlighted.](../../assets/catalog/email-marketing/sendgrid/02-catalog.jpg)
+![SendGrid destination card in the Experience Platform destinations catalog with the Set up button highlighted.](../../assets/catalog/email-marketing/sendgrid/02-catalog.jpg){width="750" zoomable="yes"}
 
 1. You are shown a wizard which assists you in configuring the SendGrid destination. Create the new destination by selecting **Configure new destination**.
-![SendGrid destination setup wizard showing the Configure new destination option.](../../assets/catalog/email-marketing/sendgrid/03.jpg)
+![SendGrid destination setup wizard showing the Configure new destination option.](../../assets/catalog/email-marketing/sendgrid/03.jpg){width="750" zoomable="yes"}
 
 1. Select the **New Account** option and fill in the **Bearer Token** value. This value is the SendGrid *API Key* previously mentioned in the [prerequisites section](#prerequisites).
-![SendGrid authentication screen showing the New Account option and Bearer Token field.](../../assets/catalog/email-marketing/sendgrid/04.jpg)
+![SendGrid authentication screen showing the New Account option and Bearer Token field.](../../assets/catalog/email-marketing/sendgrid/04.jpg){width="750" zoomable="yes"}
 
 1. Select **Connect to destination**. If the SendGrid *API Key* you provided is valid, the UI displays a **Connected** status with a green check mark, you can then proceed to the next step to fill in additional information fields.
 
-![SendGrid destination showing a Connected status with a green check mark after successful authentication.](../../assets/catalog/email-marketing/sendgrid/05.jpg)
+![SendGrid destination showing a Connected status with a green check mark after successful authentication.](../../assets/catalog/email-marketing/sendgrid/05.jpg){width="750" zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
@@ -138,7 +138,7 @@ While [setting up](https://experienceleague.adobe.com/docs/experience-platform/d
 *  **[!UICONTROL Name]**: The name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: An optional description that will help you identify this destination in the future.
 
-![SendGrid destination details form showing the Name and Description fields.](../../assets/catalog/email-marketing/sendgrid/06.jpg)
+![SendGrid destination details form showing the Name and Description fields.](../../assets/catalog/email-marketing/sendgrid/06.jpg){width="750" zoomable="yes"}
 
 ### Enable alerts {#enable-alerts}
 
@@ -158,23 +158,23 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 Refer to the below images for details specific to this destination.
 
 1. Select one or more audiences to export to SendGrid.
-![Audience selection screen showing one or more audiences selected for export to SendGrid.](../../assets/catalog/email-marketing/sendgrid/11.jpg)
+![Audience selection screen showing one or more audiences selected for export to SendGrid.](../../assets/catalog/email-marketing/sendgrid/11.jpg){width="750" zoomable="yes"}
 
 1. In the **[!UICONTROL Mapping]** step, after selecting **[!UICONTROL Add new mapping]**, you are shown the mapping page to map the source XDM fields to the SendGrid API target fields. The images below demonstrate how to map identity namespaces between Experience Platform and SendGrid. Ensure the **[!UICONTROL Source field]** *Email* should be mapped to the **[!UICONTROL Target field]** *external_id* as shown below.
-![Mapping step showing the Add new mapping option selected in the SendGrid activation workflow.](../../assets/catalog/email-marketing/sendgrid/13.jpg)
-![Mapping screen showing the Email source field mapped to the external_id target field in SendGrid.](../../assets/catalog/email-marketing/sendgrid/14.jpg)
-![Mapping screen showing an XDM source attribute selected for mapping to a SendGrid target field.](../../assets/catalog/email-marketing/sendgrid/15.jpg)
-![Mapping screen showing additional identity namespace mappings configured between Experience Platform and SendGrid.](../../assets/catalog/email-marketing/sendgrid/16.jpg)
+![Mapping step showing the Add new mapping option selected in the SendGrid activation workflow.](../../assets/catalog/email-marketing/sendgrid/13.jpg){width="750" zoomable="yes"}
+![Mapping screen showing the Email source field mapped to the external_id target field in SendGrid.](../../assets/catalog/email-marketing/sendgrid/14.jpg){width="750" zoomable="yes"}
+![Mapping screen showing an XDM source attribute selected for mapping to a SendGrid target field.](../../assets/catalog/email-marketing/sendgrid/15.jpg){width="750" zoomable="yes"}
+![Mapping screen showing additional identity namespace mappings configured between Experience Platform and SendGrid.](../../assets/catalog/email-marketing/sendgrid/16.jpg){width="750" zoomable="yes"}
 
 1. Similarly, map the desired [!DNL Adobe Experience Platform] attributes that you want to export to the SendGrid destination.
-![Mapping screen showing an Experience Platform profile attribute selected as a source field for SendGrid export.](../../assets/catalog/email-marketing/sendgrid/17.jpg)
-![Mapping screen showing completed attribute mappings between Experience Platform XDM fields and SendGrid target fields.](../../assets/catalog/email-marketing/sendgrid/18.jpg)
+![Mapping screen showing an Experience Platform profile attribute selected as a source field for SendGrid export.](../../assets/catalog/email-marketing/sendgrid/17.jpg){width="750" zoomable="yes"}
+![Mapping screen showing completed attribute mappings between Experience Platform XDM fields and SendGrid target fields.](../../assets/catalog/email-marketing/sendgrid/18.jpg){width="750" zoomable="yes"}
 
 1. After completing the mappings, select **[!UICONTROL Next]** to advance to the review screen.
-![SendGrid activation review screen showing a summary of the configured mapping before finishing setup.](../../assets/catalog/email-marketing/sendgrid/22.png)
+![SendGrid activation review screen showing a summary of the configured mapping before finishing setup.](../../assets/catalog/email-marketing/sendgrid/22.png){width="750" zoomable="yes"}
 
 1. Select **[!UICONTROL Finish]** to complete the setup.
-![SendGrid activation workflow completion screen showing the Finish button.](../../assets/catalog/email-marketing/sendgrid/23.jpg)
+![SendGrid activation workflow completion screen showing the Finish button.](../../assets/catalog/email-marketing/sendgrid/23.jpg){width="750" zoomable="yes"}
 
 The comprehensive list of supported attribute mappings that can be set up for the [SendGrid Marketing Contacts > Add or Update Contact API](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact) is below.
 
@@ -196,26 +196,26 @@ The comprehensive list of supported attribute mappings that can be set up for th
 To validate that you have correctly set up the destination, follow the steps below:
 
 1. Select **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** to navigate to the list of destinations.
-![Destinations Browse tab in Experience Platform showing the list of configured destinations.](../../assets/catalog/email-marketing/sendgrid/25.jpg)
+![Destinations Browse tab in Experience Platform showing the list of configured destinations.](../../assets/catalog/email-marketing/sendgrid/25.jpg){width="750" zoomable="yes"}
 
 1. Select the destination and validate that the status is **[!UICONTROL enabled]**.
-![SendGrid destination in the Browse tab showing an enabled status.](../../assets/catalog/email-marketing/sendgrid/26.jpg)
+![SendGrid destination in the Browse tab showing an enabled status.](../../assets/catalog/email-marketing/sendgrid/26.jpg){width="750" zoomable="yes"}
 
 1. Switch to the **[!DNL Activation data]** tab, then select an audience name.
-![Activation data tab for the SendGrid destination showing an audience name selected.](../../assets/catalog/email-marketing/sendgrid/27.jpg)
+![Activation data tab for the SendGrid destination showing an audience name selected.](../../assets/catalog/email-marketing/sendgrid/27.jpg){width="750" zoomable="yes"}
 
 1. Monitor the audience summary and check the count of profiles corresponds to the count created within the dataset.
-![Audience summary panel showing the profile count for the selected SendGrid audience.](../../assets/catalog/email-marketing/sendgrid/28.jpg)
+![Audience summary panel showing the profile count for the selected SendGrid audience.](../../assets/catalog/email-marketing/sendgrid/28.jpg){width="750" zoomable="yes"}
 
 1. The [SendGrid Marketing Lists > Create List API](https://docs.sendgrid.com/api-reference/lists/create-list) creates unique contact lists within SendGrid by joining the value of the *list_name* attribute and the timestamp of the data export. Navigate to the SendGrid site and check if the new contact list conforming to the name pattern is created.
-![SendGrid Marketing Lists page showing a newly created contact list conforming to the expected name pattern.](../../assets/catalog/email-marketing/sendgrid/29.jpg)
-![SendGrid contact list detail view confirming the new list was created with the correct name.](../../assets/catalog/email-marketing/sendgrid/30.jpg)
+![SendGrid Marketing Lists page showing a newly created contact list conforming to the expected name pattern.](../../assets/catalog/email-marketing/sendgrid/29.jpg){width="750" zoomable="yes"}
+![SendGrid contact list detail view confirming the new list was created with the correct name.](../../assets/catalog/email-marketing/sendgrid/30.jpg){width="750" zoomable="yes"}
 
 1. Select the newly created contact list and check if the new email record from the dataset you created is being populated within the new contact list.
 
 1. Additionally, also check a couple of emails to validate if the field mapping is correct.
-![SendGrid contact detail view showing email record fields populated from the exported dataset.](../../assets/catalog/email-marketing/sendgrid/31.jpg)
-![SendGrid contact record showing mapped field values confirming correct field mapping from Experience Platform.](../../assets/catalog/email-marketing/sendgrid/32.jpg)
+![SendGrid contact detail view showing email record fields populated from the exported dataset.](../../assets/catalog/email-marketing/sendgrid/31.jpg){width="750" zoomable="yes"}
+![SendGrid contact record showing mapped field values confirming correct field mapping from Experience Platform.](../../assets/catalog/email-marketing/sendgrid/32.jpg){width="750" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 

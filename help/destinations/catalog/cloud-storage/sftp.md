@@ -95,7 +95,7 @@ See the table below for information about the destination export type and freque
 
 {style="table-layout:auto"}
 
-![SFTP profile-based export type highlighted in the destinations catalog.](../../assets/catalog/cloud-storage/sftp/catalog.png)
+![SFTP profile-based export type highlighted in the destinations catalog.](../../assets/catalog/cloud-storage/sftp/catalog.png){width="750" zoomable="yes"}
 
 ## Export datasets {#export-datasets}
 
@@ -194,7 +194,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 If you select the **[!UICONTROL SFTP with password]** authentication type to connect to your SFTP location:
 
-![SFTP destination basic authentication with password.](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![SFTP destination basic authentication with password.](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png){width="500" zoomable="yes"}
 
 * **[!UICONTROL Domain]**: The address of your SFTP storage location.
 * **[!UICONTROL Username]**: The username to log into your SFTP storage location.
@@ -202,12 +202,12 @@ If you select the **[!UICONTROL SFTP with password]** authentication type to con
 * **[!UICONTROL Password]**: The password to log into your SFTP storage location.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
-  ![Image showing an example of a correctly formatted PGP key in the UI.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Image showing an example of a correctly formatted PGP key in the UI.](../../assets/catalog/cloud-storage/sftp/pgp-key.png){zoomable="yes"}
 
 
 If you select the **[!UICONTROL SFTP with SSH key]** authentication type to connect to your SFTP location:
 
-![SFTP destination SSH key authentication.](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+![SFTP destination SSH key authentication.](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png){width="500" zoomable="yes"}
 
 * **[!UICONTROL Domain]**: Fill in the IP address or the domain name of your SFTP account.
 * **[!UICONTROL Port]**: The port used by your SFTP storage location.
@@ -215,13 +215,13 @@ If you select the **[!UICONTROL SFTP with SSH key]** authentication type to conn
 * **[!UICONTROL SSH Key]**: The private SSH key used to log into your SFTP storage location. The private key must be an RSA-formatted, Base64-encoded string, and must not be password-protected.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
-    ![Image showing an example of a correctly formatted PGP key in the UI.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+    ![Image showing an example of a correctly formatted PGP key in the UI.](../../assets/catalog/cloud-storage/sftp/pgp-key.png){zoomable="yes"}
     
 ### Destination details {#destination-details}
 
 After establishing the authentication connection to the SFTP location, provide the following information for the destination:
 
-![Destination details fields for the SFTP destination.](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+![Destination details fields for the SFTP destination.](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png){zoomable="yes"}
 
 * **[!UICONTROL Name]**: Enter a name that helps you identify this destination in the [!DNL Experience Platform] user interface.
 * **[!UICONTROL Description]**: Enter a description for this destination.

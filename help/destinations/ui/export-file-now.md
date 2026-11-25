@@ -64,23 +64,23 @@ To export files on-demand to batch destinations, you must have successfully [con
 
 1. Go to **[!UICONTROL Connections > Destinations]**, select the **[!UICONTROL Browse]** tab and the filter symbol to show existing connections to your desired batch destinations.
     
-    ![Image highlighting how to get to the browse tab and filter existing dataflows.](../assets/ui/activate-on-demand/browse-tab.png)
+    ![Image highlighting how to get to the browse tab and filter existing dataflows.](../assets/ui/activate-on-demand/browse-tab.png){width="750" zoomable="yes"}
 
 2. Select your desired destination connection to inspect the existing dataflow to the destination.
 
-    ![Image highlighting a filtered dataflow.](../assets/ui/activate-on-demand/filtered-dataflow.png)
+    ![Image highlighting a filtered dataflow.](../assets/ui/activate-on-demand/filtered-dataflow.png){width="750" zoomable="yes"}
 
 3. Select the **[!UICONTROL Activation data]** tab and select the audiences for which you want to export files on-demand and select the **[!UICONTROL Export file now]** control to trigger a one-time export which will deliver a file for each selected audience to your batch destination.
 
-    ![Image highlighting the Export file now button.](../assets/ui/activate-on-demand/bulk-export-file-now.png)
+    ![Image highlighting the Export file now button.](../assets/ui/activate-on-demand/bulk-export-file-now.png){width="750" zoomable="yes"}
 
 4. Select **[!UICONTROL Yes]** to confirm and trigger the file export.
 
-    ![Image showing the Export file now confirmation dialog.](../assets/ui/activate-on-demand/confirm-activation.png)
+    ![Image showing the Export file now confirmation dialog.](../assets/ui/activate-on-demand/confirm-activation.png){width="750" zoomable="yes"}
 
 5. A confirmation message appears, letting you know that the file export has started.
 
-    ![Image showing confirmation of successful ad-hoc activation.](../assets/ui/activate-on-demand/ad-hoc-success.png)
+    ![Image showing confirmation of successful ad-hoc activation.](../assets/ui/activate-on-demand/ad-hoc-success.png){width="750" zoomable="yes"}
 
 6. You can also switch to the **[!UICONTROL Dataflow runs]** tab to confirm that the file export has kicked off.
 

@@ -27,15 +27,15 @@ For profile-based destinations, you must select the profile attributes that you 
 
 1. In the **[!UICONTROL Select attributes]** page, select **[!UICONTROL Add new field]**.
     
-    ![Image highlighting the Add new field button.](../assets/ui/activate-batch-profile-destinations/add-new-field.png){zoomable="yes"}
+    ![Image highlighting the Add new field button.](../assets/ui/activate-batch-profile-destinations/add-new-field.png){width="750" zoomable="yes"}
 
 2. Select the arrow to the right of the **[!UICONTROL Schema field]** entry.
 
-    ![Image highlighting how to select a source field.](../assets/ui/activate-batch-profile-destinations/select-source-field.png){zoomable="yes"}
+    ![Image highlighting how to select a source field.](../assets/ui/activate-batch-profile-destinations/select-source-field.png){width="750" zoomable="yes"}
 
 3. In the **[!UICONTROL Select field]** page, select the XDM attributes or identity namespaces that you want to send to the destination, then choose **[!UICONTROL Select]**.
 
-    ![Image showing the various fields available as source fields.](../assets/ui/activate-batch-profile-destinations/target-field-page.png){zoomable="yes"}
+    ![Image showing the various fields available as source fields.](../assets/ui/activate-batch-profile-destinations/target-field-page.png){width="750" zoomable="yes"}
 
 4. To add more mappings, repeat steps one to three.
 
@@ -43,13 +43,13 @@ For profile-based destinations, you must select the profile attributes that you 
 >
 > [!DNL Adobe Experience Platform] prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
-![Image showing prefilled recommended attributes in the mapping step of the audience activation workflow.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png){zoomable="yes"} 
+![Image showing prefilled recommended attributes in the mapping step of the audience activation workflow.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png){width="750" zoomable="yes"} 
 
 >[!IMPORTANT]
 >
 >Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.seg_namespace.seg_id.status` to your file exports. Instead, you must manually paste the value `xdm: segmentMembership.seg_namespace.seg_id.status` into the schema field, as shown below.
 >
->![Screen recording showing the audience membership workaround in the mapping step of the activation workflow.](../assets/ui/activate-batch-profile-destinations/segment-membership.gif){zoomable="yes"}
+>![Screen recording showing the audience membership workaround in the mapping step of the activation workflow.](../assets/ui/activate-batch-profile-destinations/segment-membership.gif){width="750" zoomable="yes"}
 
 File exports vary in the following ways, depending on whether `segmentMembership.seg_namespace.seg_id.status` is selected:
 

@@ -81,7 +81,7 @@ This means:
 - For each activated profile, [!DNL Kevel] generates one [!DNL UserDB] record per instance of each mapped identity, allowing real-time matching at ad decision time for each identifier your systems send.
 - Only map identities that you send in ad requests to [!DNL Kevel] to avoid unnecessary [!DNL UserDB] storage.
 
-![Screenshot of the identity mapping step showing three identity namespaces mapped to the Kevel identity slots.](/help/destinations/assets/catalog/advertising/kevel-destination-mappings.png)
+![Screenshot of the identity mapping step showing three identity namespaces mapped to the Kevel identity slots.](/help/destinations/assets/catalog/advertising/kevel-destination-mappings.png){width="750" zoomable="yes"}
 
 ## Supported audiences {#supported-audiences}
 
@@ -130,7 +130,7 @@ When connecting to [!DNL Kevel], provide the following field:
 
 - **[!UICONTROL Bearer token]**: Your [!DNL Kevel] API key.
 
-![Screenshot of the authentication step showing the bearer token field for the Kevel destination.](/help/destinations/assets/catalog/advertising/kevel-destination-authentication.png)
+![Screenshot of the authentication step showing the bearer token field for the Kevel destination.](/help/destinations/assets/catalog/advertising/kevel-destination-authentication.png){width="500" zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
@@ -140,7 +140,7 @@ After authentication, configure:
 - **[!UICONTROL Description]**: Optional text to describe this destination instance.
 - **[!UICONTROL Kevel Network ID]**: Your [!DNL Kevel] network identifier.
 
-![Screenshot of the destination details step showing the name, description, and Kevel Network ID fields.](/help/destinations/assets/catalog/advertising/kevel-destination-details.png)
+![Screenshot of the destination details step showing the name, description, and Kevel Network ID fields.](/help/destinations/assets/catalog/advertising/kevel-destination-details.png){width="750" zoomable="yes"}
 
 ## Activate audiences to this destination {#activate}
 
@@ -181,7 +181,7 @@ To map a group attribute, add a new mapping row in the **[!UICONTROL Mapping]** 
 1. **[!UICONTROL Source field]**: Select the XDM attribute or computed attribute that contains the user's group number, such as `_yourSchema.incrementalityGroup`.
 1. **[!UICONTROL Target field]**: Open the target-field selector, keep **[!UICONTROL Select attributes]** chosen, and select **`kevelGroup`** (Integer) from the schema.
 
-![Screenshot of the mapping step showing an XDM attribute mapped to the kevelGroup target field for the Kevel destination.](/help/destinations/assets/catalog/advertising/kevel-destination-group-mapping.png)
+![Screenshot of the mapping step showing an XDM attribute mapped to the kevelGroup target field for the Kevel destination.](/help/destinations/assets/catalog/advertising/kevel-destination-group-mapping.png){width="750" zoomable="yes"}
 
 ## Validate the data export {#exported-data}
 

@@ -144,7 +144,7 @@ To connect to the destination, provide the following parameter in the [!UICONTRO
 
 * **[!UICONTROL Account or Advertiser Key]**: This [!UICONTROL Source Key] is generated when a [[!DNL Real-Time CDP] source is created in the DSP user interface](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). Your Adobe Account Team will share this key with you after they create the source.
 
-![Screenshot of the Connection type section showing the Account or Advertiser Key field.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
+![Screenshot of the Connection type section showing the Account or Advertiser Key field.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png){width="750" zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
@@ -153,7 +153,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 
-![Screenshot of the destination detail fields showing Name and Description inputs.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
+![Screenshot of the destination detail fields showing Name and Description inputs.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png){width="750" zoomable="yes"}
 
 ### Enable alerts {#enable-alerts}
 
@@ -187,7 +187,7 @@ The following identity mappings are **preconfigured and automatically populated*
 * **`ECID`**
 * **`adcloud`** (Adobe Advertising third-party cookie)
 
-![Screenshot of the identity mapping section showing cookie identifiers, Hashed Email, IDFA, and GAID options.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/identity-mapping.png)
+![Screenshot of the identity mapping section showing cookie identifiers, Hashed Email, IDFA, and GAID options.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/identity-mapping.png){width="750" zoomable="yes"}
 
 These mappings are grayed out and read-only. You do not need to configure anything in this step. You can optionally add the following mappings:
 
@@ -211,7 +211,7 @@ To verify that the audience data was shared with Adobe Advertising, check the fo
 
 * In DSP, the audience is available when you create or edit an audience from **[!UICONTROL Audiences]** > **[!UICONTROL All Audiences]** or from within the **[!UICONTROL Audience Targeting]** section of placement settings. The audience should be visible in the [!UICONTROL Adobe Segments] tab under the [!UICONTROL Real-Time CDP] folder.
 
-![Screenshot of the DSP Audiences interface showing a [!DNL Real-Time CDP] folder with imported audiences listed under the Adobe Segments tab.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
+![Screenshot of the DSP Audiences interface showing a [!DNL Real-Time CDP] folder with imported audiences listed under the Adobe Segments tab.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png){width="750" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 

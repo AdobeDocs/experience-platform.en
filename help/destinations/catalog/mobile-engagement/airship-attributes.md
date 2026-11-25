@@ -162,7 +162,7 @@ See [Activate audience data to streaming audience export destinations](../../ui/
 
 [!DNL Airship] attributes can be set either on a channel, which represents device instance, for example iPhone, or a named user, which maps all of a user's devices to a common identifier such as a customer ID. If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the [!DNL Airship] named user in the right column under **[!UICONTROL Target Identities]**, as shown below.
 
-![Named User Mapping](../../assets/catalog/mobile-engagement/airship/mapping.png)
+![Named User Mapping](../../assets/catalog/mobile-engagement/airship/mapping.png){width="750" zoomable="yes"}
 
 For identifiers that should be mapped to a channel, that is, a device, map to the appropriate channel based on the source. The following images show how two mappings are created:
 
@@ -177,25 +177,25 @@ For identifiers that should be mapped to a channel, that is, a device, map to th
 
 Select source field:
 
-![Connect to Airship Attributes](../../assets/catalog/mobile-engagement/airship/select-source-identity.png)
+![Connect to Airship Attributes](../../assets/catalog/mobile-engagement/airship/select-source-identity.png){width="750" zoomable="yes"}
 
 Select target field:
 
-![Connect to Airship Attributes](../../assets/catalog/mobile-engagement/airship/select-target-identity.png)
+![Connect to Airship Attributes](../../assets/catalog/mobile-engagement/airship/select-target-identity.png){width="750" zoomable="yes"}
 
 **Map attribute**
 
 Select source attribute:
 
-![Select source field](../../assets/catalog/mobile-engagement/airship/select-source-attributes.png)
+![Select source field](../../assets/catalog/mobile-engagement/airship/select-source-attributes.png){width="750" zoomable="yes"}
 
 Select target attribute:
 
-![Select target field](../../assets/catalog/mobile-engagement/airship/select-target-attribute.png)
+![Select target field](../../assets/catalog/mobile-engagement/airship/select-target-attribute.png){width="750" zoomable="yes"}
 
 Verify mapping:
 
-![Channel mapping](../../assets/catalog/mobile-engagement/airship/mapping.png)
+![Channel mapping](../../assets/catalog/mobile-engagement/airship/mapping.png){width="750" zoomable="yes"}
    
 
 ## Data usage and governance {#data-usage-governance}

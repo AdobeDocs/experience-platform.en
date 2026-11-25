@@ -36,7 +36,7 @@ To display the file formatting options, start the [connect to destination](/help
 > 
 >The Adobe-built cloud storage destinations - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - currently only support the six CSV options highlighted below.
 
-![Image showing some of the available file formatting options.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
+![Image showing some of the available file formatting options.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png){width="750" zoomable="yes"}
 
 ### Delimiter {#delimiter}
 

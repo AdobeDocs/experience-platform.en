@@ -118,17 +118,17 @@ To authenticate to the destination, follow these steps:
 
 1. Find the *Snap Inc* destination from [!DNL Adobe Experience Platform]'s Destination Catalog and select **Set Up**.
 2. Select **[!UICONTROL Connect to destination]**. You will be redirected to the following screen:
-    ![Auth Screen 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
+    ![Auth Screen 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png){width="400" zoomable="yes"}
 3. Enter your Snapchat credentials and select **Log In**.
 4. You will be shown the Snapchat data that [!DNL Adobe Experience Platform] will be be able to access. Select **Continue** to proceed with the connection process. 
 
-![Auth Screen 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
+![Auth Screen 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png){width="750" zoomable="yes"}
 
 After selecting continue, wait until you are redirected back to [!DNL Adobe Experience Platform].
 
 ### Fill in destination details {#destination-details}
 
-![Destination Details](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
+![Destination Details](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png){zoomable="yes"}
 
 To configure details for the destination, fill in the required fields and select **[!UICONTROL Next]**.
 
@@ -162,7 +162,7 @@ After activating audiences to the *Snap Inc* destination, you will be able to se
 1. Log into the [Snap Ads Manager](https://ads.snapchat.com/)
 2. Select **Audiences** from the pulldown menu in the upper left corner of the screen. You will see the audiences that you activated in [!DNL Adobe Experience Platform] in the Audience Library:
 
-![Audiences](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
+![Audiences](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png){width="750" zoomable="yes"}
 
 Note that when an Adobe audience is first activated to Snap Inc, you will initially see it as an empty audience. This is because [!DNL Adobe Experience Platform] does not export member data to Snap Inc until it evaluates the audience. For more information about how audiences are evaluated in Experience Platform, see the [Segmentation Service overview](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-audiences).
 

@@ -156,7 +156,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Amazon Ads Consent Signal]**: Confirm that all data sent through this connection have consented to use personal data to be used for advertising purposes. "GRANTED" indicates consent for Amazon to use the customer's personal data for advertising. The permissible values are "GRANTED" and "DENIED". Any records sent through connections with "DENIED" are rejected for further use within [!DNL Amazon Ads].
 
-![Configure new destination](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
+![Configure new destination](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png){width="750" zoomable="yes"}
 
 ### Enable alerts {#enable-alerts}
 
@@ -177,7 +177,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 The [!DNL Amazon Ads] connection supports hashed email address and hashed phone numbers for identity matching purposes. The screenshot below provides an example matching that is compatible with the [!DNL Amazon Ads] connection:
 
-![Adobe to Amazon Ads mapping](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_2.png)
+![Adobe to Amazon Ads mapping](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_2.png){width="750" zoomable="yes"}
 
 * To map hashed email addresses, select the `Email_LC_SHA256` identity namespace as a source field.
 * To map hashed phone numbers, select the `Phone_SHA256` identity namespace as a source field.
@@ -204,7 +204,7 @@ After your audience has been uploaded, validate that it was created and uploaded
 
 Navigate to **[!UICONTROL Advertiser ID]** > **[!UICONTROL Audiences]** > **[!UICONTROL Advertiser Audiences]**. If your audience was created successfully and meets the minimum number of audience members, you see a Status of `Active`. Additional details about your audience size and reach can be found in the Forecasted Reach panel on the right side of the [!DNL Amazon DSP] user interface.
 
-![Amazon DSP audience creation validation](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
+![Amazon DSP audience creation validation](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png){width="500" zoomable="yes"}
 
 **For [!DNL Amazon Marketing Cloud]**
 
@@ -212,7 +212,7 @@ In the left-hand schema browser, find your audience under **[!UICONTROL Advertis
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
-![Amazon Marketing Cloud audience creation validation](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
+![Amazon Marketing Cloud audience creation validation](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png){width="500" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 

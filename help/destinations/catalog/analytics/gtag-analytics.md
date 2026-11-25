@@ -38,7 +38,7 @@ Send data to [!DNL Google Analytics], [!DNL Google Ads], and the [!DNL Google Ma
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Google Global Site Tag extension](../../assets/catalog/analytics/gtag-analytics/catalog.png)
+![Google Global Site Tag extension](../../assets/catalog/analytics/gtag-analytics/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

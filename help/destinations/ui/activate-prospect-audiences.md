@@ -36,7 +36,7 @@ This article explains the workflow required to export [prospect audiences](/help
 
 Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab. Use the **[!UICONTROL Data types]** filter and select **[!UICONTROL Prospects]** to see the destinations which support the activation of prospect audiences. Currently, exporting prospect audiences is available only to cloud storage destinations.  
 
-![Destinations which support prospect audiences.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![Destinations which support prospect audiences.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 
@@ -55,7 +55,7 @@ Follow the instructions to select a destination where you can export your datase
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     
-    ![Destination catalog tab with Catalog control highlighted.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
+    ![Destination catalog tab with Catalog control highlighted.](/help/destinations/assets/ui/export-datasets/catalog-tab.png){width="750" zoomable="yes"}
 
 1. Select **[!UICONTROL Activate]** on the card corresponding to the destination that you want to export datasets to. 
 
@@ -63,7 +63,7 @@ Follow the instructions to select a destination where you can export your datase
    >
    >The destinations that can export profile audiences are indicated with an icon in the upper right corner of the card, similar to the destination highlighted below, or you can use the data type filter to only display destinations that can export prospect audiences, as [shown higher on the page](#supported-destinations).
 
-   ![Amazon S3 destination page that can export profile audiences highlighted.](/help/destinations/assets/ui/activate-prospect-audiences/amazon-s3-icon-activate-prospect-audiences.png)
+   ![Amazon S3 destination page that can export profile audiences highlighted.](/help/destinations/assets/ui/activate-prospect-audiences/amazon-s3-icon-activate-prospect-audiences.png){width="750" zoomable="yes"}
 
 1. Select **[!UICONTROL Data type Prospects]**, followed by the destination connection that you want to export datasets to, then select **[!UICONTROL Next]**.
 
@@ -71,7 +71,7 @@ Follow the instructions to select a destination where you can export your datase
    >
    >If you want to set up a new destination to activate prospect audiences, select **[!UICONTROL Configure new destination]** to trigger the [Connect to destination](/help/destinations/ui/connect-destination.md) workflow.
 
-   ![Destination activation workflow with Prospects control highlighted.](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
+   ![Destination activation workflow with Prospects control highlighted.](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png){width="750" zoomable="yes"}
 
 1. Proceed to the next section to [select your profile audiences](#select-profile-audiences) for export.
 
@@ -83,7 +83,7 @@ Use the checkboxes to the left of the prospect audiences names to select the aud
 >
 >Only the prospect audiences are shown in this view, and no other audiences are displayed.
 
-![Dataset export workflow showing the Select audiences step where you can select which prospect audiences to export.](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
+![Dataset export workflow showing the Select audiences step where you can select which prospect audiences to export.](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png){width="750" zoomable="yes"}
 
 ## Scheduling and next steps {#scheduling-and-next-steps}
 

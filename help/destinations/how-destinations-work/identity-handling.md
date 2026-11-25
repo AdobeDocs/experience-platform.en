@@ -45,11 +45,11 @@ For [file-based destinations](/help/destinations/destination-types.md#file-based
 
 If you choose to add identities to your file exports, note that only a single identity from the [identity namespace](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer) can be selected in an export. When you select an identity for export, it is automatically selected as a [mandatory attribute](/help/destinations/ui/batch-destinations-mapping-reference.md#mandatory-attributes) and [deduplication key](/help/destinations/ui/batch-destinations-mapping-reference.md#deduplication-keys).
 
-![An identity selected as mandatory attribute and deduplication key.](/help/destinations/assets/how-destinations-work/selected-identity.png)
+![An identity selected as mandatory attribute and deduplication key.](/help/destinations/assets/how-destinations-work/selected-identity.png){width="750" zoomable="yes"}
 
 As a workaround, you can add more identities to the export if these have been ingested into [!DNL Experience Platform] as attributes. See below an example where the XDM attribute email address was selected for export, in addition to the identity namespace `Phone_E.164`.
 
-![Example of email address attribute selected for export.](/help/destinations/assets/how-destinations-work/email-selected.png)
+![Example of email address attribute selected for export.](/help/destinations/assets/how-destinations-work/email-selected.png){width="750" zoomable="yes"}
 
 ## Identity map versus XDM attribute export {#identity-map-or-attribute}
 
@@ -99,7 +99,7 @@ Note, however, that you have the flexibility to use data from either [private gr
 >
 >When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option to have [!DNL Experience Platform] automatically hash the data on activation. Read more about the **[!UICONTROL Apply transformation]** option in the [streaming destinations activation tutorial](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation).
 
-![Example of email address attribute mapped to identity field for Pinterest destination.](/help/destinations/assets/how-destinations-work/email-mapped-to-identity.png)
+![Example of email address attribute mapped to identity field for Pinterest destination.](/help/destinations/assets/how-destinations-work/email-mapped-to-identity.png){width="750" zoomable="yes"}
 
 ### Third-party cookie destinations {#third-party-cookie-destinations}
 

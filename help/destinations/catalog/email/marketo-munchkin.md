@@ -42,7 +42,7 @@ From lead management to account-based marketing, [!DNL Marketo Engagement Platfo
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Marketo Munchkin Extension](../../assets/catalog/email/marketo-munchkin/catalog.png)
+![Marketo Munchkin Extension](../../assets/catalog/email/marketo-munchkin/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

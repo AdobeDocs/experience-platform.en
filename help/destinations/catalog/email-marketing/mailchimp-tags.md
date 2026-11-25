@@ -153,7 +153,7 @@ To authenticate to the destination, fill in the required fields below and select
 
 {style="table-layout:auto"}
 
-![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
+![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png){width="750" zoomable="yes"}
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
 
@@ -161,7 +161,7 @@ If the details provided are valid, the UI displays a **[!UICONTROL Connected]** 
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
+![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png){width="500" zoomable="yes"}
 
 | Field | Description |
 | --- | --- |
@@ -196,11 +196,11 @@ To correctly map your XDM fields to the [!DNL Mailchimp Tags] destination fields
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose **[!UICONTROL Select identity namespace]** and select the `Email` identity namespace.
 
-    ![Experience Platform UI screenshot with Source field as Email from the identity namespace.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+    ![Experience Platform UI screenshot with Source field as Email from the identity namespace.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png){width="750" zoomable="yes"}
 
 1. In the **[!UICONTROL Select target field]** window, choose **[!UICONTROL Select identity namespace]** and select the `Email` identity namespace.
 
-    ![Experience Platform UI screenshot with Target field as Email from the identity namespace.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
+    ![Experience Platform UI screenshot with Target field as Email from the identity namespace.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png){width="750" zoomable="yes"}
 
     The mappings between your XDM profile schema and [!DNL Mailchimp Tags] will be as below:
     
@@ -209,7 +209,7 @@ To correctly map your XDM fields to the [!DNL Mailchimp Tags] destination fields
     |`IdentityMap: Email`|`Identity: Email`| Yes |
 
     An example with the completed mappings is shown below:
-    ![Experience Platform UI screenshot example showing field mappings.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
+    ![Experience Platform UI screenshot example showing field mappings.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png){width="750" zoomable="yes"}
 
 When you have finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
@@ -218,7 +218,7 @@ When you have finished providing the mappings for your destination connection, s
 To validate that you have correctly set up the destination, follow the steps below:
 
 1. Go to your [[!DNL Mailchimp]](https://login.mailchimp.com/) account. Then navigate to the **[!DNL Audience]** > **[!DNL All Contacts]** page and check if the contacts from the audience have been added and contacts within the audience have been updated with the audience name.
-![Mailchimp UI screenshot showing the Audience page.](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)
+![Mailchimp UI screenshot showing the Audience page.](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png){width="500" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 

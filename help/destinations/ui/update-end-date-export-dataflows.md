@@ -29,7 +29,7 @@ role_v2:
 
 The [September 2024 release of Experience Platform](/help/release-notes/latest/latest.md#destinations) introduced the option to set an `endTime` date for export dataset dataflows. Adobe has also introduced a default end date of May 1, 2025, for all dataset export dataflows created *prior to the September 2024 release*. These dataflows currently display a message similar to the one shown below.
 
-![UI notification about the need to update the end date of the export dataset dataflow.](/help/destinations/assets/ui/export-datasets/update-end-date.png)
+![UI notification about the need to update the end date of the export dataset dataflow.](/help/destinations/assets/ui/export-datasets/update-end-date.png){width="750" zoomable="yes"}
 
 **Action item**: For any of these dataflows, you must manually update the end date before it expires; otherwise, your exports will stop. Use the Experience Platform UI to identify which dataflows are set to stop on May 1, 2025.
 
@@ -45,18 +45,18 @@ Use the Experience Platform UI to identify dataflows with an end date of May 1, 
 
 Navigate to **Destinations > Browse** and look for the data type **Datasets** in the **Data Type** column, as shown below. Select the desired dataflows to inspect them.
 
-![Dataset export dataflows highlighted in the Browse tab.](/help/destinations/assets/ui/export-datasets/view-dataset-dataflows.png)
+![Dataset export dataflows highlighted in the Browse tab.](/help/destinations/assets/ui/export-datasets/view-dataset-dataflows.png){width="750" zoomable="yes"}
 
 ### Update the end date of the dataflows {#update-end-date}
 
 To update the end date of dataflows:
 
 1. In the dataflows that you have selected for inspection in the previous step, select **Export datasets**.
-  ![Export datasets control highlighted in the Browse tab.](/help/destinations/assets/ui/export-datasets/export-datasets-control-highlighted.png)
+  ![Export datasets control highlighted in the Browse tab.](/help/destinations/assets/ui/export-datasets/export-datasets-control-highlighted.png){width="750" zoomable="yes"}
 2. In the workflow, proceed to the **Scheduling** step and select **Edit schedule**. 
-  ![Edit schedule control highlighted in the Scheduling step.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlighted.png)
+  ![Edit schedule control highlighted in the Scheduling step.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlighted.png){width="750" zoomable="yes"}
 3. Choose a desired end date after May 1, 2025 and select **Save**.
-  ![Select end date control highlighted in the Scheduling step.](/help/destinations/assets/ui/export-datasets/select-end-date.png)
+  ![Select end date control highlighted in the Scheduling step.](/help/destinations/assets/ui/export-datasets/select-end-date.png){width="500" zoomable="yes"}
 4. Proceed to the end of the workflow and save your updates.
 
 For extensive information about the scheduling step, read the [export datasets UI tutorial](/help/destinations/api/export-datasets.md#export-datasets-by-using-the). 

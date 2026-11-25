@@ -30,7 +30,7 @@ topic_v2:
 
 Activate profiles for your [!DNL LinkedIn] campaigns for audience targeting, personalization, and suppression, based on hashed emails and mobile IDs.
 
-![LinkedIn destination in the Adobe Experience Platform UI](../../assets/catalog/social/linkedin/catalog.png)
+![LinkedIn destination in the Adobe Experience Platform UI](../../assets/catalog/social/linkedin/catalog.png){width="750" zoomable="yes"}
 
 ## Use cases {#use-cases}
 
@@ -126,7 +126,7 @@ If you select to hash the email addresses yourself, make sure to comply with the
 > 
 > The **[!UICONTROL Apply transformation]** option is only displayed when you select attributes as source fields. It is not displayed when you choose namespaces.
 
-![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png){width="750" zoomable="yes"}
 
 ## Connect to the destination {#connect}
 
@@ -148,7 +148,7 @@ The video below also demonstrates the steps to configure a [!DNL LinkedIn Matche
 
 1. Find the [!DNL LinkedIn Matched Audiences] destination in the destination catalog and select **[!UICONTROL Set Up]**.
 2. Select **[!UICONTROL Connect to destination]**. 
-  ![Authenticate to LinkedIn](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
+  ![Authenticate to LinkedIn](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png){width="750" zoomable="yes"}
 3. Enter your LinkedIn credentials and select **Log In**.
 
 ### Refresh authentication credentials {#refresh-authentication-credentials}
@@ -159,11 +159,11 @@ Once the token is expired, data exports to the destination stop working. To prev
 
 1. Navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
 2. (Optional) Use the available filters on the page to display LinkedIn accounts only.
-    ![Filter to show LinkedIn accounts only](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
+    ![Filter to show LinkedIn accounts only](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png){width="750" zoomable="yes"}
 3. Select the account that you want to refresh, select the ellipsis and select **[!UICONTROL Edit details]**. 
-    ![Select Edit details control](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
+    ![Select Edit details control](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png){width="750" zoomable="yes"}
 4. In the modal window, select **[!UICONTROL Reconnect OAuth]** and reauthenticate with your LinkedIn credentials.
-    ![Modal window with Reconnect OAuth option](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
+    ![Modal window with Reconnect OAuth option](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png){width="750" zoomable="yes"}
 
 >[!SUCCESS]
 >

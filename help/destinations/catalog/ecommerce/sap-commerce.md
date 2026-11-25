@@ -110,7 +110,7 @@ To update the Experience Platform audience status in [!DNL SAP Subscription Bill
 To create the custom references, log in to your [!DNL SAP Subscription Billing] account and navigate to the **[Master Data and Configuration]** > **[Custom References]** page. Next, select **[!UICONTROL Create]** to add a new reference for each audience selected in Experience Platform. You will require these reference field names in the subsequent [Schedule audience export and example](#schedule-segment-export-example) step.
 
 An example of how to create a custom **[!UICONTROL Reference Type]** within [!DNL SAP Subscription Billing] is shown below:
-![Image showing where to create a custom reference in SAP Subscription Billing.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
+![Image showing where to create a custom reference in SAP Subscription Billing.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png){width="750" zoomable="yes"}
 
 For additional guidance, see the [!DNL SAP Subscription Billing] [custom references](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27) documentation.
 
@@ -199,14 +199,14 @@ Fill in the required fields below. Refer to the [Generate a service key](#prereq
 | **[!UICONTROL Region]** | Your data center location. The region is present in the `url` and has a value similar to `eu10` or `us10`. For example if the `url` is `https://eu10.revenue.cloud.sap/api` you need `eu10`. |
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
-![Image from Experience Platform UI showing how to authenticate to the destination.](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
+![Image from Experience Platform UI showing how to authenticate to the destination.](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png){width="750" zoomable="yes"}
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-![Image from Experience Platform UI showing the destination details to be filled after authentication.](../../assets/catalog/ecommerce/sap-commerce/destination-details.png)
+![Image from Experience Platform UI showing the destination details to be filled after authentication.](../../assets/catalog/ecommerce/sap-commerce/destination-details.png){width="500" zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -236,29 +236,29 @@ To correctly send your audience data from [!DNL Adobe Experience Platform] to th
 The `customerNumberSAP` identity is a mandatory mapping for this destination. Follow the steps below to map it:
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
-![Experience Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
+![Experience Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png){width="750" zoomable="yes"}
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** and select `customerNumberSAP`.
-![Experience Platform UI screenshot selecting email as a source attribute to map as identity.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
+![Experience Platform UI screenshot selecting email as a source attribute to map as identity.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png){width="750" zoomable="yes"}
 1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select the `customerNumber` identity.
-![Experience Platform UI screenshot selecting email as a target attribute to map as identity.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
+![Experience Platform UI screenshot selecting email as a target attribute to map as identity.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png){width="750" zoomable="yes"}
 
 | Source Field | Target Field | Mandatory |
 | --- | --- | --- |
 | `IdentityMap: customerNumberSAP` | `Identity: customerNumber` | Yes |
 
 An example with the identity mapping is shown below:
-![Image from Experience Platform UI showing an example of customerNumber identity mapping.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
+![Image from Experience Platform UI showing an example of customerNumber identity mapping.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png){zoomable="yes"}
 
 #### Mapping attributes {#mapping-attributes}
 
 To add any other attributes you want to update between your XDM profile schema and your [!DNL SAP Subscription Billing] account, repeat the steps below:
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
-![Experience Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
+![Experience Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png){width="750" zoomable="yes"}
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute.
-![Experience Platform UI screenshot selecting Last Name as a source attribute.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
+![Experience Platform UI screenshot selecting Last Name as a source attribute.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png){width="750" zoomable="yes"}
 1. In the **[!UICONTROL Select target field]** window, choose **[!UICONTROL Select custom attributes]** category and type the name of the [!DNL SAP Subscription Billing] attribute from the list of customer [schema](https://api.sap.com/api/BusinessPartner_APIs/schema) attributes.
-![Experience Platform UI screenshot where lastName is defined as the target attribute.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
+![Experience Platform UI screenshot where lastName is defined as the target attribute.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png){width="750" zoomable="yes"}
 
 >[!IMPORTANT]
 >
@@ -307,7 +307,7 @@ You can then add any additional mappings between your XDM profile schema and the
 {style="table-layout:auto"}
 
 An example with both mandatory and optional attribute mappings where the customer is an individual is shown below:
-![Image from Experience Platform UI showing an example with both mandatory and optional attribute mappings where the customer is an individual.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
+![Image from Experience Platform UI showing an example with both mandatory and optional attribute mappings where the customer is an individual.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png){zoomable="yes"}
 
 >[!TAB Corporate customer]
 
@@ -319,7 +319,7 @@ An example with both mandatory and optional attribute mappings where the custome
 {style="table-layout:auto"}
 
 An example with both mandatory and optional attribute mappings where the customer is a corporate is shown below:
-![Image from Experience Platform UI showing an example with both mandatory and optional attribute mappings where the customer is a corporate.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
+![Image from Experience Platform UI showing an example with both mandatory and optional attribute mappings where the customer is a corporate.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png){zoomable="yes"}
 
 >[!ENDTABS]
 
@@ -330,22 +330,22 @@ When you are finished providing the mappings for your destination connection, se
 When performing the [Schedule audience export](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map Experience Platform audiences to the [attributes](#prerequisites-attribute) in [!DNL SAP Subscription Billing].
 
 An example of the Schedule audience export step, with the location of the [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** highlighted, is shown below:
-![Image from Experience Platform showing schedule audience export with Mapping IDs populated.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
+![Image from Experience Platform showing schedule audience export with Mapping IDs populated.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png){width="750" zoomable="yes"}
 
 To do this, select each segment, then enter name of the custom reference from [!DNL SAP Subscription Billing] in the [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** destination connector field. For guidance on creating custom references, see the [Create custom references in [!DNL SAP Subscription Billing]](#prerequisites-custom-reference) section.
 
 >[!IMPORTANT]
 >
 > Do not use the custom reference label as the value.
->![Image indicating you should not use the custom reference label value for mapping.](../../assets/catalog/ecommerce/sap-commerce/custom-reference-dont-use-label-for-mapping.png)
+>![Image indicating you should not use the custom reference label value for mapping.](../../assets/catalog/ecommerce/sap-commerce/custom-reference-dont-use-label-for-mapping.png){width="750" zoomable="yes"}
 
 For example, if your selected Experience Platform audience is `sap_audience1` and you want its status to be updated into the [!DNL SAP Subscription Billing] custom reference `SAP_1`, specify this value in the [!DNL SAP_Commerce] **[!UICONTROL Mapping ID]** field.
 
 An example **[!UICONTROL Reference Type]** from [!DNL SAP Subscription Billing] is shown below:
-![Image showing where to create a custom reference in SAP Subscription Billing.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
+![Image showing where to create a custom reference in SAP Subscription Billing.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png){width="750" zoomable="yes"}
 
 An example of the Schedule audience export step, with an audience selected and its corresponding [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** highlighted, is shown below:
-![Image from Experience Platform showing schedule audience export with Mapping IDs populated.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
+![Image from Experience Platform showing schedule audience export with Mapping IDs populated.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png){width="750" zoomable="yes"}
 
 As shown the value within the **[!UICONTROL Mapping ID]** field should exactly match the [!DNL SAP Subscription Billing] **[!UICONTROL Reference Type]** value .
 
@@ -363,7 +363,7 @@ Based on the image shown above where you have selected two audiences, the mappin
 To validate that you have correctly set up the destination, follow the steps below:
 
 Go to the [!DNL SAP Subscription Billing] account, then navigate to the **[!UICONTROL Contacts]** page to check the audience statuses. The list can be configured to display columns for the custom references and display the corresponding audience statuses.
-![Image of SAP Subscription Billing showing the customer overview page with column headers showing the audience name and cells audience statuses](../../assets/catalog/ecommerce/sap-commerce/customer-overview.png)
+![Image of SAP Subscription Billing showing the customer overview page with column headers showing the audience name and cells audience statuses](../../assets/catalog/ecommerce/sap-commerce/customer-overview.png){width="750" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 

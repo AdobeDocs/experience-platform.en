@@ -29,7 +29,7 @@ topic_v2:
 ---
 # [!DNL Destinations] overview {#overview}
 
-![Destinations overview banner.](./assets/overview/destinations-overview-banner.png)
+![Destinations overview banner.](./assets/overview/destinations-overview-banner.png){width="750" zoomable="yes"}
 
 **[!DNL Destinations]** are pre-built integrations with destination platforms that allow for the seamless activation of data from [!DNL Adobe Experience Platform]. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
@@ -90,7 +90,7 @@ The following table outlines the permissions and permission combinations require
 
 The diagram below visually displays which permissions you need depending on the operations that you want to perform on destinations.
 
-![Diagram showing the required permissions to perform certain actions on destinations.](/help/destinations/assets/overview/permissions-diagram.png)
+![Diagram showing the required permissions to perform certain actions on destinations.](/help/destinations/assets/overview/permissions-diagram.png){width="750" zoomable="yes"}
 
 For more information about access controls, see the [Access control user guide](../access-control/ui/overview.md).
 
@@ -114,7 +114,7 @@ The actual speed at which profile removal takes effect in the destination platfo
 
 After establishing a connection to a destination and completing the activation workflow, you can monitor the data exports to your reception system. Read the [guide on monitoring dataflows to destinations in the UI](/help/dataflows/ui/monitor-destinations.md) for more information.
 
-![Destinations monitoring page example.](./assets/overview/monitoring-page-example.png)
+![Destinations monitoring page example.](./assets/overview/monitoring-page-example.png){width="750" zoomable="yes"}
 
 You can also validate if data is coming through successfully to your destination. Most destination documentation pages in the catalog have a *Validate data export section*, which indicates how you can check in the destination platform that data is being successfully brought in from Experience Platform. View an example of this section for the [Amazon Ads destination](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
 

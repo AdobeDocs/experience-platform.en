@@ -117,7 +117,7 @@ In the example below, the `customerDataFields` section defines two fields that u
 
 The resulting UI experience is shown in the image below.
 
-![Two customer data fields, User account ID and API endpoint region, shown in the Experience Platform UI when connecting to a destination.](../../assets/functionality/destination-configuration/customer-data-fields-example.png)
+![Two customer data fields, User account ID and API endpoint region, shown in the Experience Platform UI when connecting to a destination.](../../assets/functionality/destination-configuration/customer-data-fields-example.png){width="500" zoomable="yes"}
 
 ## Destination connection names and descriptions {#names-description}
 
@@ -187,7 +187,7 @@ For example, the configuration below is reflected accordingly in the UI, with th
 ]
 ```
 
-![File formatting options displayed in the Experience Platform UI in the same order as they appear in the destination configuration.](../../assets/functionality/destination-configuration/customer-data-fields-order.png)
+![File formatting options displayed in the Experience Platform UI in the same order as they appear in the destination configuration.](../../assets/functionality/destination-configuration/customer-data-fields-order.png){width="500" zoomable="yes"}
 
 ## Group customer data fields {#grouping}
 
@@ -228,7 +228,7 @@ To do this, use `"type": "object"` to create the group, and collect the desired 
 ]
 ```
 
-![Customer data fields grouped under a single CSV Options section in the Experience Platform UI.](../../assets/functionality/destination-configuration/group-customer-data-fields.png)
+![Customer data fields grouped under a single CSV Options section in the Experience Platform UI.](../../assets/functionality/destination-configuration/group-customer-data-fields.png){width="500" zoomable="yes"}
 
 ## Create dropdown selectors for customer data fields {#dropdown-selectors}
 
@@ -269,7 +269,7 @@ To do this, use the `namedEnum` object as shown below and configure a `default` 
 ]
 ```
 
-![Screen recording of a customer selecting a delimiter value from a dropdown selector in the Experience Platform UI.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
+![Screen recording of a customer selecting a delimiter value from a dropdown selector in the Experience Platform UI.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif){width="500" zoomable="yes"}
 
 ## Create dynamic dropdown selectors for customer data fields {#dynamic-dropdown-selectors}
 
@@ -574,7 +574,7 @@ In a wider context, you can see the `conditional` field being used in the destin
 
 Below, you can see the resulting UI screen, based on the configuration above. When the user selects the file type CSV, additional file formatting options referring to the CSV file type are displayed in the UI.
 
-![Screen recording of additional CSV file formatting options appearing in the Experience Platform UI after the user selects CSV as the file type.](../../assets/functionality/destination-configuration/customer-data-fields-conditional.gif)
+![Screen recording of additional CSV file formatting options appearing in the Experience Platform UI after the user selects CSV as the file type.](../../assets/functionality/destination-configuration/customer-data-fields-conditional.gif){width="500" zoomable="yes"}
 
 ## Accessing templatized customer data fields {#accessing-templatized-fields}
 

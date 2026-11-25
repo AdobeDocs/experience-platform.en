@@ -39,7 +39,7 @@ Before advancing to the steps illustrated below, read the [Destination SDK getti
 
 ## Steps to use the configuration options in Destination SDK to set up your destination {#steps}
 
-![Illustrated steps of using Destination SDK endpoints](../assets/guides/destination-sdk-steps-batch.png)
+![Illustrated steps of using Destination SDK endpoints](../assets/guides/destination-sdk-steps-batch.png){width="750" zoomable="yes"}
 
 ## Step 1: Create a server and file configuration {#create-server-file-configuration}
 

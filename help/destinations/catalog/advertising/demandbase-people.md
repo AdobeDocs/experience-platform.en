@@ -100,7 +100,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![Add bearer token](../../assets/catalog/advertising/demandbase-people/bearer-token.png)
+![Add bearer token](../../assets/catalog/advertising/demandbase-people/bearer-token.png){zoomable="yes"}
 
 * **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination. View [prerequisites](#prerequisites) for information on how to obtain the token.
 
@@ -108,7 +108,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Add information about the destination connection](../../assets/catalog/advertising/demandbase-people/name-and-description.png)
+![Add information about the destination connection](../../assets/catalog/advertising/demandbase-people/name-and-description.png){zoomable="yes"}
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -157,7 +157,7 @@ When mapping fields to [!DNL Demandbase People], consider the following matching
 * **Fallback matching**: If `externalPersonId` is not available, Demandbase uses the `email` field for identification.
 * **Recommended fields**: While only `email` and `externalPersonId` are required, Adobe recommends mapping the job title, job function, and job level fields in addition to the recommended mappings above. These fields provide richer person information within Demandbase and support downstream audience segmentation and targeting.
 
-![Demandbase People mappings](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
+![Demandbase People mappings](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png){width="750" zoomable="yes"}
 
 These mappings are required for the destination to function properly and must be configured before you can proceed with the activation workflow.
 

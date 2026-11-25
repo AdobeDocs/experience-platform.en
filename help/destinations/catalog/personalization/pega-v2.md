@@ -119,7 +119,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 #### OAuth 2 Client Credentials authentication {#oauth-2-client-credentials-authentication}
 
-![Image of the UI screen where you can connect to the Pega CDH destination, using OAuth 2 with Client Credentials authentication](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
+![Image of the UI screen where you can connect to the Pega CDH destination, using OAuth 2 with Client Credentials authentication](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png){width="750" zoomable="yes"}
 
 Fill in the fields below and select **[!UICONTROL Connect to destination]**:
 
@@ -131,7 +131,7 @@ Fill in the fields below and select **[!UICONTROL Connect to destination]**:
 
 After establishing the authentication connection to the [!DNL Pega Customer Decision Hub], provide the following information for the destination:
 
-![Image of the UI screen showing completed fields for the Pega CDH destination details](../../assets/catalog/personalization/pega/pega-connect-destination-v2.png)
+![Image of the UI screen showing completed fields for the Pega CDH destination details](../../assets/catalog/personalization/pega/pega-connect-destination-v2.png){width="500" zoomable="yes"}
 
 To configure details for the destination, fill in the required fields and select **[!UICONTROL Next]**.
 
@@ -160,21 +160,21 @@ Below is an example of correct identity mapping when exporting profiles to [!DNL
 * Select a source identity that uniquely identifies a profile in [!DNL Adobe Experience Platform] and [!DNL Pega Customer Decision Hub]. For example: `CustomerID`.
 * Select the destination profile attributes to which you want to map the selected source profile attributes.
 
-![Identity mapping](../../assets/catalog/personalization/pega/pega-source-destination-mapping.png)
+![Identity mapping](../../assets/catalog/personalization/pega/pega-source-destination-mapping.png){width="750" zoomable="yes"}
 
 ## Exported data / Validate data export {#exported-data}
 
 A successful audience membership update for a profile would insert the audience identifier, name and statuses in the Pega marketing audience membership datastore. The membership data is associated to a customer using Customer Profile Designer in [!DNL Pega Customer Decision Hub], as shown below.
 
-![Image of the UI screen where you can associate Adobe Audience Membership data to Customer, using Customer Profile Designer](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
+![Image of the UI screen where you can associate Adobe Audience Membership data to Customer, using Customer Profile Designer](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png){width="750" zoomable="yes"}
 
 The audience membership data is used in Pega Next-Best-Action Designer Engagement polices for next-best-action decisioning, as shown below.
 
-![Image of the UI screen where you can add Audience membership fields as conditions in Engagement Policies of Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagement.png)
+![Image of the UI screen where you can add Audience membership fields as conditions in Engagement Policies of Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagement.png){width="500" zoomable="yes"}
 
 The customer audience membership data fields are added as predictors in Adaptive models, as shown below.
 
-![Image of the UI screen where you can add Audience membership fields as predicators in Adaptive models, using Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
+![Image of the UI screen where you can add Audience membership fields as predicators in Adaptive models, using Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png){width="750" zoomable="yes"}
 
 ## Additional resources {#additional-resources}
 

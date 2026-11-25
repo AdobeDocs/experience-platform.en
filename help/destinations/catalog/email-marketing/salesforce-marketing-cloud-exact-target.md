@@ -74,10 +74,10 @@ For each audience that you activate from Experience Platform to [!DNL Salesforce
 The attribute field names are used for the [!DNL (API) Salesforce Marketing Cloud] target field during the **[!UICONTROL Mapping]** step. You can define the field character with a maximum of 4000 characters, according to your business requirement. See the [!DNL Salesforce Marketing Cloud] [Data Extensions Data Types](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&type=5) documentation page for additional information on attribute types.
 
 An example of the data designer screen in [!DNL Salesforce Marketing Cloud], into which you will add the attribute is shown below:
-![Salesforce Marketing Cloud UI data designer.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-data-designer.png)
+![Salesforce Marketing Cloud UI data designer.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-data-designer.png){width="750" zoomable="yes"}
 
 A view of a [!DNL Salesforce Marketing Cloud] [!DNL Email Data] attribute group with attributes corresponding to the audience status within the [!DNL Email Demographics] data extension is shown below:
-![Salesforce Marketing Cloud UI email data attribute group.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-email-demographics-fields.png)
+![Salesforce Marketing Cloud UI email data attribute group.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-email-demographics-fields.png){width="750" zoomable="yes"}
 
 The [!DNL (API) Salesforce Marketing Cloud] destination uses the [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to dynamically retrieve the data extensions and their linked attributes' defined within [!DNL Salesforce Marketing Cloud].
 
@@ -88,7 +88,7 @@ These are displayed in the **[!UICONTROL Target field]** selection window when y
 > Within [!DNL Salesforce Marketing Cloud], you must create attributes with a **[!UICONTROL FIELD NAME]** that exactly matches the value specified within **[!UICONTROL Mapping ID]** for each activated Experience Platform segment. For example, the screenshot below shows an attribute named `salesforce_mc_segment_1`. When activating an audience to this destination, add `salesforce_mc_segment_1` as **[!UICONTROL Mapping ID]** to populate audience audiences from Experience Platform into this attribute.
 
 An example of attribute creation in [!DNL Salesforce Marketing Cloud], is shown below:
-![Salesforce Marketing Cloud UI screenshot showing an attribute.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
+![Salesforce Marketing Cloud UI screenshot showing an attribute.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png){width="750" zoomable="yes"}
 
 >[!TIP]
 >
@@ -99,16 +99,16 @@ An example of attribute creation in [!DNL Salesforce Marketing Cloud], is shown 
 #### Assign user roles and permissions within [!DNL Salesforce Marketing Cloud] {#prerequisites-roles-permissions}
 
 As [!DNL Salesforce Marketing Cloud] supports custom roles depending on your use-case, your user should be assigned the relevant roles to update your attributes within [!DNL Salesforce Marketing Cloud]. An example of roles assigned to a user is shown below:
-![Salesforce Marketing Cloud UI for a selected user which shows their assigned roles.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-edit-roles.png)
+![Salesforce Marketing Cloud UI for a selected user which shows their assigned roles.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-edit-roles.png){width="750" zoomable="yes"}
 
 Depending on which roles your [!DNL Salesforce Marketing Cloud] user has been assigned, you would also need to assign permissions to the [!DNL Salesforce Marketing Cloud] data extension which are linked to the fields you are looking to update. 
 
 As this destination requires access to the `[!DNL data extension]`, you need to allow them. For Example for the `Email` [!DNL data extension] you need to allow as shown below:
 
-![Salesforce Marketing Cloud UI showing the email data extension with allowed permissions.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
+![Salesforce Marketing Cloud UI showing the email data extension with allowed permissions.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png){width="750" zoomable="yes"}
 
 To restrict the level of access, you can also override individual access by using granular privileges.
-![Salesforce Marketing Cloud UI showing the email data extension with granular permissions.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
+![Salesforce Marketing Cloud UI showing the email data extension with granular permissions.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png){width="750" zoomable="yes"}
 
 Refer to the [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&id=sf.mc_overview_marketing_cloud_roles.htm&type=5) and [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&id=sf.mc_overview_roles.htm&type=5) pages for detailed guidance.
 
@@ -205,14 +205,14 @@ To authenticate to the destination, fill in the required fields below and select
 
 {style="table-layout:auto"}
 
-![Experience Platform UI screenshot showing how to authenticate to Salesforce Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
+![Experience Platform UI screenshot showing how to authenticate to Salesforce Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png){width="750" zoomable="yes"}
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark, you can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-details.png)
+![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-details.png){width="750" zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -245,7 +245,7 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce Marketing Cloud] 
 > * The integration with the [!DNL Salesforce Marketing Cloud] API is subject to a pagination limit of how many attributes Experience Platform can retrieve from Salesforce. This means during the **[!UICONTROL Mapping]** step, the target field schema can display a maximum of 2000 attributes from your Salesforce account.
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
-![Experience Platform UI screenshot example for Add new mapping.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
+![Experience Platform UI screenshot example for Add new mapping.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png){width="750" zoomable="yes"}
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
 1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select attributes]** category and select an attribute from the data extensions displayed as needed. The [!DNL (API) Salesforce Marketing Cloud] destination uses the [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to dynamically retrieve the data extensions and their linked attributes' defined within [!DNL Salesforce Marketing Cloud]. These are displayed in the **[!UICONTROL Target field]** popup when you set up the [mapping](#mapping-considerations-example) in the [activate audiences workflow](#activate). 
 
@@ -258,7 +258,7 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce Marketing Cloud] 
         |`xdm: person.name.firstName`|`Attribute: First Name` from the desired [!DNL Salesforce Marketing Cloud] data extension.| - |
 
     * An example using these mappings is shown below:
-    ![Experience Platform UI screenshot example showing Target mappings.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
+    ![Experience Platform UI screenshot example showing Target mappings.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png){width="750" zoomable="yes"}
 
 When you have finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
@@ -271,11 +271,11 @@ To do this, select each segment, then enter name of the attribute from [!DNL Sal
 For example, if your [!DNL Salesforce Marketing Cloud] attribute is `salesforce_mc_segment_1`, specify this value in the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** to populate audience audiences from Experience Platform into this attribute.
 
 An example attribute from [!DNL Salesforce Marketing Cloud] is shown below:
-![Salesforce Marketing Cloud UI screenshot showing an attribute.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
+![Salesforce Marketing Cloud UI screenshot showing an attribute.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png){width="750" zoomable="yes"}
 
 An example indicating the location of the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** is shown below:
 
-![Experience Platform UI screenshot example showing Schedule audience export.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
+![Experience Platform UI screenshot example showing Schedule audience export.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png){width="750" zoomable="yes"}
 
 As shown the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** should exactly match the value specified within [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]**.
 
@@ -295,22 +295,22 @@ A typical example based on the image shown above could be.
 To validate that you have correctly set up the destination, follow the steps below:
 
 1. Select **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** to navigate to the list of destinations.
-![Experience Platform UI screenshot showing Browse Destinations.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/browse-destinations.png)
+![Experience Platform UI screenshot showing Browse Destinations.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/browse-destinations.png){width="750" zoomable="yes"}
 
 1. Select the destination and validate that the status is **[!UICONTROL enabled]**.
-![Experience Platform UI screenshot showing Destinations Dataflow Run.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-dataflow-run.png)
+![Experience Platform UI screenshot showing Destinations Dataflow Run.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-dataflow-run.png){width="750" zoomable="yes"}
 
 1. Switch to the **[!DNL Activation data]** tab, then select an audience name.
-![Experience Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destinations-activation-data.png)
+![Experience Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destinations-activation-data.png){width="750" zoomable="yes"}
 
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count created within the segment.
-![Experience Platform UI screenshot example showing Segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/segment.png)
+![Experience Platform UI screenshot example showing Segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/segment.png){width="750" zoomable="yes"}
 
 1. Go to the [[!DNL Salesforce Marketing Cloud]](https://mc.exacttarget.com/) website. Then navigate to the **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** page and check if the profiles from the audience have been added.
-![Salesforce Marketing Cloud UI screenshot showing the Contacts page with profiles used in the segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png)
+![Salesforce Marketing Cloud UI screenshot showing the Contacts page with profiles used in the segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png){width="750" zoomable="yes"}
 
 1. To check if any profiles have been updated, navigate to the **[!UICONTROL Email]** page and verify if the attribute values for the profile from the audience have been updated. If successful, you can see that each audience status in [!DNL Salesforce Marketing Cloud] was updated with the corresponding audience status from Experience Platform, based on the **[!UICONTROL Mapping ID]** value provided in the [audience scheduling](#schedule-segment-export-example) step.
-![Salesforce Marketing Cloud UI screenshot showing the selected Contacts Email page with updated audience statuses.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contact-detail.png)
+![Salesforce Marketing Cloud UI screenshot showing the selected Contacts Email page with updated audience statuses.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contact-detail.png){width="500" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 
@@ -321,7 +321,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ### Unknown errors encountered while pushing events to Salesforce Marketing Cloud {#unknown-errors}
 
 * When checking a dataflow run, you might encounter the following error message: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
-    ![Experience Platform UI screenshot showing error.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
+    ![Experience Platform UI screenshot showing error.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png){width="750" zoomable="yes"}
 
     * To fix this error, verify that the **[!UICONTROL Mapping ID]** that you provided in the activation workflow to the [!DNL (API) Salesforce Marketing Cloud] destination exactly matches the name of the attribute you created in [!DNL Salesforce Marketing Cloud]. Refer to the [Create attribute within [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field) section for guidance.
 

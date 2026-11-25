@@ -109,7 +109,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![destination configuration auth fields unfilled](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-unfilled.png)
+![destination configuration auth fields unfilled](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-unfilled.png){width="750" zoomable="yes"}
 
 * **[!UICONTROL Username]**: The username supplied to you by [!DNL Magnite].
 * **[!UICONTROL Password]**: The password supplied to you by [!DNL Magnite].
@@ -126,11 +126,11 @@ To configure details for the destination, fill in the required and optional fiel
 >
 >The company name must be a string which matches the name of the Amazon S3 delivery bucket you have configured with Magnite and set up in the [authenticate to destination](#authenticate) step. The supported characters include 'a-z', 'A-Z', '0-9', '-'(dash), or '_'(underscore).
 
-![destination configuration auth fields filled](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
+![destination configuration auth fields filled](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png){width="750" zoomable="yes"}
 
 Once done, select the **[!UICONTROL Create]** button.
 
-![Optional governance policy and enforcement actions](../../assets/catalog/advertising/magnite/destination-realtime-config-grouping-policy.png)
+![Optional governance policy and enforcement actions](../../assets/catalog/advertising/magnite/destination-realtime-config-grouping-policy.png){width="750" zoomable="yes"}
 
 ### Enable alerts {#enable-alerts}
 
@@ -157,11 +157,11 @@ The next step is mapping source identifiers to the Magnite device_id identifier.
 
 This example using the Real-Time destination shows a row that contains a generic deviceId source identifier mapped to the Magnite device_id target field. When you're with the mappings, select [!UICONTROL Next].
 
-![Map desired data fields to the device_ID field](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
+![Map desired data fields to the device_ID field](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png){width="750" zoomable="yes"}
 
 Be sure to set Mapping IDs to all activated audiences, or set NONE if no Mapping ID is present.
 
-![Be sure to set Mapping IDs to all activated audiences, or set NONE if no Mapping ID is present](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)
+![Be sure to set Mapping IDs to all activated audiences, or set NONE if no Mapping ID is present](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png){width="750" zoomable="yes"}
 
 You must now configure a Start date (mandatory), an End date (optional), and a Mapping ID for each audience.
 
@@ -173,7 +173,7 @@ You must now configure a Start date (mandatory), an End date (optional), and a M
 
 Select **[!UICONTROL Next]** and finalize the activation flow.
 
-![Select next and finalize activation flow.](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)
+![Select next and finalize activation flow.](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png){width="750" zoomable="yes"}
 
 ## Exported data / Validate data export {#exported-data}
 

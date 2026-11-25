@@ -164,7 +164,7 @@ The following identity mappings are **preconfigured and automatically populated*
 * ECID
 * [!DNL The Trade Desk ID]
 
-![Screenshot showing the mandatory mappings](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
+![Screenshot showing the mandatory mappings](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png){width="750" zoomable="yes"}
 
 These mappings are grayed out and read-only. You do not need to configure anything in this step. Select **[!UICONTROL Next]** to continue.
 

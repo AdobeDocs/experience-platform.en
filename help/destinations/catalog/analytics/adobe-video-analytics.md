@@ -40,7 +40,7 @@ Adobe Media Analytics for Audio and Video is an analytics extension in [!DNL Ado
 
 This destination is a tag extension. For more information about how tags extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Adobe Media Analytics for Audio and Video extension](../../assets/catalog/analytics/adobe-video-analytics/catalog.png)
+![Adobe Media Analytics for Audio and Video extension](../../assets/catalog/analytics/adobe-video-analytics/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

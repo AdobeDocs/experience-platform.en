@@ -38,7 +38,7 @@ This is the [!DNL Adobe Advertising] extension for implementing advertising conv
 
 This destination is a tag extension. For more information about how tags extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Adobe Advertising extension](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
+![Adobe Advertising extension](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

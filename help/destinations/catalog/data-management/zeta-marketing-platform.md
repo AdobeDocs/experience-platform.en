@@ -121,7 +121,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Image showing ZMP configuration](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
+![Image showing ZMP configuration](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png){width="750" zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -158,17 +158,17 @@ Selecting target fields:
 * (Optional) Select `email_md5_id` as the target identity to which you mapped the source identity namespace that represents email md5 values. It is essential that email addresses are already in MD5 format within the Experience Platform, as the Experience Platform does not convert plain text to MD5
 * Select any additional target mappings if needed.
 
-![Identity mapping](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-mapping-example.png)
+![Identity mapping](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-mapping-example.png){width="750" zoomable="yes"}
 
 ## Exported data / Validate data export {#exported-data}
 
 A successful audience activation from Experience Platform to the Zeta Marketing Platform updates the target customer list in the ZMP. The count and the sample profiles in the target customer list will be equal to the number of identities that were successfully activated.
 
-![Customer List in ZMP](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-customer-list-in-zmp.png)
+![Customer List in ZMP](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-customer-list-in-zmp.png){width="750" zoomable="yes"}
 
 Each audience member that was activated from Experience Platform will also be visible under **Audiences** > **People** in the ZMP. You will also be able to view the **Customer List** segment a profile belongs to in the Single Customer view as shown below.
 
-![SingleCustomerViewInZMP](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-single-customer-view-in-zmp.png)
+![SingleCustomerViewInZMP](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-single-customer-view-in-zmp.png){width="750" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 

@@ -40,7 +40,7 @@ Install the [!DNL LinkedIn Insight Tag] to use conversion tracking, retargeting 
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![LinkedIn Insight Tag Extension](../../assets/catalog/advertising/linkedin/catalog.png)
+![LinkedIn Insight Tag Extension](../../assets/catalog/advertising/linkedin/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

@@ -110,7 +110,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 * **[!UICONTROL Username]**: Your API Key, provided by your [!DNL Rokt] Account Manager.
 * **[!UICONTROL Password]**: Your API Secret, provided by your [!DNL Rokt] Account Manager.
 
-    ![The [!DNL Rokt] destination configuration screen in [!DNL Experience Platform], with account details, authentication fields, and destination details filled in.](/help/destinations/assets/catalog/advertising/rokt/aep-configure-destination.png)
+    ![The [!DNL Rokt] destination configuration screen in [!DNL Experience Platform], with account details, authentication fields, and destination details filled in.](/help/destinations/assets/catalog/advertising/rokt/aep-configure-destination.png){width="500" zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
@@ -152,7 +152,7 @@ The [!DNL Rokt] destination supports the mapping of identity namespaces from [!D
 
 Here is an example of a full mapping:
 
-![The mapping step of the [!DNL Rokt] destination activation workflow in [!DNL Experience Platform], with source and target identity fields configured.](/help/destinations/assets/catalog/advertising/rokt/aep-identity-mapping.png)
+![The mapping step of the [!DNL Rokt] destination activation workflow in [!DNL Experience Platform], with source and target identity fields configured.](/help/destinations/assets/catalog/advertising/rokt/aep-identity-mapping.png){width="750" zoomable="yes"}
 
 >[!NOTE]
 >

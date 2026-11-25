@@ -34,7 +34,7 @@ This article explains the workflow required to export [account audiences](/help/
 
 Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab. Use the **[!UICONTROL Data types]** filter and select **[!UICONTROL Accounts]** to see the destinations which support the activation of account audiences. Currently, exporting account audiences is available only to certain cloud storage destinations ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), and [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) and the [Bombora](/help/destinations/catalog/advertising/bombora.md), [Demandbase](/help/destinations/catalog/advertising/demandbase.md), and [(Companies) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md) streaming destinations.  
 
-![Destinations which support account audiences.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
+![Destinations which support account audiences.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png){width="750" zoomable="yes"}
 
 ## Video overview {#video-overview}
 
@@ -59,7 +59,7 @@ Follow the instructions to select a destination where you can export your datase
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     
-    ![Destination catalog tab with Catalog control highlighted.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
+    ![Destination catalog tab with Catalog control highlighted.](/help/destinations/assets/ui/export-datasets/catalog-tab.png){width="750" zoomable="yes"}
 
 1. Select **[!UICONTROL Activate]** on the card corresponding to the destination that you want to export datasets to. 
 
@@ -67,7 +67,7 @@ Follow the instructions to select a destination where you can export your datase
    >
    >The destinations that can export account audiences are indicated with an icon in the upper right corner of the card, similar to the destination highlighted below, or you can use the data type filter to only display destinations that can export account audiences, as [shown higher on the page](#supported-destinations).
 
-   ![Demandbase destination page that can export profile audiences highlighted.](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png)
+   ![Demandbase destination page that can export profile audiences highlighted.](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png){width="750" zoomable="yes"}
 
 1. Select **[!UICONTROL Data type Accounts]**, followed by the destination connection that you want to export datasets to, then select **[!UICONTROL Next]**.
 
@@ -75,7 +75,7 @@ Follow the instructions to select a destination where you can export your datase
    >
    >If you want to set up a new destination to activate account audiences, select **[!UICONTROL Configure new destination]** to trigger the [Connect to destination](/help/destinations/ui/connect-destination.md) workflow and [select accounts as data type](/help/destinations/ui/connect-destination.md#segment-activation-or-dataset-exports).
 
-   ![Destination activation workflow with accounts control highlighted.](/help/destinations/assets/ui/activate-account-audiences/activate-account-audiences-highlighted.png)
+   ![Destination activation workflow with accounts control highlighted.](/help/destinations/assets/ui/activate-account-audiences/activate-account-audiences-highlighted.png){width="750" zoomable="yes"}
 
 1. Proceed to the next section to [select your account audiences](#select-profile-audiences) for export.
 
@@ -87,7 +87,7 @@ Use the checkboxes to the left of the account audiences names to select the audi
 >
 >Only *account audiences* are shown in this view, and no other audience types are displayed.
 
-![Dataset export workflow showing the Select audiences step where you can select which account audiences to export.](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
+![Dataset export workflow showing the Select audiences step where you can select which account audiences to export.](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png){width="750" zoomable="yes"}
 
 ## Scheduling and next steps {#scheduling-and-next-steps}
 
@@ -105,7 +105,7 @@ Note the following important callouts and known limitations for the general avai
 
 When activating account audiences to the **[!UICONTROL (Companies) LinkedIn Matched Audiences]** destination, note that the following two mapping pairs are mandatory to successfully export data:
 
-![LinkedIn mapping required fields.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
+![LinkedIn mapping required fields.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png){width="750" zoomable="yes"}
 
 |Source field | Target field |
 |---------|----------|
@@ -118,6 +118,6 @@ When activating account audiences to the **[!UICONTROL (Companies) LinkedIn Matc
 
 Consent is enforced at the person or profile level for *customer and prospect audiences*. Therefore,  [consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) is currently not supported when activating account audiences to destinations. In the review step of the activation workflow, you can see a grayed out control for **[!UICONTROL View applicable consent policies]**. 
 
-![Review step of the activate account audiences workflow with the consent enforcement control grayed out.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
+![Review step of the activate account audiences workflow with the consent enforcement control grayed out.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png){width="750" zoomable="yes"}
 
 Other data governance mechanisms in [!DNL Real-Time CDP] such as [data usage policy checks](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) and [attribute-based access control](/help/destinations/home.md#attribute-based-access) are supported.

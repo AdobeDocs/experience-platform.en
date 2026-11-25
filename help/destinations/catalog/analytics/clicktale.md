@@ -38,7 +38,7 @@ Use the [!DNL Clicktale] tag extension to deploy code and map data elements usin
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Clicktale extension](../../assets/catalog/analytics/clicktale/catalog.png)
+![Clicktale extension](../../assets/catalog/analytics/clicktale/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

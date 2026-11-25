@@ -90,7 +90,7 @@ See the table below for information about the destination export type and freque
 
 {style="table-layout:auto"}
 
-![Amazon S3 profile-based export type highlighted in the UU.](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+![Amazon S3 profile-based export type highlighted in the UU.](../../assets/catalog/cloud-storage/amazon-s3/catalog.png){width="750" zoomable="yes"}
 
 ## Export datasets {#export-datasets}
 
@@ -161,12 +161,12 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 Use this authentication method when you want to input your Amazon S3 access key and secret key to allow Experience Platform to export data to your Amazon S3 properties.
 
-![Image of the required fields when selecting access key and secret key authentication.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
+![Image of the required fields when selecting access key and secret key authentication.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png){width="500" zoomable="yes"}
 
 * **[!DNL Amazon S3] access key** and **[!DNL Amazon S3] secret key**: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Experience Platform access to your [!DNL Amazon S3] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
-    ![Image showing an example of a correctly formatted PGP key in the UI.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+    ![Image showing an example of a correctly formatted PGP key in the UI.](../../assets/catalog/cloud-storage/sftp/pgp-key.png){zoomable="yes"}
 
 #### Authentication with S3 assumed role {#assumed-role-authentication}
 
@@ -177,7 +177,7 @@ Use this authentication method when you want to input your Amazon S3 access key 
 
 Use this authentication type if you prefer not to share account keys and secret keys with Adobe. Instead, Experience Platform connects to your Amazon S3 location using role-based access. 
 
-![Image of the required fields when selecting assumed role authentication.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
+![Image of the required fields when selecting assumed role authentication.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png){width="500" zoomable="yes"}
 
 * **[!DNL Role]**: Paste the ARN of the role that you created in AWS for the Adobe user. The pattern is similar to `arn:aws:iam::800873819705:role/destinations-role-customer`. See the steps below for detailed guidance on how to configure S3 access correctly.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.

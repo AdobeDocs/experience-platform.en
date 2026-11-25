@@ -42,7 +42,7 @@ Certain Google-integrated third parties, such as Adobe [!DNL Real-Time CDP], can
 
 With the newly introduced capability of being able to utilize [!DNL Customer Matched] audiences across [!DNL Display & Video 360], you are now able to target audiences across an expanded roster of inventory sources. 
 
-![Google Customer Match + DV360 destination in the Adobe Experience Platform UI.](/help/destinations/assets/catalog/advertising/gcm-dv360/catalog.png)
+![Google Customer Match + DV360 destination in the Adobe Experience Platform UI.](/help/destinations/assets/catalog/advertising/gcm-dv360/catalog.png){width="750" zoomable="yes"}
 
 ## Important notice about changes to Google destinations related to updated consent requirements in the European Union {#eu-consent-notice}
 
@@ -249,13 +249,13 @@ Selecting target fields:
 * Select the `Email_LC_SHA256` namespace as target identity when your source namespaces are either `Email` or `Email_LC_SHA256`.
 * Select the `Phone_SHA256_E.164` namespace as target identity when your source namespaces are either `PHONE_E.164` or `Phone_SHA256_E.164`.
 
-![Identity mapping between source and target fields shown in the Mapping step of the activation workflow.](../../assets/catalog/advertising/google-customer-match-dv360/identity-mapping-gcm-dv360.png)
+![Identity mapping between source and target fields shown in the Mapping step of the activation workflow.](../../assets/catalog/advertising/google-customer-match-dv360/identity-mapping-gcm-dv360.png){width="750" zoomable="yes"}
 
 Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
 
-![Apply transformation control highlighted in the Mapping step of the activation workflow.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
+![Apply transformation control highlighted in the Mapping step of the activation workflow.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png){width="750" zoomable="yes"}
 
 ## Monitor destination {#monitor-destination}
 

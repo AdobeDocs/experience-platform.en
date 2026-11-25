@@ -46,7 +46,7 @@ This is the Adobe Audience Manager Data Integration Library extension (client-si
 
 This destination is a tag extension. For more information about how extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Audience Manager DIL extension](../../assets/catalog/data-management-platform/aam-dil-extension/configure.png)
+![Audience Manager DIL extension](../../assets/catalog/data-management-platform/aam-dil-extension/configure.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

@@ -157,13 +157,13 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
 
-![Screenshot showing how to authenticate to the destination](../../assets/catalog/adobe/marketo-engage-connection/connect-destination.png)
+![Screenshot showing how to authenticate to the destination](../../assets/catalog/adobe/marketo-engage-connection/connect-destination.png){zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Sample screenshot showing how to fill in details for your destination](../../assets/catalog/adobe/marketo-engage-connection/destination-details.png)
+![Sample screenshot showing how to fill in details for your destination](../../assets/catalog/adobe/marketo-engage-connection/destination-details.png){width="400" zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -211,11 +211,11 @@ For Marketo to successfully create leads, you must also map the following requir
 
 If you are using `email` as a deduplication field, you must also map the `firstName` and `lastName` attributes as shown in the image below.
 
-![Screenshot showing required mapping when using Email as deduplication field](../../assets/catalog/adobe/marketo-engage-connection/required-mapping-email-dedupe.png)
+![Screenshot showing required mapping when using Email as deduplication field](../../assets/catalog/adobe/marketo-engage-connection/required-mapping-email-dedupe.png){width="750" zoomable="yes"}
 
 If you are using a different deduplication field, you must manually map all three required attributes (`firstName`, `lastName`, `email`) as shown in the image below.
 
-![Screenshot showing required mapping when not using Email as deduplication field](../../assets/catalog/adobe/marketo-engage-connection/required-mapping-email.png)
+![Screenshot showing required mapping when not using Email as deduplication field](../../assets/catalog/adobe/marketo-engage-connection/required-mapping-email.png){width="750" zoomable="yes"}
 
 ## Exported data / Validate data export {#exported-data}
 

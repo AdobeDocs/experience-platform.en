@@ -98,7 +98,7 @@ In the example below, a partner creates a Data Landing Zone destination server w
 
 As a result, when users go through the [destination connection tutorial](../../../ui/connect-destination.md), they will not see an [authentication step](../../../ui/connect-destination.md#authenticate). Instead, the authentication is handled by Experience Platform, as shown in the image below.
 
-![UI image showing the authentication screen between Experience Platform and a DLZ destination.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
+![UI image showing the authentication screen between Experience Platform and a DLZ destination.](../../assets/functionality/destination-server/server-spec-hardcoded.png){zoomable="yes"}
 
 **Connecting to your destination with user input**
 
@@ -139,7 +139,7 @@ To give users the option of selecting a value from the Experience Platform UI, t
 
 As a result, when users go through the [destination connection tutorial](../../../ui/connect-destination.md), they must select a region before they can connect to the destination platform. When they connect to the destination, the templatized field `{{customerData.region}}` is replaced with the value that the user has selected in the UI, as shown in the image below.
 
-![UI image showing the destination connection screen with a region selector.](../../assets/functionality/destination-server/server-spec-template-region.png)
+![UI image showing the destination connection screen with a region selector.](../../assets/functionality/destination-server/server-spec-template-region.png){zoomable="yes"}
 
 ## Real-time (streaming) destination server {#streaming-example}
 

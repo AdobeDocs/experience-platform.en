@@ -246,7 +246,7 @@ The **[!UICONTROL Real ID]** target field is prepopulated automatically in the m
 
 In the **[!UICONTROL Source Field]** column, enter the name of the source attribute you want to map to the **[!UICONTROL Real ID]** target field. Or select **[!UICONTROL Select source field]** to browse available source fields. Then select **[!UICONTROL Next]**.
 
-![Screenshot of the mapping screen showing the [!UICONTROL Source Field] column and the [!UICONTROL Select source field] panel.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png){zoomable="yes"}
+![Screenshot of the mapping screen showing the [!UICONTROL Source Field] column and the [!UICONTROL Select source field] panel.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png){width="750" zoomable="yes"}
 
 If you are not using [!DNL Adobe]'s standard schema, see the [Query Service UI guide](/help/query-service/ui/overview.md) to populate the [!DNL Adobe] standard schema with your field names.
 
@@ -256,7 +256,7 @@ After you complete all the steps, review your destination connection status and 
 
 When the results look correct, select **[!UICONTROL Finish]** to activate your destination.
 
-![Screenshot of the Review screen showing the destination connection status and selected audiences before activation.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_review_audience.png){zoomable="yes"}
+![Screenshot of the Review screen showing the destination connection status and selected audiences before activation.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_review_audience.png){width="750" zoomable="yes"}
 
 ## Troubleshooting {#troubleshooting}
 

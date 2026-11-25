@@ -25,7 +25,7 @@ The diagram below shows a high-level overview of the components that you can con
 
 >[!BEGINSHADEBOX]
 
-![Diagram showing the Destination SDK components, configuration endpoints, and the operations supported by them.](../assets/functionality/destination-sdk-components-diagram.png){zoomable="yes"}
+![Diagram showing the Destination SDK components, configuration endpoints, and the operations supported by them.](../assets/functionality/destination-sdk-components-diagram.png){width="750" zoomable="yes"}
 
 >[!ENDSHADEBOX]
 

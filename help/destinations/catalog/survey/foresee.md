@@ -38,7 +38,7 @@ Configure [!DNL ForeSee] product deployments using tags.
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Foresee extension](../../assets/catalog/survey/foresee/catalog.png)
+![Foresee extension](../../assets/catalog/survey/foresee/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

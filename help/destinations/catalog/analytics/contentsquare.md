@@ -38,7 +38,7 @@ Visualize in-page behaviors, see WHY customers abandon and HOW you can improve. 
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Contentsquare extension](../../assets/catalog/analytics/contentsquare/catalog.png)
+![Contentsquare extension](../../assets/catalog/analytics/contentsquare/catalog.png){width="750" zoomable="yes"}
 
 
 ## Prerequisites {#prerequisites}

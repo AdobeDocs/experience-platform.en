@@ -138,7 +138,7 @@ Before you authenticate, review [Authentication and data access](#authentication
 1. Find the [!DNL Twitter Custom Audiences] destination in the destination catalog and select **[!UICONTROL Set Up]**.
 1. Select **[!UICONTROL Connect to destination]**.
 
-   ![Twitter Custom Audiences destination authentication step with the Connect to destination option.](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
+   ![Twitter Custom Audiences destination authentication step with the Connect to destination option.](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png){width="750" zoomable="yes"}
 
 1. Enter your [!DNL X] credentials and select **[!UICONTROL Log In]**.
 

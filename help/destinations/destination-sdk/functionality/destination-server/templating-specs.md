@@ -54,7 +54,7 @@ Refer to the table below for details on which types of integrations support the 
 
 Adobe uses a templating language similar to [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) to transform the fields from the XDM schema into a format supported by your destination.
 
-![Template configuration highlighted](../../assets/functionality/destination-server/template-configuration.png)
+![Template configuration highlighted](../../assets/functionality/destination-server/template-configuration.png){width="750" zoomable="yes"}
 
 For more information about the transformation, visit the links below:
 

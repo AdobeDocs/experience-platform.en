@@ -127,7 +127,7 @@ Follow the [destination configuration tutorial](/help/destinations/ui/connect-de
 
 Enter the account details, and then select **[!UICONTROL Connect to destination]**.
 
-![The Configure new destination page shows the New account option and the Account name and Description fields.](../../assets/catalog/advertising/zoominfo-account-audiences/configure-destination.png "Configure a new destination")
+![The Configure new destination page shows the New account option and the Account name and Description fields.](../../assets/catalog/advertising/zoominfo-account-audiences/configure-destination.png "Configure a new destination"){zoomable="yes"}
 
 * **[!UICONTROL Account name]**: Enter a name that identifies this destination account.
 * **[!UICONTROL Description]**: Enter details that help your team identify the account. This field is optional.
@@ -142,7 +142,7 @@ The OAuth 2.0 Authorization Code flow with PKCE handles authentication. You do n
 
 Enter a name and an optional description for the destination. An asterisk in the interface identifies a required field.
 
-![The Configure new destination page shows an existing account and the Name and Description fields.](../../assets/catalog/advertising/zoominfo-account-audiences/destination-details.png "Enter destination details")
+![The Configure new destination page shows an existing account and the Name and Description fields.](../../assets/catalog/advertising/zoominfo-account-audiences/destination-details.png "Enter destination details"){zoomable="yes"}
 
 * **[!UICONTROL Name]**: Enter a name that identifies this destination.
 * **[!UICONTROL Description]**: Enter details that help you identify this destination. This field is optional.
@@ -169,7 +169,7 @@ Configure all mappings in the following table. You cannot complete activation un
 
 {style="table-layout:auto"}
 
-![The Mapping step maps accountKey.sourceKey to the primary ID identity, accountName to companyName, and accountOrganization.domain to companyUrl.](../../assets/catalog/advertising/zoominfo-account-audiences/mandatory-mappings.png "Configure mandatory mappings")
+![The Mapping step maps accountKey.sourceKey to the primary ID identity, accountName to companyName, and accountOrganization.domain to companyUrl.](../../assets/catalog/advertising/zoominfo-account-audiences/mandatory-mappings.png "Configure mandatory mappings"){width="750" zoomable="yes"}
 
 Map the field that contains data for your accounts, either `xdm:accountOrganization.domain` or `xdm:accountOrganization.website`. Confirm which field your organization populates before you select it. If you map a field with no data, [!DNL ZoomInfo] cannot match the account.
 
@@ -183,7 +183,7 @@ After initial activation, [!DNL Adobe Experience Platform] streams account audie
 
 [!DNL ZoomInfo] matches accounts using its own matching logic, based on the company name and company URL that you map. [!DNL Adobe Experience Platform] does not have visibility into which accounts matched or why an account did not match. Contact [!DNL ZoomInfo] for questions about match rates or unmatched accounts.
 
-![The Accounts tab in ZoomInfo shows matched accounts with columns for account name, funnel stage, audiences, campaigns, industry, and revenue.](../../assets/catalog/advertising/zoominfo-account-audiences/accounts-view.png "View synced accounts in ZoomInfo")
+![The Accounts tab in ZoomInfo shows matched accounts with columns for account name, funnel stage, audiences, campaigns, industry, and revenue.](../../assets/catalog/advertising/zoominfo-account-audiences/accounts-view.png "View synced accounts in ZoomInfo"){width="750" zoomable="yes"}
 
 ### Account additions {#account-additions}
 

@@ -128,7 +128,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 As part of authentication you will need to provide a **Username** and **Password**. The username is your Qualtrics username, and the password is your Qualtrics account's API token. To retrieve the API token follow the instructions from the **Prerequisites** section above.
 
-![Authentication](/help/destinations/assets/catalog/survey/qualtrics/authentication.png)
+![Authentication](/help/destinations/assets/catalog/survey/qualtrics/authentication.png){width="750" zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
@@ -138,7 +138,7 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL URL]**: The URL found in the [JSON Event](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About) that triggers your [workflow in Qualtrics](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About). See below screenshot for an example.
 
-![URL](/help/destinations/assets/catalog/survey/qualtrics/json-event-url.png)
+![URL](/help/destinations/assets/catalog/survey/qualtrics/json-event-url.png){width="750" zoomable="yes"}
 
 ### Enable alerts {#enable-alerts}
 
@@ -162,11 +162,11 @@ This destination has an open schema so you may send any properties to Qualtrics.
 
 To add an attribute to your mapping, select **custom attributes** when adding a new mapping. You may enter any name for your attribute. Qualtrics encourages the *camelCase* naming convention for attribute names (see below screenshot for an example).
 
-![Custom attribute](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
+![Custom attribute](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png){width="750" zoomable="yes"}
 
 See below screenshot for an example of possible attribute mappings.
 
-![Example mappings](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png)
+![Example mappings](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png){width="750" zoomable="yes"}
 
 #### Map identities {#map-identities}
 
@@ -179,7 +179,7 @@ It's mandatory to select an identity namespace for this destination. The two pos
 
 See below screenshot for an example.
 
-![Identity namespace](/help/destinations/assets/catalog/survey/qualtrics/identity-namespace.png)
+![Identity namespace](/help/destinations/assets/catalog/survey/qualtrics/identity-namespace.png){width="750" zoomable="yes"}
 
 ## Exported data / Validate data export {#exported-data}
 

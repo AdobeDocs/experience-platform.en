@@ -30,7 +30,7 @@ You can update destination account details to refresh and re-authenticate creden
 
 For batch destinations, you can update the access or secret key, if any of those has changed. Additionally, should you want to encrypt your files moving forward, you can insert an RSA public key and your exported files will be encrypted going forward.
 
-![Accounts tab](../assets/ui/update-accounts/destination-accounts.png)
+![Accounts tab](../assets/ui/update-accounts/destination-accounts.png){width="750" zoomable="yes"}
 
 ## Update accounts {#update}
 
@@ -38,33 +38,33 @@ Follow the steps below to update connection details to existing destinations.
 
 1. Go to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Accounts]** from the top header to view your existing accounts.
 
-    ![Accounts tab](../assets/ui/update-accounts/accounts-tab.png)
+    ![Accounts tab](../assets/ui/update-accounts/accounts-tab.png){width="750" zoomable="yes"}
 
 2. Select the filter icon ![Filter-icon](/help/images/icons/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of accounts associated with the selected destinations.
 
-    ![Filter destination accounts](../assets/ui/update-accounts/filter-accounts.png)
+    ![Filter destination accounts](../assets/ui/update-accounts/filter-accounts.png){width="750" zoomable="yes"}
 
 3. Select the ellipses (`...`) beside the name of the account you intend to update. A pop-up panel appears, providing options to **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]**, and **[!UICONTROL Delete]** the account. Select the ![Edit details button](/help/images/icons/edit.png) **[!UICONTROL Edit details]** button to edit the account information.
 
-    ![Edit account](../assets/ui/update-accounts/accounts-edit.png)
+    ![Edit account](../assets/ui/update-accounts/accounts-edit.png){width="750" zoomable="yes"}
 
 4. Enter your updated account credentials.
    
    * For accounts that use an `OAuth1` or `OAuth2` connection type, select **[!UICONTROL Reconnect OAuth]** to renew your account credentials. You can also update the name and description of your account.
     
-    ![Edit details OAuth](../assets/ui/update-accounts/edit-details-oauth.png)
+    ![Edit details OAuth](../assets/ui/update-accounts/edit-details-oauth.png){width="750" zoomable="yes"}
 
    * For accounts that use an `Access Key` or `ConnectionString` connection type, you can edit your account authentication information, including information such as access ID, secret keys, or connection strings. You can also update the name and description of your account.
 
-    ![Edit details Access Key](../assets/ui/update-accounts/edit-details-key.png)
+    ![Edit details Access Key](../assets/ui/update-accounts/edit-details-key.png){width="750" zoomable="yes"}
 
     * For accounts that use a `Bearer token` connection type, you can input a new bearer token, if needed. You can also update the name and description of your account.
 
-    ![Edit details Bearer token](../assets/ui/update-accounts/edit-details-bearer.png)
+    ![Edit details Bearer token](../assets/ui/update-accounts/edit-details-bearer.png){width="750" zoomable="yes"}
 
     * For accounts that use a `Server to server` connection type, you can update the name and description of your account.
 
-    ![Edit details Server-to-server](../assets/ui/update-accounts/edit-details-s2s.png)
+    ![Edit details Server-to-server](../assets/ui/update-accounts/edit-details-s2s.png){width="750" zoomable="yes"}
 
 5. Select **[!UICONTROL Save]** to finish the account details update.
 

@@ -106,17 +106,17 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![Moengage Destination Authentication](../../assets/catalog/mobile-engagement/moengage/authentication.png)
+![Moengage Destination Authentication](../../assets/catalog/mobile-engagement/moengage/authentication.png){width="500" zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-![Moengage Destination Authentication](../../assets/catalog/mobile-engagement/moengage/settings.png)
+![Moengage Destination Authentication](../../assets/catalog/mobile-engagement/moengage/settings.png){width="750" zoomable="yes"}
 
 * **[!UICONTROL USERNAME]**: DATA APP ID of settings page of [!DNL Moengage] dashboard.
 * **[!UICONTROL PASSWORD]**: DATA APP KEY from settings page of [!DNL Moengage] dashboard.
 
-![Moengage Destination Authentication](../../assets/catalog/mobile-engagement/moengage/destination_details.png)
+![Moengage Destination Authentication](../../assets/catalog/mobile-engagement/moengage/destination_details.png){width="750" zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -146,40 +146,40 @@ To correctly map your XDM fields to the [!DNL Moengage] destination fields, foll
 
 In the [!UICONTROL Mapping] step, select **[!UICONTROL Checkbox]**.
 
-![Moengage Destination Add Mapping](../../assets/catalog/mobile-engagement/moengage/segments.png)
+![Moengage Destination Add Mapping](../../assets/catalog/mobile-engagement/moengage/segments.png){width="750" zoomable="yes"}
 
 In the [!UICONTROL Mapping] step, select **[!UICONTROL Add new mapping]**.
 
-![Moengage Destination Add Mapping](../../assets/catalog/mobile-engagement/moengage/mapping.png)
+![Moengage Destination Add Mapping](../../assets/catalog/mobile-engagement/moengage/mapping.png){width="750" zoomable="yes"}
 
 In the [!UICONTROL Source Field] section, select the arrow button next to the empty field.
    
-![Moengage Destination Source Mapping](../../assets/catalog/mobile-engagement/moengage/mapping-source.png)
+![Moengage Destination Source Mapping](../../assets/catalog/mobile-engagement/moengage/mapping-source.png){width="750" zoomable="yes"}
 
 In the [!UICONTROL Select source field] window, you can choose between two categories of XDM fields:
 
 * [!UICONTROL Select attributes]: use this option to map a specific field from your XDM schema to [!DNL Moengage] attribute.
 
-![Moengage Destination Mapping Source Attribute](../../assets/catalog/mobile-engagement/moengage/mapping-attributes.png)
+![Moengage Destination Mapping Source Attribute](../../assets/catalog/mobile-engagement/moengage/mapping-attributes.png){width="750" zoomable="yes"}
 
 Choose your source field, then select **[!UICONTROL Select]**.
 
 In the [!UICONTROL Target Field] section, select the mapping icon to the right of the field.
    
-![Moengage Destination Target Mapping](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
+![Moengage Destination Target Mapping](../../assets/catalog/mobile-engagement/moengage/mapping-target.png){width="750" zoomable="yes"}
 
 In the [!UICONTROL Select target field] window, you can choose between two categories of target fields:
 
 * [!UICONTROL Select identity namespace]: Use this option to map [!DNL Experience Platform] identity namespaces to [!DNL Moengage] identity namespaces.
 * [!UICONTROL Select custom attributes]: Use this option to map XDM attributes to custom [!DNL Moengage] attributes that you defined in your [!DNL Moengage] account. <br> You can also use this option to rename existing XDM attributes into [!DNL Moengage]. For instance, mapping a `lastName` XDM attribute to a custom `Last_Name` attribute in [!DNL Moengage], will create the `Last_Name` attribute in [!DNL Moengage], if it doesn't already exist, and map the `lastName` XDM attribute to it.
   
-![Moengage Destination Target Mapping Fields](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)
+![Moengage Destination Target Mapping Fields](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png){width="750" zoomable="yes"}
 
 Choose your target field, then select **[!UICONTROL Select]**.
 
 You should now see your field mapping in the list.
 
-![Moengage Destination Mapping Complete](../../assets/catalog/mobile-engagement/moengage/mapping-complete.png)
+![Moengage Destination Mapping Complete](../../assets/catalog/mobile-engagement/moengage/mapping-complete.png){width="750" zoomable="yes"}
     
 To add more mappings, repeat the previous steps.
 
@@ -190,7 +190,7 @@ To verify if data has been exported successfully to the [!DNL Moengage] destinat
 `AEPSegments` is an array-type attribute in [!DNL Moengage]. It lists all of the Adobe audience names that the user is associated with in Experience Platform.
  
 
-![Moengage Destination Mapping Complete](../../assets/catalog/mobile-engagement/moengage/validation.png)
+![Moengage Destination Mapping Complete](../../assets/catalog/mobile-engagement/moengage/validation.png){width="750" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 

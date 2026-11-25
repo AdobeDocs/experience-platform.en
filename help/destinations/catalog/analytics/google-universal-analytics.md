@@ -38,7 +38,7 @@ Use [!DNL Google Universal Analytics] to measure your advertising ROI, as well a
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Google Universal Analytics extension](../../assets/catalog/analytics/google-universal-analytics/catalog.png)
+![Google Universal Analytics extension](../../assets/catalog/analytics/google-universal-analytics/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

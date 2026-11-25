@@ -36,7 +36,7 @@ There are two destinations available that let you send audience data to the PubM
 
    This destination will let you choose to manually add a mapping ID during the activation workflow. Use this destination when data should be sent to existing audiences in the PubMatic platform or if a custom 'Source Audience ID' is required.
 
-![Side-by-side view of the two PubMatic connectors in the destinations catalog.](/help/destinations/assets/catalog/advertising/pubmatic/two-pubmatic-connectors-side-by-side.png)
+![Side-by-side view of the two PubMatic connectors in the destinations catalog.](/help/destinations/assets/catalog/advertising/pubmatic/two-pubmatic-connectors-side-by-side.png){width="750" zoomable="yes"}
 
 >[!IMPORTANT]
 >
@@ -114,7 +114,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![How to authenticate](../../assets/catalog/advertising/pubmatic/authenticate-destination.png)
+![How to authenticate](../../assets/catalog/advertising/pubmatic/authenticate-destination.png){zoomable="yes"}
 
 - **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.
 
@@ -122,7 +122,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Destination details](../../assets/catalog/advertising/pubmatic/destination-details.png)
+![Destination details](../../assets/catalog/advertising/pubmatic/destination-details.png){zoomable="yes"}
 
 - **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 - **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -161,13 +161,13 @@ Selecting target fields:
 - Talk to your [!DNL PubMatic] Account Manager to get the information on which UID type will be correct during this step.
 - Select the [!DNL PubMatic UID] type number that matches the identifier you selected in the first step.
 
-![Map attributes and identities](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
+![Map attributes and identities](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png){width="750" zoomable="yes"}
 
 ### Audience scheduling {#audience-scheduling}
 
 If you are using the PubMatic Connect (Custom Audience ID Mapping) destination, you have to provide a mapping ID for each audience that corresponds to the 'Source Audience ID' in the PubMatic platform.
 
-![Audience scheduling](../..//assets/catalog/advertising/pubmatic/audience-scheduling-mapping-id.png)
+![Audience scheduling](../..//assets/catalog/advertising/pubmatic/audience-scheduling-mapping-id.png){zoomable="yes"}
 
 ## Exported data / Validate data export {#exported-data}
 

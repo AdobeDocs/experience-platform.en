@@ -35,7 +35,7 @@ Use the [!DNL Algolia] destination connection to send [!DNL Adobe Experience Pla
 
 This tutorial provides steps to create an [!DNL Algolia] destination connection and dataflow using the [!DNL Adobe Experience Platform] user interface.
 
-![The destination catalog with the Algolia destination.](../../assets/catalog/personalization/algolia/catalog.png)
+![The destination catalog with the Algolia destination.](../../assets/catalog/personalization/algolia/catalog.png){width="750" zoomable="yes"}
 
 ## Use cases {#use-cases}
 
@@ -123,7 +123,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 For more information on these credentials, see the [!DNL Algolia] [authentication documentation](https://www.algolia.com/doc/tools/cli/get-started/authentication/).
 
-![New Account](../../assets/catalog/personalization/algolia/connection.png)
+![New Account](../../assets/catalog/personalization/algolia/connection.png){width="750" zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
@@ -134,7 +134,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Region]**: The options are **US** or **EU**. Select the region where the customer data is stored.
 
 
-![Account details](../../assets/catalog/personalization/algolia/account.png)
+![Account details](../../assets/catalog/personalization/algolia/account.png){width="750" zoomable="yes"}
 
 ### Enable alerts {#enable-alerts}
 
@@ -155,13 +155,13 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 During the [!UICONTROL Mapping step], you must map the AlgoliaUserToken source identity to the userId target identity.
 
-![Mapping complete](../../assets/catalog/personalization/algolia/mapping-complete.png)
+![Mapping complete](../../assets/catalog/personalization/algolia/mapping-complete.png){width="750" zoomable="yes"}
 
 ## Validate data export {#exported-data}
 
 To verify if audiences have been exported to the user profiles successfully, check your [!DNL Algolia] dashboard and navigate to **[!UICONTROL Advanced Personalization]** and click on **[!UICONTROL User Inspector]**. Find a user profile associated with the exported [!DNL Adobe Experience Platform] audience and search for it in the User Inspector. You will see the audience ID in the segment section.
 
-![Algolia User Inspector](../../assets/catalog/personalization/algolia/verify-segment-user-profile.png)
+![Algolia User Inspector](../../assets/catalog/personalization/algolia/verify-segment-user-profile.png){width="750" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 

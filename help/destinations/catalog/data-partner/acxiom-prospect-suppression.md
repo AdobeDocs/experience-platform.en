@@ -35,13 +35,13 @@ topic_v2:
 
 Use [!DNL Acxiom Prospect-Suppression] to deliver the most productive prospect audiences possible. This connector securely exports first party data from [!DNL Real-Time Customer Data Platform] and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. This will be matched against the [!DNL Acxiom Global] database which enables the prospect lists to be tailored for import. Then, use the [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) source connector to prospect lists from Acxiom back into [!DNL Real-Time CDP], with your known or converted customers removed. 
 
-![Marketing diagram to export first-party data to Acxiom, then import prospect data back into Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow.png)
+![Marketing diagram to export first-party data to Acxiom, then import prospect data back into Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow.png){width="750" zoomable="yes"}
 
 Acxiom offers the industry's best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
 
 This tutorial provides steps to create an [!DNL Acxiom Prospect-Suppression] destination connection and dataflow using the [!DNL Adobe Experience Platform] user interface. This connector delivers data to the Acxiom prospect service using Amazon S3 as a drop point. Contact your Acxiom account representative once you start exporting files to the Amazon S3 drop point.
 
-![The destination catalog with the Acxiom destination selected.](../../assets/catalog/data-partner/acxiom/image-destination-catalog.png)
+![The destination catalog with the Acxiom destination selected.](../../assets/catalog/data-partner/acxiom/image-destination-catalog.png){width="750" zoomable="yes"}
 
 ## Use cases {#use-cases}
 
@@ -127,19 +127,19 @@ To access your bucket on Experience Platform, you need to provide valid values f
 
 To Define a new Acxiom Managed S3 location:
 
-![New Account](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
+![New Account](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png){zoomable="yes"}
 
 ### Existing Account {#existing-account}
 
 Accounts already defined using the [!DNL Acxiom Prospect Suppression] destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**:
 
-![Existing Account](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
+![Existing Account](../../assets/catalog/data-partner/acxiom/image-destination-account.png){width="750" zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Destination Detail](../../assets/catalog/data-partner/acxiom/image-destination-details.png)
+![Destination Detail](../../assets/catalog/data-partner/acxiom/image-destination-details.png){width="750" zoomable="yes"}
 
 * **Name (Required)** - The name the destination will be saved under
 * **Description** -  Short explanation of the destination's purpose
@@ -151,7 +151,7 @@ To configure details for the destination, fill in the required and optional fiel
 >
 >When selecting the CSV option, *Delimiter*, *Quote Character*, *Escape Character*, *Empty Value*, *Null Value*, *Compression format*, and *Include manifest file* options will be presented, the following document explains these settings in more detail [configure the formatting options](../../ui/batch-destinations-file-formatting-options.md).
 
-![CSV Options](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png)
+![CSV Options](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png){width="400" zoomable="yes"}
 
 ### Enable alerts {#enable-alerts}
 
@@ -193,7 +193,7 @@ Processing requires name and address elements, while not all elements are requir
 
 Use the review page for a summary of your dataflow prior to submission
 
-![Review](../../assets/catalog/data-partner/acxiom/image-destination-review.png)
+![Review](../../assets/catalog/data-partner/acxiom/image-destination-review.png){width="750" zoomable="yes"}
 
 ## Validate data export {#exported-data}
 

@@ -121,7 +121,7 @@ Now that you have configured the [!DNL Commerce] destination within Experience P
 
 After you activate [!DNL Real-Time CDP] audiences to your [!DNL Adobe Commerce] account, you will see those audiences available when you go to the _Admin_ sidebar, then go to **[!UICONTROL Customers]** > **[!UICONTROL Real-Time CDP Audience]**.
 
-![Real-Time CDP Audiences Dashboard](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
+![Real-Time CDP Audiences Dashboard](../../assets/catalog/personalization/adobe-commerce/audience-library.png){width="750" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 

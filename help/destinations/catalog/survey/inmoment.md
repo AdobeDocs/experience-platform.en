@@ -40,7 +40,7 @@ The [!DNL InMoment] tag extension enables online feedback quickly and easily via
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Inmoment extension](../../assets/catalog/survey/inmoment/catalog.png)
+![Inmoment extension](../../assets/catalog/survey/inmoment/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 
