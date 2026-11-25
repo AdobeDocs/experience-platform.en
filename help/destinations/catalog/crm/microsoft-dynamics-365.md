@@ -60,10 +60,10 @@ Create the custom field of type `Simple` with field data type as `Single Line of
 Refer to the [!DNL Dynamics 365] [Create or edit a field (attribute)](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) documentation if you need additional guidance.
 
 Write down the **[!UICONTROL Customization prefix]** of the custom field that you create in [!DNL Dynamics 365]. You will need this prefix during the [Fill in destination details](#destination-details) step. Refer to the [Create and edit fields](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) section of the [!DNL Dynamics 365] documentation for further details.
-![Dynamics 365 UI screenshot showing the customization prefix.](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-customization-prefix.png)
+![Dynamics 365 UI screenshot showing the customization prefix.](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-customization-prefix.png){width="500" zoomable="yes"}
 
 An example setup within [!DNL Dynamics 365] is shown below:
-![Dynamics 365 UI screenshot showing the custom fields.](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-fields.png)
+![Dynamics 365 UI screenshot showing the custom fields.](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-fields.png){width="750" zoomable="yes"}
 
 #### Register an application and application user within Azure Active Directory {#prerequisites-app-user}
 
@@ -152,7 +152,7 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
-![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
+![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png){width="500" zoomable="yes"}
 
 Fill in the required fields below. Refer to the [Gather Dynamics 365 credentials](#gather-credentials) section for any guidance.
 
@@ -167,7 +167,7 @@ If the details provided are valid, the UI displays a **[!UICONTROL Connected]** 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png)
+![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png){width="500" zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -193,14 +193,14 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 To correctly send your audience data from [!DNL Adobe Experience Platform] to the [!DNL Dynamics 365] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Dynamics 365] destination fields, follow these steps:
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
-![Experience Platform UI screenshot example for Add new mapping.](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
+![Experience Platform UI screenshot example for Add new mapping.](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png){width="750" zoomable="yes"}
 
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** category and select `contactid`.
-![Experience Platform UI screenshot example for Source mapping.](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
+![Experience Platform UI screenshot example for Source mapping.](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png){width="750" zoomable="yes"}
 
 1. In the **[!UICONTROL Select target field]** window, select the type of target field that you want to map your source field to.
     * **[!UICONTROL Select identity namespace]**: select this option to map your source field to an identity namespace from the list.
-    ![Experience Platform UI screenshot showing Target mapping for contactid.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
+    ![Experience Platform UI screenshot showing Target mapping for contactid.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png){width="750" zoomable="yes"}
 
     * Add the following mapping between your XDM profile schema and your [!DNL Dynamics 365] instance:
 
@@ -209,7 +209,7 @@ To correctly send your audience data from [!DNL Adobe Experience Platform] to th
       |`contactid`|`contactid`| Yes |
 
     * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you define in the **[!UICONTROL Attribute name]** field. See [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) for a comprehensive list of supported attributes.
-    ![Experience Platform UI screenshot showing Target mapping for email.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
+    ![Experience Platform UI screenshot showing Target mapping for email.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png){width="750" zoomable="yes"}
 
        >[!IMPORTANT]
        >
@@ -226,7 +226,7 @@ To correctly send your audience data from [!DNL Adobe Experience Platform] to th
 
     * An example using these mappings is shown below:
     
-    ![Experience Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
+    ![Experience Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png){width="750" zoomable="yes"}
 
 ### Schedule audience export and example {#schedule-audience-export-example}
 
@@ -239,26 +239,26 @@ To do this, select each audience, then enter the corresponding custom field attr
 >The value used for the **[!UICONTROL Mapping ID]** should exactly match the name of the custom field attribute created within [!DNL Dynamics 365]. See [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) if you need guidance on finding your custom field attributes.
 
 An example is shown below:
-![Experience Platform UI screenshot example showing Schedule audience export.](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
+![Experience Platform UI screenshot example showing Schedule audience export.](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png){width="750" zoomable="yes"}
 
 ## Validate data export {#exported-data}
 
 To validate that you have correctly set up the destination, follow the steps below:
 
 1. Select **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** to navigate to the list of destinations.
-![Experience Platform UI screenshot showing Browse Destinations.](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png)
+![Experience Platform UI screenshot showing Browse Destinations.](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png){width="750" zoomable="yes"}
 
 1. Select the destination and validate that the status is **[!UICONTROL enabled]**.
-![Experience Platform UI screenshot showing Destinations Dataflow Run.](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
+![Experience Platform UI screenshot showing Destinations Dataflow Run.](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png){width="750" zoomable="yes"}
 
 1. Switch to the **[!DNL Activation data]** tab, then select an audience name.
-![Experience Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
+![Experience Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png){width="750" zoomable="yes"}
 
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count created within the audience.
-![Experience Platform UI screenshot example showing audience.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
+![Experience Platform UI screenshot example showing audience.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png){width="750" zoomable="yes"}
 
 1. Go to the [!DNL Dynamics 365] website, then navigate to the [!DNL Customers] > [!DNL Contacts] page and check if the profiles from the audience have been added. You can see that each audience status in [!DNL Dynamics 365] was updated with the corresponding audience status from Experience Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-audience-export-example) step.
-![Dynamics 365 UI screenshot showing the Contacts page with updated audience statuses.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
+![Dynamics 365 UI screenshot showing the Contacts page with updated audience statuses.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png){width="750" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 
@@ -270,7 +270,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 When checking a dataflow run, if you obtain the following error message: `Bad request reported while pushing events to the destination. Please contact the administrator and try again.`
 
-![Experience Platform UI screenshot showing Bad request error.](../../assets/catalog/crm/microsoft-dynamics-365/error.png)
+![Experience Platform UI screenshot showing Bad request error.](../../assets/catalog/crm/microsoft-dynamics-365/error.png){width="750" zoomable="yes"}
 
 To fix this error, verify that the **[!UICONTROL Mapping ID]** you provided in [!DNL Dynamics 365] for your Experience Platform audience is valid and exists within [!DNL Dynamics 365].
 

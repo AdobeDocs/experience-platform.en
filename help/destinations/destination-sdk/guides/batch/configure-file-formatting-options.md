@@ -119,13 +119,13 @@ After adding the desired file formatting options to the destination server and f
 
 Within this step, you can group the displayed options in any order you desire, you can create custom groupings, dropdown fields, and conditional groupings based on the selected file types. All these settings are shown in the recording and in the sections further below.
 
-![Screen recording showing various file formatting options for batch files.](../../assets/guides/batch/file-formatting-options.gif)
+![Screen recording showing various file formatting options for batch files.](../../assets/guides/batch/file-formatting-options.gif){width="500" zoomable="yes"}
 
 ### Order the file formatting options {#ordering}
 
 The order in which you add the file formatting options as customer data fields in the destination configuration is reflected in the UI. For example, the configuration below is reflected accordingly in the UI, with the options showing up in the order **[!UICONTROL Delimiter]**, **[!UICONTROL Quote Character]**, **[!UICONTROL Escape Character]**, **[!UICONTROL Empty Value]**, **[!UICONTROL Null Value]**.
 
-![Image showing the order of file formatting options in the Experience Platform UI.](../../assets/guides/batch/file-formatting-order.png)
+![Image showing the order of file formatting options in the Experience Platform UI.](../../assets/guides/batch/file-formatting-order.png){width="500" zoomable="yes"}
 
 ```json
 
@@ -288,7 +288,7 @@ To do this, use `"type": "object"` to create the group, and collect the desired 
 ]
 ```
 
-![Image showing the CSV options grouping in the UI.](../../assets/guides/batch/file-formatting-grouping.png)
+![Image showing the CSV options grouping in the UI.](../../assets/guides/batch/file-formatting-grouping.png){width="500" zoomable="yes"}
 
 ### Create dropdown selectors for the file formatting options {#dropdown-selectors}
 
@@ -333,7 +333,7 @@ To do this, use the `namedEnum` object as shown below and configure a `default` 
 ]
 ```
 
-![Screen recording showing an example of dropdown selectors created with the configuration shown above.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
+![Screen recording showing an example of dropdown selectors created with the configuration shown above.](../../assets/guides/batch/dropdown-options-file-formatting.gif){width="500" zoomable="yes"}
 
 ### Create conditional file formatting options {#conditional-options}
 
@@ -496,7 +496,7 @@ In a wider context, you can see the `conditional` field being used in the destin
 
 Below, you can see the resulting UI screen, based on the configuration above. When the user selects the file type CSV, additional file formatting options referring to the CSV file type are displayed in the UI.
 
-![Screen recording showing the conditional file formatting option for CSV files.](../../assets/guides/batch/conditional-file-formatting.gif)
+![Screen recording showing the conditional file formatting option for CSV files.](../../assets/guides/batch/conditional-file-formatting.gif){width="500" zoomable="yes"}
 
 ### Complete API request which includes all options shown above {#complete-api-request}
 

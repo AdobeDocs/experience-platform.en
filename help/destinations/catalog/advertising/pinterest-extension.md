@@ -37,7 +37,7 @@ Track visitor actions on your website after views of your Promoted Pin. Measure 
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Pinterest Conversion Tracking Extension](../../assets/catalog/advertising/pinterest/catalog.png)
+![Pinterest Conversion Tracking Extension](../../assets/catalog/advertising/pinterest/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

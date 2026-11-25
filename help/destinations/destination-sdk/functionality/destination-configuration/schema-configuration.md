@@ -130,11 +130,11 @@ The resulting UI experience is shown in the images below.
 
 When you select the target mapping, you can see the fields defined in the `profileFields` array.
 
-![UI image showing the target attributes screen.](../../assets/functionality/destination-configuration/select-attributes.png)
+![UI image showing the target attributes screen.](../../assets/functionality/destination-configuration/select-attributes.png){width="750" zoomable="yes"}
 
 After selecting the attributes, you can see them in the target field column.
 
-![UI image showing a static target schema with attributes](../../assets/functionality/destination-configuration/static-schema-attributes.png)
+![UI image showing a static target schema with attributes](../../assets/functionality/destination-configuration/static-schema-attributes.png){width="750" zoomable="yes"}
 
 ## Create a dynamic schema {#dynamic-schema-configuration}
 
@@ -222,7 +222,7 @@ The example below shows both required source and destination mappings. When both
 
 As a result, both the **[!UICONTROL Source field]** and **[!UICONTROL Target field]** sections in the [!DNL Experience Platform] UI are turned off.
 
-![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-2.png)
+![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-2.png){width="750" zoomable="yes"}
 
 >[!TAB Required destination mapping]
 
@@ -252,7 +252,7 @@ The example below shows a required destination mapping. If only the destination 
 
 As a result, the **[!UICONTROL Target field]** section in the [!DNL Experience Platform] UI is turned off, while the **[!UICONTROL Source field]** section is active and you can interact with it. The **[!UICONTROL Mandatory key]** and **[!UICONTROL Deduplication key]** options are active, and you cannot change them.
 
-![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-1.png)
+![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-1.png){width="750" zoomable="yes"}
 
 >[!ENDTABS]
 

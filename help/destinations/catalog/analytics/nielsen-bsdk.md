@@ -46,7 +46,7 @@ DTVR: This accounts for linear TV viewing occurring on desktop and mobile device
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Nielsen BSDK Extension](../../assets/catalog/analytics/nielsen-bsdk/catalog.png)
+![Nielsen BSDK Extension](../../assets/catalog/analytics/nielsen-bsdk/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

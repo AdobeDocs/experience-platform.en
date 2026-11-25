@@ -39,7 +39,7 @@ For an introduction to tags, see the resources below:
 
 To find the extensions in the Experience Platform interface, browse to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter. 
 
-![Extensions filter in the interface](../../assets/catalog/launch-extensions/filter.png)
+![Extensions filter in the interface](../../assets/catalog/launch-extensions/filter.png){width="750" zoomable="yes"}
 
 ## How tag extensions work {#how-extensions-work}
 

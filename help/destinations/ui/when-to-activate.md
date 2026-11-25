@@ -17,20 +17,22 @@ role_v2:
 
 # When to activate
 
-By default, [!DNL Adobe Experience Platform] exports data to a destination whenever any change occurs to a profile: an *attribute update*, an *audience qualification or disqualification*, or an *identity change*. This can generate a large volume of exports, many of which carry no meaningful change for downstream systems.
+By default, [!DNL Adobe Experience Platform] exports data to a destination whenever any change occurs to a profile: an *attribute update*, an *audience qualification or disqualification*, or an *identity change*. This default behavior can generate a large volume of exports, many of which carry no meaningful change for downstream systems.
 
 With the **[!UICONTROL When to activate]** feature, you get fine-grained control over which types of profile changes trigger exports for a given destination dataflow. You can enable or disable the attribute changes and identity changes triggers independently. The segmentation changes trigger is always on. Disabling a trigger type suppresses exports caused only by that type of change.
 
 >[!NOTE]
 >
 >For detailed information about how each profile change type triggers activation, see [Profile export behavior](/help/destinations/how-destinations-work/profile-export-behavior.md).
+>
+>Every change event counts toward the **[!UICONTROL Profiles received]** metric for a dataflow run. **[!UICONTROL Identities activated]** shows the identities that result from processing those change events. To review these metrics, see [Monitor dataflows for destinations](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations).
 
 ## Supported destination types {#supported-destinations}
 
 The **[!UICONTROL When to activate]** feature is supported for the following destination types:
 
 - [Streaming API-based destinations](/help/destinations/how-destinations-work/profile-export-behavior.md#streaming-api-based-destinations)
-- [Streaming profile export (enterprise) destinations](/help/destinations/how-destinations-work/profile-export-behavior.md#streaming-profile-destinations): [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [[!DNL Snowflake Streaming]](/help/destinations/catalog/warehouses/snowflake.md).
+- [Streaming profile export (enterprise) destinations](/help/destinations/how-destinations-work/profile-export-behavior.md#enterprise-streaming-export): [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [Snowflake Streaming](/help/destinations/catalog/warehouses/snowflake.md).
 
 ## Activation trigger types {#trigger-types}
 
@@ -41,7 +43,7 @@ The **[!UICONTROL When to activate]** feature is supported for the following des
 
 The table below describes each trigger type. Triggers are listed in order of expected activation volume, from highest to lowest.
 
-![The When to activate panel has all three triggers selected. Segmentation changes is always on and cannot be cleared.](../assets/ui/when-to-activate/when-to-activate-segmentation-always-on.png)
+![The When to activate panel has all three triggers selected. Segmentation changes is always on and cannot be cleared.](../assets/ui/when-to-activate/when-to-activate-segmentation-always-on.png){zoomable="yes"}
 
 >[!NOTE]
 >
@@ -67,7 +69,7 @@ The best trigger configuration depends on your use case. Use the following guida
 >
 >Changing activation trigger settings on existing production dataflows can disrupt live campaigns. Adobe recommends testing any changes in a development sandbox before applying them to production.
 
-![Decision tree showing which activation trigger to disable based on the problem you are solving: disable attribute changes to reduce overall export volume, or disable identity changes to stop unwanted email service provider triggers from new device logins.](../assets/ui/when-to-activate/trigger-decision-tree-figma.png)
+![Decision tree showing which activation trigger to disable based on the problem you are solving: disable attribute changes to reduce overall export volume, or disable identity changes to stop unwanted email service provider triggers from new device logins.](../assets/ui/when-to-activate/trigger-decision-tree-figma.png){width="500" zoomable="yes"}
 
 **Start with attribute changes for the largest volume reduction.** Disabling the attribute changes trigger produces the most significant reduction in export volume for most organizations and addresses the most common source of unnecessary exports. For the underlying behavior, see what determines a data export for [enterprise destinations](/help/destinations/how-destinations-work/profile-export-behavior.md#enterprise-behavior) and for [streaming API-based destinations](/help/destinations/how-destinations-work/profile-export-behavior.md#streaming-behavior). The trigger fires whenever any mapped attribute is updated, including from daily batch ingestion that restates values that have not meaningfully changed.
 
@@ -96,4 +98,4 @@ You can configure the **[!UICONTROL When to activate]** settings in two places:
 
 The **[!UICONTROL Browse]** tab in the [Destinations workspace](/help/destinations/ui/destinations-workspace.md#browse) shows an **[!UICONTROL Activation trigger]** column. The column displays the triggers currently configured for each dataflow. Use this column to quickly review which profile change types activate each of your destination connections.
 
-![The Browse tab in the Destinations workspace showing the Activation trigger column with trigger types listed for each dataflow.](../assets/ui/when-to-activate/activation-triggers-browse.png)
+![The Browse tab in the Destinations workspace showing the Activation trigger column with trigger types listed for each dataflow.](../assets/ui/when-to-activate/activation-triggers-browse.png){width="750" zoomable="yes"}

@@ -40,15 +40,15 @@ Follow the steps below to browse your existing activation dataflows and identify
 
 1. Go to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destination dataflows.
 
-    ![Browse destinations](../assets/ui/edit-activation/browse-destinations.png)
+    ![Browse destinations](../assets/ui/edit-activation/browse-destinations.png){width="750" zoomable="yes"}
 
 2. Select the filter icon ![Filter-icon](../../images/icons/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
 
-    ![Filter destinations](../assets/ui/edit-activation/filter-destinations.png)
+    ![Filter destinations](../assets/ui/edit-activation/filter-destinations.png){width="750" zoomable="yes"}
 
 3. Select the name of the destination dataflow that you want to edit.
 
-    ![Select destination](../assets/ui/edit-activation/destination-select.png)
+    ![Select destination](../assets/ui/edit-activation/destination-select.png){width="750" zoomable="yes"}
 
 4. The **[!UICONTROL Dataflow runs]** page for the destination appears, showing its available controls. Depending on the destination type, you can perform various dataflow operations. See the next sections for each supported dataflow operation.
 
@@ -56,13 +56,13 @@ Follow the steps below to browse your existing activation dataflows and identify
 
 Use the **[!UICONTROL Enabled]/[!UICONTROL Disabled]** toggle to start or pause all data exports to the destination.
 
-![Experience Platform UI image showing the Enabled/Disabled dataflow run toggle.](../assets/ui/edit-activation/enable-toggle.png)
+![Experience Platform UI image showing the Enabled/Disabled dataflow run toggle.](../assets/ui/edit-activation/enable-toggle.png){width="750" zoomable="yes"}
    
 ## Add audiences to an activation dataflow {#add-audiences}
 
 Select **[!UICONTROL Activate audiences]** in the right rail to change which audiences to send to the destination. This action takes you to the activation workflow.
 
-![Experience Platform UI image showing the Activate audiences dataflow run option.](../assets/ui/edit-activation/activate-audiences.png)
+![Experience Platform UI image showing the Activate audiences dataflow run option.](../assets/ui/edit-activation/activate-audiences.png){width="750" zoomable="yes"}
 
 In the **[!UICONTROL Select audiences]** step of the activation workflow, you can remove existing audiences or add new audiences to the activation workflow.
 
@@ -76,7 +76,7 @@ The activation workflow differs slightly depending on destination type. For more
 
 Select **[!UICONTROL Activate audiences]** in the right rail. This action takes you to the activation workflow.
 
-![Experience Platform UI image showing the Activate audiences dataflow run option.](../assets/ui/edit-activation/activate-audiences.png)
+![Experience Platform UI image showing the Activate audiences dataflow run option.](../assets/ui/edit-activation/activate-audiences.png){width="750" zoomable="yes"}
 
 Select the **[!UICONTROL Scheduling]** step in the activation workflow to edit the activation schedule and export frequency for your dataflow. Use this step to configure how often data is exported to the destination.
 
@@ -95,7 +95,7 @@ The scheduling operations that you can perform vary slightly depending on destin
 
 Select **[!UICONTROL Activate audiences]** in the right rail. This action takes you to the activation workflow.
 
-![Experience Platform UI image showing the Activate audiences dataflow run option.](../assets/ui/edit-activation/activate-audiences.png)
+![Experience Platform UI image showing the Activate audiences dataflow run option.](../assets/ui/edit-activation/activate-audiences.png){width="750" zoomable="yes"}
 
 Select the **[!UICONTROL Mapping]** step in the activation workflow to edit the mapped attributes and identities for your activation dataflow. Use this step to adjust which profile attributes and identities are exported to the destination.
 
@@ -119,7 +119,7 @@ Select **[!UICONTROL Export datasets]** in the right rail to select additional d
 >
 >This option is only visible for [destinations which support dataset export](export-datasets.md#supported-destinations).
 
-![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/export-datasets.png)
+![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/export-datasets.png){width="750" zoomable="yes"}
 
 ## Edit marketing actions {#edit-marketing-actions}
 
@@ -131,24 +131,24 @@ You can add or remove marketing actions that you set up when initially connectin
 
 Select **[!UICONTROL Edit marketing actions]** in the right rail to open the marketing actions selection screen.
 
-![Experience Platform UI image showing the edit marketing actions option.](../assets/ui/edit-activation/edit-marketing-actions.png)
+![Experience Platform UI image showing the edit marketing actions option.](../assets/ui/edit-activation/edit-marketing-actions.png){width="750" zoomable="yes"}
 
 Select the applicable marketing actions and then select **[!UICONTROL Save]** to apply the changes.
 
-![Experience Platform UI image showing the edit marketing actions screen.](../assets/ui/edit-activation/edit-marketing-actions-screen.png)
+![Experience Platform UI image showing the edit marketing actions screen.](../assets/ui/edit-activation/edit-marketing-actions-screen.png){width="500" zoomable="yes"}
 
 
 ## Apply access labels {#apply-access-labels}
 
 Select **[!UICONTROL Apply access labels]** to edit the data usage labels for the exported data. See the [data usage labels documentation](../../data-governance/labels/overview.md) to learn more.
 
-![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/apply-access-labels.png)
+![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/apply-access-labels.png){width="750" zoomable="yes"}
 
 ## Edit activation dataflow names and descriptions {#edit-names-descriptions}
 
 To edit the activation dataflow name and description, use the **[!UICONTROL Destination name]** and **[!UICONTROL Description]** fields.
 
-![Destination details](../assets/ui/edit-activation/edit-destination-name-description.png)
+![Destination details](../assets/ui/edit-activation/edit-destination-name-description.png){width="750" zoomable="yes"}
 
 ## Next steps {#next-steps}
 

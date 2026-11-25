@@ -168,6 +168,8 @@ The next step is to generate an `{ACCESS_TOKEN}` credential for use in Experienc
 >
 >You can also use a Postman environment and collection to generate access tokens. For more information, read the section about [using Postman to authenticate and test API calls](#use-postman).
 
+For integrations that retrieve or export audit logs, see the [audit events endpoint](./governance-privacy-security/audit-logs/api/events.md) and [audit export endpoint](./governance-privacy-security/audit-logs/api/export.md) guides. For scheduled jobs, implement automatic token regeneration as described in [Generating access tokens programmatically](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation#generating-access-tokens-programmatically).
+
 ## Create and retrieve authentication credentials directly in the API reference documentation {#get-credentials-functionality}
 
 Starting with the November 2024 release of Experience Platform, you can get credentials to use the Experience Platform APIs directly from the API reference pages, without needing to go to [!UICONTROL Developer Console]. View the example below from the [Flow Service API - Destinations page](https://developer.adobe.com/experience-platform-apis/references/destinations/).

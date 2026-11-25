@@ -46,7 +46,7 @@ topic_v2:
 >
 >To reach customers on [!DNL YouTube] inventory, use the [Google Customer Match + DV360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) destination, which uses the Google Audience Partner API.
 
-![Google Customer Match destination in the Adobe Experience Platform UI.](../../assets/catalog/advertising/google-customer-match/catalog.png)
+![Google Customer Match destination in the Adobe Experience Platform UI.](../../assets/catalog/advertising/google-customer-match/catalog.png){width="750" zoomable="yes"}
 
 ## Use cases {#use-cases}
 
@@ -255,7 +255,7 @@ See [Activate audience data to streaming audience export destinations](../../ui/
 
 In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] audiences to [!DNL Google Customer Match].
 
-![Google Customer Match App ID field highlighted in the Segment schedule step of the activation workflow.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
+![Google Customer Match App ID field highlighted in the Segment schedule step of the activation workflow.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png){width="750" zoomable="yes"}
 
 For details on how to find the [!DNL App ID], see the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative.
 
@@ -284,7 +284,7 @@ Data from unhashed namespaces is automatically hashed by [!DNL Experience Platfo
 
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
 
-![Apply transformation control highlighted in the Mapping step of the activation workflow.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+![Apply transformation control highlighted in the Mapping step of the activation workflow.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png){width="750" zoomable="yes"}
 
 ## Monitor destination {#monitor-destination}
 

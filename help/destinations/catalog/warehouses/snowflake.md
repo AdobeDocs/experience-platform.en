@@ -49,7 +49,7 @@ This destination uses a [!DNL Snowflake] data share, which means that no data is
 
 The first time you share data from Adobe's Snowflake instance to yours, you are prompted to accept the private listing from Adobe.
 
-![Screenshot showing the Snowflake private listing acceptance screen](../../assets/catalog/warehouses/snowflake/snowflake-accept-listing.png)
+![Screenshot showing the Snowflake private listing acceptance screen](../../assets/catalog/warehouses/snowflake/snowflake-accept-listing.png){width="500" zoomable="yes"}
 
 ### Data retention and Time-to-Live (TTL) {#ttl}
 
@@ -146,7 +146,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
 
-![Sample screenshot showing how to authenticate to the destination](../../assets/catalog/warehouses/snowflake/authenticate-destination.png)
+![Sample screenshot showing how to authenticate to the destination](../../assets/catalog/warehouses/snowflake/authenticate-destination.png){zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
@@ -162,7 +162,7 @@ To authenticate to the destination, select **[!UICONTROL Connect to destination]
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Sample screenshot showing how to fill in details for your destination](../../assets/catalog/warehouses/snowflake/configure-destination-details.png)
+![Sample screenshot showing how to fill in details for your destination](../../assets/catalog/warehouses/snowflake/configure-destination-details.png){zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -204,7 +204,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 The Snowflake destination supports the mapping of profile attributes to custom attributes.
 
-![Experience Platform user interface image showing the mapping screen for the Snowflake destination.](../../assets/catalog/warehouses/snowflake/mapping.png)
+![Experience Platform user interface image showing the mapping screen for the Snowflake destination.](../../assets/catalog/warehouses/snowflake/mapping.png){width="750" zoomable="yes"}
 
 The target attributes are automatically created in Snowflake using the attribute name that you provide in the **[!UICONTROL Attribute name]** field.
 
@@ -214,7 +214,7 @@ The data is shared into your Snowflake account via a shared table. Check your Sn
 
 The following example shows sample rows from a shared table: some columns store identities and segment membership as JSON; mapped profile attributes appear as separate string columns.
 
-![Sample Snowflake worksheet rows showing TS, IDENTITYMAP, SEGMENT_MEMBERSHIP, and mapped attribute columns.](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
+![Sample Snowflake worksheet rows showing TS, IDENTITYMAP, SEGMENT_MEMBERSHIP, and mapped attribute columns.](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png){width="750" align="center" zoomable="yes"}
 
 ### Data structure {#data-structure}
 

@@ -40,7 +40,7 @@ Receive voice messages from your web page visitors. Includes hosted UI and cloud
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Talk URL Inbox extension](../../assets/catalog/voice/talkurl/catalog.png)
+![Talk URL Inbox extension](../../assets/catalog/voice/talkurl/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

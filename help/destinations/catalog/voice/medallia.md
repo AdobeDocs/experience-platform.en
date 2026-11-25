@@ -38,7 +38,7 @@ Deploy [!DNL Medallia] quickly and seamlessly on your web properties. The extens
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Medallia Extension](../../assets/catalog/voice/medallia/catalog.png)
+![Medallia Extension](../../assets/catalog/voice/medallia/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

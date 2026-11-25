@@ -114,7 +114,7 @@ If your company has access to multiple organizations, make sure that you use the
 >
 >The user setting up the destination must have [Edit Person](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) permission in the Marketo instance and partition.
 
-![Connect to Destination](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
+![Connect to Destination](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png){zoomable="yes"}
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -139,7 +139,7 @@ When sending updates to Marketo engage, records are selected based on the select
 
 If no matching lead record is found, a new record will be created.
 
-![Destination Details](../../assets/catalog/adobe/marketo-engage-person-sync/destination-details.png)
+![Destination Details](../../assets/catalog/adobe/marketo-engage-person-sync/destination-details.png){zoomable="yes"}
 
 ## Activate Audiences {#activate-audiences}
 
@@ -151,13 +151,13 @@ Read [Activate audiences to streaming destinations](/help/destinations/ui/activa
 
 In the Activate Audiences step, you will be able to select from any person audiences which are visible to you.
 
-![Activate Audiences](../../assets/catalog/adobe/marketo-engage-person-sync/activate-audiences.png)
+![Activate Audiences](../../assets/catalog/adobe/marketo-engage-person-sync/activate-audiences.png){zoomable="yes"}
 
 ## Field Mapping {#field-mapping}
 
 For changes to a particular person attribute to be sent to Marketo Engage, the field must be mapped from a [!DNL Real-Time CDP] field to Marketo Field.
 
-![Field Mapping](../../assets/catalog/adobe/marketo-engage-person-sync/field-mapping.png)
+![Field Mapping](../../assets/catalog/adobe/marketo-engage-person-sync/field-mapping.png){zoomable="yes"}
 
 Experience Platform datatypes and Marketo datatypes can be mapped in the following ways:
 
@@ -181,9 +181,9 @@ Experience Platform datatypes and Marketo datatypes can be mapped in the followi
 
 In some cases it is desirable to allow integrations to set the value of a field if there is none, while preventing integrations from making updates to fields which already have a value.  If you need to prevent the destination connector from overwriting existing values in your Marketo Engage instance, you can configure fields to block updates in the Admin->Field Management section of your Marketo instance and toggling the [!DNL Adobe Experience Platform] source type.
 
-![Block Field Updates](../../assets/catalog/adobe/marketo-engage-person-sync/block-field-updates.png)
+![Block Field Updates](../../assets/catalog/adobe/marketo-engage-person-sync/block-field-updates.png){zoomable="yes"}
 
-![Block Field Updates](../../assets/catalog/adobe/marketo-engage-person-sync/block-field-updates-2.png)
+![Block Field Updates](../../assets/catalog/adobe/marketo-engage-person-sync/block-field-updates-2.png){zoomable="yes"}
 
 ## Data Usage and Governance {#data-usage-and-governance}
 

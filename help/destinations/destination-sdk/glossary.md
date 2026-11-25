@@ -42,7 +42,7 @@ See this glossary for definitions of terms used in Destination SDK. For other [!
 
 **Destination instance**: A specific setup of a destination configuration in [!DNL Adobe Experience Platform], created and managed through the Experience Platform UI. It includes all necessary parameters and credentials for connecting and sending data to the destination. After establishing the connection to your destination, you can get the destination instance ID when [browsing a connection with your destination](/help/destinations/ui/destination-details-page.md).
 
-![UI image showing how to get destination instance ID from the URL.](/help/destinations/destination-sdk/assets/testing-api/get-destination-instance-id.png)
+![UI image showing how to get destination instance ID from the URL.](/help/destinations/destination-sdk/assets/testing-api/get-destination-instance-id.png){width="750" zoomable="yes"}
 
 ## P {#p}
 

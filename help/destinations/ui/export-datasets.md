@@ -99,7 +99,7 @@ Watch the video below for an end-to-end explanation of the workflow described on
 
 Currently, you can export datasets to the cloud storage destinations highlighted in the screenshot and listed below. 
 
-![Destinations catalog page showing which destinations support dataset exports.](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png){zoomable="yes"}
+![Destinations catalog page showing which destinations support dataset exports.](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png){width="750" zoomable="yes"}
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -136,7 +136,7 @@ Follow the instructions to select a destination where you can export your datase
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab. Select **[!UICONTROL Activate]** or **[!UICONTROL Export datasets]** on the card corresponding to the destination that you want to export datasets to.
 
-    ![Destination catalog tab with Activate control highlighted.](/help/destinations/assets/ui/export-datasets/activate-button.png){zoomable="yes"}
+    ![Destination catalog tab with Activate control highlighted.](/help/destinations/assets/ui/export-datasets/activate-button.png){width="750" zoomable="yes"}
 
 1. Select **[!UICONTROL Data type Datasets]** and select the destination connection that you want to export datasets to, then select **[!UICONTROL Next]**.
 
@@ -144,7 +144,7 @@ Follow the instructions to select a destination where you can export your datase
     > 
     >If you want to set up a new destination to export datasets, select **[!UICONTROL Configure new destination]** to trigger the [Connect to destination](/help/destinations/ui/connect-destination.md) workflow. 
 
-    ![Destination activation workflow with Datasets control highlighted.](/help/destinations/assets/ui/export-datasets/select-destination.png){zoomable="yes"}
+    ![Destination activation workflow with Datasets control highlighted.](/help/destinations/assets/ui/export-datasets/select-destination.png){width="750" zoomable="yes"}
 
 1. The **[!UICONTROL Select datasets]** view appears. Proceed to the next section to [select your datasets](#select-datasets) for export.
 
@@ -152,7 +152,7 @@ Follow the instructions to select a destination where you can export your datase
 
 Use the checkboxes to the left of the dataset names to select the datasets that you want to export to the destination, then select **[!UICONTROL Next]**.
 
-![Dataset export workflow showing the Select datasets step where you can select which datasets to export.](/help/destinations/assets/ui/export-datasets/select-datasets.png){zoomable="yes"}
+![Dataset export workflow showing the Select datasets step where you can select which datasets to export.](/help/destinations/assets/ui/export-datasets/select-datasets.png){width="750" zoomable="yes"}
 
 >[!NOTE]
 >
@@ -197,7 +197,7 @@ Use the **[!UICONTROL Edit schedule]** control on the page to edit the export ca
 >
 >Modifying the schedule here will update the export behavior for all datasets in this dataflow. If this dataflow contains multiple datasets, all of them will be affected by this change.
 
-![Edit schedule control highlighted in the Scheduling step.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png){zoomable="yes"}
+![Edit schedule control highlighted in the Scheduling step.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png){width="750" zoomable="yes"}
 
 The **[!UICONTROL Export incremental files]** option is selected by default. This option triggers an export of one or multiple files representing a full snapshot of the dataset. Subsequent files include only records that were added or updated since the previous export. Records deleted from the dataset are not included in incremental exports, so deletions are not reflected in your storage location. You can also select **[!UICONTROL Export full files]**. In this case, select the frequency **[!UICONTROL Once]** for a one-time full export of the dataset.
 
@@ -205,7 +205,7 @@ The **[!UICONTROL Export incremental files]** option is selected by default. Thi
 >
 >The first incremental file export includes all existing data in the dataset, functioning as a backfill. The export can contain one or multiple files.
 
-![Dataset export workflow showing the scheduling step.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png){zoomable="yes"}
+![Dataset export workflow showing the scheduling step.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png){width="500" zoomable="yes"}
 
 1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
@@ -236,13 +236,13 @@ The **[!UICONTROL Export incremental files]** option is selected by default. Thi
 
 Select **[!UICONTROL Edit folder path]** to customize the folder structure in your storage location where exported datasets are deposited. 
 
-![Edit folder path control highlighted in the scheduling step.](/help/destinations/assets/ui/export-datasets/edit-folder-path.png){zoomable="yes"}
+![Edit folder path control highlighted in the scheduling step.](/help/destinations/assets/ui/export-datasets/edit-folder-path.png){width="750" zoomable="yes"}
 
 You can use several available macros to customize a desired folder name. Double-click a macro to add it to the folder path and use `/` between the macros to separate the folders.
 
 After selecting the desired macros, you can see a preview of the folder structure that will be created in your storage location. The first level in the folder structure represents the **[!UICONTROL Folder path]** that you indicated when you [connected to the destination](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) to export datasets. 
 
-![Macros selection highlighted in custom folder modal window.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png){zoomable="yes"}
+![Macros selection highlighted in custom folder modal window.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png){width="500" zoomable="yes"}
 
 
 
@@ -259,7 +259,7 @@ When exporting multiple datasets, consider the following best practices:
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start exporting datasets to the destination.
 
-![Dataset export workflow showing the review step.](/help/destinations/assets/ui/export-datasets/review.png){zoomable="yes"}
+![Dataset export workflow showing the review step.](/help/destinations/assets/ui/export-datasets/review.png){width="750" zoomable="yes"}
 
 ## Verify successful dataset export {#verify}
 
@@ -283,7 +283,7 @@ The presence of these files in your storage location is confirmation of a succes
 
 In the [connect to destination workflow](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options), you can select the exported dataset files to be compressed, as shown below: 
 
-![File type and compression selection when connecting to a destination to export datasets.](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif){zoomable="yes"}
+![File type and compression selection when connecting to a destination to export datasets.](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif){width="500" zoomable="yes"}
 
 Note the difference in file format between the two file types, when compressed: 
 
@@ -304,11 +304,11 @@ To remove datasets from an existing dataflow, follow the steps below:
 
 2. From the **[!UICONTROL Activation data]** column, select the datasets control to view all datasets mapped to this export dataflow.
 
-    ![The available datasets navigation option highlighted in the Activation data column.](../assets/ui/export-datasets/go-to-datasets-data.png){zoomable="yes"}
+    ![The available datasets navigation option highlighted in the Activation data column.](../assets/ui/export-datasets/go-to-datasets-data.png){width="750" zoomable="yes"}
 
 3. The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog.
 
-    ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/bulk-remove-datasets.png){zoomable="yes"} 
+    ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/bulk-remove-datasets.png){width="750" zoomable="yes"} 
 
 4. In the confirmation dialog, select **[!UICONTROL Remove]** to immediately remove the dataset from exports to the destination.
 

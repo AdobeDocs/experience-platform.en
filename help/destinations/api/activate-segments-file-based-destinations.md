@@ -53,7 +53,7 @@ This article explains the workflow required to use the [Flow Service API](https:
 
 ## Getting started {#get-started}
 
-![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
+![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png){width="750" zoomable="yes"}
 
 This guide requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
@@ -103,7 +103,7 @@ For descriptions of the terms that you will be encountering in this API tutorial
 
 ## Select destination where to export audiences {#select-destination}
 
-![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step1.png)
+![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step1.png){width="750" zoomable="yes"}
 
 Before starting the workflow to export profiles, identify the connection spec and flow spec IDs of the destination to which you are intending to export audiences to. Use the table below for reference.
 
@@ -332,7 +332,7 @@ Follow the steps below to set up an audience export dataflow to a cloud storage 
 
 ## Create a Source Connection {#create-source-connection}
 
-![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step2.png)
+![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step2.png){width="750" zoomable="yes"}
 
 After deciding which destination you are exporting audiences to, you need to create a source connection. The [source connection](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) represents the connection to the internal [Experience Platform Profile store](/help/profile/home.md#profile-data-store). 
 
@@ -382,7 +382,7 @@ A successful response returns the ID (`id`) of the newly created source connecti
 
 ## Create a base connection {#create-base-connection}
 
-![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step3.png)
+![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step3.png){width="750" zoomable="yes"}
 
 A [base connection](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) securely stores the credentials to your destination. Depending on the destination type, the credentials needed to authenticate against that destination can vary. To find these authentication parameters, first retrieve the `connection spec` for your desired destination as described in the section [Select destination where to export audiences](#select-destination) and then look at the `authSpec` of the response. Reference the tabs below for the `authSpec` properties of all supported destinations.
 
@@ -1283,7 +1283,7 @@ Note the connection ID from the response. This ID will be required in the next s
 
 ## Create a target connection {#create-target-connection}
 
-![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step4.png)
+![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step4.png){width="750" zoomable="yes"}
 
 Next, you need to create a target connection. [Target connections](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) store the export parameters for the exported audiences. Export parameters include export location, file format, compression, and other details. For example, for CSV files, you can select several export options. Get extensive information about all supported CSV export options in the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md). 
 
@@ -3047,7 +3047,7 @@ A successful response returns the ID (`id`) of the newly target source connectio
 
 ## Create a dataflow {#create-dataflow}
 
-![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step5.png)
+![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step5.png){width="750" zoomable="yes"}
 
 The next step in the destination configuration is to create a dataflow. A [dataflow](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) ties together previously created entities and also provides options for configuring the audience export schedule. To create the dataflow, use the payloads below, depending on your desired cloud storage destination, and replace the flow entity IDs from previous steps. Note that in this step, you are not adding any information related to attribute or identity mapping to the dataflow. That will follow in the next step.
 
@@ -3363,7 +3363,7 @@ In this step, you can also select which audiences you want to export to the dest
 
 ## Set up attribute and identity mapping {#attribute-and-identity-mapping}
 
-![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step6.png)
+![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step6.png){width="750" zoomable="yes"}
 
 After creating your dataflow, you need to set up mapping for the attributes and identities that you would like to export. Complete the following steps in order: 
 
@@ -3376,7 +3376,7 @@ After creating your dataflow, you need to set up mapping for the attributes and 
 
 For example, to obtain the following mapping shown in the UI, you would need to go through the steps listed above and detailed in the next headings. 
 
-![Example of mapping step](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
+![Example of mapping step](/help/destinations/assets/api/file-based-segment-export/mapping-example.png){width="750" zoomable="yes"}
 
 >[!IMPORTANT]
 >
@@ -3386,7 +3386,7 @@ For example, to obtain the following mapping shown in the UI, you would need to 
 
 To create an input schema, you first need to retrieve your [union schema](/help/profile/ui/union-schema.md) and the identities that can be exported to the destination. This is the schema of attributes and identities which you can select as your source mapping. 
 
-![Recording showing the attribute and identity options in the select source field view](/help/destinations/assets/api/file-based-segment-export/select-source-field.gif)
+![Recording showing the attribute and identity options in the select source field view](/help/destinations/assets/api/file-based-segment-export/select-source-field.gif){width="750" zoomable="yes"}
 
 View below examples of requests and responses to retrieve attributes and identities.
 
@@ -4660,7 +4660,7 @@ The response from the Flow Service API returns the ID of the updated dataflow.
 
 ## Make other dataflow updates {#other-dataflow-updates}
 
-![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step7.png)
+![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step7.png){width="750" zoomable="yes"}
 
 To make any updates to your dataflow, use the `PATCH` operation. For example, you can add a marketing action to your dataflows, update your dataflows to select fields as mandatory keys or deduplication keys, add enrichment attributes for custom upload audiences, or add file manifest generation to existing destinations.
 
@@ -5366,7 +5366,7 @@ destination.enrichmentAttributes.{namespace}.{segmentId}
 
 ## Validate dataflow (Get the dataflow runs) {#get-dataflow-runs}
 
-![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step8.png)
+![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step8.png){width="750" zoomable="yes"}
 
 To check the executions of a dataflow, use the Dataflow Runs API:
 

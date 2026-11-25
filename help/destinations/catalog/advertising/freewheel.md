@@ -93,7 +93,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 Authentication to the [!DNL FreeWheel] destination is handled automatically by Adobe. No credentials or API keys are required from you during authentication. Adobe manages the secure connection to [!DNL FreeWheel] on your behalf.
 
-![Screenshot of the authentication step for the FreeWheel destination.](../../assets/catalog/advertising/freewheel/connect-destination.png)
+![Screenshot of the authentication step for the FreeWheel destination.](../../assets/catalog/advertising/freewheel/connect-destination.png){zoomable="yes"}
 
 Select **[!UICONTROL Connect to destination]** to proceed to the destination details step.
 
@@ -106,7 +106,7 @@ Select **[!UICONTROL Connect to destination]** to proceed to the destination det
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Sample screenshot showing how to fill in details for the FreeWheel destination.](../../assets/catalog/advertising/freewheel/destination-details.png)
+![Sample screenshot showing how to fill in details for the FreeWheel destination.](../../assets/catalog/advertising/freewheel/destination-details.png){zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -135,7 +135,7 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 ### Schedule audience exports {#schedule}
 
-![Screenshot of the Scheduling step in the FreeWheel activation workflow.](../../assets/catalog/advertising/freewheel/scheduling.png)
+![Screenshot of the Scheduling step in the FreeWheel activation workflow.](../../assets/catalog/advertising/freewheel/scheduling.png){width="750" zoomable="yes"}
 
 In the **[!UICONTROL Scheduling]** step, configure the export schedule for the destination. [!DNL FreeWheel] uses a hybrid export model: the first export for each activated audience is a full snapshot, followed by daily incremental updates.
 
@@ -166,7 +166,7 @@ In the mapping step, select the source fields from your Experience Platform prof
 
 If your [!DNL FreeWheel] account supports identity types that are not listed in the [supported identities](#supported-identities) table, you can map to them by manually entering the identity name in the target field instead of selecting from the predefined list.
 
-![Screenshot showing a custom identity name typed directly into the target field in the mapping step.](../../assets/catalog/advertising/freewheel/custom-identity.png)
+![Screenshot showing a custom identity name typed directly into the target field in the mapping step.](../../assets/catalog/advertising/freewheel/custom-identity.png){width="750" zoomable="yes"}
 
 The following are example mappings. Your actual mappings will depend on your profile schema and the identity types your [!DNL FreeWheel] account supports.
 

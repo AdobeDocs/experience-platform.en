@@ -42,11 +42,11 @@ Yes, before January 18th, 2024, you need to authenticate to the new Pinterest de
 ### Reauthenticate to Pinterest {#reauthenticate}
 
 1. Go to **[!UICONTROL Destinations > Accounts]** and use the filter on the screen to filter the Pinterest destination only.
-    ![Filter Pinterest accounts only](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
+    ![Filter Pinterest accounts only](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png){width="750" zoomable="yes"}
 2. On the **Pinterest** destination, select the three dots symbol ... and select **[!UICONTROL Edit details]**.
-    ![Select Edit details](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
+    ![Select Edit details](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png){width="750" zoomable="yes"}
 3. Select **[!UICONTROL Reconnect OAuth]** and log in to your Pinterest account.
-    ![Select Reconnect OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
+    ![Select Reconnect OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png){width="750" zoomable="yes"}
 4. Move on to the action item in the section below
 
 ### Enable flows to new destination {#disable-old-enable-new-flows}
@@ -54,9 +54,9 @@ Yes, before January 18th, 2024, you need to authenticate to the new Pinterest de
 Then, you need to enable the dataflows to the new  **[!UICONTROL Pinterest]** card. 
 
 1. Go to **[!UICONTROL Destinations > Browse]** and use the filter on the screen to filter the **[!UICONTROL Pinterest]** destination only.
-    ![Filter Pinterest dataflows only in the Browse tab](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
+    ![Filter Pinterest dataflows only in the Browse tab](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png){width="750" zoomable="yes"}
 2. Select the hyperlinked connection name (Loyalty campaign in the screenshot example above) to the **[!UICONTROL Pinterest]** destination and switch the **[!UICONTROL Enable]** toggle to **on**.
-    ![Toggle on for new connections and off for old connections](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
+    ![Toggle on for new connections and off for old connections](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png){width="750" zoomable="yes"}
 
 ## Can you share some high-level timelines? {#high-level-timelines}
 
@@ -64,7 +64,7 @@ Yes, see below:
  
 **By November 16, 2023**: The new destination is ready, and you should see two Pinterest cards side by side in the catalog until Pinterest stops supporting the old v4 API. All your existing dataflows to the current Pinterest card are copied to the new destination.
 
-![Old and new Pinterest destination side-by-side](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
+![Old and new Pinterest destination side-by-side](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png){width="750" zoomable="yes"}
 
 **By December 15, 2023**: <span class="preview">Customer action 1</span>. You need to reauthenticate to Pinterest so that the new card is connected to Pinterest. View complete instructions in [this section](#reauthenticate).
 

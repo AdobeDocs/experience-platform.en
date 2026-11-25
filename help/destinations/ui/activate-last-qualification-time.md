@@ -45,7 +45,7 @@ If you are using one of the six cloud storage connectors listed above, you can u
 >
 >To add `lastQualificationTime` to your file exports, you currently need to manually insert the value `xdm: segmentMembership.ups.seg_id.lastQualificationTime` into the source field, as shown below. You can also edit the target field to `lastQualificationTime` or any other value that you would like to name this column. Since this is a beta functionality, the syntax of the `xdm: segmentMembership.ups.seg_id.lastQualificationTime` value may change in the future.
 
-![Screen recording showing the last qualification time XDM attribute paste into the mapping step](/help/destinations/ui/last-qualification-time.gif)
+![Screen recording showing the last qualification time XDM attribute paste into the mapping step](/help/destinations/ui/last-qualification-time.gif){width="750" zoomable="yes"}
 
 ## More information {#more-information}
 

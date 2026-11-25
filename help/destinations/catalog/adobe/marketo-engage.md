@@ -27,7 +27,7 @@ topic_v2:
 
 ## Destination changelog {#changelog}
 
-![Image of the two Marketo destination cards in a side-by-side view.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
+![Image of the two Marketo destination cards in a side-by-side view.](../..//assets/catalog/adobe/marketo-side-by-side-view.png){width="750" zoomable="yes"}
 
 Improvements in the Marketo V2 destination include:
 

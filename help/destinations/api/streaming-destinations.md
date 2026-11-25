@@ -40,7 +40,7 @@ This tutorial demonstrates how to use API calls to connect to your [!DNL Adobe E
 
 This tutorial uses the [!DNL Amazon Kinesis] destination in all examples, but the steps are identical for [!DNL Azure Event Hubs].
 
-![Overview - the steps to create a streaming destination and activate audiences](../assets/api/streaming-destination/overview.png)
+![Overview - the steps to create a streaming destination and activate audiences](../assets/api/streaming-destination/overview.png){width="750" zoomable="yes"}
 
 If you prefer to use the user interface in Experience Platform to connect to a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to streaming audience export destinations](../ui/activate-segment-streaming-destinations.md) tutorials.
 
@@ -91,7 +91,7 @@ You can find accompanying reference documentation for all the API calls in this 
 
 ## Get the list of available streaming destinations {#get-the-list-of-available-streaming-destinations}
 
-![Destination steps overview step 1](../assets/api/streaming-destination/step1.png)
+![Destination steps overview step 1](../assets/api/streaming-destination/step1.png){width="750" zoomable="yes"}
 
 As a first step, you should decide which streaming destination to activate data to. To begin with, perform a call to request a list of available destinations that you can connect and activate audiences to. Perform the following GET request to the `connectionSpecs` endpoint to return a list of available destinations:
 
@@ -135,7 +135,7 @@ A successful response contains a list of available destinations and their unique
 
 ## Connect to your Experience Platform data {#connect-to-your-experience-platform-data}
 
-![Destination steps overview step 2](../assets/api/streaming-destination/step2.png)
+![Destination steps overview step 2](../assets/api/streaming-destination/step2.png){width="750" zoomable="yes"}
 
 Next, you must connect to your Experience Platform data, so you can export profile data and activate it in your preferred destination. This consists of two substeps which are described below.
 
@@ -231,7 +231,7 @@ A successful response returns the unique identifier (`id`) for the newly created
 
 ## Connect to streaming destination {#connect-to-streaming-destination}
 
-![Destination steps overview step 3](../assets/api/streaming-destination/step3.png)
+![Destination steps overview step 3](../assets/api/streaming-destination/step3.png){width="750" zoomable="yes"}
 
 In this step, you are setting up a connection to your desired streaming destination. This consists of two substeps which are described below.
 
@@ -438,7 +438,7 @@ A successful response returns the unique identifier (`id`) for the newly created
 
 ## Create a data flow {#create-data-flow}
 
-![Destination steps overview step 4](../assets/api/streaming-destination/step4.png)
+![Destination steps overview step 4](../assets/api/streaming-destination/step4.png){width="750" zoomable="yes"}
 
 Using the IDs you obtained in the previous steps, you can now create a dataflow between your Experience Platform data and the destination where you will activate data to. Think of this step as constructing the pipeline, through which data will later flow, between Experience Platform and your desired destination.
 
@@ -513,7 +513,7 @@ A successful response returns the ID (`id`) of the newly created dataflow and an
 
 ## Activate data to your new destination {#activate-data}
 
-![Destination steps overview step 5](../assets/api/streaming-destination/step5.png)
+![Destination steps overview step 5](../assets/api/streaming-destination/step5.png){width="750" zoomable="yes"}
 
 Having created all the connections and the data flow, now you can activate your profile data to the streaming platform. In this step, you select which audiences and which profile attributes you are sending to the destination and you can schedule and send data to the destination.
 
@@ -582,7 +582,7 @@ Look for a 202 OK response. No response body is returned. To validate that the r
 
 ## Validate the data flow {#validate-data-flow}
 
-![Destination steps overview step 6](../assets/api/streaming-destination/step6.png)
+![Destination steps overview step 6](../assets/api/streaming-destination/step6.png){width="750" zoomable="yes"}
 
 As a final step in the tutorial, you should validate that the audiences and profile attributes have indeed been correctly mapped to the data flow.
 

@@ -40,7 +40,7 @@ Analyze your unknown visitors and convert them into leads.
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![D&B Visitor Intelligence extension](../../assets/catalog/personalization/dnb/catalog.png)
+![D&B Visitor Intelligence extension](../../assets/catalog/personalization/dnb/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

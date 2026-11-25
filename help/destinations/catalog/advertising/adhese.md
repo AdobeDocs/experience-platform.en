@@ -98,7 +98,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![Screenshot of the authentication fields for connecting to the Adhese destination, including the access key ID and secret access key.](../../assets/catalog/advertising/adhese/authentication_details.png)
+![Screenshot of the authentication fields for connecting to the Adhese destination, including the access key ID and secret access key.](../../assets/catalog/advertising/adhese/authentication_details.png){zoomable="yes"}
 
 * **[!UICONTROL Access key ID]**: The Amazon S3 access key ID provided to you by Adhese during onboarding.
 * **[!UICONTROL Secret access key]**: The Amazon S3 secret access key provided to you by Adhese during onboarding.
@@ -107,7 +107,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Screenshot of the destination details fields, including name, description, region, and customer ID.](../../assets/catalog/advertising/adhese/destination_details.png)
+![Screenshot of the destination details fields, including name, description, region, and customer ID.](../../assets/catalog/advertising/adhese/destination_details.png){zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -135,7 +135,7 @@ The Adhese destination exports identities only. No profile attributes are export
 
 In the **[!UICONTROL Mapping]** step of the activation workflow, select the identity namespace that you use to identify users on your website or app as the source field. The mapped identity values become the contents of the exported file. Mapping an identity is mandatory. Selecting profile attributes is not supported for this destination.
 
-![Screenshot of the mapping step showing an identity namespace mapped as the source field for the Adhese destination.](../../assets/catalog/advertising/adhese/mapping_details.png)
+![Screenshot of the mapping step showing an identity namespace mapped as the source field for the Adhese destination.](../../assets/catalog/advertising/adhese/mapping_details.png){width="750" zoomable="yes"}
 
 ### Schedule audience export {#schedule}
 

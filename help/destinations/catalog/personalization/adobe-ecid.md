@@ -40,7 +40,7 @@ This extension implements the Visitor ID Service, which identifies visitors acro
 
 This destination is a tag extension. For more information about how tags extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Adobe ECID extension](../../assets/catalog/personalization/adobe-ecid/catalog.png)
+![Adobe ECID extension](../../assets/catalog/personalization/adobe-ecid/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

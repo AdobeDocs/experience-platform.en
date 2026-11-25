@@ -38,7 +38,7 @@ Use the [!DNL Yext Conversion Tracking] Extension to measure conversions that ca
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Yext Conversion Tracking Extension](../../assets/catalog/analytics/yext/catalog.png)
+![Yext Conversion Tracking Extension](../../assets/catalog/analytics/yext/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

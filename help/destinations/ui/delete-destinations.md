@@ -37,18 +37,18 @@ Follow the steps below to delete a destination from the [!UICONTROL Browse] tab.
 
 1. Go to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destinations.
 
-    ![Browse destinations](../assets/ui/delete-destinations/browse-destinations.png)
+    ![Browse destinations](../assets/ui/delete-destinations/browse-destinations.png){width="750" zoomable="yes"}
 
 2. Select the filter icon ![Filter-icon](/help/images/icons/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
 
-    ![Filter destinations](../assets/ui/delete-destinations/filter-destinations.png)
+    ![Filter destinations](../assets/ui/delete-destinations/filter-destinations.png){width="750" zoomable="yes"}
 
 3. Select the ![More button](/help/images/icons/more.png) button in the Name column and then select ![Delete button](/help/images/icons/delete.png) **[!UICONTROL Delete]** to remove an existing destination connection.
-    ![Delete destinations](../assets/ui/delete-destinations/delete-destinations.png)
+    ![Delete destinations](../assets/ui/delete-destinations/delete-destinations.png){width="750" zoomable="yes"}
 
 4. Select **[!UICONTROL Delete]** to confirm the removal of the destination connection.
 
-    ![Confirm delete destination](../assets/ui/delete-destinations/delete-destinations-confirm.png)
+    ![Confirm delete destination](../assets/ui/delete-destinations/delete-destinations-confirm.png){zoomable="yes"}
 
 ## Delete destinations from the destination details page {#delete-destination-details-page}
 
@@ -56,31 +56,31 @@ Follow the steps below to delete a destination from the destination details page
 
 1. Go to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destinations.
 
-    ![Browse destinations](../assets/ui/delete-destinations/browse-destinations.png)
+    ![Browse destinations](../assets/ui/delete-destinations/browse-destinations.png){width="750" zoomable="yes"}
 
 2. Select the filter icon ![Filter-icon](/help/images/icons/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
 
-    ![Filter destinations](../assets/ui/delete-destinations/filter-destinations.png)
+    ![Filter destinations](../assets/ui/delete-destinations/filter-destinations.png){width="750" zoomable="yes"}
 
 3. Select the name of the destination that you want to delete.
 
-    ![Select destination](../assets/ui/delete-destinations/delete-destination-select.png)
+    ![Select destination](../assets/ui/delete-destinations/delete-destination-select.png){width="750" zoomable="yes"}
 
    * If the destination has existing dataflows, you are taken to the [!UICONTROL Dataflow runs] tab.
 
-        ![Dataflow runs tab](../assets/ui/delete-destinations/destination-details-dataflows.png)
+        ![Dataflow runs tab](../assets/ui/delete-destinations/destination-details-dataflows.png){width="750" zoomable="yes"}
 
    * If the destination does not have existing dataflows, you are taken to an empty page where you can start activating audiences.
 
-        ![Destination details](../assets/ui/delete-destinations/destination-details-empty.png)
+        ![Destination details](../assets/ui/delete-destinations/destination-details-empty.png){width="750" zoomable="yes"}
 
 4. Select **[!UICONTROL Delete]** in the right rail.
 
-    ![Delete destination](../assets/ui/delete-destinations/delete-destinations-button.png)
+    ![Delete destination](../assets/ui/delete-destinations/delete-destinations-button.png){width="750" zoomable="yes"}
 
 5. Select **[!UICONTROL Delete]** in the confirmation dialog to remove the destination.
 
-    ![Delete destination confirm](..//assets/ui/delete-destinations/delete-destinations-delete.png)
+    ![Delete destination confirm](..//assets/ui/delete-destinations/delete-destinations-delete.png){width="750" zoomable="yes"}
 
 >[!NOTE]
 >

@@ -69,7 +69,7 @@ There is currently no UI that allows you to set up Private Link connections for 
 
 ### [!DNL Azure Event Hubs] {#request-setup-event-hubs}
 
-* [!DNL Azure] [Resource ID](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/voice-video-calling/get-resource-id) of your [!DNL Event Hubs] namespace
+* [!DNL Azure] [resource ID](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-dotnet-standard-getstarted-send?tabs=passwordless%2Croles-azure-cli#assign-roles-to-your-microsoft-entra-user){target="_blank"} of your [!DNL Event Hubs] namespace
 * The [fully qualified domain name (FQDN)](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-get-connection-string) of your [!DNL Event Hubs] namespace (for example, `<namespace>.servicebus.windows.net`)
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
 
@@ -79,14 +79,14 @@ There is currently no UI that allows you to set up Private Link connections for 
 
 ### [!DNL Azure Blob Storage] {#request-setup-blob}
 
-* [!DNL Azure] [Resource ID](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/voice-video-calling/get-resource-id) of your storage account
+* [!DNL Azure] [resource ID](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-get-info#get-the-resource-id-for-a-storage-account){target="_blank"} of your storage account
 * The [fully qualified domain name (FQDN)](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview#standard-endpoints) of your storage account (for example, `<account>.blob.core.windows.net`)
 * Whether you need a Blob endpoint, a DFS endpoint, or both
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
 
 ### [!DNL Azure Data Lake Storage Gen2] {#request-setup-adls}
 
-* [!DNL Azure] [Resource ID](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/voice-video-calling/get-resource-id) of your storage account
+* [!DNL Azure] [resource ID](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-get-info#get-the-resource-id-for-a-storage-account){target="_blank"} of your storage account
 * The [fully qualified domain name (FQDN)](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview#standard-endpoints) of your storage account (for example, `<account>.dfs.core.windows.net`)
 * Whether you need a Blob endpoint, a DFS endpoint, or both
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
@@ -102,7 +102,7 @@ After [!DNL Adobe] creates the Private Endpoint, a pending approval request appe
 1. Select **[!UICONTROL Private endpoints]** to see a list of private endpoints associated with your account and their current connection states.
 1. Locate the pending connection from [!DNL Adobe] and select **[!UICONTROL Approve]**.
 
-![The Azure portal showing a list of pending private endpoints awaiting approval.](../../assets/catalog/cloud-storage/private-link/azure-portal-approve-private-endpoint.png)
+![The Azure portal showing a list of pending private endpoints awaiting approval.](../../assets/catalog/cloud-storage/private-link/azure-portal-approve-private-endpoint.png){width="750" zoomable="yes"}
 
 Within minutes, all existing and new destination dataflows for that resource route over the private endpoint.
 

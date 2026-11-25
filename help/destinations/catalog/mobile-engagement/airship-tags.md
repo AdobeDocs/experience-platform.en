@@ -170,13 +170,13 @@ See [Activate audience data to streaming audience export destinations](../../ui/
 
 [!DNL Airship] tags can be set either on a channel, which represents device instance, for example iPhone, or a named user, which maps all of a user's devices to a common identifier such as a customer ID. If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the [!DNL Airship] named user in the right column under **[!UICONTROL Target Identities]**, as shown below.
 
-![Named User Mapping](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
+![Named User Mapping](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png){width="750" zoomable="yes"}
 
 For identifiers that should be mapped to a channel, that is, a device, map to the appropriate channel based on the source. The following images show how to map a Google Advertising ID to an [!DNL Airship] Android channel. 
 
-![Connect to Airship Tags](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png) 
-![Connect to Airship Tags](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png) 
-![Channel Mapping](../../assets/catalog/mobile-engagement/airship-tags/mapping-option.png)
+![Connect to Airship Tags](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png){width="500" zoomable="yes"} 
+![Connect to Airship Tags](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png){width="500" zoomable="yes"} 
+![Channel Mapping](../../assets/catalog/mobile-engagement/airship-tags/mapping-option.png){width="750" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 

@@ -60,7 +60,7 @@ This destination uses a [!DNL Snowflake] data share, which means that no data is
 
 The first time after you set up a dataflow from Adobe to your Snowflake account, you are prompted to accept the private listing from Adobe.
 
-![Screenshot showing the Snowflake private listing acceptance screen](../../assets/catalog/cloud-storage/snowflake-batch/snowflake-accept-listing.png)
+![Screenshot showing the Snowflake private listing acceptance screen](../../assets/catalog/cloud-storage/snowflake-batch/snowflake-accept-listing.png){width="500" zoomable="yes"}
 
 ### Data retention and Time-to-Live (TTL) {#ttl}
 
@@ -163,7 +163,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]** and provide an account name and, optionally, an account description.
 
-![Sample screenshot showing how to authenticate to the destination](../../assets/catalog/cloud-storage/snowflake-batch/authenticate-destination.png)
+![Sample screenshot showing how to authenticate to the destination](../../assets/catalog/cloud-storage/snowflake-batch/authenticate-destination.png){zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
@@ -179,7 +179,7 @@ To authenticate to the destination, select **[!UICONTROL Connect to destination]
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Sample screenshot showing how to fill in details for your destination](../../assets/catalog/cloud-storage/snowflake-batch/configure-destination-details.png)
+![Sample screenshot showing how to fill in details for your destination](../../assets/catalog/cloud-storage/snowflake-batch/configure-destination-details.png){zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -230,7 +230,7 @@ For instructions on activating audiences to this destination from a [!DNL Real-T
 
 You can export identities and profile attributes to this destination.
 
-![Experience Platform user interface image showing the mapping screen for the Snowflake destination.](../../assets/catalog/cloud-storage/snowflake-batch/mapping.png)
+![Experience Platform user interface image showing the mapping screen for the Snowflake destination.](../../assets/catalog/cloud-storage/snowflake-batch/mapping.png){width="750" zoomable="yes"}
 
 You can use the [calculated fields control](../../ui/data-transformations-calculated-fields.md) to export and perform operations on arrays.
 
@@ -252,7 +252,7 @@ The dynamic table contains the following columns:
 * **AUDIENCE_STATUS**: The membership status of the profile in the audience (for example, `active` or `realized`)
 * **Mapping attributes**: Every mapping attribute selected during the activation workflow is represented as a column
 
-![Screenshot showing the Snowflake interface with dynamic table data](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
+![Screenshot showing the Snowflake interface with dynamic table data](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png){width="750" align="center" zoomable="yes"}
 
 >[!NOTE]
 >

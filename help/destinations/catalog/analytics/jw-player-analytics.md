@@ -40,7 +40,7 @@ This extension installs the [!DNL JW Player] adapter to connect [!DNL JW Player]
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![JW analytics extension](../../assets/catalog/analytics/jw-analytics/catalog.png)
+![JW analytics extension](../../assets/catalog/analytics/jw-analytics/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

@@ -38,7 +38,7 @@ Awin Advertiser Conversion Tag is an advertising extension in [!DNL Adobe Experi
 
 This destination is a tag extension. For more information about how tags extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Awin Advertiser Conversiontag extension in the UI](../../assets/catalog/advertising/awin-conversion-tag/catalog.png)
+![Awin Advertiser Conversiontag extension in the UI](../../assets/catalog/advertising/awin-conversion-tag/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

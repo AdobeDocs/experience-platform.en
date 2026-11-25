@@ -42,7 +42,7 @@ Google gtag is an advertising extension in [!DNL Adobe Experience Platform]. For
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Google gtag extension](../../assets/catalog/advertising/gtag-advertising/catalog.png)
+![Google gtag extension](../../assets/catalog/advertising/gtag-advertising/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

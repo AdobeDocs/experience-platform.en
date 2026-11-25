@@ -112,7 +112,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![The Configure new destination page in Experience Platform, with New account selected, the Account name and Description fields filled in, and the Connect to destination button.](../../assets/catalog/advertising/6sense-segments/6sense-segments-authentication.png "Authenticate to the destination"){zoomable="yes"}
+![The Configure new destination page in Experience Platform, with New account selected, the Account name and Description fields filled in, and the Connect to destination button.](../../assets/catalog/advertising/6sense-segments/6sense-segments-authentication.png "Authenticate to the destination"){width="750" zoomable="yes"}
 
 * **[!UICONTROL Account name]**: A name to identify this account.
 * **[!UICONTROL Description]**: A description to help you identify this account. This field is optional.
@@ -129,7 +129,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the following required and optional fields. An asterisk next to a field in the UI indicates that the field is required.
 
-![The Configure new destination page in Experience Platform, with a connected 6sense account and the Name, Description, and Segment Name Prefix fields filled in under Destination details.](../../assets/catalog/advertising/6sense-segments/6sense-segments-destination-details.png "Fill in destination details"){zoomable="yes"}
+![The Configure new destination page in Experience Platform, with a connected 6sense account and the Name, Description, and Segment Name Prefix fields filled in under Destination details.](../../assets/catalog/advertising/6sense-segments/6sense-segments-destination-details.png "Fill in destination details"){width="750" zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name to identify this destination.
 * **[!UICONTROL Description]**: A description to help you identify this destination. This field is optional.
@@ -164,7 +164,7 @@ In the mapping step of the activation workflow, map your account fields to the f
 
 {style="table-layout:auto"}
 
-![The Mapping step of the activation workflow in Experience Platform, with account fields mapped to the externalId, country, domain, and name target fields and to the primaryId identity.](../../assets/catalog/advertising/6sense-segments/6sense-segments-mapping.png "Map attributes and identities"){zoomable="yes"}
+![The Mapping step of the activation workflow in Experience Platform, with account fields mapped to the externalId, country, domain, and name target fields and to the primaryId identity.](../../assets/catalog/advertising/6sense-segments/6sense-segments-mapping.png "Map attributes and identities"){width="750" zoomable="yes"}
 
 Your organization can use the standard B2B schema or a custom schema, so your source field names can differ. Confirm which fields your organization populates before you map them. If you map a field with no data, [!DNL 6sense] cannot use it to match the account. For field definitions, see the [account details data type reference](/help/xdm/data-types/account-details.md).
 
@@ -174,7 +174,7 @@ On first activation, [!DNL 6sense] creates a segment from the audience and adds 
 
 To validate the export, open the **[!UICONTROL Segments]** tool in [!DNL 6sense] and select the **[!UICONTROL Segments]** tab. Locate the segment named after your audience, and then open it. The **[!UICONTROL Accounts]** tab lists the matched accounts.
 
-![The Accounts tab of a segment in the 6sense Segments tool, listing the matched accounts from an Experience Platform audience.](../../assets/catalog/advertising/6sense-segments/6sense-segments-validate-segment.png "Validate the segment in 6sense"){zoomable="yes"}
+![The Accounts tab of a segment in the 6sense Segments tool, listing the matched accounts from an Experience Platform audience.](../../assets/catalog/advertising/6sense-segments/6sense-segments-validate-segment.png "Validate the segment in 6sense"){width="750" zoomable="yes"}
 
 [!DNL 6sense] processes requests asynchronously and matches accounts in the segment during its nightly refresh. Accounts that Experience Platform sends during the day appear as matched accounts after the next nightly refresh.
 

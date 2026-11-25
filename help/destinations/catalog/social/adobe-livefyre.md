@@ -26,7 +26,7 @@ Adobe Livefyre is a social extension in [!DNL Adobe Experience Platform]. For mo
 
 This destination is a tag extension. For more information about how tags extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Adobe Livefyre extension](../../assets/catalog/social/adobe-livefyre/catalog.png)
+![Adobe Livefyre extension](../../assets/catalog/social/adobe-livefyre/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

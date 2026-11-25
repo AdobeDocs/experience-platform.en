@@ -34,7 +34,7 @@ Use [!DNL Adobe Experience Platform] Destination SDK to build destination integr
 
 Follow this documentation to configure, test, and release a productized destination integration with [!DNL Adobe Experience Platform] and list it in the [destinations catalog](/help/destinations/catalog/overview.md). You can also use Destination SDK to build a private custom destination to export data tailored to your needs.
 
-![The Experience Platform destinations catalog, showing a grid of available destination integration cards.](assets/destinations-catalog-overview.png)
+![The Experience Platform destinations catalog, showing a grid of available destination integration cards.](assets/destinations-catalog-overview.png){width="750" zoomable="yes"}
 
 ## Quick start {#quick-start}
 
@@ -133,7 +133,7 @@ As a Destination SDK partner, you can add your productized destination to the [E
 
 As an Experience Platform customer, you can also build a private custom destination to fit your activation needs.
 
-![Overview diagram showing how destination developers interact with Destination SDK and how [!DNL Real-Time CDP] customers benefit from productized and private destinations.](assets/destination-sdk-visual.png)
+![Overview diagram showing how destination developers interact with Destination SDK and how [!DNL Real-Time CDP] customers benefit from productized and private destinations.](assets/destination-sdk-visual.png){width="750" zoomable="yes"}
 
 ## Supported integration types {#supported-integration-types}
 

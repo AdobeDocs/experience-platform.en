@@ -100,15 +100,15 @@ When exporting *datasets*, Experience Platform creates a `.parquet` or `.json` f
 
 To connect Experience Platform to [!DNL Google Cloud Storage], you must first enable interoperability for your [!DNL Google Cloud Storage] account. To access the interoperability setting, open [!DNL Google Cloud Platform] and select **[!UICONTROL Settings]** from the **[!UICONTROL Cloud Storage]** option in the navigation panel.
 
-![Google Cloud Platform dashboard with Cloud Storage and Settings highlighted.](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
+![Google Cloud Platform dashboard with Cloud Storage and Settings highlighted.](../../../sources/images/tutorials/create/google-cloud-storage/nav.png){width="750" zoomable="yes"}
 
 The **[!UICONTROL Settings]** page appears. From here, you can see information regarding your [!DNL Google] project ID and details about your [!DNL Google Cloud Storage] account. To access interoperability settings, select **[!UICONTROL Interoperability]** from the top header.
 
-![The Interoperability tab highlighted in the Google Cloud Platform dashboard.](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
+![The Interoperability tab highlighted in the Google Cloud Platform dashboard.](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png){width="750" zoomable="yes"}
 
 The **[!UICONTROL Interoperability]** page contains information on authentication, access keys, and the default project associated with your service account. To generate a new access key ID and a secret access key for your service account, select **[!UICONTROL Create a Key for a Service Account]**.
 
-![The Create a key for a service account control highlighted in the Google Cloud Platform dashboard.](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
+![The Create a key for a service account control highlighted in the Google Cloud Platform dashboard.](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png){width="750" zoomable="yes"}
 
 You can use your newly generated access key ID and secret access key to connect your [!DNL Google Cloud Storage] account to Experience Platform.
 
@@ -128,7 +128,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 * **[!UICONTROL Secret access key]**: A 40-character, base64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Experience Platform. For information on how to obtain this value, read the [prerequisites](#prerequisites) section above.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
-    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png){zoomable="yes"}
 
 For more information about these values, read the [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. For steps on how to generate your own access key ID and secret access key, see the [[!DNL Google Cloud Storage] source overview](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 

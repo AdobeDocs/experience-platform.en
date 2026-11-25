@@ -219,7 +219,7 @@ The new **[!UICONTROL Mapping]** page has the following known limitations:
 
 Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.seg_namespace.seg_id.status` to your file exports. Instead, you need to manually paste the value `xdm: segmentMembership.seg_namespace.seg_id.status` into the schema field, as shown below.
 
-![Screen recording showing the audience membership workaround in the mapping step of the activation workflow.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif){zoomable="yes"}
+![Screen recording showing the audience membership workaround in the mapping step of the activation workflow.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif){width="750" zoomable="yes"}
 
 >[!NOTE]
 >
@@ -239,7 +239,7 @@ Read more about [profile export behavior for file-based destinations](/help/dest
 
 Selecting identity namespaces for export, as shown in the image below, is currently not supported. Selecting any identity namespaces for export will result in an error in the **[!UICONTROL Review]** step.
 
-![Unsupported mapping showing identity exports.](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png){zoomable="yes"}
+![Unsupported mapping showing identity exports.](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png){width="750" zoomable="yes"}
 
 As a temporary workaround if you need to add identity namespaces to your exported files during the beta, you can either:
 

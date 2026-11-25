@@ -48,7 +48,7 @@ This tutorial demonstrates how to use the Flow Service API to create a file-base
 
 This tutorial uses the [!DNL Adobe Campaign] destination in all examples, but the steps are identical for file-based email marketing destinations.
 
-![Overview - the steps to create a destination and activate audiences](../assets/api/email-marketing/overview.png)
+![Overview - the steps to create a destination and activate audiences](../assets/api/email-marketing/overview.png){width="750" zoomable="yes"}
 
 If you prefer to use the Experience Platform user interface to connect to a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md) tutorials.
 
@@ -105,7 +105,7 @@ You can find accompanying reference documentation for all the API operations in 
 
 ## Get the list of available destinations {#get-the-list-of-available-destinations}
 
-![Destination steps overview step 1](../assets/api/batch-destination/step1.png)
+![Destination steps overview step 1](../assets/api/batch-destination/step1.png){width="750" zoomable="yes"}
 
 As a first step, you should decide which destination to activate data to. To begin with, perform a call to request a list of available destinations that you can connect and activate audiences to. Perform the following GET request to the `connectionSpecs` endpoint to return a list of available destinations:
 
@@ -153,7 +153,7 @@ For your reference, the table below contains the connection spec IDs for commonl
 
 ## Connect to your [!DNL Experience Platform] data {#connect-to-your-experience-platform-data}
 
-![Destination steps overview step 2](../assets/api/batch-destination/step2.png)
+![Destination steps overview step 2](../assets/api/batch-destination/step2.png){width="750" zoomable="yes"}
 
 Next, you must connect to your [!DNL Experience Platform] data, so you can export profile data and activate it in your preferred destination. This consists of two substeps which are described below.
 
@@ -260,7 +260,7 @@ A successful response returns the unique identifier (`id`) for the newly created
 
 ## Connect to batch destination {#connect-to-batch-destination}
 
-![Destination steps overview step 3](../assets/api/batch-destination/step3.png)
+![Destination steps overview step 3](../assets/api/batch-destination/step3.png){width="750" zoomable="yes"}
 
 In this step, you are setting up a connection to your desired batch cloud storage or email marketing destination. This consists of two substeps which are described below.
 
@@ -894,7 +894,7 @@ A successful response returns the unique identifier (`id`) for the newly created
 
 ## Create a dataflow {#create-dataflow}
 
-![Destination steps overview step 4](../assets/api/batch-destination/step4.png)
+![Destination steps overview step 4](../assets/api/batch-destination/step4.png){width="750" zoomable="yes"}
 
 Using the flow spec, source connection, and target connection IDs that you obtained in the previous steps, you can now create a dataflow between your [!DNL Experience Platform] data and the destination where you will export data files. Think of this step as constructing the pipeline through which data will later flow between [!DNL Experience Platform] and your desired destination.
 
@@ -977,7 +977,7 @@ A successful response returns the ID (`id`) of the newly created dataflow and an
 
 ## Activate data to your new destination {#activate-data}
 
-![Destination steps overview step 5](../assets/api/batch-destination/step5.png)
+![Destination steps overview step 5](../assets/api/batch-destination/step5.png){width="750" zoomable="yes"}
 
 Having created all the connections and the dataflow, you now can activate your profile data to the destination platform. In this step, you select which audiences and which profile attributes to export to the destination.
 
@@ -1086,7 +1086,7 @@ Look for a 202 Accepted response. No response body is returned. To validate that
 
 ## Validate the dataflow {#validate-dataflow}
 
-![Destination steps overview step 6](../assets/api/batch-destination/step6.png)
+![Destination steps overview step 6](../assets/api/batch-destination/step6.png){width="750" zoomable="yes"}
 
 As a final step in the tutorial, you should validate that the audiences and profile attributes have indeed been correctly mapped to the dataflow.
 

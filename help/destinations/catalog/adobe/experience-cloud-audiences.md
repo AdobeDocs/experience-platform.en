@@ -53,7 +53,7 @@ To send audiences to other Adobe solutions, use the direct connections from [!DN
 > 
 >If you are already sharing audiences from [!DNL Real-Time CDP] to Audience Manager and other CX Enterprise solutions via the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), you must contact Customer Care to disable the legacy integration before using this destination.
 
-![The Experience Cloud Audiences destination, highlighted in the destinations catalog.](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
+![The Experience Cloud Audiences destination, highlighted in the destinations catalog.](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png){width="750" zoomable="yes"}
 
 ## Use cases and benefits {#use-cases}
 
@@ -190,13 +190,13 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, select **[!UICONTROL Set up]** in the destination card view in the catalog and select **[!UICONTROL Connect to destination]**.
 
-![View of the Connect to destination option for the Experience Cloud Audiences destination.](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-authenticate-to-destination.png)
+![View of the Connect to destination option for the Experience Cloud Audiences destination.](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-authenticate-to-destination.png){width="750" zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Configure new destination screen showing the required and optional settings to connect to the Experience Cloud Audiences destination.](../..//assets/catalog/adobe/experience-cloud-audiences/connect-to-destination.png)
+![Configure new destination screen showing the required and optional settings to connect to the Experience Cloud Audiences destination.](../..//assets/catalog/adobe/experience-cloud-audiences/connect-to-destination.png){width="750" zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.

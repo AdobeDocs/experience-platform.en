@@ -123,7 +123,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 After establishing the authentication connection to [!DNL Amazon S3], provide the following information for the destination:
 
-![Image of the UI screen showing completed fields for the Pega Profile Connector destination details](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
+![Image of the UI screen showing completed fields for the Pega Profile Connector destination details](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png){width="500" zoomable="yes"}
 
 To configure details for the destination, fill in the required fields and select **[!UICONTROL Next]**. An asterisk next to a field in the UI indicates that the field is required.
 
@@ -161,10 +161,10 @@ In the **[!UICONTROL Mapping]** step, you can select which attribute and identit
 For [!DNL Pega Profile Connector] destinations, [!DNL Experience Platform] creates a `.csv` file in Amazon S3 storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the audience activation tutorial.
 
 A successful import of profile data from S3 inserts data in the [!DNL Pega Customer] profile datastore. The imported customer profile data can be validated in [!DNL Pega Customer Profile Designer] , as shown in the following figure.
-![Image of the UI screen where you can validate Adobe profile data in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
+![Image of the UI screen where you can validate Adobe profile data in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png){width="750" zoomable="yes"}
 
 In [!DNL Pega Customer Decision Hub], data administrators can configure data jobs in [!DNL Customer Profile Designer] to import profile data periodically from S3 as shown in the following figure. See the [additional resources](#additional-resources) for more information about how to configure data jobs to import profile data from [!DNL Amazon S3].
-![Image of the UI screen to configure data jobs in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
+![Image of the UI screen to configure data jobs in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png){width="750" zoomable="yes"}
 
 ## Additional resources {#additional-resources}
 

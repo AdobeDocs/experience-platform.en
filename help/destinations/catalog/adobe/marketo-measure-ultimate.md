@@ -132,7 +132,7 @@ To configure details for the destination, fill in the following required and opt
 * **[!UICONTROL Name]**: A name to identify this destination later.
 * **[!UICONTROL Description]**: A description to help you identify this destination later.
 
-![The Configure new destination screen for Marketo Measure, showing a connected Marketo Measure account, the Name and Description fields, and the alert options.](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
+![The Configure new destination screen for Marketo Measure, showing a connected Marketo Measure account, the Name and Description fields, and the alert options.](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png){width="750" zoomable="yes"}
 
 ### Enable alerts {#enable-alerts}
 

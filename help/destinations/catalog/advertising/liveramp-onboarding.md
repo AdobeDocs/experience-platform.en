@@ -92,7 +92,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 **SFTP authentication with password** {#sftp-password}
 
-![Sample screenshot showing how to authenticate to the destination using SFTP with password](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
+![Sample screenshot showing how to authenticate to the destination using SFTP with password](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png){width="400" zoomable="yes"}
 
 * **[!UICONTROL Port]**: The port used for your [!DNL LiveRamp - Onboarding] storage location.  Use the port that corresponds to your geographical location, as described below:
   * **[!UICONTROL NA]**: Use port `22`
@@ -100,12 +100,12 @@ To authenticate to the destination, fill in the required fields and select **[!U
 * **[!UICONTROL Username]**: The username for your [!DNL LiveRamp - Onboarding] storage location.
 * **[!UICONTROL Password]**: The password for your [!DNL LiveRamp - Onboarding] storage location.
 * **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
-    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png){zoomable="yes"}
 * **[!UICONTROL Subkey ID]**:If you provide an encryption key, you must also provide an encryption **[!UICONTROL Subkey ID]**. See the [!DNL LiveRamp] [encryption documentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) to learn how to obtain the subkey ID.
 
 **SFTP with SSH key authentication** {#sftp-ssh}
 
-![Sample screenshot showing how to authenticate to the destination using SSH key](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
+![Sample screenshot showing how to authenticate to the destination using SSH key](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png){width="400" zoomable="yes"}
 
 * **[!UICONTROL Port]**: The port used for your [!DNL LiveRamp - Onboarding] storage location.  Use the port that corresponds to your geographical location, as described below:
   * **[!UICONTROL EU]**: Use port `4222` 
@@ -115,7 +115,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
     * To connect your [!DNL SSH] key to the [!DNL LiveRamp - Onboarding] server, you must submit a ticket through [!DNL LiveRamp]'s technical support portal, and provide your public key. See more information in the [LiveRamp documentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
 
 * **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
-    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png){zoomable="yes"}
 * **[!UICONTROL Subkey ID]**:If you provide an encryption key, you must also provide an encryption **[!UICONTROL Subkey ID]**. See the [!DNL LiveRamp] [encryption documentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) to learn how to obtain the subkey ID.
 
 ### Fill in destination details {#destination-details}
@@ -128,7 +128,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Experience Platform UI screenshot showing how to fill in details for your destination](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
+![Experience Platform UI screenshot showing how to fill in details for your destination](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png){zoomable="yes"}
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -159,13 +159,13 @@ In the [!UICONTROL Scheduling] step, create an export schedule for each audience
 * **[!UICONTROL Frequency]**: [!UICONTROL Once], [!UICONTROL Daily], [!UICONTROL Weekly], or [!UICONTROL Monthly]
 * **[!UICONTROL Date]**: Select the export start and end times as you wish.
 
-![Experience Platform UI screenshot showing the audience scheduling step.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
+![Experience Platform UI screenshot showing the audience scheduling step.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png){zoomable="yes"}
 
 The exported file name is currently not user-configurable. All files exported to the [!DNL LiveRamp - Onboarding] destination are automatically named based on the following template:
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![Experience Platform UI screenshot showing the exported file name template.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
+![Experience Platform UI screenshot showing the exported file name template.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png){zoomable="yes"}
 
 For example, the name of an exported file for an organization named [!DNL Luma] could look similar to this:
 
@@ -189,19 +189,19 @@ In the **[!UICONTROL Mapping]** step, the **[!UICONTROL Target field]** mapping 
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 
-    ![Experience Platform UI screeshot showing the Mapping screen.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-add-new-mapping.png)
+    ![Experience Platform UI screeshot showing the Mapping screen.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-add-new-mapping.png){width="750" zoomable="yes"}
 
 2. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute that you want to map, or choose the **[!UICONTROL Select identity namespace]** category and select an identity to map to your destination.
     
-    ![Experience Platform UI screeshot showing the source Mapping screen.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png)
+    ![Experience Platform UI screeshot showing the source Mapping screen.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png){width="500" zoomable="yes"}
 
 3. In the **[!UICONTROL Select target field]** window, enter the attribute name that you want to map the selected source field to. The attribute name defined here will reflect in the exported CSV file as a column header.
 
-    ![Experience Platform UI screeshot showing the target Mapping screen.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-mapping.png)
+    ![Experience Platform UI screeshot showing the target Mapping screen.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-mapping.png){width="750" zoomable="yes"}
     
     You can also input the attribute name by typing it directly into the **[!UICONTROL Target field]**.
     
-    ![Experience Platform UI screeshot showing the target Mapping screen.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-field.png)
+    ![Experience Platform UI screeshot showing the target Mapping screen.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-field.png){width="750" zoomable="yes"}
 
 Once you've added all your desired mappings, select **[!UICONTROL Next]** and finish the activation workflow.
 
@@ -258,7 +258,7 @@ This means that the **[!UICONTROL Identities activated]** and **[!UICONTROL Prof
 
 As a consequence of dataflow runs being generated for a group of audiences that use the same merge policy, the audience names are not displayed in the [monitoring dashboard](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
-![Experience Platform UI screeshot showing the identities activated metric.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-metrics.png)
+![Experience Platform UI screeshot showing the identities activated metric.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-metrics.png){width="750" zoomable="yes"}
 
 ## Upload exported data to LiveRamp {#upload-to-liveramp}
 

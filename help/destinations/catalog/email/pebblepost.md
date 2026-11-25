@@ -40,7 +40,7 @@ topic_v2:
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![PebblePost Extension](../../assets/catalog/email/pebblepost/catalog.png)
+![PebblePost Extension](../../assets/catalog/email/pebblepost/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

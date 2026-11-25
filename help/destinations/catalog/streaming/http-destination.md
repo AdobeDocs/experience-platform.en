@@ -165,7 +165,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 If you select the **[!UICONTROL Bearer token]** authentication type to connect to your HTTP endpoint, enter the information below and select **[!UICONTROL Connect to destination]**:
 
-![The HTTP API authentication screen with the [!UICONTROL Bearer token] field.](../../assets/catalog/http/http-api-authentication-bearer.png)
+![The HTTP API authentication screen with the [!UICONTROL Bearer token] field.](../../assets/catalog/http/http-api-authentication-bearer.png){width="750" zoomable="yes"}
 
 * **[!UICONTROL Bearer token]**: Enter the bearer token to authenticate to your HTTP location.
 
@@ -173,7 +173,7 @@ If you select the **[!UICONTROL Bearer token]** authentication type to connect t
 
 If you select the **[!UICONTROL None]** authentication type to connect to your HTTP endpoint:
 
-![The HTTP API authentication screen with the [!UICONTROL None] authentication type selected.](../../assets/catalog/http/http-api-authentication-none.png)
+![The HTTP API authentication screen with the [!UICONTROL None] authentication type selected.](../../assets/catalog/http/http-api-authentication-none.png){width="750" zoomable="yes"}
 
 When you select this authentication option, you only need to select **[!UICONTROL Connect to destination]** and the connection to your endpoint is established.
 
@@ -181,7 +181,7 @@ When you select this authentication option, you only need to select **[!UICONTRO
 
 If you select the **[!UICONTROL OAuth 2 Password]** authentication type to connect to your HTTP endpoint, enter the information below and select **[!UICONTROL Connect to destination]**:
 
-![The HTTP API authentication screen with [!UICONTROL OAuth 2 Password] fields.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![The HTTP API authentication screen with [!UICONTROL OAuth 2 Password] fields.](../../assets/catalog/http/http-api-authentication-oauth2-password.png){width="750" zoomable="yes"}
 
 * **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens.
 * **[!UICONTROL Client ID]**: The `client ID` that your system assigns to Adobe Experience Platform.
@@ -193,7 +193,7 @@ If you select the **[!UICONTROL OAuth 2 Password]** authentication type to conne
 
 If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication type to connect to your HTTP endpoint, enter the information below and select **[!UICONTROL Connect to destination]**:
 
-![The HTTP API authentication screen with [!UICONTROL OAuth 2 Client Credentials] fields.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![The HTTP API authentication screen with [!UICONTROL OAuth 2 Client Credentials] fields.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png){width="750" zoomable="yes"}
 
 >[!WARNING]
 >
@@ -241,7 +241,7 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![The HTTP API destination details screen with completed fields.](../../assets/catalog/http/http-api-destination-details.png)
+![The HTTP API destination details screen with completed fields.](../../assets/catalog/http/http-api-destination-details.png){zoomable="yes"}
 
 * **[!UICONTROL Name]**: Enter a name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: Enter a description that will help you identify this destination in the future.
@@ -297,7 +297,7 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 For example, consider this dataflow to an HTTP destination where three audiences are selected in the dataflow, and four attributes are mapped to the destination.
 
-![An example of an HTTP API destination dataflow.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![An example of an HTTP API destination dataflow.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png){width="750" zoomable="yes"}
 
 A profile export to the destination is triggered when a profile qualifies for or exits one of the *three mapped audiences*. When the **[!UICONTROL Include mapped audiences only]** option is turned on, the `segmentMembership` object (see [Exported Data](#exported-data) below) includes only the three mapped audiences. When this option is turned off, the `segmentMembership` object can also include unmapped audiences, if that profile is a member of them and they share the same merge policy as the audience that triggered the export. For example, if a profile qualifies for the **Customer with DeLorean Cars** audience but is also a member of the **Watched "Back to the Future"** movie and **Science fiction fans** audiences, those two audiences also appear in the `segmentMembership` object when **[!UICONTROL Include mapped audiences only]** is turned off, provided they share the same merge policy with the **Customer with DeLorean Cars** audience.
 

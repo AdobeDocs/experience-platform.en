@@ -46,13 +46,13 @@ To activate audiences to destinations, you must have successfully [connected to 
 
 1. Go to **[!UICONTROL Connections > Destinations]**, select the **[!UICONTROL Catalog]** tab, then select **[!UICONTROL Activate audiences]** on the card corresponding to the destination where you want to activate your audiences.
 
-    ![Destination Catalog tab with the Activate audiences control highlighted on a destination card.](../assets/ui/activate-segment-streaming-destinations/select-destination-and-activate.png){zoomable="yes"}
+    ![Destination Catalog tab with the Activate audiences control highlighted on a destination card.](../assets/ui/activate-segment-streaming-destinations/select-destination-and-activate.png){width="750" zoomable="yes"}
 
 1. (Optional) Use the search box to find a destination connection by name, or use the filters to narrow down the results based on your preferred criteria. Select **[!UICONTROL Hide filters]** to collapse the filters panel.
 
 1. Select the checkbox next to the destination connection that you want to use to activate your audiences, then select **[!UICONTROL Next]**.
 
-    ![Search box and filters panel highlighted above and beside the list of destination connections, with a destination connection selected in the Select destination step.](../assets/ui/activate-segment-streaming-destinations/select-destination.png){zoomable="yes"}
+    ![Search box and filters panel highlighted above and beside the list of destination connections, with a destination connection selected in the Select destination step.](../assets/ui/activate-segment-streaming-destinations/select-destination.png){width="750" zoomable="yes"}
 
 1. Move to the next section to [select your audiences](#select-audiences).
 
@@ -66,7 +66,7 @@ Use the search box to find an audience by name, or use the filters to narrow dow
 >
 >You can filter by the same tags you use on the audience browse screen. Any tags you added to an audience there carry over to this screen.
 
-![Search box and filters panel highlighted above and beside the list of audiences, with the checkbox for one audience selected and the Next button highlighted.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png){zoomable="yes"}
+![Search box and filters panel highlighted above and beside the list of audiences, with the checkbox for one audience selected and the Next button highlighted.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png){width="750" zoomable="yes"}
 
 You can select from multiple types of audiences, depending on their origin:
 
@@ -81,17 +81,17 @@ You can select from multiple types of audiences, depending on their origin:
 >This step only applies to some audience streaming destinations. If your destination does not have a **[!UICONTROL Mapping]** step, skip to [audience scheduling](#scheduling).
 >
 >When activating audiences to streaming destinations, you must also map *at least one target identity namespace*, in addition to target profile attributes. Otherwise, the audiences will not be activated to the destination platform.
->![Mapping page showing a mandatory identity namespace mapping already present between IdentityMap: Email and Identity: email_lc_sha256.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png){zoomable="yes"}
+>![Mapping page showing a mandatory identity namespace mapping already present between IdentityMap: Email and Identity: email_lc_sha256.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png){width="750" zoomable="yes"}
 
 Some audience streaming destinations require you to select source attributes or identity namespaces to map as target identities in the destination.
 
 1. In the **[!UICONTROL Mapping]** page, select **[!UICONTROL Add new mapping]**.
 
-    ![Add new mapping control highlighted above the existing identity mapping.](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png){zoomable="yes"}
+    ![Add new mapping control highlighted above the existing identity mapping.](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png){width="750" zoomable="yes"}
 
 1. Select the arrow to the right of the **[!UICONTROL Source field]** entry.
 
-    ![Select source field arrow highlighted next to an empty source field entry.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png){zoomable="yes"}
+    ![Select source field arrow highlighted next to an empty source field entry.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png){width="750" zoomable="yes"}
 
 1. In the **[!UICONTROL Select source field]** page, use the **[!UICONTROL Select attributes]** or the **[!UICONTROL Select identity namespace]** options to switch between the two categories of available source fields. From the available [!DNL XDM] profile attributes and identity namespaces, select the ones that you want to map to the destination, then choose **[!UICONTROL Select]**.
 
@@ -101,15 +101,15 @@ Some audience streaming destinations require you to select source attributes or 
 
     Use the **[!UICONTROL Show display names for fields]** toggle to display the friendly names for fields, instead of the schema field names.
 
-    ![Select source field page showing the Select attributes and Select identity namespace toggle, the search box, the display toggles, and a selected source field.](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png){zoomable="yes"}
+    ![Select source field page showing the Select attributes and Select identity namespace toggle, the search box, the display toggles, and a selected source field.](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png){width="750" zoomable="yes"}
 
 1. Select the button to the right of the **[!UICONTROL Target field]** entry.
 
-    ![Select target field button highlighted next to an empty target field entry.](../assets/ui/activate-segment-streaming-destinations/select-target-field.png){zoomable="yes"}
+    ![Select target field button highlighted next to an empty target field entry.](../assets/ui/activate-segment-streaming-destinations/select-target-field.png){width="750" zoomable="yes"}
 
 1. In the **[!UICONTROL Select target field]** page, select the target identity namespace that you want to map the source field to, and choose **[!UICONTROL Select]**.
 
-    ![Select target field page showing the search box, a selected target field, and the Save button.](../assets/ui/activate-segment-streaming-destinations/target-field-page.png){zoomable="yes"}
+    ![Select target field page showing the search box, a selected target field, and the Save button.](../assets/ui/activate-segment-streaming-destinations/target-field-page.png){width="750" zoomable="yes"}
 
 1. To add more mappings, repeat steps 1 to 5.
 
@@ -122,7 +122,7 @@ Some audience streaming destinations require you to select source attributes or 
 
 When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have [!DNL Adobe Experience Platform] automatically hash the source attributes on activation.
 
-![Apply transformation control highlighted in the Identity mapping step.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png){zoomable="yes"}
+![Apply transformation control highlighted in the Identity mapping step.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png){width="750" zoomable="yes"}
 
 ## Schedule audience export {#scheduling}
 
@@ -133,23 +133,23 @@ When you are mapping unhashed source attributes to target attributes that the de
 
 By default, **[!UICONTROL New audiences]** is selected on the **[!UICONTROL Audience schedule]** page, showing only the audiences you selected in the current activation flow. Select **[!UICONTROL Activated audiences]** to see the audiences already activated to this destination from previous activation flows.
 
-![New audiences and Activated audiences toggle highlighted above the audience schedule table.](../assets/ui/activate-segment-streaming-destinations/all-audiences.png){zoomable="yes"}
+![New audiences and Activated audiences toggle highlighted above the audience schedule table.](../assets/ui/activate-segment-streaming-destinations/all-audiences.png){width="750" zoomable="yes"}
 
 1. On the **[!UICONTROL Audience schedule]** page, select an audience to open its schedule panel, then use the **[!UICONTROL Start date]** and **[!UICONTROL End date]** fields to configure the time interval for sending data to your destination.
 
-    ![Audience row selected, opening a schedule panel with the Start date and End date fields highlighted.](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png){zoomable="yes"}
+    ![Audience row selected, opening a schedule panel with the Start date and End date fields highlighted.](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png){width="750" zoomable="yes"}
 
     * Some destinations require you to select the **[!UICONTROL Origin of audience]** for each audience, using the drop-down menu underneath the date fields. If your destination does not include this field, skip this step.
 
-        ![Origin of audience field highlighted with its drop-down menu open, showing the Directly from customers, Customers and partners, and Directly from partners options.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png){zoomable="yes"}
+        ![Origin of audience field highlighted with its drop-down menu open, showing the Directly from customers, Customers and partners, and Directly from partners options.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png){width="750" zoomable="yes"}
 
     * Some destinations require you to manually map [!DNL Experience Platform] audiences to their counterpart in the target destination. To do this, select each audience, then enter the corresponding audience ID from the destination platform in the **[!UICONTROL Mapping ID]** field. If your destination does not include this field, skip this step.
 
-        ![Mapping ID field highlighted in the audience schedule panel.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png){zoomable="yes"}
+        ![Mapping ID field highlighted in the audience schedule panel.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png){width="750" zoomable="yes"}
 
     * Some destinations require you to enter an **[!UICONTROL App ID]** when activating [!DNL IDFA] or [!DNL GAID] audiences. If your destination does not include this field, skip this step.
 
-        ![App ID field highlighted in the audience schedule panel.](../assets/ui/activate-segment-streaming-destinations/destination-appid.png){zoomable="yes"}
+        ![App ID field highlighted in the audience schedule panel.](../assets/ui/activate-segment-streaming-destinations/destination-appid.png){width="500" zoomable="yes"}
 
 1. Select **[!UICONTROL Next]** to go to the [!UICONTROL Review] page.
 
@@ -157,7 +157,7 @@ By default, **[!UICONTROL New audiences]** is selected on the **[!UICONTROL Audi
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
-![Connection and audience summary cards highlighted in the review step.](../assets/ui/activate-segment-streaming-destinations/review.png){zoomable="yes"}
+![Connection and audience summary cards highlighted in the review step.](../assets/ui/activate-segment-streaming-destinations/review.png){width="750" zoomable="yes"}
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
@@ -167,13 +167,13 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 In the **[!UICONTROL Review]** step, Experience Platform also checks for any data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the audience activation workflow until you have resolved the violation. For information on how to resolve policy violations, read about [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in the data governance documentation section.
  
-![An example of a data policy violation shown in the activation workflow.](../assets/common/data-policy-violation.png)
+![An example of a data policy violation shown in the activation workflow.](../assets/common/data-policy-violation.png){width="500" zoomable="yes"}
 
 ### Filter audiences {#filter-audiences}
 
 By default, **[!UICONTROL New audiences]** is selected, showing only the audiences you selected in the current activation flow. Select **[!UICONTROL Activated audiences]** to see the audiences already activated to this destination from previous activation flows. Select the **[!UICONTROL Toggle columns]** icon to choose which table columns you want to see.
 
-![New audiences and Activated audiences toggle and the Toggle columns icon highlighted above the audience table in the review step.](../assets/ui/activate-segment-streaming-destinations/filter-audiences-review-step.png){zoomable="yes"}
+![New audiences and Activated audiences toggle and the Toggle columns icon highlighted above the audience table in the review step.](../assets/ui/activate-segment-streaming-destinations/filter-audiences-review-step.png){width="750" zoomable="yes"}
 
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 

@@ -82,11 +82,11 @@ The first step in deleting a destination account is to find out the connection I
 
 In the Experience Platform UI, browse to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]** and select the account that you want to delete by selecting the number in the **[!UICONTROL Destinations]** column.
 
-![Select destination account to delete](/help/destinations/assets/api/delete-destination-account/select-destination-account.png)
+![Select destination account to delete](/help/destinations/assets/api/delete-destination-account/select-destination-account.png){width="750" zoomable="yes"}
 
 Next, you can retrieve the connection ID of the destination account from the URL in your browser.
 
-![Retrieve connection ID from URL](/help/destinations/assets/api/delete-destination-account/find-connection-id.png)
+![Retrieve connection ID from URL](/help/destinations/assets/api/delete-destination-account/find-connection-id.png){width="750" zoomable="yes"}
 
 ## Delete connection {#delete-connection}
 

@@ -48,7 +48,7 @@ The Adobe Exchange team provides you with your sandbox name, which you are requi
 
 To use the Destination SDK API endpoints described in the [reference documentation](functionality/configuration-options.md), you need the **[!UICONTROL Destination Authoring]** access control permission. Work with the Adobe Exchange team to get this permission assigned to you in [Adobe Admin Console](https://adminconsole.adobe.com/). 
 
-![Destination Authoring permission](./assets/destination-authoring-permission.png)
+![Destination Authoring permission](./assets/destination-authoring-permission.png){width="750" zoomable="yes"}
 
 For more information, read the following Experience Platform Access Control documents:
 

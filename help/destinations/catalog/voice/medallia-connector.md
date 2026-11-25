@@ -122,7 +122,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 * **[!UICONTROL Client ID]**: Obtain from your Medallia delivery team.
 * **[!UICONTROL Client Secret]**: Obtain from your Medallia delivery team.
 
-![Image showing the authentication screen for this destination.](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
+![Image showing the authentication screen for this destination.](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png){zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
@@ -133,7 +133,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL API Gateway URL]**: Obtain from your Medallia delivery team. Typically takes the form of https://instance-tenant.apis.medallia.com.
 * **[!UICONTROL Import API Name]**: Obtain from your Medallia delivery team. Name of the Medallia Import API (also known as Web Feed) to be used in this connection. You can activate different audiences to different Import APIs to trigger different survey programs.
 
-![Image showing the destination details screen for this destination.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
+![Image showing the destination details screen for this destination.](/help/destinations/assets/catalog/voice/medallia-destination-details.png){zoomable="yes"}
 
 ### Enable alerts {#enable-alerts}
 
@@ -166,7 +166,7 @@ It is strongly recommended that you also map additional target custom attributes
 
 * Add mappings for any other target custom attributes as desired
 
-![Image showing a sample mapping for identities and attributes.](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
+![Image showing a sample mapping for identities and attributes.](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png){width="750" zoomable="yes"}
 
 >[!IMPORTANT]
 >

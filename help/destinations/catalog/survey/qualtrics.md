@@ -44,7 +44,7 @@ Create and deploy highly-targeted, branded web messages within minutes using an 
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Qualtrics Website Feedback Extension](../../assets/catalog/survey/qualtrics/catalog.png)
+![Qualtrics Website Feedback Extension](../../assets/catalog/survey/qualtrics/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

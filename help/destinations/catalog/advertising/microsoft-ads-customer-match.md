@@ -153,7 +153,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * **[!UICONTROL Membership Duration]**: The number of days a user remains in the customer match list. Accepted values are between 1 and 390 days.
 * **[!UICONTROL Customer Match List Availability]**: Select the availability of the customer match list. In [!DNL Microsoft Advertising], a Customer ID can have multiple Customer Account IDs (advertiser accounts) under it. Select **[!UICONTROL Customer ID (all advertising accounts)]** to make the list available across all advertiser accounts under your Customer ID, or **[!UICONTROL Customer Account ID (single advertising account)]** to restrict the list to the specific Customer Account ID you provided above. See the [Microsoft Advertising documentation](https://help.ads.microsoft.com/apex/index/3/en/56727) for more details.
 
-    ![Platform UI image showing the destination details fields for the Microsoft Ads Customer Match destination.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
+    ![Platform UI image showing the destination details fields for the Microsoft Ads Customer Match destination.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png){zoomable="yes"}
 
 The [!DNL Microsoft Advertising] campaign URL contains several similar identifiers. The following anonymized example URL shows which value maps to each field:
 
@@ -217,25 +217,25 @@ The following examples show supported mappings, where the source field format ma
 
 Map the `IdentityMap: Email` namespace, which contains plain text email addresses, to the `email` target field.
 
-![Mapping step showing the IdentityMap Email namespace mapped to the email target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-identity-email.png)
+![Mapping step showing the IdentityMap Email namespace mapped to the email target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-identity-email.png){width="750" zoomable="yes"}
 
 **Hashed identity namespace to `email_lc_sha256`**
 
 Map the `IdentityMap: Email_LC_SHA256` namespace, which contains already-hashed email addresses, to the `email_lc_sha256` target field.
 
-![Mapping step showing the IdentityMap Email LC SHA256 namespace mapped to the email lc sha256 target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-identity-hashed.png)
+![Mapping step showing the IdentityMap Email LC SHA256 namespace mapped to the email lc sha256 target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-identity-hashed.png){width="750" zoomable="yes"}
 
 **Plain text XDM attribute to `email`**
 
 Map a plain text email attribute, such as `personalEmail.address`, to the `email` target field. Experience Platform hashes the values before export.
 
-![Mapping step showing the XDM attribute personalEmail.address mapped to the email target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-attribute.png)
+![Mapping step showing the XDM attribute personalEmail.address mapped to the email target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-attribute.png){width="750" zoomable="yes"}
 
 **Hashed XDM attribute to `email_lc_sha256`**
 
 Map a pre-hashed email attribute to the `email_lc_sha256` target field. Experience Platform sends the values without further transformation.
 
-![Mapping step showing the XDM attribute personalEmail.address.lc_sha256 mapped to the email lc sha256 target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-attribute-hashed.png)
+![Mapping step showing the XDM attribute personalEmail.address.lc_sha256 mapped to the email lc sha256 target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/correct-mapping-attribute-hashed.png){width="750" zoomable="yes"}
 
 >[!ENDSHADEBOX]
 
@@ -249,7 +249,7 @@ Map a pre-hashed email attribute to the `email_lc_sha256` target field. Experien
 
 The following example shows an unsupported mapping. Both source fields, `personalEmail.address` and `IdentityMap: Email`, contain plain text email addresses, but they are mapped to the `email_lc_sha256` target field. [!DNL Microsoft Ads] rejects these values because they are not hashed.
 
-![Mapping step marked Not supported, showing the XDM attribute personalEmail.address and IdentityMap Email both incorrectly mapped to the email lc sha256 target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/incorrect-mapping.png)
+![Mapping step marked Not supported, showing the XDM attribute personalEmail.address and IdentityMap Email both incorrectly mapped to the email lc sha256 target field.](../../assets/catalog/advertising/microsoft-ads-customer-match/incorrect-mapping.png){width="750" zoomable="yes"}
 
 >[!ENDSHADEBOX]
 

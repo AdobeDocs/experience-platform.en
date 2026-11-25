@@ -38,7 +38,7 @@ The [!DNL Quantum Metric] tag extension facilitates codeless deployment of [!DNL
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Quantum Metric Extension](../../assets/catalog/analytics/quantum-metric/catalog.png)
+![Quantum Metric Extension](../../assets/catalog/analytics/quantum-metric/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

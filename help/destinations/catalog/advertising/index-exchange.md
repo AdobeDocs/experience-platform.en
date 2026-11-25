@@ -117,7 +117,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To configure details for the destination, fill in the fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Destination details](../../assets/catalog/advertising/index-exchange/destination-details.png)
+![Destination details](../../assets/catalog/advertising/index-exchange/destination-details.png){zoomable="yes"}
 
 * [!UICONTROL Name]: Enter a name to help you recognize this destination later.
 * [!UICONTROL Description]: Enter a description to help you identify this destination later.
@@ -162,7 +162,7 @@ Selecting target fields:
 
 * Names of target fields are ignored and are not important. The destination only cares about the type of identifier being sent, which is determined by the Identifier Type selected when configuring the destination.
 
-![Map attributes and identities](../../assets/catalog/advertising/index-exchange/identity-mapping.png)
+![Map attributes and identities](../../assets/catalog/advertising/index-exchange/identity-mapping.png){width="750" zoomable="yes"}
 
 ### Register audiences with [!DNL Index] {#register-segments}
 

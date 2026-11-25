@@ -103,11 +103,11 @@ To generate the client credentials, follow these steps:
 1. Select the appropriate product profiles, then select **[!UICONTROL Save configured API]**.
 1. After the API configuration is saved, the connected credentials are generated and a credential is shown.
 
-   ![Adobe Developer Console showing the connected OAuth Server-to-Server credential for the Delta Sharing project.](../../assets/catalog/warehouses/snowflake-delta-sharing/connected-credentials.png){zoomable="yes"}
+   ![Adobe Developer Console showing the connected OAuth Server-to-Server credential for the Delta Sharing project.](../../assets/catalog/warehouses/snowflake-delta-sharing/connected-credentials.png){width="750" zoomable="yes"}
 
 1. Select the **[!UICONTROL OAuth Server-to-Server]** link on the credential card to view the credential details.
 
-   ![Adobe Developer Console credential details screen showing the client ID, scopes, and organization ID for the OAuth Server-to-Server credential.](../../assets/catalog/warehouses/snowflake-delta-sharing/oauth-credential-details.png){zoomable="yes"}
+   ![Adobe Developer Console credential details screen showing the client ID, scopes, and organization ID for the OAuth Server-to-Server credential.](../../assets/catalog/warehouses/snowflake-delta-sharing/oauth-credential-details.png){width="750" zoomable="yes"}
 
 1. Collect the **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]** (shown when you select **[!UICONTROL Retrieve Client Secret]**), and **[!UICONTROL Token Endpoint]**. This is `https://ims-na1.adobelogin.com/ims/token/v3`.
 
@@ -121,7 +121,7 @@ You manage these credentials in the [Adobe Developer Console](https://developer.
 
 In the [!DNL Experience Platform] UI, go to the destinations catalog and search for the **[!UICONTROL Snowflake Delta Sharing]** destination. Select **[!UICONTROL Set up]** on the destination card to start the configuration workflow.
 
-![Destinations catalog search results showing the Snowflake Delta Sharing destination card with the Set up button.](../../assets/catalog/warehouses/snowflake-delta-sharing/catalog-card.png){zoomable="yes"}
+![Destinations catalog search results showing the Snowflake Delta Sharing destination card with the Set up button.](../../assets/catalog/warehouses/snowflake-delta-sharing/catalog-card.png){width="500" zoomable="yes"}
 
 Create the destination connection in [!DNL Adobe Experience Platform] and select the datasets to share. This uses the standard destination activation workflow.
 
@@ -138,7 +138,7 @@ Create the destination connection in [!DNL Adobe Experience Platform] and select
 
 To create the destination connection, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, provide the account and destination details.
 
-![Configure new destination screen showing the account details and destination details fields.](../../assets/catalog/warehouses/snowflake-delta-sharing/configure-destination-details.png){zoomable="yes"}
+![Configure new destination screen showing the account details and destination details fields.](../../assets/catalog/warehouses/snowflake-delta-sharing/configure-destination-details.png){width="400" zoomable="yes"}
 
 Under **[!UICONTROL Account details]**, provide the following, then connect your account:
 
@@ -155,7 +155,7 @@ Under **[!UICONTROL Destination details]**, provide the following:
 
 In the **[!UICONTROL Select datasets]** step, select the datasets that you want to share. Use the search field to find datasets by name. Select the checkbox next to each dataset to add it to the share. The selected datasets appear in the summary panel.
 
-![Select datasets step showing a searchable dataset list with checkboxes and a summary of selected items.](../../assets/catalog/warehouses/snowflake-delta-sharing/select-datasets.png){zoomable="yes"}
+![Select datasets step showing a searchable dataset list with checkboxes and a summary of selected items.](../../assets/catalog/warehouses/snowflake-delta-sharing/select-datasets.png){width="750" zoomable="yes"}
 
 When you are finished, select **[!UICONTROL Next]**.
 
@@ -163,7 +163,7 @@ When you are finished, select **[!UICONTROL Next]**.
 
 In the **[!UICONTROL Review]** step, confirm the connection and dataset selection. The **[!UICONTROL Connection]** card shows the destination name, destination platform, and account. The **[!UICONTROL Setup and dataset selection]** card shows the number of selected datasets and their names.
 
-![Review step showing the connection details and the selected datasets before finishing.](../../assets/catalog/warehouses/snowflake-delta-sharing/review.png){zoomable="yes"}
+![Review step showing the connection details and the selected datasets before finishing.](../../assets/catalog/warehouses/snowflake-delta-sharing/review.png){width="750" zoomable="yes"}
 
 To complete the workflow, select **[!UICONTROL Finish]**. Note the share name that you entered, because you use it again when you configure the Snowflake Native App.
 
@@ -183,11 +183,11 @@ Install the app from the private listing, then run the setup steps that follow.
 
 1. In your [!DNL Snowflake] account, go to **[!UICONTROL Apps]**, then select the **[!UICONTROL Shared with me]** tab to find the [!DNL Adobe Delta Sharing] app.
 
-   ![Snowflake Apps page with the Shared with me tab selected, showing the Adobe Delta Sharing app card.](../../assets/catalog/warehouses/snowflake-delta-sharing/native-app-shared-with-me.png){zoomable="yes"}
+   ![Snowflake Apps page with the Shared with me tab selected, showing the Adobe Delta Sharing app card.](../../assets/catalog/warehouses/snowflake-delta-sharing/native-app-shared-with-me.png){width="750" zoomable="yes"}
 
 1. Select the app card, then select **[!UICONTROL Get]**.
 
-   ![Adobe Delta Sharing app listing page with the Get button to install the app.](../../assets/catalog/warehouses/snowflake-delta-sharing/native-app-get.png){zoomable="yes"}
+   ![Adobe Delta Sharing app listing page with the Get button to install the app.](../../assets/catalog/warehouses/snowflake-delta-sharing/native-app-get.png){width="750" zoomable="yes"}
 
 1. Review the permissions the app uses, then select **[!UICONTROL Agree & continue]**. If prompted, complete your [!DNL Snowflake] user profile and verify your email address, then reload the page and select **[!UICONTROL Get]** again.
 1. Accept the final [!DNL Snowflake Marketplace] agreement, then select **[!UICONTROL Get]** to install the app.
@@ -201,7 +201,7 @@ Install the app from the private listing, then run the setup steps that follow.
 
 On the app page, select the **[!UICONTROL Configurations]** tab. Select **[!UICONTROL Review]** next to each configuration field to enter its value.
 
-![Configurations tab of the Adobe Delta Sharing Snowflake Native App showing the Client ID, Client Secret, IMS Org, and Share Name fields.](../../assets/catalog/warehouses/snowflake-delta-sharing/native-app-configurations.png){zoomable="yes"}
+![Configurations tab of the Adobe Delta Sharing Snowflake Native App showing the Client ID, Client Secret, IMS Org, and Share Name fields.](../../assets/catalog/warehouses/snowflake-delta-sharing/native-app-configurations.png){width="750" zoomable="yes"}
 
 | Field | Value |
 |---------|----------|
@@ -235,7 +235,7 @@ FROM DELTASHAREDB_<ims_org>_<share_name>."<sandbox>"."<dataset>";
 
 The query returns the dataset's columns. Each row also includes the `_ACP_BATCHID` column, which identifies the batch that the record belongs to.
 
-![Snowflake worksheet showing a SELECT query against a shared dataset and the returned rows in the results panel.](../../assets/catalog/warehouses/snowflake-delta-sharing/query-shared-data.png){zoomable="yes"}
+![Snowflake worksheet showing a SELECT query against a shared dataset and the returned rows in the results panel.](../../assets/catalog/warehouses/snowflake-delta-sharing/query-shared-data.png){width="750" zoomable="yes"}
 
 
 ## Best practices {#best-practices}

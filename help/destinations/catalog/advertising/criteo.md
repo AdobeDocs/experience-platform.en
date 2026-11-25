@@ -41,7 +41,7 @@ Criteo powers trusted and impactful advertising to bring richer experiences to e
 * Criteo only accepts [!DNL SHA-256]-hashed and plain-text emails (to be transformed into [!DNL SHA-256] before sending). Please do not send any PII (Personal Identifiable Information, such as individuals' names or phone numbers).
 * Criteo needs at least one identifier to be provided by the client. It prioritizes [!DNL GUM ID] as identifier over hashed email as it contributes to better matching rate.
 
-![Prerequisites](../../assets/catalog/advertising/criteo/prerequisites.png)
+![Prerequisites](../../assets/catalog/advertising/criteo/prerequisites.png){width="750" zoomable="yes"}
 
 ## Supported identities {#supported-identities}
 
@@ -112,22 +112,22 @@ Steps to connect are as follows:
 
 1. Log in to [!DNL Adobe Experience Platform] and connect to the Criteo destination.
   
-    ![Log in](../../assets/catalog/advertising/criteo/connect-destination.png)
+    ![Log in](../../assets/catalog/advertising/criteo/connect-destination.png){width="750" zoomable="yes"}
 
 1. You will be redirected to Criteo to authorize the connection. You may need to first log in with your Criteo credentials:
 
-    ![Criteo login](../../assets/catalog/advertising/criteo/log-in-1.png)
+    ![Criteo login](../../assets/catalog/advertising/criteo/log-in-1.png){width="750" zoomable="yes"}
     
-    ![Criteo login](../../assets/catalog/advertising/criteo/log-in-2.png)
+    ![Criteo login](../../assets/catalog/advertising/criteo/log-in-2.png){width="750" zoomable="yes"}
     
-    ![Criteo login](../../assets/catalog/advertising/criteo/log-in-3.png)
+    ![Criteo login](../../assets/catalog/advertising/criteo/log-in-3.png){width="750" zoomable="yes"}
 
 
 ### Connection parameters {#connection-parameters}
 
 After authenticating to the destination, please fill in the following connection parameters.
 
-![Connection parameters](../../assets/catalog/advertising/criteo/connection-parameters.png)
+![Connection parameters](../../assets/catalog/advertising/criteo/connection-parameters.png){width="750" zoomable="yes"}
 
 | Field | Description | Required |
 | --- | --- | --- |

@@ -206,7 +206,7 @@ In the identity mapping step, you can see the following pre-populated mappings:
 
 These mappings are required by [!DNL Google Ad Manager 360] and are automatically created by [!DNL Adobe Experience Platform] for all [!DNL Google Ad Manager 360] connections.
 
-![UI image showing the mapping step for Google Ad Manager 360.](../../assets/catalog/advertising/google-ad-manager-360/ad-manager-360-mapping.png)
+![UI image showing the mapping step for Google Ad Manager 360.](../../assets/catalog/advertising/google-ad-manager-360/ad-manager-360-mapping.png){width="750" zoomable="yes"}
 
 ## Exported data {#exported-data}
 

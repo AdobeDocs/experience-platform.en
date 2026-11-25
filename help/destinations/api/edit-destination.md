@@ -82,7 +82,7 @@ The first step in editing your destination connection is to retrieve dataflow de
 >
 >You can use the Experience Platform UI to get the desired dataflow ID of a destination. Go to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, select the desired destination dataflow and find the destination ID in the right rail. The destination ID is the value that you will use as flow ID in the next step.
 >
-> ![Get destination ID using the Experience Platform UI](/help/destinations/assets/api/edit-destination/get-destination-id.png)
+> ![Get destination ID using the Experience Platform UI](/help/destinations/assets/api/edit-destination/get-destination-id.png){width="750" zoomable="yes"}
 
 >[!BEGINSHADEBOX]
 

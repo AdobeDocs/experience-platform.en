@@ -38,7 +38,7 @@ Branch is an advertising extension in [!DNL Adobe Experience Platform]. For more
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Branch extension](../../assets/catalog/advertising/branch/catalog.png)
+![Branch extension](../../assets/catalog/advertising/branch/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

@@ -40,7 +40,7 @@ This functionality is supported by the beta cloud storage cards listed below:
 
 Note that currently in the Experience Platform UI, you can see two side-by-side destination cards of the three destinations. Shown below are the [!DNL Amazon S3] legacy and new destinations. In all cases, the cards marked with **Beta** are the new destination cards.
 
-![Image of the two Amazon S3 destination cards in a side-by-side view.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+![Image of the two Amazon S3 destination cards in a side-by-side view.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png){width="750" zoomable="yes"}
 
 While these destinations with enhanced functionality were offered initially as a beta, *Adobe is now moving all [!DNL Real-Time CDP] customers to the new cloud storage destinations*. For customers who were already using [!DNL Amazon S3], [!DNL Azure Blob], or SFTP, this means that existing dataflows will be migrated to the new cards. Read on for more information about the specific changes as part of the migration.
 
@@ -63,7 +63,7 @@ This section includes the relevant API tutorial and reference documentation for 
 
 With the migration to the new destinations, all your existing dataflows to [!DNL Amazon S3], [!DNL Azure Blob], and SFTP destinations will now be assigned new target connections and base connections. The profile mapping step also changes. Backwards-incompatible changes are summarized in the sections below for each destination. View also the [destinations glossary](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) for more information on the terms in the diagram below.
 
-![Migration guide overview image](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
+![Migration guide overview image](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png){width="500" zoomable="yes"}
 
 ### Backwards-incompatible changes to the [!DNL Amazon S3] destination {#changes-amazon-s3-destination}
 
@@ -659,7 +659,7 @@ View the complete legacy and new base connection and target connection examples 
 
 The profile selector step in all three destinations is replaced by a mapping step for renaming the column headers in your exported files, if desired. See the side-by-side image below with the old attribute selector step on the left and the new mapping step on the right.
 
-![Migration guide overview image](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
+![Migration guide overview image](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png){width="750" zoomable="yes"}
 
 Notice how the `profileSelectors` object in the legacy examples is replaced by the new `profileMapping` object. 
 

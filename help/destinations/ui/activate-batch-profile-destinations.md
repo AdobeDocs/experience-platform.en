@@ -64,13 +64,13 @@ Select your desired file format for export when [creating a connection to the fi
 
     (Optional) Search for your destination by name instead of browsing the full catalog.
 
-    ![Destinations navigation, Catalog tab, and Activate audiences control highlighted in the destinations catalog, with the search box highlighted as an optional way to find your destination by name.](../assets/ui/activate-batch-profile-destinations/select-destination-and-activate.png){zoomable="yes"}
+    ![Destinations navigation, Catalog tab, and Activate audiences control highlighted in the destinations catalog, with the search box highlighted as an optional way to find your destination by name.](../assets/ui/activate-batch-profile-destinations/select-destination-and-activate.png){width="750" zoomable="yes"}
 
 1. Select the checkbox next to the destination connection that you want to use to activate your audiences, then select **[!UICONTROL Next]**.
 
     (Optional) Use the search box to find a destination connection by name, or select the filter icon to show the filters panel and narrow down the results based on your preferred criteria.
 
-    ![Search box, filters panel toggle, destination connection checkbox, and Next button highlighted in the Select destination step.](../assets/ui/activate-batch-profile-destinations/select-dataflow.png){zoomable="yes"}
+    ![Search box, filters panel toggle, destination connection checkbox, and Next button highlighted in the Select destination step.](../assets/ui/activate-batch-profile-destinations/select-dataflow.png){width="750" zoomable="yes"}
 
 1. Move to the next section to [select your audiences](#select-audiences).
 
@@ -84,7 +84,7 @@ Select your desired file format for export when [creating a connection to the fi
     >
     >You can filter by the same tags you use on the audience browse screen. Any tags you added to an audience there carry over to this screen.
 
-    ![Search box, filters panel toggle, audience checkbox, and Next button highlighted in the Select audiences step.](../assets/ui/activate-batch-profile-destinations/select-audiences.png){zoomable="yes"}
+    ![Search box, filters panel toggle, audience checkbox, and Next button highlighted in the Select audiences step.](../assets/ui/activate-batch-profile-destinations/select-audiences.png){width="750" zoomable="yes"}
 
 You can select from multiple types of audiences, depending on their origin:
 
@@ -128,11 +128,11 @@ Experience Platform automatically sets a default schedule for each file export. 
 
 For each audience, choose one of two export types: [Export full files](#export-full-files) or [Export incremental files](#export-incremental-files).
 
-![Pencil icon highlighted in the Scheduling step.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png){zoomable="yes"}
+![Pencil icon highlighted in the Scheduling step.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png){width="750" zoomable="yes"}
 
 To edit multiple schedules at the same time, select the audiences by using the checkboxes on the left side of the screen, then select **[!UICONTROL Edit schedule]**. The schedule you configure will then be applied to all the exported files for the selected audiences.
 
-![Header checkbox and Edit schedule control highlighted in the Scheduling step.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png){zoomable="yes"}
+![Header checkbox and Edit schedule control highlighted in the Scheduling step.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png){width="750" zoomable="yes"}
 
 >[!TIP]
 >
@@ -194,11 +194,11 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
     >If you run [flexible audience evaluation](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) on audiences which are already set to be activated after segment evaluation, the audiences will be activated as soon as the flexible audience evaluation job finishes, regardless of any previous daily activation jobs. This might result in audiences being exported multiple times a day, based on your actions.
 
     
-    ![After segment evaluation option highlighted in the Edit schedule dialog.](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png){zoomable="yes"}
+    ![After segment evaluation option highlighted in the Edit schedule dialog.](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png){width="500" zoomable="yes"}
     
     Use the **[!UICONTROL Scheduled]** option to have the activation job run at a fixed time. This option ensures that Experience Platform profile data is exported at the same time each day. However, the profiles you export may not be the most up to date, depending on whether the batch segmentation job has completed before the activation job kicks off.
 
-    ![Scheduled option and start time selector highlighted in the Edit schedule dialog.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png){zoomable="yes"}
+    ![Scheduled option and start time selector highlighted in the Edit schedule dialog.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png){width="500" zoomable="yes"}
 
      When mapping an audience which was created within the last 24 hours and evaluated through [batch segmentation](../../segmentation/methods/batch-segmentation.md), set your daily export schedule to start the following day at the earliest. This assures that the daily batch evaluation job runs first and you are exporting complete audience data.
 
@@ -248,7 +248,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 >
 >The first exported incremental file includes all profiles that qualify for an audience, functioning as a backfill.
 
-![Export incremental files toggle selected.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png){zoomable="yes"}
+![Export incremental files toggle selected.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png){width="500" zoomable="yes"}
 
 1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
@@ -281,11 +281,11 @@ To open a modal window and edit the file names, select the pencil icon. File nam
 >
 >The image below shows how file names can be edited for [!DNL Amazon S3] destinations but the process is identical for all batch destinations (for example SFTP, [!DNL Azure Blob Storage], or [!DNL Google Cloud Storage]).
 
-![Image highlighting the pencil icon, which is used to configure file names.](../assets/ui/activate-batch-profile-destinations/configure-name.png){zoomable="yes"}
+![Image highlighting the pencil icon, which is used to configure file names.](../assets/ui/activate-batch-profile-destinations/configure-name.png){width="750" zoomable="yes"}
 
 In the file name editor, you can select different components to add to the file name. 
 
-![Image displaying all the available file name options.](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png){zoomable="yes"}
+![Image displaying all the available file name options.](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png){width="400" zoomable="yes"}
 
 The destination name and audience ID cannot be removed from file names. In addition to these options, you can add the following options:
 
@@ -303,7 +303,7 @@ The destination name and audience ID cannot be removed from file names. In addit
 
 To edit multiple file names at the same time, select the audiences by using the checkboxes on the left side of the screen, then select **[!UICONTROL Edit file name]**. The file name options you configure will then be applied to all the exported files for the selected audiences.
 
-![Header checkbox and Edit file name control highlighted in the Scheduling step.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png){zoomable="yes"}
+![Header checkbox and Edit file name control highlighted in the Scheduling step.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png){width="750" zoomable="yes"}
 
 Select **[!UICONTROL Apply changes]** to confirm your selection.
 
@@ -323,7 +323,7 @@ In this step, you must select the profile attributes that you want to add to the
 
 1. In the **[!UICONTROL Mapping]** page, select **[!UICONTROL Add new mapping]**, then select the arrow to the right of the **[!UICONTROL Source field]** entry.
 
-    ![Add new mapping control and source field arrow highlighted in the mapping workflow.](../assets/ui/activate-batch-profile-destinations/add-mapping.png){zoomable="yes"}
+    ![Add new mapping control and source field arrow highlighted in the mapping workflow.](../assets/ui/activate-batch-profile-destinations/add-mapping.png){width="750" zoomable="yes"}
 
 1. In the **[!UICONTROL Select source field]** page, use the **[!UICONTROL Select attributes]** or **[!UICONTROL Select identity namespace]** toggle to switch between the two categories of source fields, then select the profile attributes or identities that you want to include in the exported files to the destination. Choose **[!UICONTROL Save]** when you are done.
 
@@ -333,11 +333,11 @@ In this step, you must select the profile attributes that you want to add to the
 
     Use the **[!UICONTROL Show only fields with data]** toggle to only display schema fields populated with values. By default, only populated schema fields are shown.
 
-    ![Select attributes and identity namespace toggle highlighted in the Select source field page.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png){zoomable="yes"}
+    ![Select attributes and identity namespace toggle highlighted in the Select source field page.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png){width="500" zoomable="yes"}
 
     Use the **[!UICONTROL Show display names for fields]** toggle to display the friendly names for fields, instead of the schema field names.
 
-    ![Select source field page showing the toggle for display names.](../assets/ui/activate-batch-profile-destinations/show-display-names.gif){zoomable="yes"}
+    ![Select source field page showing the toggle for display names.](../assets/ui/activate-batch-profile-destinations/show-display-names.gif){width="500" zoomable="yes"}
 
 1. The field you selected for export now appears in the mapping view. If you wish, you can edit the name of the header in the exported file. To do this, select the icon on the target field.
 
@@ -345,25 +345,25 @@ In this step, you must select the profile attributes that you want to add to the
     >
     >Dots (`.`) are not supported in field names in exported files. If a field name includes dots (such as `person.name.firstName`), each dot will be replaced with an underscore (`_`) in the exported column name. For example, `person.name.firstName` will become `person_name_firstName` in your exported file.
 
-    ![Target field icon highlighted in the mapping view.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png){zoomable="yes"}
+    ![Target field icon highlighted in the mapping view.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png){width="750" zoomable="yes"}
 
 1. In the **[!UICONTROL Select target field]** page, type in the desired name of the header in your exported file, then choose **[!UICONTROL Save]**.
 
-    ![Attribute name field highlighted in the Select target field page.](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png){zoomable="yes"}
+    ![Attribute name field highlighted in the Select target field page.](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png){width="750" zoomable="yes"}
 
 1. The field you selected for export now appears in the mapping view and shows the edited header in the exported file.
 
-    ![Target field highlighted showing the updated header name in the mapping view.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png){zoomable="yes"}
+    ![Target field highlighted showing the updated header name in the mapping view.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png){width="750" zoomable="yes"}
 
 1. (Optional) The order of the mapped fields in the UI reflects in the order of the columns in the exported CSV file, from top to bottom, with the top row being the leftmost column in the CSV file. You can reorder the mapped fields in any way you want, by dragging and dropping the mapping rows, as shown below. 
     
-    ![Recording showing the mapping fields reordering by drag and drop.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif){zoomable="yes"}
+    ![Recording showing the mapping fields reordering by drag and drop.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif){width="750" zoomable="yes"}
 
 1. (Optional) You can select your exported field to be a [mandatory key](/help/destinations/ui/batch-destinations-mapping-reference.md#mandatory-attributes) or a [deduplication key](/help/destinations/ui/batch-destinations-mapping-reference.md#deduplication-keys).
 
     When you map an identity, Experience Platform automatically marks it as a mandatory key and a deduplication key. You cannot clear these selections for identity mappings.
 
-    ![Mandatory key and deduplication key columns highlighted in the mapping view.](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png){zoomable="yes"}
+    ![Mandatory key and deduplication key columns highlighted in the mapping view.](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png){width="750" zoomable="yes"}
 
 1. To add more fields for exporting, repeat the steps above.
 
@@ -386,9 +386,9 @@ Enrichment attributes correspond to custom uploaded audiences ingested in Experi
 >
 >If you want to activate external audiences to your destinations without exporting any attribute, enable the **[!UICONTROL Exclude enrichment attributes]** toggle. This option exports the profiles from the external audiences, but none of their corresponding attributes are sent to your destination.
 >
->![UI image showing the exclude enrichment attributes toggle.](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png){zoomable="yes"}
+>![UI image showing the exclude enrichment attributes toggle.](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png){width="750" zoomable="yes"}
 
-![UI image showing the enrichment attributes selection step.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes-step.png){zoomable="yes"}
+![UI image showing the enrichment attributes selection step.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes-step.png){width="750" zoomable="yes"}
 
 Follow the steps below to select enrichment attributes for each external audience:
 
@@ -397,7 +397,7 @@ Follow the steps below to select enrichment attributes for each external audienc
   ![Add enrichment attribute control highlighted in the enrichment attributes modal.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png){zoomable="yes"}
 1. Select the button to the right of the empty field to open the field selection screen.
 1. Select the attributes that you want to export for the audience.
-  ![UI image showing the enrichment attributes list.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png){zoomable="yes"}
+  ![UI image showing the enrichment attributes list.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png){width="750" zoomable="yes"}
 1. After you have added all the attributes that you want to export, select **[!UICONTROL Save and close]**.
 1. Repeat these steps for each external audience.
 
@@ -427,7 +427,7 @@ Select **[!UICONTROL Next]** to move to the [Review](#review) step.
 
 When exporting audiences to cloud storage destinations with JSON or [!DNL Parquet] output and the [**[!UICONTROL Export arrays, maps, and objects]** toggle enabled](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle), you can export complex data structures, including entire arrays or selected fields from arrays of objects, as enrichment attributes.
 
-![The Select enrichment attributes dialog showing the Export arrays and complex objects enabled banner and the two-column Source and Target mapping interface.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attribute-array.png){zoomable="yes"}
+![The Select enrichment attributes dialog showing the Export arrays and complex objects enabled banner and the two-column Source and Target mapping interface.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attribute-array.png){width="750" zoomable="yes"}
 
 The enrichment attributes step shows a two-column mapping interface:
 
@@ -445,7 +445,7 @@ This functionality is available only when all of the following conditions are me
 
 Select the name of the array attribute from the source field selection screen. The source field populates with the array path and the target field auto-populates with the array name. The exported output preserves all objects in the array with all their properties.
 
-![Recording showing how to select an array attribute by name to export the entire array in the enrichment attributes dialog.](../assets/ui/activate-batch-profile-destinations/export-array-full.gif){zoomable="yes"}
+![Recording showing how to select an array attribute by name to export the entire array in the enrichment attributes dialog.](../assets/ui/activate-batch-profile-destinations/export-array-full.gif){width="750" zoomable="yes"}
 
 #### Export a single field from an array of objects {#export-single-array-field}
 
@@ -459,7 +459,7 @@ transformArray(someArray, x -> to_object("amount", x.amount))
 
 The target field auto-populates with the leaf node name (`amount`). You can change the name of the target field if you desire to do so.
 
-![Recording showing how to select a nested field inside an array to auto-populate the source field with a transformArray calculated expression.](../assets/ui/activate-batch-profile-destinations/export-array-field.gif){zoomable="yes"}
+![Recording showing how to select a nested field inside an array to auto-populate the source field with a transformArray calculated expression.](../assets/ui/activate-batch-profile-destinations/export-array-field.gif){width="750" zoomable="yes"}
 
 #### Export multiple fields from an array of objects {#export-multiple-array-fields}
 
@@ -476,7 +476,7 @@ transformArray(someArray, x -> to_object("amount", x.amount, "date", x.date))
 
 Only the fields you specify are included in each object within the exported array. Additionally, you can change the name of the top-level array in your exported file if desired.
 
-![Recording showing how to select one field from an array, then manually edit the transformArray expression to include multiple fields.](../assets/ui/activate-batch-profile-destinations/export-array-multiple-fields.gif){zoomable="yes"}
+![Recording showing how to select one field from an array, then manually edit the transformArray expression to include multiple fields.](../assets/ui/activate-batch-profile-destinations/export-array-multiple-fields.gif){width="750" zoomable="yes"}
 
 >[!NOTE]
 >
@@ -495,7 +495,7 @@ Only the fields you specify are included in each object within the exported arra
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
-![Selection summary displayed in the review step.](../assets/ui/activate-batch-profile-destinations/review.png){zoomable="yes"}
+![Selection summary displayed in the review step.](../assets/ui/activate-batch-profile-destinations/review.png){width="750" zoomable="yes"}
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
@@ -510,7 +510,7 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 In the **[!UICONTROL Review]** step, Experience Platform also checks for any data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the audience activation workflow until you have resolved the violation. For information on how to resolve policy violations, read about [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in the data governance documentation section.
  
-![A data policy violation example shown in the activation workflow.](../assets/common/data-policy-violation.png){zoomable="yes"}
+![A data policy violation example shown in the activation workflow.](../assets/common/data-policy-violation.png){width="500" zoomable="yes"}
 
 ### Filter audiences {#filter-audiences}
 
@@ -518,7 +518,7 @@ Use the **[!UICONTROL New audiences]** and **[!UICONTROL Activated audiences]** 
 
 To choose which columns appear in the table, select the customize table icon. In the **[!UICONTROL Customize table]** dialog, select or clear the columns that you want to show, then select **[!UICONTROL Apply]**.
 
-![Screen recording showing the New audiences and Activated audiences toggle, and the Customize table dialog used to select which columns appear in the review table.](../assets/ui/activate-batch-profile-destinations/filter-audiences-batch-review.gif){zoomable="yes"}
+![Screen recording showing the New audiences and Activated audiences toggle, and the Customize table dialog used to select which columns appear in the review table.](../assets/ui/activate-batch-profile-destinations/filter-audiences-batch-review.gif){width="750" zoomable="yes"}
 
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 

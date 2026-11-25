@@ -29,7 +29,7 @@ In [!DNL Adobe Experience Platform], select **[!UICONTROL Destinations]** from t
 
 The [!UICONTROL Destinations] workspace consists of five sections, [!UICONTROL Overview], [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], and [!UICONTROL System View], described in the sections below.
 
-![Destinations overview dashboard showing three widgets.](../assets/ui/workspace/destinations-overview.png)
+![Destinations overview dashboard showing three widgets.](../assets/ui/workspace/destinations-overview.png){width="750" zoomable="yes"}
 
 ## [!UICONTROL Overview] {#overview}
 
@@ -39,13 +39,13 @@ The **[!UICONTROL Overview]** tab displays the [!UICONTROL Destinations] dashboa
 >
 >If your organization is new to Experience Platform and does not yet have active destinations, the [!UICONTROL Destinations] dashboard and [!UICONTROL Overview] tab are not visible. Instead, selecting [!UICONTROL Destinations] from the left navigation displays the [[!UICONTROL Catalog] tab](#catalog).
 
-![The Destinations dashboard Overview tab.](../../dashboards/images/destinations/dashboard-overview.png)
+![The Destinations dashboard Overview tab.](../../dashboards/images/destinations/dashboard-overview.png){width="750" zoomable="yes"}
 
 ## [!UICONTROL Catalog] {#catalog}
 
 The **[!UICONTROL Catalog]** tab displays a list of all destinations available in [!DNL Experience Platform], that you can send data to. 
 
-![Destinations catalog showing multiple destinations.](../assets/ui/workspace/catalog.png)
+![Destinations catalog showing multiple destinations.](../assets/ui/workspace/catalog.png){width="750" zoomable="yes"}
 
 The [!DNL Experience Platform] user interface provides several search and filter options on the destinations catalog page:
 
@@ -69,11 +69,11 @@ The destination cards contain primary and secondary control options. The primary
 
 {style="table-layout:auto"}
 
-![Controls on the destinations card](../assets/ui/workspace/destination-card-options.png)
+![Controls on the destinations card](../assets/ui/workspace/destination-card-options.png){width="750" zoomable="yes"}
 
 Select a destination card in the catalog to open the right rail. Here, you can see a description of the destination. The right rail provides the same controls described in the table above, including a description of the destination, and an indication of the destination category and type.
 
-![Destination catalog options](../assets/ui/workspace/destination-right-rail.png)
+![Destination catalog options](../assets/ui/workspace/destination-right-rail.png){width="750" zoomable="yes"}
 
 For more information on destination categories and information on each destination, see the [Destination catalog](../catalog/overview.md) and [Destination types and categories](../destination-types.md).
 
@@ -93,7 +93,7 @@ Destinations with the **[!UICONTROL Enabled/Disabled]** toggle turned on set the
 
 >[!TIP]
 >
-> ![Browse Tab](../assets/ui/workspace/browse-tab.png)
+> ![Browse Tab](../assets/ui/workspace/browse-tab.png){width="750" zoomable="yes"}
 > 
 > * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Activate audiences control](/help/images/icons/data-add.png) **[!UICONTROL Activate audiences]** control to export audiences or datasets to that destination.
 > * Select the ellipsis (`...`) in the [!UICONTROL Name] column and use the ![Edit destination control](/help/images/icons/edit.png)**[!UICONTROL Edit destination]** control to edit existing destination connections. Read the tutorial on [editing destinations](/help/destinations/ui/edit-destination.md) for more information.
@@ -112,7 +112,7 @@ See the table below for all the information that is provided for each destinatio
 |[!UICONTROL Last Dataflow Run Status] | The status of the last dataflow run. See [View destination details](destination-details-page.md) for more information about dataflow runs.|
 |[!UICONTROL Last Dataflow Run Date] | Time and date when the last dataflow run has occurred. Select the column header to access sorting options (**[!UICONTROL Sort Ascending]**, **[!UICONTROL Sort Descending]**). See [View destination details](destination-details-page.md) for more information about dataflow runs.|
 |[!UICONTROL Destination] | The destination platform that you selected for your activation flow.|
-|[!UICONTROL Account Expiration Date] | The date when the connection authorization to this destination will expire. <br> A warning icon ![Warning: account expiration icon](/help/images/icons/alert-expiration.png) appears before the expiration date to alert you that the connection will expire and may require renewal. Dataflows to expired connections are stopped and you must reauthenticate to resume your activation workflows. <br>**Important**: This column is currently available only for the [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md), and [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md) connections. <br> ![Example of account expiration warning in Browse tab](../assets/ui/workspace/account-expiration-browse.png){width="100" zoomable="yes" alt="Screenshot showing the account expiration warning icon and expiration date in the Browse tab."}|
+|[!UICONTROL Account Expiration Date] | The date when the connection authorization to this destination will expire. <br> A warning icon ![Warning: account expiration icon](/help/images/icons/alert-expiration.png) appears before the expiration date to alert you that the connection will expire and may require renewal. Dataflows to expired connections are stopped and you must reauthenticate to resume your activation workflows. <br>**Important**: This column is currently available only for the [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md), and [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md) connections. <br> ![Example of account expiration warning in Browse tab](../assets/ui/workspace/account-expiration-browse.png){width="100" alt="Screenshot showing the account expiration warning icon and expiration date in the Browse tab." zoomable="yes"}|
 |[!UICONTROL Username] | The account credentials you selected for the destination flow.|
 |[!UICONTROL Activation Data] | Indicates the number of audiences that are being activated to this destination. Select this control to find out more about the activated audiences. Refer to [Activation Data](/help/destinations/ui/destination-details-page.md#activation-data) in the destination details page for more information about the activated audiences.|
 |[!UICONTROL Created] | The date and time when the activation flow to the destination was created. Select the up/down arrow symbol to sort the activation flows by newest first or oldest first.|
@@ -125,7 +125,7 @@ See the table below for all the information that is provided for each destinatio
 
 Select a destination row to view more information about the destination in the right rail, such as destination ID, description, the number of activated audiences, and more.
 
-![Click destination row](../assets/ui/workspace/click-destination-row.png)
+![Click destination row](../assets/ui/workspace/click-destination-row.png){width="500" zoomable="yes"}
 
 Select the destination name to see information about the audiences activated to this destination. Select **[!UICONTROL Edit destination]** to [modify the destination settings](/help/destinations/ui/edit-destination.md) or **[!UICONTROL Activate audiences]** to add new audiences to the dataflow.
  
@@ -137,13 +137,13 @@ The **[!UICONTROL Browse]** tab includes enhanced filtering and search capabilit
 
 Use the search bar at the top of the table to quickly find dataflows by name. As you type, the results automatically filter to show only matching dataflows.
 
-![Animated demonstration of searching for a destination dataflow in the Browse tab](../assets/ui/workspace/search.gif)
+![Animated demonstration of searching for a destination dataflow in the Browse tab](../assets/ui/workspace/search.gif){width="750" zoomable="yes"}
 
 ### Filter options {#filter-options-browse}
 
 Use the filters in the left sidebar to narrow down your search.
 
-![Destination filters in the Browse tab](../assets/ui/workspace/destination-filters.png)
+![Destination filters in the Browse tab](../assets/ui/workspace/destination-filters.png){width="750" zoomable="yes"}
 
 * **[!UICONTROL Data type]**: Filter dataflows by the type of data activated to the destination:
     * **[!UICONTROL Audiences]**: Shows only dataflows that activate [audiences](../../segmentation/types/overview.md)
@@ -169,7 +169,7 @@ Use the filters in the left sidebar to narrow down your search.
 
 When you apply filters, they appear as tags below the search bar.
 
-![Active filters displayed as tags below the search bar](../assets/ui/workspace/active-filters.png)
+![Active filters displayed as tags below the search bar](../assets/ui/workspace/active-filters.png){width="750" zoomable="yes"}
 
 There you can:
 
@@ -184,7 +184,7 @@ Tags help you organize and categorize your destination dataflows for easier mana
 To add a tag to a dataflow, select the ellipsis (`...`) in the **[!UICONTROL Name]** column and select **[!UICONTROL Manage tags]** from the context menu.
 Type in the name of a new tag in the **[!UICONTROL Tags]** field and select **[!UICONTROL Save]** to apply your changes.
 
-![Manage tags dialog showing tag selection and creation options](../assets/ui/workspace/tags.gif)
+![Manage tags dialog showing tag selection and creation options](../assets/ui/workspace/tags.gif){width="750" zoomable="yes"}
 
 To remove a tag from a dataflow, select the ellipsis (`...`) in the **[!UICONTROL Name]** column and select **[!UICONTROL Manage tags]** from the context menu, then select the `X` icon on the tag that you want to remove.
 
@@ -207,7 +207,7 @@ The **[!UICONTROL Accounts]** tab shows details about the connections that you h
 > * Select the ellipsis (`...`) in the [!UICONTROL Platform] column and use the ![Edit details control](/help/images/icons/edit.png)**[!UICONTROL Edit details]** control to [update](update-accounts.md) the details of an existing destination account.
 > * Select the ellipsis (`...`) in the [!UICONTROL Platform] column and use the ![Delete control](/help/images/icons/delete.png)**[!UICONTROL Delete]** control to [delete](delete-destination-account.md) an existing destination account.
 
-![Accounts tab](../assets/ui/workspace/accounts-tab.png)
+![Accounts tab](../assets/ui/workspace/accounts-tab.png){width="750" zoomable="yes"}
 
 | Element | Description |
 |---|---|
@@ -229,13 +229,13 @@ The **[!UICONTROL Accounts]** tab includes enhanced filtering and search capabil
 
 Use the search bar at the top of the table to quickly find accounts by name. As you type, the results automatically filter to show only matching accounts.
 
-![Search bar in the Accounts tab.](../assets/ui/workspace/accounts-search.gif)
+![Search bar in the Accounts tab.](../assets/ui/workspace/accounts-search.gif){width="750" zoomable="yes"}
 
 #### Filter options {#filter-options-accounts}
 
 Use the filters in the left sidebar to narrow down your search.
 
-![Account filters in the Accounts tab](../assets/ui/workspace/account-filters.png)
+![Account filters in the Accounts tab](../assets/ui/workspace/account-filters.png){width="750" zoomable="yes"}
 
 * **[!UICONTROL Destination platform]**: Filter accounts by specific destination platforms (for example: [!DNL Microsoft Bing], [!DNL Amazon S3], [!DNL Facebook Custom Audiences], [!DNL LinkedIn Matched Audiences] and so on). You can select multiple platforms simultaneously.
 * **[!UICONTROL Created by]**: Filter accounts by the user who created them. Use this filter to find accounts created by specific team members.
@@ -244,7 +244,7 @@ Use the filters in the left sidebar to narrow down your search.
 
 When you apply filters, they appear as tags below the search bar.
 
-![Active filters displayed as tags in the Accounts tab](../assets/ui/workspace/accounts-active-filters.png)
+![Active filters displayed as tags in the Accounts tab](../assets/ui/workspace/accounts-active-filters.png){width="750" zoomable="yes"}
 
 There you can:
 
@@ -256,8 +256,8 @@ There you can:
 
 The **[!UICONTROL System View]** tab displays a graphic representation of the activation flows that you have set up in the [!DNL Adobe Experience Platform].
 
-![Data-flows1](../assets/ui/workspace/system-view-dataflows.png)
+![Data-flows1](../assets/ui/workspace/system-view-dataflows.png){width="750" zoomable="yes"}
 
 Select any of the destinations displayed on the page and select **[!UICONTROL View dataflows]** to see information on all the connections you have set up for each destination.
 
-![Data-flows2](../assets/ui/workspace/system-view-dataflows-2.png)
+![Data-flows2](../assets/ui/workspace/system-view-dataflows-2.png){width="750" zoomable="yes"}

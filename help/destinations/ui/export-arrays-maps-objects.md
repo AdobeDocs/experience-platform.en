@@ -98,7 +98,7 @@ In addition to arrays, you can also export maps and objects from Experience Plat
 
 When connecting to a file-based cloud storage destination, you can set the **[!UICONTROL Export arrays, maps, objects]** toggle on or off.
 
-![Export arrays, maps, objects toggle shown with an on or off setting, as well as highlighting the popover.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
+![Export arrays, maps, objects toggle shown with an on or off setting, as well as highlighting the popover.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif){width="500" zoomable="yes"}
 
 Toggle this setting **on** to enable the export of arrays, maps, and objects to JSON or Parquet files. You can select these object types in the source field view of the [mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) when activating audiences to cloud storage destinations. However, with this setting on, you cannot use the calculated fields option to transform data on activation.
 
@@ -108,11 +108,11 @@ With this toggle **off**, you can use the calculated fields option and apply var
 
 With this setting on, you can export entire objects (for example `person.name`) and arrays by selecting them via the source field selector in the mapping step of the activation workflow.
 
-![Select objects via source field selector in the mapping step of the activation workflow.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-object.gif)
+![Select objects via source field selector in the mapping step of the activation workflow.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-object.gif){width="750" zoomable="yes"}
 
 With this option selected, the user interface blocks users from using calculated fields, and the **[!UICONTROL Add calculated fields]** control is disabled, as shown below. To use calculated fields for data transformations, set up a destination connection with the toggle off.
 
-![Calculated fields control disabled.](/help/destinations/assets/ui/export-arrays-calculated-fields/calculated-fields-disabled.png)
+![Calculated fields control disabled.](/help/destinations/assets/ui/export-arrays-calculated-fields/calculated-fields-disabled.png){width="750" zoomable="yes"}
 
 ## Export arrays, maps, objects toggle *off* {#export-arrays-maps-objects-toggle-off}
 

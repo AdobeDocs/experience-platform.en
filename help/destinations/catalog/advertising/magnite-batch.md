@@ -124,7 +124,7 @@ If you already have an existing account, you can locate it by changing the Accou
 
 To create a new account, and authenticate it to the destination for the first time, fill in the required "S3 access key" and "S3 secret key" fields (provided to you via your account manager), and select **[!UICONTROL Connect to destination]**
 
-![destination configuration auth fields unfilled](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png)
+![destination configuration auth fields unfilled](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png){width="750" zoomable="yes"}
 
 >[!NOTE]
 >
@@ -144,7 +144,7 @@ To configure details for the destination, fill in the required and optional fiel
 >
 >The company name must be a string which matches the name of the Amazon S3 delivery bucket you have configured with Magnite and set up in the [authenticate to destination](#authenticate) step. The supported characters include 'a-z', 'A-Z', '0-9', '-'(dash), or '_'(underscore).
 
-![destination configuration auth fields filled](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
+![destination configuration auth fields filled](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png){width="750" zoomable="yes"}
 
 >[!NOTE]
 >
@@ -154,7 +154,7 @@ You can then proceed by selecting **[!UICONTROL Next]**
 
 On the next screen, titled "Governance Policy and Enforcement Actions (Optional)", you can optionally select any relevant data governance policies. "Data Export" is generally selected for the Magnite: Batch destination.
 
-![Optional governance policy and enforcement actions](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
+![Optional governance policy and enforcement actions](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png){width="750" zoomable="yes"}
 
 Once selected, or if you wish to skip this optional screen, select **[!UICONTROL Create]**
 
@@ -176,10 +176,13 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 ### Map attributes and identities {#map}
 
 In the **[!UICONTROL Source field]**, you can select any attribute or identity for your devices. In this example, we've selected a custom IdentityMap called "DeviceId"
-![map desired data fields to the device_id field](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
+![map desired data fields to the device_id field](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png){width="750" zoomable="yes"}
 
 In the **[!UICONTROL Target field]**:
-![select the appropriate device type target identity](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) See [Supported Identities](#supported-identities) for more information.
+
+![select the appropriate device type target identity](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png){width="750" zoomable="yes"}
+
+See [Supported Identities](#supported-identities) for more information.
 In this example, we've selected the **[!UICONTROL Target field]**: magnite_deviceId_CUSTOM, because our **[!UICONTROL Source field]** was defined as a custom IdentityMap: DeviceID. 
 
 >[!NOTE]

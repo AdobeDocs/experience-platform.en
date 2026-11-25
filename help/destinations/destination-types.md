@@ -54,7 +54,7 @@ Finally, connections can also be distinguished between public destinations avail
 
 >[!BEGINSHADEBOX]
 
-![Types of destinations diagram.](./assets/destination-types/types-of-destinations-no-highlight.png "Types of destinations diagram."){zoomable="yes"}
+![Types of destinations diagram.](./assets/destination-types/types-of-destinations-no-highlight.png "Types of destinations diagram."){width="750" zoomable="yes"}
 
 >[!ENDSHADEBOX]
 
@@ -123,7 +123,7 @@ Learn more about the [various audience types](/help/segmentation/types/account-a
 
 A symbol on the destination card shows which types of audiences you can export to each destination. 
 
-![Example destination card with symbols showing which audience types can be exported.](/help/destinations/assets/destination-types/types-of-audiences.png "Example destination card with symbols showing which audience types can be exported."){zoomable="yes"}
+![Example destination card with symbols showing which audience types can be exported.](/help/destinations/assets/destination-types/types-of-audiences.png "Example destination card with symbols showing which audience types can be exported."){width="500" zoomable="yes"}
 
 
 ## Dataset export destinations {#dataset-export-destinations}
@@ -142,7 +142,7 @@ Experience Platform leverages the power and flexibility of tag management, allow
 
 Tag extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](./catalog/personalization/gainsight.md) or the [Confirmit Voice of the Customer extension](./catalog/voice/confirmit-digital-feedback.md).
 
-![Tag extensions compared to other destinations](./assets/common/launch-and-other-destinations.png)
+![Tag extensions compared to other destinations](./assets/common/launch-and-other-destinations.png){width="750" zoomable="yes"}
 
 ## When to use connections and extensions {#when-to-use}
 
@@ -156,4 +156,4 @@ Extensions are helpful when event data triggers an action or conducts segmentati
 
 The connections and extensions in the [destinations catalog](https://platform.adobe.com/destination/catalog) are grouped by destination category (**Advertising**, **Cloud storage**, **Survey platforms**, **Email marketing**, etc.), depending on the marketing action that they help you achieve. For more information on each of the categories, as well as the destinations included in each category, see the [Destinations catalog documentation](./catalog/overview.md).
 
-![Destination categories highlighted in the catalog page.](./assets/destination-types/destination-categories-menu.png "Destination categories highlighted in the catalog page."){zoomable="yes"}
+![Destination categories highlighted in the catalog page.](./assets/destination-types/destination-categories-menu.png "Destination categories highlighted in the catalog page."){width="750" zoomable="yes"}

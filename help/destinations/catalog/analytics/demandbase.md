@@ -40,7 +40,7 @@ Get [!DNL Demandbase] B2B account insights right into [!DNL Adobe Analytics] whe
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Demandbase extension](../../assets/catalog/analytics/demandbase/catalog.png)
+![Demandbase extension](../../assets/catalog/analytics/demandbase/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

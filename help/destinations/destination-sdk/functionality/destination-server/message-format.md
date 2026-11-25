@@ -51,7 +51,7 @@ Experience Platform can adjust the message format of exported profiles to match 
 * The expected message format on the partner side (3), and 
 * The transformation layer between XDM schema and expected message format, which you can define by creating a [message transformation template](#using-templating).
 
-![Schema to JSON transformation](../../assets/functionality/destination-server/transformations-3-steps.png)
+![Schema to JSON transformation](../../assets/functionality/destination-server/transformations-3-steps.png){width="750" zoomable="yes"}
 
 Experience Platform uses XDM schemas to describe the structure of data in a consistent and reusable way.
 
@@ -63,7 +63,7 @@ Experience Platform uses XDM schemas to describe the structure of data in a cons
 
 Based on the schema transformations described above, here is how a profile configuration changes between the source XDM schema and a sample schema on the partner side:
 
-![Transformations message example](../../assets/functionality/destination-server/transformations-with-examples.png)
+![Transformations message example](../../assets/functionality/destination-server/transformations-with-examples.png){width="750" zoomable="yes"}
 
 ## Getting started - transforming three basic attributes {#getting-started}
 

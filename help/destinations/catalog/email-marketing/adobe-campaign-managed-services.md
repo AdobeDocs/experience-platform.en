@@ -151,7 +151,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![[!DNL Adobe Campaign Managed Cloud Services] destination details form showing fields for Name, Description, instance selection, target mapping, and sync type.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
+![[!DNL Adobe Campaign Managed Cloud Services] destination details form showing fields for Name, Description, instance selection, target mapping, and sync type.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png){width="750" zoomable="yes"}
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -208,7 +208,7 @@ Select XDM fields to export with the profiles and map them to the corresponding 
       >
       >Make sure that the deduplication key attribute's name matches a column name of the selected target mapping.
 
-    ![Attribute mapping screen showing XDM source fields mapped to [!DNL Adobe Campaign] target fields, with mandatory and deduplication key indicators.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
+    ![Attribute mapping screen showing XDM source fields mapped to [!DNL Adobe Campaign] target fields, with mandatory and deduplication key indicators.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png){width="750" zoomable="yes"}
 
 1. Once mapping has been performed, you can review and complete the destination configuration to start sending data to **[!DNL Campaign]**.
 [Learn how to review and complete destination configuration](/help/destinations/destination-types.md#destination-types-and-categories).
@@ -221,13 +221,13 @@ Once a destination has been activated, you can access the corresponding job and 
 
 Navigate to the **[!UICONTROL Administration]** > **[!UICONTROL Audit]** > **[!UICONTROL Audience load jobs]** menu to monitor all export jobs activated from [!DNL Adobe Experience Platform].
 
-![[!DNL Adobe Campaign] Audience load jobs screen showing export jobs activated from [!DNL Adobe Experience Platform].](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
+![[!DNL Adobe Campaign] Audience load jobs screen showing export jobs activated from [!DNL Adobe Experience Platform].](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png){width="750" zoomable="yes"}
 
 ### Access exported data {#data}
 
 For **[!UICONTROL Audience sync]**, you can check the exported audience by navigating to the **[!UICONTROL Profile and target]** > **[!UICONTROL List]** > **[!UICONTROL AEP audiences]** menu.
 
-![[!DNL Adobe Campaign] AEP audiences list view showing exported audiences from Experience Platform available under Profile and target.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
+![[!DNL Adobe Campaign] AEP audiences list view showing exported audiences from Experience Platform available under Profile and target.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png){width="750" zoomable="yes"}
 
 For **[!UICONTROL Profile sync (Update only)]**, data is automatically updated into the Campaign database for each profile targeted by the audience activated in the destination.
 

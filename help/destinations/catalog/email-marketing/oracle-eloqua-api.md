@@ -155,7 +155,7 @@ Fill in the required fields below. Refer to the [Gather [!DNL Oracle Eloqua] cre
 * **[!UICONTROL Username]**: A concatenated string composed of your [!DNL Oracle Eloqua] Company Name and the [!DNL Oracle Eloqua] Username.<br>The concatenated value takes the form of `{COMPANY_NAME}\{USERNAME}`.<br> Note, do not use any braces or spaces and preserve the `\`. <br>For example if your [!DNL Oracle Eloqua] Company Name is `MyCompany` and [!DNL Oracle Eloqua] Username is `Username`, the concatenated value you will use in the **[!UICONTROL Username]** field is `MyCompany\Username`.
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
-![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
+![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png){width="750" zoomable="yes"}
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
 
@@ -167,7 +167,7 @@ If the details provided are valid, the UI displays a **[!UICONTROL Connected]** 
 >abstract="To find your pod number, log into Oracle Eloqua. Note the URL in your browser after you have logged in successfully. "
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
+![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png){width="750" zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -214,7 +214,7 @@ To map your XDM fields to the [!DNL Oracle Eloqua] destination fields, follow th
         |`xdm: workAddress.city`|`Attribute: city`| |
 
     * An example with the above mappings is shown below:
-    ![Experience Platform UI screenshot example with attribute mappings.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
+    ![Experience Platform UI screenshot example with attribute mappings.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png){width="500" zoomable="yes"}
 
 >[!IMPORTANT]
 >
@@ -250,14 +250,14 @@ To validate that you have correctly set up the destination, follow the steps bel
 
 1. Select **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** and navigate to the list of destinations.
 1. Next, select the destination and switch to the **[!UICONTROL Activation data]** tab, then select an audience name.
-![Experience Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
+![Experience Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png){width="750" zoomable="yes"}
 
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count within the segment.
-![Experience Platform UI screenshot example showing Segment.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
+![Experience Platform UI screenshot example showing Segment.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png){width="750" zoomable="yes"}
 
 1. Go to the [!DNL Oracle Eloqua] website, then navigate to the **[!UICONTROL Contacts Overview]** page to check if the profiles from the audience have been added. To see the audience status, drill down into a **[!UICONTROL Contact Detail]** page and check if the contact field with the selected audience name as its prefix has been created.
 
-![Oracle Eloqua UI screenshot showing the Contact Details page with custom contact field created with the audience name.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
+![Oracle Eloqua UI screenshot showing the Contact Details page with custom contact field created with the audience name.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png){width="500" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 
@@ -266,7 +266,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
 When creating the destination, you might receive one of the following error messages: `400: There was a validation error` or `400 BAD_REQUEST`. This happens when you exceed the 250 custom contact fields limit, as described in the [guardrails](#guardrails) section. To fix this error, make sure you are not exceeding the custom contact field limit in [!DNL Oracle Eloqua].
-![Experience Platform UI screenshot showing error.](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)
+![Experience Platform UI screenshot showing error.](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png){width="750" zoomable="yes"}
 
 Refer to the [[!DNL Oracle Eloqua] HTTP status codes](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPStatusCodes.html) and [[!DNL Oracle Eloqua] Validation errors](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPValidationErrors.html) pages for a comprehensive list of status and error codes with explanations.
 

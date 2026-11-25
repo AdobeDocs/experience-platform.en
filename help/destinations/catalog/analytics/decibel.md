@@ -38,7 +38,7 @@ Quickly and seamlessly deploy [!DNL Decibel] on your web properties. Additional 
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Decibel extension](../../assets/catalog/analytics/decibel/catalog.png)
+![Decibel extension](../../assets/catalog/analytics/decibel/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

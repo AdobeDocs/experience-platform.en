@@ -249,7 +249,7 @@ The following target fields are prepopulated automatically in the order [!DNL Ac
 
 In the **[!UICONTROL Source Field]** column, enter the name of each source attribute you want to map to the corresponding target field. Or select **[!UICONTROL Select source field]** to browse available source fields.
 
-![Mapping screen showing source and target field columns with [!DNL Acxiom]'s required fields prepopulated for the [!DNL Acxiom Audience Connection] destination.](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png){zoomable="yes"}
+![Mapping screen showing source and target field columns with [!DNL Acxiom]'s required fields prepopulated for the [!DNL Acxiom Audience Connection] destination.](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png){width="750" zoomable="yes"}
 
 After you map all the fields, select **[!UICONTROL Next]**.
 
@@ -261,7 +261,7 @@ After you complete all the steps, review your destination connection status and 
 
 If you are satisfied with the results, select **[!UICONTROL Finish]** to activate your destination.
 
-![Review your audience screen showing the destination connection status and selected audiences.](../../assets/catalog/advertising/acxiom-audience-distribution/review_audience.png){zoomable="yes"}
+![Review your audience screen showing the destination connection status and selected audiences.](../../assets/catalog/advertising/acxiom-audience-distribution/review_audience.png){width="750" zoomable="yes"}
 
 ## Troubleshooting {#troubleshooting}
 

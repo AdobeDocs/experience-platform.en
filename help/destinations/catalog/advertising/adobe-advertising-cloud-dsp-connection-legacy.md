@@ -84,7 +84,7 @@ To connect to the destination, provide the following parameter in the [!UICONTRO
 
 * **[!UICONTROL Account or Advertiser Key]**: This [!UICONTROL Source Key] is generated when a [[!DNL Real-Time CDP] source is created in the DSP user interface](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Your DSP account team will share this key with you after they create the source.
 
-![Connection type field](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
+![Connection type field](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png){width="750" zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
@@ -93,7 +93,7 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 
-![Destination detail fields](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
+![Destination detail fields](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png){width="750" zoomable="yes"}
 
 ### Enable alerts {#enable-alerts}
 
@@ -118,7 +118,7 @@ To verify that data audience was shared with Adobe Advertising, check the follow
 
 * In DSP, the audience is available when you create or edit an audience from [!UICONTROL Audiences] > [!UICONTROL All Audiences] or from within the [!UICONTROL Audience Targeting] section of placement settings. The audience should be visible in the [!UICONTROL Adobe Segments] tab under the [!UICONTROL Real-Time CDP] folder.
 
-![Real-Time CDP audiences in DSP audience settings](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
+![Real-Time CDP audiences in DSP audience settings](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png){width="750" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 

@@ -150,7 +150,7 @@ To authenticate to the destination, fill in the required fields below and select
 
 {style="table-layout:auto"}
 
-![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
+![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png){width="750" zoomable="yes"}
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
 
@@ -158,7 +158,7 @@ If the details provided are valid, the UI displays a **[!UICONTROL Connected]** 
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/mailchimp-interest-categories/destination-details.png)
+![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/mailchimp-interest-categories/destination-details.png){width="500" zoomable="yes"}
 
 | Field | Description |
 | --- | --- |
@@ -224,7 +224,7 @@ To correctly map your XDM fields to the [!DNL Mailchimp Interest Categories] des
     For example, you want to update the value for `country` with the contact's existing address field `addr1`, `city`, `state`, and `zip` values as `132, My Street, Kingston`, `New York`, `New York` and `12401`. To update the `country` you must pass the existing values with changes *(if any)* and the new value for country. So the values in your dataset should be `132, My Street, Kingston`, `New York`, `New York`, `12401`, and `US`. To reiterate, if you only pass `country` and do not provide values for `addr1`, `city`, `state`, and `zip` they will be overwritten by `NULL`.
 
     An example with the completed mappings is shown below:
-    ![Experience Platform UI screenshot example showing field mappings.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
+    ![Experience Platform UI screenshot example showing field mappings.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png){width="750" zoomable="yes"}
 
 When you have finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
@@ -234,14 +234,14 @@ To validate that you have correctly set up the destination, follow the steps bel
 
 * Go to your [[!DNL Mailchimp]](https://login.mailchimp.com/) account. Then, navigate to the **[!DNL Audience]** page. Next, expand the **[!DNL Manage Contacts]** menu and select **[!DNL Groups]**.
 
-![Mailchimp UI screenshot showing the Audience group page.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
+![Mailchimp UI screenshot showing the Audience group page.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png){width="500" zoomable="yes"}
 
 * Select the Group and check if the selected audiences are created as categories with the audience name from Experience Platform, which may be followed by an automatically generated suffix.
   * This destination uses the selected segments' names to create the interest category by using the [[!DNL Mailchimp] Add interest category API](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). If you create a new destination and activate the same audiences again, [!DNL Mailchimp] adds a suffix to distinguish between the existing and the new segments.
 * Contacts whose emails did not exist in the group are added to the newly created category.
 * For contacts that already exist within the group, the attribute field data is updated, and the contact added to the newly created category.
 
-![Mailchimp UI screenshot showing the Audience group categories.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups-category.png)
+![Mailchimp UI screenshot showing the Audience group categories.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups-category.png){width="750" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 
@@ -253,7 +253,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 If the API key you provided in the **[!UICONTROL Password]** field or the **[!UICONTROL Data center]** value are incorrect, the UI displays a [!DNL Mailchimp] API error response: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* as shown below. In this case, you are not able to select a value from the **[!UICONTROL Audience Name (Please select Data center first)]** field.
 
-![Experience Platform UI screenshot showing error if your Mailchimp API key or data center values are incorrect.](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
+![Experience Platform UI screenshot showing error if your Mailchimp API key or data center values are incorrect.](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png){width="750" zoomable="yes"}
 
 To fix this error and proceed to the next step, you must provide the correct values. Refer to the [Identify [!DNL Mailchimp] data center](#identify-data-center) and 
 [Gather [!DNL Mailchimp] API key](#gather-credentials) sections if you need guidance.

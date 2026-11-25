@@ -30,7 +30,7 @@ When you think about export behavior for [!DNL Experience Platform] destinations
 * On a second level, some settings can be customized on a destination level by the destination developer when authoring destinations using Destination SDK. 
 * On a third level, there are configuration settings that [!DNL Real-Time CDP] users can set in the activation workflows.
 
-![Diagram showing the interplay between common and configurable export settings for destinations](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
+![Diagram showing the interplay between common and configurable export settings for destinations](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png){width="750" zoomable="yes"}
 
 This page describes or links out to all the common and the configurable export settings for destinations, on the three levels outlined above.
 
@@ -57,13 +57,13 @@ The settings that are available to users when connecting to a destination depend
 
 For example, for [streaming destinations](/help/destinations/destination-types.md#streaming-destinations), a destination developer may configure which identities their destination accepts and only those identities will be displayed to the user in [mapping step of the activation workflow](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), as shown below:
 
-![Screen recording of the identity selection for target field in the mapping step of the activation workflow.](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
+![Screen recording of the identity selection for target field in the mapping step of the activation workflow.](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif){width="750" zoomable="yes"}
 
 Similarly, for [file-based destinations](/help/destinations/destination-types.md#file-based), the destination developer may determine which [filename append options](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) they want to make available for their destination, or which [file formatting options](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) they want to make available, and the user will be able to select from these options only, as shown below:
 
-![Screen recording of the file formatting option when connecting to a file-based destination.](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
+![Screen recording of the file formatting option when connecting to a file-based destination.](/help/destinations/assets/how-destinations-work/file-formatting-options.gif){width="750" zoomable="yes"}
 
-![Screen recording of the filename append option in the scheduling step of the activation workflow.](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
+![Screen recording of the filename append option in the scheduling step of the activation workflow.](/help/destinations/assets/how-destinations-work/filename-append-options.gif){width="750" zoomable="yes"}
 
 Read more about the different options and steps available in the activation workflow:
 

@@ -39,11 +39,11 @@ topic_v2:
 
 Use the [!DNL Acxiom Data Enhancement] connector to supply additional descriptive data to your customer profiles, for use in analytics, segmentation, and targeting applications. With hundreds of elements available, this enables better segmentation and data modeling, resulting in more accurate targeting and predictive modeling.
 
-![Marketing diagram to export first-party data to Acxiom, then import enriched data back into Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow-data-enhancement.png)
+![Marketing diagram to export first-party data to Acxiom, then import enriched data back into Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow-data-enhancement.png){width="750" zoomable="yes"}
 
 This tutorial provides steps to create an [!DNL Acxiom Data Enhancement] destination connection and dataflow using the [!DNL Adobe Experience Platform] user interface. This connector delivers data to the Acxiom enhancement service using Amazon S3 as a drop point.
 
-![The destination catalog with the Acxiom destination selected.](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-catalog.png)
+![The destination catalog with the Acxiom destination selected.](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-catalog.png){width="750" zoomable="yes"}
 
 ## Use cases {#use-cases}
 
@@ -129,19 +129,19 @@ To access your bucket on Experience Platform, you need to provide valid values f
 
 To define a new Acxiom Managed S3 location: 
 
-![New Account](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
+![New Account](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png){zoomable="yes"}
 
 ### Existing Account {#existing-account}
 
 Accounts already defined using the [!DNL Acxiom Data Enhancement] destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**;
 
-![Existing Account](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-account.png)
+![Existing Account](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-account.png){width="750" zoomable="yes"}
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Destination Detail](../../assets/catalog/data-partner/acxiom/image-destination-details.png)
+![Destination Detail](../../assets/catalog/data-partner/acxiom/image-destination-details.png){width="750" zoomable="yes"}
 
 * **Name (Required)** - The name the destination will be saved under
 * **Description** -  Short explanation of the destination's purpose
@@ -153,7 +153,7 @@ To configure details for the destination, fill in the required and optional fiel
 >
 >When selecting the CSV option, *Delimiter*, *Quote Character*, *Escape Character*, *Empty Value*, *Null Value*, *Compression format*, and *Include manifest file* options will be presented, the following document explains these settings in more detail [configure the formatting options](../../ui/batch-destinations-file-formatting-options.md).
 
-![CSV Options](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png)
+![CSV Options](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png){width="400" zoomable="yes"}
 
 ### Enable alerts {#enable-alerts}
 

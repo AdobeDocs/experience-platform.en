@@ -90,7 +90,7 @@ To connect to this destination, follow the steps in the [destination configurati
 
 To authenticate to the destination, select **[!UICONTROL New account]**, fill in the required fields, and select **[!UICONTROL Connect to destination]**.
 
-![The Configure new destination screen shows the Account name, Description, and Bearer token fields for a new account.](/help/destinations/assets/catalog/advertising/tradedesk/third-party-audiences-authenticate.png){width="500" zoomable="yes"}
+![The Configure new destination screen shows the Account name, Description, and Bearer token fields for a new account.](/help/destinations/assets/catalog/advertising/tradedesk/third-party-audiences-authenticate.png){zoomable="yes"}
 
 * **[!UICONTROL Account name]**: Required. A name to identify this account.
 * **[!UICONTROL Description]**: Optional. A description to help you identify this account.
@@ -100,7 +100,7 @@ To authenticate to the destination, select **[!UICONTROL New account]**, fill in
 
 To configure details for the destination, fill in the required and optional fields. An asterisk next to a field in the UI indicates that the field is required.
 
-![The Configure new destination screen shows the Name, Description, Data Provider ID, and Audience membership expiration (days) fields.](/help/destinations/assets/catalog/advertising/tradedesk/third-party-audiences-destination-details.png){width="500" zoomable="yes"}
+![The Configure new destination screen shows the Name, Description, Data Provider ID, and Audience membership expiration (days) fields.](/help/destinations/assets/catalog/advertising/tradedesk/third-party-audiences-destination-details.png){zoomable="yes"}
 
 * **[!UICONTROL Name]**: Required. A name to identify this destination.
 * **[!UICONTROL Description]**: Optional. A description to help you identify this destination.

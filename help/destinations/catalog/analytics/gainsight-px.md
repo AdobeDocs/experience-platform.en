@@ -44,7 +44,7 @@ A SaaS company wants to engage their customers via an in-application guide const
 
 * Contact the [!DNL Gainsight] support team and request the activation of external segment features for your subscription.
 * Generate an OAuth Secret value for your PX subscription, using the **[!UICONTROL Generate New Secret]** button at the bottom of the [Company Details page](https://app.aptrinsic.com/settings/subscription)
-![Company Details screen in Gainsight PX showing the Generate New Secret button](../../assets/catalog/analytics/gainsight-px/generate_oauth_secret.png)
+![Company Details screen in Gainsight PX showing the Generate New Secret button](../../assets/catalog/analytics/gainsight-px/generate_oauth_secret.png){width="500" zoomable="yes"}
 
 ## Supported identities {#supported-identities}
 
@@ -104,7 +104,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![Authentication screenshot](../../assets/catalog/analytics/gainsight-px/auth-screen.png)
+![Authentication screenshot](../../assets/catalog/analytics/gainsight-px/auth-screen.png){width="500" zoomable="yes"}
 
 * **[!UICONTROL Password]**: The password used to log in to [[!DNL Gainsight PX]](https://app.aptrinsic.com)
 * **[!UICONTROL Client ID]**: The Gainsight PX subscription ID on the [Company Details page](https://app.aptrinsic.com/settings/subscription)
@@ -115,7 +115,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Destination details screen in the Experience Platform user interface showing how to fill in the Name and Description fields](../../assets/catalog/analytics/gainsight-px/destination_details.png)
+![Destination details screen in the Experience Platform user interface showing how to fill in the Name and Description fields](../../assets/catalog/analytics/gainsight-px/destination_details.png){width="500" zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -141,13 +141,13 @@ See the examples below to better understand how to configure mapping.
 
 In the example shown below, the source field is an XDM profile attribute which gets mapped to the IDENTIFY_ID target namespace.
 
-![Identity Namespace example mapping screen showing how to select the source and target values](../../assets/catalog/analytics/gainsight-px/mapping_attribute.png)
+![Identity Namespace example mapping screen showing how to select the source and target values](../../assets/catalog/analytics/gainsight-px/mapping_attribute.png){width="500" zoomable="yes"}
 
 #### Map an identity namespace {#map-identity-namespace}
 
 In the example shown below, the source field is an identity namespace (**[!UICONTROL ECID]**) which gets mapped to the **[!UICONTROL IDENTIFY_ID]** target namespace.
 
-![Attribute example mapping screen showing how to select the source and target values](../../assets/catalog/analytics/gainsight-px/mapping_identities.png)
+![Attribute example mapping screen showing how to select the source and target values](../../assets/catalog/analytics/gainsight-px/mapping_identities.png){width="500" zoomable="yes"}
 
 ## Exported data / Validate data export {#exported-data}
 
@@ -155,11 +155,11 @@ Segmentation data is streamed from the Experience Platform to Gainsight PX.
 
 Segment metadata is visible in the Segments screen within the [!DNL Gainsight PX] UI.
 
-![Segment list screen in Gainsight PX showing external segments.](../../assets/catalog/analytics/gainsight-px/segment_metadata.png)  
+![Segment list screen in Gainsight PX showing external segments.](../../assets/catalog/analytics/gainsight-px/segment_metadata.png){width="500" zoomable="yes"}  
 
 Segment membership information is visible on the Segments tab of the Audience Explorer screen of the [!DNL Gainsight PX] UI.
 
-![Audience Explorer screen in Gainsight PX showing associated segments for a user.](../../assets/catalog/analytics/gainsight-px/PX_Segments.png)
+![Audience Explorer screen in Gainsight PX showing associated segments for a user.](../../assets/catalog/analytics/gainsight-px/PX_Segments.png){width="500" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 

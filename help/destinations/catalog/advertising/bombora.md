@@ -115,7 +115,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![Add bearer token](../../assets/catalog/advertising/bombora/add-bearer-token.png)
+![Add bearer token](../../assets/catalog/advertising/bombora/add-bearer-token.png){zoomable="yes"}
 
 * **[!UICONTROL Client ID]**: Enter your [!DNL Bombora] client ID.
 * **[!UICONTROL Client secret]**: Enter your [!DNL Bombora] client secret.
@@ -124,7 +124,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Add information about the destination connection](../..//assets/catalog/advertising/bombora/name-and-description.png)
+![Add information about the destination connection](../..//assets/catalog/advertising/bombora/name-and-description.png){zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -150,7 +150,7 @@ The Bombora destination requires you to configure the following mappings for suc
 | `xdm: accountOrganization.domain` | `xdm: companyWebsiteDomain` | Bombora uses website or domain addresses to create an account list. |
 | `xdm: accountKey.sourceKey` | `xdm: externalAccountId` | A unique account identifier. Bombora uses this field to uniquely identify accounts. If multiple records share the same domain value but have no unique account ID, Bombora's API rejects the request. |
 
-![Add mandatory mappings](../..//assets/catalog/advertising/bombora/mappings.png)
+![Add mandatory mappings](../..//assets/catalog/advertising/bombora/mappings.png){width="750" zoomable="yes"}
 
 ## Audience sync behavior {#sync-behavior}
 

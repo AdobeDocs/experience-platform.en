@@ -38,7 +38,7 @@ The [!DNL Bing Ads Universal Event Tracking] (UET) tag extension is a useful way
 
 This destination is a tag extension. For more information about how tags extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Bing Ads extension](../../assets/catalog/advertising/bing-ads/catalog.png)
+![Bing Ads extension](../../assets/catalog/advertising/bing-ads/catalog.png){width="750" zoomable="yes"}
 
 ## Prerequisites {#prerequisites}
 

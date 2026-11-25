@@ -43,19 +43,19 @@ See the following guides for detailed information on activating audiences to you
 
 Follow the steps below to activate data to your destinations from the **[!UICONTROL Browse]** page.
 
-1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Browse]** tab.
+1. Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Browse]** tab.
 
-    ![Browse tab](../assets/ui/activation-overview/browse-tab.png)
+    ![The Browse tab of the Destinations workspace, showing a list of destination connections.](../assets/ui/activation-overview/browse-tab.png){width="750" zoomable="yes"}
 
-1. Find the destination connection that you want to use to activate your segments, select the three dots in the [!UICONTROL Name] column, then select **[!UICONTROL Activate audiences]**.
+1. Find the destination connection that you want to use to activate your audiences. Select **[!UICONTROL More actions]** next to the connection name, then select **[!UICONTROL Activate audiences]**.
 
-    ![Activate audiences button](../assets/ui/activation-overview/activate-segments.png)
+    ![The More actions menu for a destination connection on the Browse tab, with the Activate audiences option highlighted.](../assets/ui/activation-overview/activate-segments.png){width="750" zoomable="yes"}
 
-1. Depending on the selected destination, follow the steps described in the articles below, starting with the **[!UICONTROL Select segments]** step, to finish the activation workflow:
+1. To finish the activation workflow, follow the guide for your destination type, starting with the step to select your audiences:
 
-    * [Activate audience data to streaming audience export destinations](activate-segment-streaming-destinations.md)
-    * [Activate audience data to streaming profile export destinations](activate-streaming-profile-destinations.md)
-    * [Activate audience data to batch profile export destinations](activate-batch-profile-destinations.md)
+    * [Activate audience data to streaming audience export destinations](activate-segment-streaming-destinations.md#select-audiences)
+    * [Activate audience data to streaming profile export destinations](activate-streaming-profile-destinations.md#select-audiences)
+    * [Activate audience data to batch profile export destinations](activate-batch-profile-destinations.md#select-audiences)
 
 ### Activate audiences from the audience details page {#activate-audience-details}
 

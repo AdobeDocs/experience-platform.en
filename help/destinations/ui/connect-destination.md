@@ -35,7 +35,7 @@ Before you can send audience data to a destination, you must set up a connection
 
 1. Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab.
 
-   ![Screenshot of the Experience Platform UI, showing the destinations catalog page.](../assets/ui/connect-destinations/catalog.png)
+   ![Screenshot of the Experience Platform UI, showing the destinations catalog page.](../assets/ui/connect-destinations/catalog.png){width="750" zoomable="yes"}
 
 2. Destination cards in the catalog might have different action controls, depending on whether you have an existing connection to the destination and whether the destinations support activating audiences, exporting datasets, or both. You might see any of the following controls for destination cards: 
 
@@ -47,7 +47,7 @@ Before you can send audience data to a destination, you must set up a connection
 
    Select either **[!UICONTROL Set up]**, **[!UICONTROL Activate]**, or **[!UICONTROL Activate audiences]**, depending on which control is available to you.
 
-   ![Screenshot of the Experience Platform UI, showing the destinations catalog page with the Set up control highlighted.](../assets/ui/connect-destinations/set-up.png)
+   ![Screenshot of the Experience Platform UI, showing the destinations catalog page with the Set up control highlighted.](../assets/ui/connect-destinations/set-up.png){width="750" zoomable="yes"}
 
 3. If you selected **[!UICONTROL Set up]**, skip to the next step, to [authenticate](#authenticate) to the destination. 
    
@@ -55,7 +55,7 @@ Before you can send audience data to a destination, you must set up a connection
 
    Select **[!UICONTROL Configure new destination]** to establish a new connection to the destination.
 
-   ![Screenshot of the Experience Platform UI, showing a list of available destinations and the Configure new destination control highlighted.](../assets/ui/connect-destinations/configure-new-destination.png)
+   ![Screenshot of the Experience Platform UI, showing a list of available destinations and the Configure new destination control highlighted.](../assets/ui/connect-destinations/configure-new-destination.png){width="750" zoomable="yes"}
 
 ## Authenticate to destination {#authenticate}
 
@@ -79,7 +79,7 @@ Below is an example of required input to authenticate to an [!DNL Amazon S3] des
 
 **[!DNL Amazon S3] required and optional authentication parameters**
 
-![Image showing the required and optional input parameters when authenticating to an Amazon S3 destination.](../assets/ui/connect-destinations/s3-new-acc.png)
+![Image showing the required and optional input parameters when authenticating to an Amazon S3 destination.](../assets/ui/connect-destinations/s3-new-acc.png){width="400" zoomable="yes"}
 
 ## Set up connection parameters {#set-up-connection-parameters}
 
@@ -95,11 +95,11 @@ Depending on the destination that you are connecting to, you might be asked to i
 
 >[!TAB Amazon S3]
 
-![Image showing the required and optional input parameters when connecting to an Amazon S3 destination.](../assets/ui/connect-destinations/connect-destination-amazons3-example.png)
+![Image showing the required and optional input parameters when connecting to an Amazon S3 destination.](../assets/ui/connect-destinations/connect-destination-amazons3-example.png){width="400" zoomable="yes"}
 
 >[!TAB The Trade Desk]
 
-![Image showing the required and optional input parameters when connecting to a Trade Desk destination.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
+![Image showing the required and optional input parameters when connecting to a Trade Desk destination.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png){zoomable="yes"}
 
 >[!ENDTABS]
 
@@ -107,7 +107,7 @@ Depending on the destination that you are connecting to, you might be asked to i
 
 For file-based destinations, you can configure various settings related to how the exported files are formatted and compressed. For more information about all the available formatting and compression options, read the [Configure file formatting options for file-based destinations tutorial](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-![Image showing the file type selection and various options for CSV files.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
+![Image showing the file type selection and various options for CSV files.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png){zoomable="yes"}
 
 ### Set up destination connection for audience activation, account activation, prospects activation, or dataset exports {#segment-activation-or-dataset-exports}
 
@@ -117,19 +117,19 @@ Some file-based destinations support audience activation to known customers, acc
 >
 >When exporting datasets, note that exports to JSON files are supported in a compressed mode only. Exports to [!DNL Parquet] files are supported in a compressed and uncompressed mode.
 
-![Image showing the data type selection control, which lets you choose between datasets, people lists, prospects, and audiences.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
+![Image showing the data type selection control, which lets you choose between datasets, people lists, prospects, and audiences.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png){zoomable="yes"}
 
 ### Enable destination alerts {#enable-alerts}
 
 (Optional) Select the destination dataflow alerts that you want to subscribe to, then select **[!UICONTROL Next]**. Subscribe to alerts when creating a dataflow to receive alert messages regarding the status, success, or failure of your flow run. The available alerts differ based on the destination type (file-based or streaming) that you are connecting to. Read [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts.
 
-![The Configure new destination dialog with the destination alerts subscription options.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
+![The Configure new destination dialog with the destination alerts subscription options.](../assets/ui/connect-destinations/subscribe-to-alerts.png){width="500" zoomable="yes"}
 
 ## Select marketing actions {#select-marketing-actions}
 
 Select the marketing actions applicable to the data that you want to export to the destination, then select **[!UICONTROL Save & Exit]** to save the destination configuration, or **[!UICONTROL Next]** to proceed to the audience data [activation flow](activation-overview.md). Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [data usage policies overview](../../data-governance/policies/overview.md) page.
 
-![The Configure new destination dialog showing the list of available marketing actions and the Save & exit and Create controls.](../assets/ui/connect-destinations/governance.png)
+![The Configure new destination dialog showing the list of available marketing actions and the Save & exit and Create controls.](../assets/ui/connect-destinations/governance.png){width="500" zoomable="yes"}
 
 ## Next steps {#next-steps}
 
