@@ -33,8 +33,6 @@ autotag-review: '2026-11-05T19:00:07.740Z'
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
       - [Marketo Engage field mappings](connectors/adobe-applications/mapping/marketo.md)
-      - [Microsoft Dynamics field mappings](connectors/adobe-applications/mapping/dynamics.md)
-      - [Salesforce field mappings](connectors/adobe-applications/mapping/salesforce.md)
     - Marketo {#marketo}
       - [Marketo Engage connector](connectors/adobe-applications/marketo/marketo.md)
       - [Marketo Engage authentication guide](connectors/adobe-applications/marketo/marketo-auth.md)
@@ -74,6 +72,9 @@ autotag-review: '2026-11-05T19:00:07.740Z'
     - [Salesforce connector](connectors/crm/salesforce.md)
     - [SugarCRM connector](connectors/crm/sugarcrm.md)
     - [Veeva CRM connector](connectors/crm/veeva.md)
+    - Field mappings {#crm-field-mappings}
+      - [Microsoft Dynamics field mappings](connectors/adobe-applications/mapping/dynamics.md)
+      - [Salesforce field mappings](connectors/adobe-applications/mapping/salesforce.md)
   - Customer success {#customer-success}
     - [Salesforce Service Cloud connector](connectors/customer-success/salesforce-service-cloud.md)
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
@@ -141,7 +142,7 @@ autotag-review: '2026-11-05T19:00:07.740Z'
   - Streaming {#streaming}
     - [HTTP API connector](connectors/streaming/http.md)
 - API tutorials {#api-tutorials}
-  - Create a base connection {#create}
+  - Connect a source {#create}
     - Advertising {#advertising}
       - [Google Ads](tutorials/api/create/advertising/ads.md)
       - {hide-from-toc} [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
@@ -230,30 +231,33 @@ autotag-review: '2026-11-05T19:00:07.740Z'
     - [Explore payment data](tutorials/api/explore/payments.md)
     - [Explore protocol data](tutorials/api/explore/protocols.md)
     - [Explore data tables](tutorials/api/explore/tabular.md)
-  - Collect data {#collect}
-    - [Collect advertising data](tutorials/api/collect/advertising.md)
-    - [Collect cloud storage data](tutorials/api/collect/cloud-storage.md)
-    - [Collect CRM data](tutorials/api/collect/crm.md)
-    - [Collect customer success data](tutorials/api/collect/customer-success.md)
-    - [Collect database data](tutorials/api/collect/database-nosql.md)
-    - [Collect eCommerce data](tutorials/api/collect/ecommerce.md)
-    - [Collect marketing automation data](tutorials/api/collect/marketing-automation.md)
-    - [Collect payment data](tutorials/api/collect/payments.md)
-    - [Collect protocol data](tutorials/api/collect/protocols.md)
-    - [Collect streaming data](tutorials/api/collect/streaming.md)
-  - [On-demand ingestion](tutorials/api/on-demand-ingestion.md)
-  - [Filter data at the source level](tutorials/api/filter.md)
-  - [Monitor dataflows](tutorials/api/monitor.md)
-  - [Update accounts](tutorials/api/update.md)
-  - [Update dataflows](tutorials/api/update-dataflows.md)
-  - [Retry failed dataflow runs](tutorials/api/retry-flows.md)
-  - [Delete accounts](tutorials/api/delete.md)
-  - [Delete dataflows](tutorials/api/delete-dataflows.md)
-  - [Ingest encrypted data](tutorials/api/encrypt-data.md)
-  - [Save a dataflow as a draft](tutorials/api/draft.md)
-  - [Apply access labels to a dataflow](tutorials/api/labels.md)
-  - [Use private endpoints](tutorials/api/private-link.md)
-  - [Enable change data capture](tutorials/api/change-data-capture.md)
+  - Create a dataflow {#collect}
+    - [Create a dataflow for advertising sources](tutorials/api/collect/advertising.md)
+    - [Create a dataflow for cloud storage sources](tutorials/api/collect/cloud-storage.md)
+    - [Create a dataflow for CRM sources](tutorials/api/collect/crm.md)
+    - [Create a dataflow for customer success sources](tutorials/api/collect/customer-success.md)
+    - [Create a dataflow for database sources](tutorials/api/collect/database-nosql.md)
+    - [Create a dataflow for eCommerce sources](tutorials/api/collect/ecommerce.md)
+    - [Create a dataflow for marketing automation sources](tutorials/api/collect/marketing-automation.md)
+    - [Create a dataflow for payment sources](tutorials/api/collect/payments.md)
+    - [Create a dataflow for protocol sources](tutorials/api/collect/protocols.md)
+    - [Create a streaming dataflow for raw data](tutorials/api/collect/streaming.md)
+  - Configure ingestion {#api-configure-ingestion}
+    - [Filter data at the source level](tutorials/api/filter.md)
+    - [Ingest encrypted data](tutorials/api/encrypt-data.md)
+    - [Apply access labels to a dataflow](tutorials/api/labels.md)
+    - [Use private endpoints](tutorials/api/private-link.md)
+    - [Enable change data capture](tutorials/api/change-data-capture.md)
+  - Manage accounts and dataflows {#api-manage-accounts-dataflows}
+    - [On-demand ingestion](tutorials/api/on-demand-ingestion.md)
+    - [Update accounts](tutorials/api/update.md)
+    - [Update dataflows](tutorials/api/update-dataflows.md)
+    - [Delete accounts](tutorials/api/delete.md)
+    - [Delete dataflows](tutorials/api/delete-dataflows.md)
+    - [Save a dataflow as a draft](tutorials/api/draft.md)
+  - Monitor and troubleshoot {#api-monitor-troubleshoot}
+    - [Monitor dataflows](tutorials/api/monitor.md)
+    - [Retry failed dataflow runs](tutorials/api/retry-flows.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}
@@ -381,41 +385,45 @@ autotag-review: '2026-11-05T19:00:07.740Z'
     - [Marketing automation connection dataflow](tutorials/ui/dataflow/marketing-automation.md)
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
-  - [Manage dataflows in the UI](tutorials/ui/manage.md)
-  - [Create a sources dataflow using templates in the UI](tutorials/ui/templates.md)
-  - {hide-from-toc} [Filter sources objects](tutorials/ui/filter.md)
-  - [Ingest encrypted data](tutorials/ui/encryped-ingestion.md)
-  - [On-demand ingestion](tutorials/ui/on-demand-ingestion.md)
-  - [Monitor batch dataflows](tutorials/ui/monitor.md)
-  - [Monitor streaming dataflows](tutorials/ui/monitor-streaming.md)
-  - [Update accounts](tutorials/ui/update.md)
-  - [Update dataflows](tutorials/ui/update-dataflows.md)
-  - [Delete accounts](tutorials/ui/delete-accounts.md)
-  - [Delete dataflows](tutorials/ui/delete.md)
-  - [Subscribe to sources alerts](tutorials/ui/alerts.md)
-  - [Save a dataflow as a draft](tutorials/ui/draft.md)
-  - [Apply access labels to a dataflow](tutorials/ui/labels.md)
-  - [Create a private endpoint](tutorials/ui/private-link.md)
-- Self-Serve Sources (Batch SDK) {#sdk}
-  - [Overview](sources-sdk/overview.md)
-  - Configure your connection specification {#config}
-    - [Configuration options](sources-sdk/config/config.md)
-    - [Configure authentication specification](sources-sdk/config/authspec.md)
-    - [Configure source specification](sources-sdk/config/sourcespec.md)
-    - [Configure explore specification](sources-sdk/config/explorespec.md)
-  - Self-Serve Sources (Batch SDK) API guide {#self-serve-api}
-    - [Self-Serve Sources (Batch SDK) API overview](sources-sdk/api/api-overview.md)
-    - [Getting started](sources-sdk/api/getting-started.md)
-    - [Create a connection specification](sources-sdk/api/create.md)
-    - [Update a connection specification](sources-sdk/api/update-connection-specs.md)
-    - [Update a flow specification](sources-sdk/api/update-flow-specs.md)
-    - [Submit your source](sources-sdk/api/submit.md)
-  - Documentation guide {#documentation}
-    - [Document your source in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
-    - [Use the GitHub web interface to create a sources documentation page](sources-sdk/documentation/github.md)
-    - [Use a text editor in your local environment to create a sources documentation page](sources-sdk/documentation/text-editor.md)
-    - [Documentation self-service API template](sources-sdk/documentation/template.md)
-    - [Documentation self-service UI template](sources-sdk/documentation/ui-template.md)
+  - Configure ingestion {#ui-configure-ingestion}
+    - [Create a sources dataflow using templates in the UI](tutorials/ui/templates.md)
+    - {hide-from-toc} [Filter sources objects](tutorials/ui/filter.md)
+    - [Ingest encrypted data](tutorials/ui/encryped-ingestion.md)
+    - [Apply access labels to a dataflow](tutorials/ui/labels.md)
+    - [Create a private endpoint](tutorials/ui/private-link.md)
+  - Manage accounts and dataflows {#ui-manage-accounts-dataflows}
+    - [Manage dataflows in the UI](tutorials/ui/manage.md)
+    - [On-demand ingestion](tutorials/ui/on-demand-ingestion.md)
+    - [Update accounts](tutorials/ui/update.md)
+    - [Update dataflows](tutorials/ui/update-dataflows.md)
+    - [Delete accounts](tutorials/ui/delete-accounts.md)
+    - [Delete dataflows](tutorials/ui/delete.md)
+    - [Save a dataflow as a draft](tutorials/ui/draft.md)
+  - Monitor and troubleshoot {#ui-monitor-troubleshoot}
+    - [Monitor batch dataflows](tutorials/ui/monitor.md)
+    - [Monitor streaming dataflows](tutorials/ui/monitor-streaming.md)
+    - [Subscribe to sources alerts](tutorials/ui/alerts.md)
+- Build a source connector {#sdk}
+  - Batch SDK {#batch-sdk}
+    - [Batch SDK overview](sources-sdk/overview.md)
+    - Configure your connection specification {#config}
+      - [Configuration options](sources-sdk/config/config.md)
+      - [Configure authentication specification](sources-sdk/config/authspec.md)
+      - [Configure source specification](sources-sdk/config/sourcespec.md)
+      - [Configure explore specification](sources-sdk/config/explorespec.md)
+    - Self-Serve Sources (Batch SDK) API guide {#self-serve-api}
+      - [Self-Serve Sources (Batch SDK) API overview](sources-sdk/api/api-overview.md)
+      - [Getting started](sources-sdk/api/getting-started.md)
+      - [Create a connection specification](sources-sdk/api/create.md)
+      - [Update a connection specification](sources-sdk/api/update-connection-specs.md)
+      - [Update a flow specification](sources-sdk/api/update-flow-specs.md)
+      - [Submit your source](sources-sdk/api/submit.md)
+    - Documentation guide {#documentation}
+      - [Document your source in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
+      - [Use the GitHub web interface to create a sources documentation page](sources-sdk/documentation/github.md)
+      - [Use a text editor in your local environment to create a sources documentation page](sources-sdk/documentation/text-editor.md)
+      - [Documentation self-service API template](sources-sdk/documentation/template.md)
+      - [Documentation self-service UI template](sources-sdk/documentation/ui-template.md)
   - Streaming SDK {#streaming-sdk}
     - [Get started with Self-Serve Sources (Streaming SDK)](sources-sdk/streaming/getting-started.md)
     - [Create a connection specification for a streaming source](sources-sdk/streaming/create.md)
