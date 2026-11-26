@@ -41,6 +41,31 @@ With Experience Platform, you can centralize data you collect from disparate sou
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
+## Start with sources {#start-with-sources}
+
+Choose your source, then follow its connection and dataflow tutorials. For a cloud storage example, use the following tutorials.
+
+- [Browse the sources catalog](#sources-catalog).
+- [Configure a batch cloud storage dataflow in the UI](/help/sources/tutorials/ui/dataflow/batch/cloud-storage.md).
+- [Create a cloud storage dataflow using the API](/help/sources/tutorials/api/collect/cloud-storage.md).
+
+## Manage and monitor sources {#manage-and-monitor-sources}
+
+Use the following guides to manage existing dataflows, monitor ingestion, and troubleshoot issues.
+
+- [Manage sources dataflows in the UI](/help/sources/tutorials/ui/manage.md).
+- [Monitor batch dataflows in the UI](/help/sources/tutorials/ui/monitor.md).
+- [Monitor streaming dataflows in the UI](/help/sources/tutorials/ui/monitor-streaming.md).
+- [Monitor dataflows using the API](/help/sources/tutorials/api/monitor.md).
+- [Find answers in the sources troubleshooting guide](/help/sources/troubleshooting.md).
+
+## Build a source connector {#build-a-source-connector}
+
+Use the existing SDK guides for instructions on creating and documenting your own source connector.
+
+- [Read the Batch SDK overview](/help/sources/sources-sdk/overview.md).
+- [Get started with Streaming SDK](/help/sources/sources-sdk/streaming/getting-started.md).
+
 >[!BEGINSHADEBOX]
 
 ## Adobe-built and partner-built sources {#adobe-and-partner-built-sources}
