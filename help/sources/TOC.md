@@ -403,26 +403,27 @@ autotag-review: '2026-11-05T19:00:07.740Z'
     - [Monitor batch dataflows](tutorials/ui/monitor.md)
     - [Monitor streaming dataflows](tutorials/ui/monitor-streaming.md)
     - [Subscribe to sources alerts](tutorials/ui/alerts.md)
-- Self-Serve Sources (Batch SDK) {#sdk}
-  - [Overview](sources-sdk/overview.md)
-  - Configure your connection specification {#config}
-    - [Configuration options](sources-sdk/config/config.md)
-    - [Configure authentication specification](sources-sdk/config/authspec.md)
-    - [Configure source specification](sources-sdk/config/sourcespec.md)
-    - [Configure explore specification](sources-sdk/config/explorespec.md)
-  - Self-Serve Sources (Batch SDK) API guide {#self-serve-api}
-    - [Self-Serve Sources (Batch SDK) API overview](sources-sdk/api/api-overview.md)
-    - [Getting started](sources-sdk/api/getting-started.md)
-    - [Create a connection specification](sources-sdk/api/create.md)
-    - [Update a connection specification](sources-sdk/api/update-connection-specs.md)
-    - [Update a flow specification](sources-sdk/api/update-flow-specs.md)
-    - [Submit your source](sources-sdk/api/submit.md)
-  - Documentation guide {#documentation}
-    - [Document your source in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
-    - [Use the GitHub web interface to create a sources documentation page](sources-sdk/documentation/github.md)
-    - [Use a text editor in your local environment to create a sources documentation page](sources-sdk/documentation/text-editor.md)
-    - [Documentation self-service API template](sources-sdk/documentation/template.md)
-    - [Documentation self-service UI template](sources-sdk/documentation/ui-template.md)
+- Build a source connector {#sdk}
+  - Batch SDK {#batch-sdk}
+    - [Batch SDK overview](sources-sdk/overview.md)
+    - Configure your connection specification {#config}
+      - [Configuration options](sources-sdk/config/config.md)
+      - [Configure authentication specification](sources-sdk/config/authspec.md)
+      - [Configure source specification](sources-sdk/config/sourcespec.md)
+      - [Configure explore specification](sources-sdk/config/explorespec.md)
+    - Self-Serve Sources (Batch SDK) API guide {#self-serve-api}
+      - [Self-Serve Sources (Batch SDK) API overview](sources-sdk/api/api-overview.md)
+      - [Getting started](sources-sdk/api/getting-started.md)
+      - [Create a connection specification](sources-sdk/api/create.md)
+      - [Update a connection specification](sources-sdk/api/update-connection-specs.md)
+      - [Update a flow specification](sources-sdk/api/update-flow-specs.md)
+      - [Submit your source](sources-sdk/api/submit.md)
+    - Documentation guide {#documentation}
+      - [Document your source in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
+      - [Use the GitHub web interface to create a sources documentation page](sources-sdk/documentation/github.md)
+      - [Use a text editor in your local environment to create a sources documentation page](sources-sdk/documentation/text-editor.md)
+      - [Documentation self-service API template](sources-sdk/documentation/template.md)
+      - [Documentation self-service UI template](sources-sdk/documentation/ui-template.md)
   - Streaming SDK {#streaming-sdk}
     - [Get started with Self-Serve Sources (Streaming SDK)](sources-sdk/streaming/getting-started.md)
     - [Create a connection specification for a streaming source](sources-sdk/streaming/create.md)
